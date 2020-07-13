@@ -1,10 +1,33 @@
 # LastBlackBox
 
-A course for brains interested in brains...not tools interested in tools.
+A course for brains interested in brains (not tools interested in tools)
 
 ----
 
 ## Grey Boxes
+
+----
+
+### Titles
+
+1. Electrons
+2. Sensors
+3. Motors
+4. Amplifiers
+5. Reflexes
+6. Decisions
+7. Data
+8. Logic
+9. Memory
+10. Computers
+11. Behaviour
+12. Systems
+13. Networks
+14. Vision
+15. Learning
+16. Intelligence?
+
+### Descriptions
 
 1. **Electrons**
 
@@ -30,7 +53,7 @@ A course for brains interested in brains...not tools interested in tools.
     - *Brain*: Action potentials and axons and synapses (or later...with decisions?)
     - *Exercises*: Move a motor with your sensor, better theremin?
 
-5. **Behaviour I**
+5. **Reflexes**
 
     - *Tech*: Intro to control
     - *Brain*: Simple sensorimotor behaviour
@@ -66,7 +89,7 @@ A course for brains interested in brains...not tools interested in tools.
     - *Brain*: basic brains (brain computer anlogy debate)
     - *Exercises*: Arduino basics, blinky in ASM and C
 
-11. **Behavour II**
+11. **Behaviour**
 
     - *Tech*: Smarter robots
     - *Brain*: Smarter bot
@@ -78,17 +101,17 @@ A course for brains interested in brains...not tools interested in tools.
     - *Brain*: Brain systems (sense, perceive, memory, learning, )
     - *Exercises*: Python basics, linux basics
 
-13. **Vision**
+13. **Networks**
+
+    - *Tech*: Iternet protocols and WiFi
+    - *Brain*: SSH and connect to bot via ESP32 of NRF
+    - *Exercises*: Remote control bot
+
+14. **Vision**
 
     - *Tech*: From cameras to "vision"
     - *Brain*: Extracting information from photoreceptors (through V1 and beyond)
     - *Exercises*: Build a colored blob detector
-
-14. **Behaviour III**
-
-    - *Tech*: Various control details...loss of realtime
-    - *Brain*: Even smarter bot (does it learn? does it understand?)
-    - *Exercises*: RPi bot
 
 15. **Learning**
 

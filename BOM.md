@@ -39,7 +39,7 @@ Tools required to complete the LastBlackBox course:
 |pot
 |jumpers
 
-- *Packaging dimensions: 70 mm x 70 mm*
+- *Packaging dimensions: 65 mm x 65 mm*
 
 ----
 
@@ -53,7 +53,7 @@ Tools required to complete the LastBlackBox course:
 |piezo
 |piezo mic
 
-- *Packaging dimensions: 70 mm x 70 mm*
+- *Packaging dimensions: 65 mm x 65 mm*
 
 ----
 
@@ -66,7 +66,7 @@ Tools required to complete the LastBlackBox course:
 |dc motor
 |speaker
 
-- *Packaging dimensions: 70 mm x 70 mm*
+- *Packaging dimensions: 65 mm x 65 mm*
 
 ----
 
@@ -78,11 +78,11 @@ Tools required to complete the LastBlackBox course:
 |mosfet                 |IRF540
 |LED
 
-- *Packaging dimensions: 70 mm x 70 mm*
+- *Packaging dimensions: 65 mm x 65 mm*
 
 ----
 
-### Behaviour I
+### Reflexes
 
 |Name                   |Model                          |Link
 |:----------------------|:------------------------------|:-------------------------
@@ -91,27 +91,28 @@ Tools required to complete the LastBlackBox course:
 |mounting hardware
 |extra sensors
 
-- *Packaging dimensions: 140 mm x 70 mm*
+- *Packaging dimensions: 130 mm x 65 mm*
 
 ----
 
 ## Packaging
 
-1. Electrons: 70 mm x 70 mm
-2. Sensors: 70 mm x 70 mm
-3. Motors: 70 mm x 70 mm
-4. Amplifiers: 70 mm x 70 mm
-5. Behaviour I: 140 mm x 70 mm
-6. Decisions: 70 mm x 70 mm
-7. Data: 70 mm x 70 mm
-8. Logic: 70 mm x 70 mm
-9. Memory: 70 mm x 70 mm
-10. Computers: 140 mm x 70 mm
-11. Behavour II: 70 mm x 70 mm
-12. Systems: 140 mm x 70 mm
-13. Vision: 140 mm x 70 mm
-14. Behaviour III: 70 mm x 70 mm
-15. Learning: 70 mm x 70 mm
-16. Intelligence?: 70 mm x 70 mm
+1. Electrons: 65 mm x 65 mm
+2. Sensors: 65 mm x 65 mm
+3. Motors: 65 mm x 65 mm
+4. Amplifiers: 65 mm x 65 mm
+5. Reflexes: 130 mm x 65 mm
+6. Decisions: 65 mm x 65 mm
+7. Data: 65 mm x 65 mm
+8. Logic: 65 mm x 65 mm
+9. Memory: 65 mm x 65 mm
+10. Computers: 130 mm x 65 mm
+11. Behaviour: 65 mm x 65 mm
+12. Systems: 130 mm x 65 mm
+13. Networks: 65 mm x 65 mm
+14. Vision: 130 mm x 65 mm
+15. Learning: 65 mm x 65 mm
+16. Intelligence?: 65 mm x 65 mm
 
-- Overall: (5x70) x (5x70): 350 mm x 350 mm (14" x 14") (fits on large book case)
+- Unit size: 65 mm x 65 mm
+- Overall: (5xUnits)w x (4xUnits)h: 325 mm x 260 mm (~13" x ~11") (fits on large book case)
