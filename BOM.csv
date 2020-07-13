@@ -1,0 +1,12 @@
+Box,Name,Model,Description,Unit Price,Quantity,Total,Link
+White Box,Multimeter,Sealy MM18,Pocket digital multimeter,35,1,35,
+Electrons,Battery, ,AA battery,1,1,1,
+Electrons,Resistor,,1k Ohm resistor,0.15,2,0.3,
+Electrons,Breadboard,,Solder-less breadboard,5,1,5,
+Electrons,Light bulb,,Incandescent mini light bulb,,,,
+Electrons,Potentiometer,,Variable resistor,1,1,1,
+Sensors,Photoresistor,,Light dependent resistor,0.25,2,0.5,
+Sensors,Thermistor,,,,,,
+Sensors,Microphone,,,,,,
+Sensors,Piezo,,Piezo force sensor,1,1,1,
+Motors,DC Motor,,Brushed DC motor,2,1,2,
