@@ -1,5 +1,18 @@
 ## 16/7/20
 
+### team
+- elena
+- adam
+- spencer
+- eirinn
+- peter
+- ted
+- philip
+- elina?
+- liyuan?
+- hugo? 
+- ???
+
 ### Alan Kay's Error 33
 - putting something outside of control into your critical path
 - thus PARC built everything from scratch
