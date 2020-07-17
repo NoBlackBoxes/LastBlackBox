@@ -31,7 +31,7 @@ A course for brains interested in brains (not tools interested in tools)
 
 1. **Electrons**
 
-   - *Tech*: Intro to basic electronics: voltage, current, resistance, batteries, Ohm's Law, voltage dividers, and power (dissapation).
+   - *Tech*: Intro to basic electronics: voltage, current, resistance, batteries, Ohm's Law, voltage dividers, and power (dissipation).
    - *Brain*: Neurons (resting potential), passive properties.
    - *Exercises*: Measure voltage/current/resistance. Build a voltage divider. Turn on a light bulb.
 
@@ -39,11 +39,11 @@ A course for brains interested in brains (not tools interested in tools)
 
    - *Tech*: Intro to transduction of heat, light, pressure, and sound.
    - *Brain*: Intro to photoreceptors, hair cells, and mechanosensors.
-   - *Exercises*: Build a light sensor using a photoresitor
+   - *Exercises*: Build a light, heat, pressure sensor using a photoresitor, thermistor, piezo
 
 3. **Motors**
 
-    - *Tech*: Intro to electromotive force (and electromagnetism) and piezos
+    - *Tech*: Intro to electromagnetism and piezos
     - *Brain*: Muscles and motor neruons (chemical synapses?)
     - *Exercises*: Wind a coil, spin a motor, make a sound, build a theremin(?)
 
@@ -75,13 +75,13 @@ A course for brains interested in brains (not tools interested in tools)
 
     - *Tech*: digital logic and the basis of computation
     - *Brain*: Simple neural circuits: E and I
-    - *Exercises*: Build adder
+    - *Exercises*: Build an adder
 
 9. **Memory**
 
     - *Tech*: flip/flop, flash, storage
     - *Brain*: Synapses, LTP, and NMDA channels
-    - *Exercises*: Sample hold circuit? (clapper?)
+    - *Exercises*: Sample hold circuit? (clapper?) Build a D-Latch
 
 10. **Computers**
 
@@ -93,7 +93,7 @@ A course for brains interested in brains (not tools interested in tools)
 
     - *Tech*: Smarter robots
     - *Brain*: Smarter bot
-    - *Exercises*: Ardunio based robot (PWM motors? various sensors?)
+    - *Exercises*: Ardunio based robot (PWM motors? various sensors?): Task: ?
 
 12. **Systems**
 
@@ -103,9 +103,9 @@ A course for brains interested in brains (not tools interested in tools)
 
 13. **Networks**
 
-    - *Tech*: Iternet protocols and WiFi
-    - *Brain*: SSH and connect to bot via ESP32 of NRF
-    - *Exercises*: Remote control bot
+    - *Tech*: Internet protocols and WiFi
+    - *Brain*: Physical layer and neural protocols
+    - *Exercises*: SSH and connect to bot via ESP or NRF
 
 14. **Vision**
 
@@ -115,9 +115,9 @@ A course for brains interested in brains (not tools interested in tools)
 
 15. **Learning**
 
-    - *Tech*: Reinforcement learning and clocer training
+    - *Tech*: Reinforcement learning and clicker training
     - *Brain*: RL in brains
-    - *Exercises*: Clicker train a robot
+    - *Exercises*: Clicker train yourself and your robot
 
 16. **Intelligence?**
 
