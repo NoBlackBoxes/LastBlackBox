@@ -1,0 +1,2 @@
+LINUX_OVERRIDE_SRCDIR = "$(LBBROOT)/tools/kernel/"
+LINUX_HEADERS_OVERRIDE_SRCDIR = "$(LBBROOT)/tools/kernel/"

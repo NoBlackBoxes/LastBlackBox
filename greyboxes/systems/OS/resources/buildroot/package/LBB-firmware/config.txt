@@ -1,0 +1,29 @@
+# LBB (raspberry-pi 4b) config
+
+# Kernel
+kernel=Image
+
+# To use an external initramfs file
+#initramfs rootfs.cpio.gz
+
+# fixes rpi (3B, 3B+, 3A+, 4B and Zero W) ttyAMA0 serial console
+dtoverlay=miniuart-bt
+
+# Enable 64-bit support
+arm_64bit=1
+
+# Enable DRM VC4 V3D driver on top of the dispmanx display stack
+dtoverlay=vc4-fkms-v3d
+max_framebuffers=2
+
+# LBB Display Mode
+hdmi_group=0
+#hdmi_mode=4
+#hdmi_drive=2
+hdmi_force_hotplug=1
+#hdmi_force_mode=1
+
+# LBB Config Options
+disable_camera_led=1
+gpu_mem=256
+start_x=1
