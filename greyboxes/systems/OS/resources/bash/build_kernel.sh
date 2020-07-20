@@ -17,10 +17,10 @@ LBBTOOLS=${LBBROOT}"/tools"
 LBBBUILDROOT=${LBBTOOLS}"/buildroot"
 LBBBUILDROOT_EXTERNAL=${LBBREPO}"/greyboxes/systems/OS/resources/buildroot"
 LBBTOOLCHAIN=${LBBBUILDROOT}"/output/LBB/host/bin"
-LBBSYSROOT="${LBBBUILDROOT}/output/LBB/host/aarch64-buildroot-linux-gnu/sysroot"
+LBBSYSROOT="${LBBBUILDROOT}/output/LBB/host/aarch64-LBB-linux-gnu/sysroot"
 
 # Set (Cross) Compiler Root
-CCROOT="${LBBTOOLCHAIN}/aarch64-buildroot-linux-gnu-"
+CCROOT="${LBBTOOLCHAIN}/aarch64-LBB-linux-gnu-"
 
 # Enter kernel root
 cd ${LBBTOOLS}/kernel

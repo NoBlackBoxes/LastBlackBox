@@ -6,7 +6,7 @@ Instructions for building a 64-bit OS for a Raspberry Pi 4b based on the Broadco
 
 - **Buildroot** (version 2020.05.x) [buildroot](https://github.com/buildroot/buildroot/tree/2020.05.x)
   - Extract to LBBROOT/tools/OS/buildroot
-- **Kernel** (version 4.19) [kernel](https://github.com/raspberrypi/linux/tree/rpi-4.19.y)
+- **Kernel** (version 5.7) [kernel](https://github.com/raspberrypi/linux/tree/rpi-5.7.y)
   - Extract to LBBROOT/tools/OS/kernel
 
 ## Build LastBlackBox OS

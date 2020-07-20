@@ -16,8 +16,6 @@ LBBREPO=${LBBROOT}"/repo"
 LBBTOOLS=${LBBROOT}"/tools"
 LBBBUILDROOT=${LBBTOOLS}"/buildroot"
 LBBBUILDROOT_EXTERNAL=${LBBREPO}"/greyboxes/systems/OS/resources/buildroot"
-LBBTOOLCHAIN=${LBBBUILDROOT}"/output/LBB/host/bin"
-LBBSYSROOT="${LBBBUILDROOT}/output/LBB/host/aarch64-buildroot-linux-gnu/sysroot"
 
 # Delete existing images
 sudo rm -rf ${LBBTOOLS}/images
