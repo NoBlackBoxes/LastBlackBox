@@ -1,0 +1,4 @@
+vkstr type;              ///< Preview type
+    opengl
+#FIN
+
