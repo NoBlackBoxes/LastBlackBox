@@ -1,0 +1,36 @@
+# Build Binaries
+bin/
+
+# Build outputs
+build/
+
+# Test Fakes
+fakes/
+
+# Temporary Files
+tmp/
+
+# Doxygen Builds
+documentation/html/
+documentation/latex/
+
+# Object Files
+*.o
+
+# Dependency Files
+*.d
+
+# Python Binary Files
+*.pyc
+__pycache__
+
+# VIM Backup\Swap files
+*~
+
+# KiCAD Backup Files
+fab/
+*.kicad_pcb-bak
+*.sch-bak
+
+# VS Code folders
+.vscode/ipch
