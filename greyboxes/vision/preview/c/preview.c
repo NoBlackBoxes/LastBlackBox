@@ -63,14 +63,15 @@ int main(int argc, char *argv[])
     // Start profiling
     struct timespec start, finish;
     clock_gettime(CLOCK_REALTIME, &start);
-    uint32_t num_frames = 300;
+    uint32_t num_frames = 600;
     for (uint32_t f = 0; f < num_frames; f++)
     {
         // Acquire next frame
         vkCamera_GrabFrame(&camera);
 
         // Convert to RGBA
-        vkImage_YUYVtoRGBA(&camera.frame, &preview.image);
+        //vkImage_YUYVtoRGBA(&camera.frame, &preview.image);
+        memcpy(preview.image.data, camera.frame.data, camera.frame.size);
 
         // Update Preview
         vkPreview_Update(&preview);

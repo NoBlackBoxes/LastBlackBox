@@ -13,10 +13,11 @@ bool fullscreen;                   ///< Is display fullscreen?
 vkstr name;                        ///< Card (GPU) device filename (e.g. "/dev/dri/card0")
     /dev/dri/card0
 uint32_t connector_id;             ///< Connector ID
-    86
+    54
 uint32_t encoder_id;               ///< Encoder ID
-    85
+    53
 uint32_t crtc_id;                  ///< CRTC ID
-    48
+    52
 uint32_t mode_id;                  ///< Mode ID
     0
+#FIN
