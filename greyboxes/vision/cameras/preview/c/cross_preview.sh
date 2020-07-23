@@ -1,12 +1,24 @@
 #!/bin/bash
 set -eu
 
+# Confirm host architecture is x86, 64-bit
+ARCH="$(uname -m)"
+if [ ${ARCH} != "x86_6" ];
+then
+    echo "Error: This script is for cross compiling from an x86_64-bit host"
+    exit -1
+fi
+
 # Set environment variables
 LBBREPO=${LBBROOT}"/repo"
+LBBTOOLS=${LBBROOT}"/tools"
+LBBBUILDROOT=${LBBTOOLS}"/buildroot"
+LBBTOOLCHAIN=${LBBBUILDROOT}"/output/LBB/host/bin"
+LBBSYSROOT="${LBBBUILDROOT}/output/LBB/host/aarch64-LBB-linux-gnu/sysroot"
 VKREPO="${VKROOT}/repo"
 
 # Set (Cross) Compiler
-C_COMPILER="gcc"
+C_COMPILER="${LBBTOOLCHAIN}/aarch64-LBB-linux-gnu-gcc"
 
 # Create output directory
 mkdir -p bin

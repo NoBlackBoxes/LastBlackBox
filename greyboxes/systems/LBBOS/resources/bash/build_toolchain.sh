@@ -15,7 +15,7 @@ fi
 LBBREPO=${LBBROOT}"/repo"
 LBBTOOLS=${LBBROOT}"/tools"
 LBBBUILDROOT=${LBBTOOLS}"/buildroot"
-LBBBUILDROOT_EXTERNAL=${LBBREPO}"/greyboxes/systems/OS/resources/buildroot"
+LBBBUILDROOT_EXTERNAL=${LBBREPO}"/greyboxes/systems/LBBOS/resources/buildroot"
 
 # Setup buildroot external tree
 cd ${LBBBUILDROOT}
@@ -23,8 +23,8 @@ mkdir -p output/LBB
 make O=output/LBB BR2_EXTERNAL=${LBBBUILDROOT_EXTERNAL} LBB_defconfig
 cd output/LBB
 
-# Build rootfs
-make O=output/LBB -j${NJOB}
+# Build toolchain
+make toolchain O=output/LBB -j${NJOB}
 
 echo "FIN"
 exit 0
