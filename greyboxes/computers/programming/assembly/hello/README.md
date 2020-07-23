@@ -1,6 +1,6 @@
-# Computers
+# hello
 
-Computers are...
+A welcome to assembly language (AVR).
 
 ----
 
