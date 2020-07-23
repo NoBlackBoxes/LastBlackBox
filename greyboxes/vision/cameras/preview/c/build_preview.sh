@@ -21,7 +21,7 @@ INCLUDE_DIRS="\
 -I ${VKREPO}/modules"
 
 # Set compile command
-COMPILE="${C_COMPILER} -c -Wall -O3 -mfpu=neon ${INCLUDE_DIRS}"
+COMPILE="${C_COMPILER} -c -Wall -O3 ${INCLUDE_DIRS}"
 
 # Set link command
 LINK="${C_COMPILER} -Wall -O3 -lm -lopenblas -lpthread -lgbm -ldrm -lEGL -lGLESv2"
