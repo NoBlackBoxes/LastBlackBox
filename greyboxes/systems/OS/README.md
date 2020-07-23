@@ -27,3 +27,10 @@ echo $LBBROOT
 
 - ***REMEMBER to add student to sudoers file "/etc/sudoers": at end - "student  ALL=(ALL) NOPASSWD: ALL"***
 - ***REMEMBER copy drm.h thing*** in the toolchain sysroot
+- Load modules
+
+```bash
+sudo modprobe bcm2835-v4l2 max_video_width=2592 max_video_height=1944
+sudo modprobe vc4
+sudo modprobe v3d
+```
