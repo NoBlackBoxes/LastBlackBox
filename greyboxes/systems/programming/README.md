@@ -1,8 +1,7 @@
 # systems : Programming
 
-Examples of programming operating systems
+Examples of programming operating systems in C and Python
 
-## Languages
+## Hello
 
-- C
-- Python
+The classic first step
