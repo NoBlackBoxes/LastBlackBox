@@ -1,4 +1,4 @@
-# LastBlackBox : systems : programming
+# systems : Programming
 
 Examples of programming operating systems
 

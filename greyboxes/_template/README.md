@@ -20,9 +20,9 @@ Thing in another box      |[What other box is it in?] Sealy MM-18 digital multim
 
 Each topic is a brief lesson, paired with a video tutorial, covering the important information and concluding with one or more exercises and challenges.
 
-- Images can (and should) be included to help explain the topic. They should use relative links to an images folder within this greybox.
+- Images can (and should) be included to help explain the topic. They should use relative links to an images folder within the topic's subfolder.
 
-![Example Image](_images/example.png)
+![Example Image](first_topic/images/example.png)
 
 - The tutorial video will be embedded after the topic intro. Generally, there should be one tutorial video per topic.
   - The videos will only be embedded in the final "github page", so for now, links to online content should be used.

@@ -1,4 +1,4 @@
-# LastBlackBox : systems : LBBOS
+# systems : LBBOS
 
 Instructions for building a 64-bit OS for a Raspberry Pi 4b based on the Broadcom BCM2711 system-on-chip
 
