@@ -126,7 +126,7 @@ A course for brains interested in brains (not tools interested in tools)
     - *Exercises*: NPU and tensorflow...mysteries...
 
 - ***The LastBlackBox***
-  - *Tech*: What are missing?
+  - *Tech*: What are we missing?
   - *Brain*: What are we missing?
   - *Exercises*: Image a brain slice (golgi stain? Nissl?)
 
