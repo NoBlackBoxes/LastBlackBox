@@ -1,22 +1,22 @@
 # Reflexes
 
-Here is an introduction to this greybox. What will the student learn about? Why? What is inside this box and what additional materials are required (either from other greyboxes or other sources).
+Simple senorimoto behaviour.
 
 ----
 
 Contents                  |Description
 :-------------------------|:-------------------------
-Thing in this box         |What is this thing? (same info as BOM.csv)
-Another thing in this box |What is this thing? (same info as BOM.csv)
+Laser cut base            |Mounting platform skeleton for brainbot
+UPs Power supply          |What is this thing? (same info as BOM.csv)
 
 Required                  |Description
 :-------------------------|:-------------------------
-Thing not in *any* box    |[*not included*] What is it?
+18650 LiPo batteries (x2) |[*not included*] 
 Thing in another box      |[What other box is it in?] Sealy MM-18 digital multimeter
 
 ----
 
-## First Topic
+## The loop
 
 Each topic is a brief lesson, paired with a video tutorial, covering the important information and concluding with one or more exercises and challenges.
 
