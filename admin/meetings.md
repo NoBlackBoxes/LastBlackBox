@@ -1,5 +1,9 @@
 ## 17/8/20
 
+**START DATE: SEPTEMBER 14**
+
+in SWC main auditorium, socially distanced
+
 tone -- smart highschooler
 accurate mental model, note the caveats
 
@@ -23,11 +27,12 @@ pi on the robot -- too satisfying not to use this for the forebrain metaphor
 NoBlackBoxes license
 	- custom license for the project
 	- like "Don't Be a Dick License"
-	
+
 vision
 	- pi + opencv
 	- c + syscalls
 	- don't want to rewite vk code
+
 
 ## 16/7/20
 
