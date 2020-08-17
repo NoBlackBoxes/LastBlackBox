@@ -1,3 +1,39 @@
+## 17/8/20
+
+**START DATE: SEPTEMBER 14**
+
+in SWC main auditorium, socially distanced
+
+tone -- smart highschooler
+accurate mental model, note the caveats
+
+art-style -- novabook II onyx
+black on white hand drawing
+
+white paper + black pen + 
+
+look at examples tonight
+
+rpi 4
+
+two rpis
+	- one is a robot brain
+	- other is your hacking machine
+
+11 students in the SWC course
+
+pi on the robot -- too satisfying not to use this for the forebrain metaphor
+
+NoBlackBoxes license
+	- custom license for the project
+	- like "Don't Be a Dick License"
+
+vision
+	- pi + opencv
+	- c + syscalls
+	- don't want to rewite vk code
+
+
 ## 16/7/20
 
 ### team
