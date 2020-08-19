@@ -1,12 +1,12 @@
 # Electrons
 
-Electrons are sub-atomic particles with a negative electric charge. Their negative charge produces an *electric field* that attracts positive charges and repels negative charges.
+Electrons are sub-atomic particles with a negative electric charge. Their negative charge produces an *electrostatic force* that attracts positive charges and repels negative charges.
 
 <p align="center">
 <img src="_images/electron.png" alt="Electron" width="150" height="150">
 <p>
 
-In this box, we will learn about electricity...how to measure and hot to **control** it.
+In this box, we will learn about electricity...how to measure it and how to **control** it.
 
 ----
 
@@ -50,7 +50,7 @@ Values for the resitances of different materials (in different shapes and sizes)
 
 TO DO: Table fo resistances of wires, glass, water, neural membranes
 
-We have discussed various materials that can allow electrcity to flow, but why would it flow? What is pushing the electrons through a metal or the ions through a liquid?
+We have discussed various materials that can allow electrcity to flow, but why would it flow? What pushes the electrons through a metal or the ions through a liquid?
 
 ### Exercise: Measure the reistance of different resistors
 
@@ -123,6 +123,32 @@ You will often see references to two different kinds of currents: direct current
   - Place the red (+) and black (-) probes on the ends of the battery.
 
 - Q: What is the relationship between the resistor you use and the current flowing? Measure the current flowing through three resistors and make a graph.
+
+----
+
+## Magnetism
+
+When electrons move, something strange happens, they create a magenetic field. This is just how our world is...there is a fundamental link between electrcity and magnetism, and we will take advantage of this in many different ways.
+
+Current flowing through a straight piece of conductor creates a circular magenetic field surrounding that wire. A magnetic field just means that something magnetic will feel a force when inside it, similar to how an electric field just means that something with a charge will feel a force when inside it. The field created by current flowing down a wire is directly proportional to how much current is flowing, the more current, the stronger the field.
+
+<p align="center">
+<img src="_images/magnetic_field.png" alt="Magnetic Field" width="150" height="150">
+<p>
+
+However, this field is still quite weak, we can make it larger if we align the field lines by changing the shape of the wire. If we wind the wire into a coil, then all of the circular magentic fields will line up, and add together, increasing the strength of the field every time we add another loop. We can use coils of wire to create electromagnets that can interact with magnetic materials when we run a current through them.
+
+<p align="center">
+<img src="_images/magnetic_coil.png" alt="Magnetic Coil" width="150" height="150">
+<p>
+
+The opposite is also true.
+
+- Talk about generators?
+
+### Exercise: Build a 50% voltage divider
+
+### Exercise: Build a variable voltage divider
 
 ----
 

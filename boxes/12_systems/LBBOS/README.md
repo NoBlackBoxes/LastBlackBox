@@ -18,10 +18,10 @@ export LBBROOT="path to your LastBlackBox root directory"
 echo $LBBROOT
 ```
 
-- Build toolchain (LBBROOT/greyboxes/systems/LBBOS/resources/bash/build_toolchain.sh)
-- Build kernel (LBBROOT/greyboxes/systems/LBBOS/resources/bash/build_kernel.sh)
-- Build root filesystem (LBBROOT/greyboxes/systems/LBBOS/resources/bash/build_rootfs.sh)
-- Build image (LBBROOT/greyboxes/systems/LBBOS/resources/bash/build_image.sh)
+- Build toolchain (LBBROOT/boxes/systems/LBBOS/resources/bash/build_toolchain.sh)
+- Build kernel (LBBROOT/boxes/systems/LBBOS/resources/bash/build_kernel.sh)
+- Build root filesystem (LBBROOT/boxes/systems/LBBOS/resources/bash/build_rootfs.sh)
+- Build image (LBBROOT/boxes/systems/LBBOS/resources/bash/build_image.sh)
 
 ## Notes
 

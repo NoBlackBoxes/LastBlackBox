@@ -15,7 +15,7 @@ fi
 LBBREPO=${LBBROOT}"/repo"
 LBBTOOLS=${LBBROOT}"/tools"
 LBBBUILDROOT=${LBBTOOLS}"/buildroot"
-LBBBUILDROOT_EXTERNAL=${LBBREPO}"/greyboxes/systems/LBBOS/resources/buildroot"
+LBBBUILDROOT_EXTERNAL=${LBBREPO}"/boxes/systems/LBBOS/resources/buildroot"
 LBBTOOLCHAIN=${LBBBUILDROOT}"/output/LBB/host/bin"
 LBBSYSROOT="${LBBBUILDROOT}/output/LBB/host/aarch64-LBB-linux-gnu/sysroot"
 

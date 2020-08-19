@@ -1,10 +1,14 @@
-# LastBlackBox
+# The Last Black Box
 
-A course for brains interested in brains (not tools interested in tools)
+A course for brains interested in brains (not for tools interested in tools)
 
 ----
 
-## Grey Boxes
+## Boxes
+
+<p align="center">
+<img src="design/layout.png" alt="Example Image" width="400" height="300">
+<p>
 
 ----
 
@@ -125,7 +129,7 @@ A course for brains interested in brains (not tools interested in tools)
     - *Brain*: From fish to humans, evolution of biological intelligence
     - *Exercises*: NPU and tensorflow...mysteries...
 
-- ***The LastBlackBox***
+- ***The Last Black Box***
   - *Tech*: What are we missing?
   - *Brain*: What are we missing?
   - *Exercises*: Image a brain slice (golgi stain? Nissl?)
