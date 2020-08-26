@@ -1,3 +1,7 @@
+<p align="center">
+<img src="design/logo/icon.png" alt="Example Image" width="400" height="300">
+</p>
+
 # The Last Black Box
 
 A course for brains interested in brains (not for tools interested in tools)
@@ -7,8 +11,8 @@ A course for brains interested in brains (not for tools interested in tools)
 ## Boxes
 
 <p align="center">
-<img src="design/layout.png" alt="Example Image" width="400" height="300">
-<p>
+<img src="design/box/layout.png" alt="Example Image" width="400" height="300">
+</p>
 
 ----
 
