@@ -28,9 +28,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.7"
-     inkscape:cx="477.64316"
-     inkscape:cy="310.09781"
+     inkscape:zoom="0.55324526"
+     inkscape:cx="348.84748"
+     inkscape:cy="339.61608"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -262,7 +262,7 @@
          y="242.14105" />
     </g>
     <flowRoot
-       transform="matrix(0.33424616,0,0,0.33517578,17.837104,124.81806)"
+       transform="matrix(0.33424616,0,0,0.33517578,26.832943,131.1681)"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.66666698px;line-height:1.25;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.29876551;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="flowRoot958"
        xml:space="preserve"><flowRegion
@@ -275,5 +275,5 @@
            width="593.30774"
            id="rect962" /></flowRegion><flowPara
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:63.23870087px;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.29876551;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="flowPara964">TheLast Black Box</flowPara></flowRoot>  </g>
+         id="flowPara964">The Last Black Box</flowPara></flowRoot>  </g>
 </svg>
