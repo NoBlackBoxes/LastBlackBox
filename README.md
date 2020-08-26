@@ -1,5 +1,5 @@
 <p align="center">
-<img src="design/logo/icon.png" alt="Example Image" width="400" height="300">
+<img src="design/logo/icon.png" alt="LBB" width="400" height="300">
 </p>
 
 # The Last Black Box
