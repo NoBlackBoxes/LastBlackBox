@@ -6,6 +6,13 @@ Electrons are sub-atomic particles with a negative electric charge. Their negati
 <img src="_images/electron.png" alt="Electron" width="150" height="150">
 <p>
 
+<p align="center">
+<img src="/design/logo/logo.png" alt="Logo" width="150" height="150">
+<p>
+
+![Electron](_images/electron.png)
+
+
 In this box, we will learn about electricity...how to measure it and how to **control** it.
 
 ----
