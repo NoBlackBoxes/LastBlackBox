@@ -7,5 +7,6 @@ relative_links:
     collections: true
 include:
     - README.md
+    - _images/
  
-theme: jekyll-theme-minimal
+theme: jekyll-theme-tactile
