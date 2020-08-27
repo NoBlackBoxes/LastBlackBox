@@ -39,5 +39,6 @@ fab/
 *.kicad_pcb-bak
 *.sch-bak
 
-# VS Code folders
-.vscode/ipch
+# VS Code folders and workspace
+.vscode/
+*.code-workspace

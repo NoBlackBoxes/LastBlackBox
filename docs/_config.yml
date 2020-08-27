@@ -19,11 +19,11 @@
 # in the templates via {{ site.myvariable }}.
 
 title: The Last Black Box
-markdown: GFM
 email: kampff@voight-kampff.tech
 description: A course for brains interested in brains (not tools interested in tools) 
 baseurl: ""
 url: ""
+markdown: GFM
 
 # Build settings
 theme: jekyll-theme-hacker
