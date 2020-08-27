@@ -24,6 +24,7 @@ description: A course for brains interested in brains (not tools interested in t
 baseurl: ""
 url: ""
 markdown: GFM
+show_downloads: "false"
 
 # Build settings
 theme: jekyll-theme-hacker
