@@ -9,4 +9,4 @@ include:
     - README.md
     - _images/
  
-theme: jekyll-theme-tactile
+theme: jekyll-theme-hacker
