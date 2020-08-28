@@ -6,6 +6,9 @@ _site
 vendor
 lastblackbox.training
 
+# Django
+back
+
 # Build Binaries
 bin/
 
@@ -31,6 +34,9 @@ documentation/latex/
 # Python Binary Files
 *.pyc
 __pycache__
+
+# Database files
+db.sqlite3
 
 # VIM Backup\Swap files
 *~
