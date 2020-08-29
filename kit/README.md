@@ -1,10 +1,6 @@
-<p align="center">
-<img src="design/logo/icon.png" alt="LBB" width="400" height="300">
-</p>
+# The Last Black Box Kit
 
-# The Last Black Box
-
-A course for brains interested in brains (not for tools interested in tools)
+A set of black boxes to open in sequence
 
 ----
 
@@ -39,15 +35,15 @@ A course for brains interested in brains (not for tools interested in tools)
 
 1. **Electrons**
 
-   - *Tech*: Intro to basic electronics: voltage, current, resistance, batteries, Ohm's Law, voltage dividers, and power (dissipation).
-   - *Brain*: Neurons (resting potential), passive properties.
-   - *Exercises*: Measure voltage/current/resistance. Build a voltage divider. Turn on a light bulb.
+    - *Tech*: Intro to basic electronics: voltage, current, resistance, batteries, Ohm's Law, voltage dividers, and power (dissipation).
+    - *Brain*: Neurons (resting potential), passive properties.
+    - *Exercises*: Measure voltage/current/resistance. Build a voltage divider. Turn on a light bulb.
 
 2. **Sensors**
 
-   - *Tech*: Intro to transduction of heat, light, pressure, and sound.
-   - *Brain*: Intro to photoreceptors, hair cells, and mechanosensors.
-   - *Exercises*: Build a light, heat, pressure sensor using a photoresitor, thermistor, piezo
+    - *Tech*: Intro to transduction of heat, light, pressure, and sound.
+    - *Brain*: Intro to photoreceptors, hair cells, and mechanosensors.
+    - *Exercises*: Build a light, heat, pressure sensor using a photoresitor, thermistor, piezo
 
 3. **Motors**
 

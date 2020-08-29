@@ -1,13 +1,5 @@
-# Jekyll
-_site
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-vendor
+# Site
 lastblackbox.training
-
-# Django
-back
 
 # Build Binaries
 bin/
@@ -30,6 +22,9 @@ documentation/latex/
 
 # Dependency Files
 *.d
+
+# Python Environments
+venv/
 
 # Python Binary Files
 *.pyc
