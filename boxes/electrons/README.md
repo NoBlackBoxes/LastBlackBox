@@ -10,19 +10,22 @@ In this box, we will learn about electricity...how to measure it and how to **co
 
 ----
 
-Contents            |Description
-:-------------------|:-------------------------
-Resistors           |3 &Omega;, 220 &Omega;, 470 &Omega;, 1 k&Omega;
-Breadboard          |Solderless breadboard
-Lightbulb           |Incandescent bulb
-Magnet wire         |Narrow gaurge epoxy insulated, 1 meter
-Jumper wires        |22 gauge, various colours and lengths
-Balloon             |Any color, latex
+Contents|Description| # |Data|Link|
+:-------|:----------|:--|:---|:---|
+Resistor|3 &Omega;, 0.25 W|1|-|-|
+Resistor|220 &Omega;, 0.25 W|1|-|-|
+Resistor|470 &Omega;, 0.25 W|1|-|-|
+Resistor|1 k&Omega;, 0.25 W|1|-|-|
+Breadboard|400-tie solderless breadboard|1|-|-|
+Lightbulb|Incandescent bulb|1|-|-|
+Magnet wire|Narrow gaurge epoxy insulated, 1 meter|1|-|-|
+Jumper wires|22 gauge, various colours and lengths|1|-|-|
+Balloon|Any color, latex|1|-|-|
+Battery|Standard AA alakine battery|4|-|
 
-Required            |Description
-:-------------------|:-------------------------
-Battery             |[*not included*] Standard AA alakine battery
-Multimeter          |[White Box] Sealy MM-18 digital multimeter
+Required|Description| # |Box|
+:-------|:----------|:--|:--|
+Multimeter|Sealy MM-18 digital multimeter|1|white|
 
 ----
 

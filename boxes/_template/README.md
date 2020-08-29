@@ -4,15 +4,15 @@ Here is an introduction to this greybox. What will the student learn about? Why?
 
 ----
 
-Contents                  |Description
-:-------------------------|:-------------------------
-Thing in this box         |What is this thing? (same info as BOM.csv)
-Another thing in this box |What is this thing? (same info as BOM.csv)
+Contents|Description| # |Data|Link|
+:-------|:----------|:--|:---|:---|
+Thing in this box|What is this thing?|1|-|-|
+Another thing in this box|What is this thing?|1|-|-|
 
-Required                  |Description
-:-------------------------|:-------------------------
-Thing not in *any* box    |[*not included*] What is it?
-Thing in another box      |[What other box is it in?] Sealy MM-18 digital multimeter
+Required|Description| # |Box|
+:-------|:----------|:--|:--|
+Thing in another box|What is this thing?|-|-link to box-|
+Thing not in *any* box|What is this thing?|-|*|
 
 ----
 

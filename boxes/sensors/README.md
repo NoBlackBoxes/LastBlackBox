@@ -4,8 +4,8 @@ Computers and brains work with voltages. In order for either to understand signa
 
 ----
 
-Contents            |Description
-:-------------------|:-------------------------
+Contents|Description| # |Data|Link|
+:-------|:----------|:--|:---|:---|
 Thermistor          |
 Photoresistor       |LDR
 FSR                 |Force sensing resitor
