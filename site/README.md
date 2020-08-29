@@ -1,67 +1,21 @@
-# lastbackbox.training
+# lastblackbox.training
 
-This folder contains the front- and back-end tools and code from creating the Last Black Box website.
+This folder contains the front- and back-end tools/code for creating and hosting the Last Black Box [website](https://lastblackbox.training).
 
 ----
 
-## Prerequisites
+## Security
 
-We will use a python web framework called Flask to build and manage the LBB website.
+Secure HTTP requests ("https") on port 443 must be handled by a secure socket (SSL). This will require SSL key/certificates. It is possible to generate these for a local server and tell your browser to accept them (despite being self-signed). However, for a public host, these must be signed by a certififcate authority.
 
-- Create a python virtual environment (requires Python version > 3.4)
+- **Localhost**
 
-```bash
-cd $LBBROOT/repo/site
-python3 -m venv venv
-```
+  - Generate (and sign) the SSL certificate (lbb.pem) and private key (key.pem) using script
 
-- Activate the virtual environment
+- **AWS host**
 
-```bash
-source venv/bin/activate
-```
+  - Generate the SSL certififcates using CertBot
+  - Add a symlink to lbb.pem and key.pem in the LBBROOT
+  - Make sure that HTTPS is enabled on AWS LightSail
 
-- Install flask
-
-```bash
-pip install flask
-```
-
-- Install dotenv (for storing environment variables)
-
-```bash
-pip install python-dotenv
-```
-
-- Create a .flaskenv file in the site root folder and add the LBB application:
-
-```bash
-FLASK_APP=lbb.py
-```
-
-- Install Flask web form toolkit
-
-```bash
-pip install flask-wtf
-```
-
-
-# WTF
-
-Just hosted this on AWS
-
-Lightsail
-
-get SSH key, put somwwhere
-
-can use scp to copy site
-
-run python script using INTERNAL IP to bind port
-
-then connect via browser to external IP (listed in Amazon site)
-
-whoa
-
-....!
-
-this is crazy
+----

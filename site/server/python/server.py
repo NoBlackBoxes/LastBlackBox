@@ -7,19 +7,19 @@ import mimetypes
 LBBROOT = os.environ.get('LBBROOT')
 
 # Load LBB home page (index.html)
-path = LBBROOT + '/repo/server/index.html'
+path = LBBROOT + '/repo/site/html/index.html'
 file = open(path,"r")
 html = file.read()
 file.close()
 
 # Load LBB style sheet (style.css)
-path = LBBROOT + '/repo/server/style.css'
+path = LBBROOT + '/repo/site/css/style.css'
 file = open(path,"r")
 style = file.read()
 file.close()
 
 # Load LBB banner (banner.png)
-path = LBBROOT + '/repo/server/banner.png'
+path = LBBROOT + '/repo/site/images/banner.png'
 file = open(path,"rb")
 banner = file.read()
 banner = bytes(banner)
