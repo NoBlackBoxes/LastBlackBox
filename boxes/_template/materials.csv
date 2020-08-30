@@ -1,0 +1,9 @@
+contents,,,,
+Thing,Description of thing,2,_data/datasheets/thing_datasheet.pdf,https://lastblackbox.training
+Other thing,Description of another thing,1,,
+,,,,
+required,,,,
+Tool, Description of tool in white box,1,white,
+Thing (other box), Description of thing in another box,1,other,
+Thing (another box), Description of thing in another box,3,another,
+Thing (no box), Description of thing in another box,1,,

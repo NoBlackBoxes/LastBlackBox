@@ -11,7 +11,7 @@ In this box, we will learn about electricity...how to measure it and how to **co
 ----
 
 Contents|Description| # |Data|Link|
-:-------|:----------|:--|:---|:---|
+:-------|:----------|:-:|:--:|:--:|
 Resistor|3 &Omega;, 0.25 W|1|-|-|
 Resistor|220 &Omega;, 0.25 W|1|-|-|
 Resistor|470 &Omega;, 0.25 W|1|-|-|
@@ -24,7 +24,7 @@ Balloon|Any color, latex|1|-|-|
 Battery|Standard AA alakine battery|4|-|
 
 Required|Description| # |Box|
-:-------|:----------|:--|:--|
+:-------|:----------|:-:|:-:|
 Multimeter|Sealy MM-18 digital multimeter|1|white|
 
 ----

@@ -4,15 +4,21 @@ Here is an introduction to this greybox. What will the student learn about? Why?
 
 ----
 
+<details><summary><b>Materials</b></summary><p>
+
 Contents|Description| # |Data|Link|
-:-------|:----------|:--|:---|:---|
-Thing in this box|What is this thing?|1|-|-|
-Another thing in this box|What is this thing?|1|-|-|
+:-------|:----------|:-:|:--:|:--:|
+Thing|Description of thing|2|[*](_data/datasheets/thing_datasheet.pdf)|[*](https://lastblackbox.training)
+Other thing|Description of another thing|1|-|-
 
 Required|Description| # |Box|
-:-------|:----------|:--|:--|
-Thing in another box|What is this thing?|-|-link to box-|
-Thing not in *any* box|What is this thing?|-|*|
+:-------|:----------|:-:|:-:|
+Tool| Description of tool in white box|1|[white](/boxes/white/README.md)|
+Thing (other box)| Description of thing in another box|1|[other](/boxes/other/README.md)|
+Thing (another box)| Description of thing in another box|3|[another](/boxes/another/README.md)|
+Thing (no box)| Description of thing in another box|1|-|
+
+</p></details>
 
 ----
 
