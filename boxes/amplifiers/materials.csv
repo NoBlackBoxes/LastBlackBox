@@ -1,0 +1,7 @@
+contents,,,,
+MOSFET,Power MOSFET/N-channel (IRF510),2,,
+Diode,IN401,2,,
+LED(blue),Low power blue light emitting diode,1,,
+,,,,
+required,,,,
+Multimeter,(Sealy MM18) pocket digital multimeter,1,white,

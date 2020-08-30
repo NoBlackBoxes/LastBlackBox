@@ -8,7 +8,7 @@ Here is an introduction to this greybox. What will the student learn about? Why?
 
 Contents|Description| # |Data|Link|
 :-------|:----------|:-:|:--:|:--:|
-Thing|Description of thing|2|[*](_data/datasheets/thing_datasheet.pdf)|[*](https://lastblackbox.training)
+Thing|Description of thing|2|[-D-](_data/datasheets/thing_datasheet.pdf)|[-L-](https://lastblackbox.training)
 Other thing|Description of another thing|1|-|-
 
 Required|Description| # |Box|

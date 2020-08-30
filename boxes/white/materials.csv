@@ -1,8 +1,15 @@
 contents,,,,
-Host,Raspberry Pi 4b with 4 GB RAM,1,_data/datasheets/thing_datasheet.pdf,https://lastblackbox.training
-Case,Case for course computer,1,,
+Host,Raspberry Pi (RPi) 4b with 4 GB RAM,1,_data/datasheets/thing_datasheet.pdf,https://lastblackbox.training
+Case,Case for host computer,1,,
 Heatsinks,Heatsinks for RPi,1,,
 Power supply,5V/3A (15W) USB Type-C power supply,1,,
+SD card,32 GB micro SD card,1,,
+Multimeter,(Sealy MM18) pocket digital multimeter,1,,
+Probes,Probe extensions for multimeter,1,,
+Screwdriver,Small screwdriver,1,,
+Camera,Raspberry Pi high quality camera,1,,
+Breadboard(400),400-tie solderless breadboard,1,,
+Jumper wire,Kit of multi-coloured breadboard jumpers,,,
 ,,,,
 required,,,,
 Monitor,Display with HDMI input,1,,

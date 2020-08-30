@@ -10,22 +10,27 @@ In this box, we will learn about electricity...how to measure it and how to **co
 
 ----
 
+<details><summary><b>Materials</b></summary><p>
+
 Contents|Description| # |Data|Link|
 :-------|:----------|:-:|:--:|:--:|
-Resistor|3 &Omega;, 0.25 W|1|-|-|
-Resistor|220 &Omega;, 0.25 W|1|-|-|
-Resistor|470 &Omega;, 0.25 W|1|-|-|
-Resistor|1 k&Omega;, 0.25 W|1|-|-|
-Breadboard|400-tie solderless breadboard|1|-|-|
-Lightbulb|Incandescent bulb|1|-|-|
-Magnet wire|Narrow gaurge epoxy insulated, 1 meter|1|-|-|
-Jumper wires|22 gauge, various colours and lengths|1|-|-|
-Balloon|Any color, latex|1|-|-|
-Battery|Standard AA alakine battery|4|-|
+Resistor|3 &Omega;/0.25 W|1|-|-
+Resistor|220 &Omega;/0.25 W|1|-|-
+Resistor|470 &Omega;/0.25 W|1|-|-
+Resistor|1 k&Omega;/0.25 W|1|-|-
+Breadboard(400)|400-tie solderless breadboard|1|-|-
+Lightbulb|Mini incandescent bulb|1|-|-
+Potentiometer|10 k&Omega; variable resistor|1|-|-
+Magnet wire|Narrow gaurge epoxy insulated (1 m)|1|-|-
+Jumper wires|22 gauge-various colours/lengths|1|-|-
+Balloon|Any color-latex|1|-|-
+Battery|Standard AA alakine battery|4|-|-
 
 Required|Description| # |Box|
 :-------|:----------|:-:|:-:|
-Multimeter|Sealy MM-18 digital multimeter|1|white|
+Multimeter|(Sealy MM18) pocket digital multimeter|1|[white](/boxes/white/README.md)|
+
+</p></details>
 
 ----
 

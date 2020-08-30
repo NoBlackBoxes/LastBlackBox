@@ -4,17 +4,21 @@ Computers and brains work with voltages. In order for either to understand signa
 
 ----
 
-Contents|Description| # |Data|Link|
-:-------|:----------|:--|:---|:---|
-Thermistor          |
-Photoresistor       |LDR
-FSR                 |Force sensing resitor
-Microphone          |Piezeo
+<details><summary><b>Materials</b></summary><p>
 
-Required            |Description
-:-------------------|:-------------------------
-Battery             |[*not included*] Standard AA alakine battery
-Multimeter          |[White Box] Sealy MM-18 digital multimeter
+Contents|Description| # |Data|Link|
+:-------|:----------|:-:|:--:|:--:|
+Thermistor|Temperature sensitive resistor|1|-|-
+Photoresistor|Light-dependent resistor|2|-|-
+FSR|Force sensitive resistor|1|-|-
+Pizeo|Pressure-depedent crystal|1|-|-
+Microphone|Piezo mic element|1|-|-
+
+Required|Description| # |Box|
+:-------|:----------|:-:|:-:|
+Multimeter|(Sealy MM18) pocket digital multimeter|1|[white](/boxes/white/README.md)|
+
+</p></details>
 
 ----
 

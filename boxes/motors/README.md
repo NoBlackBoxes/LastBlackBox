@@ -4,15 +4,18 @@ Computers and brains work with voltages. In order for either to affect the envir
 
 ----
 
-Contents            |Description
-:-------------------|:-------------------------
-Motor               |Brushed 6V DC motor
-Gearbox             |Gear reduction box
+<details><summary><b>Materials</b></summary><p>
 
-Required            |Description
-:-------------------|:-------------------------
-Battery             |[*not included*] Standard AA alakine battery
-Multimeter          |[White Box] Sealy MM-18 digital multimeter
+Contents|Description| # |Data|Link|
+:-------|:----------|:-:|:--:|:--:|
+DC Motor|Brished DC motor|1|-|-
+Whistle|Motor shaft attachment|1|-|-
+
+Required|Description| # |Box|
+:-------|:----------|:-:|:-:|
+Multimeter|(Sealy MM18) pocket digital multimeter|1|[white](/boxes/white/README.md)|
+
+</p></details>
 
 ----
 

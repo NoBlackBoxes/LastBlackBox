@@ -4,15 +4,19 @@ The signals arriving from the environment are often too small to measure reliabl
 
 ----
 
-Contents            |Description
-:-------------------|:-------------------------
-MOSFET              |IRF510 N-type power MOSFET
-Diode               |IN401
+<details><summary><b>Materials</b></summary><p>
 
-Required            |Description
-:-------------------|:-------------------------
-Battery             |[*not included*] Standard AA alakine battery
-Multimeter          |[White Box] Sealy MM-18 digital multimeter
+Contents|Description| # |Data|Link|
+:-------|:----------|:-:|:--:|:--:|
+MOSFET|Power MOSFET/N-channel (IRF510)|2|-|-
+Diode|IN401|2|-|-
+LED(blue)|Low power blue light emitting diode|1|-|-
+
+Required|Description| # |Box|
+:-------|:----------|:-:|:-:|
+Multimeter|(Sealy MM18) pocket digital multimeter|1|[white](/boxes/white/README.md)|
+
+</p></details>
 
 ----
 

@@ -1,64 +1,39 @@
 # Reflexes
 
-Simple senorimoto behaviour.
+Simple sensorimotor behaviour. Braitenburg Vehicle.
 
 ----
 
-Contents                  |Description
-:-------------------------|:-------------------------
-Laser cut base            |Mounting platform skeleton for brainbot
-UPs Power supply          |What is this thing? (same info as BOM.csv)
+<details><summary><b>Materials</b></summary><p>
 
-Required                  |Description
-:-------------------------|:-------------------------
-18650 LiPo batteries (x2) |[*not included*] 
-Thing in another box      |[What other box is it in?] Sealy MM-18 digital multimeter
+Contents|Description| # |Data|Link|
+:-------|:----------|:-:|:--:|:--:|
+Motor|Brushed DC motor with gearbox - 6V/1:100/155 RPM with encoder (FIT0483)|2|[-D-](https://www.dfrobot.com/product-1433.html)|[-L-](https://www.dfrobot.com/product-1433.html)
+Body|Laser cut base (5 mm clear acrylic)|1|-|-
+Motor Mount|Motor mounts and mounting hardware (1089)|2|[-D-](https://www.pololu.com/product/1089)|[-L-](https://www.hobbytronics.co.uk/mm-gearmotor-bracket-ext)
+Battery holder|4xAA battery holder with ON-OFF switch|1|[-D-](https://www.dfrobot.com/product-202.html)|[-L-](https://www.dfrobot.com/product-202.html)
+Wheels|60 mm x 8 mm wheels (black)|2|[-D-](https://www.pololu.com/product/1420)|[-L-](https://www.hobbytronics.co.uk/wheel-60-8mm)
+Caster|¾” metal ball caster|1|[-D-](https://www.pololu.com/product/955)|[-L-](https://www.hobbytronics.co.uk/ball-caster-metal?keyword=caster)
+Cable|6-way JST cable to male pins|2|-|-
+Spacer|5 mm spacer for mounting ball caster|3|-|-
+Screws (caster)|M2 25 mm screws for mounting ball caster to body via spacers|2|-|-
+Screws (motor)|M2 10 mm screws for mounting motor/mount to body|4|-|-
+Nuts (motor)|M2 nuts for mounting motor/mount to body|4|-|-
 
-----
+Required|Description| # |Box|
+:-------|:----------|:-:|:-:|
+Multimeter|(Sealy MM18) pocket digital multimeter|1|[white](/boxes/white/README.md)|
 
-## The loop
-
-Each topic is a brief lesson, paired with a video tutorial, covering the important information and concluding with one or more exercises and challenges.
-
-- Images can (and should) be included to help explain the topic. They should use relative links to an images folder within the topic's subfolder.
-
-![Example Image](first_topic/images/example.png)
-
-- The tutorial video will be embedded after the topic intro. Generally, there should be one tutorial video per topic.
-  - The videos will only be embedded in the final "github page", so for now, links to online content should be used.
-
-[Example Tutorial Video](https://vimeo.com/429214252)
-
-### Exercise: First exercise short description
-
-An exercise should have a clearly defined (minimal) goal, but can have extended more difficult goals. It need not be a step-by-step recipe, but it should be clear how to complete it with information gained from this (and preceding) course topics.
-
-### Exercise: Next exercise short description
-
-There can be multiple exercises per topic.
-
-### Challenge: First challenge short description
-
-A challenge is more open-ended. It should be fun (and challenging) and need not have a clear criteria for success.
-
-### Challenge: Next challenge short description
-
-There can be multiple challenges per topic.
+</p></details>
 
 ----
 
-## Second Topic
+## Sensorimotor Loops
 
-Second topic description.
+Light in, behaviour out.
 
-- Second topic tutorial video.
+### Exercise: Build a Braitenberg Vehicle
 
-### Exercise: First exercise of second topic short description
-
-Exercise relating to the second topic, building on the first.
-
-### Challenge: First challenge of second topic short description
-
-Challenge relating to the second topic, building on the first.
+Self explanatory
 
 ----
