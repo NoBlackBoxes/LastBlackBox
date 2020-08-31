@@ -7,9 +7,13 @@ Build lastblackbox.training from repo
 import os
 import subprocess
 import markdown
+from pathlib import Path
 
 # Get LBB root
 LBBROOT = os.environ.get('LBBROOT')
+
+# Get LBB repo
+LBBREPO = LBBROOT + '/repo'
 
 # Set site root
 site_path = LBBROOT + '/repo/site/lastblackbox.training'
@@ -35,7 +39,7 @@ rsync_call.append("--include=*.png")
 rsync_call.append("--exclude=*")
 rsync_call.append(LBBROOT + "/repo/")
 rsync_call.append(site_path)
-rsync_call.append("--delete")
+rsync_call.append("--delete-excluded")
 ret = subprocess.call(rsync_call)
 
 # Copy index.html
@@ -43,8 +47,6 @@ ret = subprocess.call(["cp", html_path + "/index.html", site_path + "/"])
 
 # Copy style.css
 ret = subprocess.call(["cp", css_path + "/style.css", site_path + "/"])
-
-# Sync html pages to site
 
 # Load header
 header_path = html_path + '/header.html'
@@ -58,25 +60,35 @@ file = open(footer_path,"r")
 footer_text = file.read()
 file.close()
 
-# Set *.md path
-input_path = LBBROOT + '/repo/README.md'
+# Find all markdown files
+md_paths = list(Path(LBBREPO).rglob("*.md"))
+print("Number of MD files to convert: %d" % (len(md_paths)))
 
-# Set *.html path
-output_path = site_path + '/README.html'
+# Convert all markdown files to html
+for path in md_paths:
+    # Extract *.md stem path
+    input_path = str(path)
+    root,stem = input_path.split("LastBlackBox/repo")
 
-# Load input markdown
-file = open(input_path,"r")
-text = file.read()
-file.close()
+    # Set *.html path
+    output_path = site_path + stem[:-3] + '.html'
 
-# Parse markdown
-parsed = markdown.markdown(text)
+    # Make folders (as required)
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
-# Save output html
-file = open(output_path,"w")
-num_written = file.write(header_text)
-num_written = file.write(parsed)
-num_written = file.write(footer_text)
-file.close()
+    # Load input markdown
+    file = open(input_path,"r")
+    text = file.read()
+    file.close()
+
+    # Parse markdown
+    parsed = markdown.markdown(text)
+
+    # Save output html
+    file = open(output_path,"w")
+    num_written = file.write(header_text)
+    num_written = file.write(parsed)
+    num_written = file.write(footer_text)
+    file.close()
 
 #FIN
