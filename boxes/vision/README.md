@@ -8,7 +8,7 @@ Look at everyone.
 
 Contents|Description| # |Data|Link|
 :-------|:----------|:-:|:--:|:--:|
-Camera|Raspberry Pi camera v2.1|1|-|-
+Camera (RPiv2)|Raspberry Pi 8 MP camera|1|[-D-](_data/datasheets/rpi_camera_v2.pdf)|[-L-](https://uk.farnell.com/raspberry-pi/rpi-8mp-camera-board/raspberry-pi-camera-board-v2/dp/2510728)
 Mount|Laser-cut camera mount|1|-|-
 
 Required|Description| # |Box|

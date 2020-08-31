@@ -1,8 +1,10 @@
 contents,,,,
-Computer,Raspberry Pi (RPi) 4b with 4 GB RAM,1,_data/datasheets/thing_datasheet.pdf,https://lastblackbox.training
-Heatsinks,Heatsinks for RPi,1,,
-Power supply,5V/3A (15W) USB Type-C power supply,1,,
-SD card,32 GB micro SD card,1,,
+Computer (RPi4),Raspberry Pi 4b with 4 GB RAM,1,_data/datasheets/rpi4b_4gb.pdf,https://uk.farnell.com/raspberry-pi/rpi4-modbp-4gb/raspberry-pi-4-model-b-4gb/dp/3051887
+Heatsinks,Heatsinks for RPi 4b chips,1,_data/datasheets/rpi4b_heatsinks.jpg,https://www.amazon.co.uk/gp/product/B07VRNT3HX/ref=ox_sc_act_title_1?smid=A187Y4UVM6ZA0X&psc=1
+Power supply,5V/3A (15W) USB Type-C power supply,1,_data/datasheets/rpi_power_supply_5V3A.pdf,https://uk.farnell.com/raspberry-pi/sc0212/rpi-power-supply-usb-c-5-1v-3a/dp/3106940
+SD card,16 GB micro SD card,1,_data/datasheets/SanDisk-SDSQUAR-016G-GN6MA-datasheet.pdf,https://uk.farnell.com/sandisk/sdsquar-016g-gn6ma/memory-card-microsdhc-uhs-i-16gb/dp/2931924?ost=sdsquar-016g-gn6ma
+UPS,Uninterrupted power supply and battery charger,1,https://wiki.52pi.com/index.php/UPS_for_Raspberry_Pi_4B/3B+/3B_SKU:_EP-0114,https://www.amazon.co.uk/gp/product/B082KJJMP2/ref=nav_youraccount_switchacct?ie=UTF8&psc=1
+Battery (18650),Lition-Ion 3.7V 2500 mAh 18650 battery,2,_data/datasheets/INR18650-25R-Samsung.pdf,https://www.amazon.co.uk/gp/product/B07TFSDKDV/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1
 ,,,,
 required,,,,
 Multimeter,(Sealy MM18) pocket digital multimeter,1,white,
