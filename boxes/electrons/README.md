@@ -18,14 +18,14 @@ Resistor|3 &Omega;/0.25 W|1|-|-
 Resistor|220 &Omega;/0.25 W|1|-|-
 Resistor|470 &Omega;/0.25 W|1|-|-
 Resistor|1 k&Omega;/0.25 W|1|-|-
-Breadboard(400)|400-tie solderless breadboard|1|-|-
+Breadboard (400)|400-tie solderless breadboard|1|[-D-](_data/datasheets/breadboard_400.pdf)|[-L-](https://uk.farnell.com/multicomp/mcbb400/breadboard-solderless-300v-abs/dp/2395961)
 Lightbulb|Mini incandescent bulb|1|-|-
 Potentiometer|10 k&Omega; variable resistor|1|-|-
 Magnet wire|Narrow gaurge epoxy insulated (1 m)|1|-|-
 Balloon|Any color-latex|1|-|-
-Battery|Standard AA alakine battery|4|-|-
-Breadboard(400)|400-tie solderless breadboard|1|-|-
-Jumper wire|Kit of multi-coloured breadboard jumpers||-|-
+Battery holder|4xAA battery holder with ON-OFF switch|1|-|[-L-](https://www.dfrobot.com/product-202.html)
+Jumper kit|Kit of multi-length 22 AWG breadboard jumpers|1|[-D-](_data/datasheets/jumper_kit.pdf)|[-L-](https://uk.farnell.com/multicomp/mc001810/hard-jumper-wire-22awg-140pc/dp/2770338)
+Jumper wires|Assorted 22 AWG jumper wire leads (male/female)|1|[-D-](_data/datasheets/jumper_wires.pdf)|[-L-](https://uk.farnell.com/multicomp/mcbbj65/jumper-wire-assortment-65pcs/dp/2396146)
 
 Required|Description| # |Box|
 :-------|:----------|:-:|:-:|

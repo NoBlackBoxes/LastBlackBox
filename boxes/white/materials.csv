@@ -9,11 +9,9 @@ Test Lead,Alligator clip to 0.64 mm pin (20 cm),2,,https://www.amazon.co.uk/Oiya
 Screwdriver,Phillips driver (size #1),1,_data/datasheets/screwdriver_phillips_1.pdf,https://uk.farnell.com/wera/118024/screwdriver-precision-ph1x80mm/dp/1337805
 Camera (RPiHQ),Raspberry Pi high quality 12.3 MP camera,1,_data/datasheets/rpi_camera_hq.pdf,https://uk.farnell.com/raspberry-pi/rpi-hq-camera/rpi-high-quality-camera-12-3-mp/dp/3381605
 Lens (6mm),CS-mount wide-angle lens (F1.2/FL 6 mm),1,_data/datasheets/lens_cs_mount_6mm.pdf,https://uk.farnell.com/raspberry-pi/rpi-6mm-lens/rpi-6mm-wide-angle-lens/dp/3381607
-Lens (16mm),C-mount telephoto lens (F1.4-16/FL 16 mm),1,_data/datasheets/lens_c_mount_16mm.pdf,https://uk.farnell.com/raspberry-pi/rpi-16mm-lens/rpi-16mm-telephoto-lens/dp/3381606
-Tripod,Small tripod with camera mount (white),1,https://www.manfrotto.com/uk-en/pixi-mini-tripod-white-mtpixi-wh/,https://www.amazon.co.uk/Manfrotto-Tripod-Handgrip-Compact-Cameras/dp/B00D76RNLS/ref=sr_1_3?dchild=1&keywords=mini+tripod&qid=1598888770&s=electronics&sr=1-3
+Tripod,Small tripod with camera mount (white),1,https://www.manfrotto.com/uk-en/pixi-mini-tripod-white-mtpixi-wh/,https://www.amazon.co.uk/Manfrotto-PIXI-Mini-Tripod-White/dp/B00GUND8XM
 ,,,,
 required,,,,
 Monitor,Display with HDMI input,1,,
 Keyboard,USB keyboard,1,,
 Mouse,USB mouse,1,,
-
