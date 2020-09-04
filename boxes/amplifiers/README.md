@@ -1,4 +1,4 @@
-# Amplifiers
+# amplifiers
 
 The signals arriving from the environment are often too small to measure reliably with a computer or brain. The siganls they generate are often too small to act with the force necessary to sufficiently change the environment. We need to make them bigger, for both more reliable input and more effective output. Making tiny voltage or current signals larger is called *amplification*, and the things that do this are ***amplifiers***.
 

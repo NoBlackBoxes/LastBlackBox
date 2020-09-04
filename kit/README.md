@@ -7,29 +7,27 @@ A set of black boxes to open in sequence
 ## Boxes
 
 <p align="center">
-<img src="design/box/layout.png" alt="Example Image" width="400" height="300">
+<img src="design/layout/layout.png" alt="Example Image" width="600" height="450">
 </p>
 
 ----
 
-### Titles
-
-1. Electrons
-2. Sensors
-3. Motors
-4. Amplifiers
-5. Reflexes
-6. Decisions
-7. Data
-8. Logic
-9. Memory
-10. Computers
-11. Behaviour
-12. Systems
-13. Networks
-14. Vision
-15. Learning
-16. Intelligence?
+1. [Electrons](/boxes/electrons/README.md)
+2. [Sensors](/boxes/sensors/README.md)
+3. [Motors](/boxes/motors/README.md)
+4. [Amplifiers](/boxes/amplifiers/README.md)
+5. [Reflexes](/boxes/reflexes/README.md)
+6. [Decisions](/boxes/decisions/README.md)
+7. [Data](/boxes/data/README.md)
+8. [Logic](/boxes/logic/README.md)
+9. [Memory](/boxes/memory/README.md)
+10. [Computers](/boxes/computers/README.md)
+11. [Behaviour](/boxes/behaviour/README.md)
+12. [Systems](/boxes/systems/README.md)
+13. [Networks](/boxes/networks/README.md)
+14. [Vision](/boxes/vision/README.md)
+15. [Learning](/boxes/learning/README.md)
+16. [Intelligence?](/boxes/intelligence/README.md)
 
 ### Descriptions
 

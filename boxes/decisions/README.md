@@ -1,5 +1,7 @@
 # Decisions
 
+***SHOULD THIS BE COMBINED WITH DATA?***
+
 thresholds -- as a switch
 triggering events
 nonlinear curves give you this switching / event

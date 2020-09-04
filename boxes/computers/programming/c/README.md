@@ -1,4 +1,4 @@
-# computers : programming : C
+# computers : programming : c
 
 Here we will use a compiled language (C) to program our microcontroller.
 

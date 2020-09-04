@@ -1,4 +1,4 @@
-# Sensors
+# sensors
 
 Computers and brains work with voltages. In order for either to understand signals in the environment (light, sound, pressure, heat, etc.), then these signals must be converted into a voltage. This conversion is called *transduction* and the thing that does it is a *transducer*. However, given their role in sensing the environment, it is common to call these transduction devices ***sensors***.
 

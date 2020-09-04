@@ -1,4 +1,4 @@
-# Template
+# _template
 
 Here is an introduction to this greybox. What will the student learn about? Why? What is inside this box and what additional materials are required (either from other boxes or other sources).
 

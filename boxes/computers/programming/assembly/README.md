@@ -1,4 +1,4 @@
-# computers : programming : Assembly
+# computers : programming : assembly
 
 Here we will start telling our computer what to do.
 

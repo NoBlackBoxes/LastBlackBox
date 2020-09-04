@@ -1,6 +1,6 @@
-# systems : LBBOS
+# systems : lbbos : buildroot
 
-Instructions for building a 64-bit OS for a Raspberry Pi 4b based on the Broadcom BCM2711 system-on-chip
+Instructions for building a 64-bit OS with Buildroot for a Raspberry Pi 4b based on the Broadcom BCM2711 system-on-chip
 
 ## Download Tools
 
@@ -18,10 +18,10 @@ export LBBROOT="path to your LastBlackBox root directory"
 echo $LBBROOT
 ```
 
-- Build toolchain (LBBROOT/boxes/systems/LBBOS/resources/bash/build_toolchain.sh)
-- Build kernel (LBBROOT/boxes/systems/LBBOS/resources/bash/build_kernel.sh)
-- Build root filesystem (LBBROOT/boxes/systems/LBBOS/resources/bash/build_rootfs.sh)
-- Build image (LBBROOT/boxes/systems/LBBOS/resources/bash/build_image.sh)
+- Build toolchain (LBBROOT/boxes/systems/lbbos/buildroot/resources/bash/build_toolchain.sh)
+- Build kernel (LBBROOT/boxes/systems/lbbos/buildroot/resources/bash/build_kernel.sh)
+- Build root filesystem (LBBROOT/boxes/systems/lbbos/buildroot/resources/bash/build_rootfs.sh)
+- Build image (LBBROOT/boxes/systems/lbbos/buildroot/resources/bash/build_image.sh)
 
 ## Notes
 

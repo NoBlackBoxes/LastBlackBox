@@ -1,4 +1,4 @@
-# systems : Programming
+# systems : programming
 
 Examples of programming operating systems in C and Python
 

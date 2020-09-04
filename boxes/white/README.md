@@ -34,4 +34,8 @@ Mouse|USB mouse|1|-|
 
 You will be able to do all of the course exercises using your LBB host computer. Eventually, we will build another version of the host...so for now...this "black box" goes in the white box.
 
+The LBB Host computer runs modified version of "raspios" (Raspberry Pi OS). We have installed some extra software and data, but don't worry, we will explain exactly how we did this later in the course (when we build our own "lbbos" (LastBlackBox OS) from scratch).
+
+The SD card included in this box should already have the OS installed. If not, you can download the latest LBB "raspios" version as a disk image from here: ??
+
 ----

@@ -1,4 +1,4 @@
-# Motors
+# motors
 
 Computers and brains work with voltages. In order for either to affect the environment, then voltage must converted into something that can act upon the world (light, sound, heat, motion, etc.). This conversion from voltage to action is called *actuation* and a thing that does it is an *actuator*. Given that we are building a robot, we will place particular emphasis on actuators that produce movement, ***motors***.
 
@@ -8,7 +8,7 @@ Computers and brains work with voltages. In order for either to affect the envir
 
 Contents|Description| # |Data|Link|
 :-------|:----------|:-:|:--:|:--:|
-DC Motor|Brished DC motor|1|-|-
+DC Motor|Brushed DC motor|1|-|-
 Whistle|Motor shaft attachment|1|-|-
 
 Required|Description| # |Box|

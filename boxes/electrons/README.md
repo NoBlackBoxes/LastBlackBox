@@ -3,7 +3,7 @@
 Electrons are sub-atomic particles with a negative electric charge. Their negative charge produces a *force* that attracts positive charges and repels negative charges.
 
 <p align="center">
-<img src="_images/electron.png" alt="Electron" width="150" height="150">
+<img src="_images/electron.png" alt="Electron" width="200" height="200">
 <p>
 
 In this box, we will learn about electricity...how to measure it and how to **control** it.

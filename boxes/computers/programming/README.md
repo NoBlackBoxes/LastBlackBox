@@ -1,4 +1,4 @@
-# computers : Programming
+# computers : programming
 
 Computers are...
 
