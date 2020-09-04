@@ -36,6 +36,12 @@ Instructions for modifying the official 32-bit Raspberry Pi OS for use with the 
     sudo userdel -r pi
     ```
 
+    - Add student mto video group
+
+    ```bash
+    sudo usermod -a -G video student
+    ```    
+
 10. Clone LBB repo
 
     ```bash
@@ -61,3 +67,13 @@ Instructions for modifying the official 32-bit Raspberry Pi OS for use with the 
       ```
 
 12. Check the VSCodium works...
+
+13. Install useful packages
+
+    ```bash
+    sudo apt-get install vim
+    ```
+
+14. Configure i2s (sound)
+
+    - https://learn.adafruit.com/adafruit-max98357-i2s-class-d-mono-amp/raspberry-pi-usage
