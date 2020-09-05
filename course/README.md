@@ -1,4 +1,4 @@
-# The Last Black Box Kit
+# The Last Black Box Course
 
 A set of black boxes to open in sequence
 
@@ -7,7 +7,7 @@ A set of black boxes to open in sequence
 ## Boxes
 
 <p align="center">
-<img src="design/layout/layout.png" alt="Example Image" width="600" height="450">
+<img src="designs/layout/layout.png" alt="Example Image" width="600" height="450">
 </p>
 
 ----

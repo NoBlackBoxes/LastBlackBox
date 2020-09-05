@@ -7,6 +7,8 @@ UPS,Uninterrupted power supply and battery charger,1,https://wiki.52pi.com/index
 Battery (18650),Lithium-Ion 3.7V 3000 mAh 18650 battery,2,,https://www.amazon.co.uk/gp/product/B07TFSDKDV
 USB Breakout,Type-A male USB breakout board,2,,https://www.amazon.co.uk/Adapter-Breakout-2-54mm-Header-Connector/dp/B07R9S9X32
 Header,2.54 mm pitch male pin headers,2,,
+Switch (micro), Micro limit switch (SPDT),2,_data/datasheets/micro_limit_switch.jpg,https://www.amazon.co.uk/gp/product/B015W8S8NA/ref=ox_sc_act_title_1?smid=A2U6J8JDFFB524&psc=1
+Whisker,Laser cut whisker switch mount,2,,
 
 required,,,,
 Multimeter,(Sealy MM18) pocket digital multimeter,1,white,

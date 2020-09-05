@@ -3,7 +3,7 @@
 A course for brains interested in brains (not for tools interested in tools)
 
 <p align="center">
-<img src="kit/design/logo/icon.png" alt="LBB" width="400" height="300">
+<img src="course/designs/logo/icon.png" alt="LBB" width="400" height="300">
 </p>
 
 ----
