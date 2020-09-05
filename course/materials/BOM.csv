@@ -18,14 +18,19 @@ Resistor,3 &Omega;/0.25 W,1,,
 Resistor,220 &Omega;/0.25 W,1,,
 Resistor,470 &Omega;/0.25 W,1,,
 Resistor,1 k&Omega;/0.25 W,1,,
-Breadboard (400),400-tie solderless breadboard,1,_data/datasheets/breadboard_400.pdf,https://uk.farnell.com/multicomp/mcbb400/breadboard-solderless-300v-abs/dp/2395961
-Lightbulb,Mini incandescent bulb,1,,
+Capcitor,some size ceramic,1,,
+Capcitor,some size electrolytic,1,,
+Inductor,some size,1,,
 Potentiometer,10 k&Omega; variable resistor,1,,
-Magnet wire,Narrow gaurge epoxy insulated (1 m),1,,
+Lightbulb,Mini incandescent bulb,1,,
+Breadboard (400),400-tie solderless breadboard,1,_data/datasheets/breadboard_400.pdf,https://uk.farnell.com/multicomp/mcbb400/breadboard-solderless-300v-abs/dp/2395961
 Balloon,Any color-latex,1,,
+Batteries (AA),AA 1.5 V alkaline battery,4,,
 Battery holder,4xAA battery holder with ON-OFF switch,1,,https://www.dfrobot.com/product-202.html
+Magnet wire,Narrow gaurge epoxy insulated (1 m),1,,
 Jumper kit,Kit of multi-length 22 AWG breadboard jumpers,1,_data/datasheets/jumper_kit.pdf,https://uk.farnell.com/multicomp/mc001810/hard-jumper-wire-22awg-140pc/dp/2770338
 Jumper wires,Assorted 22 AWG jumper wire leads (male/female),1,_data/datasheets/jumper_wires.pdf,https://uk.farnell.com/multicomp/mcbbj65/jumper-wire-assortment-65pcs/dp/2396146
+Rubber feet,Adhesive rubber standoffs (1421T6CL),4,_data/datasheets/rubber_feet.pdf,https://uk.farnell.com/hammond/1421t6cl/feet-stick-on-pk24/dp/1876522
 ,,,,
 sensors,,,,
 Thermistor,Temperature sensitive resistor,1,,
@@ -73,16 +78,19 @@ D-Flip-Flop,4xDFF,2,,
 computers,,,,
 Microcontroller,Arduino Nano (rev.3),1,_data/datasheets/arduino_nano_rev3.pdf,https://uk.farnell.com/arduino/a000005/arduino-nano-evaluation-board/dp/1848691
 Cable (MiniUSB-1m),Mini-USB to Type-A cable (1 m),1,_data/datasheets/mini_USB_cable_1m.pdf,https://uk.farnell.com/molex/88732-8602/usb-cable-2-0-plug-plug-1m/dp/1221071
+Piezo Buzzer,Piezoelectric speaker/buzzer,1,,
 ,,,,
 behaviour,,,,
 Cable (MiniUSB-15cm),Short mini-USB to Type-A cable (15 cm),1,,https://www.amazon.co.uk/gp/product/B0763PPY51
-Switch,Bump sensors,2,,
 Power supply,5V/3A (15W) USB Type-C power supply,1,_data/datasheets/rpi_power_supply_5V3A.pdf,https://uk.farnell.com/raspberry-pi/sc0212/rpi-power-supply-usb-c-5-1v-3a/dp/3106940
 USB Adapter(C-Micro),USB type-C (female) to micro (male) adapter,1,,https://www.amazon.co.uk/Adapter-CHOETECH-Convert-Connector-Keyring-Black/dp/B07145W7WX
 UPS,Uninterrupted power supply and battery charger,1,https://wiki.52pi.com/index.php/UPS_for_Raspberry_Pi_4B/3B+/3B_SKU:_EP-0114,https://www.amazon.co.uk/gp/product/B082KJJMP2
 Battery (18650),Lithium-Ion 3.7V 3000 mAh 18650 battery,2,,https://www.amazon.co.uk/gp/product/B07TFSDKDV
 USB Breakout,Type-A male USB breakout board,2,,https://www.amazon.co.uk/Adapter-Breakout-2-54mm-Header-Connector/dp/B07R9S9X32
 Header,2.54 mm pitch male pin headers,2,,
+Switch (micro), Micro limit switch (SPDT),2,_data/datasheets/micro_limit_switch.jpg,https://www.amazon.co.uk/gp/product/B015W8S8NA
+Whisker,Laser cut whisker switch mount,2,,
+H-bridge,Dual H-bridge motor driver (L293D),2,_data/datasheets/L293.pdf,https://uk.farnell.com/texas-instruments/l293dne/ic-driver-peripheral-dual-36v/dp/3118959
 
 systems,,,,
 Computer (RPi4),Raspberry Pi 4b with 4 GB RAM,1,_data/datasheets/rpi4b_4gb.pdf,https://uk.farnell.com/raspberry-pi/rpi4-modbp-4gb/raspberry-pi-4-model-b-4gb/dp/3051887

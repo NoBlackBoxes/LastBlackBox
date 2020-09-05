@@ -184,7 +184,7 @@ for box in boxes:
     BOM = append_materials(BOM, box)
 
 # Store BOM
-bom_path = LBBROOT + "/repo/kit/BOM.csv"
+bom_path = LBBROOT + "/repo/course/materials/BOM.csv"
 f = open(bom_path, 'w')
 f.writelines(BOM)
 f.close()

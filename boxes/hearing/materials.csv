@@ -1,6 +1,7 @@
 contents,,,,
-Camera (RPiv2),Raspberry Pi 8 MP camera,1,_data/datasheets/rpi_camera_v2.pdf,https://uk.farnell.com/raspberry-pi/rpi-8mp-camera-board/raspberry-pi-camera-board-v2/dp/2510728
-Mount,Laser-cut camera mount,1,,
+Mic (MEMS), I2S mems microphone board (SPH0645),2,https://learn.adafruit.com/adafruit-i2s-mems-microphone-breakout/overview,https://www.adafruit.com/product/3421
+Amp (Audio), I2S mono-amplifier (3 Watts/4 Ohms),2,,
+Speaker (3W),3-Watt enclosed speaker,2,,
 ,,,,
 required,,,,
 Multimeter,(Sealy MM18) pocket digital multimeter,1,white,

@@ -15,6 +15,13 @@ LED(blue)|Low power blue light emitting diode|1|-|-
 Required|Description| # |Box|
 :-------|:----------|:-:|:-:|
 Multimeter|(Sealy MM18) pocket digital multimeter|1|[white](/boxes/white/README.md)|
+Test Lead|Alligator clip to 0.64 mm pin (20 cm)|2|[white](/boxes/white/README.md)|
+Body|Laser cut base (5 mm clear acrylic)|1|[reflexes](/boxes/reflexes/README.md)|
+Breadboard (400)|400-tie solderless breadboard|1|[electrons](/boxes/electrons/README.md)|
+Batteries (AA)|AA 1.5 V alkaline battery|4|[electrons](/boxes/electrons/README.md)|
+Battery holder|4xAA battery holder with ON-OFF switch|1|[electrons](/boxes/electrons/README.md)|
+Jumper kit|Kit of multi-length 22 AWG breadboard jumpers|1|[electrons](/boxes/electrons/README.md)|
+Jumper wires|Assorted 22 AWG jumper wire leads (male/female)|1|[electrons](/boxes/electrons/README.md)|
 
 </p></details>
 

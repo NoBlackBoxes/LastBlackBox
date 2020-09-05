@@ -23,6 +23,12 @@ Breadboards (170)|170-tie solderless breadboard|4|[-D-](_data/datasheets/breadbo
 Required|Description| # |Box|
 :-------|:----------|:-:|:-:|
 Multimeter|(Sealy MM18) pocket digital multimeter|1|[white](/boxes/white/README.md)|
+Test Lead|Alligator clip to 0.64 mm pin (20 cm)|2|[white](/boxes/white/README.md)|
+Batteries (AA)|AA 1.5 V alkaline battery|4|[electrons](/boxes/electrons/README.md)|
+Battery holder|4xAA battery holder with ON-OFF switch|1|[electrons](/boxes/electrons/README.md)|
+Jumper kit|Kit of multi-length 22 AWG breadboard jumpers|1|[electrons](/boxes/electrons/README.md)|
+Jumper wires|Assorted 22 AWG jumper wire leads (male/female)|1|[electrons](/boxes/electrons/README.md)|
+Photoresistor|Light-dependent resistor|2|[sensors](/boxes/sensors/README.md)|
 
 </p></details>
 

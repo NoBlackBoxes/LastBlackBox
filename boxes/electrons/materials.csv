@@ -3,14 +3,21 @@ Resistor,3 &Omega;/0.25 W,1,,
 Resistor,220 &Omega;/0.25 W,1,,
 Resistor,470 &Omega;/0.25 W,1,,
 Resistor,1 k&Omega;/0.25 W,1,,
-Breadboard (400),400-tie solderless breadboard,1,_data/datasheets/breadboard_400.pdf,https://uk.farnell.com/multicomp/mcbb400/breadboard-solderless-300v-abs/dp/2395961
-Lightbulb,Mini incandescent bulb,1,,
+Capcitor,some size ceramic,1,,
+Capcitor,some size electrolytic,1,,
+Inductor,some size,1,,
 Potentiometer,10 k&Omega; variable resistor,1,,
-Magnet wire,Narrow gaurge epoxy insulated (1 m),1,,
+Lightbulb,Mini incandescent bulb (6 V),1,_data/datasheets/lamp_6V.pdf,https://uk.farnell.com/cml-innovative-technologies/3820al/lamp-w-e-axial-t3-8-6v-0-6w/dp/1139454
+Breadboard (400),400-tie solderless breadboard,1,_data/datasheets/breadboard_400.pdf,https://uk.farnell.com/multicomp/mcbb400/breadboard-solderless-300v-abs/dp/2395961
 Balloon,Any color-latex,1,,
+Batteries (AA),AA 1.5 V alkaline battery,4,,
 Battery holder,4xAA battery holder with ON-OFF switch,1,,https://www.dfrobot.com/product-202.html
+Magnet wire,Narrow gaurge epoxy insulated (1 m),1,,
 Jumper kit,Kit of multi-length 22 AWG breadboard jumpers,1,_data/datasheets/jumper_kit.pdf,https://uk.farnell.com/multicomp/mc001810/hard-jumper-wire-22awg-140pc/dp/2770338
 Jumper wires,Assorted 22 AWG jumper wire leads (male/female),1,_data/datasheets/jumper_wires.pdf,https://uk.farnell.com/multicomp/mcbbj65/jumper-wire-assortment-65pcs/dp/2396146
+Rubber feet,Adhesive rubber standoffs (1421T6CL),4,_data/datasheets/rubber_feet.pdf,https://uk.farnell.com/hammond/1421t6cl/feet-stick-on-pk24/dp/1876522
 ,,,,
 required,,,,
 Multimeter,(Sealy MM18) pocket digital multimeter,1,white,
+Test Lead,Alligator clip to 0.64 mm pin (20 cm),2,white,
+Body,Laser cut base (5 mm clear acrylic),1,reflexes,
