@@ -44,3 +44,6 @@ fab/
 # VS Code folders and workspace
 .vscode/
 *.code-workspace
+
+# VK temporary files
+_vk
