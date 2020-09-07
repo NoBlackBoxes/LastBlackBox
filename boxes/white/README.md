@@ -16,6 +16,7 @@ SD card|32 GB micro SD card|1|[-D-](_data/datasheets/SanDisk-SDSQXCG-032G-GN6MA-
 Multimeter|(Sealy MM18) pocket digital multimeter|1|[-D-](_data/datasheets/MM18_DFC0123042.pdf)|[-L-](https://www.ffx.co.uk/tools/product/Sealey-Mm18-5051747848412-Pocket-Multimeter)
 Test Lead|Alligator clip to 0.64 mm pin (20 cm)|2|-|[-L-](https://www.amazon.co.uk/Oiyagai-Alligator-Crocodile-Arduino-Raspberry/dp/B07CXTSX8R/ref=sr_1_2?dchild=1&keywords=Oiyagai-Alligator-Crocodile-Arduino-Raspberry&qid=1598887302&s=computers&sr=1-2)
 Screwdriver|Phillips driver (size #1)|1|[-D-](_data/datasheets/screwdriver_phillips_1.pdf)|[-L-](https://uk.farnell.com/wera/118024/screwdriver-precision-ph1x80mm/dp/1337805)
+Screwdriver|Slotted driver (tip 3 mm)|1|[-D-](_data/datasheets/screwdriver_slotted_3mm.pdf)|[-L-](https://uk.farnell.com/wera/118010/screwdriver-precision-slot-3-0x80mm/dp/1337801)
 Camera (RPiHQ)|Raspberry Pi high quality 12.3 MP camera|1|[-D-](_data/datasheets/rpi_camera_hq.pdf)|[-L-](https://uk.farnell.com/raspberry-pi/rpi-hq-camera/rpi-high-quality-camera-12-3-mp/dp/3381605)
 Lens (6mm)|CS-mount wide-angle lens (F1.2/FL 6 mm)|1|[-D-](_data/datasheets/lens_cs_mount_6mm.pdf)|[-L-](https://uk.farnell.com/raspberry-pi/rpi-6mm-lens/rpi-6mm-wide-angle-lens/dp/3381607)
 Tripod|Small tripod with camera mount (white)|1|[-D-](https://www.manfrotto.com/uk-en/pixi-mini-tripod-white-mtpixi-wh/)|[-L-](https://www.amazon.co.uk/Manfrotto-PIXI-Mini-Tripod-White/dp/B00GUND8XM)

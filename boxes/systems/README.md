@@ -11,9 +11,7 @@ Contents|Description| # |Data|Link|
 Computer (RPi4)|Raspberry Pi 4b with 4 GB RAM|1|[-D-](_data/datasheets/rpi4b_4gb.pdf)|[-L-](https://uk.farnell.com/raspberry-pi/rpi4-modbp-4gb/raspberry-pi-4-model-b-4gb/dp/3051887)
 Heatsinks|Heatsinks for RPi 4b chips|1|[-D-](_data/datasheets/rpi4b_heatsinks.jpg)|[-L-](https://www.amazon.co.uk/gp/product/B07VRNT3HX)
 SD card|16 GB micro SD card|1|[-D-](_data/datasheets/SanDisk-SDSQUAR-016G-GN6MA-datasheet.pdf)|[-L-](https://uk.farnell.com/sandisk/sdsquar-016g-gn6ma/memory-card-microsdhc-uhs-i-16gb/dp/2931924)
-Mic (MEMS)| I2S mems microphone board (SPH0645)|2|[-D-](https://learn.adafruit.com/adafruit-i2s-mems-microphone-breakout/overview)|[-L-](https://www.adafruit.com/product/3421)
-Speaker|||-|-
-Amp (Audio)| I2S amplifier (3W/4 Ohm)||-|-
+M2.5 standoffs (15)| 15 mm brass M2.5 standoffs male-to-female|4|-|-
 
 Required|Description| # |Box|
 :-------|:----------|:-:|:-:|

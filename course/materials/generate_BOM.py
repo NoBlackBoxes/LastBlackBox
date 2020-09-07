@@ -167,6 +167,7 @@ boxes = [
     'behaviour',
     'systems',
     'networks',
+    'hearing',
     'vision',
     'learning',
     'intelligence']

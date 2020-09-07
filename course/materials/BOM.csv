@@ -9,44 +9,46 @@ SD card,32 GB micro SD card,1,_data/datasheets/SanDisk-SDSQXCG-032G-GN6MA-datash
 Multimeter,(Sealy MM18) pocket digital multimeter,1,_data/datasheets/MM18_DFC0123042.pdf,https://www.ffx.co.uk/tools/product/Sealey-Mm18-5051747848412-Pocket-Multimeter
 Test Lead,Alligator clip to 0.64 mm pin (20 cm),2,,https://www.amazon.co.uk/Oiyagai-Alligator-Crocodile-Arduino-Raspberry/dp/B07CXTSX8R/ref=sr_1_2?dchild=1&keywords=Oiyagai-Alligator-Crocodile-Arduino-Raspberry&qid=1598887302&s=computers&sr=1-2
 Screwdriver,Phillips driver (size #1),1,_data/datasheets/screwdriver_phillips_1.pdf,https://uk.farnell.com/wera/118024/screwdriver-precision-ph1x80mm/dp/1337805
+Screwdriver,Slotted driver (tip 3 mm),1,_data/datasheets/screwdriver_slotted_3mm.pdf,https://uk.farnell.com/wera/118010/screwdriver-precision-slot-3-0x80mm/dp/1337801
 Camera (RPiHQ),Raspberry Pi high quality 12.3 MP camera,1,_data/datasheets/rpi_camera_hq.pdf,https://uk.farnell.com/raspberry-pi/rpi-hq-camera/rpi-high-quality-camera-12-3-mp/dp/3381605
 Lens (6mm),CS-mount wide-angle lens (F1.2/FL 6 mm),1,_data/datasheets/lens_cs_mount_6mm.pdf,https://uk.farnell.com/raspberry-pi/rpi-6mm-lens/rpi-6mm-wide-angle-lens/dp/3381607
 Tripod,Small tripod with camera mount (white),1,https://www.manfrotto.com/uk-en/pixi-mini-tripod-white-mtpixi-wh/,https://www.amazon.co.uk/Manfrotto-PIXI-Mini-Tripod-White/dp/B00GUND8XM
 ,,,,
 electrons,,,,
-Resistor,3 &Omega;/0.25 W,1,,
-Resistor,220 &Omega;/0.25 W,1,,
-Resistor,470 &Omega;/0.25 W,1,,
-Resistor,1 k&Omega;/0.25 W,1,,
-Capcitor,some size ceramic,1,,
-Capcitor,some size electrolytic,1,,
-Inductor,some size,1,,
-Potentiometer,10 k&Omega; variable resistor,1,,
-Lightbulb,Mini incandescent bulb,1,,
+Resistor,330 &Omega;/0.25 W,2,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-330r/res-330r-1-250mw-axial-metal-film/dp/9341730
+Resistor,470 &Omega;/0.25 W,1,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943
+Resistor,1 k&Omega;/0.25 W,1,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-1k/res-1k-1-250mw-axial-metal-film/dp/9341102
+Resistor,10 k&Omega;/0.25 W,2,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-10k/res-10k-1-250mw-axial-metal-film/dp/9341110
+Capacitor,0.1 uF ceramic capacitor,1,_data/datasheets/capacitor_ceramic.pdf,https://uk.farnell.com/kemet/c322c104k1r5ta/cap-0-1-f-100v-10-x7r/dp/1457685
+Capacitor,100 uF aluminum electrolytic capacitor,1,_data/datsheets/capacitor_electrolytic.pdf,https://uk.farnell.com/rubycon/16zlh100mefc5x11/cap-100-f-16v-20/dp/8126283
+Inductor,1 mH torroidal inductor,1,_data/datasheets/inductor_torroidal.pdf,https://uk.farnell.com/bourns/2124-v-rc/inductor-1000uh-15-1-3a-toroid/dp/1929753
+Button,Tactile switch,2,_data/datasheets/button.pdf,https://uk.farnell.com/omron/b3f-1000/switch-spno-0-05a-24v-tht-0-98n/dp/176432
+Potentiometer,20 k&Omega; variable resistor,2,_data/datasheets/pot_20kOhm.pdf,https://uk.farnell.com/bourns/3362p-1-203lf/trimmer-20k/dp/9354344
+Lightbulb,Mini incandescent bulb (6 V),1,_data/datasheets/lamp_6V.pdf,https://uk.farnell.com/cml-innovative-technologies/3820al/lamp-w-e-axial-t3-8-6v-0-6w/dp/1139454
 Breadboard (400),400-tie solderless breadboard,1,_data/datasheets/breadboard_400.pdf,https://uk.farnell.com/multicomp/mcbb400/breadboard-solderless-300v-abs/dp/2395961
 Balloon,Any color-latex,1,,
 Batteries (AA),AA 1.5 V alkaline battery,4,,
 Battery holder,4xAA battery holder with ON-OFF switch,1,,https://www.dfrobot.com/product-202.html
+Battery case,4xAA battery storgae case,1,,https://www.amazon.co.uk/gp/product/B07ZHZDWQ2
 Magnet wire,Narrow gaurge epoxy insulated (1 m),1,,
 Jumper kit,Kit of multi-length 22 AWG breadboard jumpers,1,_data/datasheets/jumper_kit.pdf,https://uk.farnell.com/multicomp/mc001810/hard-jumper-wire-22awg-140pc/dp/2770338
 Jumper wires,Assorted 22 AWG jumper wire leads (male/female),1,_data/datasheets/jumper_wires.pdf,https://uk.farnell.com/multicomp/mcbbj65/jumper-wire-assortment-65pcs/dp/2396146
 Rubber feet,Adhesive rubber standoffs (1421T6CL),4,_data/datasheets/rubber_feet.pdf,https://uk.farnell.com/hammond/1421t6cl/feet-stick-on-pk24/dp/1876522
 ,,,,
 sensors,,,,
-Thermistor,Temperature sensitive resistor,1,,
-Photoresistor,Light-dependent resistor,2,,
-FSR,Force sensitive resistor,1,,
-Pizeo,Pressure-depedent crystal,1,,
-Microphone,Piezo mic element,1,,
+Thermistor,Temperature sensitive resistor,2,_data/datasheets/thermistor.pdf,https://uk.farnell.com/epcos/b57891m0103k000/thermistor-ntc-radial-leaded/dp/2285471
+Photoresistor,Light-dependent resistor,2,_data/datasheets/ldr.pdf,https://uk.farnell.com/advanced-photonix/nsl-19m51/light-dependent-resistor-550nm/dp/3168335
+Piezo,Piezo element,1,_data/datasheets/piezo.pdf,https://uk.farnell.com/multicomp/mcabt-455-rc/audio-element-piezo-2-8khz-35mm/dp/2433035?st=piezo
 ,,,,
 motors,,,,
-DC Motor,Brushed DC motor,1,,
-Whistle,Motor shaft attachment,1,,
+DC Motor,6V Brushed DC motor,1,,https://www.amazon.co.uk/Gikfun-1V-6V-Hobby-Arduino-EK1894/dp/B07BHHP2BT
+Propeller,Motor shaft attachment,1,,https://www.amazon.co.uk/Winterworm-Propeller-Project-Science-Accessories/dp/B07D8SZHZ8
+M4 bolt,12 mm long M4 hex bolt,1,,
 ,,,,
 amplifiers,,,,
-MOSFET,Power MOSFET/N-channel (IRF510),2,,
-Diode,IN401,2,,
-LED(blue),Low power blue light emitting diode,1,,
+MOSFET,Power MOSFET/N-channel (IRF510),2,_data/datasheets/IRF510.pdf,https://uk.farnell.com/vishay/irf510pbf/mosfet-n-100v-5-6a-to-220ab/dp/1653658
+Diode,IN401,2,_data/datasheets/IN4001.pdf,https://uk.farnell.com/on-semiconductor/1n4001g/diode-standard-1a-do-41/dp/1458986
+LED(blue),Low power blue light emitting diode,2,_data/datasheets/LED_blue.pdf,https://uk.farnell.com/broadcom-limited/hlmp-ka45-e0000/led-3mm-blue-85mcd-470nm/dp/1863182
 ,,,,
 reflexes,,,,
 Motor,Brushed DC motor with gearbox - 6V/1:100/155 RPM with encoder (FIT0483),2,https://www.dfrobot.com/product-1433.html,https://www.dfrobot.com/product-1433.html
@@ -57,7 +59,8 @@ Caster,¾” metal ball caster,1,https://www.pololu.com/product/955,https://www.
 Cable,6-way JST cable to male pins,2,,
 Spacer,5 mm spacer for mounting ball caster,3,,
 Screws (caster),M2 25 mm screws for mounting ball caster to body via spacers,2,,
-Screws (motor),M2 10 mm screws for mounting motor/mount to body,4,,
+Nuts (caster),M2 nuts for mounting ball caster to body,2,,
+Screws (motor),M2 12 mm screws for mounting motor/mount to body,4,,
 Nuts (motor),M2 nuts for mounting motor/mount to body,4,,
 Breadboards (170),170-tie solderless breadboard,4,_data/datasheets/breadboard_170.pdf,https://uk.farnell.com/multicomp/mc001799/breadboard-34-5mm-x-45-5mm-white/dp/2770327
 ,,,,
@@ -78,7 +81,7 @@ D-Flip-Flop,4xDFF,2,,
 computers,,,,
 Microcontroller,Arduino Nano (rev.3),1,_data/datasheets/arduino_nano_rev3.pdf,https://uk.farnell.com/arduino/a000005/arduino-nano-evaluation-board/dp/1848691
 Cable (MiniUSB-1m),Mini-USB to Type-A cable (1 m),1,_data/datasheets/mini_USB_cable_1m.pdf,https://uk.farnell.com/molex/88732-8602/usb-cable-2-0-plug-plug-1m/dp/1221071
-Piezo Buzzer,Piezoelectric speaker/buzzer,1,,
+Piezo Buzzer,Piezoelectric speaker/buzzer,1,_data/datasheets/piezo_speaker.pdf,https://uk.farnell.com/kingstate/kpeg110/piezo-transducer/dp/1193641
 ,,,,
 behaviour,,,,
 Cable (MiniUSB-15cm),Short mini-USB to Type-A cable (15 cm),1,,https://www.amazon.co.uk/gp/product/B0763PPY51
@@ -87,31 +90,54 @@ USB Adapter(C-Micro),USB type-C (female) to micro (male) adapter,1,,https://www.
 UPS,Uninterrupted power supply and battery charger,1,https://wiki.52pi.com/index.php/UPS_for_Raspberry_Pi_4B/3B+/3B_SKU:_EP-0114,https://www.amazon.co.uk/gp/product/B082KJJMP2
 Battery (18650),Lithium-Ion 3.7V 3000 mAh 18650 battery,2,,https://www.amazon.co.uk/gp/product/B07TFSDKDV
 USB Breakout,Type-A male USB breakout board,2,,https://www.amazon.co.uk/Adapter-Breakout-2-54mm-Header-Connector/dp/B07R9S9X32
-Header,2.54 mm pitch male pin headers,2,,
+Header (4),2.54 mm pitch 4-way male pin header,2,,
 Switch (micro), Micro limit switch (SPDT),2,_data/datasheets/micro_limit_switch.jpg,https://www.amazon.co.uk/gp/product/B015W8S8NA
 Whisker,Laser cut whisker switch mount,2,,
 H-bridge,Dual H-bridge motor driver (L293D),2,_data/datasheets/L293.pdf,https://uk.farnell.com/texas-instruments/l293dne/ic-driver-peripheral-dual-36v/dp/3118959
-
+M2 screw (15),15 mm long M2 screw with phillips socket,4,,
+M2 nut, M2 nut,4,,
+M2.5 screw (12), 12 mm long M2.5 screw with phillips socket,4,,
+M2.5 standoffs (20), 20 mm brass M2.5 standoffs male-to-female,4,https://wiki.52pi.com/index.php/UPS_for_Raspberry_Pi_4B/3B+/3B_SKU:_EP-0114,
+M2.5 standoffs (7), 7 mm brass M2.5 standoffs male-to-female,4,https://wiki.52pi.com/index.php/UPS_for_Raspberry_Pi_4B/3B+/3B_SKU:_EP-0114,
+M3 screw (16), 16 mm long M3 screw with phillips socket,4,,
+M3 nut, M3 nut,4,,
+,,,,
 systems,,,,
 Computer (RPi4),Raspberry Pi 4b with 4 GB RAM,1,_data/datasheets/rpi4b_4gb.pdf,https://uk.farnell.com/raspberry-pi/rpi4-modbp-4gb/raspberry-pi-4-model-b-4gb/dp/3051887
 Heatsinks,Heatsinks for RPi 4b chips,1,_data/datasheets/rpi4b_heatsinks.jpg,https://www.amazon.co.uk/gp/product/B07VRNT3HX
 SD card,16 GB micro SD card,1,_data/datasheets/SanDisk-SDSQUAR-016G-GN6MA-datasheet.pdf,https://uk.farnell.com/sandisk/sdsquar-016g-gn6ma/memory-card-microsdhc-uhs-i-16gb/dp/2931924
-Mic (MEMS), I2S mems microphone board (SPH0645),2,https://learn.adafruit.com/adafruit-i2s-mems-microphone-breakout/overview,https://www.adafruit.com/product/3421
-Speaker,,,,
-Amp (Audio), I2S amplifier (3W/4 Ohm),,,
-
+M2.5 standoffs (15), 15 mm brass M2.5 standoffs male-to-female,4,,
 ,,,,
 networks,,,,
 Cable (Ethernet),RJ45 cact5e ethernet patch cable (1 m),1,_data/datasheets/ethernet_cable_1m.pdf,https://uk.farnell.com/pro-signal/ps11074/lead-patch-cat-5e-1-00m-black/dp/1734943
 ,,,,
+hearing,,,,
+Mic (MEMS), I2S mems microphone board (SPH0645),2,_data/datasheets/i2s-class-d-mono-amp.pdf,https://www.adafruit.com/product/3421
+Amp (Audio), I2S mono-amplifier (3 Watts/4 Ohms),2,_data/datasheets/i2s-class-d-mono-amp.pdf,https://www.amazon.co.uk/gp/product/B01K5GCFA6
+Speaker (3W),3-Watt enclosed speaker,2,,https://www.amazon.co.uk/gp/product/B0822XCPT8
+Speaker mount,Custom lasrer cut speaker mount,2,,
+M3 screw (20), 20 mm long M3 screw with phillips socket,2,,
+M3 screw (25), 25 mm long M3 screw with phillips socket,8,,
+M3 nut, M3 nut,12,,
+,,,,
 vision,,,,
 Camera (RPiv2),Raspberry Pi 8 MP camera,1,_data/datasheets/rpi_camera_v2.pdf,https://uk.farnell.com/raspberry-pi/rpi-8mp-camera-board/raspberry-pi-camera-board-v2/dp/2510728
 Mount,Laser-cut camera mount,1,,
+M2 screw (12), 12 mm long M1 screw with phillips socket,4,,
+M2 nut, M2 nut,4,,
+M2 washer,nylon washer 2-3 mm inner diameter,4,,
+M3 screw (20), 20 mm long M3 screw with phillips socket,2,,
+M3 nut, M3 nut,4,,
 ,,,,
 learning,,,,
-Clicker,Loud sound maker,1,,
+Clicker,Loud sound maker (and whistle),1,,https://www.amazon.co.uk/gp/product/B07HD3RDMK
 ,,,,
 intelligence,,,,
 NPU,Coral EdgeTPU USB Type-C,1,_data/datasheets/Coral-USB-Accelerator-datasheet.pdf,https://www.mouser.co.uk/ProductDetail/Coral/G950-01456-01?qs=sGAEpiMZZMu3sxpa5v1qrv9%252Bz890pMquX2qAISzny6s%3D
 Cable (TypeC-USB 10 cm),Short FPC Type-C to Type-A USB cable (10 cm),1,,https://www.amazon.co.uk/mytysun-Charge-Design-Compatible-Samsung/dp/B08D3Q44L6
+Cortex Mount,Custom laser cut holder for NPU,1,,
+M3 screw (16), 16 mm long M3 screw with phillips socket,4,,
+M3 nut, M3 nut,4,,
+M2.5 Standoffs (15), 15 mm long female-to-female M2.5 brass standoffs,4,,
+M2.5 screw (12), 12 mm long M2.5 screw with phillips socket,4,,
 ,,,,

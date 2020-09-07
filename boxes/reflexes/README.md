@@ -16,7 +16,8 @@ Caster|¾” metal ball caster|1|[-D-](https://www.pololu.com/product/955)|[-L-]
 Cable|6-way JST cable to male pins|2|-|-
 Spacer|5 mm spacer for mounting ball caster|3|-|-
 Screws (caster)|M2 25 mm screws for mounting ball caster to body via spacers|2|-|-
-Screws (motor)|M2 10 mm screws for mounting motor/mount to body|4|-|-
+Nuts (caster)|M2 nuts for mounting ball caster to body|2|-|-
+Screws (motor)|M2 12 mm screws for mounting motor/mount to body|4|-|-
 Nuts (motor)|M2 nuts for mounting motor/mount to body|4|-|-
 Breadboards (170)|170-tie solderless breadboard|4|[-D-](_data/datasheets/breadboard_170.pdf)|[-L-](https://uk.farnell.com/multicomp/mc001799/breadboard-34-5mm-x-45-5mm-white/dp/2770327)
 

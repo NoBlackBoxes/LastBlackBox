@@ -8,8 +8,9 @@ Computers and brains work with voltages. In order for either to affect the envir
 
 Contents|Description| # |Data|Link|
 :-------|:----------|:-:|:--:|:--:|
-DC Motor|Brushed DC motor|1|-|-
-Whistle|Motor shaft attachment|1|-|-
+DC Motor|6V Brushed DC motor|1|-|[-L-](https://www.amazon.co.uk/Gikfun-1V-6V-Hobby-Arduino-EK1894/dp/B07BHHP2BT)
+Propeller|Motor shaft attachment|1|-|[-L-](https://www.amazon.co.uk/Winterworm-Propeller-Project-Science-Accessories/dp/B07D8SZHZ8)
+M4 bolt|12 mm long M4 hex bolt|1|-|-
 
 Required|Description| # |Box|
 :-------|:----------|:-:|:-:|

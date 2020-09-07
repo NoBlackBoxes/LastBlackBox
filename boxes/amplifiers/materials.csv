@@ -1,7 +1,7 @@
 contents,,,,
-MOSFET,Power MOSFET/N-channel (IRF510),2,,
-Diode,IN401,2,,
-LED(blue),Low power blue light emitting diode,1,,
+MOSFET,Power MOSFET/N-channel (IRF510),2,_data/datasheets/IRF510.pdf,https://uk.farnell.com/vishay/irf510pbf/mosfet-n-100v-5-6a-to-220ab/dp/1653658
+Diode,IN401,2,_data/datasheets/IN4001.pdf,https://uk.farnell.com/on-semiconductor/1n4001g/diode-standard-1a-do-41/dp/1458986
+LED(blue),Low power blue light emitting diode,2,_data/datasheets/LED_blue.pdf,https://uk.farnell.com/broadcom-limited/hlmp-ka45-e0000/led-3mm-blue-85mcd-470nm/dp/1863182
 ,,,,
 required,,,,
 Multimeter,(Sealy MM18) pocket digital multimeter,1,white,

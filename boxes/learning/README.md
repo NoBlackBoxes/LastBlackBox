@@ -8,7 +8,7 @@ Change for the better.
 
 Contents|Description| # |Data|Link|
 :-------|:----------|:-:|:--:|:--:|
-Clicker|Loud sound maker|1|-|-
+Clicker|Loud sound maker (and whistle)|1|-|[-L-](https://www.amazon.co.uk/gp/product/B07HD3RDMK)
 
 Required|Description| # |Box|
 :-------|:----------|:-:|:-:|

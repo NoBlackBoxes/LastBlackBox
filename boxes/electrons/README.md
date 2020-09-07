@@ -14,19 +14,21 @@ In this box, we will learn about electricity...how to measure it and how to **co
 
 Contents|Description| # |Data|Link|
 :-------|:----------|:-:|:--:|:--:|
-Resistor|3 &Omega;/0.25 W|1|-|-
-Resistor|220 &Omega;/0.25 W|1|-|-
-Resistor|470 &Omega;/0.25 W|1|-|-
-Resistor|1 k&Omega;/0.25 W|1|-|-
-Capcitor|some size ceramic|1|-|-
-Capcitor|some size electrolytic|1|-|-
-Inductor|some size|1|-|-
-Potentiometer|10 k&Omega; variable resistor|1|-|-
-Lightbulb|Mini incandescent bulb|1|-|-
+Resistor|330 &Omega;/0.25 W|2|[-D-](_data/datsheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-330r/res-330r-1-250mw-axial-metal-film/dp/9341730)
+Resistor|470 &Omega;/0.25 W|1|[-D-](_data/datsheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943)
+Resistor|1 k&Omega;/0.25 W|1|[-D-](_data/datsheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-1k/res-1k-1-250mw-axial-metal-film/dp/9341102)
+Resistor|10 k&Omega;/0.25 W|2|[-D-](_data/datsheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-10k/res-10k-1-250mw-axial-metal-film/dp/9341110)
+Capacitor|0.1 uF ceramic capacitor|1|[-D-](_data/datasheets/capacitor_ceramic.pdf)|[-L-](https://uk.farnell.com/kemet/c322c104k1r5ta/cap-0-1-f-100v-10-x7r/dp/1457685)
+Capacitor|100 uF aluminum electrolytic capacitor|1|[-D-](_data/datsheets/capacitor_electrolytic.pdf)|[-L-](https://uk.farnell.com/rubycon/16zlh100mefc5x11/cap-100-f-16v-20/dp/8126283)
+Inductor|1 mH torroidal inductor|1|[-D-](_data/datasheets/inductor_torroidal.pdf)|[-L-](https://uk.farnell.com/bourns/2124-v-rc/inductor-1000uh-15-1-3a-toroid/dp/1929753)
+Button|Tactile switch|2|[-D-](_data/datasheets/button.pdf)|[-L-](https://uk.farnell.com/omron/b3f-1000/switch-spno-0-05a-24v-tht-0-98n/dp/176432)
+Potentiometer|20 k&Omega; variable resistor|2|[-D-](_data/datasheets/pot_20kOhm.pdf)|[-L-](https://uk.farnell.com/bourns/3362p-1-203lf/trimmer-20k/dp/9354344)
+Lightbulb|Mini incandescent bulb (6 V)|1|[-D-](_data/datasheets/lamp_6V.pdf)|[-L-](https://uk.farnell.com/cml-innovative-technologies/3820al/lamp-w-e-axial-t3-8-6v-0-6w/dp/1139454)
 Breadboard (400)|400-tie solderless breadboard|1|[-D-](_data/datasheets/breadboard_400.pdf)|[-L-](https://uk.farnell.com/multicomp/mcbb400/breadboard-solderless-300v-abs/dp/2395961)
 Balloon|Any color-latex|1|-|-
 Batteries (AA)|AA 1.5 V alkaline battery|4|-|-
 Battery holder|4xAA battery holder with ON-OFF switch|1|-|[-L-](https://www.dfrobot.com/product-202.html)
+Battery case|4xAA battery storgae case|1|-|[-L-](https://www.amazon.co.uk/gp/product/B07ZHZDWQ2)
 Magnet wire|Narrow gaurge epoxy insulated (1 m)|1|-|-
 Jumper kit|Kit of multi-length 22 AWG breadboard jumpers|1|[-D-](_data/datasheets/jumper_kit.pdf)|[-L-](https://uk.farnell.com/multicomp/mc001810/hard-jumper-wire-22awg-140pc/dp/2770338)
 Jumper wires|Assorted 22 AWG jumper wire leads (male/female)|1|[-D-](_data/datasheets/jumper_wires.pdf)|[-L-](https://uk.farnell.com/multicomp/mcbbj65/jumper-wire-assortment-65pcs/dp/2396146)

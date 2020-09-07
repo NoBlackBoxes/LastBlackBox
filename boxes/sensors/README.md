@@ -8,11 +8,9 @@ Computers and brains work with voltages. In order for either to understand signa
 
 Contents|Description| # |Data|Link|
 :-------|:----------|:-:|:--:|:--:|
-Thermistor|Temperature sensitive resistor|1|-|-
-Photoresistor|Light-dependent resistor|2|-|-
-FSR|Force sensitive resistor|1|-|-
-Pizeo|Pressure-depedent crystal|1|-|-
-Microphone|Piezo mic element|1|-|-
+Thermistor|Temperature sensitive resistor|2|[-D-](_data/datasheets/thermistor.pdf)|[-L-](https://uk.farnell.com/epcos/b57891m0103k000/thermistor-ntc-radial-leaded/dp/2285471)
+Photoresistor|Light-dependent resistor|2|[-D-](_data/datasheets/ldr.pdf)|[-L-](https://uk.farnell.com/advanced-photonix/nsl-19m51/light-dependent-resistor-550nm/dp/3168335)
+Piezo|Piezo element|1|[-D-](_data/datasheets/piezo.pdf)|[-L-](https://uk.farnell.com/multicomp/mcabt-455-rc/audio-element-piezo-2-8khz-35mm/dp/2433035?st=piezo)
 
 Required|Description| # |Box|
 :-------|:----------|:-:|:-:|

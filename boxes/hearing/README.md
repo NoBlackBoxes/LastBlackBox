@@ -8,8 +8,13 @@ Listen up.
 
 Contents|Description| # |Data|Link|
 :-------|:----------|:-:|:--:|:--:|
-Camera (RPiv2)|Raspberry Pi 8 MP camera|1|[-D-](_data/datasheets/rpi_camera_v2.pdf)|[-L-](https://uk.farnell.com/raspberry-pi/rpi-8mp-camera-board/raspberry-pi-camera-board-v2/dp/2510728)
-Mount|Laser-cut camera mount|1|-|-
+Mic (MEMS)| I2S mems microphone board (SPH0645)|2|[-D-](_data/datasheets/i2s-class-d-mono-amp.pdf)|[-L-](https://www.adafruit.com/product/3421)
+Amp (Audio)| I2S mono-amplifier (3 Watts/4 Ohms)|2|[-D-](_data/datasheets/i2s-class-d-mono-amp.pdf)|[-L-](https://www.amazon.co.uk/gp/product/B01K5GCFA6)
+Speaker (3W)|3-Watt enclosed speaker|2|-|[-L-](https://www.amazon.co.uk/gp/product/B0822XCPT8)
+Speaker mount|Custom lasrer cut speaker mount|2|-|-
+M3 screw (20)| 20 mm long M3 screw with phillips socket|2|-|-
+M3 screw (25)| 25 mm long M3 screw with phillips socket|8|-|-
+M3 nut| M3 nut|12|-|-
 
 Required|Description| # |Box|
 :-------|:----------|:-:|:-:|
