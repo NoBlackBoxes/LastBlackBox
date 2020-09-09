@@ -24,12 +24,20 @@ Multimeter|(Sealy MM18) pocket digital multimeter|1|[white](/boxes/white/README.
 
 ----
 
-## Thresholds
+## Positive Feedback
 
 Non-linearities are useful
 
 ### Exercise: Build a Schmitt-Trigger
 
-Yep.
+Comparators use positive feedback to hold a value once an input has crossed a threshold.
+
+### References
+
+(Applications for Schmitt Triggers)[https://components101.com/articles/schmitt-trigger-introduction-working-applications]
+
+(LM139)[https://www.ti.com/product/LM139]
+
+(SO Schmitt Trigger Help)[https://electronics.stackexchange.com/questions/282502/how-to-build-a-schmitt-trigger-using-transistors]
 
 ----

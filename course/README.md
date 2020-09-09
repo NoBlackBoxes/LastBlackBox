@@ -20,8 +20,8 @@ Hindbrain|Midbrain|Forebrain|
 [2. Magnets](/boxes/magnets/README.md)|[9. Data](/boxes/data/README.md)|[16. Networks](/boxes/networks/README.md)
 [3. Light](/boxes/light/README.md)|[10. Logic](/boxes/logic/README.md)|[17. Hearing](/boxes/hearing/README.md)
 [4. Sensors](/boxes/sensors/README.md)|[11. Memory](/boxes/memory/README.md)|[18. Speech](/boxes/speech/README.md)
-[5. Motors](/boxes/motors/README.md)|[12. Control](/boxes/control/README.md)|[19. Vision](/boxes/vision/README.md)
-[6. Amplifiers](/boxes/amplifiers/README.md)|[13. Computers](/boxes/computers/README.md)|[20. Learning](/boxes/learning/README.md)
+[5. Motors](/boxes/motors/README.md)|[12. Computers](/boxes/computers/README.md)|[19. Vision](/boxes/vision/README.md)
+[6. Amplifiers](/boxes/amplifiers/README.md)|[13. Control](/boxes/control/README.md)|[20. Learning](/boxes/learning/README.md)
 [7. **Reflexes**](/boxes/reflexes/README.md)|[14. **Behaviour**](/boxes/behaviour/README.md)|[21. **Intelligence?**](/boxes/intelligence/README.md)
 
 1. **Electrons**

@@ -47,3 +47,6 @@ fab/
 
 # VK temporary files
 _vk
+
+# OSX bullshit
+.DS_Store
