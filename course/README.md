@@ -7,27 +7,20 @@ A set of black boxes to open in sequence
 ## Boxes
 
 <p align="center">
-<img src="designs/layout/layout.png" alt="Example Image" width="600" height="450">
+<img src="designs/layout/layout.png" alt="Example Image" width="500" height="375">
 </p>
 
 ----
 
-1. [Electrons](/boxes/electrons/README.md)
-2. [Sensors](/boxes/sensors/README.md)
-3. [Motors](/boxes/motors/README.md)
-4. [Amplifiers](/boxes/amplifiers/README.md)
-5. [Reflexes](/boxes/reflexes/README.md)
-6. [Decisions](/boxes/decisions/README.md)
-7. [Data](/boxes/data/README.md)
-8. [Logic](/boxes/logic/README.md)
-9. [Memory](/boxes/memory/README.md)
-10. [Computers](/boxes/computers/README.md)
-11. [Behaviour](/boxes/behaviour/README.md)
-12. [Systems](/boxes/systems/README.md)
-13. [Networks](/boxes/networks/README.md)
-14. [Vision](/boxes/vision/README.md)
-15. [Learning](/boxes/learning/README.md)
-16. [Intelligence?](/boxes/intelligence/README.md)
+Hindbrain|Midbrain|Forebrain|
+---------|--------|---------|
+[1. Electrons](/boxes/electrons/README.md)|[8. Decisions](/boxes/decisions/README.md)|[15. Systems](/boxes/systems/README.md)
+[2. Magnets](/boxes/magnets/README.md)|[9. Data](/boxes/data/README.md)|[16. Networks](/boxes/networks/README.md)
+[3. Light](/boxes/light/README.md)|[10. Logic](/boxes/logic/README.md)|[17. Hearing](/boxes/hearing/README.md)
+[4. Sensors](/boxes/sensors/README.md)|[11. Memory](/boxes/memory/README.md)|[18. Speech](/boxes/speech/README.md)
+[5. Motors](/boxes/motors/README.md)|[12. Control](/boxes/control/README.md)|[19. Vision](/boxes/vision/README.md)
+[6. Amplifiers](/boxes/amplifiers/README.md)|[13. Computers](/boxes/computers/README.md)|[20. Learning](/boxes/learning/README.md)
+[7. **Reflexes**](/boxes/reflexes/README.md)|[14. **Behaviour**](/boxes/behaviour/README.md)|[21. **Intelligence?**](/boxes/intelligence/README.md)
 
 ### Descriptions
 
@@ -37,91 +30,121 @@ A set of black boxes to open in sequence
     - *Brain*: Neurons (resting potential), passive properties.
     - *Exercises*: Measure voltage/current/resistance. Build a voltage divider. Turn on a light bulb.
 
-2. **Sensors**
+2. **Magnets**
+
+    - *Tech*: Intro to magnetism
+    - *Brain*: Why not?
+    - *Exercises*: Build a telegraph
+
+3. **Light**
+
+    - *Tech*: Intro to EM radiation and spectrum
+    - *Brain*: Why not?
+    - *Exercises*: Lightbulbs and antennas
+
+4. **Sensors**
 
     - *Tech*: Intro to transduction of heat, light, pressure, and sound.
     - *Brain*: Intro to photoreceptors, hair cells, and mechanosensors.
     - *Exercises*: Build a light, heat, pressure sensor using a photoresitor, thermistor, piezo
 
-3. **Motors**
+5. **Motors**
 
     - *Tech*: Intro to electromagnetism and piezos
     - *Brain*: Muscles and motor neruons (chemical synapses?)
     - *Exercises*: Wind a coil, spin a motor, make a sound, build a theremin(?)
 
-4. **Amplifiers**
+6. **Amplifiers**
 
     - *Tech*: Intro to tubes and transistors, and op amps
     - *Brain*: Action potentials and axons and synapses (or later...with decisions?)
     - *Exercises*: Move a motor with your sensor, better theremin?
 
-5. **Reflexes**
+7. **Reflexes**
 
     - *Tech*: Intro to control
     - *Brain*: Simple sensorimotor behaviour
     - *Exercises*: Build a Braitenberg vehicle
 
-6. **Decisions**
+8. **Decisions**
 
     - *Tech*: Transistors as switches (and relays?)
     - *Brain*: Action potential
     - *Exercises*: Light/Dark finding bot?
 
-7. **Data**
+9. **Data**
 
     - *Tech*: Getting from analog to digital (0 and 1s is all you need), ADCs and DACs
     - *Brain*: Neural code? (rate v timing?)
     - *Exercises*: Build a simple ADC?
 
-8. **Logic**
+10. **Logic**
 
     - *Tech*: digital logic and the basis of computation
     - *Brain*: Simple neural circuits: E and I
     - *Exercises*: Build an adder
 
-9. **Memory**
+11. **Memory**
 
     - *Tech*: flip/flop, flash, storage
     - *Brain*: Synapses, LTP, and NMDA channels
     - *Exercises*: Sample hold circuit? (clapper?) Build a D-Latch
 
-10. **Computers**
+12. **Computers**
 
     - *Tech*: ALU, microcontrollers and progamming I
     - *Brain*: basic brains (brain computer anlogy debate)
     - *Exercises*: Arduino basics, blinky in ASM and C
 
-11. **Behaviour**
+13. **Control**
+
+    - *Tech*: Negative feedback and servos, H-bridge
+    - *Brain*: Motor control
+    - *Exercises*: Write direction, speed (and position?) controller
+
+14. **Behaviour**
 
     - *Tech*: Smarter robots
     - *Brain*: Smarter bot
     - *Exercises*: Ardunio based robot (PWM motors? various sensors?): Task: ?
 
-12. **Systems**
+15. **Systems**
 
     - *Tech*: Operating systems and programming II
     - *Brain*: Brain systems (sense, perceive, memory, learning, )
     - *Exercises*: Python basics, linux basics
 
-13. **Networks**
+16. **Networks**
 
     - *Tech*: Internet protocols and WiFi
     - *Brain*: Physical layer and neural protocols
     - *Exercises*: SSH and connect to bot via ESP or NRF
 
-14. **Vision**
+17. **Hearing**
+
+    - *Tech*: From mics to "understanding" sound
+    - *Brain*: Extracting information from hair cells, sound localization
+    - *Exercises*: Build a sound localizer
+
+18. **Speech**
+
+    - *Tech*: Sound generation
+    - *Brain*: Communication and language
+    - *Exercises*: Give your robot a voice
+
+19. **Vision**
 
     - *Tech*: From cameras to "vision"
     - *Brain*: Extracting information from photoreceptors (through V1 and beyond)
     - *Exercises*: Build a colored blob detector
 
-15. **Learning**
+20. **Learning**
 
     - *Tech*: Reinforcement learning and clicker training
     - *Brain*: RL in brains
     - *Exercises*: Clicker train yourself and your robot
 
-16. **Intelligence?**
+21. **Intelligence?**
 
     - *Tech*: Neural Networks and modern "AI", NPU
     - *Brain*: From fish to humans, evolution of biological intelligence
