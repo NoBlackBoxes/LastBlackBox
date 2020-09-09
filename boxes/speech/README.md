@@ -23,11 +23,13 @@ Multimeter|(Sealy MM18) pocket digital multimeter|1|[white](/boxes/white/README.
 
 ----
 
-## CCDs
+## Speakers
 
-And Bayer...whatever.
+Coils, impedance, stereo...etc.
 
-### Exercise: See
+## Language
+
+### Exercise: Talk
 
 Good luck!!! :)
 

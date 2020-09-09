@@ -41,6 +41,22 @@ Body|Laser cut base (5 mm clear acrylic)|1|[reflexes](/boxes/reflexes/README.md)
 
 ----
 
+## Atoms
+
+Atoms are the tiny particles that make up all (normal) matter. They are composed of three types of sub-atomic particles: protons, neutrons, and electrons. The protons and neutrons are clustered together in a central core, called the nucleus, while the electrons "orbit" around the nucleus in rings.
+
+<p align="center">
+<img src="_images/atom.png" alt="Atom" width="200" height="200">
+<p>
+
+The mass of an atom is determined by the number of protons and neutrons in its nucleus (the more the heavier), while the behaviour of the atom (what it reacts with/sticks to/etc.) is determined by the arrangement of electrons in the rings (called an "orbit"). The orbit closest to the nucleus is the smallest and can only contain two electrons. The next two orbits are larger and can each contain up to 8 electrons. The fourth orbit can contain 18. The electron capacity of each orbit is determined by quantum mechanics, but the consequences are readily observable.
+
+<p align="center">
+<img src="_images/valence.png" alt="Valence" width="200" height="200">
+<p>
+
+The outermost orbiting electrons are called the "valence" electrons, as these are the ones that can interact with other atoms. If the outermost orbit is full (has all slots filled with electrons), then this atom will not want to react with other atoms. We call such materials "inert" (e.g. Helium and Argon). However, if the outermost orbital is not full, the this atom will be quite interested in interacting with other atoms willing to share one of their valence electrons, particularly those that have a complemetary number of valence electrons. For example, an atom with just 1 electron in its third orbital (Sodium, Na) is quite interested in an atom with 7 electrons in its third orbital (Chloride, Cl). Sodium and Chloride, when they find each other, can share valence electrons with each other, completing their outer rings. When two atoms share electrons, we call this a "bond", as they are now stuck together. The more electrons they share, the stronger the bond.
+
 ## Electric field
 
 The attractive and repulsive forces surrounding each charge can be described as a field. This *electric field* just says what would happen to a "test charge" placed at any location nearby. The fields created by all of the individual charges add together to create a more complex field. The simplest example of a combined field is with one negative and one positve charge, which is called a "dipole" because it has two poles, one postive and one negative.
@@ -200,55 +216,9 @@ There is another way to influence the timing of electricty, but that will requir
 
 ### Exercise: Measure current and voltage across a capacitor when connected to a battery
 
-----
-
-## Magnetism
-
-When electrons move they produce ("induce") a magnetic field. This baffled physicists until the 19<sup>th</sup> century, when it was finally realized that electricty and magnetism were fundamentally linked. Moving charges produce magnetic fields, and magnetic fields cause charges to move. We will use this connection in many useful ways.
-
-This symmetry between electricity and magnetism is not perfect. Unlike the sub-atomic particles with a single positve or negative charge, nature does not seem to have an equivalent "monopole" for magnetism. All magnetic materials fields are created from "dipoles", where the two poles have been named North and South, referencing the initial importance of magnets as compasses.
-
-For some atoms...dipole moment.
-
-Current flowing through a straight piece of conductor produces a circular magenetic field surrounding the wire. A magnetic field, like an electric field, just means that something "magnetic" will feel a force when it is within the field. The field created by current flowing through a wire is directly proportional to how much current is flowing, the more current, the stronger the field.
-
-
-<p align="center">
-<img src="_images/magnetic_field.png" alt="Magnetic Field" width="150" height="150">
-<p>
-
-
-However, this field is still quite weak, we can make it larger if we align the field lines by changing the shape of the wire. If we wind the wire into a coil, then all of the circular magentic fields will line up, and add together, increasing the strength of the field every time we add another loop. We can use coils of wire to create electromagnets that can interact with magnetic materials when we run a current through them.
-
-<p align="center">
-<img src="_images/magnetic_coil.png" alt="Magnetic Coil" width="150" height="150">
-<p>
-
-The opposite is also true.
-
-- Talk about generators?
-
-### Exercise: Play with a magent
-
-### Exercise: Make an electromagnet
-
-### Exercise: Build a generator
-
-----
-
-## Inductors
-
-Needed (yes).
-
-### Exercise: Play with an inductor
-
-Some oscillator?
-
-----
-
 ## Circuits
 
-The essential elements of electrcity and magnetism (voltage, current, resistance, capcitance, and inductance) can be combined to create all sorts of fascinating and useful devices...including machines that think. We can combine them into a network of interconnected elements, called a circuit, and in the following exercises we will build some simple examples.
+The essential elements of electrcity (voltage, current, resistance, and capcitance) can be combined to create all sorts of fascinating and useful devices...including machines that think. We can combine them into a network of interconnected elements, called a circuit, and in the following exercises we will build some simple examples.
 
 ### Exercise: Simple circuit with switch and meter (Test bench)...introduce breadboard)
 
@@ -280,23 +250,3 @@ Resistors dissapate power in two ways, as heat and as light.
 All materials are made of tiny particles that are constantly in motion. This is true for gases and liquids, but also for solids, where the particles might not move very far but are always shaking. This random motion of particles in a material is called heat. The average kinetic energy of these random motions is a material's temperature, which is quantified in degrees (Celsius, abbreviated C, or Farhenheit, abbreviated F).
 
 When current flows through a resistor, the moving electrons interact with the material and increase the movement of its constiuent particles, increasing its temperature. The more current that flows, the more heat is generated. Sometimes this is useful, such as when we push a lot of current through a coil of wire in an electric tea kettle to quickly heat up some water. Sometimes this is not useful, such as when too much current flows in one of electronic devices, causing it to heat up too much and break. We can do our best to prevent this by calculating the "power" that will be generated and then check whether our device can handle (i.e. dissapte) that amount of power safely.
-
-## Light
-
-When a material becomes very hot, it starts to "glow". Why?
-
-- Where does the energy go?
-- What is heat?
-- What is too much heat?
-- How does a lightbulb work?
-- (What is light?)
-
-### Exercise: Light a lightbulb
-
-### Exercise: Dim a lightbulb with a variable resistor
-
-----
-
-## Inductors
-
-- Needed?

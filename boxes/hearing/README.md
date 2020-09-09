@@ -18,11 +18,11 @@ Multimeter|(Sealy MM18) pocket digital multimeter|1|[white](/boxes/white/README.
 
 ----
 
-## CCDs
+## I2S
 
-And Bayer...whatever.
+Sound protocols
 
-### Exercise: See
+### Exercise: Hear
 
 Good luck!!! :)
 

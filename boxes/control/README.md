@@ -21,11 +21,15 @@ Jumper wires|Assorted 22 AWG jumper wire leads (male/female)|1|[electrons](/boxe
 
 ----
 
-## Build a sensible robot
+## Negative-Feedback
 
 Not with more control!
 
-### Exercise: Arduino
+## Servo Loops
+
+...in robots and brains
+
+### Exercise: Build a PID controller
 
 Good luck!!!
 
