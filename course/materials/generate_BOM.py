@@ -155,6 +155,8 @@ def append_materials(BOM, box):
 boxes = [
     'white',
     'electrons',
+    'magnets',
+    'light',
     'sensors',
     'motors',
     'amplifiers',
@@ -164,10 +166,12 @@ boxes = [
     'logic',
     'memory',
     'computers',
+    'control',
     'behaviour',
     'systems',
     'networks',
     'hearing',
+    'speech',
     'vision',
     'learning',
     'intelligence']

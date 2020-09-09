@@ -6,6 +6,18 @@ A course for brains interested in brains (not for tools interested in tools)
 <img src="course/designs/logo/icon.png" alt="LBB" width="400" height="300">
 </p>
 
+This is course in neuroscience and technology.
+
+## Prerequisites
+
+A variety of tools (hardware and software) will be required to complete the course exercises and construct the NB3. These tools are all included in the "White Box", but you can use your own if available. Please complete the intitial setup by following the instructions on the ["White Box" page](/boxes/white/README.md).
+
+----
+
+<p align="center">
+<a href="course/README.md"><b>Start the course!</b></a>
+</p>
+
 ----
 
 ## License

@@ -19,8 +19,6 @@ Test Lead|Alligator clip to 0.64 mm pin (20 cm)|2|[white](/boxes/white/README.md
 Jumper kit|Kit of multi-length 22 AWG breadboard jumpers|1|[electrons](/boxes/electrons/README.md)|
 Jumper wires|Assorted 22 AWG jumper wire leads (male/female)|1|[electrons](/boxes/electrons/README.md)|
 Photoresistor|Light-dependent resistor|2|[sensors](/boxes/sensors/README.md)|
-DC Motor|Brushed DC motor|1|[motors](/boxes/motors/README.md)|
-Whistle|Motor shaft attachment|1|[motors](/boxes/motors/README.md)|
 
 </p></details>
 

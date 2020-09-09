@@ -8,7 +8,7 @@ Simple sensorimotor behaviour. Braitenburg Vehicle.
 
 Contents|Description| # |Data|Link|
 :-------|:----------|:-:|:--:|:--:|
-Motor|Brushed DC motor with gearbox - 6V/1:100/155 RPM with encoder (FIT0483)|2|[-D-](https://www.dfrobot.com/product-1433.html)|[-L-](https://www.dfrobot.com/product-1433.html)
+Motor (Geared)|Brushed DC motor with gearbox - 6V/1:100/155 RPM with encoder (FIT0483)|2|[-D-](https://www.dfrobot.com/product-1433.html)|[-L-](https://www.dfrobot.com/product-1433.html)
 Body|Laser cut base (5 mm clear acrylic)|1|-|-
 Motor Mount|Motor mounts and mounting hardware (1089)|2|[-D-](https://www.pololu.com/product/1089)|[-L-](https://www.hobbytronics.co.uk/mm-gearmotor-bracket-ext)
 Wheels|60 mm x 8 mm wheels (black)|2|[-D-](https://www.pololu.com/product/1420)|[-L-](https://www.hobbytronics.co.uk/wheel-60-8mm)

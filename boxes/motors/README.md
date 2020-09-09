@@ -8,16 +8,13 @@ Computers and brains work with voltages. In order for either to affect the envir
 
 Contents|Description| # |Data|Link|
 :-------|:----------|:-:|:--:|:--:|
-DC Motor|6V Brushed DC motor|1|-|[-L-](https://www.amazon.co.uk/Gikfun-1V-6V-Hobby-Arduino-EK1894/dp/B07BHHP2BT)
+DC Motor|6V Brushed DC motor|1|[-D-](https://www.pololu.com/product/1117/specs)|[-L-](https://www.amazon.co.uk/Gikfun-1V-6V-Hobby-Arduino-EK1894/dp/B07BHHP2BT)
 Propeller|Motor shaft attachment|1|-|[-L-](https://www.amazon.co.uk/Winterworm-Propeller-Project-Science-Accessories/dp/B07D8SZHZ8)
-M4 bolt|12 mm long M4 hex bolt|1|-|-
 
 Required|Description| # |Box|
 :-------|:----------|:-:|:-:|
 Multimeter|(Sealy MM18) pocket digital multimeter|1|[white](/boxes/white/README.md)|
 Test Lead|Alligator clip to 0.64 mm pin (20 cm)|2|[white](/boxes/white/README.md)|
-Body|Laser cut base (5 mm clear acrylic)|1|[reflexes](/boxes/reflexes/README.md)|
-Breadboard (400)|400-tie solderless breadboard|1|[electrons](/boxes/electrons/README.md)|
 Batteries (AA)|AA 1.5 V alkaline battery|4|[electrons](/boxes/electrons/README.md)|
 Battery holder|4xAA battery holder with ON-OFF switch|1|[electrons](/boxes/electrons/README.md)|
 Jumper kit|Kit of multi-length 22 AWG breadboard jumpers|1|[electrons](/boxes/electrons/README.md)|
