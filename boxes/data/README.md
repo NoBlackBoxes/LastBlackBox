@@ -65,4 +65,8 @@ The number of levels (number of resistor-comparator pairs) defines the resolutio
 
 The comparator is still a pretty magical black box, and it's doing something nonlinear as we can see from the equation for **C**. As it turns out, [comparators are quite complex](https://electronics.stackexchange.com/questions/164297/how-exactly-does-a-comparator-work). If you get your ADC working, have a go trying to make one from transistors.
 
+### Refs
+
+[InstTools Flash ADC](https://instrumentationtools.com/topic/flash-adc/)
+
 ----
