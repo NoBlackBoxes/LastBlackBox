@@ -71,7 +71,7 @@ Nuts (motor),M2 nuts for mounting motor/mount to body,4,,
 Breadboards (170),170-tie solderless breadboard,4,_data/datasheets/breadboard_170.pdf,https://uk.farnell.com/multicomp/mc001799/breadboard-34-5mm-x-45-5mm-white/dp/2770327
 ,,,,
 decisions,,,,
-Comparator,Comparator,1,,
+Comparator,LM339,2,https://www.ti.com/lit/ds/symlink/lm339-n.pdf,https://uk.farnell.com/texas-instruments/lm339n/ic-comparator-quad-dip14-339/dp/3118457?st=lm339n
 ,,,,
 data,,,,
 Resistor Ladder,8 Resistor divider/ladder,1,,

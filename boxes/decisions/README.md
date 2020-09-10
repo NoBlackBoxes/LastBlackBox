@@ -14,7 +14,7 @@ schmitt trigger!
 
 Contents|Description| # |Data|Link|
 :-------|:----------|:-:|:--:|:--:|
-Comparator|Comparator|1|-|-
+Comparator|LM339|2|[-D-](https://www.ti.com/lit/ds/symlink/lm339-n.pdf)|[-L-](https://uk.farnell.com/texas-instruments/lm339n/ic-comparator-quad-dip14-339/dp/3118457?st=lm339n)
 
 Required|Description| # |Box|
 :-------|:----------|:-:|:-:|
