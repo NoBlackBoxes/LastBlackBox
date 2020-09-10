@@ -24,6 +24,7 @@ Feedback can keep state.
 
 ### Exercise: Build a memory cell
 
-Good luck!!!
+(D-latch / flip-flop)[http://www.learningaboutelectronics.com/Articles/D-flip-flop-circuit-with-NAND-gates.php]
+
 
 ----
