@@ -8,18 +8,17 @@ import os
 
 # Get LBB root -- KeyError if not found
 try:
-    LBBROOT = os.environ['LBBROOT']
-except KeyError:
-    LBBROOT = '../..'
+    LBBREPO = os.environ['LBBROOT'] + '/repo'
 
+except KeyError:
+    LBBREPO = '../..'
 
 # Specify LBB boxes folder
-LBBBOXES = LBBROOT + '/boxes'
+LBBBOXES = LBBREPO + '/boxes'
 
 #
 # Helper functions
 #
-
 
 # Find materials section in README file
 def find_materials_section(readme):
@@ -189,7 +188,7 @@ for box in boxes:
     BOM = append_materials(BOM, box)
 
 # Store BOM
-bom_path = LBBROOT + "/course/materials/BOM.csv"
+bom_path = LBBREPO + "/course/materials/BOM.csv"
 f = open(bom_path, 'w', encoding='utf8')
 f.writelines(BOM)
 f.close()

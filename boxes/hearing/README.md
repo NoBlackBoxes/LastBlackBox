@@ -8,7 +8,7 @@ Listen up.
 
 Contents|Description| # |Data|Link|
 :-------|:----------|:-:|:--:|:--:|
-Mic (MEMS)| I2S mems microphone board (SPH0645)|2|[-D-](_data/datasheets/i2s-class-d-mono-amp.pdf)|[-L-](https://www.adafruit.com/product/3421)
+Mic (MEMS)| I2S mems microphone board (SPH0645)|2|[-D-](_data/datasheets/i2s_mems_mic.pdf)|[-L-](https://www.adafruit.com/product/3421)
 
 Required|Description| # |Box|
 :-------|:----------|:-:|:-:|
