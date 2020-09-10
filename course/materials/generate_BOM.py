@@ -7,7 +7,11 @@
 import os
 
 # Get LBB root -- KeyError if not found
-LBBROOT = os.environ['LBBROOT']
+try:
+    LBBROOT = os.environ['LBBROOT']
+except KeyError:
+    LBBROOT = '../..'
+
 
 # Specify LBB boxes folder
 LBBBOXES = LBBROOT + '/boxes'
@@ -83,13 +87,14 @@ def insert_materials(box):
     box_path = LBBBOXES + "/" + box
     materials_path = box_path + "/materials.csv"
     readme_path = box_path + "/README.md"
+    print(readme_path)
 
     # Read README.md
-    with open(readme_path) as f:
+    with open(readme_path, encoding='utf8') as f:
         readme = f.readlines()
 
     # Read materials.csv
-    with open(materials_path) as f:
+    with open(materials_path, encoding='utf8') as f:
         materials = f.readlines()
 
     # Append final newline (if not present)
@@ -126,7 +131,7 @@ def insert_materials(box):
     readme = pre_readme + materials_section + post_readme
 
     # Store README.md
-    f = open(readme_path, 'w')
+    f = open(readme_path, 'w', encoding='utf8')
     f.writelines(readme)
     f.close()
 
@@ -141,7 +146,7 @@ def append_materials(BOM, box):
 
     # Read materials.csv (contents only)
     materials = []
-    f = open(materials_path, 'r')
+    f = open(materials_path, 'r', encoding='utf8')
     line = f.readline()  # Skip contents header
     while True:
         line = f.readline()
@@ -185,7 +190,7 @@ for box in boxes:
 
 # Store BOM
 bom_path = LBBROOT + "/course/materials/BOM.csv"
-f = open(bom_path, 'w')
+f = open(bom_path, 'w', encoding='utf8')
 f.writelines(BOM)
 f.close()
 
