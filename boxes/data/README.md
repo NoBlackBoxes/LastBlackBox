@@ -8,10 +8,8 @@ When we say "data", what are we really referring to? In this section, we'll star
 
 Contents|Description| # |Data|Link|
 :-------|:----------|:-:|:--:|:--:|
-Resistor Ladder|8 Resistor divider/ladder|1|-|[-L-](
-)
-Comparator|Comparator|8|-|[-L-](
-)
+Resistor Ladder|8 Resistor divider/ladder|1|-|-
+Comparator|Comparator|8|-|-
 
 Required|Description| # |Box|
 :-------|:----------|:-:|:-:|
@@ -52,7 +50,7 @@ The comparators each perform *one-bit quantization*. With that, we're in a binar
 	<img src="https://render.githubusercontent.com/render/math?math=\textrm{number\ of\ levels} = 2^{\textrm{number\ of\ bits}}">
 </p>
 
-The comparator is still a pretty magical black box, and it's doing something nonlinear as we can see from the equation for **C**. As it turns out, [comparators are quite complex](https://electronics.stackexchange.com/questions/164297/how-exactly-does-a-comparator-work). If you get your ADC working, have a go trying to make a comparator from transistors.
+The comparator is still a pretty magical black box, and it's doing something nonlinear as we can see from the equation for **C**, but we know it's made of transistors, and we can make one if we're in a real pinch.
 
 ### Refs
 

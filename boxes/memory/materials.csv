@@ -1,5 +1,7 @@
 contents,,,,
-D-Flip-Flop,4xDFF,2,,
+NAND ICs,NAND gates,4,,
+Switches,,,,
+LEDs,,,,
 ,,,,
 required,,,,
 Multimeter,(Sealy MM18) pocket digital multimeter,1,white,

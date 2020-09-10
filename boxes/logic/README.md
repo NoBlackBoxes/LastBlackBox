@@ -22,7 +22,7 @@ Multimeter|(Sealy MM18) pocket digital multimeter|1|[white](/boxes/white/README.
 
 # Digital Logic
 
-The first step in making a modern digital computer is to understand how to perform logical (mathematical) operations on binary data. This means working towards an Arithmetic Logic Unit (ALU). As we will see, there is much more to a CPU, but this is the place to begin.
+Now that we understand how to move from the analog to the digital world using an [ADC](boxes/data/README.md), we need to understand how to perform logical (mathematical) operations on our newfound binary data. This means working towards an Arithmetic Logic Unit (ALU). As we will see, there is much more to a CPU, but this is the place to begin.
 
 ## Logic Gates
 

@@ -14,7 +14,7 @@ schmitt trigger!
 
 Contents|Description| # |Data|Link|
 :-------|:----------|:-:|:--:|:--:|
-Schmitt-Trigger|5V threshold switch|1|-|-
+Comparator|Comparator|1|-|-
 
 Required|Description| # |Box|
 :-------|:----------|:-:|:-:|
@@ -51,7 +51,7 @@ With this logic, we can measure whether our input has crossed a threshold. In or
 	<img src="images/schmitt_trigger.png">
 </p>
 
-If you're really brave, forget the comparator black-box and build one out of trusty transistors!
+If you're really brave, forget the comparator black-box and build one out of trusty transistors! Be warned, however, they're trick [to get right](https://electronics.stackexchange.com/questions/164297/how-exactly-does-a-comparator-work).
 
 <p align="center">
 	<img src="images/schmitt_trigger_transistors.png">
