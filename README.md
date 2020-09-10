@@ -1,12 +1,18 @@
 # The Last Black Box
 
-A course for brains interested in brains (not for tools interested in tools)
+> *A course for brains interested in brains (not for tools interested in tools)*
 
 <p align="center">
-<img src="course/designs/logo/icon.png" alt="LBB" width="400" height="300">
+<img src="course/designs/logo/icon.png" alt="LBB" width="200" height="150">
 </p>
 
-This is course in neuroscience and technology.
+## Goals
+
+This is course about neuroscience *and* technology. You will learn about the brain by building an increasingly complex robot.
+
+## Principles
+
+> ***"No Black Boxes"***
 
 ## Prerequisites
 
@@ -14,8 +20,8 @@ A variety of tools (hardware and software) will be required to complete the cour
 
 ----
 
-<p align="center">
-<a href="course/README.md"><b>Start the course!</b></a>
+<p align="center" style="font-size:32px">
+<a href="course/README.md" style="color: #111111; background: #eeeeee"><b>Start the course!</b></a>
 </p>
 
 ----

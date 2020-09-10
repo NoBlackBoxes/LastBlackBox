@@ -1,16 +1,18 @@
 # The Last Black Box Course
 
-A set of black boxes to open in sequence
-
-----
-
-## Boxes
+> A kit containing a collection of black boxes that you "open" in sequence.
 
 <p align="center">
 <img src="designs/layout/layout.png" alt="Example Image" width="500" height="375">
 </p>
 
 ----
+
+## NB3
+
+You will be building a robot. The robot's physical layout mimics the basic anatomy of a (vertebrate) brain. As you progress through the "boxes", your robot will *evolve* into an increasingly sophisticated machine. The goal of this course is to create an "intelligent" machine without using any "black boxes". We thus call this robot the No-Black-Box-Bot or NBBB or ***NB3***.
+
+## Boxes
 
 Hindbrain|Midbrain|Forebrain|
 ---------|--------|---------|
@@ -21,8 +23,6 @@ Hindbrain|Midbrain|Forebrain|
 [5. Motors](/boxes/motors/README.md)|[12. Computers](/boxes/computers/README.md)|[19. Vision](/boxes/vision/README.md)
 [6. Amplifiers](/boxes/amplifiers/README.md)|[13. Control](/boxes/control/README.md)|[20. Learning](/boxes/learning/README.md)
 [7. **Reflexes**](/boxes/reflexes/README.md)|[14. **Behaviour**](/boxes/behaviour/README.md)|[21. **Intelligence?**](/boxes/intelligence/README.md)
-
-### Descriptions
 
 1. **Electrons**
 
