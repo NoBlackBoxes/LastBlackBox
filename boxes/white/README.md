@@ -37,6 +37,44 @@ You will be able to do all of the course exercises using your LBB host computer.
 
 The LBB Host computer runs a modified version of "raspios" (Raspberry Pi OS). We have installed some extra software and loaded some useful data, but don't worry, we will explain exactly how we did this later in the course (when we build our own "lbbos" (LastBlackBox OS) from scratch).
 
-The SD card included in this box should already have the OS image installed. If not, you can download the latest LBB "raspios" version as a disk image from here: ??
+The SD card included in this box should already have the OS image installed. If not, you can download the latest LBB "raspios" version as a disk image from here: [LBBOS](https://www.dropbox.com/s/p4zqx56ep31gppf/lbbos.img?dl=0)
+
+### LBBOS
+
+The Last Black Box operating system (lbbos) is a modified version of Debian Linux and derived from the "Raspbian" distribution. The version of LBBOS included in your white box is a direct clone of a running system. It has user accounts setup, software installed (including VSCodium), and has already cloned some useful GitHub repositories.
+
+The default user is "student" with a default password of "lastblackbox". *Do change the passowrd when you first login.*
+
+<details><summary><b>Cloning LBBOS</b></summary><p>
+
+To clone an exact copy of a (functional) LBBOS:
+
+1. Remove the SD card from your RPi
+2. Insert it into a machine running Debian-based Linux (e.g. Ubunutu)
+3. Identify the name of the SD card device using fdisk:
+
+    ```bash
+    sudo fdisk -l
+    ```
+
+4. Unmount any partitions that were mounted upon inserting the SD card
+
+5. Copy the SD card contents to an image file on your computer:
+
+    ```bash
+    sudo dd if=<name or your SD card device> of=lbbos_backup.img
+    ```
+
+6. The resulting image will be the size of the SD card. This is usually excessive and can be reduced before burning onto another SD card. Shrinking the image is accomplished by a bash script called [PiShrink](https://github.com/Drewsif/PiShrink).
+
+    ```bash
+    wget https://raw.githubusercontent.com/Drewsif/PiShrink/master/pishrink.sh
+    chmod +x pishrink.sh
+    sudo ./pishrink.sh -v -p lbbos_backup.img lbbos.img
+    ```
+
+7. Copy the new (shrunken) image to a new SD card using [Etcher](https://www.balena.io/etcher/).
+
+</p></details>
 
 ----
