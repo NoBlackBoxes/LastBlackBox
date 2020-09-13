@@ -19,9 +19,22 @@ Multimeter|(Sealy MM18) pocket digital multimeter|1|[white](/boxes/white/README.
 
 ----
 
-## ADC
+## Why binary?
 
-How do we go from an analog world to a binary number?
+How do we go from an analog world to a binary number? Analog signals, as we've seen, can take on a continuous range of values. Why would we want to categorizes that wide range of information into two categories of on or off?
+
+The answer is that binary representation allows us access to binary, or Boolean logic. George Boole is credited for developing the algebra, or mathematics, of True and False values. In Boole's thinking, any mathematical operations could be decomposed into their logical elements.
+
+This might ring a bell. As we will see in the [computers](../computers) section, [Alan Turing](https://en.wikipedia.org/wiki/Turing_machine) ran away with this idea and created the Turing Machine, the idea of a universal computer that could perform any computational operations over a list of symbols. We will see in that section as well that binary is not the only system that can be used to build a computer, and that some of these non-binary systems might help us formalize and simulate neural computation.
+
+With binary, there are only two symbols, the minimal alphabet for writing computations down that can be carried out by digital machines (digital is a bit of a malapropism, as digit might mean something about 10 fingers, but this is where the term "bit" comes in, the *binary digit*). We will use digital machines here to mean machines using a binary hardware and software.
+
+## Spikes
+
+There is a great deal of controversy about whether brains are digital machines, or can even be simulated as digital machines. If we think about spike trains, then we can certainly use our imaginations to think of the neural code as a binary one. Of course, this is a stretch.
+
+Practically, our modern binary digital machines are used to simulate all types of computations. Learning how these machines work, and how we can extend them to other computational schemes, is at the forefront of computer and neural engineering. It's an exciting time to be a neurosci
+entist, to say the least.
 
 ### Exercise: Build a simple ADC
 
