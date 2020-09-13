@@ -1,12 +1,6 @@
 # Decisions
 
-***SHOULD THIS BE COMBINED WITH DATA?***
-
-thresholds -- as a switch
-triggering events
-nonlinear curves give you this switching / event
-e.g. sound level detector -- level goes below some level
-schmitt trigger!
+What is a decision? How can machines decide what to do based on their inputs? A key concept in decision-making is threshold functions. If an input value goes above a threshold, a decision is triggered. How can we make such a trigger out of electronic circuit elements?
 
 ----
 
@@ -48,18 +42,27 @@ With this logic, we can measure whether our input has crossed a threshold. In or
 ### Exercise: Build a Schmitt-Trigger!
 
 <p align="center">
-	<img src="images/schmitt_trigger.png">
+	<img src="images/schmitt_trigger.png" width="400">
 </p>
 
-If you're really brave, forget the comparator black-box and build one out of trusty transistors! Be warned, however, they're trick [to get right](https://electronics.stackexchange.com/questions/164297/how-exactly-does-a-comparator-work).
+If you're really brave, forget the comparator black-box and build one out of trusty transistors! Be warned, however, they're tricky [to get right](https://electronics.stackexchange.com/questions/164297/how-exactly-does-a-comparator-work).
 
 <p align="center">
-	<img src="images/schmitt_trigger_transistors.png">
+	<img src="images/schmitt_trigger_transistors.png" width="400">
 </p>
 
 ### Squid Neurons
 
 The [Schmitt Trigger](https://en.wikipedia.org/wiki/Schmitt_trigger) was developed based on Otto Schmitt's work on the squid neuron. Schmitt was attempting to build an "all-or-nothing" neuron model in hardware. The trigger might be called the first neuromorphic!
+
+If you plot the input voltage and the output voltage together, you might be reminded of a drift diffusion model (if you squint your eyes...).
+
+<p align="center">
+	<img src="images/thresholds.jpeg" height="600"><br>
+	<figcaption>
+		The orange line is the input voltage, and the black line below is the output. Shown for one and two thresholds.
+	</figcaption>
+</p>
 
 ### References
 
