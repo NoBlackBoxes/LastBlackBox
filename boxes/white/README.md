@@ -95,5 +95,32 @@ To clone an exact copy of a (functional) LBBOS:
 
 </p></details>
 
+### Pull the LBB Github repo
+
+Now we need to get the most recent version of this repo. Open up a terminal and navigate (using `cd` or change directory) to the place you want to put the course materials. I suggest you use "~", a shortcut for your "home" folder:
+
+```bash
+cd ~/LastBlackBox
+```
+
+In this "root" folder, there's a folder called "repo". Go there:
+
+```bash
+cd repo
+```
+
+and then "pull" the latest version of the repo:
+
+```bash
+git pull
+```
+
+You might see the additions to some files printed out. You should be good to go!
+
+<details><summary><b>What is git?</b></summary><p>
+
+Git solves the problem of *version control*. Git is a way of "tracking changes" between version of code such that we can "revert" the last working version of your code so that you feel free to destroy and rebuild your code at will, knowing all the while that you'll have a working version. Git is a universe unto itself, so we'll leave it here for now and use Git and it's "cloud" based backup solution GitHub (this allows you to "push" your code to a server somwhere owned by Microsoft by making a Github account).
+
+</p></details>
 
 ----
