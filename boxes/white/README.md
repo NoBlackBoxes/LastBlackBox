@@ -43,7 +43,15 @@ The SD card included in this box should already have the OS image installed. If 
 
 The Last Black Box operating system (lbbos) is a modified version of Debian Linux and derived from the "Raspbian" distribution. The version of LBBOS included in your white box is a direct clone of a running system. It has user accounts setup, software installed (including VSCodium), and has already cloned some useful GitHub repositories.
 
-The default user is "student" with a default password of "lastblackbox". *Do change the password when you first login.*
+The default user is "student" with a default password of "lastblackbox". *CHANGE THE DEFAULT PASSWORD.*
+
+To do this the "linuxy way" (which you will soon become fond of if you are not already), run this in your RPi's terminal:
+
+```bash
+passwd
+```
+
+This will walk your through a password update. *DO NOT FORGET YOUR PASSWORD!* But if you do, it's not the end of the world.
 
 ### What happens when I turn on my Raspberry Pi?
 
@@ -86,5 +94,10 @@ To clone an exact copy of a (functional) LBBOS:
 7. Copy the new (shrunken) image to a new SD card using [Etcher](https://www.balena.io/etcher/).
 
 </p></details>
+
+
+### Note about what's on your Pi
+
+Other than the desktop background, you'll find that your name
 
 ----
