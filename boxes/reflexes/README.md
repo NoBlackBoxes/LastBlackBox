@@ -34,6 +34,16 @@ Photoresistor|Light-dependent resistor|2|[sensors](/boxes/sensors/README.md)|
 
 ----
 
+## NB3
+
+This box will contribute the following (red) components to your NB3
+
+<p align="center">
+<img src="_images/NB3_reflexes.png" alt="NB3 stage" width="400" height="400">
+<p>
+
+----
+
 ## Sensorimotor Loops
 
 Light in, behaviour out.

@@ -37,6 +37,16 @@ To explore this box, you should attempt the following challenges:
 
 ----
 
+## NB3
+
+This box will contribute the following (red) components to your NB3
+
+<p align="center">
+<img src="_images/NB3_light.png" alt="NB3 stage" width="400" height="400">
+<p>
+
+----
+
 ## Electromagnetic Wave
 
 When a material becomes very hot, it starts to "glow". Why?

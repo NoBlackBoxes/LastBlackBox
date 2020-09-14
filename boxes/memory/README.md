@@ -20,6 +20,16 @@ Multimeter|(Sealy MM18) pocket digital multimeter|1|[white](/boxes/white/README.
 
 ----
 
+## NB3
+
+This box will contribute the following (red) components to your NB3
+
+<p align="center">
+<img src="_images/NB3_memory.png" alt="NB3 stage" width="400" height="400">
+<p>
+
+----
+
 ## Flip-Flops
 
 Feedback can keep state. We'll build some one-bit "memory cells" in this section. This will enable us to store the results of our binary computations for later use. If you still have your ADC kicking around, you can use it to store bits of your analog signal...
@@ -29,7 +39,7 @@ Feedback can keep state. We'll build some one-bit "memory cells" in this section
 Now that you're a logician, build one of these:
 
 <p align="center">
-	<img src="images/nandlatch.png">
+	<img src="_images/nandlatch.png">
 </p>
 
 ### References

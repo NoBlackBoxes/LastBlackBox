@@ -25,6 +25,16 @@ Jumper wires|Assorted 22 AWG jumper wire leads (male/female)|1|[electrons](/boxe
 
 ----
 
+## NB3
+
+This box will contribute the following (red) components to your NB3
+
+<p align="center">
+<img src="_images/NB3_amplifiers.png" alt="NB3 stage" width="400" height="400">
+<p>
+
+----
+
 ## Tubes
 
 Amplifying electrical signals had been a long sought goal. The early attempts had a major impact on technology, but they had many drawbacks.

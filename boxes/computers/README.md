@@ -24,6 +24,16 @@ Photoresistor|Light-dependent resistor|2|[sensors](/boxes/sensors/README.md)|
 
 ----
 
+## NB3
+
+This box will contribute the following (red) components to your NB3
+
+<p align="center">
+<img src="_images/NB3_computers.png" alt="NB3 stage" width="400" height="400">
+<p>
+
+----
+
 # A little bit of history...
 
 ### Analog Computing (1800s-1930s)

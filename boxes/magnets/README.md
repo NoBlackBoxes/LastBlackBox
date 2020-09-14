@@ -43,6 +43,16 @@ To explore this box, you should attempt the following challenges:
 
 ----
 
+## NB3
+
+This box will contribute the following (red) components to your NB3
+
+<p align="center">
+<img src="_images/NB3_magnets.png" alt="NB3 stage" width="400" height="400">
+<p>
+
+----
+
 ## Magnetism
 
 When electrons move they produce ("induce") a magnetic field. This baffled physicists until the 19<sup>th</sup> century, when it was finally realized that electricty and magnetism were fundamentally linked. Moving charges produce magnetic fields, and magnetic fields cause charges to move. We will use this connection in many useful ways.

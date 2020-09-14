@@ -20,6 +20,16 @@ Multimeter|(Sealy MM18) pocket digital multimeter|1|[white](/boxes/white/README.
 
 ----
 
+## NB3
+
+This box will contribute the following (red) components to your NB3
+
+<p align="center">
+<img src="_images/NB3_logic.png" alt="NB3 stage" width="400" height="400">
+<p>
+
+----
+
 # Digital Logic
 
 Now that we understand how to move from the analog to the digital world using an [ADC](boxes/data/README.md), we need to understand how to perform logical (mathematical) operations on our newfound binary data. This means working towards an Arithmetic Logic Unit (ALU). As we will see, there is much more to a CPU, but this is the place to begin.
@@ -29,22 +39,22 @@ Now that we understand how to move from the analog to the digital world using an
 Familiarize yourself with these!
 
 <p align="center">
-<img src="images/gates.png" width=900>
+<img src="_images/gates.png" width=900>
 </p>
 
 Try making some gates from transistors:
 
 <p align="center">
 	<figure>
-	<img src="images/or_gate.png" width=250>
-	<img src="images/and_gate.png" width=250>
+	<img src="_images/or_gate.png" width=250>
+	<img src="_images/and_gate.png" width=250>
 	</figure>
 </p>
 
 The gates above are described in terms of BJTs, can you figure out what gates are represented below using FETs?
 
 <p align="center">
-<img src="images/cmos_gate_quiz.png" width=800>
+<img src="_images/cmos_gate_quiz.png" width=800>
 </p>
 
 ## Logical Computation
@@ -53,8 +63,8 @@ Draw the truth table for the following device. What does it do?
 
 <p align="center">
 	<figure>
-		<img src="images/half_1bit_adder.png" height=150>
-		<img src="images/full_1bitadder.png" height=150>
+		<img src="_images/half_1bit_adder.png" height=150>
+		<img src="_images/full_1bitadder.png" height=150>
 		<br><figcaption>
 			1-bit half adder (left) and full adder (right).
 		</figcaption>
@@ -63,7 +73,7 @@ Draw the truth table for the following device. What does it do?
 
 It's an adder! Which also means it's a subtracter (with some additional logic).
 <p align="center">
-<img src="images/adders.png" width=900>
+<img src="_images/adders.png" width=900>
 </p>
 
 # Exercise: Build a 3-bit digital adder!
@@ -71,7 +81,7 @@ It's an adder! Which also means it's a subtracter (with some additional logic).
 Build this! Use LEDs to visualize the output of your computation.
 
 <p align="center">
-	<img src="images/3bit_adder.png">
+	<img src="_images/3bit_adder.png">
 </p>
 
 

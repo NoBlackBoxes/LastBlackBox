@@ -24,6 +24,16 @@ Multimeter|(Sealy MM18) pocket digital multimeter|1|[white](/boxes/white/README.
 
 ----
 
+## NB3
+
+This box will contribute the following (red) components to your NB3
+
+<p align="center">
+<img src="_images/NB3_intelligence.png" alt="NB3 stage" width="400" height="400">
+<p>
+
+----
+
 ## Cortex
 
 Is great, and confusing.

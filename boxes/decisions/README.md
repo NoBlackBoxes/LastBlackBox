@@ -18,6 +18,16 @@ Multimeter|(Sealy MM18) pocket digital multimeter|1|[white](/boxes/white/README.
 
 ----
 
+## NB3
+
+This box will contribute the following (red) components to your NB3
+
+<p align="center">
+<img src="_images/NB3_decisions.png" alt="NB3 stage" width="400" height="400">
+<p>
+
+----
+
 ## Positive Feedback
 
 Feedback is what enables autonomy in computing devices. Once a mechanism is able to become "aware" of it's outputs and use them as inputs to start a computation anew, the system gains some sense of autonomy.
@@ -42,13 +52,13 @@ With this logic, we can measure whether our input has crossed a threshold. In or
 ### Exercise: Build a Schmitt-Trigger!
 
 <p align="center">
-	<img src="images/schmitt_trigger.png" width="400">
+	<img src="_images/schmitt_trigger.png" width="400">
 </p>
 
 If you're really brave, forget the comparator black-box and build one out of trusty transistors! Be warned, however, they're tricky [to get right](https://electronics.stackexchange.com/questions/164297/how-exactly-does-a-comparator-work).
 
 <p align="center">
-	<img src="images/schmitt_trigger_transistors.png" width="400">
+	<img src="_images/schmitt_trigger_transistors.png" width="400">
 </p>
 
 ### Squid Neurons
@@ -58,7 +68,7 @@ The [Schmitt Trigger](https://en.wikipedia.org/wiki/Schmitt_trigger) was develop
 If you plot the input voltage and the output voltage together, you might be reminded of a drift diffusion model (if you squint your eyes...).
 
 <p align="center">
-	<img src="images/thresholds.jpeg" height="600"><br>
+	<img src="_images/thresholds.jpeg" height="600"><br>
 	<figcaption>
 		The orange line is the input voltage, and the black line below is the output. Shown for one and two thresholds.
 	</figcaption>

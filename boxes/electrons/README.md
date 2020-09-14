@@ -60,6 +60,16 @@ To explore this box, you should attempt the following challenges:
 
 ----
 
+## NB3
+
+This box will contribute the following (red) components to your NB3
+
+<p align="center">
+<img src="_images/NB3_electrons.png" alt="NB3 stage" width="400" height="400">
+<p>
+
+----
+
 ## Atoms
 
 Atoms are the tiny particles that make up all (normal) matter. They are composed of three types of sub-atomic particles: protons, neutrons, and electrons. The protons and neutrons are clustered together in a central core, called the nucleus, while the electrons "orbit" around the nucleus in rings.

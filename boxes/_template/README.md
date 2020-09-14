@@ -36,6 +36,16 @@ To explore this box, you should attempt the following challenges:
 
 ----
 
+## NB3
+
+This box will contribute the following (red) components to your NB3
+
+<p align="center">
+<img src="_images/NB3_template.png" alt="NB3 stage" width="400" height="400">
+<p>
+
+----
+
 ## First Topic
 
 Each topic is a brief lesson, paired with a video tutorial, covering the important information and concluding with one or more exercises and challenges.
