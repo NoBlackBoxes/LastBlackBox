@@ -6,7 +6,7 @@ Resistor,10 k&Omega;/0.25 W,2,_data/datsheets/resistor.pdf,https://uk.farnell.co
 Capacitor,0.1 uF ceramic capacitor,1,_data/datasheets/capacitor_ceramic.pdf,https://uk.farnell.com/kemet/c322c104k1r5ta/cap-0-1-f-100v-10-x7r/dp/1457685
 Capacitor,100 uF aluminum electrolytic capacitor,1,_data/datsheets/capacitor_electrolytic.pdf,https://uk.farnell.com/rubycon/16zlh100mefc5x11/cap-100-f-16v-20/dp/8126283
 Button,Tactile switch,2,_data/datasheets/button.pdf,https://uk.farnell.com/omron/b3f-1000/switch-spno-0-05a-24v-tht-0-98n/dp/176432
-Potentiometer,20 k&Omega; variable resistor,2,_data/datasheets/pot_20kOhm.pdf,https://uk.farnell.com/bourns/3362p-1-203lf/trimmer-20k/dp/9354344
+Potentiometer,20 k&Omega; variable resistor,2,_data/datasheets/pot_20k.pdf,https://uk.farnell.com/bourns/3362p-1-203lf/trimmer-20k/dp/9354344
 Breadboard (400),400-tie solderless breadboard,1,_data/datasheets/breadboard_400.pdf,https://uk.farnell.com/multicomp/mcbb400/breadboard-solderless-300v-abs/dp/2395961
 Balloon,Any color-latex,1,,
 Batteries (AA),AA 1.5 V alkaline battery,4,,
