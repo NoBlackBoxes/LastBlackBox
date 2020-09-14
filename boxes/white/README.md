@@ -96,8 +96,4 @@ To clone an exact copy of a (functional) LBBOS:
 </p></details>
 
 
-### Note about what's on your Pi
-
-Other than the desktop background, you'll find that your name
-
 ----
