@@ -20,8 +20,8 @@ Whisker|Laser cut whisker switch mount|2|-|-
 M2 screw (15)|15 mm long M2 screw with phillips socket|4|-|-
 M2 nut| M2 nut|4|-|-
 M2.5 screw (12)| 12 mm long M2.5 screw with phillips socket|4|-|-
-M2.5 standoffs (20)| 20 mm brass M2.5 standoffs male-to-female|4|[-D-](https://wiki.52pi.com/index.php/UPS_for_Raspberry_Pi_4B/3B+/3B_SKU:_EP-0114)|-
-M2.5 standoffs (7)| 7 mm brass M2.5 standoffs male-to-female|4|[-D-](https://wiki.52pi.com/index.php/UPS_for_Raspberry_Pi_4B/3B+/3B_SKU:_EP-0114)|-
+M2.5 standoffs (20)| (w/UPS) 20 mm brass M2.5 standoffs male-to-female|4|[-D-](https://wiki.52pi.com/index.php/UPS_for_Raspberry_Pi_4B/3B+/3B_SKU:_EP-0114)|-
+M2.5 standoffs (7)| (w/UPS 7 mm brass M2.5 standoffs male-to-female|4|[-D-](https://wiki.52pi.com/index.php/UPS_for_Raspberry_Pi_4B/3B+/3B_SKU:_EP-0114)|-
 M3 screw (16)| 16 mm long M3 screw with phillips socket|4|-|-
 M3 nut| M3 nut|4|-|-
 

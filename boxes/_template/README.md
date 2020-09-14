@@ -22,6 +22,20 @@ Thing (no box)| Description of thing in another box|1|-|
 
 ----
 
+## Goals
+
+To open this box, you must complete the following tasks:
+
+1. Simple first task
+2. Another simple second task
+
+To explore this box, you should attempt the following challenges:
+
+1. A not simple, but fun, challenge
+2. Another not simple, but fun, challenge
+
+----
+
 ## First Topic
 
 Each topic is a brief lesson, paired with a video tutorial, covering the important information and concluding with one or more exercises and challenges.

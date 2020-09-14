@@ -46,13 +46,17 @@ Body|Laser cut base (5 mm clear acrylic)|1|[reflexes](/boxes/reflexes/README.md)
 
 To open this box, you must complete the following tasks:
 
-1. Simple first task
-2. Another simple second task
+1. Measure voltage of a AA battery
+2. Measure the resistance of your resistors
+3. Confirm Ohm's Law (measure current flowing for fixed voltage across different known resistors)
+4. Build a voltage divider circuit
+5. Build a "variable voltage" output using a potentionmeter
+6. Create a dimmer: light a lightbulb with your "variable voltage" output
 
 To explore this box, you should attempt the following challenges:
 
-1. A not simple, but fun, challenge
-2. Another not simple, but fun, challenge
+1. Write down the equation that determines the output voltage at the midpoint of a two resitor voltage divider based on the values of each resitor (R1 and R2)
+2. Charge a capacitor, wait, then discharge through an LED
 
 ----
 
