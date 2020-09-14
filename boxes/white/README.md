@@ -43,15 +43,25 @@ The SD card included in this box should already have the OS image installed. If 
 
 The Last Black Box operating system (lbbos) is a modified version of Debian Linux and derived from the "Raspbian" distribution. The version of LBBOS included in your white box is a direct clone of a running system. It has user accounts setup, software installed (including VSCodium), and has already cloned some useful GitHub repositories.
 
-The default user is "student" with a default password of "lastblackbox". *Do change the passowrd when you first login.*
+The default user is "student" with a default password of "lastblackbox". *Do change the password when you first login.*
+
+### What happens when I turn on my Raspberry Pi?
+
+You supply the Pi with 5V of power and about 3A. As we will see, this is a reasonably low voltage and a reasonable high amount of current. The actual "chip" that runs code on the Pi uses 3.3V. This means a power conversion takes place between the power supply and the board itself. This conversion is lossy, or not perfect, so heat is generated when this happens. When we place the Raspberry Pi in it's case, we added some heat paste to help dissipate the heat that's generated during this power conversion.
+
+Connect the mouse and keyboard to the black, USB2.0, slots. These are lower bandwidth (slower), which doesn't matter as much for the peripherals. We'll save the faster USB3.0 slots for heftier peripherals in later boxes.
+
+When the Pi "boots", it runs its bootloader (already present on the chip) which checks for hardware and memory, finds the files on the SD card (hopefully) and starts the startup program to kick off the running of the machine as we know it. It first loads what's called the kernel, and then bootstraps itself from there.
+
+If you do not have the modified OS, look below for steps to get it installed on your SD card:
 
 <details><summary><b>Cloning LBBOS</b></summary><p>
 
 To clone an exact copy of a (functional) LBBOS:
 
 1. Remove the SD card from your RPi
-2. Insert it into a machine running Debian-based Linux (e.g. Ubunutu)
-3. Identify the name of the SD card device using fdisk:
+2. Insert it into a machine running Debian-based Linux (e.g. Ubuntu)
+3. Identify the name of the SD card device using *fdisk*:
 
     ```bash
     sudo fdisk -l
