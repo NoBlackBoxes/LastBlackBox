@@ -9,7 +9,6 @@ Simple sensorimotor behaviour. Braitenburg Vehicle.
 Contents|Description| # |Data|Link|
 :-------|:----------|:-:|:--:|:--:|
 Motor (Geared)|Brushed DC motor with gearbox - 6V/1:100/155 RPM with encoder (FIT0483)|2|[-D-](https://www.dfrobot.com/product-1433.html)|[-L-](https://www.dfrobot.com/product-1433.html)
-Body|Laser cut base (5 mm clear acrylic)|1|-|-
 Motor Mount|Motor mounts and mounting hardware (1089)|2|[-D-](https://www.pololu.com/product/1089)|[-L-](https://www.hobbytronics.co.uk/mm-gearmotor-bracket-ext)
 Wheels|60 mm x 8 mm wheels (black)|2|[-D-](https://www.pololu.com/product/1420)|[-L-](https://www.hobbytronics.co.uk/wheel-60-8mm)
 Caster|¾” metal ball caster|1|[-D-](https://www.pololu.com/product/955)|[-L-](https://www.hobbytronics.co.uk/ball-caster-metal?keyword=caster)
@@ -32,6 +31,16 @@ Jumper wires|Assorted 22 AWG jumper wire leads (male/female)|1|[electrons](/boxe
 Photoresistor|Light-dependent resistor|2|[sensors](/boxes/sensors/README.md)|
 
 </p></details>
+
+----
+
+## NB3
+
+This box will contribute the following (red) components to your NB3
+
+<p align="center">
+<img src="_images/NB3_reflexes.png" alt="NB3 stage" width="400" height="400">
+<p>
 
 ----
 

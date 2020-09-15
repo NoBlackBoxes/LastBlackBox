@@ -31,6 +31,22 @@ Mouse|USB mouse|1|-|
 
 ----
 
+## Goals
+
+To open this box, you must complete the following tasks:
+
+1. Setup the LBB host computer (install it in a "heatsink case", attach an HDMI monitor, keyboard, and mouse, and apply power)
+2. Change the default password of the "student" user
+3. Pull (i.e. sync) the latest version of the "LastBlackBox" repo
+4. Setup your multimeter (install the batteries)
+
+To explore this box, you should attempt the following challenges:
+
+1. Read the CPU temperature of your RPi
+2. Run a benchmarking test to "stress test" your RPi, while monitoring (or logging) the CPU temperature
+
+----
+
 ## LBB Host Computer
 
 You will be able to do all of the course exercises using your LBB host computer. Eventually, we will build another version of the host...so for now...this "black box" goes in the white box.
@@ -122,5 +138,9 @@ You might see the additions to some files printed out. You should be good to go!
 Git solves the problem of *version control*. Git is a way of "tracking changes" between version of code such that we can "revert" the last working version of your code so that you feel free to destroy and rebuild your code at will, knowing all the while that you'll have a working version. Git is a universe unto itself, so we'll leave it here for now and use Git and it's "cloud" based backup solution GitHub (this allows you to "push" your code to a server somwhere owned by Microsoft by making a Github account).
 
 </p></details>
+
+### Notes
+
+- Use a different multimeter (that can measure smaller currents and has over-current protection circuit (vs. a fuse)). For now, explain better how to avoid blowing the fuse when measuring current.
 
 ----

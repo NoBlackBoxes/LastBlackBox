@@ -24,6 +24,29 @@ Jumper wires|Assorted 22 AWG jumper wire leads (male/female)|1|[electrons](/boxe
 
 ----
 
+## Goals
+
+To open this box, you must complete the following tasks:
+
+1. Spin a motor, forwards and backwards
+2. Regulate the motor's speed with a potentiometer and with a button (tactile switch)
+
+To explore this box, you should attempt the following challenges:
+
+1. Build a speaker (magnetic coil + sound source + enclosure)
+
+----
+
+## NB3
+
+This box will contribute the following (red) components to your NB3
+
+<p align="center">
+<img src="_images/NB3_motors.png" alt="NB3 stage" width="400" height="400">
+<p>
+
+----
+
 ## Electric motors
 
 Electrons flowing through a conductor induce a magentic field circling the conductor. By coiling the the conductor, we can align these magentic fields to create a stronger, current-dependent "electromagnet". We can thus use voltage to control current to control a magentic field to move a magent, and some devices need just this to convert voltage into useful movements.

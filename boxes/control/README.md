@@ -21,6 +21,16 @@ Jumper wires|Assorted 22 AWG jumper wire leads (male/female)|1|[electrons](/boxe
 
 ----
 
+## NB3
+
+This box will contribute the following (red) components to your NB3
+
+<p align="center">
+<img src="_images/NB3_control.png" alt="NB3 stage" width="400" height="400">
+<p>
+
+----
+
 ## Negative-Feedback
 
 Not with more control!

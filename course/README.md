@@ -24,6 +24,34 @@ Hindbrain|Midbrain|Forebrain|
 [6. Amplifiers](/boxes/amplifiers/README.md)|[13. Control](/boxes/control/README.md)|[20. Learning](/boxes/learning/README.md)
 [7. **Reflexes**](/boxes/reflexes/README.md)|[14. **Behaviour**](/boxes/behaviour/README.md)|[21. **Intelligence?**](/boxes/intelligence/README.md)
 
+## Timeline
+
+### Week 1 (morning, afternoon)
+
+- Day 1: White, Electrons
+- Day 2: Magnets + Light, Sensors + Motors
+- Day 3: Amplifiers, Reflexes Introduction
+- Day 4: Reflexes Work, *NB3 demos*
+- Day 5: Data, Decisions
+
+### Week 2 (morning, afternoon)
+
+- Day 1: Logic, Memory
+- Day 2: Computers
+- Day 3: Control, Behaviour Intro
+- Day 4: Behaviour Work, *NB3 demos*
+- Day 5: Systems, Networks
+
+### Week 3 (morning, afternoon)
+
+- Day 1: Hearing + Speech, Vision
+- Day 2: Learning, Intelligence?
+- Day 3: *NB3 work*, *NB3 work*
+- Day 4: *NB3 work*, *NB3 work*
+- Day 5: *NB3 work*, *NB3 demos*
+
+## Descriptions
+
 1. **Electrons**
 
     - *Tech*: Intro to basic electronics: voltage, current, resistance, batteries, Ohm's Law, voltage dividers, and power (dissipation).

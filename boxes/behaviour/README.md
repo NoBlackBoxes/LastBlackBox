@@ -20,8 +20,8 @@ Whisker|Laser cut whisker switch mount|2|-|-
 M2 screw (15)|15 mm long M2 screw with phillips socket|4|-|-
 M2 nut| M2 nut|4|-|-
 M2.5 screw (12)| 12 mm long M2.5 screw with phillips socket|4|-|-
-M2.5 standoffs (20)| 20 mm brass M2.5 standoffs male-to-female|4|[-D-](https://wiki.52pi.com/index.php/UPS_for_Raspberry_Pi_4B/3B+/3B_SKU:_EP-0114)|-
-M2.5 standoffs (7)| 7 mm brass M2.5 standoffs male-to-female|4|[-D-](https://wiki.52pi.com/index.php/UPS_for_Raspberry_Pi_4B/3B+/3B_SKU:_EP-0114)|-
+M2.5 standoffs (20)| (w/UPS) 20 mm brass M2.5 standoffs male-to-female|4|[-D-](https://wiki.52pi.com/index.php/UPS_for_Raspberry_Pi_4B/3B+/3B_SKU:_EP-0114)|-
+M2.5 standoffs (7)| (w/UPS 7 mm brass M2.5 standoffs male-to-female|4|[-D-](https://wiki.52pi.com/index.php/UPS_for_Raspberry_Pi_4B/3B+/3B_SKU:_EP-0114)|-
 M3 screw (16)| 16 mm long M3 screw with phillips socket|4|-|-
 M3 nut| M3 nut|4|-|-
 
@@ -34,6 +34,16 @@ Jumper wires|Assorted 22 AWG jumper wire leads (male/female)|1|[electrons](/boxe
 Photoresistor|Light-dependent resistor|2|[sensors](/boxes/sensors/README.md)|
 
 </p></details>
+
+----
+
+## NB3
+
+This box will contribute the following (red) components to your NB3
+
+<p align="center">
+<img src="_images/NB3_behaviour.png" alt="NB3 stage" width="400" height="400">
+<p>
 
 ----
 

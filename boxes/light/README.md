@@ -25,6 +25,28 @@ Test Lead|Alligator clip to 0.64 mm pin (20 cm)|2|[white](/boxes/white/README.md
 
 ----
 
+## Goals
+
+To open this box, you must complete the following tasks:
+
+1. Light a lightbulb, think about the jiggling electrons.
+
+To explore this box, you should attempt the following challenges:
+
+1. Build a dipole antenna transmitter and receiver...a wireless telegraph.
+
+----
+
+## NB3
+
+This box will contribute the following (red) components to your NB3
+
+<p align="center">
+<img src="_images/NB3_light.png" alt="NB3 stage" width="400" height="400">
+<p>
+
+----
+
 ## Electromagnetic Wave
 
 When a material becomes very hot, it starts to "glow". Why?

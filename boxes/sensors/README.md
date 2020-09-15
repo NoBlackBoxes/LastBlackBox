@@ -25,6 +25,30 @@ Jumper wires|Assorted 22 AWG jumper wire leads (male/female)|1|[electrons](/boxe
 
 ----
 
+## Goals
+
+To open this box, you must complete the following tasks:
+
+1. Build a light sensor
+2. Build a heat sensor
+3. Detect pressure using a piezo and your multimeter
+
+To explore this box, you should attempt the following challenges:
+
+1. Build a "gain control circut" for your light/heat sensor
+
+----
+
+## NB3
+
+This box will contribute the following (red) components to your NB3
+
+<p align="center">
+<img src="_images/NB3_sensors.png" alt="NB3 stage" width="400" height="400">
+<p>
+
+----
+
 ## Measuring Heat
 
 Heat is the average kinetic energy within a material. When materials change their temperature, their resiatnce to electric current also changes, and for some materials this change can be quite large. We can use these materials to make a "thermistor", a temperature dependent resistor.

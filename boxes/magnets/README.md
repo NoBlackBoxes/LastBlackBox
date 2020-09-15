@@ -3,10 +3,10 @@
 Magnets are attractive.
 
 <p align="center">
-<img src="_images/electron.png" alt="Electron" width="200" height="200">
+<img src="_images/magent.png" alt="Magnet" width="200" height="200">
 <p>
 
-In this box, we will learn about electricity...how to measure it and how to **control** it.
+In this box, we will learn about magnetism...how to create it and how to **use** it.
 
 ----
 
@@ -26,6 +26,30 @@ Multimeter|(Sealy MM18) pocket digital multimeter|1|[white](/boxes/white/README.
 Test Lead|Alligator clip to 0.64 mm pin (20 cm)|2|[white](/boxes/white/README.md)|
 
 </p></details>
+
+----
+
+## Goals
+
+To open this box, you must complete the following tasks:
+
+1. Build an electromagnet
+2. Build a telegraph (coil + battery + putty + paper clip)
+
+To explore this box, you should attempt the following challenges:
+
+1. Use an inductor to build a "choke". Power a lightbulb (or LED) via an inductor in paralell. What happens?
+2. Create a wireless inductive power transfer circuit. Two coils, seperated by an air gap, one connected to battery, the other to an LED/Lightbulb.
+
+----
+
+## NB3
+
+This box will contribute the following (red) components to your NB3
+
+<p align="center">
+<img src="_images/NB3_magnets.png" alt="NB3 stage" width="400" height="400">
+<p>
 
 ----
 
