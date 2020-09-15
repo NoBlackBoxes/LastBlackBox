@@ -167,3 +167,9 @@ The hair on each hair cell is off different lengths, and this has an important c
 
 - Attach your piezo mic element to the probe terminals of your multimeter.
 - Hard to do this without an amplifier...
+
+## Notes
+
+- Better task: Speed control with LDR is possible...with multiple LDRs in parallel. Box should contain lower value, high power resistors to facilitate.
+
+----
