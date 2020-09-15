@@ -16,7 +16,7 @@ This is course about neuroscience *and* technology. You will learn about the bra
 
 ## Prerequisites
 
-A variety of tools (hardware and software) will be required to complete the course exercises and construct the NB3. These tools are all included in the "White Box", but you can use your own if available. Please complete the intitial setup by following the instructions on the ["White Box" page](/boxes/white/README.md).
+A variety of tools (hardware and software) will be required to complete the course exercises and construct the NB3. These tools are all included in the "White Box", but you can use your own if available. Please complete the initial setup by following the instructions on the ["White Box" page](/boxes/white/README.md).
 
 ----
 

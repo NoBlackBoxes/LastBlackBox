@@ -234,7 +234,7 @@ The essential elements of electrcity (voltage, current, resistance, and capcitan
 
 ## Power
 
-Power (abbreviated P) is a measure of energy per unit time. When energy is quanitfied in Joules (abbreviated J) and time is quantified in seconds (abbreviated s), then power is quanitfied in Watts (abbreviated W). The power generated in a resistor with current flowing through it is given by the following equation: P = V<sup>2</sup> / R. Ohm's Law allows us to rewrite this as P = VI. This makes sense. The voltage tells us how hard we are pushing on an electron and current tells us how many electrons are being moved per second.
+Power (abbreviated P) is a measure of energy per unit time. When energy is quantified in Joules (abbreviated J) and time is quantified in seconds (abbreviated s), then power is quanitfied in Watts (abbreviated W). The power generated in a resistor with current flowing through it is given by the following equation: P = V<sup>2</sup> / R. Ohm's Law allows us to rewrite this as P = VI. This makes sense. The voltage tells us how hard we are pushing on an electron and current tells us how many electrons are being moved per second.
 
 A power supply, a device used to provide power (voltage and current) to an electronic circuit, is usually rated in Watts (W). A resistor also comes with rating for how much power it "can handle" before breaking. A typical resistor is rated to tolerate 0.25 W.
 
