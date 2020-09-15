@@ -51,11 +51,22 @@ With this logic, we can measure whether our input has crossed a threshold. In or
 
 ### Exercise: Build a Schmitt-Trigger!
 
+Try building the comparator circuit using the LM339N:
+
 <p align="center">
-	<img src="_images/schmitt_trigger.png" width="400">
+	<img src="_images/comparator.gif
+	" width="400">
 </p>
 
-If you're really brave, forget the comparator black-box and build one out of trusty transistors! Be warned, however, they're tricky [to get right](https://electronics.stackexchange.com/questions/164297/how-exactly-does-a-comparator-work).
+This is just a thresholder. The problem this will have is that it doesn't "hold on" to the input. We really want something that has two separate thresholds which flips across each of them. Something like this:
+
+<p align="center">
+	<img src="_images/trigger.jpeg" width="600">
+</p>
+
+This is a Schmitt Trigger! Note the inverted (+) and (-), this is the inversion of the output. Flip it to match the comparator circuit above.
+
+If you're really, really brave: forget the comparator black-box and build one out of trusty transistors! Be warned, however, they're tricky [to get right](https://electronics.stackexchange.com/questions/164297/how-exactly-does-a-comparator-work).
 
 <p align="center">
 	<img src="_images/schmitt_trigger_transistors.png" width="400">
@@ -75,6 +86,8 @@ If you plot the input voltage and the output voltage together, you might be remi
 </p>
 
 ### References
+
+[Adding hysteresis to comparator](https://www.maximintegrated.com/en/design/technical-documents/app-notes/3/3616.html)
 
 [Applications for Schmitt Triggers](https://components101.com/articles/schmitt-trigger-introduction-working-applications)
 
