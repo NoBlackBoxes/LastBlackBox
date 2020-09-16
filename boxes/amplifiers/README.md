@@ -49,6 +49,12 @@ This box will contribute the following (red) components to your NB3
 
 ----
 
+## MOSEFT motor driver circuit (with protection diode)
+
+<p align="center">
+<img src="_images/MOSFET_motor_driver.png" alt="MOSFET Motor Driver" width="800" height="600">
+<p>
+
 ## Tubes
 
 Amplifying electrical signals had been a long sought goal. The early attempts had a major impact on technology, but they had many drawbacks.
