@@ -58,7 +58,7 @@ With this logic, we can measure whether our input has crossed a threshold. In or
 Try building the comparator circuit using the LM339N:
 
 <p align="center">
-	<img src="_images/comparator.gif
+	<img src="_images/comparator.gif"
 	" width="400">
 </p>
 
