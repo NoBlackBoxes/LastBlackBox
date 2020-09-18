@@ -8,8 +8,7 @@ When we say "data", what are we really referring to? In this section, we'll star
 
 Contents|Description| # |Data|Link|
 :-------|:----------|:-:|:--:|:--:|
-Resistor Ladder|8 Resistor divider/ladder|1|-|-
-Comparator|Comparator|8|-|-
+Comparator|LM339 (DIP-14)|2|[-D-](_data/datasheets/lm339-n.pdf)|[-L-](https://uk.farnell.com/texas-instruments/lm339n/ic-comparator-quad-dip14-339/dp/3118457)
 
 Required|Description| # |Box|
 :-------|:----------|:-:|:-:|

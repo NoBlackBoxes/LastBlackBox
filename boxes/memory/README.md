@@ -8,9 +8,7 @@ What happens...wait...what?
 
 Contents|Description| # |Data|Link|
 :-------|:----------|:-:|:--:|:--:|
-NAND ICs|NAND gates|4|-|-
-Switches|||-|-
-LEDs|||-|-
+Gate (NAND)|4xNAND gate|2|[-D-](_data/datasheets/NAND_gates.pdf)|[-L-](https://uk.farnell.com/texas-instruments/cd4011be/ic-4000-cmos-4011-dip14-18v/dp/3120113)
 
 Required|Description| # |Box|
 :-------|:----------|:-:|:-:|
