@@ -95,3 +95,8 @@ Needed (yes).
 
 Some oscillator?
 
+## Notes
+
+- Self-coiled electromagents are very weak. Magnet wire is difficult to make stable contact (too flimsy). Paper clip too stiff.
+- Better task: Make sound visible. Coil magnet wire, play sound through RPi output into coil, position next to permanent magent, watch it dance. (Requires new box contents, Y-cable/3.5 mm to breakout, etc.)
+- Provide components to build a "speaker"...membrane, enclosure, etc.

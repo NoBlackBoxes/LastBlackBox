@@ -25,6 +25,20 @@ Jumper wires|Assorted 22 AWG jumper wire leads (male/female)|1|[electrons](/boxe
 
 ----
 
+## Goals
+
+To open this box, you must complete the following tasks:
+
+1. Confirm diodes
+2. Measure the threshold voltage of a MOSFET (transistor)
+3. Build a a light sensitive motor (with protection diode)
+
+To explore this box, you should attempt the following challenges:
+
+1. The world's worst audio amplifier?
+
+----
+
 ## NB3
 
 This box will contribute the following (red) components to your NB3
@@ -34,6 +48,12 @@ This box will contribute the following (red) components to your NB3
 <p>
 
 ----
+
+## MOSEFT motor driver circuit (with protection diode)
+
+<p align="center">
+<img src="_images/MOSFET_motor_driver.png" alt="MOSFET Motor Driver" width="800" height="600">
+<p>
 
 ## Tubes
 
