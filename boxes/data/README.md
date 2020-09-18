@@ -53,8 +53,9 @@ To build an analog-to-digital converter (ADC), we'll use the simplest design cal
 Here is a circuit diagram of the device:
 
 <p align="center">
- <img src="ADC1.png" alt="Flash ADC" width="500" text-align="center">
+ <img src="_images/comparator_level_detector.gif" alt="Flash ADC" width="500" text-align="center">
 </p>
+
 
 The question now is, what are the arrows? Those are [comparators](https://www.wikiwand.com/en/Comparator)! We know about these from the "decisions" box.
 
@@ -75,7 +76,9 @@ The comparators each perform *one-bit quantization*. With that, we're in a binar
 
 The comparator is still a pretty magical black box, and it's doing something nonlinear as we can see from the equation for **C**, but we know it's made of transistors, and we can make one if we're in a real pinch.
 
-### Refs
+### References
+
+[comparator tutorial](https://www.electronics-tutorials.ws/opamp/op-amp-comparator.html)
 
 [InstTools Flash ADC](https://instrumentationtools.com/topic/flash-adc/)
 
