@@ -89,6 +89,12 @@ If you plot the input voltage and the output voltage together, you might be remi
 	</figcaption>
 </p>
 
+### Challenge (Build a Schmitt-Trigger)
+
+<p align="center">
+	<img src="_images/Schmitt-Trigger_circuit.png" height="600"><br>
+</p>
+
 ### References
 
 [Adding hysteresis to comparator](https://www.maximintegrated.com/en/design/technical-documents/app-notes/3/3616.html)
