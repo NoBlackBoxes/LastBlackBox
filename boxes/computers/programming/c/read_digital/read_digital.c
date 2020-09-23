@@ -1,4 +1,4 @@
-// Blinks LED connected to Pin ??
+// Reads a digital input connected to Pin PD2 and toggles LED connected to Pin PB5
 #include <avr/io.h>
 #include <util/delay.h>
 
