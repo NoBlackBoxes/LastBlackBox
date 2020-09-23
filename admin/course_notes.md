@@ -9,7 +9,16 @@
 - history on each slide
 - making a basic speaker is possible?
 	- maybe by building an oscillator?
--
+
+# 18/9/20
+
+- 4 op-amp rules
+	- A(v+ - V-) = Vo
+	- infinitely high input impedance
+	- infinitely low output impedance
+	- infinite gain (to saturation)
+- basic circuit analysis rules
+
 
 # 22/9/20
 
@@ -32,3 +41,12 @@ Box flow ideas:
 - Time: (Clocks?) - new box? (should it be earlier?)
 
 - Computers: (still needs to be discussed, ALU, registers, bus (tri-state buffers), memory adresses)
+
+
+# 23/9/20
+
+trouble with permission on raspi
+add user to root list, reboot
+
+trouble downloading apt packages over hotel wifi
+
