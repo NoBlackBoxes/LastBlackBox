@@ -1,8 +1,12 @@
 # computers : programming : arduino
 
-Here we will use an integrated development enviornment (IDE) designed to make programming an Arduino board easier.
+Here we will use the Arduino language and libraries, which were designed to make programming an Arduino board easier.
 
 ## Prerequisites
+
+You will need the Arduino tools to compile and upload "sketches" to your board. You can either use the integrated development environment (IDE) or the command line integration (CLI).
+
+### Install the Arduino IDE
 
 Remove an existing installation:
 
@@ -12,9 +16,10 @@ sudo apt remove arduino
 
 Install the Arduino IDE from the [Arduino](https://www.arduino.cc/en/Main/Software)
  - Download the Linux 32-bit ARM version
- - Extract
+ - Change to the Download direcoty and extract
 
 ```bash
+cd ~/Downloads
 tar -xhf <arduino-download-tar-file>
 ```
 
@@ -31,5 +36,54 @@ sudo ./install.sh
   - Port: "/dev/ttyUSB0"
 
 - Open an example sketch ("Blink") and try to "Upload"
+
+### Install the Arduino CLI
+
+- Download the latest Arduino CLI binary for Linux 32-bit ARM here [Arduino CLI](https://arduino.github.io/arduino-cli/installation/)
+
+- Change to the Download direcoty and extract
+
+```bash
+cd ~/Downloads
+tar -xhf <arduino-cli-download-tar-gz-file>
+```
+
+- Copy the extracted binary (arduino-cli) to a directory in your $PATH *(PATH is an environment variable that lists the directories searched when you try to run a command from the command line)*. In the following, I assume you are using "/usr/local/bin".
+
+```bash
+sudo cp arduino-cli /usr/local/bin/.
+```
+
+- Create a configuration file that will set your Arduino default values (board, port, etc.)
+
+```bash
+arduino-cli config init
+```
+
+- Update the list of available packages and cores (...boards you can compile Arduino code for)
+
+```bash
+arduino-cli core update-index
+```
+
+-- Install the platform tools for Arduino AVR (uno, nano, etc.)
+
+```bash
+arduino-cli core install arduino:avr
+```
+
+- Connect your Arduino Nano via micro USB
+
+- Compile and example sketch (fqbn = fully qualified board name)
+
+```bash
+arduino-cli compile --fqbn arduino:avr:nano <your-example-sketch>
+```
+
+- Upload the build result to your board (-v if you want verbose output)
+
+```bash
+arduino-cli upload -v -p /dev/ttyUSB0 --fqbn arduino:avr:nano <your-example-sketch>
+```
 
 ----
