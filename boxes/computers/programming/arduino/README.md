@@ -16,7 +16,7 @@ sudo apt remove arduino
 
 Install the Arduino IDE from the [Arduino](https://www.arduino.cc/en/Main/Software)
  - Download the Linux 32-bit ARM version
- - Change to the Download direcoty and extract
+ - Change to the Download directory and extract
 
 ```bash
 cd ~/Downloads
@@ -41,10 +41,13 @@ sudo ./install.sh
 
 - Download the latest Arduino CLI binary for Linux 32-bit ARM here [Arduino CLI](https://arduino.github.io/arduino-cli/installation/)
 
-- Change to the Download direcoty and extract
+ - Change to the Download directory
+ - Download the Linux 32-bit ARM version (using wget)
+ - Extract
 
 ```bash
 cd ~/Downloads
+wget https://downloads.arduino.cc/arduino-cli/arduino-cli_latest_Linux_ARMv7.tar.gz
 tar -xhf <arduino-cli-download-tar-gz-file>
 ```
 
