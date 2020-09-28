@@ -18,15 +18,32 @@ Multimeter|(Sealy MM18) pocket digital multimeter|1|[white](/boxes/white/README.
 
 ----
 
-## NB3
+## Connect to your NB3 RPi over a "home" WiFi network (i.e. a WiFi router you control)
 
-This box will contribute the following (red) components to your NB3
+We will use "ssh" to connect to our NB3 RPi from our LBB host computer.
 
-<p align="center">
-<img src="_images/NB3_networks.png" alt="NB3 stage" width="400" height="400">
-<p>
 
-----
+*From your NB3...*
+
+1. Determine the IP address of your NB3 RPi
+
+```bash
+ifconfig
+```
+
+2. Create SHA keys
+
+```bash
+sudo dpkg-reconfigure openssh-server
+```
+
+*From your LBB host computer...*
+
+1. Connect via SSH
+
+```bash
+ssh student@<IP-ADDRESS-OF-NB3>
+```
 
 ## Protocols
 
