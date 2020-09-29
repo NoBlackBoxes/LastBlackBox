@@ -12,6 +12,11 @@ Begin by cloning the repository into a directory of your choice
 You should now be able to follow the instructions on the github page and run the algorithm and check out your style.  Use this as an opportunity to debug any issues with your edge TPU installation.  Some issues I found and seem to be common
 1.  `no module named 'edgetpu'`
 - This can be solved by running `sudo apt-get install python3-edgetpu`
+- For example, if the module "svgwriter" is not found, then (re)install it using sudo privileges.
+
+```bash
+sudo pip3 install svgwrite
+```
 
 2. `Error in device opening (/sys/bus/usb/devices/2-2)!`
 - This can be solved by running the program with `sudo`, but this can cause module import errors since your search path will change, annoyingly.
