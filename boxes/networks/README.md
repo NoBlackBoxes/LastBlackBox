@@ -47,7 +47,7 @@ ssh student@<IP-ADDRESS-OF-NB3>
 
 ## Using the Telegram bot to send your IP address
 
-More information (in this readme)[telegram.md]. 
+More information [in this readme](telegram.md). 
 
 ## Protocols
 
