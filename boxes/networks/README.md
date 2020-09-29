@@ -45,11 +45,15 @@ sudo dpkg-reconfigure openssh-server
 ssh student@<IP-ADDRESS-OF-NB3>
 ```
 
+## Using the Telegram bot to send your IP address
+
+More information (in this readme)[telegram.md]. 
+
 ## Protocols
 
 Learn the language
 
-### Exercise: Connect
+## Exercise: Connect
 
 Good luck!!! :)
 
