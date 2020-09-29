@@ -143,4 +143,8 @@ Git solves the problem of *version control*. Git is a way of "tracking changes" 
 
 - Use a different multimeter (that can measure smaller currents and has over-current protection circuit (vs. a fuse)). For now, explain better how to avoid blowing the fuse when measuring current.
 
+- White Box version 1.0: Rpi 4b 4Gb, custom passive heat-sink enclosure (extruded aluminum from Takachi) with LBB logo. Custom RPi Hat with two analog output channels (> 100 kSamples/sec...up to 500 kS per channel) +/- 5 V, two analog input channels (> 100 kSamples/sec, upto 1 MS per channel) +/- 5V. This same hat could be used with the NB3 as well to output to two speakers and monitor two mics. They should be character devices or block? Should they output buffers? Should they interface via PCIexpress/USB/I2C? Could use I2S? Alternatively, could have more channels (4 input, 4 output)?
+
+- Power board: NB3 power supply board, charges 4 to 6 NiMH AA cells via USB type-C (or, could use a 12V/2A wall wart barrel jack), 5V switching regulator to power RPi via PoGo pins? Outputs breadboard supply (5V, 500 mA), and two motor outputs (5V, 250 mA)
+
 ----
