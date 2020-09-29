@@ -34,6 +34,15 @@ This box will contribute the following (red) components to your NB3
 
 ----
 
+## Setup
+
+0. Shutdown (and power off) your NB3 RPi
+1. Install your camera mount
+ - Attach camera to mount (use the nylon washers in the upper two mounting screws to keep the board level when fixed)
+ - Attach mount to NB3 using long M3 screws and nuts
+2. Connect your camera to your RPi board (the blue strips on the flat ribbon cable should face towards the USB port on the RPi board and away from the lens on the camera board)
+3. Turn your NB3 RPi back on
+
 ## CCDs
 
 And Bayer...whatever.
