@@ -10,6 +10,9 @@ build/
 # Test Fakes
 fakes/
 
+# Solutions
+_solutions/
+
 # Temporary Files
 tmp/
 
