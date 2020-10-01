@@ -20,11 +20,26 @@
 #include <unistd.h>
 #include <errno.h>
 
+#define bzero(b,len) (memset((b), '\0', (len)), (void) 0)
+
 void make_comm(int,int);
 void error ( const char *msg ){
     perror ( msg );
     exit(1);
 }
+
+void dostuff (int sock)
+{
+   int n;
+   char buffer[256];
+   bzero(buffer,256);
+   n = read(sock,buffer,255);
+   if (n < 0) error("ERROR reading from socket");
+   printf("Here is the message: %s\n",buffer);
+   n = write(sock,"I got your message",18);
+   if (n < 0) error("ERROR writing to socket");
+}
+
 
 int main(int argc, char *argv[]){
     int sockfd, newsockfd, portno, clilen, n, pid;
@@ -54,7 +69,8 @@ int main(int argc, char *argv[]){
     if (sockfd < 0){
         error( (const char *)"Error opening socket" );
     }
-    memset((char*)&serv_addr,'\0',sizeof(serv_addr));
+    // Initialises a buffer of 0s.  Could also use memset.
+    bzero((char *) &serv_addr, sizeof(serv_addr));
      
     // Set parameters of the server
     serv_addr.sin_family = AF_INET;
@@ -73,16 +89,21 @@ int main(int argc, char *argv[]){
     */
     listen(sockfd,5); // 5 here specifies how many connections can be waiting whilst we process one
     clilen = sizeof(cli_addr);
-    newsockfd = accept(sockfd, (struct sockaddr *) &cli_addr, (socklen_t*) &clilen);
-    if (newsockfd < 0) error((const char*)"Error on accepting connection");
-    
-    memset(buffer,'\0',256);
-    n = read(newsockfd,buffer,255);
-    fprintf(stdout,"%s\n",buffer);
-    if (n < 0) error((const char*)"ERROR reading from socket");
-    n = write(newsockfd,"Message recieved",18);
-    if (n < 0) error((const char*)"ERROR writing to socket");
-
-    close(sockfd);
-    
+    while (1) {
+        newsockfd = accept(sockfd, (struct sockaddr *) &cli_addr, (socklen_t*) &clilen);
+        if (newsockfd < 0) error((const char*)"Error on accepting connection");
+        pid = fork();
+        if (pid < 0)
+                 error("ERROR on fork");
+        if (pid == 0)  {
+            close(sockfd);
+            dostuff(newsockfd);
+            exit(0);
+        }
+        else close(newsockfd);
+    }
+    return 0;
 }
+
+
+
