@@ -1,4 +1,4 @@
-# networks
+# Networks
 
 Things started getting really interesting when organisms began to interact with each other.
 
@@ -33,7 +33,7 @@ By the end of this piece, you should have a grasp of:
 
 On a practical side, we should feel comfortable:
 
-### Practical challenges
+### Tasks and challenges
 
 * communicating between our NB3 from our computer/desktop
 * communicating between our bot and brain NB3 from within a local network
