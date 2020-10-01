@@ -1,5 +1,14 @@
 # vison : cameras : preview : python
 
+----
+
+## Goals
+
+### Tasks
+
+----
+
+
 You will need to install Python's OpenCV package. This can be done as follows:
 
 ```bash
