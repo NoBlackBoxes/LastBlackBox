@@ -24,6 +24,14 @@ Thing (no box)| Description of thing in another box|1|-|
 
 ## Goals
 
+### Concepts
+
+By the end of this piece, you should be familiar with:
+* concept 1
+* concept 2
+
+### Task and challenges
+
 To open this box, you must complete the following tasks:
 
 1. Simple first task
@@ -77,6 +85,8 @@ A challenge is more open-ended. It should be fun (and challenging) and need not 
 
 There can be multiple challenges per topic.
 
+#### References
+- [useful-references](useful-reference.com)
 ----
 
 ## Second Topic
@@ -93,4 +103,6 @@ Exercise relating to the second topic, building on the first.
 
 Challenge relating to the second topic, building on the first.
 
+#### References
+- [useful-references](useful-reference.com)
 ----
