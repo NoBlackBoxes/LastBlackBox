@@ -109,6 +109,8 @@ The bus consists of three lines (each with a set pin):
 
 
 ---- 
-## Codecs - what are they?
+## Codecs - what are they? 
+
+Codec is a portmanteau of coder-decoder.
 
 ----
