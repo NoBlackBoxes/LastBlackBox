@@ -97,7 +97,7 @@ The bus consists of three lines (each with a set pin):
 
 <p align="center">
 <img src="_images/I2S.png" alt="NB3 stage" width="400" >
-<figcaption>Cross-section diagram of a MEMS microphone</figcaption>
+<figcaption>I2S protocol timing</figcaption>
 <p>
 
 ### Exercise: Hear
