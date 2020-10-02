@@ -1,4 +1,4 @@
-# hearing
+# Hearing
 
 Listen up.
 
@@ -32,19 +32,21 @@ This box will contribute the following (red) components to your NB3
 ## Goals
 
 ### Concepts
-- microphones
+- Microphones as transducers
+- MEMS
+- I2S
 
 ### Tasks and challenges
 - get this to work...
-- quantify mic performance? sensitivity?
-
----- 
-## Hearing
-
-We'll be working with the Adafruit I2S MEMS Microphone. Does I2S or MEMS sounds unfamiliar? Let's open the box.
+- quantify mic performance?
+- some fourier based analysis/denoising of the incoming data
 
 ---- 
 ## How do digital MEMS microphones work?
+
+
+We'll be working with the Adafruit I2S MEMS Microphone. Does I2S or MEMS sounds unfamiliar? Let's open the box.
+
 
 **MEMS**: MEMS refer to the miniature machines that have both mechanical and electronic components. A lot of MEMS convert a measured mechanical signal into an electrical or optical signals, these are called transducers (just like our ears).
 
@@ -68,7 +70,7 @@ The ASIC inside a MEMS microphoneuses "places a fixed charge on the microphone m
 **PDM**: Most digital microphones use pulse density modulation (PDM), which produces a highly oversampled single-bit data stream. The density of the pulses on the output of a microphone using pulse density modulation is proportional to the instantaneous air pressure level. Note the difference between PDM and PWM (which we used to control our motors).
 
 
-### Exercise: 
+### Exercise: TBD
 
 
 ### References
