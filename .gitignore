@@ -43,6 +43,7 @@ db.sqlite3
 fab/
 *.kicad_pcb-bak
 *.sch-bak
+*-backups/
 
 # VS Code folders and workspace
 .vscode/

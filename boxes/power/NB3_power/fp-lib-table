@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "NB3_power")(type "KiCad")(uri "${KIPRJMOD}/libraries/NB3_power.pretty")(options "")(descr ""))
+)
