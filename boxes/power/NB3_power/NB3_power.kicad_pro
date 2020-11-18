@@ -356,7 +356,7 @@
       "idf": "",
       "netlist": "power.net",
       "specctra_dsn": "",
-      "step": "",
+      "step": "NB3_power.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
@@ -392,7 +392,7 @@
   },
   "sheets": [
     [
-      "e2822154-948a-4d77-b77e-06585d6d8df3",
+      "7a9764ee-e50b-4498-b11b-63214e49f544",
       ""
     ]
   ],
