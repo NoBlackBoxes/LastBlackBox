@@ -1,0 +1,2191 @@
+(export 
+  (version D) 
+  (design 
+    (source /home/kampff/Dropbox/Voight-Kampff/Training/LastBlackBox/designs/NB3_body/NB3_body.sch) 
+    (date "Wed 07 Oct 2020 10:18:46 BST") 
+    (tool "Eeschema 5.1.5+dfsg1-2build2") 
+    (sheet 
+      (number 1) 
+      (name /) 
+      (tstamps /) 
+      (title_block 
+        (title "LBB: Power Box") 
+        (company Voight-Kampff) 
+        (rev 0) 
+        (date 2020-10-06) 
+        (source NB3_body.sch) 
+        (comment 
+          (number 1) 
+          (value "LastBlackBox: NB3 power source")) 
+        (comment 
+          (number 2) 
+          (value "5-cell NiMH AA battery charger")) 
+        (comment 
+          (number 3) 
+          (value "5V/3A power source for RPi, sensors, and motors")) 
+        (comment 
+          (number 4) 
+          (value ""))))) 
+  (components 
+    (comp 
+      (ref J1) 
+      (value Barrel_Jack_PJ-036AH-SMT-TR) 
+      (footprint NB3_body:Barrel_Jack_PJ-036AH-SMT-TR) 
+      (datasheet Barrel_Jack_PJ-036AH-SMT-TR) 
+      (fields 
+        (field 
+          (name Description) "2.0 x 6.3 mm, 5.0 A, Horizontal, Surface Mount _SMT_, Dc Power Jack Connector") 
+        (field 
+          (name "Mouser Part Number") 490-PJ-036AH-SMT-TR)) 
+      (libsource 
+        (lib NB3_body) 
+        (part Barrel_Jack_PJ-036AH-SMT-TR) 
+        (description "2.0 x 6.3 mm, 5.0 A, Horizontal, Surface Mount _SMT_, Dc Power Jack Connector")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7A690E)) 
+    (comp 
+      (ref XB1) 
+      (value SMD_AA_Clip_Keystone_53TR) 
+      (footprint NB3_body:SMD_AA_Clip_Keystone_53TR) 
+      (datasheet Keystone) 
+      (fields 
+        (field 
+          (name Field4) 14.83mm) 
+        (field 
+          (name Field5) "Manufacturer recommendations") 
+        (field 
+          (name Field6) C)) 
+      (libsource 
+        (lib NB3_body) 
+        (part SMD_AA_Clip_Keystone_53TR) 
+        (description "")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7B209A)) 
+    (comp 
+      (ref XB2) 
+      (value SMD_AA_Clip_Keystone_53TR) 
+      (footprint NB3_body:SMD_AA_Clip_Keystone_53TR) 
+      (datasheet Keystone) 
+      (fields 
+        (field 
+          (name Field4) 14.83mm) 
+        (field 
+          (name Field5) "Manufacturer recommendations") 
+        (field 
+          (name Field6) C)) 
+      (libsource 
+        (lib NB3_body) 
+        (part SMD_AA_Clip_Keystone_53TR) 
+        (description "")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7B336A)) 
+    (comp 
+      (ref XB3) 
+      (value SMD_AA_Clip_Keystone_53TR) 
+      (footprint NB3_body:SMD_AA_Clip_Keystone_53TR) 
+      (datasheet Keystone) 
+      (fields 
+        (field 
+          (name Field4) 14.83mm) 
+        (field 
+          (name Field5) "Manufacturer recommendations") 
+        (field 
+          (name Field6) C)) 
+      (libsource 
+        (lib NB3_body) 
+        (part SMD_AA_Clip_Keystone_53TR) 
+        (description "")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7BE0BF)) 
+    (comp 
+      (ref XB4) 
+      (value SMD_AA_Clip_Keystone_53TR) 
+      (footprint NB3_body:SMD_AA_Clip_Keystone_53TR) 
+      (datasheet Keystone) 
+      (fields 
+        (field 
+          (name Field4) 14.83mm) 
+        (field 
+          (name Field5) "Manufacturer recommendations") 
+        (field 
+          (name Field6) C)) 
+      (libsource 
+        (lib NB3_body) 
+        (part SMD_AA_Clip_Keystone_53TR) 
+        (description "")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7BE0C8)) 
+    (comp 
+      (ref XB5) 
+      (value SMD_AA_Clip_Keystone_53TR) 
+      (footprint NB3_body:SMD_AA_Clip_Keystone_53TR) 
+      (datasheet Keystone) 
+      (fields 
+        (field 
+          (name Field4) 14.83mm) 
+        (field 
+          (name Field5) "Manufacturer recommendations") 
+        (field 
+          (name Field6) C)) 
+      (libsource 
+        (lib NB3_body) 
+        (part SMD_AA_Clip_Keystone_53TR) 
+        (description "")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7BE7E5)) 
+    (comp 
+      (ref XB6) 
+      (value SMD_AA_Clip_Keystone_53TR) 
+      (footprint NB3_body:SMD_AA_Clip_Keystone_53TR) 
+      (datasheet Keystone) 
+      (fields 
+        (field 
+          (name Field4) 14.83mm) 
+        (field 
+          (name Field5) "Manufacturer recommendations") 
+        (field 
+          (name Field6) C)) 
+      (libsource 
+        (lib NB3_body) 
+        (part SMD_AA_Clip_Keystone_53TR) 
+        (description "")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7BE7EE)) 
+    (comp 
+      (ref XB7) 
+      (value SMD_AA_Clip_Keystone_53TR) 
+      (footprint NB3_body:SMD_AA_Clip_Keystone_53TR) 
+      (datasheet Keystone) 
+      (fields 
+        (field 
+          (name Field4) 14.83mm) 
+        (field 
+          (name Field5) "Manufacturer recommendations") 
+        (field 
+          (name Field6) C)) 
+      (libsource 
+        (lib NB3_body) 
+        (part SMD_AA_Clip_Keystone_53TR) 
+        (description "")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7BF09B)) 
+    (comp 
+      (ref XB8) 
+      (value SMD_AA_Clip_Keystone_53TR) 
+      (footprint NB3_body:SMD_AA_Clip_Keystone_53TR) 
+      (datasheet Keystone) 
+      (fields 
+        (field 
+          (name Field4) 14.83mm) 
+        (field 
+          (name Field5) "Manufacturer recommendations") 
+        (field 
+          (name Field6) C)) 
+      (libsource 
+        (lib NB3_body) 
+        (part SMD_AA_Clip_Keystone_53TR) 
+        (description "")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7BF0A4)) 
+    (comp 
+      (ref XB9) 
+      (value SMD_AA_Clip_Keystone_53TR) 
+      (footprint NB3_body:SMD_AA_Clip_Keystone_53TR) 
+      (datasheet Keystone) 
+      (fields 
+        (field 
+          (name Field4) 14.83mm) 
+        (field 
+          (name Field5) "Manufacturer recommendations") 
+        (field 
+          (name Field6) C)) 
+      (libsource 
+        (lib NB3_body) 
+        (part SMD_AA_Clip_Keystone_53TR) 
+        (description "")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7C2A17)) 
+    (comp 
+      (ref XB10) 
+      (value SMD_AA_Clip_Keystone_53TR) 
+      (footprint NB3_body:SMD_AA_Clip_Keystone_53TR) 
+      (datasheet Keystone) 
+      (fields 
+        (field 
+          (name Field4) 14.83mm) 
+        (field 
+          (name Field5) "Manufacturer recommendations") 
+        (field 
+          (name Field6) C)) 
+      (libsource 
+        (lib NB3_body) 
+        (part SMD_AA_Clip_Keystone_53TR) 
+        (description "")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7C2A20)) 
+    (comp 
+      (ref U1) 
+      (value Voltage_Regulator_LT8609) 
+      (footprint NB3_body:Voltage_Regulator_LT8609) 
+      (datasheet lt8609emse#trpbf) 
+      (fields 
+        (field 
+          (name Field4) "Linear Technology")) 
+      (libsource 
+        (lib NB3_body) 
+        (part Voltage_Regulator_LT8609) 
+        (description "")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7BBE05)) 
+    (comp 
+      (ref C3) 
+      (value 0.22uF) 
+      (footprint Capacitor_SMD:C_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7BD71E)) 
+    (comp 
+      (ref L1) 
+      (value 2.2uH) 
+      (footprint Inductor_SMD:L_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part L) 
+        (description Inductor)) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7BE0A1)) 
+    (comp 
+      (ref R3) 
+      (value 49.9K) 
+      (footprint Resistor_SMD:R_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7BF88D)) 
+    (comp 
+      (ref C8) 
+      (value 10pF) 
+      (footprint Capacitor_SMD:C_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7C2C60)) 
+    (comp 
+      (ref R4) 
+      (value 1M) 
+      (footprint Resistor_SMD:R_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7C1B99)) 
+    (comp 
+      (ref R7) 
+      (value 187K) 
+      (footprint Resistor_SMD:R_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7C4662)) 
+    (comp 
+      (ref C5) 
+      (value 47uF) 
+      (footprint Capacitor_SMD:C_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7C55D8)) 
+    (comp 
+      (ref R6) 
+      (value 18.2K) 
+      (footprint Resistor_SMD:R_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7B5C5D)) 
+    (comp 
+      (ref C7) 
+      (value 10nF) 
+      (footprint Capacitor_SMD:C_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7B6078)) 
+    (comp 
+      (ref C4) 
+      (value 1uF) 
+      (footprint Capacitor_SMD:C_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7B6740)) 
+    (comp 
+      (ref J2) 
+      (value Conn_01x04_Male) 
+      (footprint Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical_SMD_Pin1Left) 
+      (datasheet ~) 
+      (libsource 
+        (lib Connector) 
+        (part Conn_01x04_Male) 
+        (description "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7C6CDE)) 
+    (comp 
+      (ref J4) 
+      (value Conn_01x02_Male) 
+      (footprint Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical_SMD_Pin1Left) 
+      (datasheet ~) 
+      (libsource 
+        (lib Connector) 
+        (part Conn_01x02_Male) 
+        (description "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7C7B8F)) 
+    (comp 
+      (ref R15) 
+      (value 10k) 
+      (footprint Resistor_SMD:R_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F811080)) 
+    (comp 
+      (ref R14) 
+      (value 40k) 
+      (footprint Resistor_SMD:R_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F81B021)) 
+    (comp 
+      (ref C11) 
+      (value 68nF) 
+      (footprint Capacitor_SMD:C_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F8C1462)) 
+    (comp 
+      (ref TH1) 
+      (value Thermistor) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part Thermistor) 
+        (description "Temperature dependent resistor")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F8C069D)) 
+    (comp 
+      (ref L2) 
+      (value 10uH) 
+      (footprint Inductor_SMD:L_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part L) 
+        (description Inductor)) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F8881CC)) 
+    (comp 
+      (ref Q1) 
+      (value Q_PMOS_GDS) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part Q_PMOS_GDS) 
+        (description "P-MOSFET transistor, gate/drain/source")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F847B2F)) 
+    (comp 
+      (ref Q2) 
+      (value Q_NMOS_GSD) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part Q_NMOS_GSD) 
+        (description "N-MOSFET transistor, gate/source/drain")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F8431C6)) 
+    (comp 
+      (ref R12) 
+      (value 0.05) 
+      (footprint Resistor_SMD:R_1206_3216Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F83AE1A)) 
+    (comp 
+      (ref C12) 
+      (value 33nF) 
+      (footprint Capacitor_SMD:C_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F82BB0E)) 
+    (comp 
+      (ref C13) 
+      (value 20uF) 
+      (footprint Capacitor_SMD:C_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F819ED1)) 
+    (comp 
+      (ref C10) 
+      (value 0.1uF) 
+      (footprint Capacitor_SMD:C_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F80414D)) 
+    (comp 
+      (ref R13) 
+      (value 49.9k) 
+      (footprint Resistor_SMD:R_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7FC7E7)) 
+    (comp 
+      (ref C9) 
+      (value 20uF) 
+      (footprint Capacitor_SMD:C_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7DE0AF)) 
+    (comp 
+      (ref D2) 
+      (value D_Schottky) 
+      (footprint Diode_SMD:D_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part D_Schottky) 
+        (description "Schottky diode")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7DD445)) 
+    (comp 
+      (ref D6) 
+      (value LED) 
+      (footprint LED_SMD:LED_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part LED) 
+        (description "Light emitting diode")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7D7510)) 
+    (comp 
+      (ref D5) 
+      (value LED) 
+      (footprint LED_SMD:LED_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part LED) 
+        (description "Light emitting diode")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7D710C)) 
+    (comp 
+      (ref D4) 
+      (value LED) 
+      (footprint LED_SMD:LED_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part LED) 
+        (description "Light emitting diode")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7D5FE1)) 
+    (comp 
+      (ref C6) 
+      (value 4.7uF) 
+      (footprint Capacitor_SMD:C_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7C635E)) 
+    (comp 
+      (ref F3) 
+      (value Polyfuse) 
+      (footprint Fuse:Fuse_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part Polyfuse) 
+        (description "Resettable fuse, polymeric positive temperature coefficient")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5FA8D001)) 
+    (comp 
+      (ref J6) 
+      (value Conn_01x02_Male) 
+      (footprint Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical_SMD_Pin1Left) 
+      (datasheet ~) 
+      (libsource 
+        (lib Connector) 
+        (part Conn_01x02_Male) 
+        (description "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5FB0537C)) 
+    (comp 
+      (ref F5) 
+      (value Polyfuse) 
+      (footprint Fuse:Fuse_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part Polyfuse) 
+        (description "Resettable fuse, polymeric positive temperature coefficient")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5FB05382)) 
+    (comp 
+      (ref J3) 
+      (value Conn_01x02_Male) 
+      (footprint Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical_SMD_Pin1Left) 
+      (datasheet ~) 
+      (libsource 
+        (lib Connector) 
+        (part Conn_01x02_Male) 
+        (description "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5FB19253)) 
+    (comp 
+      (ref F2) 
+      (value Polyfuse) 
+      (footprint Fuse:Fuse_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part Polyfuse) 
+        (description "Resettable fuse, polymeric positive temperature coefficient")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5FB19259)) 
+    (comp 
+      (ref F1) 
+      (value Polyfuse) 
+      (footprint Fuse:Fuse_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part Polyfuse) 
+        (description "Resettable fuse, polymeric positive temperature coefficient")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5FAD40FF)) 
+    (comp 
+      (ref D3) 
+      (value D_Schottky) 
+      (footprint Diode_SMD:D_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part D_Schottky) 
+        (description "Schottky diode")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F9B592A)) 
+    (comp 
+      (ref R8) 
+      (value 20k) 
+      (footprint Resistor_SMD:R_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7D7B39)) 
+    (comp 
+      (ref R9) 
+      (value 560) 
+      (footprint Resistor_SMD:R_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7EE2DB)) 
+    (comp 
+      (ref R10) 
+      (value 560) 
+      (footprint Resistor_SMD:R_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7EEAC0)) 
+    (comp 
+      (ref R11) 
+      (value 560) 
+      (footprint Resistor_SMD:R_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7EE754)) 
+    (comp 
+      (ref D1) 
+      (value LED) 
+      (footprint LED_SMD:LED_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part LED) 
+        (description "Light emitting diode")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F87459F)) 
+    (comp 
+      (ref R2) 
+      (value 560) 
+      (footprint Resistor_SMD:R_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F8745A5)) 
+    (comp 
+      (ref F6) 
+      (value Polyfuse) 
+      (footprint Fuse:Fuse_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part Polyfuse) 
+        (description "Resettable fuse, polymeric positive temperature coefficient")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5FB123D0)) 
+    (comp 
+      (ref J7) 
+      (value Conn_01x02_Male) 
+      (footprint Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical_SMD_Pin1Left) 
+      (datasheet ~) 
+      (libsource 
+        (lib Connector) 
+        (part Conn_01x02_Male) 
+        (description "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5FB123CA)) 
+    (comp 
+      (ref F4) 
+      (value Polyfuse) 
+      (footprint Fuse:Fuse_0805_2012Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part Polyfuse) 
+        (description "Resettable fuse, polymeric positive temperature coefficient")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5FB0C012)) 
+    (comp 
+      (ref J5) 
+      (value Conn_01x02_Male) 
+      (footprint Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical_SMD_Pin1Left) 
+      (datasheet ~) 
+      (libsource 
+        (lib Connector) 
+        (part Conn_01x02_Male) 
+        (description "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5FB0C00C)) 
+    (comp 
+      (ref U2) 
+      (value NiMH_Charger_LTC4010) 
+      (footprint NB3_body:NiMH_Charger_LTC4010) 
+      (datasheet http://cds.linear.com/docs/en/datasheet/4010fb.pdf) 
+      (fields 
+        (field 
+          (name "Battery Chemistry") "NiCd, NiMH") 
+        (field 
+          (name "Component Link 1 Description") "Manufacturer URL") 
+        (field 
+          (name "Component Link 1 URL") http://www.linear.com/) 
+        (field 
+          (name "Component Link 3 Description") "Package Specification") 
+        (field 
+          (name "Component Link 3 URL") "http://cds.linear.com/docs/en/packaging/05081663__J_FE16(BC).pdf") 
+        (field 
+          (name "Datasheet Version") "Rev. B") 
+        (field 
+          (name "Float Voltage") Adj) 
+        (field 
+          (name "Max Charge CurrentA") 4) 
+        (field 
+          (name "Mounting Technology") "Surface Mount") 
+        (field 
+          (name "Number of Cells") "1 to 16") 
+        (field 
+          (name "Package Description") "16-Pin Plastic TSSOP, Body 5 x 4.4 mm, Pitch 0.65 mm") 
+        (field 
+          (name "Package Version") "Rev. J, 11/2012") 
+        (field 
+          (name "Type of Charger") Switching) 
+        (field 
+          (name "Vin MaxV") 34) 
+        (field 
+          (name "Vin MinV") 4.5) 
+        (field 
+          (name category) IC) 
+        (field 
+          (name "ciiva ids") 961105) 
+        (field 
+          (name imported) yes) 
+        (field 
+          (name "library id") 3e9e2c09a2fb7e23) 
+        (field 
+          (name manufacturer) "Linear Technology") 
+        (field 
+          (name package) FE-16) 
+        (field 
+          (name "release date") 1377764839) 
+        (field 
+          (name rohs) Yes) 
+        (field 
+          (name "vault revision") 8732EF84-F5C5-42FF-8EBC-4AFD031C16CA)) 
+      (libsource 
+        (lib NB3_body) 
+        (part NiMH_Charger_LTC4010) 
+        (description "")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7BA673)) 
+    (comp 
+      (ref R1) 
+      (value 18.2K) 
+      (footprint Resistor_SMD:R_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F81AEBB)) 
+    (comp 
+      (ref R5) 
+      (value 18.2K) 
+      (footprint Resistor_SMD:R_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part R) 
+        (description Resistor)) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F81B43F)) 
+    (comp 
+      (ref SW1) 
+      (value SW_SPDT) 
+      (footprint NB3_body:Switch_SPDT_SMD_Slide_JS102011JCQN) 
+      (datasheet ~) 
+      (libsource 
+        (lib Switch) 
+        (part SW_SPDT) 
+        (description "Switch, single pole double throw")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F8EA0C6)) 
+    (comp 
+      (ref C1) 
+      (value 4.7uF) 
+      (footprint Capacitor_SMD:C_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7BFE7E)) 
+    (comp 
+      (ref C2) 
+      (value 0.1uF) 
+      (footprint Capacitor_SMD:C_0603_1608Metric) 
+      (datasheet ~) 
+      (libsource 
+        (lib Device) 
+        (part C) 
+        (description "Unpolarized capacitor")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5F7BF7AC)) 
+    (comp 
+      (ref SW3) 
+      (value SW_SPDT) 
+      (footprint NB3_body:Switch_SPDT_SMD_Slide_JS102011JCQN) 
+      (datasheet ~) 
+      (libsource 
+        (lib Switch) 
+        (part SW_SPDT) 
+        (description "Switch, single pole double throw")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5FA90B29)) 
+    (comp 
+      (ref SW2) 
+      (value SW_SPDT) 
+      (footprint NB3_body:Switch_SPDT_SMD_Slide_JS102011JCQN) 
+      (datasheet ~) 
+      (libsource 
+        (lib Switch) 
+        (part SW_SPDT) 
+        (description "Switch, single pole double throw")) 
+      (sheetpath 
+        (names /) 
+        (tstamps /)) 
+      (tstamp 5FA9163A))) 
+  (libparts 
+    (libpart 
+      (lib Connector) 
+      (part Conn_01x02_Male) 
+      (description "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)") 
+      (docs ~) 
+      (footprints 
+        (fp Connector*:*_1x??_*)) 
+      (fields 
+        (field 
+          (name Reference) J) 
+        (field 
+          (name Value) Conn_01x02_Male)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name Pin_1) 
+          (type passive)) 
+        (pin 
+          (num 2) 
+          (name Pin_2) 
+          (type passive)))) 
+    (libpart 
+      (lib Connector) 
+      (part Conn_01x04_Male) 
+      (description "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)") 
+      (docs ~) 
+      (footprints 
+        (fp Connector*:*_1x??_*)) 
+      (fields 
+        (field 
+          (name Reference) J) 
+        (field 
+          (name Value) Conn_01x04_Male)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name Pin_1) 
+          (type passive)) 
+        (pin 
+          (num 2) 
+          (name Pin_2) 
+          (type passive)) 
+        (pin 
+          (num 3) 
+          (name Pin_3) 
+          (type passive)) 
+        (pin 
+          (num 4) 
+          (name Pin_4) 
+          (type passive)))) 
+    (libpart 
+      (lib Device) 
+      (part C) 
+      (description "Unpolarized capacitor") 
+      (docs ~) 
+      (footprints 
+        (fp C_*)) 
+      (fields 
+        (field 
+          (name Reference) C) 
+        (field 
+          (name Value) C)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name ~) 
+          (type passive)) 
+        (pin 
+          (num 2) 
+          (name ~) 
+          (type passive)))) 
+    (libpart 
+      (lib Device) 
+      (part D_Schottky) 
+      (description "Schottky diode") 
+      (docs ~) 
+      (footprints 
+        (fp TO-???*) 
+        (fp *_Diode_*) 
+        (fp *SingleDiode*) 
+        (fp D_*)) 
+      (fields 
+        (field 
+          (name Reference) D) 
+        (field 
+          (name Value) D_Schottky)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name K) 
+          (type passive)) 
+        (pin 
+          (num 2) 
+          (name A) 
+          (type passive)))) 
+    (libpart 
+      (lib Device) 
+      (part L) 
+      (description Inductor) 
+      (docs ~) 
+      (footprints 
+        (fp Choke_*) 
+        (fp *Coil*) 
+        (fp Inductor_*) 
+        (fp L_*)) 
+      (fields 
+        (field 
+          (name Reference) L) 
+        (field 
+          (name Value) L)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name 1) 
+          (type passive)) 
+        (pin 
+          (num 2) 
+          (name 2) 
+          (type passive)))) 
+    (libpart 
+      (lib Device) 
+      (part LED) 
+      (description "Light emitting diode") 
+      (docs ~) 
+      (footprints 
+        (fp LED*) 
+        (fp LED_SMD:*) 
+        (fp LED_THT:*)) 
+      (fields 
+        (field 
+          (name Reference) D) 
+        (field 
+          (name Value) LED)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name K) 
+          (type passive)) 
+        (pin 
+          (num 2) 
+          (name A) 
+          (type passive)))) 
+    (libpart 
+      (lib Device) 
+      (part Polyfuse) 
+      (description "Resettable fuse, polymeric positive temperature coefficient") 
+      (docs ~) 
+      (footprints 
+        (fp *polyfuse*) 
+        (fp *PTC*)) 
+      (fields 
+        (field 
+          (name Reference) F) 
+        (field 
+          (name Value) Polyfuse)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name ~) 
+          (type passive)) 
+        (pin 
+          (num 2) 
+          (name ~) 
+          (type passive)))) 
+    (libpart 
+      (lib Device) 
+      (part Q_NMOS_GSD) 
+      (description "N-MOSFET transistor, gate/source/drain") 
+      (docs ~) 
+      (fields 
+        (field 
+          (name Reference) Q) 
+        (field 
+          (name Value) Q_NMOS_GSD)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name G) 
+          (type input)) 
+        (pin 
+          (num 2) 
+          (name S) 
+          (type passive)) 
+        (pin 
+          (num 3) 
+          (name D) 
+          (type passive)))) 
+    (libpart 
+      (lib Device) 
+      (part Q_PMOS_GDS) 
+      (description "P-MOSFET transistor, gate/drain/source") 
+      (docs ~) 
+      (fields 
+        (field 
+          (name Reference) Q) 
+        (field 
+          (name Value) Q_PMOS_GDS)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name G) 
+          (type input)) 
+        (pin 
+          (num 2) 
+          (name D) 
+          (type passive)) 
+        (pin 
+          (num 3) 
+          (name S) 
+          (type passive)))) 
+    (libpart 
+      (lib Device) 
+      (part R) 
+      (description Resistor) 
+      (docs ~) 
+      (footprints 
+        (fp R_*)) 
+      (fields 
+        (field 
+          (name Reference) R) 
+        (field 
+          (name Value) R)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name ~) 
+          (type passive)) 
+        (pin 
+          (num 2) 
+          (name ~) 
+          (type passive)))) 
+    (libpart 
+      (lib Device) 
+      (part Thermistor) 
+      (description "Temperature dependent resistor") 
+      (docs ~) 
+      (footprints 
+        (fp R_*)) 
+      (fields 
+        (field 
+          (name Reference) TH) 
+        (field 
+          (name Value) Thermistor)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name ~) 
+          (type passive)) 
+        (pin 
+          (num 2) 
+          (name ~) 
+          (type passive)))) 
+    (libpart 
+      (lib NB3_body) 
+      (part Barrel_Jack_PJ-036AH-SMT-TR) 
+      (description "2.0 x 6.3 mm, 5.0 A, Horizontal, Surface Mount _SMT_, Dc Power Jack Connector") 
+      (docs Barrel_Jack_PJ-036AH-SMT-TR) 
+      (fields 
+        (field 
+          (name Reference) J) 
+        (field 
+          (name Value) Barrel_Jack_PJ-036AH-SMT-TR) 
+        (field 
+          (name Footprint) Barrel_Jack_PJ-036AH-SMT-TR) 
+        (field 
+          (name Description) "2.0 x 6.3 mm, 5.0 A, Horizontal, Surface Mount _SMT_, Dc Power Jack Connector") 
+        (field 
+          (name "Mouser Part Number") 490-PJ-036AH-SMT-TR)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name 1) 
+          (type passive)) 
+        (pin 
+          (num 2) 
+          (name 2) 
+          (type passive)) 
+        (pin 
+          (num 3) 
+          (name 3) 
+          (type passive)))) 
+    (libpart 
+      (lib NB3_body) 
+      (part NiMH_Charger_LTC4010) 
+      (docs http://cds.linear.com/docs/en/datasheet/4010fb.pdf) 
+      (fields 
+        (field 
+          (name Reference) U) 
+        (field 
+          (name Value) NiMH_Charger_LTC4010) 
+        (field 
+          (name Footprint) Linear_Technology-LTC4010CFEPBF-*) 
+        (field 
+          (name "Battery Chemistry") "NiCd, NiMH") 
+        (field 
+          (name "Component Link 1 Description") "Manufacturer URL") 
+        (field 
+          (name "Component Link 1 URL") http://www.linear.com/) 
+        (field 
+          (name "Component Link 3 Description") "Package Specification") 
+        (field 
+          (name "Component Link 3 URL") "http://cds.linear.com/docs/en/packaging/05081663__J_FE16(BC).pdf") 
+        (field 
+          (name "Datasheet Version") "Rev. B") 
+        (field 
+          (name "Float Voltage") Adj) 
+        (field 
+          (name "Max Charge CurrentA") 4) 
+        (field 
+          (name "Mounting Technology") "Surface Mount") 
+        (field 
+          (name "Number of Cells") "1 to 16") 
+        (field 
+          (name "Package Description") "16-Pin Plastic TSSOP, Body 5 x 4.4 mm, Pitch 0.65 mm") 
+        (field 
+          (name "Package Version") "Rev. J, 11/2012") 
+        (field 
+          (name "Type of Charger") Switching) 
+        (field 
+          (name "Vin MaxV") 34) 
+        (field 
+          (name "Vin MinV") 4.5) 
+        (field 
+          (name category) IC) 
+        (field 
+          (name "ciiva ids") 961105) 
+        (field 
+          (name "library id") 3e9e2c09a2fb7e23) 
+        (field 
+          (name manufacturer) "Linear Technology") 
+        (field 
+          (name package) FE-16) 
+        (field 
+          (name "release date") 1377764839) 
+        (field 
+          (name rohs) Yes) 
+        (field 
+          (name "vault revision") 8732EF84-F5C5-42FF-8EBC-4AFD031C16CA) 
+        (field 
+          (name imported) yes)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name ~FAULT~) 
+          (type openCol)) 
+        (pin 
+          (num 2) 
+          (name ~CHRG~) 
+          (type openCol)) 
+        (pin 
+          (num 3) 
+          (name CHEM) 
+          (type input)) 
+        (pin 
+          (num 4) 
+          (name GND) 
+          (type power_in)) 
+        (pin 
+          (num 5) 
+          (name VTEMP) 
+          (type input)) 
+        (pin 
+          (num 6) 
+          (name VCELL) 
+          (type input)) 
+        (pin 
+          (num 7) 
+          (name VCDIV) 
+          (type openCol)) 
+        (pin 
+          (num 8) 
+          (name TIMER) 
+          (type input)) 
+        (pin 
+          (num 9) 
+          (name SENSE) 
+          (type input)) 
+        (pin 
+          (num 10) 
+          (name BAT) 
+          (type power_in)) 
+        (pin 
+          (num 11) 
+          (name INTVDD) 
+          (type power_in)) 
+        (pin 
+          (num 12) 
+          (name BGATE) 
+          (type output)) 
+        (pin 
+          (num 13) 
+          (name PGND) 
+          (type power_in)) 
+        (pin 
+          (num 14) 
+          (name TGATE) 
+          (type output)) 
+        (pin 
+          (num 15) 
+          (name VCC) 
+          (type power_in)) 
+        (pin 
+          (num 16) 
+          (name ~READY~) 
+          (type openCol)) 
+        (pin 
+          (num 17) 
+          (name EP) 
+          (type power_in)))) 
+    (libpart 
+      (lib NB3_body) 
+      (part SMD_AA_Clip_Keystone_53TR) 
+      (docs Keystone) 
+      (fields 
+        (field 
+          (name Reference) XB) 
+        (field 
+          (name Value) SMD_AA_Clip_Keystone_53TR) 
+        (field 
+          (name Footprint) KEYSTONE_53TR) 
+        (field 
+          (name Field4) 14.83mm) 
+        (field 
+          (name Field5) "Manufacturer recommendations") 
+        (field 
+          (name Field6) C)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name ~) 
+          (type passive)) 
+        (pin 
+          (num MNT) 
+          (name ~) 
+          (type passive)))) 
+    (libpart 
+      (lib NB3_body) 
+      (part Voltage_Regulator_LT8609) 
+      (docs lt8609emse#trpbf) 
+      (fields 
+        (field 
+          (name Reference) U) 
+        (field 
+          (name Value) Voltage_Regulator_LT8609) 
+        (field 
+          (name Footprint) MSOP-10_MSE) 
+        (field 
+          (name Field4) "Linear Technology")) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name BST) 
+          (type input)) 
+        (pin 
+          (num 2) 
+          (name SW) 
+          (type output)) 
+        (pin 
+          (num 3) 
+          (name INTVCC) 
+          (type passive)) 
+        (pin 
+          (num 4) 
+          (name RT) 
+          (type passive)) 
+        (pin 
+          (num 5) 
+          (name SYNC) 
+          (type input)) 
+        (pin 
+          (num 6) 
+          (name FB) 
+          (type passive)) 
+        (pin 
+          (num 7) 
+          (name TR/SS) 
+          (type output)) 
+        (pin 
+          (num 8) 
+          (name PG) 
+          (type output)) 
+        (pin 
+          (num 9) 
+          (name VIN) 
+          (type input)) 
+        (pin 
+          (num 10) 
+          (name EN/UV) 
+          (type passive)) 
+        (pin 
+          (num 11) 
+          (name GND) 
+          (type power_in)))) 
+    (libpart 
+      (lib Switch) 
+      (part SW_SPDT) 
+      (description "Switch, single pole double throw") 
+      (docs ~) 
+      (fields 
+        (field 
+          (name Reference) SW) 
+        (field 
+          (name Value) SW_SPDT)) 
+      (pins 
+        (pin 
+          (num 1) 
+          (name A) 
+          (type passive)) 
+        (pin 
+          (num 2) 
+          (name B) 
+          (type passive)) 
+        (pin 
+          (num 3) 
+          (name C) 
+          (type passive))))) 
+  (libraries 
+    (library 
+      (logical Connector) 
+      (uri /usr/share/kicad/library/Connector.lib)) 
+    (library 
+      (logical Device) 
+      (uri /usr/share/kicad/library/Device.lib)) 
+    (library 
+      (logical NB3_body) 
+      (uri /home/kampff/Dropbox/Voight-Kampff/Training/LastBlackBox/designs/power/libraries/NB3_body.lib)) 
+    (library 
+      (logical Switch) 
+      (uri /usr/share/kicad/library/Switch.lib))) 
+  (nets 
+    (net 
+      (code 1) 
+      (name 12V) 
+      (node 
+        (ref D6) 
+        (pin 2)) 
+      (node 
+        (ref D4) 
+        (pin 2)) 
+      (node 
+        (ref D5) 
+        (pin 2)) 
+      (node 
+        (ref D2) 
+        (pin 2)) 
+      (node 
+        (ref R8) 
+        (pin 1)) 
+      (node 
+        (ref J1) 
+        (pin 1)) 
+      (node 
+        (ref D1) 
+        (pin 2))) 
+    (net 
+      (code 2) 
+      (name "Net-(J1-Pad3)") 
+      (node 
+        (ref J1) 
+        (pin 3))) 
+    (net 
+      (code 3) 
+      (name GND) 
+      (node 
+        (ref R13) 
+        (pin 2)) 
+      (node 
+        (ref J7) 
+        (pin 1)) 
+      (node 
+        (ref J5) 
+        (pin 1)) 
+      (node 
+        (ref J2) 
+        (pin 1)) 
+      (node 
+        (ref J2) 
+        (pin 2)) 
+      (node 
+        (ref SW1) 
+        (pin 1)) 
+      (node 
+        (ref R5) 
+        (pin 1)) 
+      (node 
+        (ref C2) 
+        (pin 2)) 
+      (node 
+        (ref C1) 
+        (pin 2)) 
+      (node 
+        (ref J4) 
+        (pin 1)) 
+      (node 
+        (ref Q2) 
+        (pin 2)) 
+      (node 
+        (ref C12) 
+        (pin 2)) 
+      (node 
+        (ref C13) 
+        (pin 2)) 
+      (node 
+        (ref U1) 
+        (pin 11)) 
+      (node 
+        (ref C10) 
+        (pin 2)) 
+      (node 
+        (ref C4) 
+        (pin 2)) 
+      (node 
+        (ref R7) 
+        (pin 1)) 
+      (node 
+        (ref C7) 
+        (pin 2)) 
+      (node 
+        (ref R6) 
+        (pin 1)) 
+      (node 
+        (ref J1) 
+        (pin 2)) 
+      (node 
+        (ref XB10) 
+        (pin 1)) 
+      (node 
+        (ref XB10) 
+        (pin MNT)) 
+      (node 
+        (ref R2) 
+        (pin 2)) 
+      (node 
+        (ref U2) 
+        (pin 4)) 
+      (node 
+        (ref U2) 
+        (pin 3)) 
+      (node 
+        (ref U2) 
+        (pin 17)) 
+      (node 
+        (ref U2) 
+        (pin 13)) 
+      (node 
+        (ref C9) 
+        (pin 2)) 
+      (node 
+        (ref C5) 
+        (pin 1)) 
+      (node 
+        (ref C11) 
+        (pin 2)) 
+      (node 
+        (ref C6) 
+        (pin 1)) 
+      (node 
+        (ref TH1) 
+        (pin 2)) 
+      (node 
+        (ref R8) 
+        (pin 2)) 
+      (node 
+        (ref J6) 
+        (pin 1)) 
+      (node 
+        (ref J3) 
+        (pin 1))) 
+    (net 
+      (code 4) 
+      (name "Net-(F1-Pad1)") 
+      (node 
+        (ref F1) 
+        (pin 1)) 
+      (node 
+        (ref J2) 
+        (pin 4)) 
+      (node 
+        (ref J2) 
+        (pin 3))) 
+    (net 
+      (code 5) 
+      (name "Net-(R9-Pad2)") 
+      (node 
+        (ref U2) 
+        (pin 16)) 
+      (node 
+        (ref R9) 
+        (pin 2))) 
+    (net 
+      (code 6) 
+      (name "Net-(R10-Pad2)") 
+      (node 
+        (ref R10) 
+        (pin 2)) 
+      (node 
+        (ref U2) 
+        (pin 1))) 
+    (net 
+      (code 7) 
+      (name "Net-(R11-Pad2)") 
+      (node 
+        (ref R11) 
+        (pin 2)) 
+      (node 
+        (ref U2) 
+        (pin 2))) 
+    (net 
+      (code 8) 
+      (name "Net-(D6-Pad1)") 
+      (node 
+        (ref R11) 
+        (pin 1)) 
+      (node 
+        (ref D6) 
+        (pin 1))) 
+    (net 
+      (code 9) 
+      (name "Net-(D5-Pad1)") 
+      (node 
+        (ref R10) 
+        (pin 1)) 
+      (node 
+        (ref D5) 
+        (pin 1))) 
+    (net 
+      (code 10) 
+      (name "Net-(D4-Pad1)") 
+      (node 
+        (ref R9) 
+        (pin 1)) 
+      (node 
+        (ref D4) 
+        (pin 1))) 
+    (net 
+      (code 11) 
+      (name "Net-(R13-Pad1)") 
+      (node 
+        (ref U2) 
+        (pin 8)) 
+      (node 
+        (ref R13) 
+        (pin 1))) 
+    (net 
+      (code 12) 
+      (name VBAT) 
+      (node 
+        (ref R14) 
+        (pin 2)) 
+      (node 
+        (ref XB1) 
+        (pin 1)) 
+      (node 
+        (ref XB1) 
+        (pin MNT)) 
+      (node 
+        (ref U2) 
+        (pin 10)) 
+      (node 
+        (ref C13) 
+        (pin 1)) 
+      (node 
+        (ref R12) 
+        (pin 1))) 
+    (net 
+      (code 13) 
+      (name "Net-(F3-Pad1)") 
+      (node 
+        (ref J4) 
+        (pin 2)) 
+      (node 
+        (ref F3) 
+        (pin 1))) 
+    (net 
+      (code 14) 
+      (name "Net-(F2-Pad1)") 
+      (node 
+        (ref J3) 
+        (pin 2)) 
+      (node 
+        (ref F2) 
+        (pin 1))) 
+    (net 
+      (code 15) 
+      (name 5V) 
+      (node 
+        (ref C8) 
+        (pin 1)) 
+      (node 
+        (ref F1) 
+        (pin 2)) 
+      (node 
+        (ref R4) 
+        (pin 1)) 
+      (node 
+        (ref L1) 
+        (pin 2)) 
+      (node 
+        (ref F4) 
+        (pin 2)) 
+      (node 
+        (ref SW2) 
+        (pin 2)) 
+      (node 
+        (ref SW3) 
+        (pin 2)) 
+      (node 
+        (ref C5) 
+        (pin 2)) 
+      (node 
+        (ref F6) 
+        (pin 2)) 
+      (node 
+        (ref C6) 
+        (pin 2)) 
+      (node 
+        (ref F2) 
+        (pin 2)) 
+      (node 
+        (ref R3) 
+        (pin 1))) 
+    (net 
+      (code 16) 
+      (name "Net-(D1-Pad1)") 
+      (node 
+        (ref R2) 
+        (pin 1)) 
+      (node 
+        (ref D1) 
+        (pin 1))) 
+    (net 
+      (code 17) 
+      (name "Net-(F5-Pad1)") 
+      (node 
+        (ref J6) 
+        (pin 2)) 
+      (node 
+        (ref F5) 
+        (pin 1))) 
+    (net 
+      (code 18) 
+      (name "Net-(F5-Pad2)") 
+      (node 
+        (ref SW3) 
+        (pin 1)) 
+      (node 
+        (ref F5) 
+        (pin 2))) 
+    (net 
+      (code 19) 
+      (name "Net-(SW1-Pad2)") 
+      (node 
+        (ref SW1) 
+        (pin 2)) 
+      (node 
+        (ref U1) 
+        (pin 10))) 
+    (net 
+      (code 20) 
+      (name "Net-(R1-Pad1)") 
+      (node 
+        (ref R1) 
+        (pin 1)) 
+      (node 
+        (ref R5) 
+        (pin 2)) 
+      (node 
+        (ref SW1) 
+        (pin 3))) 
+    (net 
+      (code 21) 
+      (name "Net-(SW3-Pad3)") 
+      (node 
+        (ref SW3) 
+        (pin 3))) 
+    (net 
+      (code 22) 
+      (name "Net-(SW2-Pad3)") 
+      (node 
+        (ref SW2) 
+        (pin 3))) 
+    (net 
+      (code 23) 
+      (name "Net-(F3-Pad2)") 
+      (node 
+        (ref F3) 
+        (pin 2)) 
+      (node 
+        (ref SW2) 
+        (pin 1))) 
+    (net 
+      (code 24) 
+      (name "Net-(F6-Pad1)") 
+      (node 
+        (ref J7) 
+        (pin 2)) 
+      (node 
+        (ref F6) 
+        (pin 1))) 
+    (net 
+      (code 25) 
+      (name "Net-(F4-Pad1)") 
+      (node 
+        (ref J5) 
+        (pin 2)) 
+      (node 
+        (ref F4) 
+        (pin 1))) 
+    (net 
+      (code 26) 
+      (name "Net-(R15-Pad2)") 
+      (node 
+        (ref U2) 
+        (pin 7)) 
+      (node 
+        (ref R15) 
+        (pin 2))) 
+    (net 
+      (code 27) 
+      (name "Net-(C12-Pad1)") 
+      (node 
+        (ref C12) 
+        (pin 1)) 
+      (node 
+        (ref R14) 
+        (pin 1)) 
+      (node 
+        (ref TH1) 
+        (pin 1)) 
+      (node 
+        (ref U2) 
+        (pin 6)) 
+      (node 
+        (ref R15) 
+        (pin 1))) 
+    (net 
+      (code 28) 
+      (name "Net-(C11-Pad1)") 
+      (node 
+        (ref C11) 
+        (pin 1)) 
+      (node 
+        (ref U2) 
+        (pin 5))) 
+    (net 
+      (code 29) 
+      (name "Net-(Q1-Pad1)") 
+      (node 
+        (ref U2) 
+        (pin 14)) 
+      (node 
+        (ref Q1) 
+        (pin 1))) 
+    (net 
+      (code 30) 
+      (name "Net-(C10-Pad1)") 
+      (node 
+        (ref U2) 
+        (pin 11)) 
+      (node 
+        (ref C10) 
+        (pin 1))) 
+    (net 
+      (code 31) 
+      (name "Net-(C8-Pad2)") 
+      (node 
+        (ref U1) 
+        (pin 6)) 
+      (node 
+        (ref C8) 
+        (pin 2)) 
+      (node 
+        (ref R4) 
+        (pin 2)) 
+      (node 
+        (ref R7) 
+        (pin 2))) 
+    (net 
+      (code 32) 
+      (name "Net-(C3-Pad2)") 
+      (node 
+        (ref L1) 
+        (pin 1)) 
+      (node 
+        (ref C3) 
+        (pin 2)) 
+      (node 
+        (ref U1) 
+        (pin 2))) 
+    (net 
+      (code 33) 
+      (name "Net-(C3-Pad1)") 
+      (node 
+        (ref U1) 
+        (pin 1)) 
+      (node 
+        (ref C3) 
+        (pin 1))) 
+    (net 
+      (code 34) 
+      (name "Net-(R3-Pad2)") 
+      (node 
+        (ref R3) 
+        (pin 2)) 
+      (node 
+        (ref U1) 
+        (pin 8))) 
+    (net 
+      (code 35) 
+      (name "Net-(C7-Pad1)") 
+      (node 
+        (ref U1) 
+        (pin 7)) 
+      (node 
+        (ref C7) 
+        (pin 1))) 
+    (net 
+      (code 36) 
+      (name "Net-(U1-Pad5)") 
+      (node 
+        (ref U1) 
+        (pin 5))) 
+    (net 
+      (code 37) 
+      (name "Net-(R6-Pad2)") 
+      (node 
+        (ref R6) 
+        (pin 2)) 
+      (node 
+        (ref U1) 
+        (pin 4))) 
+    (net 
+      (code 38) 
+      (name "Net-(C4-Pad1)") 
+      (node 
+        (ref U1) 
+        (pin 3)) 
+      (node 
+        (ref C4) 
+        (pin 1))) 
+    (net 
+      (code 39) 
+      (name "Net-(XB7-Pad1)") 
+      (node 
+        (ref XB7) 
+        (pin 1)) 
+      (node 
+        (ref XB7) 
+        (pin MNT)) 
+      (node 
+        (ref XB9) 
+        (pin MNT)) 
+      (node 
+        (ref XB9) 
+        (pin 1))) 
+    (net 
+      (code 40) 
+      (name "Net-(XB6-Pad1)") 
+      (node 
+        (ref XB8) 
+        (pin 1)) 
+      (node 
+        (ref XB6) 
+        (pin MNT)) 
+      (node 
+        (ref XB6) 
+        (pin 1)) 
+      (node 
+        (ref XB8) 
+        (pin MNT))) 
+    (net 
+      (code 41) 
+      (name "Net-(XB3-Pad1)") 
+      (node 
+        (ref XB5) 
+        (pin MNT)) 
+      (node 
+        (ref XB5) 
+        (pin 1)) 
+      (node 
+        (ref XB3) 
+        (pin MNT)) 
+      (node 
+        (ref XB3) 
+        (pin 1))) 
+    (net 
+      (code 42) 
+      (name "Net-(XB2-Pad1)") 
+      (node 
+        (ref XB4) 
+        (pin 1)) 
+      (node 
+        (ref XB2) 
+        (pin MNT)) 
+      (node 
+        (ref XB2) 
+        (pin 1)) 
+      (node 
+        (ref XB4) 
+        (pin MNT))) 
+    (net 
+      (code 43) 
+      (name "Net-(Q2-Pad1)") 
+      (node 
+        (ref Q2) 
+        (pin 1)) 
+      (node 
+        (ref U2) 
+        (pin 12))) 
+    (net 
+      (code 44) 
+      (name "Net-(D3-Pad2)") 
+      (node 
+        (ref L2) 
+        (pin 1)) 
+      (node 
+        (ref D3) 
+        (pin 2)) 
+      (node 
+        (ref Q1) 
+        (pin 2)) 
+      (node 
+        (ref Q2) 
+        (pin 3))) 
+    (net 
+      (code 45) 
+      (name VIN) 
+      (node 
+        (ref C2) 
+        (pin 1)) 
+      (node 
+        (ref D3) 
+        (pin 1)) 
+      (node 
+        (ref C9) 
+        (pin 1)) 
+      (node 
+        (ref U2) 
+        (pin 15)) 
+      (node 
+        (ref Q1) 
+        (pin 3)) 
+      (node 
+        (ref U1) 
+        (pin 9)) 
+      (node 
+        (ref R1) 
+        (pin 2)) 
+      (node 
+        (ref D2) 
+        (pin 1)) 
+      (node 
+        (ref C1) 
+        (pin 1))) 
+    (net 
+      (code 46) 
+      (name "Net-(L2-Pad2)") 
+      (node 
+        (ref L2) 
+        (pin 2)) 
+      (node 
+        (ref U2) 
+        (pin 9)) 
+      (node 
+        (ref R12) 
+        (pin 2)))))
