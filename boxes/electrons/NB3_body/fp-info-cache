@@ -1,4 +1,4 @@
-19300909962663060
+19576411929681959
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -6433,6 +6433,13 @@ jack stereo TRS
 5
 5
 Connector_Audio
+Jack_3.5mm_Lumberg_1503_07_Horizontal
+TRS 3.5mm, horizontal, through-hole, https://downloads.lumberg.com/datenblaetter/en/1503_07.pdf
+TRS audio jack horizontal
+0
+4
+3
+Connector_Audio
 Jack_3.5mm_PJ311_Horizontal
 PJ311 6pin SMD 3.5mm stereo headphones jack.
 headphones jack plug stereo 3.5mm PJ311
@@ -7833,12 +7840,26 @@ Power Jack
 3
 3
 Connector_BarrelJack
+BarrelJack_GCT_DCJ200-10-A_Horizontal
+Barrel jack connector (5.5 mm outer diameter, 2.05 inner diameter ), https://gct.co/files/drawings/dcj200-10.pdf
+connector barrel jack
+0
+3
+3
+Connector_BarrelJack
 BarrelJack_Horizontal
 DC Barrel Jack
 Power Jack
 0
 3
 3
+Connector_BarrelJack
+BarrelJack_SwitchcraftConxall_RAPC10U_Horizontal
+DC Power Jack, 13A, 24V, Panel Mount,Through-hole, https://www.switchcraft.com/Drawings/RAPC10U_CD.pdf
+barreljack switchcraftconxall dc power
+0
+2
+2
 Connector_BarrelJack
 BarrelJack_Wuerth_6941xx301002
 Wuerth electronics barrel jack connector (5.5mm outher diameter, inner diameter 2.05mm or 2.55mm depending on exact order number), See: http://katalog.we-online.de/em/datasheet/6941xx301002.pdf
@@ -7950,6 +7971,13 @@ Panel-mountable BNC connector mounted through PCB, vertical
 BNC connector
 0
 2
+2
+Connector_Coaxial
+BNC_TEConnectivity_1478035_Horizontal
+BNC RF Interface, PCB mount 4 pin, Right Angle, Bayonet, 50Ohm, 4GHz, https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Customer+Drawing%7F1478035%7FB1%7Fpdf%7FEnglish%7FENG_CD_1478035_B1.pdf%7F1-1478035-0
+BNC RF interface bayonet 50ohm
+0
+5
 2
 Connector_Coaxial
 BNC_TEConnectivity_1478204_Vertical
@@ -9667,6 +9695,13 @@ connector Hirose FH12 horizontal
 55
 54
 Connector_FFC-FPC
+Hirose_FH41-30S-0.5SH_1x30_1MP_1SH_P0.5mm_Horizontal
+Hirose FH41, FFC/FPC connector, FH41-30S-0.5SH, 30 Pins per row (https://www.hirose.com/fr/product/document?clcode=CL0580-2218-5-05&productname=FH41-30S-0.5SH(05)&series=FH41&documenttype=2DDrawing&lang=fr&documentid=0001001704)
+connector Hirose FH41 horizontal
+0
+38
+32
+Connector_FFC-FPC
 JAE_FF0825SA1_2Rows-25Pins_P0.40mm_Horizontal
 Molex JAE 0.2mm pitch, 1mm overall height FFC/FPC connector, FF0825SA1, 25 Circuits (http://www.jae.com/z-en/pdf_download_exec.cfm?param=SJ108178.pdf), generated with kicad-footprint-generator
 connector JAE  top entry
@@ -9709,12 +9744,26 @@ connector JAE  top entry
 81
 81
 Connector_FFC-FPC
+Molex_52559-3652_2x18-1MP_P0.5mm_Vertical
+Molex 0.50mm Pitch Easy-On Type FFC/FPC, 52559-3652, 36 Circuits (https://www.molex.com/pdm_docs/sd/525593652_sd.pdf)
+connector Molex top entry
+0
+40
+37
+Connector_FFC-FPC
 Molex_54132-5033_1x50-1MP_P0.5mm_Horizontal
 Molex FFC/FPC connector, 50 bottom-side contacts, 0.5mm pitch, 2.0mm height, https://www.molex.com/pdm_docs/sd/541325033_sd.pdf
 FFC FPC
 0
 54
 51
+Connector_FFC-FPC
+Molex_54548-1071_1x10-1MP_P0.5mm_Horizontal
+Molex FFC/FPC connector, 10 bottom-side contacts, 0.5mm pitch, 1.2mm height, https://www.molex.com/pdm_docs/sd/545481071_sd.pdf
+FFC FPC connector
+0
+12
+11
 Connector_FFC-FPC
 Molex_200528-0040_1x04-1MP_P1.00mm_Horizontal
 Molex Molex 1.00mm Pitch Easy-On BackFlip, Right-Angle, Bottom Contact FFC/FPC, 200528-0040, 4 Circuits (https://www.molex.com/pdm_docs/sd/2005280040_sd.pdf), generated with kicad-footprint-generator
@@ -44919,6 +44968,13 @@ usb usb-c 2.0 pd
 20
 17
 Connector_USB
+USB_C_Receptacle_JAE_DX07S016JA1R1500
+USB TYPE C, USB 2.0, SMT, https://www.jae.com/en/connectors/series/detail/product/id=91780
+USB C Type-C Receptacle SMD USB 2.0
+0
+22
+17
+Connector_USB
 USB_C_Receptacle_JAE_DX07S024WJ1R350
 http://www.jae.com/z-en/pdf_download_exec.cfm?param=SJ117219.pdf
 USB C Type-C Receptacle SMD
@@ -50932,6 +50988,13 @@ http://www.display-elektronik.de/filter/DE113-RS-20_635.pdf
 40
 40
 Display_7Segment
+DE119-XX-XX
+https://www.display-elektronik.de/filter/DE119-RS-20_635.pdf
+4 digit 7 segment LCD 
+0
+40
+40
+Display_7Segment
 DE122-XX-XX
 http://www.display-elektronik.de/filter/DE122-RS-20_635.pdf
 6 digit 7 segment LCD 
@@ -51288,6 +51351,20 @@ SMD Type 10.7MHz Ceramic Filter https://www.murata.com/en-us/products/filter/cer
 0
 6
 6
+Filter
+Filter_SAW-6_3.8x3.8mm
+6-pin 3.8 x 3.8mm SAW filter package, https://www.golledge.com/media/3785/mp08167.pdf
+SAW filter 6-pin
+0
+6
+6
+Filter
+Filter_SAW-8_3.8x3.8mm
+8-pin 3.8x3.8mm SAW filter, https://www.golledge.com/media/1831/ma05497.pdf
+SAW filter 8-pin
+0
+8
+8
 Filter
 Filter_Schaffner_FN405
 Compact PCB mounting EMI filter (https://www.schaffner.com/de/produkte/download/product/datasheet/fn-405-pcb-mounting-filter/)
@@ -51887,6 +51964,13 @@ Fuse
 Fuseholder_Cylinder-5x20mm_Stelvio-Kontek_PTF78_Horizontal_Open
 https://www.tme.eu/en/Document/3b48dbe2b9714a62652c97b08fcd464b/PTF78.pdf
 Fuseholder horizontal open 5x20 Stelvio-Kontek PTF/78
+0
+2
+2
+Fuse
+Fuseholder_Cylinder-5x20mm_Wuerth_696103101002-SMD_Horizontal_Open
+Fuseholder horizontal open 5x20mm 250V 10A Würth 696103101002
+Fuseholder horizontal open 5x20mm 250V 10A
 0
 2
 2
@@ -55309,28 +55393,28 @@ L_Toroid Vertical series Radial pin pitch 31.80mm  length 67.6mm width 36.1mm Vi
 Jumper
 SolderJumper-2_P1.3mm_Bridged2Bar_Pad1.0x1.5mm
 SMD Solder Jumper, 1x1.5mm Pads, 0.3mm gap, bridged with 2 copper strips
-solder jumper open
+net tie solder jumper bridged
 0
 2
 2
 Jumper
 SolderJumper-2_P1.3mm_Bridged2Bar_RoundedPad1.0x1.5mm
 SMD Solder Jumper, 1x1.5mm, rounded Pads, 0.3mm gap, bridged with 2 copper strips
-solder jumper open
+net tie solder jumper bridged
 0
 2
 2
 Jumper
 SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm
 SMD Solder Jumper, 1x1.5mm Pads, 0.3mm gap, bridged with 1 copper strip
-solder jumper open
+net tie solder jumper bridged
 0
 2
 2
 Jumper
 SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm
 SMD Solder Jumper, 1x1.5mm, rounded Pads, 0.3mm gap, bridged with 1 copper strip
-solder jumper open
+net tie solder jumper bridged
 0
 2
 2
@@ -55358,56 +55442,56 @@ solder jumper open
 Jumper
 SolderJumper-3_P1.3mm_Bridged2Bar12_Pad1.0x1.5mm
 SMD Solder 3-pad Jumper, 1x1.5mm Pads, 0.3mm gap, pads 1-2 Bridged2Bar with 2 copper strip
-solder jumper open
+net tie solder jumper bridged
 0
 3
 3
 Jumper
 SolderJumper-3_P1.3mm_Bridged2Bar12_Pad1.0x1.5mm_NumberLabels
 SMD Solder Jumper, 1x1.5mm Pads, 0.3mm gap, pads 1-2 Bridged2Bar with 2 copper strip, labeled with numbers
-solder jumper open
+net tie solder jumper bridged
 0
 3
 3
 Jumper
 SolderJumper-3_P1.3mm_Bridged2Bar12_RoundedPad1.0x1.5mm
 SMD Solder 3-pad Jumper, 1x1.5mm rounded Pads, 0.3mm gap, pads 1-2 Bridged2Bar with 2 copper strip
-solder jumper open
+net tie solder jumper bridged
 0
 3
 3
 Jumper
 SolderJumper-3_P1.3mm_Bridged2Bar12_RoundedPad1.0x1.5mm_NumberLabels
 SMD Solder 3-pad Jumper, 1x1.5mm rounded Pads, 0.3mm gap, pads 1-2 Bridged2Bar with 2 copper strip, labeled with numbers
-solder jumper open
+net tie solder jumper bridged
 0
 3
 3
 Jumper
 SolderJumper-3_P1.3mm_Bridged12_Pad1.0x1.5mm
 SMD Solder 3-pad Jumper, 1x1.5mm Pads, 0.3mm gap, pads 1-2 bridged with 1 copper strip
-solder jumper open
+net tie solder jumper bridged
 0
 3
 3
 Jumper
 SolderJumper-3_P1.3mm_Bridged12_Pad1.0x1.5mm_NumberLabels
 SMD Solder Jumper, 1x1.5mm Pads, 0.3mm gap, pads 1-2 bridged with 1 copper strip, labeled with numbers
-solder jumper open
+net tie solder jumper bridged
 0
 3
 3
 Jumper
 SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm
 SMD Solder 3-pad Jumper, 1x1.5mm rounded Pads, 0.3mm gap, pads 1-2 bridged with 1 copper strip
-solder jumper open
+net tie solder jumper bridged
 0
 3
 3
 Jumper
 SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm_NumberLabels
 SMD Solder 3-pad Jumper, 1x1.5mm rounded Pads, 0.3mm gap, pads 1-2 bridged with 1 copper strip, labeled with numbers
-solder jumper open
+net tie solder jumper bridged
 0
 3
 3
@@ -55629,6 +55713,13 @@ LED Avago PLCC-6 ASMT-YTB7-0AA02
 6
 6
 LED_SMD
+LED_CSP_Samsung_LH181B_2.36x2.36mm
+High Power CSP LED, 2.36mm x 2.36mm, 1.4A max, https://cdn.samsung.com/led/file/resource/2021/01/Data_Sheet_LH181B_Rev.4.0.pdf
+LED Samsung LH181B
+0
+2
+2
+LED_SMD
 LED_Cree-PLCC4_2x2mm_CW
 2.0mm x 2.0mm PLCC4 LED, http://www.cree.com/~/media/Files/Cree/LED-Components-and-Modules/HB/Data-Sheets/CLMVBFKA.pdf
 LED Cree PLCC-4
@@ -55789,6 +55880,13 @@ LED RGB
 0
 4
 4
+LED_SMD
+LED_Luminus_MP-3030-1100_3.0x3.0mm
+Mid Power LED, Luminus MP-3030-1100, 3.0x3.0mm, 816mW, https://download.luminus.com/datasheets/Luminus_MP3030_1100_Datasheet.pdf
+LED Luminus MP-3030-1100
+0
+5
+2
 LED_SMD
 LED_Osram_Lx_P47F_D2mm_ReverseMount
 OSRAM, reverse-mount LED, SMD, 2mm diameter, http://www.farnell.com/datasheets/2711587.pdf
@@ -59059,13 +59157,6 @@ Mounting 4.5mm 9774100982
 8
 1
 NB3_body
-Barrel_Jack_PJ-036AH-SMT-TR
-CUI 2.0 mm surface mount barrel jack
-
-0
-3
-3
-NB3_body
 Logo_LBB_25mm
 
 
@@ -59087,40 +59178,12 @@ Logo_VK_15mm
 0
 0
 NB3_body
-NMOS_SMD_SI3410DV-T1-GE3
+Socket_SM06B-SRSS-TB
 
 
 0
-6
-6
-NB3_body
-NiMH_Charger_LTC4010
-
-
-0
-17
-17
-NB3_body
-PMOS_SMD_FDC658AP
-
-
-0
-6
-6
-NB3_body
-SMD_AA_Clip_Keystone_53TR
-
-
-0
-2
-2
-NB3_body
-Schottky_PMEG3050EP,115
-
-
-0
-2
-2
+8
+8
 NB3_body
 Standoff_SMT_5H_M2.5_9774050151R
 9774050151R-2
@@ -59128,20 +59191,6 @@ Hardware
 0
 2
 1
-NB3_body
-Switch_SPDT_SMD_Slide_JS102011JCQN
-
-
-0
-3
-3
-NB3_body
-Voltage_Regulator_AP64501
-SOIC, 8 Pin (http://www.ti.com/lit/ds/symlink/lm5017.pdf#page=31), generated with kicad-footprint-generator ipc_gullwing_generator.py
-SOIC SO
-0
-23
-9
 NetTie
 NetTie-2_SMD_Pad0.5mm
 Net tie, 2 pin, 0.5mm square SMD pads
@@ -61334,6 +61383,20 @@ LFCSP NoLead
 59
 33
 Package_CSP
+LFCSP-32-1EP_5x5mm_P0.5mm_EP3.6x3.6mm
+LFCSP, 32 Pin (https://www.analog.com/media/en/technical-documentation/data-sheets/ADV7280.PDF#page=28), generated with kicad-footprint-generator ipc_noLead_generator.py
+LFCSP NoLead
+0
+37
+33
+Package_CSP
+LFCSP-32-1EP_5x5mm_P0.5mm_EP3.6x3.6mm_ThermalVias
+LFCSP, 32 Pin (https://www.analog.com/media/en/technical-documentation/data-sheets/ADV7280.PDF#page=28), generated with kicad-footprint-generator ipc_noLead_generator.py
+LFCSP NoLead
+0
+47
+33
+Package_CSP
 LFCSP-32-1EP_5x5mm_P0.5mm_EP3.25x3.25mm
 32-Lead Frame Chip Scale Package LFCSP (5mm x 5mm); (see http://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/lfcspcp/cp-32/CP_32_27.pdf
 LFCSP 0.5
@@ -61922,6 +61985,13 @@ DFN NoLead
 13
 9
 Package_DFN_QFN
+DFN-8-1EP_2x2mm_P0.5mm_EP0.8x1.6mm
+DFN, 8 Pin (https://www.qorvo.com/products/d/da007268), generated with kicad-footprint-generator ipc_noLead_generator.py
+DFN NoLead
+0
+10
+9
+Package_DFN_QFN
 DFN-8-1EP_2x2mm_P0.5mm_EP0.9x1.3mm
 DFN, 8 Pin (https://www.onsemi.com/pub/Collateral/NB3N551-D.PDF#page=7), generated with kicad-footprint-generator ipc_noLead_generator.py
 DFN NoLead
@@ -62328,6 +62398,13 @@ HVQFN NoLead
 21
 17
 Package_DFN_QFN
+HVQFN-24-1EP_4x4mm_P0.5mm_EP2.1x2.1mm
+HVQFN, 24 Pin (https://www.nxp.com/docs/en/package-information/SOT616-1.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
+HVQFN NoLead
+0
+34
+25
+Package_DFN_QFN
 HVQFN-24-1EP_4x4mm_P0.5mm_EP2.5x2.5mm
 HVQFN, 24 Pin (https://www.nxp.com/docs/en/package-information/SOT616-3.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
 HVQFN NoLead
@@ -62488,6 +62565,20 @@ MLPQ- 0.65
 0
 21
 17
+Package_DFN_QFN
+Micrel_MLF-8-1EP_2x2mm_P0.5mm_EP0.6x1.2mm
+Micrel  MLF, 8 Pin (http://ww1.microchip.com/downloads/en/DeviceDoc/mic23050.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
+Micrel MLF NoLead
+0
+11
+9
+Package_DFN_QFN
+Micrel_MLF-8-1EP_2x2mm_P0.5mm_EP0.6x1.2mm_ThermalVias
+Micrel  MLF, 8 Pin (http://ww1.microchip.com/downloads/en/DeviceDoc/mic23050.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
+Micrel MLF NoLead
+0
+16
+9
 Package_DFN_QFN
 Micrel_MLF-8-1EP_2x2mm_P0.5mm_EP0.8x1.3mm_ThermalVias
 http://ww1.microchip.com/downloads/en/DeviceDoc/mic2290.pdf
@@ -65212,6 +65303,20 @@ VQFN NoLead
 66
 47
 Package_DFN_QFN
+VQFN-48-1EP_6x6mm_P0.4mm_EP4.1x4.1mm
+VQFN, 48 Pin (http://ww1.microchip.com/downloads/en/DeviceDoc/48L_VQFN_6x6mm_6LX_C04-00494a.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
+VQFN NoLead
+0
+58
+49
+Package_DFN_QFN
+VQFN-48-1EP_6x6mm_P0.4mm_EP4.1x4.1mm_ThermalVias
+VQFN, 48 Pin (http://ww1.microchip.com/downloads/en/DeviceDoc/48L_VQFN_6x6mm_6LX_C04-00494a.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
+VQFN NoLead
+0
+75
+49
+Package_DFN_QFN
 VQFN-48-1EP_7x7mm_P0.5mm_EP4.1x4.1mm
 VQFN, 48 Pin (http://www.ti.com/lit/ds/symlink/cc430f5137.pdf#page=128), generated with kicad-footprint-generator ipc_noLead_generator.py
 VQFN NoLead
@@ -65252,6 +65357,20 @@ VQFN, 64 Pin (http://ww1.microchip.com/downloads/en/DeviceDoc/PIC16LF19195-6-7-D
 VQFN NoLead
 0
 100
+65
+Package_DFN_QFN
+VQFN-64-1EP_9x9mm_P0.5mm_EP7.15x7.15mm
+VQFN, 64 Pin (http://ww1.microchip.com/downloads/en/DeviceDoc/64L_QFN_9x9_MR_C04-00149e.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
+VQFN NoLead
+0
+74
+65
+Package_DFN_QFN
+VQFN-64-1EP_9x9mm_P0.5mm_EP7.15x7.15mm_ThermalVias
+VQFN, 64 Pin (http://ww1.microchip.com/downloads/en/DeviceDoc/64L_QFN_9x9_MR_C04-00149e.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
+VQFN NoLead
+0
+91
 65
 Package_DFN_QFN
 WDFN-6-2EP_4.0x2.6mm_P0.65mm
@@ -67633,6 +67752,13 @@ Texas MicroSiP NoLead
 0
 18
 11
+Package_LGA
+VLGA-4_2x2.5mm_P1.65mm
+VLGA, 4 Pin (https://ww1.microchip.com/downloads/en/DeviceDoc/DSC60XX-Ultra-Small-Ultra-Low-Power-MEMS-Oscillator-DS20005625C.pdf), generated with kicad-footprint-generator ipc_noLead_generator.py
+VLGA NoLead
+0
+4
+4
 Package_QFP
 EQFP-144-1EP_20x20mm_P0.5mm_EP4x4mm
 EQFP, 144 Pin (https://www.intel.com/content/dam/www/programmable/us/en/pdfs/literature/packaging/04r00482-02.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
@@ -67934,6 +68060,13 @@ MQFP QFP
 0
 44
 44
+Package_QFP
+PQFP-32_5x5mm_P0.5mm
+PQFP, 32 Pin (https://www.ti.com/lit/ds/symlink/ads127l01.pdf#page=87), generated with kicad-footprint-generator ipc_gullwing_generator.py
+PQFP QFP
+0
+32
+32
 Package_QFP
 PQFP-44_10x10mm_P0.8mm
 44-Lead Plastic Quad Flatpack - 10x10x2.5mm Body (http://www.onsemi.com/pub/Collateral/122BK.PDF)
@@ -68481,6 +68614,13 @@ HTSSOP SO
 21
 17
 Package_SO
+HTSSOP-20-1EP_4.4x6.5mm_P0.65mm_EP2.74x3.86mm
+HTSSOP, 20 Pin (https://www.analog.com/media/en/technical-documentation/data-sheets/4011fb.pdf#page=24), generated with kicad-footprint-generator ipc_gullwing_generator.py
+HTSSOP SO
+0
+23
+21
+Package_SO
 HTSSOP-20-1EP_4.4x6.5mm_P0.65mm_EP2.85x4mm
 HTSSOP, 20 Pin (https://pdfserv.maximintegrated.com/package_dwgs/21-0108.PDF U20E-1), generated with kicad-footprint-generator ipc_gullwing_generator.py
 HTSSOP SO
@@ -68878,6 +69018,20 @@ MSOP, 10 Pin (www.allegromicro.com/~/media/Files/Datasheets/A4952-3-Datasheet.as
 MSOP SO
 0
 20
+11
+Package_SO
+MSOP-10-1EP_3x3mm_P0.5mm_EP2.2x3.1mm_Mask1.83x1.89mm
+MSOP, 10 Pin (https://www.ti.com/lit/ds/symlink/xtr111.pdf#page=27), generated with kicad-footprint-generator ipc_gullwing_generator.py
+MSOP SO
+0
+16
+11
+Package_SO
+MSOP-10-1EP_3x3mm_P0.5mm_EP2.2x3.1mm_Mask1.83x1.89mm_ThermalVias
+MSOP, 10 Pin (https://www.ti.com/lit/ds/symlink/xtr111.pdf#page=27), generated with kicad-footprint-generator ipc_gullwing_generator.py
+MSOP SO
+0
+23
 11
 Package_SO
 MSOP-10_3x3mm_P0.5mm
@@ -70028,6 +70182,13 @@ SSOP 0.65
 36
 29
 Package_SO
+TSSOP-28-1EP_4.4x9.7mm_P0.65mm_EP2.85x6.7mm
+TSSOP, 28 Pin (JEDEC MO-153 Var AET Pkg.Code U28E-4 https://pdfserv.maximintegrated.com/package_dwgs/21-0108.PDF), generated with kicad-footprint-generator ipc_gullwing_generator.py
+TSSOP SO
+0
+35
+29
+Package_SO
 TSSOP-28_4.4x7.8mm_P0.5mm
 TSSOP, 28 Pin (JEDEC MO-153 Var BC https://www.jedec.org/document_search?search_api_views_fulltext=MO-153), generated with kicad-footprint-generator ipc_gullwing_generator.py
 TSSOP SO
@@ -71170,8 +71331,8 @@ SC-82AB
 4
 Package_TO_SOT_SMD
 SOT-23
-SOT-23, Standard
-SOT-23
+SOT, 3 Pin (https://www.jedec.org/system/files/docs/to-236h.pdf variant AB), generated with kicad-footprint-generator ipc_gullwing_generator.py
+SOT TO_SOT_SMD
 0
 3
 3
@@ -74964,7 +75125,7 @@ Wi-Fi Module
 22
 RF_Module
 ESP-WROOM-02
-http://espressif.com/sites/default/files/documentation/0c-esp-wroom-02_datasheet_en.pdf
+https://www.espressif.com/sites/default/files/documentation/0c-esp-wroom-02_datasheet_en.pdf
 ESP WROOM-02 espressif esp8266ex
 0
 19
@@ -75389,6 +75550,13 @@ WiFi IEEE802.11 b/g/n
 0
 44
 44
+Relay_SMD
+Relay_2P2T_10x6mm_TE_IMxxG
+Signal Relay, 10x6mm, 2 Form C, Gull Wings, https://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Data+Sheet%7F108-98001%7FZ.1%7Fpdf%7FEnglish%7FENG_DS_108-98001_Z.1.pdf
+TE IM-Series Relay DPDT Form C
+0
+8
+8
 Relay_SMD
 Relay_DPDT_AXICOM_IMSeries_JLeg
 http://www.te.com/commerce/DocumentDelivery/DDEController?Action=showdoc&DocId=Specification+Or+Standard%7F108-98001%7FW5%7Fpdf%7FEnglish%7FENG_SS_108-98001_W5.pdf
