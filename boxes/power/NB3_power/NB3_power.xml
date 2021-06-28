@@ -1,0 +1,882 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/home/kampff/NoBlackBoxes/repos/LastBlackBox/boxes/power/NB3_power/NB3_power.kicad_sch</source>
+    <date>Mon 28 Jun 2021 10:56:07 BST</date>
+    <tool>Eeschema (5.99.0-11065-g2a3d8e22b6)</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>NB3 Power Board</title>
+        <company>Voight-Kampff</company>
+        <rev>0.0.1</rev>
+        <date>2021-06-25</date>
+        <source>NB3_power.kicad_sch</source>
+        <comment number="1" value="NoBlackBoxes: NB3 power source"/>
+        <comment number="2" value="5V/5A power source for RPi, sensors, and motors"/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>10uF 35v</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://www.murata.com/en-global/products/productdetail.aspx?partno=GRM21BC8YA106ME11%23</datasheet>
+      <fields>
+        <field name="Field4">Digikey</field>
+        <field name="Field5">490-10505-1-ND</field>
+        <field name="Field6">GRM21BC8YA106KE11L </field>
+        <field name="Field7">Murata</field>
+        <field name="Part Description">	10uF 10% or 20% 35V Ceramic Capacitor X6S 0805 (2012 Metric)</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Field5" value="490-10505-1-ND"/>
+      <property name="Field4" value="Digikey"/>
+      <property name="Field6" value="GRM21BC8YA106KE11L "/>
+      <property name="Field7" value="Murata"/>
+      <property name="Part Description" value="&#x9;10uF 10% or 20% 35V Ceramic Capacitor X6S 0805 (2012 Metric)"/>
+      <property name="Field8" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="NB3_power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>42a7f088-40b8-466c-81dc-9243d3782e62</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>10uF 35v</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://www.murata.com/en-global/products/productdetail.aspx?partno=GRM21BC8YA106ME11%23</datasheet>
+      <fields>
+        <field name="Field4">Digikey</field>
+        <field name="Field5">490-10505-1-ND</field>
+        <field name="Field6">GRM21BC8YA106KE11L </field>
+        <field name="Field7">Murata</field>
+        <field name="Part Description">	10uF 10% or 20% 35V Ceramic Capacitor X6S 0805 (2012 Metric)</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Field5" value="490-10505-1-ND"/>
+      <property name="Field4" value="Digikey"/>
+      <property name="Field6" value="GRM21BC8YA106KE11L "/>
+      <property name="Field7" value="Murata"/>
+      <property name="Part Description" value="&#x9;10uF 10% or 20% 35V Ceramic Capacitor X6S 0805 (2012 Metric)"/>
+      <property name="Field8" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="NB3_power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0b7a3ba3-1fcb-41c1-bd53-083c060a96a8</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>10uF 35v</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://www.murata.com/en-global/products/productdetail.aspx?partno=GRM21BC8YA106ME11%23</datasheet>
+      <fields>
+        <field name="Field4">Digikey</field>
+        <field name="Field5">490-10505-1-ND</field>
+        <field name="Field6">GRM21BC8YA106KE11L </field>
+        <field name="Field7">Murata</field>
+        <field name="Part Description">	10uF 10% or 20% 35V Ceramic Capacitor X6S 0805 (2012 Metric)</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Field5" value="490-10505-1-ND"/>
+      <property name="Field4" value="Digikey"/>
+      <property name="Field6" value="GRM21BC8YA106KE11L "/>
+      <property name="Field7" value="Murata"/>
+      <property name="Part Description" value="&#x9;10uF 10% or 20% 35V Ceramic Capacitor X6S 0805 (2012 Metric)"/>
+      <property name="Field8" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="NB3_power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e4b93cf4-da1c-451c-aad9-b372c11e6a5f</tstamps>
+    </comp>
+    <comp ref="C4">
+      <value>10uF 35v</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://www.murata.com/en-global/products/productdetail.aspx?partno=GRM21BC8YA106ME11%23</datasheet>
+      <fields>
+        <field name="Field4">Digikey</field>
+        <field name="Field5">490-10505-1-ND</field>
+        <field name="Field6">GRM21BC8YA106KE11L </field>
+        <field name="Field7">Murata</field>
+        <field name="Part Description">	10uF 10% or 20% 35V Ceramic Capacitor X6S 0805 (2012 Metric)</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Field5" value="490-10505-1-ND"/>
+      <property name="Field4" value="Digikey"/>
+      <property name="Field6" value="GRM21BC8YA106KE11L "/>
+      <property name="Field7" value="Murata"/>
+      <property name="Part Description" value="&#x9;10uF 10% or 20% 35V Ceramic Capacitor X6S 0805 (2012 Metric)"/>
+      <property name="Field8" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="NB3_power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c712ead4-ab75-4f2d-b96d-4209be08d4c0</tstamps>
+    </comp>
+    <comp ref="C5">
+      <value>10uF 35v</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://www.murata.com/en-global/products/productdetail.aspx?partno=GRM21BC8YA106ME11%23</datasheet>
+      <fields>
+        <field name="Field4">Digikey</field>
+        <field name="Field5">490-10505-1-ND</field>
+        <field name="Field6">GRM21BC8YA106KE11L </field>
+        <field name="Field7">Murata</field>
+        <field name="Part Description">	10uF 10% or 20% 35V Ceramic Capacitor X6S 0805 (2012 Metric)</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Field5" value="490-10505-1-ND"/>
+      <property name="Field4" value="Digikey"/>
+      <property name="Field6" value="GRM21BC8YA106KE11L "/>
+      <property name="Field7" value="Murata"/>
+      <property name="Part Description" value="&#x9;10uF 10% or 20% 35V Ceramic Capacitor X6S 0805 (2012 Metric)"/>
+      <property name="Field8" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="NB3_power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e73a0f25-b027-494f-8900-f0bde844f16f</tstamps>
+    </comp>
+    <comp ref="C6">
+      <value>10uF 35v</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://www.murata.com/en-global/products/productdetail.aspx?partno=GRM21BC8YA106ME11%23</datasheet>
+      <fields>
+        <field name="Field4">Digikey</field>
+        <field name="Field5">490-10505-1-ND</field>
+        <field name="Field6">GRM21BC8YA106KE11L </field>
+        <field name="Field7">Murata</field>
+        <field name="Part Description">	10uF 10% or 20% 35V Ceramic Capacitor X6S 0805 (2012 Metric)</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Field5" value="490-10505-1-ND"/>
+      <property name="Field4" value="Digikey"/>
+      <property name="Field6" value="GRM21BC8YA106KE11L "/>
+      <property name="Field7" value="Murata"/>
+      <property name="Part Description" value="&#x9;10uF 10% or 20% 35V Ceramic Capacitor X6S 0805 (2012 Metric)"/>
+      <property name="Field8" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="NB3_power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d7165701-4c4e-4a0d-831e-4970b8f03515</tstamps>
+    </comp>
+    <comp ref="C7">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM155R71C104KA88-01.pdf</datasheet>
+      <fields>
+        <field name="Field4">Farnell</field>
+        <field name="Field5">2611911</field>
+        <field name="Field6">RM EMK105 B7104KV-F</field>
+        <field name="Field7">TAIYO YUDEN EUROPE GMBH</field>
+        <field name="Field8">110091611</field>
+        <field name="Part Description">	0.1uF 10% 16V Ceramic Capacitor X7R 0402 (1005 Metric)</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Field4" value="Farnell"/>
+      <property name="Field5" value="2611911"/>
+      <property name="Field6" value="RM EMK105 B7104KV-F"/>
+      <property name="Field7" value="TAIYO YUDEN EUROPE GMBH"/>
+      <property name="Part Description" value="&#x9;0.1uF 10% 16V Ceramic Capacitor X7R 0402 (1005 Metric)"/>
+      <property name="Field8" value="110091611"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="NB3_power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>e5e48bcf-7958-44c2-8185-2b96686cb8b9</tstamps>
+    </comp>
+    <comp ref="C8">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM155R71C104KA88-01.pdf</datasheet>
+      <fields>
+        <field name="Field4">Farnell</field>
+        <field name="Field5">2611911</field>
+        <field name="Field6">RM EMK105 B7104KV-F</field>
+        <field name="Field7">TAIYO YUDEN EUROPE GMBH</field>
+        <field name="Field8">110091611</field>
+        <field name="Part Description">	0.1uF 10% 16V Ceramic Capacitor X7R 0402 (1005 Metric)</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Field4" value="Farnell"/>
+      <property name="Field5" value="2611911"/>
+      <property name="Field6" value="RM EMK105 B7104KV-F"/>
+      <property name="Field7" value="TAIYO YUDEN EUROPE GMBH"/>
+      <property name="Part Description" value="&#x9;0.1uF 10% 16V Ceramic Capacitor X7R 0402 (1005 Metric)"/>
+      <property name="Field8" value="110091611"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="NB3_power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>57ecd155-b74f-49cd-a809-d78b581e7cc5</tstamps>
+    </comp>
+    <comp ref="C9">
+      <value>1nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Field4" value=""/>
+      <property name="Field5" value=""/>
+      <property name="Field6" value=""/>
+      <property name="Field7" value=""/>
+      <property name="Part Description" value=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="NB3_power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9c0847cc-5c9e-413d-8031-d7900d75c734</tstamps>
+    </comp>
+    <comp ref="C10">
+      <value>1.2nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>http://www.farnell.com/datasheets/2734135.pdf?_ga=2.259347658.1738794919.1588350964-1787849031.1568210898&amp;_gac=1.15394434.1588350964.EAIaIQobChMIgrHHs4yT6QIVxevtCh39TA_nEAAYASAAEgK8PfD_BwE</datasheet>
+      <fields>
+        <field name="Field4">Digikey</field>
+        <field name="Field5">490-16429-1-ND</field>
+        <field name="Field6">GCM155R71H122KA37D</field>
+        <field name="Field7">Murata</field>
+        <field name="Part Description">1200pF 10% 10V Ceramic Capacitor X5R 0402 (1005 Metric)</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Field4" value="Digikey"/>
+      <property name="Field5" value="490-16429-1-ND"/>
+      <property name="Field6" value="GCM155R71H122KA37D"/>
+      <property name="Field7" value="Murata"/>
+      <property name="Part Description" value="1200pF 10% 10V Ceramic Capacitor X5R 0402 (1005 Metric)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="NB3_power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>31ef1a4c-139c-46b0-a208-e02c8582b05c</tstamps>
+    </comp>
+    <comp ref="C11">
+      <value>1nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>http://www.farnell.com/datasheets/2048267.pdf?_ga=2.222777691.1738794919.1588350964-1787849031.1568210898&amp;_gac=1.250356018.1588350964.EAIaIQobChMIgrHHs4yT6QIVxevtCh39TA_nEAAYASAAEgK8PfD_BwE</datasheet>
+      <fields>
+        <field name="Field4">Farnell</field>
+        <field name="Field5">2666374</field>
+        <field name="Field6">GRM1555C1H221JA01D</field>
+        <field name="Field7">Murata</field>
+        <field name="Part Description">220 pF, 50 V, 0402 [1005 Metric], ± 5%, C0G / NP0/CH, GCM Series</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Field4" value="Farnell"/>
+      <property name="Field5" value="2666374"/>
+      <property name="Field6" value="GRM1555C1H221JA01D"/>
+      <property name="Field7" value="Murata"/>
+      <property name="Part Description" value="220 pF, 50 V, 0402 [1005 Metric], ± 5%, C0G / NP0/CH, GCM Series"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="NB3_power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>92570834-6f41-4e20-bf85-a73c24068368</tstamps>
+    </comp>
+    <comp ref="C12">
+      <value>10uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71A106KA73-01.pdf</datasheet>
+      <fields>
+        <field name="Field4">Digikey</field>
+        <field name="Field5">490-14381-1-ND</field>
+        <field name="Field6">GRM21BR71A106KA73L</field>
+        <field name="Field7">Murata</field>
+        <field name="Field8">111893011</field>
+        <field name="Part Description">	10uF 10% 10V Ceramic Capacitor X7R 0805 (2012 Metric)</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Field5" value="490-14381-1-ND"/>
+      <property name="Field4" value="Digikey"/>
+      <property name="Field6" value="GRM21BR71A106KA73L"/>
+      <property name="Field7" value="Murata"/>
+      <property name="Part Description" value="&#x9;10uF 10% 10V Ceramic Capacitor X7R 0805 (2012 Metric)"/>
+      <property name="Field8" value="111893011"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="NB3_power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8522b0d2-e35b-41e2-b83b-2359a7f244f1</tstamps>
+    </comp>
+    <comp ref="C13">
+      <value>10uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71A106KA73-01.pdf</datasheet>
+      <fields>
+        <field name="Field4">Digikey</field>
+        <field name="Field5">490-14381-1-ND</field>
+        <field name="Field6">GRM21BR71A106KA73L</field>
+        <field name="Field7">Murata</field>
+        <field name="Field8">111893011</field>
+        <field name="Part Description">	10uF 10% 10V Ceramic Capacitor X7R 0805 (2012 Metric)</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Field5" value="490-14381-1-ND"/>
+      <property name="Field4" value="Digikey"/>
+      <property name="Field6" value="GRM21BR71A106KA73L"/>
+      <property name="Field7" value="Murata"/>
+      <property name="Part Description" value="&#x9;10uF 10% 10V Ceramic Capacitor X7R 0805 (2012 Metric)"/>
+      <property name="Field8" value="111893011"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="NB3_power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6660f45c-5a2e-4fca-b622-a320c16b78cd</tstamps>
+    </comp>
+    <comp ref="C14">
+      <value>10uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71A106KA73-01.pdf</datasheet>
+      <fields>
+        <field name="Field4">Digikey</field>
+        <field name="Field5">490-14381-1-ND</field>
+        <field name="Field6">GRM21BR71A106KA73L</field>
+        <field name="Field7">Murata</field>
+        <field name="Field8">111893011</field>
+        <field name="Part Description">	10uF 10% 10V Ceramic Capacitor X7R 0805 (2012 Metric)</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Field5" value="490-14381-1-ND"/>
+      <property name="Field4" value="Digikey"/>
+      <property name="Field6" value="GRM21BR71A106KA73L"/>
+      <property name="Field7" value="Murata"/>
+      <property name="Part Description" value="&#x9;10uF 10% 10V Ceramic Capacitor X7R 0805 (2012 Metric)"/>
+      <property name="Field8" value="111893011"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="NB3_power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>849771dd-bdbf-49e1-b9e5-c9acf3f023b0</tstamps>
+    </comp>
+    <comp ref="C15">
+      <value>10uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71A106KA73-01.pdf</datasheet>
+      <fields>
+        <field name="Field4">Digikey</field>
+        <field name="Field5">490-14381-1-ND</field>
+        <field name="Field6">GRM21BR71A106KA73L</field>
+        <field name="Field7">Murata</field>
+        <field name="Field8">111893011</field>
+        <field name="Part Description">	10uF 10% 10V Ceramic Capacitor X7R 0805 (2012 Metric)</field>
+      </fields>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Field5" value="490-14381-1-ND"/>
+      <property name="Field4" value="Digikey"/>
+      <property name="Field6" value="GRM21BR71A106KA73L"/>
+      <property name="Field7" value="Murata"/>
+      <property name="Part Description" value="&#x9;10uF 10% 10V Ceramic Capacitor X7R 0805 (2012 Metric)"/>
+      <property name="Field8" value="111893011"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="NB3_power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fbbb9224-f882-4520-9fc8-25082bac17b1</tstamps>
+    </comp>
+    <comp ref="C16">
+      <value>100uF</value>
+      <footprint>Capacitor_Tantalum_SMD:CP_EIA-7343-31_Kemet-D</footprint>
+      <libsource lib="Device" part="C_Polarized" description="Polarized capacitor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="NB3_power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>73dcf4ae-4adf-47cf-9abc-4021ba6987c8</tstamps>
+    </comp>
+    <comp ref="D1">
+      <value>LED</value>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="NB3_power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005f87459f</tstamps>
+    </comp>
+    <comp ref="D2">
+      <value>LED</value>
+      <footprint>LED_SMD:LED_0603_1608Metric</footprint>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="NB3_power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4e3ca639-512d-4aa0-b4b6-e1f8238c28ec</tstamps>
+    </comp>
+    <comp ref="H1">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_2.7mm_M2.5_ISO7380_Pad</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="NB3_power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>39250da4-c637-43ee-a483-1f32947514fb</tstamps>
+    </comp>
+    <comp ref="H2">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_2.7mm_M2.5_ISO7380_Pad</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="NB3_power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d844c34c-e2c8-4848-ae50-4dcab21ac5e5</tstamps>
+    </comp>
+    <comp ref="H3">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_2.7mm_M2.5_ISO7380_Pad</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="NB3_power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9ec8c106-a940-450a-aef2-47581c8a41cb</tstamps>
+    </comp>
+    <comp ref="H4">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_2.7mm_M2.5_ISO7380_Pad</footprint>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="NB3_power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c45a5e6e-706a-45f1-934b-74a3f628172c</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>Barrel_Jack_PJ-036AH-SMT-TR</value>
+      <footprint>NB3_power:Barrel_Jack_PJ-036AH-SMT-TR</footprint>
+      <datasheet>Barrel_Jack_PJ-036AH-SMT-TR</datasheet>
+      <fields>
+        <field name="Description">2.0 x 6.3 mm, 5.0 A, Horizontal, Surface Mount _SMT_, Dc Power Jack Connector</field>
+        <field name="Mouser Part Number">490-PJ-036AH-SMT-TR</field>
+      </fields>
+      <libsource lib="NB3_power" part="Barrel_Jack_PJ-036AH-SMT-TR" description=""/>
+      <property name="Description" value="2.0 x 6.3 mm, 5.0 A, Horizontal, Surface Mount _SMT_, Dc Power Jack Connector"/>
+      <property name="Mouser Part Number" value="490-PJ-036AH-SMT-TR"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="NB3_power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005f7a690e</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>Conn_01x04_Male</value>
+      <footprint>NB3_power:PinHeader_TSM-104-01-L-SH</footprint>
+      <libsource lib="Connector" part="Conn_01x04_Male" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="NB3_power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005f7c6cde</tstamps>
+    </comp>
+    <comp ref="L1">
+      <value>SRN6045TA-2R2Y</value>
+      <footprint>Inductor_SMD:L_Bourns_SRN6045TA</footprint>
+      <datasheet>https://www.bourns.com/docs/Product-Datasheets/SRN6045TA.pdf</datasheet>
+      <fields>
+        <field name="Field4">Farnell</field>
+        <field name="Field5">2616889</field>
+        <field name="Field6">SRN6045TA-3R3Y</field>
+        <field name="Field7">Bourns</field>
+        <field name="Part Description">3.3µH Semi-Shielded Wirewound Inductor 7.8A 21mOhm Nonstandard</field>
+      </fields>
+      <libsource lib="pspice" part="INDUCTOR" description="Inductor symbol for simulation only"/>
+      <property name="Field4" value="Farnell"/>
+      <property name="Field5" value="2616889"/>
+      <property name="Field6" value="SRN6045TA-3R3Y"/>
+      <property name="Field7" value="Bourns"/>
+      <property name="Part Description" value="3.3µH Semi-Shielded Wirewound Inductor 7.8A 21mOhm Nonstandard"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="NB3_power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>32147c9a-74a8-45c4-9424-358946dc4fbc</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>5.6k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="NB3_power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>00000000-0000-0000-0000-00005f8745a5</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>10R</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://fscdn.rohm.com/en/products/databook/datasheet/passive/resistor/chip_resistor/mcr-e.pdf</datasheet>
+      <fields>
+        <field name="Field4">Farnell</field>
+        <field name="Field5">9238999</field>
+        <field name="Field6">RC0402FR-0710RL</field>
+        <field name="Field7">Yageo</field>
+        <field name="Field8">URES00256</field>
+        <field name="Part Description">Resistor 10R M1005 1% 63mW</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Field4" value="Farnell"/>
+      <property name="Field5" value="9238999"/>
+      <property name="Field7" value="Yageo"/>
+      <property name="Field6" value="RC0402FR-0710RL"/>
+      <property name="Field8" value="URES00256"/>
+      <property name="Part Description" value="Resistor 10R M1005 1% 63mW"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="NB3_power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4b61aa31-e714-47e8-905e-8b798ec84182</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>20K 1%</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://fscdn.rohm.com/en/products/databook/datasheet/passive/resistor/chip_resistor/mcr-e.pdf</datasheet>
+      <fields>
+        <field name="Field4">Farnell</field>
+        <field name="Field5">2331485</field>
+        <field name="Field6">RK73H1ETTP2002F</field>
+        <field name="Field7">KOA EUROPE GMBH</field>
+        <field name="Part Description">Resistor 20K M1005 1% 63mW</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Field4" value="Farnell"/>
+      <property name="Field5" value="2331485"/>
+      <property name="Field7" value="KOA EUROPE GMBH"/>
+      <property name="Field6" value="RK73H1ETTP2002F"/>
+      <property name="Part Description" value="Resistor 20K M1005 1% 63mW"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="NB3_power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5e24f9f4-2bed-4198-a8d8-22bfbe5869cc</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>12K 1%</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://fscdn.rohm.com/en/products/databook/datasheet/passive/resistor/chip_resistor/mcr-e.pdf</datasheet>
+      <fields>
+        <field name="Field4">Farnell</field>
+        <field name="Field5">9239367</field>
+        <field name="Field6">MCR01MZPF1202</field>
+        <field name="Field7">Rohm</field>
+        <field name="Part Description">Resistor 12K M1005 1% 63mW</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Field4" value="Farnell"/>
+      <property name="Field5" value="9239367"/>
+      <property name="Field7" value="Rohm"/>
+      <property name="Field6" value="MCR01MZPF1202"/>
+      <property name="Part Description" value="Resistor 12K M1005 1% 63mW"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="NB3_power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b35c8450-7187-4a8a-a2a3-f75e1689e496</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>2.2K 1%</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <datasheet>https://fscdn.rohm.com/en/products/databook/datasheet/passive/resistor/chip_resistor/mcr-e.pdf</datasheet>
+      <fields>
+        <field name="Field4">Farnell</field>
+        <field name="Field5">9239278</field>
+        <field name="Field6">RK73G1ETQTP2201D         </field>
+        <field name="Field7">KOA EUROPE GMBH</field>
+        <field name="Field8">120889581</field>
+        <field name="Part Description">Resistor 2.2K M1005 1% 63mW</field>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Field4" value="Farnell"/>
+      <property name="Field5" value="9239278"/>
+      <property name="Field6" value="RK73G1ETQTP2201D         "/>
+      <property name="Field7" value="KOA EUROPE GMBH"/>
+      <property name="Part Description" value="Resistor 2.2K M1005 1% 63mW"/>
+      <property name="Field8" value="120889581"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="NB3_power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>73badc23-2e2d-4fd2-9935-c03d5fc6e58d</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>1.4k</value>
+      <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="NB3_power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2e403d90-7fab-47d8-ab89-141b25f10cf6</tstamps>
+    </comp>
+    <comp ref="SW1">
+      <value>SW_SPDT</value>
+      <footprint>NB3_power:Switch_SPDT_SMD_Slide_JS102011JCQN</footprint>
+      <libsource lib="Switch" part="SW_SPDT" description="Switch, single pole double throw"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="NB3_power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0fb6342a-a252-4bab-bc79-41412af846b1</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>Voltage_Regulator_AP64501</value>
+      <footprint>NB3_power:Voltage_Regulator_AP64501</footprint>
+      <libsource lib="NB3_power" part="Voltage_Regulator_AP64501" description=""/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="NB3_power.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>910ff8f8-676d-4056-b652-ac0fa3292ab7</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="Conn_01x04_Male">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04_Male</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C_Polarized">
+      <description>Polarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Polarized</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Mechanical" part="MountingHole">
+      <description>Mounting Hole without connection</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>MountingHole*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">MountingHole</field>
+        <field name="Datasheet">~</field>
+      </fields>
+    </libpart>
+    <libpart lib="NB3_power" part="Barrel_Jack_PJ-036AH-SMT-TR">
+      <docs>Barrel_Jack_PJ-036AH-SMT-TR</docs>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Barrel_Jack_PJ-036AH-SMT-TR</field>
+        <field name="Footprint">NB3_power:Barrel_Jack_PJ-036AH-SMT-TR</field>
+        <field name="Datasheet">Barrel_Jack_PJ-036AH-SMT-TR</field>
+        <field name="Description">2.0 x 6.3 mm, 5.0 A, Horizontal, Surface Mount _SMT_, Dc Power Jack Connector</field>
+        <field name="Mouser Part Number">490-PJ-036AH-SMT-TR</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="NB3_power" part="Voltage_Regulator_AP64501">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">Voltage_Regulator_AP64501</field>
+        <field name="Footprint">NB3_power:Voltage_Regulator_AP64501</field>
+      </fields>
+      <pins>
+        <pin num="1" name="BST" type="passive"/>
+        <pin num="2" name="VIN" type="power_in"/>
+        <pin num="3" name="EN" type="input"/>
+        <pin num="4" name="SS" type="input"/>
+        <pin num="5" name="FB" type="input"/>
+        <pin num="6" name="COMP" type="input"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="SW" type="output"/>
+        <pin num="9" name="EP" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Switch" part="SW_SPDT">
+      <description>Switch, single pole double throw</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_SPDT</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="B" type="passive"/>
+        <pin num="3" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="pspice" part="INDUCTOR">
+      <description>Inductor symbol for simulation only</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">INDUCTOR</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="input"/>
+        <pin num="2" name="2" type="input"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>/usr/share/kicad-nightly/library//Connector.kicad_sym</uri>
+    </library>
+    <library logical="Device">
+      <uri>/usr/share/kicad-nightly/library//Device.kicad_sym</uri>
+    </library>
+    <library logical="Mechanical">
+      <uri>/usr/share/kicad-nightly/library//Mechanical.kicad_sym</uri>
+    </library>
+    <library logical="NB3_power">
+      <uri>/home/kampff/NoBlackBoxes/repos/LastBlackBox/boxes/power/NB3_power/libraries/NB3_power.kicad_sym</uri>
+    </library>
+    <library logical="Switch">
+      <uri>/usr/share/kicad-nightly/library//Switch.kicad_sym</uri>
+    </library>
+    <library logical="pspice">
+      <uri>/usr/share/kicad-nightly/library//pspice.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+5V">
+      <node ref="C11" pin="1" pintype="passive"/>
+      <node ref="C12" pin="1" pintype="passive"/>
+      <node ref="C13" pin="1" pintype="passive"/>
+      <node ref="C14" pin="1" pintype="passive"/>
+      <node ref="C15" pin="1" pintype="passive"/>
+      <node ref="C16" pin="1" pintype="passive"/>
+      <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J2" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="L1" pin="2" pinfunction="2" pintype="input"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+    </net>
+    <net code="2" name="+12V">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="C5" pin="1" pintype="passive"/>
+      <node ref="C6" pin="1" pintype="passive"/>
+      <node ref="D1" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="J1" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="SW1" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="VIN" pintype="power_in"/>
+    </net>
+    <net code="3" name="GND">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C10" pin="2" pintype="passive"/>
+      <node ref="C12" pin="2" pintype="passive"/>
+      <node ref="C13" pin="2" pintype="passive"/>
+      <node ref="C14" pin="2" pintype="passive"/>
+      <node ref="C15" pin="2" pintype="passive"/>
+      <node ref="C16" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="C5" pin="2" pintype="passive"/>
+      <node ref="C6" pin="2" pintype="passive"/>
+      <node ref="C8" pin="2" pintype="passive"/>
+      <node ref="C9" pin="2" pintype="passive"/>
+      <node ref="J1" pin="2" pinfunction="2" pintype="passive"/>
+      <node ref="J1" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="J2" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J2" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="SW1" pin="3" pinfunction="C" pintype="passive"/>
+      <node ref="U1" pin="7" pinfunction="GND" pintype="power_in"/>
+      <node ref="U1" pin="9" pinfunction="EP" pintype="passive"/>
+    </net>
+    <net code="4" name="Net-(C7-Pad1)">
+      <node ref="C7" pin="1" pintype="passive"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+    </net>
+    <net code="5" name="Net-(C7-Pad2)">
+      <node ref="C7" pin="2" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="BST" pintype="passive"/>
+    </net>
+    <net code="6" name="Net-(C8-Pad1)">
+      <node ref="C8" pin="1" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="SS" pintype="input"/>
+    </net>
+    <net code="7" name="Net-(C9-Pad1)">
+      <node ref="C9" pin="1" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="U1" pin="6" pinfunction="COMP" pintype="input"/>
+    </net>
+    <net code="8" name="Net-(C10-Pad1)">
+      <node ref="C10" pin="1" pintype="passive"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+    </net>
+    <net code="9" name="Net-(C11-Pad2)">
+      <node ref="C11" pin="2" pintype="passive"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="U1" pin="5" pinfunction="FB" pintype="input"/>
+    </net>
+    <net code="10" name="Net-(D1-Pad1)">
+      <node ref="D1" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+    </net>
+    <net code="11" name="Net-(D2-Pad1)">
+      <node ref="D2" pin="1" pinfunction="K" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+    </net>
+    <net code="12" name="Net-(L1-Pad1)">
+      <node ref="L1" pin="1" pinfunction="1" pintype="input"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="U1" pin="8" pinfunction="SW" pintype="output"/>
+    </net>
+    <net code="13" name="Net-(SW1-Pad2)">
+      <node ref="SW1" pin="2" pinfunction="B" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="EN" pintype="input"/>
+    </net>
+  </nets>
+</export>
