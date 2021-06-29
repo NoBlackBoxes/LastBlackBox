@@ -2,8 +2,8 @@
 <export version="E">
   <design>
     <source>/home/kampff/NoBlackBoxes/repos/LastBlackBox/boxes/power/NB3_power/NB3_power.kicad_sch</source>
-    <date>Mon 28 Jun 2021 10:56:07 BST</date>
-    <tool>Eeschema (5.99.0-11065-g2a3d8e22b6)</tool>
+    <date>Tue Jun 29 17:02:57 2021</date>
+    <tool>Eeschema (5.99.0-11105-gfb4343bc8f)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>NB3 Power Board</title>
@@ -374,7 +374,7 @@
       <tstamps>73dcf4ae-4adf-47cf-9abc-4021ba6987c8</tstamps>
     </comp>
     <comp ref="D1">
-      <value>LED</value>
+      <value>LED (Green)</value>
       <footprint>LED_SMD:LED_0603_1608Metric</footprint>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
       <property name="Sheetname" value=""/>
@@ -383,7 +383,7 @@
       <tstamps>00000000-0000-0000-0000-00005f87459f</tstamps>
     </comp>
     <comp ref="D2">
-      <value>LED</value>
+      <value>LED (Red)</value>
       <footprint>LED_SMD:LED_0603_1608Metric</footprint>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
       <property name="Sheetname" value=""/>
@@ -444,13 +444,13 @@
       <tstamps>00000000-0000-0000-0000-00005f7a690e</tstamps>
     </comp>
     <comp ref="J2">
-      <value>Conn_01x04_Male</value>
-      <footprint>NB3_power:PinHeader_TSM-104-01-L-SH</footprint>
-      <libsource lib="Connector" part="Conn_01x04_Male" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <value>Connector_S4B-PH-SM4-TB(LF)(SN)</value>
+      <footprint>NB3_power:Connector_S4B-PH-SM4-TB(LF)(SN)</footprint>
+      <libsource lib="NB3_power" part="Connector_S4B-PH-SM4-TB(LF)(SN)" description=""/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="NB3_power.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>00000000-0000-0000-0000-00005f7c6cde</tstamps>
+      <tstamps>ddf5b3ab-5704-4e10-8e98-e6581c198b1e</tstamps>
     </comp>
     <comp ref="L1">
       <value>SRN6045TA-2R2Y</value>
@@ -576,7 +576,7 @@
       <tstamps>73badc23-2e2d-4fd2-9935-c03d5fc6e58d</tstamps>
     </comp>
     <comp ref="R6">
-      <value>1.4k</value>
+      <value>1.6k</value>
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
@@ -604,24 +604,6 @@
     </comp>
   </components>
   <libparts>
-    <libpart lib="Connector" part="Conn_01x04_Male">
-      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
-      <docs>~</docs>
-      <footprints>
-        <fp>Connector*:*_1x??_*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">J</field>
-        <field name="Value">Conn_01x04_Male</field>
-        <field name="Datasheet">~</field>
-      </fields>
-      <pins>
-        <pin num="1" name="Pin_1" type="passive"/>
-        <pin num="2" name="Pin_2" type="passive"/>
-        <pin num="3" name="Pin_3" type="passive"/>
-        <pin num="4" name="Pin_4" type="passive"/>
-      </pins>
-    </libpart>
     <libpart lib="Device" part="C">
       <description>Unpolarized capacitor</description>
       <docs>~</docs>
@@ -716,6 +698,22 @@
         <pin num="3" name="3" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="NB3_power" part="Connector_S4B-PH-SM4-TB(LF)(SN)">
+      <footprints>
+        <fp>CONN_S4B-PH-SM4-TBLFSN_JST</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Connector_S4B-PH-SM4-TB(LF)(SN)</field>
+        <field name="Footprint">NB3_power:Connector_S4B-PH-SM4-TB(LF)(SN)</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+        <pin num="4" name="4" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="NB3_power" part="Voltage_Regulator_AP64501">
       <fields>
         <field name="Reference">U</field>
@@ -763,9 +761,6 @@
     </libpart>
   </libparts>
   <libraries>
-    <library logical="Connector">
-      <uri>/usr/share/kicad-nightly/library//Connector.kicad_sym</uri>
-    </library>
     <library logical="Device">
       <uri>/usr/share/kicad-nightly/library//Device.kicad_sym</uri>
     </library>
@@ -791,8 +786,8 @@
       <node ref="C15" pin="1" pintype="passive"/>
       <node ref="C16" pin="1" pintype="passive"/>
       <node ref="D2" pin="2" pinfunction="A" pintype="passive"/>
-      <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive"/>
-      <node ref="J2" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J2" pin="3" pinfunction="3" pintype="passive"/>
+      <node ref="J2" pin="4" pinfunction="4" pintype="passive"/>
       <node ref="L1" pin="2" pinfunction="2" pintype="input"/>
       <node ref="R4" pin="1" pintype="passive"/>
     </net>
@@ -825,8 +820,8 @@
       <node ref="C9" pin="2" pintype="passive"/>
       <node ref="J1" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="J1" pin="3" pinfunction="3" pintype="passive"/>
-      <node ref="J2" pin="3" pinfunction="Pin_3" pintype="passive"/>
-      <node ref="J2" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="J2" pin="1" pinfunction="1" pintype="passive"/>
+      <node ref="J2" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R1" pin="2" pintype="passive"/>
       <node ref="R5" pin="2" pintype="passive"/>
       <node ref="R6" pin="2" pintype="passive"/>

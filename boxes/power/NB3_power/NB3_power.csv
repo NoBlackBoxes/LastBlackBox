@@ -1,19 +1,26 @@
-Quantity,Designator,Description,Part  number,Mouser number,Digi-Key number,Unit Price
-6,"C1, C2, C3, C4, C5, C6, ","Capacitor MLCC SMD 0805 10uF 35V, TDK",C2012X5R1V106M085AC ,810-C2012X5R1V106M0C ,445-14419-1-ND ,0.389
-2,"C7, C8, ","Capacitor MLCC SMD 0402 100nF 25V, TDK",CGA2B3X7R1E104K050BB,810-CGA2B3X7R1E104K,445-6902-1-ND,0.099
-2,"C9, C11, ","Capacitor MLCC SMD 0402 1nF 25V, TDK",CGJ2B2X7R1E102K050BA ,810-CGJ2B2X7R1E102K,445-8072-1-ND,0.107
-1,"C10, ","Capacitor MLCC SMD 0402 1.2nF 25V, Taiyo Yuden",TMK105SD122JV-F,963-TMK105SD122JV-F,587-1053-1-ND,0.259
-4,"C12, C13, C14, C15, ","Capacitor MLCC SMD 0805 10uF 35V, TDK",C2012X5R1V106M085AC ,810-C2012X5R1V106M0C ,445-14419-1-ND ,0.389
-1,"C16, ","Tantalum Cap 100uF 10V 7343-31 D case, Kemet",T491D107M010AT ,80-T491D107M010 ,399-3772-1-ND,0.73
-2,"D1, D2, ","0603 LED SMD Green 1.7V 2mA, Osram",LG L29K-G2J1-24-Z ,720-LGL29KG2J124Z ,475-2709-1-ND ,0.343
-1,"J1, ","Barrel Jack SMD 2.1 inner, 5.5 outer, CUI",PJ-036AH-SMT-TR,490-PJ-036AH-SMT-TR,CP-036AHPJCT-ND ,1.04
-1,"J2, ","Pin Header Male 1x04 P2.54mm H5.84mm Vertical SMD, Samtec",TSM-104-01-L-SH,200-TSM10401LSH ,SAM15888-ND ,0.58
-1,"L1, ","2.2 uH SMD power inductor (5A), SRN6045TA, Bourn",SRN6045TA-2R2Y ,652-SRN6045TA-2R2Y ,SRN6045TA-2R2YCT-ND ,0.419
-1,"R1, ","R SMD 0402_1005 1% 5.6k 1/16W, Vishay",CRCW04025K60FKED,71-CRCW04025K60FKED ,541-5.60KLCT-ND ,0.077
-1,"R2, ","R SMD 0402_1005 1% 10 1/16W, Vishay",CRCW040210R0FKEDC ,71-CRCW040210R0FKEDC ,541-3964-1-ND ,0.077
-1,"R3, ","R SMD 0402_1005 1% 20k 1/16W, Vishay",CRCW040220K0FKEDC ,71-CRCW040220K0FKEDC ,541-3969-1-ND ,0.077
-1,"R4, ","R SMD 0402_1005 1% 12k 1/16W, Vishay",CRCW040212K0FKEDC ,71-CRCW040212K0FKEDC ,541-4063-1-ND ,0.077
-1,"R5, ","R SMD 0402_1005 1% 2.2k 1/16W, Vishay",CRCW04022K20FKEDC,71-CRCW04022K20FKEDC ,541-3971-1-ND,0.077
-1,"R6, ","R SMD 0402_1005 1% 1.6k 1/16W, Vishay",CRCW04021K60FKEDC ,71-CRCW04022K20FKEDC ,541-3971-1-ND,0.077
-1,"SW1, ","SPDT Slide Switch SMD, 0.3A 6VDC",JS102011JCQN,611-JS102011JCQN,CKN10721CT-ND,0.556
-1,"U1, ","DC-DC converter, AP64501, Diodes Inc.",AP64501SP-13 ,621-AP64501SP-13 ,31-AP64501SP-13CT-ND ,1.77
+"Source:","/home/kampff/NoBlackBoxes/repos/LastBlackBox/boxes/power/NB3_power/NB3_power.kicad_sch"
+"Date:","Tue Jun 29 17:02:57 2021"
+"Tool:","Eeschema (5.99.0-11105-gfb4343bc8f)"
+"Generator:","/usr/share/kicad-nightly/plugins/bom_csv_grouped_by_value_with_fp.py"
+"Component Count:","33"
+"Ref","Qnty","Value","Cmp name","Footprint","Description","Vendor"
+"C1, C2, C3, C4, C5, C6, ","6","10uF 35v","C","Capacitor_SMD:C_0805_2012Metric","Unpolarized capacitor",""
+"C7, C8, ","2","100nF","C","Capacitor_SMD:C_0402_1005Metric","Unpolarized capacitor",""
+"C9, C11, ","2","1nF","C","Capacitor_SMD:C_0402_1005Metric","Unpolarized capacitor",""
+"C10, ","1","1.2nF","C","Capacitor_SMD:C_0402_1005Metric","Unpolarized capacitor",""
+"C12, C13, C14, C15, ","4","10uF","C","Capacitor_SMD:C_0805_2012Metric","Unpolarized capacitor",""
+"C16, ","1","100uF","C_Polarized","Capacitor_Tantalum_SMD:CP_EIA-7343-31_Kemet-D","Polarized capacitor",""
+"D1, ","1","LED (Green)","LED","LED_SMD:LED_0603_1608Metric","Light emitting diode",""
+"D2, ","1","LED (Red)","LED","LED_SMD:LED_0603_1608Metric","Light emitting diode",""
+"H1, H2, H3, H4, ","4","MountingHole","MountingHole","MountingHole:MountingHole_2.7mm_M2.5_ISO7380_Pad","Mounting Hole without connection",""
+"J1, ","1","Barrel_Jack_PJ-036AH-SMT-TR","Barrel_Jack_PJ-036AH-SMT-TR","NB3_power:Barrel_Jack_PJ-036AH-SMT-TR","",""
+"J2, ","1","Connector_S4B-PH-SM4-TB(LF)(SN)","Connector_S4B-PH-SM4-TB(LF)(SN)","NB3_power:Connector_S4B-PH-SM4-TB(LF)(SN)","",""
+"L1, ","1","SRN6045TA-2R2Y","INDUCTOR","Inductor_SMD:L_Bourns_SRN6045TA","Inductor symbol for simulation only",""
+"R1, ","1","5.6k","R","Resistor_SMD:R_0402_1005Metric","Resistor",""
+"R2, ","1","10R","R","Resistor_SMD:R_0402_1005Metric","Resistor",""
+"R3, ","1","20K 1%","R","Resistor_SMD:R_0402_1005Metric","Resistor",""
+"R4, ","1","12K 1%","R","Resistor_SMD:R_0402_1005Metric","Resistor",""
+"R5, ","1","2.2K 1%","R","Resistor_SMD:R_0402_1005Metric","Resistor",""
+"R6, ","1","1.6k","R","Resistor_SMD:R_0402_1005Metric","Resistor",""
+"SW1, ","1","SW_SPDT","SW_SPDT","NB3_power:Switch_SPDT_SMD_Slide_JS102011JCQN","Switch, single pole double throw",""
+"U1, ","1","Voltage_Regulator_AP64501","Voltage_Regulator_AP64501","NB3_power:Voltage_Regulator_AP64501","",""
