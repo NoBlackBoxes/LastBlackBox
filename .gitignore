@@ -40,7 +40,6 @@ db.sqlite3
 *~
 
 # KiCAD Backup Files
-fab/
 *.kicad_pcb-bak
 *.sch-bak
 *-backups/
