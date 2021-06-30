@@ -1,4 +1,4 @@
-19576411929681959
+19574788473739311
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -59157,19 +59157,19 @@ Mounting 4.5mm 9774100982
 8
 1
 NB3_body
-Logo_LBB_25mm
+Connector_B6B-ZR-SM4-GW-TF(LF)(SN)
 
 
 0
-0
-0
+8
+8
 NB3_body
-Logo_LBB_50mm
+Connector_S4B-PH-SM4-TB(LF)(SN)
 
 
 0
-0
-0
+6
+6
 NB3_body
 Logo_VK_15mm
 
@@ -59177,13 +59177,6 @@ Logo_VK_15mm
 0
 0
 0
-NB3_body
-Socket_SM06B-SRSS-TB
-
-
-0
-8
-8
 NB3_body
 Standoff_SMT_5H_M2.5_9774050151R
 9774050151R-2
