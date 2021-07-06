@@ -1,0 +1,10 @@
+"Id";"Designator";"Package";"Quantity";"Designation";"Supplier and ref";
+1;"J10,J12,J11";"PinHeader_2x03_P2.54mm_Vertical_SMD";3;"Conn_02x03_Top_Bottom";;;
+2;"H9,H11,H10,H12";"MountingHole_2.5mm_Pad";4;"MountingHole";;;
+3;"H5,H7,H19,H6,H8,H2,H13,H3,H4,H1,H16,H20,H15,H14";"MountingHole_2.7mm_M2.5_ISO7380_Pad";14;"MountingHole";;;
+4;"J1,J2,J4,J8,J3,J5,J7,J6";"PinSocket_2x05_P2.54mm_Vertical_SMD";8;"Conn_02x05_Counter_Clockwise";;;
+5;"H17,H18";"MountingHole_2.2mm_M2_ISO7380_Pad";2;"MountingHole";;;
+6;"J14,J13";"Connector_B6B-ZR-SM4-GW-TF(LF)(SN)";2;"JST ZH 6-way Socket";;;
+7;"G***";"Logo_NBB_15mm";1;"LOGO";;;
+8;"J9";"Connector_S4B-PH-SM4-TB(LF)(SN)";1;"JST SH 4-way Socket";;;
+9;"G***";"Logo_VK_15mm";1;"LOGO";;;
