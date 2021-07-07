@@ -1,0 +1,6 @@
+Ref,Val,Package,PosX,PosY,Rot,Side
+"C1","0.1 uF","C_0402_1005Metric",7.460000,13.520000,-90.000000,top
+"J1","Conn_02x03_Odd_Even","PinHeader_2x03_P2.54mm_Vertical_SMD",4.920000,6.500000,90.000000,top
+"J2","Conn_02x03_Odd_Even","PinHeader_2x03_P2.54mm_Vertical_SMD",15.080000,6.525000,90.000000,top
+"MK1","Mic_ICS-43434","Mic_ICS-43434",10.000000,15.361000,180.000000,top
+"R1","100k","R_0402_1005Metric",10.000000,8.530000,90.000000,top

@@ -3782,7 +3782,6 @@
   (gr_text "lA lB lC lD 5v\n\nlE lF lG lH 0v" (at 70.25 161) (layer "F.SilkS") (tstamp ee31c18b-98c2-4f31-bf6b-b86994d9f087)
     (effects (font (size 1.1 1.1) (thickness 0.25)))
   )
-  (target plus (at 124.5 223) (size 5) (width 0.05) (layer "Edge.Cuts") (tstamp 55f64730-5c50-43a3-8b13-f50c3c2f44be))
 
   (segment (start 79.42 32.08) (end 79.5 32) (width 0.3) (layer "F.Cu") (net 2) (tstamp 127be191-a5f1-487c-9d94-b8dca2ccd35f))
   (segment (start 149 57) (end 155.98 57) (width 0.3) (layer "F.Cu") (net 2) (tstamp 77a42a91-5dd0-4680-a96e-ea028d800dce))

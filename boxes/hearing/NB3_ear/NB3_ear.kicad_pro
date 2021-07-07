@@ -50,8 +50,9 @@
       },
       "diff_pair_dimensions": [],
       "drc_exclusions": [
-        "clearance|148515500|99756000|9f859559-bf85-4ace-9550-4baf59eaf043|eb761c89-5ae6-4b54-9cdc-a0a0c9161a5d",
-        "clearance|148515500|99756000|d29e5cbe-babd-42b7-a1a2-f75374293999|eb761c89-5ae6-4b54-9cdc-a0a0c9161a5d"
+        "clearance|151095500|99531000|4e5987c7-97f7-4726-9435-a7ea3206223d|eb761c89-5ae6-4b54-9cdc-a0a0c9161a5d",
+        "clearance|151095500|99531000|57f54348-caef-454b-9007-e57548a95d9d|eb761c89-5ae6-4b54-9cdc-a0a0c9161a5d",
+        "clearance|151095500|99531000|d29e5cbe-babd-42b7-a1a2-f75374293999|eb761c89-5ae6-4b54-9cdc-a0a0c9161a5d"
       ],
       "meta": {
         "version": 2
@@ -368,7 +369,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "NB3_ear.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
