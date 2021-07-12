@@ -1,0 +1,27 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model AP7217D-12YG-13
+#/440532/232012/2.49/4/4/Integrated Circuit
+DEF AP7217D-12YG-13 IC 0 30 Y Y 1 F N
+F0 "IC" 1050 300 50 H V L CNN
+F1 "AP7217D-12YG-13" 1050 200 50 H V L CNN
+F2 "AP7217D12YG13" 1050 100 50 H I L CNN
+F3 "https://www.diodes.com/assets/Datasheets/AP7217D.pdf" 1050 0 50 H I L CNN
+F4 "Diodes Inc AP7217D-12YG-13, Single Linear Voltage Regulator, 600mA 1.2 V, 3-Pin SOT-89" 1050 -100 50 H I L CNN "Description"
+F5 "1.6" 1050 -200 50 H I L CNN "Height"
+F6 "Diodes Inc." 1050 -300 50 H I L CNN "Manufacturer_Name"
+F7 "AP7217D-12YG-13" 1050 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "621-AP7217D-12YG-13" 1050 -500 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/AP7217D-12YG-13?qs=oUsD4qhOtFxAsgfC3gYrSw%3D%3D" 1050 -600 50 H I L CNN "Mouser Price/Stock"
+F10 "AP7217D-12YG-13" 1050 -700 50 H I L CNN "Arrow Part Number"
+F11 "https://www.arrow.com/en/products/ap7217d-12yg-13/diodes-incorporated" 1050 -800 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X GND 1 0 0 200 R 50 50 0 0 P
+X VIN_1 2 0 -100 200 R 50 50 0 0 P
+X VOUT 3 1200 0 200 L 50 50 0 0 P
+X VIN_2 4 1200 -100 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 1000 100 1000 -200 200 -200 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library
