@@ -1,11 +1,11 @@
 (footprint "MicroUSB_10103594-0001LF" (version 20210606) (generator pcbnew) (layer "F.Cu")
-  (tedit 5F90BB5B)
+  (tedit 60F4A7B8)
   (attr through_hole)
   (fp_text reference "REF**" (at -0.825 -6.885) (layer "F.SilkS")
     (effects (font (size 1 1) (thickness 0.015)))
     (tstamp e2964374-5764-43b7-970f-8ceed8e26fe4)
   )
-  (fp_text value "AMPHENOL_10103594-0001LF" (at 0 5) (layer "F.Fab")
+  (fp_text value "MicroUSB_10103594-0001LF" (at 0 5) (layer "F.Fab")
     (effects (font (size 1 1) (thickness 0.015)))
     (tstamp a455ef38-1f92-41ee-a891-80ed1ffe8b1f)
   )
@@ -330,7 +330,7 @@
   (pad "11" smd rect locked (at 2.425 -3.03) (size 1.05 2.1) (layers "B.Cu" "B.Mask") (tstamp 4944723f-7f28-439e-9c58-5356f28767f3))
   (pad "S1" smd rect locked (at -0.9625 0.25) (size 1.425 2.5) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp ab916c8b-e59e-4a17-9072-b9bcec11af3d))
   (pad "S2" smd rect locked (at 0.9625 0.25) (size 1.425 2.5) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp 70418575-2413-4f7d-8efb-62598ffd7799))
-  (model "${KICAD_VK_DIR}/parts/MicroUSB_10103594-0001LF/MicroUSB_10103594-0001LF.STEP"
+  (model "${KIPRJMOD}/libraries/parts/MicroUSB_10103594-0001LF/MicroUSB_10103594-0001LF.step"
     (offset (xyz 0 1.35 -0.3))
     (scale (xyz 1 1 1))
     (rotate (xyz -90 0 0))

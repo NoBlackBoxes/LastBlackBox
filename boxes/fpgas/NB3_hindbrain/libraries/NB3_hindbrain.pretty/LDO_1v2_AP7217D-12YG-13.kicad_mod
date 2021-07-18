@@ -1,5 +1,5 @@
 (footprint "LDO_1v2_AP7217D-12YG-13" (version 20210606) (generator pcbnew) (layer "F.Cu")
-  (tedit 0)
+  (tedit 60F4A74B)
   (descr "SOT89-3L_1")
   (tags "Integrated Circuit")
   (attr smd)
@@ -7,7 +7,7 @@
     (effects (font (size 1.27 1.27) (thickness 0.254)))
     (tstamp 93e2b879-c52b-4c3c-ade4-dcef20d9060e)
   )
-  (fp_text value "AP7217D12YG13" (at 0 -0.334) (layer "F.SilkS") hide
+  (fp_text value "LDO_1v2_AP7217D-12YG-13" (at 0 -0.334) (layer "F.SilkS") hide
     (effects (font (size 1.27 1.27) (thickness 0.254)))
     (tstamp cd0e8a48-06b2-4268-a355-e9e792fde3ee)
   )
@@ -35,8 +35,8 @@
   (pad "2" smd rect locked (at 0 0.95) (size 0.9 1.9) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp 563a3550-5698-411e-8d75-e7cbec942e69))
   (pad "3" smd rect locked (at 1.5 1.25) (size 0.9 1.3) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp e3b65858-4ebc-4060-a2ff-9d95fc288998))
   (pad "4" smd rect locked (at 0 -1.35) (size 1.733 2.7) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp 14a3f634-e463-44e4-8226-9b6317644ac3))
-  (model "AP7217D-12YG-13.stp"
-    (offset (xyz 0 0 0))
+  (model "${KIPRJMOD}/libraries/parts/LDO_1v2_AP7217D-12YG-13/LDO_1v2_AP7217D-12YG-13.step"
+    (offset (xyz 0 0.75 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))
   )

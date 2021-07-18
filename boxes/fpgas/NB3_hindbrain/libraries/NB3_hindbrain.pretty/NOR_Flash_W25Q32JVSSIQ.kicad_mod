@@ -1,5 +1,5 @@
 (footprint "NOR_Flash_W25Q32JVSSIQ" (version 20210606) (generator pcbnew) (layer "F.Cu")
-  (tedit 0)
+  (tedit 60F4A7E9)
   (descr "8-Pin SOIC 208-mil (Package Code S)_1")
   (tags "Integrated Circuit")
   (attr smd)
@@ -7,7 +7,7 @@
     (effects (font (size 1.27 1.27) (thickness 0.254)))
     (tstamp bfa9f3ed-7008-4c66-8ca7-542082e08b8b)
   )
-  (fp_text value "SOIC127P790X216-8N" (at 0 0) (layer "F.SilkS") hide
+  (fp_text value "NOR_Flash_W25Q32JVSSIQ" (at 0 0) (layer "F.SilkS") hide
     (effects (font (size 1.27 1.27) (thickness 0.254)))
     (tstamp 509bf305-f0aa-4d03-aaca-d418cfd5d3a4)
   )
@@ -37,7 +37,7 @@
   (pad "6" smd rect locked (at 3.6 0.635 90) (size 0.65 1.65) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp 5c20d3d9-0e3f-4b51-92a0-19fcd992b3ab))
   (pad "7" smd rect locked (at 3.6 -0.635 90) (size 0.65 1.65) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp 1ccb21f1-df2c-42ac-a5aa-a03db7d672eb))
   (pad "8" smd rect locked (at 3.6 -1.905 90) (size 0.65 1.65) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp 4b8921ae-dc47-491b-9898-9fa1c2e45c30))
-  (model "W25Q32JVSSIQ.stp"
+  (model "${KIPRJMOD}/libraries/parts/NOR_Flash_W25Q32JVSSIQ/NOR_Flash_W25Q32JVSSIQ.step"
     (offset (xyz 0 0 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))

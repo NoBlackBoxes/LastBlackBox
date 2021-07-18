@@ -1,5 +1,5 @@
 (footprint "USBtoSPI_FT4232HL" (version 20210606) (generator pcbnew) (layer "F.Cu")
-  (tedit 60EC4078)
+  (tedit 60F4A873)
   (attr through_hole)
   (fp_text reference "REF**" (at -2.205985 -8.264285) (layer "F.SilkS")
     (effects (font (size 1.260213 1.260213) (thickness 0.15)))
@@ -90,4 +90,9 @@
   (pad "62" smd rect locked (at -2.75 -5.68) (size 0.28 1.56) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp c1feba88-f42e-497f-95ee-d53b6b72d938))
   (pad "63" smd rect locked (at -3.25 -5.68) (size 0.28 1.56) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp 7f16cbc9-5db3-463d-9bac-8f37d1c6d034))
   (pad "64" smd rect locked (at -3.75 -5.68) (size 0.28 1.56) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp f6005249-49cf-4c71-a141-feb64a205055))
+  (model "${KIPRJMOD}/libraries/parts/USBtoSPI_FT4232HL/USBtoSPI_FT4232HL.step"
+    (offset (xyz 0 0 0.8))
+    (scale (xyz 1 1 1))
+    (rotate (xyz -90 0 0))
+  )
 )
