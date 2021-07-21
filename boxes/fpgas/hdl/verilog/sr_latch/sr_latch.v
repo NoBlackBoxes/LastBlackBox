@@ -1,15 +1,20 @@
 // SR Latch
-`timescale 1ns / 1ps
-module sr_latch(Q, Qn, S, R);
+module sr_latch(s, r, q, qn);
  
-    output Q, Qn;
-    input S, R;
+    // Declarations
+    input s;
+    input r;
+    output q;
+    output qn;
     
-    wire Q_internal, Qn_internal;
+    // Intermediates
+    wire q_internal;
+    wire qn_internal;
  
-    assign #1 Q_internal = ~(S & Qn_internal);
-    assign #1 Qn_internal = ~(R & Q_internal);
-    assign Q = Q_internal;
-    assign Qn = Qn_internal;
+    // Logic
+    assign #1 q_internal = ~(s & qn_internal);
+    assign #1 qn_internal = ~(r & q_internal);
+    assign q = q_internal;
+    assign qn = qn_internal;
  
 endmodule

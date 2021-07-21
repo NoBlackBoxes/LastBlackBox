@@ -1,36 +1,58 @@
 // Testbench for SR Latch
 module sr_latch_tb;
 
-wire t_Q, t_Qn;
-reg t_S, t_R;
+    // Declarations
+    reg t_s;
+    reg t_r;
+    wire t_q;
+    wire t_qn;
 
-// Create instance of sr_latch module
-sr_latch test_gate(t_Q, t_Qn, t_S, t_R);
+    // Create instance of sr_latch module
+    sr_latch test_sr_latch(t_s, t_r, t_q, t_qn);
 
-initial
-    begin
-        $dumpfile("bin/sr_latch_tb.vcd");
-        $dumpvars(0,sr_latch_tb);
-        $monitor(t_Q, t_Qn, t_S, t_R);
+    // Test
+    initial
+        begin
+            $dumpfile("bin/sr_latch_tb.vcd");
+            $dumpvars(0, sr_latch_tb);
+            $monitor(t_s, t_r, t_q, t_qn);
 
-        t_S = 1'b0;
-        t_R = 1'b0;
+            // Initial (1, 1)
+            t_s = 1'b0;
+            t_r = 1'b0;
 
-        #5 // 5 ns delay
-        t_S = 1'b0;
-        t_R = 1'b1;
+            // Set (1, 0)
+            #5 // 5 ns delay
+            t_s = 1'b1;
 
-        #5 // 5 ns delay
-        t_S = 1'b1;
-        t_R = 1'b0;
+            // Reset (x, 1)
+            #5 // 5 ns delay
+            t_r = 1'b0;
 
-        #5 // 5 ns delay
-        t_S = 1'b1;
-        t_R = 1'b1;
+            // Fiddle (1, 0)
+            #5 // 5 ns delay
+            t_s = 1'b1;
+            t_r = 1'b0;
 
-        #5 // 5 ns delay
-        t_S = 1'b0;
-        t_R = 1'b0;
+            // Set (1, 1)
+            #5 // 5 ns delay
+            t_s = 1'b1;
+            t_r = 1'b1;
 
-    end
+            // Fiddle (0, 0)
+            #5 // 5 ns delay
+            t_s = 1'b0;
+            t_r = 1'b0;
+
+            // Set (0, 1)
+            #5 // 5 ns delay
+            t_s = 1'b0;
+            t_r = 1'b1;
+
+            // Fiddle (1, 0)
+            #5 // 5 ns delay
+            t_s = 1'b1;
+            t_r = 1'b0;
+
+        end
 endmodule

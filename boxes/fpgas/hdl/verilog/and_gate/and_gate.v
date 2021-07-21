@@ -1,9 +1,12 @@
 // AND Gate
-module and_gate(Y, A, B);
+module and_gate(a, b, y);
 
-  output Y;
-  input A, B;
+    // Declarations
+    input a;
+    input b;
+    output y;
 
-  assign Y = A & B;
+    // Logic
+    assign y = a & b;   // a AND b
 
 endmodule
