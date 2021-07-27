@@ -6,7 +6,10 @@ module and_gate(a, b, y);
     input b;
     output y;
 
-    // Logic
+    // Logic (Behaviour)
     assign y = a & b;   // a AND b
+
+    // Logic (Gate) 
+    // and(y, a, b);   // a AND b
 
 endmodule

@@ -23,3 +23,5 @@ sudo apt-get install gtkwave
 ### Install a Synthesis toolchain
 
 We will use an (amazing) open source sythesis (yosys) and FPGA "programming" toolchain (IceStorm) developed by reverse-engineering the proprietary "bitstream" formats of an FPGA vendor (Lattice). *Note: Lattice has been quite supportive of these efforts. Kudos*
+
+### Install WaveTrace (VScode extension) to view VCD files
