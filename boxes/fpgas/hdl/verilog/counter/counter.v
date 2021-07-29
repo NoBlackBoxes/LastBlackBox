@@ -7,10 +7,6 @@ module counter(clock, reset, count);
     input reset;
     output reg[3:0] count;
     
-    // Intermediates
-    wire q_internal;
-    wire qn_internal;
- 
     // Logic
     always @(posedge clock)
         begin
