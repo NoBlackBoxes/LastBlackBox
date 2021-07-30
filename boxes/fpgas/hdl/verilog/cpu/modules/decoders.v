@@ -1,21 +1,21 @@
 // Decoders (RV32I)
 
 // Decoder (Main)
-module decoder_main(opcode, result_src, mem_write, branch, alu_src, reg_write, jump, imm_src, alu_op);
+module decoder_main(opcode, result_src, mem_write, branch, ALU_src, reg_write, jump, imm_src, alu_op);
 
     // Declarations
     input [6:0] opcode;
     output [1:0] result_src;
     output mem_write;
     output branch;
-    output alu_src;
+    output ALU_src;
     output reg_write;
     output jump;
     output [1:0] imm_src;
-    output [1:0] alu_op;
+    output [1:0] ALU_op;
     
     // Intermediates
-    logic [10:0] controls;
+    wire [10:0] controls;
     assign {reg_write, imm_src, alu_src, mem_write, result_src, branch, alu_op, jump} = controls;   
     
     // Logic
@@ -33,34 +33,34 @@ module decoder_main(opcode, result_src, mem_write, branch, alu_src, reg_write, j
 endmodule
 
 // Decoder (ALU)
-module decoder_alu();
+module decoder_alu(opcode_b5, funct3, funct7b5, ALU_op, ALU_control);
 
     // Declarations
-    input logic opb5,
-    input logic [2:0] funct3,
-    input logic funct7b5,
-    input logic [1:0] ALUOp,
-    output logic [2:0] ALUControl;   
+    input opcode_b5,
+    input [2:0] funct3,
+    input funct7b5,
+    input [1:0] ALU_op,
+    output [2:0] ALU_control;   
 
     // Intermediates
-    logic  RtypeSub;
-    assign RtypeSub = funct7b5 & opb5; // TRUE for R–type subtract   
+    wire  Rtype_sub;
+    assign Rtype_sub = funct7b5 & opb5; // TRUE for R–type subtract   
     
     // Logic
     always_comb      
-        case(ALUOp)   
-            2'b00:      ALUControl = 3'b000; // addition   
-            2'b01:      ALUControl = 3'b001; // subtraction   
+        case(ALU_op)   
+            2'b00:      ALU_control = 3'b000; // addition   
+            2'b01:      ALU_control = 3'b001; // subtraction   
             default:
                 case(funct3) // R–type or I–type ALU
-                    3'b000: if (RtypeSub)
-                                ALUControl = 3'b001; // sub
+                    3'b000: if (Rtype_sub)
+                                ALU_control = 3'b001; // sub
                             else
-                                ALUControl = 3'b000; // add, addi
-                    3'b010:     ALUControl = 3'b101; // slt, slti
-                    3'b110:     ALUControl = 3'b011; // or, ori
-                    3'b111:     ALUControl = 3'b010; // and, andi
-                    default:    ALUControl = 3'bxxx; // ???
+                                ALU_control = 3'b000; // add, addi
+                    3'b010:     ALU_control = 3'b101; // slt, slti
+                    3'b110:     ALU_control = 3'b011; // or, ori
+                    3'b111:     ALU_control = 3'b010; // and, andi
+                    default:    ALU_control = 3'bxxx; // ???
                 endcase
         endcase
 

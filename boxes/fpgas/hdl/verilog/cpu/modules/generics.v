@@ -1,23 +1,23 @@
 // Adder
-module adder(a, b, c);
+module adder(a, b, sum);
     
     // Declarations
     input [31:0] a;
     input [31:0] b,
-    output [31:0] c;
+    output [31:0] sum;
     
     // Logic    
-    assign c = a + b;
+    assign sum = a + b;
 
 endmodule
 
 // Extend
-module extend();
+module extend(instruction, imm_src, imm_ext);
     
     // Declarations
-    input  logic [31:7] instr;
-    input  logic [1:0]  immsrc;
-    output logic [31:0] immext;
+    input [31:7] instruction;
+    input [1:0]  imm_src;
+    output [31:0] imm_ext;
 
     // Logic    
     always_comb      
@@ -37,16 +37,16 @@ module extend();
 endmodule
 
 // Flip-Flop (w/reset)
-module flopr #(parameter WIDTH = 8) ();
+module flopr #(parameter WIDTH = 8) (clock, reset, d, q);
 
     // Declarations
-    input logic clk, 
+    input clock, 
     input reset,
-    input logic [WIDTH−1:0] d; 
-    output logic [WIDTH−1:0] q);   
+    input [WIDTH−1:0] d; 
+    output [WIDTH−1:0] q);   
     
     // Logic
-    always_ff @(posedge clk, posedge reset)
+    always_ff @(posedge clock, posedge reset)
         if (reset) q <= 0;
         else q <= d;
 
@@ -70,12 +70,13 @@ module flopenr #(parameter WIDTH = 8) (clock, reset, enable, d, q);
 endmodule
 
 // Multiplexer (2:1)
-module mux2 #(parameter WIDTH = 8) (
+module mux2 #(parameter WIDTH = 8) (d0, d1, s, y);
     
     // Declarations
-    input logic [WIDTH−1:0] d0, d1,
-    input logic s,
-    output logic [WIDTH−1:0] y);
+    input [WIDTH−1:0] d0; 
+    input [WIDTH−1:0] d1;
+    input s;
+    output [WIDTH−1:0] y;
     
     // Logic
     assign y = s ? d1 : d0;
@@ -83,12 +84,14 @@ module mux2 #(parameter WIDTH = 8) (
 endmodule
 
 // Multiplexer (3:1)
-module mux3 #(parameter WIDTH = 8) (
+module mux3 #(parameter WIDTH = 8) (d0, d1, d2, s, y);
     
     // Declarations
-    input logic [WIDTH−1:0] d0, d1, d2,
-    input logic [1:0]s,
-    output logic [WIDTH−1:0] y);
+    input [WIDTH−1:0] d0;,
+    input [WIDTH−1:0] d1;
+    input [WIDTH−1:0] d2;
+    input [1:0] s;
+    output [WIDTH−1:0] y;
     
     // Logic
     assign y = s[1] ? d2 : (s[0] ? d1 : d0);
