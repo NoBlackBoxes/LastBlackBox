@@ -38,7 +38,7 @@ module counter_tb;
             t_reset = 1'b1;
 
             // Finish
-            #100 $finish; // 100 ns delay
-            
+            #100 $finish; // 100 ns delay    
         end
+
 endmodule

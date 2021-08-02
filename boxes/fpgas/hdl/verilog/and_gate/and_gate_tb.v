@@ -39,4 +39,5 @@ module and_gate_tb;
             t_a = 1'b0;
             t_b = 1'b0;
         end
+        
 endmodule
