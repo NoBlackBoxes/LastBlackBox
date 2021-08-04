@@ -28,12 +28,13 @@ module regfile_tb;
             #100; // 100 ns delay
             for (i = 0; i < 32; i = i + 1)
                 begin
-                    t_clock <= 1'b0;
                     t_write_enable <= 1'b1;
                     t_address_write <= i;
                     t_write_data <= i + 100;
+                    t_clock <= 1'b0;
                     #10; // 10 ns delay
-                    t_clock = 1'b1;
+                    t_clock <= 1'b1;
+                    #10; // 10 ns delay
                 end
 
             // Read registers 1 and 2
