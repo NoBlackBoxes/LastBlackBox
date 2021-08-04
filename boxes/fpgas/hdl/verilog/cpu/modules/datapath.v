@@ -30,7 +30,7 @@ module datapath(clock, reset, result_src, PC_src, ALU_src, reg_write, imm_src, A
     flopr #(32) pcreg(clock, reset, PC_next, PC);
     adder pcadd4(PC, 32'd4, PC_plus4);   
     adder pcaddbranch(PC, imm_ext, PC_target);   
-    mux2 #(32)pcmux(PC_plus4, PC_target, PC_src, PC_next);   
+    mux2 #(32) pcmux(PC_plus4, PC_target, PC_src, PC_next);   
     
     // Logic (register file)
     regfile regfile(clock, RegWrite, Instr[19:15], Instr[24:20],Instr[11:7], Result, SrcA, WriteData);

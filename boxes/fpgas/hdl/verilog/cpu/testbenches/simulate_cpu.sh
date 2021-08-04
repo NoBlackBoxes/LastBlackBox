@@ -28,6 +28,10 @@ vvp bin/mux2
 iverilog -o bin/mux3 ../modules/generics.v mux3_tb.v
 vvp bin/mux3
 
+# Build and Simulate Regfile
+iverilog -o bin/regfile ../modules/regfile.v regfile_tb.v
+vvp bin/regfile
+
 # Visualize
 #gtkwave bin/adder_tb.vcd
 #gtkwave bin/extend_tb.vcd
