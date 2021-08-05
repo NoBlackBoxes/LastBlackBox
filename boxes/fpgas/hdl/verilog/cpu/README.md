@@ -18,12 +18,12 @@ We need to handle these instructions:
 
   - add
   - sub
-  - sll
+  - sll ?
   - slt
-  - sltu
-  - xor
-  - srl
-  - sra
+  - sltu ?
+  - xor ?
+  - srl ?
+  - sra ?
   - or
   - and
 
@@ -58,7 +58,6 @@ We need to handle these instructions:
   - bge
   - bltu
   - bgeu
-
 
 - U-type: upper (long) immediates
 

@@ -32,6 +32,14 @@ vvp bin/mux3
 iverilog -o bin/regfile ../modules/regfile.v regfile_tb.v
 vvp bin/regfile
 
+# Build and Simulate Main Decoder
+iverilog -o bin/main_decoder ../modules/main_decoder.v main_decoder_tb.v
+vvp bin/main_decoder
+
+# Build and Simulate ALU Decoder
+iverilog -o bin/alu_decoder ../modules/alu_decoder.v alu_decoder_tb.v
+vvp bin/alu_decoder
+
 # Visualize
 #gtkwave bin/adder_tb.vcd
 #gtkwave bin/extend_tb.vcd
@@ -39,4 +47,6 @@ vvp bin/regfile
 #gtkwave bin/flopenr_tb.vcd
 #gtkwave bin/mux2_tb.vcd
 #gtkwave bin/mux3_tb.vcd
-gtkwave bin/regfile_tb.vcd
+#gtkwave bin/regfile_tb.vcd
+#gtkwave bin/main_decoder_tb.vcd
+#gtkwave bin/alu_decoder_tb.vcd
