@@ -4,9 +4,9 @@ module regfile(clock, write_enable, address_read_1, address_read_2, address_writ
     // Declarations
     input clock;
     input write_enable;
-    input [5:0] address_read_1;
-    input [5:0] address_read_2;
-    input [5:0] address_write;
+    input [4:0] address_read_1;
+    input [4:0] address_read_2;
+    input [4:0] address_write;
     input [31:0] write_data;
     output [31:0] read_data_1;
     output [31:0] read_data_2;

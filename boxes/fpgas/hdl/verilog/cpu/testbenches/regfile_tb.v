@@ -4,9 +4,9 @@ module regfile_tb;
     // Declarations
     reg t_clock;
     reg t_write_enable;
-    reg [5:0] t_address_read_1;
-    reg [5:0] t_address_read_2;
-    reg [5:0] t_address_write;
+    reg [4:0] t_address_read_1;
+    reg [4:0] t_address_read_2;
+    reg [4:0] t_address_write;
     reg [31:0] t_write_data;
     wire [31:0] t_read_data_1;
     wire [31:0] t_read_data_2;

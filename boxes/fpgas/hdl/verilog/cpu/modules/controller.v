@@ -1,18 +1,18 @@
 // Controller (RV32I)
-module controller(opcode, funct3, funct7b5, zero, result_src, mem_write, PC_src, ALU_src, reg_write, jump, imm_src, ALU_control);
+module controller(opcode, funct3, funct7b5, zero, result_select, mem_write, PC_select, ALU_select, reg_write, jump, immediate_select, ALU_control);
 
     // Declarations
-    input [6:0] opcode,
-    input [2:0] funct3,       
-    input funct7b5,                     
-    input zero,                     
-    output [1:0] result_src,                     
-    output mem_write,                     
-    output PC_src;
-    output ALU_src;                     
+    input [6:0] opcode;
+    input [2:0] funct3;  
+    input funct7b5;
+    input zero;
+    output [1:0] result_select;
+    output mem_write;
+    output PC_select;
+    output ALU_select;
     output reg_write;
-    output jump;                     
-    output [1:0] imm_src;                
+    output jump;
+    output [1:0] immediate_select;
     output [2:0] ALU_control;
     
     // Intermediates
@@ -20,21 +20,21 @@ module controller(opcode, funct3, funct7b5, zero, result_src, mem_write, PC_src,
     wire branch;
     
     // Main Decoder Sub-module
-    decoder_main decoder_main
+    main_decoder main_decoder
     (
-        opcode,         // (input) opcode
-        result_src,     // (output)
-        mem_write,      // (output)
-        branch,         // (output)
-        ALU_src,        // (output)
-        reg_write,      // (output)
-        jump,           // (output)
-        imm_src,        // (output)
-        ALU_op          // (output)
+        opcode,             // (input)
+        reg_write,          // (output)
+        immediate_select,   // (output)
+        ALU_select,         // (output)
+        mem_write,          // (output)
+        result_select,      // (output)
+        branch,             // (output)
+        ALU_op,             // (output)
+        jump                // (output)
     );
     
     // ALU Decoder Sub-module
-    decoder_ALU decoder_ALU
+    alu_decoder alu_decoder
     (
         opcode[5],      // (input) opcode_b5
         funct3,         // (input)
@@ -44,6 +44,6 @@ module controller(opcode, funct3, funct7b5, zero, result_src, mem_write, PC_src,
     );
 
     // Program Counter update (?)   
-    assign PC_src = branch & zero | jump;
+    assign PC_select = branch & zero | jump;
     
 endmodule
