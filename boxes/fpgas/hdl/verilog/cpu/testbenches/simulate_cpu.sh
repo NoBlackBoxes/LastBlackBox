@@ -44,6 +44,10 @@ vvp bin/alu_decoder
 iverilog -o bin/controller ../modules/controller.v ../modules/main_decoder.v ../modules/alu_decoder.v controller_tb.v
 vvp bin/controller
 
+# Build and Simulate ALU
+iverilog -o bin/alu ../modules/alu.v alu_tb.v
+vvp bin/alu
+
 # Build and Simulate Datapath
 iverilog -o bin/datapath ../modules/datapath.v ../modules/flopr.v ../modules/adder.v ../modules/mux2.v ../modules/regfile.v ../modules/extend.v ../modules/alu.v ../modules/mux3.v datapath_tb.v
 vvp bin/datapath
@@ -59,4 +63,5 @@ vvp bin/datapath
 #gtkwave bin/main_decoder_tb.vcd
 #gtkwave bin/alu_decoder_tb.vcd
 #gtkwave bin/controller_tb.vcd
+#gtkwave bin/alu_tb.vcd
 #gtkwave bin/datapath_tb.vcd
