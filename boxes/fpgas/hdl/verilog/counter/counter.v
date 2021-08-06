@@ -14,5 +14,6 @@ module counter(clock, reset, count);
                 count <= 0;
             else
                 count <= count + 1;
-        end 
+        end
+         
 endmodule
