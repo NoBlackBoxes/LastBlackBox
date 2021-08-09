@@ -1,5 +1,5 @@
 // Instruction memory module
-module imem();
+module imem(a, rd);
 
     // Declarations
     input [31:0] a;
@@ -17,7 +17,7 @@ module imem();
 endmodule
 
 // Data memory module
-module dmem();
+module dmem(clock, we, a, wd, rd);
 
     // Declarations
     input clock;
@@ -31,7 +31,7 @@ module dmem();
     assign rd = RAM[a[31:2]]; // word aligned
     
     // Logic
-    always_ff @(posedge clk)
+    always @(posedge clock)
         if (we) RAM[a[31:2]] <= wd;
 
 endmodule
@@ -40,8 +40,8 @@ endmodule
 module testbench();
 
     // Intermediates
-    wire clock;
-    wire reset;
+    reg clock;
+    reg reset;
     wire [31:0] instruction;
     wire [31:0] read_data;
     wire mem_write;
@@ -73,20 +73,20 @@ module testbench();
     // generate clock to sequence tests
     always
         begin
-            clock <= 1; # 5; clk <= 0; # 5;
+            clock <= 1; # 5; clock <= 0; # 5;
         end   
     
     // check results
-    always @(negedge clk)
+    always @(negedge clock)
         begin
-            if(MemWrite) 
+            if(mem_write) 
                 begin
-                    if(DataAdr === 100 & WriteData === 25) 
+                    if(data_adr === 100 & write_data === 25) 
                         begin
                             $display("Simulation succeeded");
                             $stop;
                         end 
-                    else if (DataAdr !== 96)
+                    else if (data_adr !== 96)
                         begin
                             $display("Simulation failed");
                             $stop;

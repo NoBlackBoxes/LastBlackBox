@@ -15,7 +15,7 @@ module alu(src_A, src_B, ALU_control, ALU_result, zero);
             3'b001: ALU_result <= src_A - src_B; // subtraction   
             3'b010: ALU_result <= src_A & src_B; // and
             3'b011: ALU_result <= src_A | src_B; // or
-            3'b101: ; // set less than   
+            3'b101: ALU_result <= ($signed(src_A) < $signed(src_B)) ? 1 : 0; // set less than   
         endcase
 
 endmodule

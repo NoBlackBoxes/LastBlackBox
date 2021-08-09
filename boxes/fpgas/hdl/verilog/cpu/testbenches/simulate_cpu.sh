@@ -52,6 +52,10 @@ vvp bin/alu
 iverilog -o bin/datapath ../modules/datapath.v ../modules/flopr.v ../modules/adder.v ../modules/mux2.v ../modules/regfile.v ../modules/extend.v ../modules/alu.v ../modules/mux3.v datapath_tb.v
 vvp bin/datapath
 
+# Build and Simulate CPU
+iverilog -o bin/cpu ../cpu.v ../modules/datapath.v ../modules/flopr.v ../modules/adder.v ../modules/mux2.v ../modules/regfile.v ../modules/extend.v ../modules/alu.v ../modules/mux3.v ../modules/controller.v ../modules/main_decoder.v ../modules/alu_decoder.v cpu_tb.v
+vvp bin/cpu
+
 # Visualize
 #gtkwave bin/adder_tb.vcd
 #gtkwave bin/extend_tb.vcd
@@ -65,3 +69,4 @@ vvp bin/datapath
 #gtkwave bin/controller_tb.vcd
 #gtkwave bin/alu_tb.vcd
 #gtkwave bin/datapath_tb.vcd
+#gtkwave bin/cpu_tb.vcd
