@@ -37,7 +37,7 @@ module dmem(clock, we, a, wd, rd);
 endmodule
 
 // Testbench for CPU (RV32I)
-module testbench();
+module cpu_tb();
 
     // Intermediates
     reg clock;
@@ -67,6 +67,10 @@ module testbench();
     // initialize test
     initial
         begin
+            $dumpfile("bin/cpu_tb.vcd");
+            $dumpvars(0, cpu_tb);
+            $monitor(clock, reset, instruction, read_data, mem_write, PC, data_adr, write_data);
+
             reset <= 1; # 22; reset <= 0;
         end   
     
