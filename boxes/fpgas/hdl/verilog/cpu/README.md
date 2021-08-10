@@ -1,16 +1,61 @@
 # fpgas : hdl : verilog : cpu
 
-We will use the Verilog hardware description language (HDL) to design a RISC-V cpu
+We will use the Verilog hardware description language (HDL) to design a RISC-V cpu that implements the base (RV32I) instruction set.
 
-## RISC-V
+## RISC-V: RV32I ISA
+<hr>
+<br>
 
-We will implement the minimum subset of the RISC-V specification: RV32I.
+Name |Type| ?|Description|
+:----|:---|:-|:----------|
+lb   |   I|  |Load       |
+lh   |   I|  |Load       |
+lw   |   I| x|Load       |
+lbu  |   I|  |Load (U)   |
+lhu  |   I|  |Load (U)   |
+addi |   I| x|           |
+slli |   I|  |           |
+slti |   I|  |           |
+sltiu|   I|  |           |
+xori |   I|  |           |
+srli |   I|  |           |
+srai |   I|  |           |
+ori  |   I|  |           |
+andi |   I|  |           |
+auipc|   U|  |           |
+sb   |   S|  |           |
+sh   |   S|  |           |
+sw   |   S| x|           |
+add  |   R| x|           |
+sub  |   R| x|           |
+sll  |   R|  |           |
+slt  |   R| x|           |
+sltu |   R|  |           |
+xor  |   R|  |           |
+srl  |   R|  |           |
+sra  |   R|  |           |
+or   |   R| x|           |
+and  |   R| x|           |
+lui  |   U|  |           |
+beq  |   B| x|           |
+bne  |   B|  |           |
+blt  |   B|  |           |
+bge  |   B|  |           |
+bltu |   B|  |           |
+bgeu |   B|  |           |
+jalr |   I|  |           |
+jal  |   J| x|           |
 
-We need 32 x 32-bit registers.
+<hr>
+<br>
 
-We need memory for instructions and data in one 32-bit byte-addressed.
+Fetch, CSR?, ECALL?...should be 40 instructions...
 
-We also need a programme counter (PC).
+## Other modules
+
+1. We need 32 x 32-bit registers in a three port register file.
+2. We need memory for instructions and data in one 32-bit byte-addressed.
+3. We also need a programme counter (PC).
 
 We need to handle these instructions:
 
