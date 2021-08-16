@@ -1,18 +1,16 @@
-# Should be upper case HEX?
-# Clean code...
-
-
 # -*- coding: utf-8 -*-
 import sys
+
+# Convert HEX dump text to machine code text
 
 # Parse command line input
 if(len(sys.argv) == 2):
     input_path = sys.argv[1]
     output_path = input_path[:-4] + 'txt'
 else:
-    exit("Fail: dump2machine - incorrect input args")
+    exit("Fail: dump2machine - incorrect input arg count")
 
-# Open input (dump) and output (machine code) file
+# Open input (dump) and output (machine code) files
 input_file = open(input_path, "r")
 output_file = open(output_path, "w")
 
@@ -24,17 +22,17 @@ for line in lines:
     tokens = line.split(' ')
     num_tokens = len(tokens)
     if(num_tokens > 1):
-        lower = False
-        code = ''
+        has_lower = False
+        lower = ''
         for token in tokens[1:]:
-            if len(token) >= 4:
+            if (len(token) == 4) or (len(token) == 5): # with and without newline
                 token = token[:4] # Remove newline
-                if lower:
-                    output_file.write(token + code + '\n')                    
-                    lower = False
+                if has_lower:
+                    output_file.write((token + lower + '\n').upper())                    
+                    has_lower = False
                 else:
-                    code = token
-                    lower = True
+                    lower = token # Store lower byte
+                    has_lower = True
 
 # Cleanup
 input_file.close()

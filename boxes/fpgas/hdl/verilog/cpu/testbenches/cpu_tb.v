@@ -10,7 +10,7 @@ module imem(a, rd);
 
     // Logic
     initial
-        $readmemh("cpu_test.txt", RAM);
+        $readmemh("bin/imem.txt", RAM);
     
     assign rd = RAM[a[31:2]]; // word aligned
 
