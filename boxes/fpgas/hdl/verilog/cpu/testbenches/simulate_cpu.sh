@@ -1,60 +1,66 @@
 #!/bin/bash
 set -eu
 
+# Set Root
+LBB_ROOT="/home/kampff/NoBlackBoxes/repos/LastBlackBox"
+
+# Set CPU and Modules folder
+CPU=$LBB_ROOT"/boxes/fpgas/hdl/verilog/cpu"
+MODULES=$CPU"/modules"
+
 # Create out directory
 mkdir -p bin
 
 # Build and Simulate Adder
-iverilog -o bin/adder ../modules/adder.v adder_tb.v
+iverilog -o bin/adder $MODULES/adder.v adder_tb.v
 vvp bin/adder
 
 # Build and Simulate Extend
-iverilog -o bin/extend ../modules/extend.v extend_tb.v
+iverilog -o bin/extend $MODULES/extend.v extend_tb.v
 vvp bin/extend
 
 # Build and Simulate Flopr
-iverilog -o bin/flopr ../modules/flopr.v flopr_tb.v
+iverilog -o bin/flopr $MODULES/flopr.v flopr_tb.v
 vvp bin/flopr
 
 # Build and Simulate Flopenr
-iverilog -o bin/flopenr ../modules/flopenr.v flopenr_tb.v
+iverilog -o bin/flopenr $MODULES/flopenr.v flopenr_tb.v
 vvp bin/flopenr
 
 # Build and Simulate Mux2
-iverilog -o bin/mux2 ../modules/mux2.v mux2_tb.v
+iverilog -o bin/mux2 $MODULES/mux2.v mux2_tb.v
 vvp bin/mux2
 
 # Build and Simulate Mux3
-iverilog -o bin/mux3 ../modules/mux3.v mux3_tb.v
+iverilog -o bin/mux3 $MODULES/mux3.v mux3_tb.v
 vvp bin/mux3
 
 # Build and Simulate Regfile
-iverilog -o bin/regfile ../modules/regfile.v regfile_tb.v
+iverilog -o bin/regfile $MODULES/regfile.v regfile_tb.v
 vvp bin/regfile
 
 # Build and Simulate Main Decoder
-iverilog -o bin/main_decoder ../modules/main_decoder.v main_decoder_tb.v
+iverilog -o bin/main_decoder $MODULES/main_decoder.v main_decoder_tb.v
 vvp bin/main_decoder
 
 # Build and Simulate ALU Decoder
-iverilog -o bin/alu_decoder ../modules/alu_decoder.v alu_decoder_tb.v
+iverilog -o bin/alu_decoder $MODULES/alu_decoder.v alu_decoder_tb.v
 vvp bin/alu_decoder
 
 # Build and Simulate Controller
-iverilog -o bin/controller ../modules/controller.v ../modules/main_decoder.v ../modules/alu_decoder.v controller_tb.v
+iverilog -o bin/controller $MODULES/controller.v $MODULES/main_decoder.v $MODULES/alu_decoder.v controller_tb.v
 vvp bin/controller
 
 # Build and Simulate ALU
-iverilog -o bin/alu ../modules/alu.v alu_tb.v
+iverilog -o bin/alu $MODULES/alu.v alu_tb.v
 vvp bin/alu
 
 # Build and Simulate Datapath
-iverilog -o bin/datapath ../modules/datapath.v ../modules/flopr.v ../modules/adder.v ../modules/mux2.v ../modules/regfile.v ../modules/extend.v ../modules/alu.v ../modules/mux3.v datapath_tb.v
+iverilog -o bin/datapath $MODULES/datapath.v $MODULES/flopr.v $MODULES/adder.v $MODULES/mux2.v $MODULES/regfile.v $MODULES/extend.v $MODULES/alu.v $MODULES/mux3.v datapath_tb.v
 vvp bin/datapath
 
 # Build and Simulate CPU
-cp cpu_test.txt bin/imem.txt
-iverilog -o bin/cpu ../cpu.v ../modules/datapath.v ../modules/flopr.v ../modules/adder.v ../modules/mux2.v ../modules/regfile.v ../modules/extend.v ../modules/alu.v ../modules/mux3.v ../modules/controller.v ../modules/main_decoder.v ../modules/alu_decoder.v cpu_tb.v
+iverilog -o bin/cpu $CPU/cpu.v $MODULES/datapath.v $MODULES/flopr.v $MODULES/adder.v $MODULES/mux2.v $MODULES/regfile.v $MODULES/extend.v $MODULES/alu.v $MODULES/mux3.v $MODULES/controller.v $MODULES/main_decoder.v $MODULES/alu_decoder.v cpu_tb.v
 vvp bin/cpu
 
 # Visualize

@@ -6,11 +6,11 @@ module imem(a, rd);
     output [31:0] rd;   
 
     // Intermediates
-    logic [31:0] RAM[63:0];
+    logic [31:0] RAM[4096:0];
 
     // Logic
     initial
-        $readmemh("cpu_test.txt", RAM);
+        $readmemh("bin/imem.txt", RAM);
     
     assign rd = RAM[a[31:2]]; // word aligned
 
@@ -27,7 +27,7 @@ module dmem(clock, we, a, wd, rd);
     output [31:0] rd;
     
     // Intermediates
-    logic [31:0] RAM[63:0];
+    logic [31:0] RAM[4096:0];
     assign rd = RAM[a[31:2]]; // word aligned
     
     // Logic
@@ -67,7 +67,7 @@ module cpu_tb();
     // initialize test
     initial
         begin
-            $dumpfile("bin/cpu_tb.vcd");
+            $dumpfile("bin/verify_cpu_tb.vcd");
             $dumpvars(0, cpu_tb);
             $monitor(clock, reset, instruction, read_data, mem_write, PC, data_adr, write_data);
 
@@ -85,14 +85,14 @@ module cpu_tb();
         begin
             if(mem_write) 
                 begin
-                    if(data_adr === 100 & write_data === 25) 
+                    if(data_adr === 32'hFFFFFFF0 & write_data === 1) 
                         begin
-                            $display("Simulation succeeded");
+                            $display("Verification succeeded");
                             $stop;
                         end 
-                    else if (data_adr !== 96)
+                    else if (data_adr === 32'hFFFFFFF0)
                         begin
-                            $display("Simulation failed");
+                            $display("Verification failed");
                             $stop;
                         end
                 end   

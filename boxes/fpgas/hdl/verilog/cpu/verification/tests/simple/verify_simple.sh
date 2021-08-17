@@ -27,15 +27,15 @@ ASFLAGS+=" -I "$INCLUDE_DIR         # Inlcude
 ASFLAGS+=" -nostdlib"
 ASFLAGS+=" --specs=nosys.specs"
 #ASFLAGS+=" -Wl,-Tlink.ld"
-$RISCV_TOOLCHAIN/riscv32-unknown-elf-gcc $ASFLAGS -o bin/add.o add.S
+$RISCV_TOOLCHAIN/riscv32-unknown-elf-gcc $ASFLAGS -o bin/simple.o simple.S
 
 # Extract binary object
-$RISCV_TOOLCHAIN/riscv32-unknown-elf-objcopy -O binary -j .text bin/add.o bin/add.bin
+$RISCV_TOOLCHAIN/riscv32-unknown-elf-objcopy -O binary -j .text bin/simple.o bin/simple.bin
 
 # Parse binary into HEX tmachone code file for Verilog
-hexdump bin/add.bin > bin/add.dump
-python ../../utilities/dump2machine.py bin/add.dump
-cp bin/add.txt bin/imem.txt
+hexdump bin/simple.bin > bin/simple.dump
+python ../../utilities/dump2machine.py bin/simple.dump
+cp bin/simple.txt bin/imem.txt
 
 # Simulate
 vvp $CPU

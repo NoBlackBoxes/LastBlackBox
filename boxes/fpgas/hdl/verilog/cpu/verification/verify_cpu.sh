@@ -1,31 +1,15 @@
 #!/bin/bash
 set -eu
 
-# Set toolchain
-RISCV_TOOLCHAIN="/home/kampff/NoBlackBoxes/tools/rv32i-toolchain/bin"
+# Set Root
+LBB_ROOT="/home/kampff/NoBlackBoxes/repos/LastBlackBox"
+
+# Set CPU and Modules folder
+CPU=$LBB_ROOT"/boxes/fpgas/hdl/verilog/cpu"
+MODULES=$CPU"/modules"
 
 # Create out directory
 mkdir -p bin
 
-# Compile
-COMPILE_FLAGS=
-$RISCV_TOOLCHAIN/riscv32-unknown-elf-gcc -S -o bin/simple.s simple.c
-
-# Assemble
-ASFLAGS+=-O0                  # Don't perform optimizations
-ASFLAGS+=-Wall                # Report all warnings
-ASFLAGS+=-march=rv32i         # Just the core RV32I ISA
-ASFLAGS+=-nostartfiles        # No extra startup code
-ASFLAGS+=-nostdlib
-ASFLAGS+=--specs=nosys.specs
-ASFLAGS+=-Wl,-Tlink.ld
-
-$RISCV_TOOLCHAIN/riscv32-unknown-elf-as -o bin/simple.o bin/simple.s
-
-# Extract binary
-$RISCV_TOOLCHAIN/riscv32-unknown-elf-objdump -s bin/simple.o
-
-#$RISCV_TOOLCHAIN/riscv32-unknown-elf-objcopy -O binary -j .text bin/simple.out simple.bin
-
-
-#hexdump bin/simple.out
+# Build CPU
+iverilog -o bin/verify_cpu $CPU/cpu.v $MODULES/datapath.v $MODULES/flopr.v $MODULES/adder.v $MODULES/mux2.v $MODULES/regfile.v $MODULES/extend.v $MODULES/alu.v $MODULES/mux3.v $MODULES/controller.v $MODULES/main_decoder.v $MODULES/alu_decoder.v verify_cpu_tb.v
