@@ -21,7 +21,7 @@ xori |   I|  |           |
 srli |   I|  |           |
 srai |   I|  |           |
 ori  |   I|  |           |
-andi |   I|  |           |
+andi |   I| ?|           |
 auipc|   U|  |           |
 sb   |   S|  |           |
 sh   |   S|  |           |
@@ -31,14 +31,14 @@ sub  |   R| x|           |
 sll  |   R|  |           |
 slt  |   R| x|           |
 sltu |   R|  |           |
-xor  |   R|  |           |
+xor  |   R| ?|           |
 srl  |   R|  |           |
 sra  |   R|  |           |
 or   |   R| x|           |
 and  |   R| x|           |
-lui  |   U|  |           |
+lui  |   U| x|           |
 beq  |   B| x|           |
-bne  |   B|  |           |
+bne  |   B| x|           |
 blt  |   B|  |           |
 bge  |   B|  |           |
 bltu |   B|  |           |

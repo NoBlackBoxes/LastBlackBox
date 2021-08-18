@@ -67,10 +67,6 @@ module cpu_tb();
     // initialize test
     initial
         begin
-            $dumpfile("bin/verify_cpu_tb.vcd");
-            $dumpvars(0, cpu_tb);
-            $monitor(clock, reset, instruction, read_data, mem_write, PC, data_adr, write_data);
-
             reset <= 1; # 22; reset <= 0;
         end   
     
@@ -88,7 +84,7 @@ module cpu_tb();
                     if(data_adr === 32'hFFFFFFF0 & write_data === 1) 
                         begin
                             $display("Verification succeeded");
-                            $stop;
+                            $finish;
                         end 
                     else if (data_adr === 32'hFFFFFFF0)
                         begin
