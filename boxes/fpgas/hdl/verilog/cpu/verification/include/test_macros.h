@@ -13,10 +13,9 @@
 #define TEST_CASE( testnum, testreg, correctval, code... ) \
 test_ ## testnum: \
     code; \
-    addi  x29, x0, TRUNC_32BIT(correctval); \
-    addi  TESTNUM, x0, testnum; \
-    beq testreg, x29, pass; \
-    beq testreg, x0, fail; \
+    li  x29, TRUNC_32BIT(correctval); \
+    li  TESTNUM, testnum; \
+    bne testreg, x29, fail;
 
 # We use a macro hack to simpify code generation for various numbers
 # of bubble cycles.
@@ -152,8 +151,8 @@ test_ ## testnum: \
 
 #define TEST_RR_OP( testnum, inst, result, val1, val2 ) \
     TEST_CASE( testnum, x3, result, \
-      addi  x1, x0, TRUNC_32BIT(val1); \
-      addi  x2, x0, TRUNC_32BIT(val2); \
+      li  x1, TRUNC_32BIT(val1); \
+      li  x2, TRUNC_32BIT(val2); \
       inst x3, x1, x2; \
     )
 
@@ -572,7 +571,7 @@ test_ ## testnum: \
 #-----------------------------------------------------------------------
 
 #define TEST_PASSFAIL \
-        beq x0, x0, fail; \
+        bne x0, TESTNUM, pass; \
 fail: \
         RVTEST_FAIL; \
 pass: \
