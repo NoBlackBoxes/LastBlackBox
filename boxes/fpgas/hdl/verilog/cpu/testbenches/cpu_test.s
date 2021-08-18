@@ -10,7 +10,7 @@ main:   addi x2, x0, 5          # x2 = 5                    0           00500113
         or   x4, x7, x2         # x4 = (3 OR 5) = 7         C           0023E233
         and  x5, x3, x4         # x5 = (12 AND 7) = 4       10          0041F2B3
         add  x5, x5, x4         # x5 = 4 + 7 = 11           14          004282B3
-        beq  x5, x7, end        # shouldn't be taken        18          02728863
+        bne  x5, x5, end        # shouldn't be taken        18          02529863
         slt  x4, x3, x4         # x4 = (12 < 7) = 0         1C          0041A233
         beq  x4, x0, around     # should be taken           20          00020463
         addi x5, x0, 0          # shouldn't execute         24          00000293
