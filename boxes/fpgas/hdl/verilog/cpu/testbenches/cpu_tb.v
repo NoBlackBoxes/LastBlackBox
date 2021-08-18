@@ -85,7 +85,7 @@ module cpu_tb();
         begin
             if(mem_write) 
                 begin
-                    if(data_adr === 100 & write_data === 25) 
+                    if(data_adr === 4196 & write_data === 25) 
                         begin
                             $display("Simulation succeeded");
                             $stop;

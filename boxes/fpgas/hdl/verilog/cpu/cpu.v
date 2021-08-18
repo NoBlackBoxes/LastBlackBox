@@ -18,7 +18,6 @@ module cpu(clock, reset, instruction, read_data, mem_write, PC, ALU_result, writ
     wire jump;
     wire zero;
     wire [1:0] result_select;
-    wire [1:0] immediate_select;
     wire [2:0] ALU_control;
 
     // Sub-module: Controller
@@ -34,7 +33,6 @@ module cpu(clock, reset, instruction, read_data, mem_write, PC, ALU_result, writ
         ALU_select,             // (output) ALU_Src
         reg_write,              // (output) reg_write
         jump,                   // (output) jump
-        immediate_select,       // (output) imm_src
         ALU_control             // (output) ALU_control
     );
 
@@ -47,7 +45,6 @@ module cpu(clock, reset, instruction, read_data, mem_write, PC, ALU_result, writ
         PC_select,              // (input) PC_select
         ALU_select,             // (input) ALU_select
         reg_write,              // (input) reg_write
-        immediate_select,       // (input) immediate_select
         ALU_control,            // (input) ALU_control
         instruction,            // (input) instruction
         read_data,              // (input) read_data

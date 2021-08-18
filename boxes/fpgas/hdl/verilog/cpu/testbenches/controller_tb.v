@@ -12,18 +12,17 @@ module controller_tb;
     wire t_ALU_select;
     wire t_reg_write;
     wire t_jump;
-    wire [1:0] t_immediate_select;
     wire [2:0] t_ALU_control;
 
     // Create instance of controller module
-    controller test_controller(t_opcode, t_funct3, t_funct7b5, t_zero, t_result_select, t_mem_write, t_PC_select, t_ALU_select, t_reg_write, t_jump, t_immediate_select, t_ALU_control);
+    controller test_controller(t_opcode, t_funct3, t_funct7b5, t_zero, t_result_select, t_mem_write, t_PC_select, t_ALU_select, t_reg_write, t_jump, t_ALU_control);
 
     // Test
     initial
         begin
             $dumpfile("bin/controller_tb.vcd");
             $dumpvars(0, controller_tb);
-            $monitor(t_opcode, t_funct3, t_funct7b5, t_zero, t_result_select, t_mem_write, t_PC_select, t_ALU_select, t_reg_write, t_jump, t_immediate_select, t_ALU_control);
+            $monitor(t_opcode, t_funct3, t_funct7b5, t_zero, t_result_select, t_mem_write, t_PC_select, t_ALU_select, t_reg_write, t_jump, t_ALU_control);
             
             // Initialize
             t_opcode <= 7'b0000000;
