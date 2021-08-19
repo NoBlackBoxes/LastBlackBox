@@ -1,11 +1,12 @@
 // Controller (RV32I)
-module controller(opcode, funct3, funct7b5, zero, result_select, mem_write, PC_select, ALU_select, reg_write, jump, ALU_control);
+module controller(opcode, funct3, funct7b5, zero, sign, result_select, mem_write, PC_select, ALU_select, reg_write, jump, ALU_control);
 
     // Declarations
     input [6:0] opcode;
     input [2:0] funct3;  
     input funct7b5;
     input zero;
+    input sign;
     output [2:0] result_select;
     output mem_write;
     output reg PC_select;
@@ -46,6 +47,7 @@ module controller(opcode, funct3, funct7b5, zero, result_select, mem_write, PC_s
         case(funct3)
             3'b000: PC_select = branch & zero | jump;   // beq
             3'b001: PC_select = branch & ~zero | jump;  // bne
+            3'b101: PC_select = branch & zero | branch & ~sign | jump; // bne
             default: PC_select = 1'b0;
         endcase           
     

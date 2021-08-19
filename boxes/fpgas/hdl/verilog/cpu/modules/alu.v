@@ -1,5 +1,5 @@
 // ALU
-module alu(src_A, src_B, ALU_control, ALU_result, zero);
+module alu(src_A, src_B, ALU_control, ALU_result, zero, sign);
     
     // Declarations
     input [31:0] src_A;
@@ -7,6 +7,7 @@ module alu(src_A, src_B, ALU_control, ALU_result, zero);
     input [2:0] ALU_control;
     output reg [31:0] ALU_result;
     output zero;
+    output sign;
 
     // Logic
     always @*
@@ -19,5 +20,6 @@ module alu(src_A, src_B, ALU_control, ALU_result, zero);
             3'b101: ALU_result <= ($signed(src_A) < $signed(src_B)) ? 1 : 0; // set less than   
         endcase
     assign zero = (ALU_result == 0) ? 1 : 0; // Set zero flag
+    assign sign = ALU_result[31]; // Set sign flag
 
 endmodule

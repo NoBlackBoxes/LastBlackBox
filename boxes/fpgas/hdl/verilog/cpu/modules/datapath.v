@@ -1,5 +1,5 @@
 // Datapath (RV32I)
-module datapath(clock, reset, result_select, PC_select, ALU_select, reg_write, ALU_control, instruction, read_data, zero, PC, ALU_result, write_data);
+module datapath(clock, reset, result_select, PC_select, ALU_select, reg_write, ALU_control, instruction, read_data, zero, sign, PC, ALU_result, write_data);
 
     // Declarations
     input clock;
@@ -12,6 +12,7 @@ module datapath(clock, reset, result_select, PC_select, ALU_select, reg_write, A
     input [31:0] instruction;
     input [31:0] read_data;
     output zero;
+    output sign;
     output [31:0] PC;
     output [31:0] ALU_result;
     output [31:0] write_data;
@@ -37,7 +38,7 @@ module datapath(clock, reset, result_select, PC_select, ALU_select, reg_write, A
     
     // Logic (ALU)
     mux2 #(32) src_B_mux(write_data, immediate, ALU_select, src_B);
-    alu alu(src_A, src_B, ALU_control, ALU_result, zero);
+    alu alu(src_A, src_B, ALU_control, ALU_result, zero, sign);
     mux8 #(32) result_mux(ALU_result, read_data, PC_plus4, immediate, PC_target, 32'hxxxxxxxx, 32'hxxxxxxxx, 32'hxxxxxxxx, result_select, result);
 
 endmodule

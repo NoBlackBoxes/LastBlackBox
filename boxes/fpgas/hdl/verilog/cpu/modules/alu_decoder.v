@@ -20,6 +20,7 @@ module alu_decoder(opcode_b5, funct3, funct7b5, ALU_op, ALU_control);
                 case(funct3)
                     3'b000: ALU_control = 3'b001; // subtraction (beq)
                     3'b001: ALU_control = 3'b100; // xor (bne) - could use subtraction?
+                    3'b101: ALU_control = 3'b001; // subtraction (bge)
                     default: ALU_control = 3'bxxx; // ???
                 endcase
             default:
