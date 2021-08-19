@@ -17,7 +17,6 @@ module cpu(clock, reset, instruction, read_data, mem_write, PC, ALU_result, writ
     wire reg_write;
     wire jump;
     wire zero;
-    wire sign;
     wire [2:0] result_select;
     wire [2:0] ALU_control;
 
@@ -28,7 +27,6 @@ module cpu(clock, reset, instruction, read_data, mem_write, PC, ALU_result, writ
         instruction[14:12],     // (input) Field: funct3
         instruction[30],        // (input) funct7b5
         zero,                   // (input) zero
-        sign,                   // (input) sign
         result_select,          // (output) result_src
         mem_write,              // (output) mem_write
         PC_select,              // (output) PC_src
@@ -51,7 +49,6 @@ module cpu(clock, reset, instruction, read_data, mem_write, PC, ALU_result, writ
         instruction,            // (input) instruction
         read_data,              // (input) read_data
         zero,                   // (output) zero
-        sign,                   // (output) sign
         PC,                     // (output) PC
         ALU_result,             // (output) ALU_result
         write_data              // (output) write_data

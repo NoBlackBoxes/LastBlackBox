@@ -18,9 +18,12 @@ module alu_decoder(opcode_b5, funct3, funct7b5, ALU_op, ALU_control);
             2'b00: ALU_control = 3'b000; // addition   
             2'b01:
                 case(funct3)
-                    3'b000: ALU_control = 3'b001; // subtraction (beq)
-                    3'b001: ALU_control = 3'b100; // xor (bne) - could use subtraction?
-                    3'b101: ALU_control = 3'b001; // subtraction (bge)
+                    3'b000: ALU_control = 3'b001; // subtraction: beq
+                    3'b001: ALU_control = 3'b001; // subtraction: bne
+                    3'b100: ALU_control = 3'b101; // set less than: blt
+                    3'b101: ALU_control = 3'b101; // set less than: bge
+                    3'b110: ALU_control = 3'b110; // set less than (unsigned): bltu
+                    3'b111: ALU_control = 3'b110; // set less than (unsigned): bgeu
                     default: ALU_control = 3'bxxx; // ???
                 endcase
             default:
