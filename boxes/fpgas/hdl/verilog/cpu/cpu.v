@@ -17,7 +17,7 @@ module cpu(clock, reset, instruction, read_data, mem_write, PC, ALU_result, writ
     wire reg_write;
     wire jump;
     wire zero;
-    wire [1:0] result_select;
+    wire [2:0] result_select;
     wire [2:0] ALU_control;
 
     // Sub-module: Controller

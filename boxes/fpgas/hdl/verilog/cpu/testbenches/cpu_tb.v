@@ -48,7 +48,10 @@ module cpu_tb();
     wire [31:0] PC;
     wire [31:0] data_adr;
     wire [31:0] write_data;
-    
+
+    // Debug    
+    reg [7:0] instruction_counter;
+
     // Create instance of CPU module
     cpu test_cpu(
         clock, 
@@ -71,6 +74,7 @@ module cpu_tb();
             $dumpvars(0, cpu_tb);
             $monitor(clock, reset, instruction, read_data, mem_write, PC, data_adr, write_data);
 
+            instruction_counter <= 0;
             reset <= 1; # 22; reset <= 0;
         end   
     
@@ -83,6 +87,12 @@ module cpu_tb();
     // check results
     always @(negedge clock)
         begin
+            instruction_counter <= instruction_counter + 1;
+            if(instruction_counter >= 24)
+                begin
+                    $display("IC stopped");
+                    $stop;
+                end 
             if(mem_write) 
                 begin
                     if(data_adr === 4196 & write_data === 25) 

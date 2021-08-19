@@ -6,7 +6,7 @@ module controller(opcode, funct3, funct7b5, zero, result_select, mem_write, PC_s
     input [2:0] funct3;  
     input funct7b5;
     input zero;
-    output [1:0] result_select;
+    output [2:0] result_select;
     output mem_write;
     output reg PC_select;
     output ALU_select;

@@ -13,7 +13,7 @@ MODULES=$CPU"/modules"
 mkdir -p bin
 
 # Build CPU
-iverilog -o bin/verify_cpu $CPU/cpu.v $MODULES/datapath.v $MODULES/flopr.v $MODULES/adder.v $MODULES/mux2.v $MODULES/regfile.v $MODULES/generate_immediate.v $MODULES/alu.v $MODULES/mux4.v $MODULES/controller.v $MODULES/main_decoder.v $MODULES/alu_decoder.v verify_cpu_tb.v
+iverilog -o bin/verify_cpu $CPU/cpu.v $MODULES/datapath.v $MODULES/flopr.v $MODULES/adder.v $MODULES/mux2.v $MODULES/regfile.v $MODULES/generate_immediate.v $MODULES/alu.v $MODULES/mux8.v $MODULES/controller.v $MODULES/main_decoder.v $MODULES/alu_decoder.v verify_cpu_tb.v
 
 # Reset CPU
 CPU=$LBB_ROOT"/boxes/fpgas/hdl/verilog/cpu/verification/bin/verify_cpu"
@@ -73,11 +73,11 @@ cp bin/andi.txt bin/imem.txt
 echo "Test: andi"
 vvp $CPU
 
-## AUIPC
-#$RISCV_TOOLCHAIN/riscv32-unknown-elf-gcc $ASFLAGS -o bin/auipc.o tests/auipc.S
-#$RISCV_TOOLCHAIN/riscv32-unknown-elf-objcopy -O binary -j .text bin/auipc.o bin/auipc.bin
-#hexdump bin/auipc.bin > bin/auipc.dump
-#python utilities/dump2machine.py bin/auipc.dump
-#cp bin/auipc.txt bin/imem.txt
-#echo "Test: auipc"
-#vvp $CPU
+# AUIPC
+$RISCV_TOOLCHAIN/riscv32-unknown-elf-gcc $ASFLAGS -o bin/auipc.o tests/auipc.S
+$RISCV_TOOLCHAIN/riscv32-unknown-elf-objcopy -O binary -j .text bin/auipc.o bin/auipc.bin
+hexdump bin/auipc.bin > bin/auipc.dump
+python utilities/dump2machine.py bin/auipc.dump
+cp bin/auipc.txt bin/imem.txt
+echo "Test: auipc"
+vvp $CPU

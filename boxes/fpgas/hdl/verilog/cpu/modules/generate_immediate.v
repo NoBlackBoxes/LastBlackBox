@@ -17,7 +17,8 @@ module generate_immediate(instruction, immediate);
                 7'b0100011: immediate = {{20{instruction[31]}}, instruction[31:25], instruction[11:7]};                         // S−type (stores): sw
                 7'b1100011: immediate = {{20{instruction[31]}}, instruction[7], instruction[30:25],  instruction[11:8], 1'b0};  // B−type: beq, bne
                 7'b1101111: immediate = {{12{instruction[31]}}, instruction[19:12], instruction[20], instruction[30:21], 1'b0}; // J−type: jal
-                7'b0110111: immediate = {instruction[31:12], 12'b0};                                                            // U−type: lui
+                7'b0110111,                                                                                                     // U−type: lui
+                7'b0010111: immediate = {instruction[31:12], 12'b0};                                                            // U−type: auipc
                 default: immediate = 32'bx; // Undefined
             endcase
         end

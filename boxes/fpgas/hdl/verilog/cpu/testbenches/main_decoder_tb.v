@@ -6,7 +6,7 @@ module main_decoder_tb;
     wire t_reg_write;
     wire t_ALU_select;
     wire t_mem_write;
-    wire [1:0] t_result_select;
+    wire [2:0] t_result_select;
     wire t_branch;
     wire [1:0] t_ALU_op;
     wire t_jump;

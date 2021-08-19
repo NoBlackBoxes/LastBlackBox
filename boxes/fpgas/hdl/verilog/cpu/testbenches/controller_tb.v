@@ -6,7 +6,7 @@ module controller_tb;
     reg [2:0] t_funct3;
     reg t_funct7b5;
     reg t_zero;
-    wire [1:0] t_result_select;
+    wire [2:0] t_result_select;
     wire t_mem_write;
     wire t_PC_select;
     wire t_ALU_select;

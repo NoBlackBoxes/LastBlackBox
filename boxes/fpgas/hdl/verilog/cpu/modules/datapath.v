@@ -4,7 +4,7 @@ module datapath(clock, reset, result_select, PC_select, ALU_select, reg_write, A
     // Declarations
     input clock;
     input reset;
-    input [1:0] result_select;
+    input [2:0] result_select;
     input PC_select;
     input ALU_select;
     input reg_write;
@@ -38,6 +38,6 @@ module datapath(clock, reset, result_select, PC_select, ALU_select, reg_write, A
     // Logic (ALU)
     mux2 #(32) src_B_mux(write_data, immediate, ALU_select, src_B);
     alu alu(src_A, src_B, ALU_control, ALU_result, zero);
-    mux4 #(32) result_mux(ALU_result, read_data, PC_plus4, immediate, result_select, result);
+    mux8 #(32) result_mux(ALU_result, read_data, PC_plus4, immediate, PC_target, 32'hxxxxxxxx, 32'hxxxxxxxx, 32'hxxxxxxxx, result_select, result);
 
 endmodule
