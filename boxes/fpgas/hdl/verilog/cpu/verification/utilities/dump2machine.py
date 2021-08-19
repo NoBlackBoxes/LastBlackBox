@@ -18,6 +18,7 @@ output_file = open(output_path, "w")
 lines = input_file.readlines()
 
 # Parse input HEX dump file
+instruction_count = 0
 for line in lines:
     tokens = line.split(' ')
     num_tokens = len(tokens)
@@ -30,9 +31,18 @@ for line in lines:
                 if has_lower:
                     output_file.write((token + lower + '\n').upper())                    
                     has_lower = False
+                    instruction_count += 1
                 else:
                     lower = token # Store lower byte
                     has_lower = True
+
+# Report
+#print("{0} instructions (32-bit words) written to HEX text file.".format(instruction_count))
+
+# Pad memory file with zeros
+memory_size = 4096
+for i in range(memory_size - instruction_count):
+    output_file.write('00000000\n')
 
 # Cleanup
 input_file.close()

@@ -6,7 +6,7 @@ module imem(a, rd);
     output [31:0] rd;   
 
     // Intermediates
-    logic [31:0] RAM[4096:0];
+    logic [31:0] RAM[0:4095];
 
     // Logic
     initial
@@ -27,7 +27,7 @@ module dmem(clock, we, a, wd, rd);
     output [31:0] rd;
     
     // Intermediates
-    logic [31:0] RAM[4096:0];
+    logic [31:0] RAM[0:4095];
     assign rd = RAM[a[31:2]]; // word aligned
     
     // Logic
@@ -70,8 +70,8 @@ module verify_cpu_tb();
     // initialize test
     initial
         begin
-            $dumpfile("bin/verify_cpu_tb.vcd");
-            $dumpvars(0, verify_cpu_tb);
+            //$dumpfile("bin/verify_cpu_tb.vcd");
+            //$dumpvars(0, verify_cpu_tb);
             
             instruction_counter <= 0;
             reset <= 1; # 22; reset <= 0;
@@ -96,12 +96,12 @@ module verify_cpu_tb();
                 begin
                     if(data_adr === 32'hFFFFFFF0 & write_data === 1) 
                         begin
-                            $display("Verification succeeded");
+                            $display(" - Verification succeeded");
                             $finish;
                         end 
                     else if (data_adr === 32'hFFFFFFF0)
                         begin
-                            $display("Verification failed");
+                            $display(" ! Verification failed");
                             $stop;
                         end
                 end   
