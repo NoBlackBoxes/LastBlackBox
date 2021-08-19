@@ -31,6 +31,10 @@ vvp bin/flopenr
 iverilog -o bin/mux2 $MODULES/mux2.v mux2_tb.v
 vvp bin/mux2
 
+# Build and Simulate Mux3
+iverilog -o bin/mux3 $MODULES/mux3.v mux3_tb.v
+vvp bin/mux3
+
 # Build and Simulate Mux4
 iverilog -o bin/mux8 $MODULES/mux8.v mux8_tb.v
 vvp bin/mux8
@@ -56,11 +60,11 @@ iverilog -o bin/alu $MODULES/alu.v alu_tb.v
 vvp bin/alu
 
 # Build and Simulate Datapath
-iverilog -o bin/datapath $MODULES/datapath.v $MODULES/flopr.v $MODULES/adder.v $MODULES/mux2.v $MODULES/regfile.v $MODULES/generate_immediate.v $MODULES/alu.v $MODULES/mux8.v datapath_tb.v
+iverilog -o bin/datapath $MODULES/datapath.v $MODULES/flopr.v $MODULES/adder.v $MODULES/mux2.v $MODULES/mux3.v $MODULES/regfile.v $MODULES/generate_immediate.v $MODULES/alu.v $MODULES/mux8.v datapath_tb.v
 vvp bin/datapath
 
 # Build and Simulate CPU
-iverilog -o bin/cpu $CPU/cpu.v $MODULES/datapath.v $MODULES/flopr.v $MODULES/adder.v $MODULES/mux2.v $MODULES/regfile.v $MODULES/generate_immediate.v $MODULES/alu.v $MODULES/mux8.v $MODULES/controller.v $MODULES/main_decoder.v $MODULES/alu_decoder.v cpu_tb.v
+iverilog -o bin/cpu $CPU/cpu.v $MODULES/datapath.v $MODULES/flopr.v $MODULES/adder.v $MODULES/mux2.v $MODULES/mux3.v $MODULES/regfile.v $MODULES/generate_immediate.v $MODULES/alu.v $MODULES/mux8.v $MODULES/controller.v $MODULES/main_decoder.v $MODULES/alu_decoder.v cpu_tb.v
 vvp bin/cpu
 
 # Visualize
@@ -68,7 +72,7 @@ vvp bin/cpu
 #gtkwave bin/generate_immediate_tb.vcd
 #gtkwave bin/flopr_tb.vcd
 #gtkwave bin/flopenr_tb.vcd
-#gtkwave bin/mux2_tb.vcd
+#gtkwave bin/mux3_tb.vcd
 #gtkwave bin/mux8_tb.vcd
 #gtkwave bin/regfile_tb.vcd
 #gtkwave bin/main_decoder_tb.vcd

@@ -12,7 +12,7 @@ module cpu(clock, reset, instruction, read_data, mem_write, PC, ALU_result, writ
     output [31:0] write_data;
     
     // Intermediates
-    wire PC_select; 
+    wire [1:0] PC_select;
     wire ALU_select; 
     wire reg_write;
     wire jump;

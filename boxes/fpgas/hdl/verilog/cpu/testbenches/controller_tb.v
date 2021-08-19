@@ -8,7 +8,7 @@ module controller_tb;
     reg t_zero;
     wire [2:0] t_result_select;
     wire t_mem_write;
-    wire t_PC_select;
+    wire [1:0] t_PC_select;
     wire t_ALU_select;
     wire t_reg_write;
     wire t_jump;

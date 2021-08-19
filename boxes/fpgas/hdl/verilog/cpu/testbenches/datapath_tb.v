@@ -5,7 +5,7 @@ module datapath_tb;
     reg t_clock;
     reg t_reset;
     reg [2:0] t_result_select;
-    reg t_PC_select;
+    reg [1:0] t_PC_select;
     reg t_ALU_select;
     reg t_reg_write;
     reg [2:0] t_ALU_control;

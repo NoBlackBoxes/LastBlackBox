@@ -8,7 +8,7 @@ module controller(opcode, funct3, funct7b5, zero, result_select, mem_write, PC_s
     input zero;
     output [2:0] result_select;
     output mem_write;
-    output reg PC_select;
+    output reg [1:0] PC_select;
     output ALU_select;
     output reg_write;
     output jump;
@@ -44,9 +44,11 @@ module controller(opcode, funct3, funct7b5, zero, result_select, mem_write, PC_s
     // Program Counter update for branch instructions
     always @*
         if(jump)
-            begin
-                PC_select = 1'b1;
-            end
+            case(opcode[3])
+                1'b0: PC_select = 2'b10;            // jalr
+                1'b1: PC_select = 2'b01;            // jal
+                default: PC_select = 2'b01;
+            endcase
         else
             case(funct3)
                 3'b000: PC_select = branch & zero;   // beq
@@ -55,6 +57,6 @@ module controller(opcode, funct3, funct7b5, zero, result_select, mem_write, PC_s
                 3'b101: PC_select = branch & zero;   // bge
                 3'b110: PC_select = branch & ~zero;  // bltu
                 3'b111: PC_select = branch & zero;   // bgeu
-                default: PC_select = 1'b0;
+                default: PC_select = 2'b00;
             endcase           
 endmodule

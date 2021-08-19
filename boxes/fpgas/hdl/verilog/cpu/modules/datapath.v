@@ -5,7 +5,7 @@ module datapath(clock, reset, result_select, PC_select, ALU_select, reg_write, A
     input clock;
     input reset;
     input [2:0] result_select;
-    input PC_select;
+    input [1:0] PC_select;
     input ALU_select;
     input reg_write;
     input [2:0] ALU_control;
@@ -29,7 +29,7 @@ module datapath(clock, reset, result_select, PC_select, ALU_select, reg_write, A
     flopr #(32) pc_reg(clock, reset, PC_next, PC);
     adder pc_add4(PC, 32'd4, PC_plus4);
     adder pc_addbranch(PC, immediate, PC_target);
-    mux2 #(32) pcmux(PC_plus4, PC_target, PC_select, PC_next);
+    mux3 #(32) pc_mux(PC_plus4, PC_target, ALU_result, PC_select, PC_next);
     
     // Logic (register file)
     regfile regfile(clock, reg_write, instruction[19:15], instruction[24:20], instruction[11:7], result, src_A, write_data);
