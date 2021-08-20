@@ -23,6 +23,7 @@ module datapath(clock, reset, result_select, PC_select, ALU_select, reg_write, A
     wire [31:0] immediate;
     wire [31:0] src_A;
     wire [31:0] src_B;
+    wire [31:0] read_data_out;
     wire [31:0] result;
     
     // Logic (next PC)
@@ -38,6 +39,7 @@ module datapath(clock, reset, result_select, PC_select, ALU_select, reg_write, A
     // Logic (ALU)
     mux2 #(32) src_B_mux(write_data, immediate, ALU_select, src_B);
     alu alu(src_A, src_B, ALU_control, ALU_result, zero);
-    mux8 #(32) result_mux(ALU_result, read_data, PC_plus4, immediate, PC_target, 32'hxxxxxxxx, 32'hxxxxxxxx, 32'hxxxxxxxx, result_select, result);
+    select_read select_read(instruction[14:12], read_data, read_data_out);
+    mux8 #(32) result_mux(ALU_result, read_data_out, PC_plus4, immediate, PC_target, 32'hxxxxxxxx, 32'hxxxxxxxx, 32'hxxxxxxxx, result_select, result);
 
 endmodule

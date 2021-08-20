@@ -13,7 +13,10 @@ MODULES=$CPU"/modules"
 mkdir -p bin
 
 # Build CPU
-iverilog -o bin/verify_cpu $CPU/cpu.v $MODULES/datapath.v $MODULES/flopr.v $MODULES/adder.v $MODULES/mux2.v $MODULES/mux3.v $MODULES/regfile.v $MODULES/generate_immediate.v $MODULES/alu.v $MODULES/mux8.v $MODULES/controller.v $MODULES/main_decoder.v $MODULES/alu_decoder.v verify_cpu_tb.v
+iverilog -o bin/verify_cpu $CPU/cpu.v $MODULES/datapath.v $MODULES/flopr.v $MODULES/adder.v $MODULES/mux2.v $MODULES/mux3.v $MODULES/regfile.v $MODULES/generate_immediate.v $MODULES/alu.v $MODULES/mux8.v $MODULES/select_read.v $MODULES/controller.v $MODULES/main_decoder.v $MODULES/alu_decoder.v verify_cpu_tb.v
+
+# Create empty dmem file for initializing data memory
+python utilities/empty_dmem.py "bin/dmem.txt"
 
 # Reset CPU
 CPU=$LBB_ROOT"/boxes/fpgas/hdl/verilog/cpu/verification/bin/verify_cpu"
@@ -44,9 +47,18 @@ do
     echo "Testing: $TESTNAME"
 
     $RISCV_TOOLCHAIN/riscv32-unknown-elf-gcc $ASFLAGS -o bin/$TESTNAME.o tests/$TESTNAME.S
-    $RISCV_TOOLCHAIN/riscv32-unknown-elf-objcopy -O binary -j .text bin/$TESTNAME.o bin/$TESTNAME.bin
-    hexdump bin/$TESTNAME.bin > bin/$TESTNAME.dump
-    python utilities/dump2machine.py bin/$TESTNAME.dump
-    cp bin/$TESTNAME.txt bin/imem.txt
+
+    $RISCV_TOOLCHAIN/riscv32-unknown-elf-objcopy -O binary -j .text bin/$TESTNAME.o bin/$TESTNAME.code
+    $RISCV_TOOLCHAIN/riscv32-unknown-elf-objcopy -O binary -j .data bin/$TESTNAME.o bin/$TESTNAME.data
+
+    hexdump bin/$TESTNAME.code > bin/$TESTNAME.dump_code
+    hexdump bin/$TESTNAME.data > bin/$TESTNAME.dump_data
+
+    python utilities/dump2machine_code.py bin/$TESTNAME.dump_code
+    python utilities/dump2machine_data.py bin/$TESTNAME.dump_data
+
+    cp bin/$TESTNAME.text_code bin/imem.txt
+    cp bin/$TESTNAME.text_data bin/dmem.txt
+
     vvp $CPU
 done

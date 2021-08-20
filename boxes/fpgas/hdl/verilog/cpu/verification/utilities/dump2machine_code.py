@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 import sys
 
-# Convert HEX dump text to machine code text
+# Convert HEX (text) dump of .text section to machine code file
 
 # Parse command line input
 if(len(sys.argv) == 2):
     input_path = sys.argv[1]
-    output_path = input_path[:-4] + 'txt'
+    output_path = input_path[:-9] + 'text_code'
 else:
-    exit("Fail: dump2machine - incorrect input arg count")
+    exit("Fail: dump2machine_code - incorrect input arg count")
 
 # Open input (dump) and output (machine code) files
 input_file = open(input_path, "r")

@@ -6,7 +6,7 @@ module imem(a, rd);
     output [31:0] rd;   
 
     // Intermediates
-    logic [31:0] RAM[0:4095];
+    reg [31:0] RAM[0:4095];
 
     // Logic
     initial
@@ -22,15 +22,32 @@ module dmem(clock, we, a, wd, rd);
     // Declarations
     input clock;
     input we;
-    input [31:0] a; 
+    input [31:0] a;
     input [31:0] wd;
-    output [31:0] rd;
+    output reg [31:0] rd;
     
     // Intermediates
-    logic [31:0] RAM[0:4095];
-    assign rd = RAM[a[31:2]]; // word aligned
+    wire misaligned;
+    reg [7:0] RAM[0:4095];
     
-    // Logic
+    // Initialize
+    initial
+        $readmemh("bin/dmem.txt", RAM);
+
+    // Logic (control)
+    assign misaligned = a[0] | a[1];
+    assign sub_byte = a[1:0];
+
+    // Logic (read)
+    always @*
+        begin
+            if (misaligned)
+                rd = {24'h000000, RAM[a]};
+            else
+                rd = {RAM[a+3], RAM[a+2], RAM[a+1], RAM[a+0]};
+        end
+
+    // Logic (write)
     always @(posedge clock)
         if (we) RAM[a[31:2]] <= wd;
 
@@ -70,8 +87,8 @@ module verify_cpu_tb();
     // initialize test
     initial
         begin
-            //$dumpfile("bin/verify_cpu_tb.vcd");
-            //$dumpvars(0, verify_cpu_tb);
+            $dumpfile("bin/verify_cpu_tb.vcd");
+            $dumpvars(0, verify_cpu_tb);
             
             instruction_counter <= 0;
             reset <= 1; # 22; reset <= 0;
