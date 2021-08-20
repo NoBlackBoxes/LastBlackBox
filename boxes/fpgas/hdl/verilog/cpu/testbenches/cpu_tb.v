@@ -1,41 +1,3 @@
-// Instruction memory module
-module imem(a, rd);
-
-    // Declarations
-    input [31:0] a;
-    output [31:0] rd;   
-
-    // Intermediates
-    logic [31:0] RAM[63:0];
-
-    // Logic
-    initial
-        $readmemh("cpu_test.txt", RAM);
-    
-    assign rd = RAM[a[31:2]]; // word aligned
-
-endmodule
-
-// Data memory module
-module dmem(clock, we, a, wd, rd);
-
-    // Declarations
-    input clock;
-    input we;
-    input [31:0] a; 
-    input [31:0] wd;
-    output [31:0] rd;
-    
-    // Intermediates
-    logic [31:0] RAM[63:0];
-    assign rd = RAM[a[31:2]]; // word aligned
-    
-    // Logic
-    always @(posedge clock)
-        if (we) RAM[a[31:2]] <= wd;
-
-endmodule
-
 // Testbench for CPU (RV32I)
 module cpu_tb();
 
@@ -64,8 +26,8 @@ module cpu_tb();
         write_data);
     
     // Create instance of Instruction and Data Memory modules
-    imem imem(PC, instruction);    
-    dmem dmem(clock, mem_write, data_adr, write_data, read_data);
+    rom rom(PC, instruction);    
+    ram ram(clock, mem_write, data_adr, write_data, read_data);
 
     // initialize test
     initial
@@ -78,7 +40,7 @@ module cpu_tb();
             reset <= 1; # 22; reset <= 0;
         end   
     
-    // generate clock to sequence tests
+    // Generate clock to sequence tests
     always
         begin
             clock <= 1; # 5; clock <= 0; # 5;

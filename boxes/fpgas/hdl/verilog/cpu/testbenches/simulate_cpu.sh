@@ -47,6 +47,16 @@ vvp bin/select_read
 iverilog -o bin/regfile $MODULES/regfile.v regfile_tb.v
 vvp bin/regfile
 
+# Build and Simulate ROM
+python ../utilities/incremental_rom.py bin/rom.txt
+iverilog -o bin/rom $MODULES/rom.v rom_tb.v
+vvp bin/rom
+
+# Build and Simulate RAM
+python ../utilities/empty_ram.py bin/ram.txt
+iverilog -o bin/ram $MODULES/ram.v ram_tb.v
+vvp bin/ram
+
 # Build and Simulate Main Decoder
 iverilog -o bin/main_decoder $MODULES/main_decoder.v main_decoder_tb.v
 vvp bin/main_decoder
@@ -64,11 +74,12 @@ iverilog -o bin/alu $MODULES/alu.v alu_tb.v
 vvp bin/alu
 
 # Build and Simulate Datapath
-iverilog -o bin/datapath $MODULES/datapath.v $MODULES/flopr.v $MODULES/adder.v $MODULES/mux2.v $MODULES/mux3.v $MODULES/regfile.v $MODULES/generate_immediate.v $MODULES/alu.v $MODULES/mux8.v $MODULES/select_read.v datapath_tb.v
+iverilog -o bin/datapath $MODULES/datapath.v $MODULES/flopr.v $MODULES/adder.v $MODULES/mux2.v $MODULES/mux3.v $MODULES/regfile.v $MODULES/generate_immediate.v $MODULES/alu.v $MODULES/mux8.v $MODULES/rom.v $MODULES/ram.v $MODULES/select_read.v datapath_tb.v
 vvp bin/datapath
 
 # Build and Simulate CPU
-iverilog -o bin/cpu $CPU/cpu.v $MODULES/datapath.v $MODULES/flopr.v $MODULES/adder.v $MODULES/mux2.v $MODULES/mux3.v $MODULES/regfile.v $MODULES/generate_immediate.v $MODULES/alu.v $MODULES/mux8.v $MODULES/select_read.v $MODULES/controller.v $MODULES/main_decoder.v $MODULES/alu_decoder.v cpu_tb.v
+cp cpu_rom.txt bin/rom.txt
+iverilog -o bin/cpu $CPU/cpu.v $MODULES/datapath.v $MODULES/flopr.v $MODULES/adder.v $MODULES/mux2.v $MODULES/mux3.v $MODULES/regfile.v $MODULES/generate_immediate.v $MODULES/alu.v $MODULES/mux8.v $MODULES/rom.v $MODULES/ram.v $MODULES/select_read.v $MODULES/controller.v $MODULES/main_decoder.v $MODULES/alu_decoder.v cpu_tb.v
 vvp bin/cpu
 
 # Visualize

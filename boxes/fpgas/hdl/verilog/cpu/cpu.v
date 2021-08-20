@@ -1,12 +1,12 @@
 // CPU (RV32I)
-module cpu(clock, reset, instruction, read_data, mem_write, PC, ALU_result, write_data);
+module cpu(clock, reset, instruction, read_data, memory_control, PC, ALU_result, write_data);
     
     // Declarations
     input clock;
     input reset;
     input [31:0] instruction;
     input [31:0] read_data;
-    output mem_write;
+    output [3:0] memory_control;
     output [31:0] PC;
     output [31:0] ALU_result;
     output [31:0] write_data;
@@ -28,7 +28,7 @@ module cpu(clock, reset, instruction, read_data, mem_write, PC, ALU_result, writ
         instruction[30],        // (input) funct7b5
         zero,                   // (input) zero
         result_select,          // (output) result_src
-        mem_write,              // (output) mem_write
+        memory_control,         // (output) memory_control
         PC_select,              // (output) PC_src
         ALU_select,             // (output) ALU_Src
         reg_write,              // (output) reg_write
