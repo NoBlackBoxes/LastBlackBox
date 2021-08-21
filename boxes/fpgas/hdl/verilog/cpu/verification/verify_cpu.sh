@@ -13,10 +13,10 @@ MODULES=$CPU"/modules"
 mkdir -p bin
 
 # Build CPU
-iverilog -o bin/verify_cpu $CPU/cpu.v $MODULES/datapath.v $MODULES/flopr.v $MODULES/adder.v $MODULES/mux2.v $MODULES/mux3.v $MODULES/regfile.v $MODULES/generate_immediate.v $MODULES/alu.v $MODULES/mux8.v $MODULES/select_read.v $MODULES/controller.v $MODULES/main_decoder.v $MODULES/alu_decoder.v verify_cpu_tb.v
+iverilog -o bin/verify_cpu $CPU/cpu.v $MODULES/datapath.v $MODULES/flopr.v $MODULES/adder.v $MODULES/mux2.v $MODULES/mux3.v $MODULES/regfile.v $MODULES/generate_immediate.v $MODULES/alu.v $MODULES/mux8.v $MODULES/select_read.v $MODULES/rom.v $MODULES/ram.v $MODULES/controller.v $MODULES/main_decoder.v $MODULES/alu_decoder.v verify_cpu_tb.v
 
-# Create empty dmem file for initializing data memory
-python utilities/empty_dmem.py "bin/dmem.txt"
+# Create empty machine data file for initializing RAM
+python ../utilities/empty_ram.py "bin/ram.txt"
 
 # Reset CPU
 CPU=$LBB_ROOT"/boxes/fpgas/hdl/verilog/cpu/verification/bin/verify_cpu"
@@ -54,11 +54,11 @@ do
     hexdump bin/$TESTNAME.code > bin/$TESTNAME.dump_code
     hexdump bin/$TESTNAME.data > bin/$TESTNAME.dump_data
 
-    python utilities/dump2machine_code.py bin/$TESTNAME.dump_code
-    python utilities/dump2machine_data.py bin/$TESTNAME.dump_data
+    python ../utilities/dump2machine_code.py bin/$TESTNAME.dump_code
+    python ../utilities/dump2machine_data.py bin/$TESTNAME.dump_data
 
-    cp bin/$TESTNAME.text_code bin/imem.txt
-    cp bin/$TESTNAME.text_data bin/dmem.txt
+    cp bin/$TESTNAME.text_code bin/rom.txt
+    cp bin/$TESTNAME.text_data bin/ram.txt
 
     vvp $CPU
 done

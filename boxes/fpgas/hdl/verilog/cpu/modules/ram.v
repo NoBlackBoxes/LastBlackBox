@@ -12,6 +12,8 @@ module ram(clock, control, address, write_data, read_data);
     reg [31:0] RAM[0:4095];
     wire write_enable = control[0] | control[1] | control[2] | control[3];
 
+    // Should RAM handle bytes, half-words, and words? Read AND write?
+
     // Initialize
     initial
         $readmemh("bin/ram.txt", RAM);

@@ -1,5 +1,5 @@
 // Controller (RV32I)
-module controller(opcode, funct3, funct7b5, zero, result_select, mem_write, PC_select, ALU_select, reg_write, jump, ALU_control);
+module controller(opcode, funct3, funct7b5, zero, result_select, memory_control, PC_select, ALU_select, reg_write, jump, ALU_control);
 
     // Declarations
     input [6:0] opcode;
@@ -7,7 +7,7 @@ module controller(opcode, funct3, funct7b5, zero, result_select, mem_write, PC_s
     input funct7b5;
     input zero;
     output [2:0] result_select;
-    output mem_write;
+    output [3:0] memory_control;
     output reg [1:0] PC_select;
     output ALU_select;
     output reg_write;
@@ -24,7 +24,7 @@ module controller(opcode, funct3, funct7b5, zero, result_select, mem_write, PC_s
         opcode,             // (input)
         reg_write,          // (output)
         ALU_select,         // (output)
-        mem_write,          // (output)
+        memory_control,     // (output)
         result_select,      // (output)
         branch,             // (output)
         ALU_op,             // (output)

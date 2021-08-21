@@ -6,7 +6,7 @@ module cpu_tb();
     reg reset;
     wire [31:0] instruction;
     wire [31:0] read_data;
-    wire mem_write;
+    wire [3:0] memory_control;
     wire [31:0] PC;
     wire [31:0] data_adr;
     wire [31:0] write_data;
@@ -20,21 +20,21 @@ module cpu_tb();
         reset, 
         instruction, 
         read_data, 
-        mem_write, 
+        memory_control, 
         PC, 
         data_adr, 
         write_data);
     
     // Create instance of Instruction and Data Memory modules
     rom rom(PC, instruction);    
-    ram ram(clock, mem_write, data_adr, write_data, read_data);
+    ram ram(clock, memory_control, data_adr, write_data, read_data);
 
     // initialize test
     initial
         begin
             $dumpfile("bin/cpu_tb.vcd");
             $dumpvars(0, cpu_tb);
-            $monitor(clock, reset, instruction, read_data, mem_write, PC, data_adr, write_data);
+            $monitor(clock, reset, instruction, read_data, memory_control, PC, data_adr, write_data);
 
             instruction_counter <= 0;
             reset <= 1; # 22; reset <= 0;
@@ -55,7 +55,7 @@ module cpu_tb();
                     $display("IC stopped");
                     $stop;
                 end 
-            if(mem_write) 
+            if(memory_control[0]) 
                 begin
                     if(data_adr === 4196 & write_data === 25) 
                         begin

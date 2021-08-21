@@ -23,12 +23,18 @@ for line in lines:
     tokens = line.split(' ')
     num_tokens = len(tokens)
     if(num_tokens > 1):
+        has_lower = False
+        lower = ''
         for token in tokens[1:]:
             if (len(token) == 4) or (len(token) == 5): # with and without newline
                 token = token[:4] # Remove newline
-                output_file.write((token[2:4] + '\n').upper())                    
-                output_file.write((token[0:2] + '\n').upper())                    
-                data_count += 2
+                if has_lower:
+                    output_file.write((token + lower + '\n').upper())                    
+                    has_lower = False
+                    data_count += 1
+                else:
+                    lower = token # Store lower byte
+                    has_lower = True
 
 # Report
 #print("{0} data (32-bit words) written to HEX text file.".format(data_count))
@@ -36,7 +42,7 @@ for line in lines:
 # Pad memory file with zeros
 memory_size = 4096
 for i in range(memory_size - data_count):
-    output_file.write('00\n')
+    output_file.write('00000000\n')
 
 # Cleanup
 input_file.close()
