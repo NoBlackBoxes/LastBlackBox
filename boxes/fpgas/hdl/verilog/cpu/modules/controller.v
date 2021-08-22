@@ -22,6 +22,7 @@ module controller(opcode, funct3, funct7b5, zero, result_select, memory_control,
     main_decoder main_decoder
     (
         opcode,             // (input)
+        funct3,             // (input)
         reg_write,          // (output)
         ALU_select,         // (output)
         memory_control,     // (output)
@@ -59,4 +60,8 @@ module controller(opcode, funct3, funct7b5, zero, result_select, memory_control,
                 3'b111: PC_select = branch & zero;   // bgeu
                 default: PC_select = 2'b00;
             endcase           
+        
+        // Compute memory offset for misaligned read/writes
+
+
 endmodule
