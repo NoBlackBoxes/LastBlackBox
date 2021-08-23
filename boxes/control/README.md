@@ -33,7 +33,7 @@ This box will contribute the following (red) components to your NB3
 
 ## Negative-Feedback
 
-Not with more control!
+Now with more control!
 
 ## Servo Loops
 

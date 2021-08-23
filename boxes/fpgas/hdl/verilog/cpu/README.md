@@ -9,10 +9,10 @@ We will use the Verilog hardware description language (HDL) to design a RISC-V c
 Name |Type| ?|Description|
 :----|:---|:-|:----------|
 lb   |   I| x|Load       |
-lh   |   I|  |Load       |
+lh   |   I| x|Load       |
 lw   |   I| x|Load       |
 lbu  |   I| x|Load (U)   |
-lhu  |   I|  |Load (U)   |
+lhu  |   I| x|Load (U)   |
 addi |   I| x|           |
 slli |   I|  |           |
 slti |   I|  |           |
@@ -36,7 +36,7 @@ srl  |   R|  |           |
 sra  |   R|  |           |
 or   |   R| x|           |
 and  |   R| x|           |
-lui  |   U| x|           |
+lui  |   U| ?|           |
 beq  |   B| x|           |
 bne  |   B| x|           |
 blt  |   B| x|           |
