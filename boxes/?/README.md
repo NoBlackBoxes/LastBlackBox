@@ -16,10 +16,6 @@ M3 nut| M3 nut|4|-|-
 M2.5 Standoffs (15)| 15 mm long female-to-female M2.5 brass standoffs|4|-|-
 M2.5 screw (12)| 12 mm long M2.5 screw with phillips socket|4|-|-
 
-Required|Description| # |Box|
-:-------|:----------|:-:|:-:|
-Multimeter|(Sealy MM18) pocket digital multimeter|1|[white](/boxes/white/README.md)|
-
 </p></details>
 
 ----

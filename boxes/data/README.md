@@ -14,10 +14,6 @@ LED (Green)|3 mm/2 mA green LED|2|[-D-](_data/datasheets/led_HLMP.pdf)|[-L-](htt
 LED (Yellow)|3 mm/2 mA yellow LED|2|[-D-](_data/datasheets/led_HLMP.pdf)|[-L-](https://uk.farnell.com/broadcom-limited/hlmp-1719/led-3mm-yellow-2-1mcd-585nm/dp/1003208)
 Resistor|2.4 k&Omega;/0.25 W|6|[-D-](_data/datsheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-2k4/res-2k4-1-250mw-axial-metal-film/dp/9341595)
 
-Required|Description| # |Box|
-:-------|:----------|:-:|:-:|
-Multimeter|(Sealy MM18) pocket digital multimeter|1|[white](/boxes/white/README.md)|
-
 </p></details>
 
 ----

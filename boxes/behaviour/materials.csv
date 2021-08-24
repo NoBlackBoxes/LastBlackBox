@@ -1,4 +1,3 @@
-contents,,,,
 Cable (MiniUSB-15cm),Short mini-USB to Type-A cable (15 cm),1,,https://www.amazon.co.uk/gp/product/B0763PPY51
 Power supply,5V/3A (15W) USB Type-C power supply,1,_data/datasheets/rpi_power_supply_5V3A.pdf,https://uk.farnell.com/raspberry-pi/sc0212/rpi-power-supply-usb-c-5-1v-3a/dp/3106940
 USB Adapter(C-Micro),USB type-C (female) to micro (male) adapter,1,,https://www.amazon.co.uk/Adapter-CHOETECH-Convert-Connector-Keyring-Black/dp/B07145W7WX
@@ -15,10 +14,3 @@ M2.5 standoffs (20), (w/UPS) 20 mm brass M2.5 standoffs male-to-female,4,https:/
 M2.5 standoffs (7), (w/UPS 7 mm brass M2.5 standoffs male-to-female,4,https://wiki.52pi.com/index.php/UPS_for_Raspberry_Pi_4B/3B+/3B_SKU:_EP-0114,
 M3 screw (16), 16 mm long M3 screw with phillips socket,4,,
 M3 nut, M3 nut,4,,
-,,,,
-required,,,,
-Multimeter,(Sealy MM18) pocket digital multimeter,1,white,
-Test Lead,Alligator clip to 0.64 mm pin (20 cm),2,white,
-Jumper kit,Kit of multi-length 22 AWG breadboard jumpers,1,electrons,
-Jumper wires,Assorted 22 AWG jumper wire leads (male/female),1,electrons,
-Photoresistor,Light-dependent resistor,2,sensors,

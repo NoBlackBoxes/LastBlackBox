@@ -2,38 +2,20 @@
 
 Power for your bot.
 
-<p align="center">
-<img src="_images/light.png" alt="Light" width="200" height="200">
-<p>
-
-In this box, we will learn about light...how to measure it and how to **control** it.
-
 ----
 
 <details><summary><b>Materials</b></summary><p>
 
 Contents|Description| # |Data|Link|
 :-------|:----------|:-:|:--:|:--:|
-Lightbulb|Mini incandescent bulb (6 V)|1|[-D-](_data/datasheets/lamp_6V.pdf)|[-L-](https://uk.farnell.com/cml-innovative-technologies/3820al/lamp-w-e-axial-t3-8-6v-0-6w/dp/1139454)
-
-Required|Description| # |Box|
-:-------|:----------|:-:|:-:|
-Multimeter|(Sealy MM18) pocket digital multimeter|1|[white](/boxes/white/README.md)|
-Test Lead|Alligator clip to 0.64 mm pin (20 cm)|2|[white](/boxes/white/README.md)|
+NB3 Power Board|Regulated DC-DC power supply (5 Volts - 4 Amps)|1|[-D-](NB3_power)|-
+12V DC Power Supply|12 V AC-DC transformer|1|-|-
 
 </p></details>
 
 ----
 
 ## Goals
-
-To open this box, you must complete the following tasks:
-
-1. Light a lightbulb, think about the jiggling electrons.
-
-To explore this box, you should attempt the following challenges:
-
-1. Build a dipole antenna transmitter and receiver...a wireless telegraph.
 
 ----
 
@@ -42,7 +24,7 @@ To explore this box, you should attempt the following challenges:
 This box will contribute the following (red) components to your NB3
 
 <p align="center">
-<img src="_images/NB3_light.png" alt="NB3 stage" width="400" height="400">
+<img src="_data/images/NB3_power.png" alt="NB3 stage" width="400" height="400">
 <p>
 
 ----

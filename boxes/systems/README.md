@@ -13,10 +13,6 @@ Heatsinks|Heatsinks for RPi 4b chips|1|[-D-](_data/datasheets/rpi4b_heatsinks.jp
 SD card|16 GB micro SD card|1|[-D-](_data/datasheets/SanDisk-SDSQUAR-016G-GN6MA-datasheet.pdf)|[-L-](https://uk.farnell.com/sandisk/sdsquar-016g-gn6ma/memory-card-microsdhc-uhs-i-16gb/dp/2931924)
 M2.5 standoffs (15)| 15 mm brass M2.5 standoffs male-to-female|4|-|-
 
-Required|Description| # |Box|
-:-------|:----------|:-:|:-:|
-Multimeter|(Sealy MM18) pocket digital multimeter|1|[white](/boxes/white/README.md)|
-
 </p></details>
 
 ----

@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
- - Generate a bill of materials from the content of all "boxes"
+ - Generate a bill of materials from the content (materials.csv) of all "boxes"
  - Insert contents table into each box's README.md
 """
 import os
 
 # Get LBB root -- KeyError if not found
 try:
-    LBBREPO = os.environ['LBBROOT'] + '/repo'
+    LBBREPO = os.environ['LBBROOT']
 
 except KeyError:
     LBBREPO = '../..'
@@ -40,9 +40,7 @@ def find_materials_section(readme):
 # Convert materials.csv to markdown table
 def convert_materials(materials):
     contents = []
-    required = []
-    is_contents = True
-    for line in materials[1:]:
+    for line in materials:
         # Remove new line
         line = line[:-1]
 
@@ -53,31 +51,18 @@ def convert_materials(materials):
         if (fields[0] == ''):
             continue
 
-        # Split contents and required
-        if (fields[0] == 'required'):
-            is_contents = False
-            continue
-
         # Edit Data and Link fields into markdown links
-        if (is_contents):  # contents
-            if (fields[3] != ''):
-                fields[3] = "[-D-](" + fields[3] + ")"
-            else:
-                fields[3] = '-'
-            if (fields[4] != ''):
-                fields[4] = "[-L-](" + fields[4] + ")"
-            else:
-                fields[4] = '-'
-            contents.append('|'.join(fields) + '\n')
-        else:  # required
-            if (fields[3] != ''):
-                fields[3] = "[" + fields[3] + "](/boxes/" + fields[
-                    3] + "/README.md)"
-            else:
-                fields[3] = '-'
-            required.append('|'.join(fields) + '\n')
+        if (fields[3] != ''):
+            fields[3] = "[-D-](" + fields[3] + ")"
+        else:
+            fields[3] = '-'
+        if (fields[4] != ''):
+            fields[4] = "[-L-](" + fields[4] + ")"
+        else:
+            fields[4] = '-'
+        contents.append('|'.join(fields) + '\n')
 
-    return contents, required
+    return contents
 
 
 # Insert materials table into README file
@@ -112,13 +97,8 @@ def insert_materials(box):
         ":-------|:----------|:-:|:--:|:--:|\n"
     ]
 
-    # Create "required" header
-    required_header = [
-        "\nRequired|Description| # |Box|\n", ":-------|:----------|:-:|:-:|\n"
-    ]
-
     # Convert materials.csv to markdown table
-    contents, required = convert_materials(materials)
+    contents = convert_materials(materials)
 
     # Find start and end of materials section and split readme
     start, stop = find_materials_section(readme)
@@ -126,7 +106,7 @@ def insert_materials(box):
     post_readme = readme[stop:]
 
     # Insert materials (and table formatting)
-    materials_section = materials_header + contents_header + contents + required_header + required + materials_footer
+    materials_section = materials_header + contents_header + contents + materials_footer
     readme = pre_readme + materials_section + post_readme
 
     # Store README.md
@@ -143,13 +123,12 @@ def append_materials(BOM, box):
     box_path = LBBBOXES + "/" + box
     materials_path = box_path + "/materials.csv"
 
-    # Read materials.csv (contents only)
+    # Read materials.csv
     materials = []
     f = open(materials_path, 'r', encoding='utf8')
-    line = f.readline()  # Skip contents header
     while True:
         line = f.readline()
-        if (line[:8] == 'required'):
+        if (len(line) <= 2):
             break
         # Add line to materials
         materials.append(line)
@@ -169,20 +148,37 @@ def append_materials(BOM, box):
 
 # List all "boxes" in order of processing (and placement in BOM)
 boxes = [
-    'white', 'electrons', 'magnets', 'light', 'sensors', 'motors',
-    'amplifiers', 'reflexes', 'decisions', 'data', 'logic', 'memory',
-    'computers', 'control', 'behaviour', 'systems', 'networks', 'hearing',
-    'speech', 'vision', 'learning', 'intelligence'
+    'electrons',
+    'magnets',
+    'light',
+    'sensors',
+    'motors',
+    'transistors',
+    'amplifiers',
+    'reflexes',
+    'power',
+    'data',
+    'logic',
+    'memory',
+    'fpgas',
+    'computers',
+    'control',
+    'behaviour',
+    'systems',
+    'networks',
+    'security',
+    'hearing',
+    'vision',
+    'learning',
+    'intelligence',
+    '?'
 ]
-
-# TESTING
-#boxes = ['_template']
 
 # Insert materials table into README
 for box in boxes:
     insert_materials(box)
 
-# Generate BOM.csv by appending individual materials.csv (contents)
+# Generate BOM.csv by appending individual materials.csv
 BOM = ['Name,Description,QTY,Datasheet,Supplier\n', ',,,,\n']
 for box in boxes:
     BOM = append_materials(BOM, box)

@@ -1,13 +1,4 @@
-contents,,,,
 Thermistor,Temperature sensitive resistor,2,_data/datasheets/thermistor.pdf,https://uk.farnell.com/epcos/b57891m0103k000/thermistor-ntc-radial-leaded/dp/2285471
 Photoresistor,Light-dependent resistor,2,_data/datasheets/ldr.pdf,https://uk.farnell.com/advanced-photonix/nsl-19m51/light-dependent-resistor-550nm/dp/3168335
+Photoresistor (CdS),Light-dependent resistor,2,_data/datasheets/ldr_2.pdf,https://uk.farnell.com/advanced-photonix/nsl-4962/ldr-1mohm-250mw-nsl-series/dp/3168359
 Piezo,Piezo element,1,_data/datasheets/piezo.pdf,https://uk.farnell.com/multicomp/mcabt-455-rc/audio-element-piezo-2-8khz-35mm/dp/2433035?st=piezo
-,,,,
-required,,,,
-Multimeter,(Sealy MM18) pocket digital multimeter,1,white,
-Test Lead,Alligator clip to 0.64 mm pin (20 cm),2,white,
-Batteries (AA),AA 1.5 V alkaline battery,4,electrons,
-Battery holder,4xAA battery holder with ON-OFF switch,1,electrons,
-Jumper kit,Kit of multi-length 22 AWG breadboard jumpers,1,electrons,
-Jumper wires,Assorted 22 AWG jumper wire leads (male/female),1,electrons,
-

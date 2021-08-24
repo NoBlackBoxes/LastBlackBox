@@ -16,10 +16,6 @@ M2 washer|nylon washer 2-3 mm inner diameter|4|-|-
 M3 screw (20)| 20 mm long M3 screw with phillips socket|2|-|-
 M3 nut| M3 nut|4|-|-
 
-Required|Description| # |Box|
-:-------|:----------|:-:|:-:|
-Multimeter|(Sealy MM18) pocket digital multimeter|1|[white](/boxes/white/README.md)|
-
 </p></details>
 
 ----
