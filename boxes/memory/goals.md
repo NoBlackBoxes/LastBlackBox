@@ -1,9 +1,8 @@
 ### Grey
 
-1. Task 1
-2. Task 2
+1. Build a NAND latch. 
 
 ### White
 
-1. Challenge 1
-2. Challenge 2
+1. Build a D-Flip-Flop.
+2. Build a shift register.

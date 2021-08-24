@@ -62,7 +62,9 @@ Nuts (motor),M2 nuts for mounting motor/mount to body,4,,
 Breadboards (170),170-tie solderless breadboard,4,_data/datasheets/breadboard_170.pdf,https://uk.farnell.com/multicomp/mc001799/breadboard-34-5mm-x-45-5mm-white/dp/2770327
 power,,,,
 NB3 Power Board,Regulated DC-DC power supply (5 Volts - 4 Amps),1,NB3_power,
-12V DC Power Supply,12 V AC-DC transformer,1,,
+M2.5 standoffs (7), (w/UPS 7 mm brass M2.5 standoffs male-to-female,4,https://wiki.52pi.com/index.php/UPS_for_Raspberry_Pi_4B/3B+/3B_SKU:_EP-0114,
+M2 nut, M2 nut,4,,
+12V DC Power Supply,12 V AC-DC transformer (UK/EU/USA plugs),1,,
 data,,,,
 Comparator,LM339 (DIP-14),2,_data/datasheets/lm339-n.pdf,https://uk.farnell.com/texas-instruments/lm339n/ic-comparator-quad-dip14-339/dp/3118457
 LED (Red),5 mm/2 mA red LED,2,_data/datasheets/led_HLMP.pdf,https://uk.farnell.com/broadcom-limited/hlmp-4700/led-5mm-red-2-3mcd-626nm/dp/1003232
@@ -82,61 +84,39 @@ Cable (MiniUSB-1m),Mini-USB to Type-A cable (1 m),1,_data/datasheets/mini_USB_ca
 Piezo Buzzer,Piezoelectric speaker/buzzer,1,_data/datasheets/piezo_speaker.pdf,https://uk.farnell.com/kingstate/kpeg110/piezo-transducer/dp/1193641
 computers,,,,
 Microcontroller,Arduino Nano (rev.3),1,_data/datasheets/arduino_nano_rev3.pdf,https://uk.farnell.com/arduino/a000005/arduino-nano-evaluation-board/dp/1848691
-Cable (MiniUSB-1m),Mini-USB to Type-A cable (1 m),1,_data/datasheets/mini_USB_cable_1m.pdf,https://uk.farnell.com/molex/88732-8602/usb-cable-2-0-plug-plug-1m/dp/1221071
 Piezo Buzzer,Piezoelectric speaker/buzzer,1,_data/datasheets/piezo_speaker.pdf,https://uk.farnell.com/kingstate/kpeg110/piezo-transducer/dp/1193641
 control,,,,
-H-bridge,Dual H-bridge motor driver (L293D),2,_data/datasheets/L293.pdf,https://uk.farnell.com/texas-instruments/l293dne/ic-driver-peripheral-dual-36v/dp/3118959
+H-bridge (get a different, cheaper one - SN754410NE),Dual H-bridge motor driver (L293D),2,_data/datasheets/L293.pdf,https://uk.farnell.com/texas-instruments/l293dne/ic-driver-peripheral-dual-36v/dp/3118959
 behaviour,,,,
-Cable (MiniUSB-15cm),Short mini-USB to Type-A cable (15 cm),1,,https://www.amazon.co.uk/gp/product/B0763PPY51
-Power supply,5V/3A (15W) USB Type-C power supply,1,_data/datasheets/rpi_power_supply_5V3A.pdf,https://uk.farnell.com/raspberry-pi/sc0212/rpi-power-supply-usb-c-5-1v-3a/dp/3106940
-USB Adapter(C-Micro),USB type-C (female) to micro (male) adapter,1,,https://www.amazon.co.uk/Adapter-CHOETECH-Convert-Connector-Keyring-Black/dp/B07145W7WX
-UPS,Uninterrupted power supply and battery charger,1,https://wiki.52pi.com/index.php/UPS_for_Raspberry_Pi_4B/3B+/3B_SKU:_EP-0114,https://www.amazon.co.uk/gp/product/B082KJJMP2
-Battery (18650),Lithium-Ion 3.7V 3000 mAh 18650 battery,2,,https://www.amazon.co.uk/gp/product/B07TFSDKDV
-USB Breakout,Type-A male USB breakout board,2,,https://www.amazon.co.uk/Adapter-Breakout-2-54mm-Header-Connector/dp/B07R9S9X32
-Header (4),2.54 mm pitch 4-way male pin header,2,,
-Switch (micro), Micro limit switch (SPDT),2,_data/datasheets/micro_limit_switch.jpg,https://www.amazon.co.uk/gp/product/B015W8S8NA
-Whisker,Laser cut whisker switch mount,2,,
-M2 screw (15),15 mm long M2 screw with phillips socket,4,,
-M2 nut, M2 nut,4,,
-M2.5 screw (12), 12 mm long M2.5 screw with phillips socket,4,,
-M2.5 standoffs (20), (w/UPS) 20 mm brass M2.5 standoffs male-to-female,4,https://wiki.52pi.com/index.php/UPS_for_Raspberry_Pi_4B/3B+/3B_SKU:_EP-0114,
-M2.5 standoffs (7), (w/UPS 7 mm brass M2.5 standoffs male-to-female,4,https://wiki.52pi.com/index.php/UPS_for_Raspberry_Pi_4B/3B+/3B_SKU:_EP-0114,
-M3 screw (16), 16 mm long M3 screw with phillips socket,4,,
-M3 nut, M3 nut,4,,
-systems,,,,
+Cable (Mini-USB/15cm),Short mini-USB to Type-A cable (15 cm),1,,https://www.amazon.co.uk/gp/product/B0763PPY51
+Battery,NiMH 9.6V 8-cell 2000 mAh battery,1,,https://www.amazon.co.uk/BAKTH-Capacity-Rechargeable-Discharge-Customized/dp/B08VRC8KL7
+Battery Charger,NiMH battery charger (UK plug),1,,https://www.amazon.co.uk/dp/B089VRXKWY?psc=1&smid=AOVA4BIXU2O7J&ref_=chk_typ_imgToDp
+Velcro Patch, Velcro adhesive,1,,
+Bumper,Bumper whisker switches,2,,systems,,,,
 Computer (RPi4),Raspberry Pi 4b with 4 GB RAM,1,_data/datasheets/rpi4b_4gb.pdf,https://uk.farnell.com/raspberry-pi/rpi4-modbp-4gb/raspberry-pi-4-model-b-4gb/dp/3051887
 Heatsinks,Heatsinks for RPi 4b chips,1,_data/datasheets/rpi4b_heatsinks.jpg,https://www.amazon.co.uk/gp/product/B07VRNT3HX
 SD card,16 GB micro SD card,1,_data/datasheets/SanDisk-SDSQUAR-016G-GN6MA-datasheet.pdf,https://uk.farnell.com/sandisk/sdsquar-016g-gn6ma/memory-card-microsdhc-uhs-i-16gb/dp/2931924
 M2.5 standoffs (15), 15 mm brass M2.5 standoffs male-to-female,4,,
+USB SD card IO, SD card reader/writer,1,,https://www.amazon.co.uk/Beikell-High-speed-Adapter-Supports-MMC-Compatible-Windows/dp/B07L9VT8YY
 networks,,,,
 Cable (Ethernet),RJ45 cact5e ethernet patch cable (1 m),1,_data/datasheets/ethernet_cable_1m.pdf,https://uk.farnell.com/pro-signal/ps11074/lead-patch-cat-5e-1-00m-black/dp/1734943
 security,,,,
-Cable (Ethernet),RJ45 cact5e ethernet patch cable (1 m),1,_data/datasheets/ethernet_cable_1m.pdf,https://uk.farnell.com/pro-signal/ps11074/lead-patch-cat-5e-1-00m-black/dp/1734943
+Secret Message,A SHA256 encrypted message (in HEX),1,,
 hearing,,,,
-Mic (MEMS), I2S mems microphone board (SPH0645),2,_data/datasheets/i2s_mems_mic.pdf,https://www.adafruit.com/product/3421
+NB3 Ear, I2S mems microphone breakout board,2,NB3_ear,
 vision,,,,
 Camera (RPiv2),Raspberry Pi 8 MP camera,1,_data/datasheets/rpi_camera_v2.pdf,https://uk.farnell.com/raspberry-pi/rpi-8mp-camera-board/raspberry-pi-camera-board-v2/dp/2510728
-Mount,Custom laser cut camera mount,1,,
-M2 screw (12), 12 mm long M1 screw with phillips socket,4,,
-M2 nut, M2 nut,4,,
-M2 washer,nylon washer 2-3 mm inner diameter,4,,
-M3 screw (20), 20 mm long M3 screw with phillips socket,2,,
-M3 nut, M3 nut,4,,
+Camera Mount,Custom laser cut pan-tilt base mount,1,NB3_camera_mount,
+Pan-Tilt Mount,2 DOF mount with micro servos,1,,https://www.adafruit.com/product/1967
 learning,,,,
 Clicker,Loud sound maker (and whistle),1,,https://www.amazon.co.uk/gp/product/B07HD3RDMK
 intelligence,,,,
 NPU,Coral EdgeTPU USB Type-C,1,_data/datasheets/Coral-USB-Accelerator-datasheet.pdf,https://www.mouser.co.uk/ProductDetail/Coral/G950-01456-01?qs=sGAEpiMZZMu3sxpa5v1qrv9%252Bz890pMquX2qAISzny6s%3D
-Cable (TypeC-USB 10 cm),Short FPC Type-C to Type-A USB cable (10 cm),1,,https://www.amazon.co.uk/mytysun-Charge-Design-Compatible-Samsung/dp/B08D3Q44L6
-Cortex Mount,Custom laser cut holder for NPU,1,,
+Cable (necessary?) (TypeC-USB 10 cm),Short FPC Type-C to Type-A USB cable (10 cm),1,,https://www.amazon.co.uk/mytysun-Charge-Design-Compatible-Samsung/dp/B08D3Q44L6
+Cortex Mount,Custom laser cut holder for NPU,1,NB3_npu_mount,
 M3 screw (16), 16 mm long M3 screw with phillips socket,4,,
 M3 nut, M3 nut,4,,
 M2.5 Standoffs (15), 15 mm long female-to-female M2.5 brass standoffs,4,,
 M2.5 screw (12), 12 mm long M2.5 screw with phillips socket,4,,
 ?,,,,
-NPU,Coral EdgeTPU USB Type-C,1,_data/datasheets/Coral-USB-Accelerator-datasheet.pdf,https://www.mouser.co.uk/ProductDetail/Coral/G950-01456-01?qs=sGAEpiMZZMu3sxpa5v1qrv9%252Bz890pMquX2qAISzny6s%3D
-Cable (TypeC-USB 10 cm),Short FPC Type-C to Type-A USB cable (10 cm),1,,https://www.amazon.co.uk/mytysun-Charge-Design-Compatible-Samsung/dp/B08D3Q44L6
-Cortex Mount,Custom laser cut holder for NPU,1,,
-M3 screw (16), 16 mm long M3 screw with phillips socket,4,,
-M3 nut, M3 nut,4,,
-M2.5 Standoffs (15), 15 mm long female-to-female M2.5 brass standoffs,4,,
-M2.5 screw (12), 12 mm long M2.5 screw with phillips socket,4,,
+?, your ideas and creativity,11,,

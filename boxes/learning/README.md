@@ -14,22 +14,16 @@ Clicker|Loud sound maker (and whistle)|1|-|[-L-](https://www.amazon.co.uk/gp/pro
 
 ----
 
+# Goals
+
+----
+
 ## NB3
 
 This box will contribute the following (red) components to your NB3
 
 <p align="center">
-<img src="_images/NB3_learning.png" alt="NB3 stage" width="400" height="400">
+<img src="_data/images/NB3_learning.png" alt="NB3 stage" width="400" height="400">
 <p>
-
-----
-
-## Clickers
-
-Reinforce yourself.
-
-### Exercise: Click
-
-Clicker train your friends.
 
 ----

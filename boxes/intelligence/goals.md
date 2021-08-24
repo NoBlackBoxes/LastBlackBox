@@ -1,9 +1,9 @@
 ### Grey
 
-1. Task 1
-2. Task 2
+1. Setup your NPU.
+2. Run the demos.
 
 ### White
 
-1. Challenge 1
-2. Challenge 2
+1. Train a new network to detect only your face.
+2. Run a keyword to detector to control your robot with voice commands.

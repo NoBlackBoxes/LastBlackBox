@@ -1,9 +1,7 @@
 ### Grey
 
-1. Task 1
-2. Task 2
+1. Clicker train yourself.
 
 ### White
 
-1. Challenge 1
-2. Challenge 2
+1. Clicker train your robot.

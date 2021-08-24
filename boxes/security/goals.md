@@ -1,9 +1,8 @@
 ### Grey
 
-1. Task 1
-2. Task 2
+1. Generate Keys
+2. Send encrypted message
 
 ### White
 
-1. Challenge 1
-2. Challenge 2
+1. Mine a bitcoin on your NB3

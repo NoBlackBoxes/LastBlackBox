@@ -1,16 +1,5 @@
-Cable (MiniUSB-15cm),Short mini-USB to Type-A cable (15 cm),1,,https://www.amazon.co.uk/gp/product/B0763PPY51
-Power supply,5V/3A (15W) USB Type-C power supply,1,_data/datasheets/rpi_power_supply_5V3A.pdf,https://uk.farnell.com/raspberry-pi/sc0212/rpi-power-supply-usb-c-5-1v-3a/dp/3106940
-USB Adapter(C-Micro),USB type-C (female) to micro (male) adapter,1,,https://www.amazon.co.uk/Adapter-CHOETECH-Convert-Connector-Keyring-Black/dp/B07145W7WX
-UPS,Uninterrupted power supply and battery charger,1,https://wiki.52pi.com/index.php/UPS_for_Raspberry_Pi_4B/3B+/3B_SKU:_EP-0114,https://www.amazon.co.uk/gp/product/B082KJJMP2
-Battery (18650),Lithium-Ion 3.7V 3000 mAh 18650 battery,2,,https://www.amazon.co.uk/gp/product/B07TFSDKDV
-USB Breakout,Type-A male USB breakout board,2,,https://www.amazon.co.uk/Adapter-Breakout-2-54mm-Header-Connector/dp/B07R9S9X32
-Header (4),2.54 mm pitch 4-way male pin header,2,,
-Switch (micro), Micro limit switch (SPDT),2,_data/datasheets/micro_limit_switch.jpg,https://www.amazon.co.uk/gp/product/B015W8S8NA
-Whisker,Laser cut whisker switch mount,2,,
-M2 screw (15),15 mm long M2 screw with phillips socket,4,,
-M2 nut, M2 nut,4,,
-M2.5 screw (12), 12 mm long M2.5 screw with phillips socket,4,,
-M2.5 standoffs (20), (w/UPS) 20 mm brass M2.5 standoffs male-to-female,4,https://wiki.52pi.com/index.php/UPS_for_Raspberry_Pi_4B/3B+/3B_SKU:_EP-0114,
-M2.5 standoffs (7), (w/UPS 7 mm brass M2.5 standoffs male-to-female,4,https://wiki.52pi.com/index.php/UPS_for_Raspberry_Pi_4B/3B+/3B_SKU:_EP-0114,
-M3 screw (16), 16 mm long M3 screw with phillips socket,4,,
-M3 nut, M3 nut,4,,
+Cable (Mini-USB/15cm),Short mini-USB to Type-A cable (15 cm),1,,https://www.amazon.co.uk/gp/product/B0763PPY51
+Battery,NiMH 9.6V 8-cell 2000 mAh battery,1,,https://www.amazon.co.uk/BAKTH-Capacity-Rechargeable-Discharge-Customized/dp/B08VRC8KL7
+Battery Charger,NiMH battery charger (UK plug),1,,https://www.amazon.co.uk/dp/B089VRXKWY?psc=1&smid=AOVA4BIXU2O7J&ref_=chk_typ_imgToDp
+Velcro Patch, Velcro adhesive,1,,
+Bumper,Bumper whisker switches,2,,

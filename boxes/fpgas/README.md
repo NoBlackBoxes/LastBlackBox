@@ -16,6 +16,10 @@ Piezo Buzzer|Piezoelectric speaker/buzzer|1|[-D-](_data/datasheets/piezo_speaker
 
 ----
 
+# Goals
+
+----
+
 ## NB3
 
 This box will contribute the following (red) components to your NB3

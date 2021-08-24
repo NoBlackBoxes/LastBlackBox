@@ -1,9 +1,9 @@
 ### Grey
 
-1. Task 1
-2. Task 2
+1. Build a comparator using the LM339N
+2. Build a multi-level comparison (ADC)
 
 ### White
 
-1. Challenge 1
-2. Challenge 2
+1. Build a Schmitt-Trigger
+2. Build a real ADC

@@ -1,9 +1,9 @@
 ### Grey
 
-1. Task 1
-2. Task 2
+1. Communicate between your midbrain and hindbrain
+2. Develop a remote control
 
 ### White
 
-1. Challenge 1
-2. Challenge 2
+1. Setup a webserver
+2. 

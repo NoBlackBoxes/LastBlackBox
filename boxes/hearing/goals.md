@@ -1,9 +1,8 @@
 ### Grey
 
-1. Task 1
-2. Task 2
+1. Setup your left/right MEMs microphones
+2. Analyze sound in Python/C
 
 ### White
 
-1. Challenge 1
-2. Challenge 2
+1. Sound (clap) localizer
