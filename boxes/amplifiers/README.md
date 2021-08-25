@@ -11,7 +11,6 @@ Contents|Description| # |Data|Link|
 Audio Cable|3.5 mm to pins|1|-|-
 LM741|OpAmp|1|[-D-](_data/datasheets/IRF510.pdf)|[-L-](https://uk.farnell.com/vishay/irf510pbf/mosfet-n-100v-5-6a-to-220ab/dp/1653658)
 LM386N-4/NOPB|Audio-Amp|2|[-D-](_data/datasheets/IRF510.pdf)|[-L-](https://uk.farnell.com/vishay/irf510pbf/mosfet-n-100v-5-6a-to-220ab/dp/1653658)
-Multimeter|Digital/Analog multimeter|1|-|-
 USB Sound Card| USB Type-A to 3.5 mm in/out audio jacks|1|-|-
 
 </p></details>

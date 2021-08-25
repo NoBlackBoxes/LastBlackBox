@@ -46,7 +46,6 @@ amplifiers,,,,
 Audio Cable,3.5 mm to pins,1,,
 LM741,OpAmp,1,_data/datasheets/IRF510.pdf,https://uk.farnell.com/vishay/irf510pbf/mosfet-n-100v-5-6a-to-220ab/dp/1653658
 LM386N-4/NOPB,Audio-Amp,2,_data/datasheets/IRF510.pdf,https://uk.farnell.com/vishay/irf510pbf/mosfet-n-100v-5-6a-to-220ab/dp/1653658
-Multimeter,Digital/Analog multimeter,1,,
 USB Sound Card, USB Type-A to 3.5 mm in/out audio jacks,1,,
 reflexes,,,,
 Motor (Geared),Brushed DC motor with gearbox - 6V/1:100/155 RPM with encoder (FIT0483),2,https://www.dfrobot.com/product-1433.html,https://www.dfrobot.com/product-1433.html
@@ -86,7 +85,7 @@ computers,,,,
 Microcontroller,Arduino Nano (rev.3),1,_data/datasheets/arduino_nano_rev3.pdf,https://uk.farnell.com/arduino/a000005/arduino-nano-evaluation-board/dp/1848691
 Piezo Buzzer,Piezoelectric speaker/buzzer,1,_data/datasheets/piezo_speaker.pdf,https://uk.farnell.com/kingstate/kpeg110/piezo-transducer/dp/1193641
 control,,,,
-H-bridge (get a different, cheaper one - SN754410NE),Dual H-bridge motor driver (L293D),2,_data/datasheets/L293.pdf,https://uk.farnell.com/texas-instruments/l293dne/ic-driver-peripheral-dual-36v/dp/3118959
+H-bridge,H-bridge motor driver (SN754410NE),2,_data/datasheets/sn754410.pdf,https://uk.farnell.com/texas-instruments/sn754410ne/ic-peripheral-driver-half-h-1a/dp/3118977
 behaviour,,,,
 Cable (Mini-USB/15cm),Short mini-USB to Type-A cable (15 cm),1,,https://www.amazon.co.uk/gp/product/B0763PPY51
 Battery,NiMH 9.6V 8-cell 2000 mAh battery,1,,https://www.amazon.co.uk/BAKTH-Capacity-Rechargeable-Discharge-Customized/dp/B08VRC8KL7

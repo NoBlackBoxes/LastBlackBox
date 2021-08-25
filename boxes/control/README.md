@@ -8,7 +8,7 @@ Negative-feedback and servo loops.
 
 Contents|Description| # |Data|Link|
 :-------|:----------|:-:|:--:|:--:|
-H-bridge (get a different| cheaper one - SN754410NE)|Dual H-bridge motor driver (L293D)|[-D-](2)|[-L-](_data/datasheets/L293.pdf)|https://uk.farnell.com/texas-instruments/l293dne/ic-driver-peripheral-dual-36v/dp/3118959
+H-bridge|H-bridge motor driver (SN754410NE)|2|[-D-](_data/datasheets/sn754410.pdf)|[-L-](https://uk.farnell.com/texas-instruments/sn754410ne/ic-peripheral-driver-half-h-1a/dp/3118977)
 
 </p></details>
 
