@@ -30,7 +30,7 @@ module main_decoder(opcode, funct3, reg_write, ALU_select, memory_control, resul
                     default: controls = 13'bx_x_x_xxxx_xxx_xx_x;// ???
                 endcase
             7'b0100011: controls = 13'b0_1_0001_000_0_00_0;     // sw
-            7'b0110011: controls = 13'b1_0_0000_000_0_10_0;     // R–type
+            7'b0110011: controls = 13'b1_0_0000_000_0_10_0;     // R–type (ALU, sra)
             7'b0010111: controls = 13'b1_0_0000_100_0_00_0;     // auipc
             7'b0110111: controls = 13'b1_0_0000_011_0_00_0;     // lui
             7'b1100011: controls = 13'b0_0_0000_000_1_01_0;     // beq, bne, blt, bge, bgeu, bltu

@@ -12,7 +12,7 @@ module controller(opcode, funct3, funct7b5, zero, result_select, memory_control,
     output ALU_select;
     output reg_write;
     output jump;
-    output [2:0] ALU_control;
+    output [3:0] ALU_control;
     
     // Intermediates
     wire [1:0] ALU_op;

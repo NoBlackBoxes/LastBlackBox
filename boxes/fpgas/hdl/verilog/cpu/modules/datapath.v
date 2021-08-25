@@ -8,7 +8,7 @@ module datapath(clock, reset, result_select, PC_select, ALU_select, reg_write, A
     input [1:0] PC_select;
     input ALU_select;
     input reg_write;
-    input [2:0] ALU_control;
+    input [3:0] ALU_control;
     input [31:0] instruction;
     input [31:0] read_data;
     output zero;
