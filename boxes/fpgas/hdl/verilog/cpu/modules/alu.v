@@ -19,6 +19,8 @@ module alu(src_A, src_B, ALU_control, ALU_result, zero);
             4'b0101: ALU_result <= ($signed(src_A) < $signed(src_B)) ? 1 : 0; // set less than (signed)
             4'b0110: ALU_result <= ($unsigned(src_A) < $unsigned(src_B)) ? 1 : 0; // set less than (unsigned)
             4'b0111: ALU_result <= $signed(src_A) >>> src_B[4:0]; // shift right (arithmetic)
+            4'b1000: ALU_result <= $signed(src_A) >> src_B[4:0]; // shift right (logical)
+            4'b1001: ALU_result <= $signed(src_A) << src_B[4:0]; // shift left (logical)
 
             // Need to distinguish shifts (right/left and artihmetic/logical)
 

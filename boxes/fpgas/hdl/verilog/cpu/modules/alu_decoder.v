@@ -10,7 +10,9 @@ module alu_decoder(opcode_b5, funct3, funct7b5, ALU_op, ALU_control);
 
     // Intermediates
     wire R_type_subtract;
+    wire shift_arithemetic;
     assign R_type_subtract = funct7b5 & opcode_b5; // TRUE for R–type subtract   
+    assign shift_arithemetic = funct7b5; // TRUE for arithmetic shift   
     
     // Logic
     always @*
@@ -20,10 +22,10 @@ module alu_decoder(opcode_b5, funct3, funct7b5, ALU_op, ALU_control);
                 case(funct3)
                     3'b000: ALU_control = 4'b0001; // subtraction: beq
                     3'b001: ALU_control = 4'b0001; // subtraction: bne
-                    3'b100: ALU_control = 4'b0101; // set less than: blt
-                    3'b101: ALU_control = 4'b0101; // set less than: bge
-                    3'b110: ALU_control = 4'b0110; // set less than (unsigned): bltu
-                    3'b111: ALU_control = 4'b0110; // set less than (unsigned): bgeu
+                    3'b100: ALU_control = 4'b0101; // branch less than: slt, blt
+                    3'b101: ALU_control = 4'b0101; // branch greater than: bge
+                    3'b110: ALU_control = 4'b0110; // branch less than (unsigned): bltu
+                    3'b111: ALU_control = 4'b0110; // branch greater than (unsigned): bgeu
                     default: ALU_control = 4'bxxxx; // ???
                 endcase
             default:
@@ -35,13 +37,20 @@ module alu_decoder(opcode_b5, funct3, funct7b5, ALU_op, ALU_control);
                             else
                                 ALU_control = 3'b000; // add, addi
                         end
-                    // Need to distinguish shifts (right/left and artihmetic/logical)
-                    3'b010: ALU_control = 3'b101; // slt, slti
-                    3'b100: ALU_control = 3'b100; // xor, xori
-                    3'b101: ALU_control = 3'b111; // sra, srai
-                    3'b110: ALU_control = 3'b011; // or, ori
-                    3'b111: ALU_control = 3'b010; // and, andi
-                    default: ALU_control = 3'bxxx; // ???
+                    3'b001: ALU_control = 4'b1001; // sll, slli
+                    3'b010: ALU_control = 4'b0101; // slt, slti
+                    3'b011: ALU_control = 4'b0110; // sltu, sltiu
+                    3'b100: ALU_control = 4'b0100; // xor, xori
+                    3'b101:
+                        begin
+                            if(shift_arithemetic)
+                                ALU_control = 4'b0111; // sra, srai
+                            else
+                                ALU_control = 4'b1000; // srl, srli
+                        end
+                    3'b110: ALU_control = 4'b0011; // or, ori
+                    3'b111: ALU_control = 4'b0010; // and, andi
+                    default: ALU_control = 4'bxxxx; // ???
                 endcase
         endcase
 

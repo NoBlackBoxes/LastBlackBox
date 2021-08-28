@@ -33,7 +33,7 @@ module ram(clock, control, address, write_data, read_data);
     wire [7:0] read_byte;
     wire [15:0] read_halfword;
 
-    // Assign byte flag bits (bytes selected from word for mepry operation)
+    // Assign byte flag bits (bytes selected from word for memory operation)
     assign byte_flags[0] = (offset_0 & byte_enable) | (offset_0 & halfword_enable) | word_enable;
     assign byte_flags[1] = (offset_1 & byte_enable) | (offset_0 & halfword_enable) | word_enable;
     assign byte_flags[2] = (offset_2 & byte_enable) | (offset_2 & halfword_enable) | word_enable;
@@ -60,8 +60,21 @@ module ram(clock, control, address, write_data, read_data);
     // Logic (write)
     always @(posedge clock)
         if (write_enable) 
-            begin
+            if(byte_enable)
+                case(offset)
+                    2'b00: RAM[address[31:2]][7:0] <= write_data[7:0];
+                    2'b01: RAM[address[31:2]][15:8] <= write_data[7:0];
+                    2'b10: RAM[address[31:2]][23:16] <= write_data[7:0];
+                    2'b11: RAM[address[31:2]][31:24] <= write_data[7:0];
+                    default: RAM[address[31:2]][7:0] <= write_data[7:0];
+                endcase
+            else if (halfword_enable)
+                case(offset)
+                    2'b00: RAM[address[31:2]][15:0] <= write_data[15:0];
+                    2'b01: RAM[address[31:2]][23:8] <= write_data[15:0];
+                    2'b10: RAM[address[31:2]][31:16] <= write_data[15:0];
+                    default: RAM[address[31:2]][15:0] <= write_data[15:0];
+                endcase
+            else
                 RAM[address[31:2]] <= write_data;
-            end
-
 endmodule
