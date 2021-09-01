@@ -91,7 +91,8 @@ Cable (Mini-USB/15cm),Short mini-USB to Type-A cable (15 cm),1,,https://www.amaz
 Battery,NiMH 9.6V 8-cell 2000 mAh battery,1,,https://www.amazon.co.uk/BAKTH-Capacity-Rechargeable-Discharge-Customized/dp/B08VRC8KL7
 Battery Charger,NiMH battery charger (UK plug),1,,https://www.amazon.co.uk/dp/B089VRXKWY?psc=1&smid=AOVA4BIXU2O7J&ref_=chk_typ_imgToDp
 Velcro Patch, Velcro adhesive,1,,
-Bumper,Bumper whisker switches,2,,systems,,,,
+Bumper,Bumper whisker switches,2,,
+systems,,,,
 Computer (RPi4),Raspberry Pi 4b with 4 GB RAM,1,_data/datasheets/rpi4b_4gb.pdf,https://uk.farnell.com/raspberry-pi/rpi4-modbp-4gb/raspberry-pi-4-model-b-4gb/dp/3051887
 Heatsinks,Heatsinks for RPi 4b chips,1,_data/datasheets/rpi4b_heatsinks.jpg,https://www.amazon.co.uk/gp/product/B07VRNT3HX
 SD card,16 GB micro SD card,1,_data/datasheets/SanDisk-SDSQUAR-016G-GN6MA-datasheet.pdf,https://uk.farnell.com/sandisk/sdsquar-016g-gn6ma/memory-card-microsdhc-uhs-i-16gb/dp/2931924

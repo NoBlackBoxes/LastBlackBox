@@ -6,11 +6,10 @@ Resistor,10 k&Omega;/0.25 W,2,_data/datsheets/resistor.pdf,https://uk.farnell.co
 Capacitor,0.1 uF ceramic capacitor,1,_data/datasheets/capacitor_ceramic.pdf,https://uk.farnell.com/kemet/c322c104k1r5ta/cap-0-1-f-100v-10-x7r/dp/1457685
 Capacitor,100 uF aluminum electrolytic capacitor,1,_data/datsheets/capacitor_electrolytic.pdf,https://uk.farnell.com/rubycon/16zlh100mefc5x11/cap-100-f-16v-20/dp/8126283
 Button,Tactile switch,2,_data/datasheets/button.pdf,https://uk.farnell.com/omron/b3f-1000/switch-spno-0-05a-24v-tht-0-98n/dp/176432
-Potentiometer,20 k&Omega; variable resistor,2,_data/datasheets/pot_20k.pdf,https://uk.farnell.com/bourns/3362p-1-203lf/trimmer-20k/dp/9354344
+Potentiometer,2.2 k&Omega; variable resistor,2,_data/datasheets/pot_20k.pdf,https://uk.farnell.com/bourns/3362p-1-203lf/trimmer-20k/dp/9354344
 Breadboard (400),400-tie solderless breadboard,1,_data/datasheets/breadboard_400.pdf,https://uk.farnell.com/multicomp/mcbb400/breadboard-solderless-300v-abs/dp/2395961
 Batteries (AA),AA 1.5 V alkaline battery,4,,
 Battery holder,4xAA battery holder with ON-OFF switch,1,,https://www.dfrobot.com/product-202.html
-Battery case,4xAA battery storgae case,1,,https://www.amazon.co.uk/gp/product/B07ZHZDWQ2
 Jumper kit,Kit of multi-length 22 AWG breadboard jumpers,1,_data/datasheets/jumper_kit.pdf,https://uk.farnell.com/multicomp/mc001810/hard-jumper-wire-22awg-140pc/dp/2770338
 Jumper wires,Assorted 22 AWG jumper wire leads (male/female),1,_data/datasheets/jumper_wires.pdf,https://uk.farnell.com/multicomp/mcbbj65/jumper-wire-assortment-65pcs/dp/2396146
 Test Lead,Alligator clip to 0.64 mm pin (20 cm),2,,https://www.amazon.co.uk/Oiyagai-Alligator-Crocodile-Arduino-Raspberry/dp/B07CXTSX8R/ref=sr_1_2?dchild=1&keywords=Oiyagai-Alligator-Crocodile-Arduino-Raspberry&qid=1598887302&s=computers&sr=1-2
