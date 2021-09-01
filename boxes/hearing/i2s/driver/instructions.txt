@@ -1,0 +1,8 @@
+- Download kernel headers
+- make all
+-(install? or just insmod? - insmod seems to work)
+- no change to device tree (need i2s on)?
+- Needs to specifiy rpi4 reg
+
+
+(make your own driver?)...
