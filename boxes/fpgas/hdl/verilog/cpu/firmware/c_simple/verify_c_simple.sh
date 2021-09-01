@@ -49,7 +49,7 @@ $RISCV_TOOLCHAIN/riscv32-unknown-elf-gcc $ASFLAGS -o bin/c_simple.o bin/c_simple
 # Extract binary object
 $RISCV_TOOLCHAIN/riscv32-unknown-elf-objcopy -O binary -j .text bin/c_simple.o bin/c_simple.bin
 
-# Parse binary into HEX tmachone code file for Verilog
+# Parse binary into HEX machine code file for Verilog
 hexdump bin/c_simple.bin > bin/c_simple.dump
 python ../../utilities/dump2machine.py bin/c_simple.dump
 cp bin/c_simple.txt bin/imem.txt
