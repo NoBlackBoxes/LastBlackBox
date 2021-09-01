@@ -41,13 +41,13 @@ set_io -nowarn gpio_28 28
 # Note: On board 12MHz clock can be brought to IOB_25B_G3 (pin 20) which is a global
 # clock input. Short across R16 (labelled OSC on the board) to enable 12MHz clock to
 # pin 20.
-set_io -nowarn clock 20
-set_io -nowarn reset 10
+set_io -nowarn gpio_20 20
+set_io -nowarn gpio_10 10
 
 # Following are also found on v2.x of the UPduino
-set_io -nowarn gpio_12 12
-set_io -nowarn gpio_21 21
-set_io -nowarn gpio_13 13
+set_io -nowarn a 12
+set_io -nowarn b 21
+set_io -nowarn y 13
 set_io -nowarn gpio_19 19
 set_io -nowarn gpio_18 18
 set_io -nowarn gpio_11 11
