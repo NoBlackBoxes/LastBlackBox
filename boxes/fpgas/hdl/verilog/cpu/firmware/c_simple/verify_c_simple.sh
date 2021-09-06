@@ -10,7 +10,7 @@ RISCV_TOOLCHAIN=$NBB_ROOT"/tools/rv32i-toolchain/bin"
 # Set Tests include folder
 TESTS_INCLUDES="$NBB_ROOT/repos/LastBlackBox/boxes/fpgas/hdl/verilog/cpu/verification/tests"
 
-# Create out directoryss
+# Create output directory
 mkdir -p bin
 
 # ELF
