@@ -9,6 +9,7 @@ cd $NBB_ROOT/tools/environments
 python -m venv nbb-python
 source nbb-python/bin/activate
 
+export NBB_ROOT=/home/kampff/NoBlackBoxes/
 source $NBB_ROOT/tools/environments/nbb-python/bin/activate
 
 ```

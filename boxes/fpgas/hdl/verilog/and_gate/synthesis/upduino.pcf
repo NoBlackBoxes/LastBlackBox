@@ -31,7 +31,7 @@ set_io -nowarn gpio_43 43
 set_io -nowarn gpio_36 36
 set_io -nowarn gpio_42 42
 set_io -nowarn gpio_38 38
-set_io -nowarn gpio_28 28
+set_io -nowarn y 28
 
 # Normal GPIO pins, right side
 
@@ -47,7 +47,7 @@ set_io -nowarn gpio_10 10
 # Following are also found on v2.x of the UPduino
 set_io -nowarn a 12
 set_io -nowarn b 21
-set_io -nowarn y 13
+set_io -nowarn gpio_13 13
 set_io -nowarn gpio_19 19
 set_io -nowarn gpio_18 18
 set_io -nowarn gpio_11 11
