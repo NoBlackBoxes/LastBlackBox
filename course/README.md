@@ -27,27 +27,27 @@ Hindbrain|Midbrain|Forebrain|
 
 ## Timeline
 
-### Week 1 (morning, afternoon)
+### Week 1
 
 - Day 1: Electrons
-- Day 2: Magnets + Light, Sensors + Motors
-- Day 3: Amplifiers, Reflexes Introduction
-- Day 4: Reflexes Work, *NB3 demos*
-- Day 5: Data, Decisions
+- Day 2: Magnets + Light
+- Day 3: Sensors + Motors
+- Day 4: Transistors + Amplifiers
+- Day 5: Reflexes
 
-### Week 2 (morning, afternoon)
+### Week 2
 
-- Day 1: Logic, Memory
-- Day 2: Computers
-- Day 3: Control, Behaviour Intro
-- Day 4: Behaviour Work, *NB3 demos*
-- Day 5: Systems, Networks
+- Day 1: Power, Data, Logic, Memory
+- Day 2: FPGAs
+- Day 3: Computers
+- Day 4: Control
+- Day 5: Behaviour
 
-### Week 3 (morning, afternoon)
+### Week 3
 
-- Day 1: Hearing + Speech, Vision
-- Day 2: Learning, Intelligence?
-- Day 3: *NB3 work*, *NB3 work*
+- Day 1: Systems, Networks, Security
+- Day 2: Hearing, Vision
+- Day 3: Learning, Intelligence?
 - Day 4: *NB3 work*, *NB3 work*
 - Day 5: *NB3 work*, *NB3 demos*
 

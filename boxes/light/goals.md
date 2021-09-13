@@ -4,4 +4,4 @@
 
 ### White
 
-1. Build two dipole antennas (transmitter and receiver)...a wireless telegraph. Spark gap?
+1. Build two dipole antennas (transmitter and receiver)...a wireless telegraph.
