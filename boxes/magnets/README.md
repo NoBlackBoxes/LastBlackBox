@@ -12,7 +12,6 @@ Inductor|1 mH torroidal inductor|1|[-D-](_data/datasheets/inductor_torroidal.pdf
 Magnet wire|Narrow gaurge epoxy insulated (1 m)|1|-|-
 Bolt|12 mm long M4 hex bolt (stainless steel)|1|-|-
 Paper Clip|26 mm zinc coated steel clip|1|-|-
-Putty|Adhesive tack (white)|1|-|-
 Magnet|Hmm...|1|-|-
 
 </p></details>
