@@ -5,6 +5,7 @@
 - Magnetic field (right-hand rule) - weak
 - Electromagnets (coils) - strong
 - Permanent magnets?
+- Generators
 - *Inductors*
 
 #### Tools
