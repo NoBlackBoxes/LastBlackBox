@@ -1,6 +1,6 @@
 ### Grey
 
-1. Build a NAND latch. 
+1. Build a NAND SR latch. 
 
 ### White
 
