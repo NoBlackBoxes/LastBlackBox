@@ -10,11 +10,10 @@ Analog-to-Digital...
 
 Contents|Description| # |Data|Link|
 :-------|:----------|:-:|:--:|:--:|
-Comparator|LM339 (DIP-14)|2|[-D-](_data/datasheets/lm339-n.pdf)|[-L-](https://uk.farnell.com/texas-instruments/lm339n/ic-comparator-quad-dip14-339/dp/3118457)
+Comparator|LM339 (DIP-14)|2|[-D-](_data/datasheets/lm2901.pdf)|[-L-](https://uk.farnell.com/texas-instruments/lm2901n/ic-comparator-quad-2901-dip14/dp/3118410)
 LED (Red)|5 mm/2 mA red LED|2|[-D-](_data/datasheets/led_HLMP.pdf)|[-L-](https://uk.farnell.com/broadcom-limited/hlmp-4700/led-5mm-red-2-3mcd-626nm/dp/1003232)
 LED (Green)|3 mm/2 mA green LED|2|[-D-](_data/datasheets/led_HLMP.pdf)|[-L-](https://uk.farnell.com/broadcom-limited/hlmp-1790/led-3mm-green-2-3mcd-569nm/dp/1003209)
-LED (Yellow)|3 mm/2 mA yellow LED|2|[-D-](_data/datasheets/led_HLMP.pdf)|[-L-](https://uk.farnell.com/broadcom-limited/hlmp-1719/led-3mm-yellow-2-1mcd-585nm/dp/1003208)
-Resistor|2.4 k&Omega;/0.25 W|6|[-D-](_data/datsheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-2k4/res-2k4-1-250mw-axial-metal-film/dp/9341595)
+Resistor|330 &Omega;/0.25 W|6|[-D-](_data/datsheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-2k4/res-2k4-1-250mw-axial-metal-film/dp/9341595)
 
 </p></details>
 
