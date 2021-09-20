@@ -8,7 +8,7 @@ Computers and brains work with voltages. In order for either to affect the envir
 
 Contents|Description| # |Data|Link|
 :-------|:----------|:-:|:--:|:--:|
-DC Motor (cheap one)...|6V Brushed DC motor|1|[-D-](https://www.pololu.com/product/1117/specs)|[-L-](https://www.amazon.co.uk/Gikfun-1V-6V-Hobby-Arduino-EK1894/dp/B07BHHP2BT)
+DC brushed motor|6V Brushed DC motor|1|-|[-L-](https://uk.farnell.com/multicomp/mm28/motor-miniature-3-6v-9600rpm/dp/599128?st=dc%20motor)
 Propeller|Motor shaft attachment|1|-|[-L-](https://www.amazon.co.uk/Winterworm-Propeller-Project-Science-Accessories/dp/B07D8SZHZ8)
 
 </p></details>

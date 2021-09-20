@@ -5,5 +5,4 @@
 
 ### White
 
-1. Build a speaker (magnetic coil + sound source + enclosure)
-2. Stepper motor?
+1. Light controlled motor...power?

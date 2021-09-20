@@ -1,4 +1,3 @@
 Thermistor,Temperature sensitive resistor,2,_data/datasheets/thermistor.pdf,https://uk.farnell.com/epcos/b57891m0103k000/thermistor-ntc-radial-leaded/dp/2285471
-Photoresistor,Light-dependent resistor,2,_data/datasheets/ldr.pdf,https://uk.farnell.com/advanced-photonix/nsl-19m51/light-dependent-resistor-550nm/dp/3168335
-Photoresistor (CdS),Light-dependent resistor,2,_data/datasheets/ldr_2.pdf,https://uk.farnell.com/advanced-photonix/nsl-4962/ldr-1mohm-250mw-nsl-series/dp/3168359
+Photoresistor (LDR),Light-dependent resistor (GL5516 and GL5528),8,,https://www.amazon.co.uk/Resistor-Dependent-Photoresistor-Sensitive-Sensors/dp/B08SC1M7V7/ref=pd_sbs_2
 Piezo,Piezo element,1,_data/datasheets/piezo.pdf,https://uk.farnell.com/multicomp/mcabt-455-rc/audio-element-piezo-2-8khz-35mm/dp/2433035?st=piezo

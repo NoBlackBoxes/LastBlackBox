@@ -148,6 +148,7 @@ def append_materials(BOM, box):
 
 # List all "boxes" in order of processing (and placement in BOM)
 boxes = [
+    'atoms',
     'electrons',
     'magnets',
     'light',
