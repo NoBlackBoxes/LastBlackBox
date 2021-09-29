@@ -14,12 +14,14 @@ source $NBB_ROOT/tools/environments/nbb-python/bin/activate
 
 ```
 
-## Notes for TinyFPGA BX
+## Notes for Upduino3
 
-- Install APIO and tinyprog python tools
+### Linux
+
+- Install APIO
 
 ```bash
-pip install apio tinyprog
+pip install apio
 
 # For Upduino3...might need the latest apio
 pip install -U apio
@@ -33,11 +35,15 @@ sudo usermod -a -G uucp $USER # Arch
 
 ```
 
+- Update UDEV rules in /etc/udev
 
+### MacOS
 
-- Update bootloader
+- brew install libffi libftdi
+- bew install apio
 
-```bash
-tinyprog --update-bootloader
-```
+### Windows
 
+- Install WSL version 2
+- Install APIO
+- Use "iceprog.exe" from windows command prompt for upload

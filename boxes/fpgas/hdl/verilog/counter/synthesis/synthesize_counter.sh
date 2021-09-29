@@ -20,4 +20,7 @@ apio verify --project-dir=bin --board upduino3 --verbose
 # Synthesize
 apio build --project-dir=bin --board upduino3 --verbose
 
+# Upload
+apio upload --project-dir=bin --board upduino3 --verbose
+
 # FIN

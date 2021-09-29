@@ -4,6 +4,7 @@
 - Logic from MOSFETs: Not, AND, etc.
 - Rules for simplifying and solving
 - Math with Logic
+- (Not open drain)
 
 #### Tools
 

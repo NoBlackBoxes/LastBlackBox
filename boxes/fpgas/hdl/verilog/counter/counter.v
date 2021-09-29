@@ -7,10 +7,16 @@ module counter(clock, reset, count);
     input reset;
     output reg[3:0] count;
     
+// Initialize
+initial
+    begin
+        count <= 0;
+    end
+
     // Logic
     always @(posedge clock)
         begin
-            if(!reset)
+            if(reset)
                 count <= 0;
             else
                 count <= count + 1;
