@@ -8,7 +8,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="1.1 (c4e8f9ed74, 2021-05-24)"
-   sodipodi:docname="layout_boxes.svg"
+   sodipodi:docname="layout.svg"
    inkscape:export-filename="/home/kampff/Dropbox/Voight-Kampff/Training/LastBlackBox/designs/kit/layouts/layout_boxes.png"
    inkscape:export-xdpi="199.97615"
    inkscape:export-ydpi="199.97615"
@@ -547,9 +547,9 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.316719"
      inkscape:cx="445.42533"
-     inkscape:cy="257.07839"
+     inkscape:cy="554.78808"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer4"
+     inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="1019"
@@ -1770,8 +1770,7 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-37)"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <flowRoot
        xml:space="preserve"
        id="flowRoot1138"
@@ -1921,14 +1920,14 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;line-height:1.25;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;stroke:#c8c8c8;stroke-width:0.264583;stroke-opacity:1"
-       x="20.227406"
+       x="25.234375"
        y="168.9847"
        id="text1148-8-9-0-37-3"><tspan
          sodipodi:role="line"
          id="tspan1326-6"
-         x="20.227406"
+         x="25.234375"
          y="168.9847"
-         style="font-size:6.35px;fill:#ffffff;fill-opacity:1;stroke:#c8c8c8;stroke-opacity:1">FPGAs</tspan></text>
+         style="font-size:6.35px;fill:#ffffff;fill-opacity:1;stroke:#c8c8c8;stroke-opacity:1">ICs</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;line-height:1.25;font-family:'Linux Biolinum';-inkscape-font-specification:'Linux Biolinum, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#c8c8c8;stroke-width:0.264583;stroke-opacity:1"
