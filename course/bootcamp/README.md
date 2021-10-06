@@ -1,4 +1,4 @@
-# The Last Black Box Course
+# The Last Black Box Boot-Camp
 
 > A kit containing a collection of black boxes that you "open" in sequence.
 
