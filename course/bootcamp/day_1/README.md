@@ -10,7 +10,7 @@
 
 ### NB3 Build (body)
 
-- Watch this video: (Unboxing and build proto base)
+- Watch this video: https://vimeo.com/625664801
 - The LastBlackBox GitHub Repo is here: https://github.com/NoBlackBoxes/LastBlackBox
   - The NB3_body PCB design (in KiCAD) is here: https://github.com/NoBlackBoxes/LastBlackBox/tree/master/boxes/electrons/NB3_body
 
@@ -18,14 +18,14 @@
 
 ### Electronics I
 
-- Watch this video: (intro to electrons, Ohm's Law, and sensors)
+- Watch this video: https://vimeo.com/625820421
 - *Task 2*: Build a voltage divider using discrete resistors
 - *Task 3*: Build variable voltage divider using a potentionmeter
 - *Task 4*: Build a light sensor
 
 ### NB3 Build (motors)
 
-- Watch this video: (Mount motors)
+- Watch this video: https://vimeo.com/625827358
 - *Task 5*: Mount the robot motors and wheels
 
 ### Electronics II
@@ -50,3 +50,10 @@
 
 - *Task 2*: Build a Braitenberg Vehicle
 
+----
+
+## *Evening*
+
+----
+
+- H-bridge

@@ -24,6 +24,13 @@
 ### Networks
 
 - Live Lecture: "Serial, routers, and the internet"
-- *Task 1*: Build a protocol for communicating between your mid- and hindbrain
+- *Task 1*: Build a protocol for communicating between your midbrain and hindbrain
 - *Task 2*: Build a remote control robot
 
+----
+
+## *Evening*
+
+----
+
+- Ears
