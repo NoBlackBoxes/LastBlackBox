@@ -8,15 +8,13 @@
 
 - Watch this video: https://vimeo.com/625626556
 
-<iframe src="https://player.vimeo.com/video/625626556" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-
 ### NB3 Build (body)
 
 - Watch this video: (Unboxing and build proto base)
-- The LastBlackBox GitHub Repo is here: 
-  - The NB3_body PCB design (in KiCAD) is here: 
+- The LastBlackBox GitHub Repo is here: https://github.com/NoBlackBoxes/LastBlackBox
+  - The NB3_body PCB design (in KiCAD) is here: https://github.com/NoBlackBoxes/LastBlackBox/tree/master/boxes/electrons/NB3_body
 
-- *Task 1*: Assemble the robot base
+- *Task 1*: Assemble the robot body/base
 
 ### Electronics I
 
