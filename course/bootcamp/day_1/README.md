@@ -1,4 +1,4 @@
-# The Last Black Box Bootcamp: Day 1
+# The Last Black Box Bootcamp: Day 1 - Electronics
 
 ## Morning
 
@@ -20,7 +20,7 @@
 - *Task 3*: Build variable voltage divider using a potentionmeter
 - *Task 4*: Build a light sensor
 
-### NB3 Building (motors)
+### NB3 Build (motors)
 
 - Watch this video: (Mount motors)
 - *Task 5*: Mount the robot motors and wheels
