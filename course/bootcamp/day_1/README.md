@@ -30,7 +30,7 @@
 
 ### Electronics II
 
-- Watch this video: (intro to magnets and motors)
+- Watch this video: https://vimeo.com/626603421
 - *Task 6*: Spin your motor (forward and backwards)
 
 ----

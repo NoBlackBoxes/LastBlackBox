@@ -6,17 +6,17 @@
 
 ### NB3 Build (power)
 
-- Watch this video: (mount NB3 power board...power with DC supply and test)
+- Watch this video: https://vimeo.com/626839902
 - *Task 1*: Add a (regulated) 5 volt power supply to your robot
-
-### NB3 Build (hindbrain)
-
-- Watch this video: (mount Arduino, connect to Host, use Arduino IDE...blink)
-- *Task 1*: Mount and power your Arduino based hindbrain
 
 ### Analog to Digital
 
 - Watch this video: (intro to digital electronics: comparators, ADCs, logic, memory)
+
+### NB3 Build (hindbrain)
+
+- Watch this video: https://vimeo.com/626836554
+- *Task 1*: Mount and power your Arduino based hindbrain
 - *Task 2*: Blink led
 - *Task 3*: Measure LDR light sensor
 - *Task 4*: Generate PWM for buzzer
