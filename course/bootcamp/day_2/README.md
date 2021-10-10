@@ -11,7 +11,7 @@
 
 ### Analog to Digital
 
-- Watch this video: (intro to digital electronics: https://vimeo.com/627773247
+- Watch this video: https://vimeo.com/627773247
 
 ### NB3 Build (hindbrain)
 
