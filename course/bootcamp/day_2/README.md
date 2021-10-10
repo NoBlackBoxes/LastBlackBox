@@ -11,7 +11,7 @@
 
 ### Analog to Digital
 
-- Watch this video: (intro to digital electronics: comparators, ADCs, logic, memory)
+- Watch this video: (intro to digital electronics: https://vimeo.com/627773247
 
 ### NB3 Build (hindbrain)
 
@@ -22,6 +22,10 @@
 - *Task 4*: Generate PWM for buzzer
 - *Task 5*: Build a Theremin
 
+### Programming Arduino
+
+- If you are new to programming microcontrollers (or programming in general), then watch this video before starting the programming tasks: https://vimeo.com/627783660
+
 ----
 
 ## Afternoon
@@ -31,8 +35,7 @@
 ### Computers
 
 - Live Lecture: "Logic, memory, and the *programmable* computer"
-- *Task 1*: Build a state machine
-- *Task 2*: Build a tracking bot
+- ***Project***: Extend your robot's behaviour
 
 ----
 

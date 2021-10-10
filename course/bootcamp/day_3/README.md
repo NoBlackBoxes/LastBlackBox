@@ -6,9 +6,9 @@
 
 ### NB3 Build (midbrain)
 
-- Watch this video: (mount raspberry pi...power from board, install SD card...bot/etc/WiFi)
+- Watch this video: https://vimeo.com/627777644
 - *Task 1*: Mount a Raspberry Pi on your robot
-- *Task 2*: Connect to your Raspberry Pi from your Host computer (SSH)
+- *Task 2*: Connect to your Raspberry Pi from your Host computer (via SSH)
 
 ### Operating Systems
 
@@ -23,9 +23,9 @@
 
 ### Networks
 
-- Live Lecture: "Serial, routers, and the internet"
-- *Task 1*: Build a protocol for communicating between your midbrain and hindbrain
-- *Task 2*: Build a remote control robot
+- Live Lecture: "Communication, protocols, and the internet"
+- *Task 1*: Design and implement a protocol for communicating between your midbrain and hindbrain
+- ***Project***: Build a remote control robot
 
 ----
 

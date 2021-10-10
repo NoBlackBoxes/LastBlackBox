@@ -48,7 +48,7 @@
 <img src="../../../boxes/transistors/_data/images/MOSFET_motor_driver.png" alt="MOSEFT driver" width="400" height="300">
 </p>
 
-- *Task 2*: Build a Braitenberg Vehicle
+- ***Project***: Build a Braitenberg Vehicle
 
 ----
 
