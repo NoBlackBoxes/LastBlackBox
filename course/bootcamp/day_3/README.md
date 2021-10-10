@@ -10,7 +10,21 @@
 - *Task 1*: Mount a Raspberry Pi on your robot
 - *Task 2*: Connect to your Raspberry Pi from your Host computer (via SSH)
 
-- This pinout of the Raspberry Pi GPIO might be useful: [Raspberry Pi GPIO](resources/rpi_GPIO_pinout.png)
+  - This pinout of the Raspberry Pi GPIO might be useful: [Raspberry Pi GPIO](resources/rpi_GPIO_pinout.png)
+  - Examples of files (*ssh* and *wpa_supplicant.conf*) you need to create on the "boot" partition of the micro-SD card can be found here: [boot](resources/connecting/boot)
+
+- When you are able to connect to your RPi, then run the following commands from the terminal prompt. (*These will update and upgrade the RPi OS and libraries to the latest version, which may help prevent version conflicts in the subsequent exercises.*)
+
+```bash
+# Change the default password for the "pi" user
+passwd
+
+# Update the "package manager" (so it knows where to looks for any upgrades)
+sudo apt update
+
+# Upgrade the OS (and installed libraries) using the "package manager"
+sudo apt upgrade
+```
 
 ### Operating Systems
 

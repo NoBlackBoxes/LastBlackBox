@@ -16,13 +16,12 @@
 ### NB3 Build (hindbrain)
 
 - Watch this video: https://vimeo.com/626836554
+  - This pinout of the Arduino might be useful: [Anduino Nano Pinout](resources/pinout_arduino_nano.png)
 - *Task 1*: Mount and power your Arduino based hindbrain
 - *Task 2*: Blink led
 - *Task 3*: Measure LDR light sensor
 - *Task 4*: Generate PWM for buzzer
 - *Task 5*: Build a Theremin
-
-- This pinout of the Arduino might be useful: [Anduino Nano Pinout](resources/pinout_arduino_nano.png)
 
 ### Programming Arduino
 
