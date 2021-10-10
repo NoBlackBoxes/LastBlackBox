@@ -10,10 +10,12 @@
 - *Task 1*: Mount a Raspberry Pi on your robot
 - *Task 2*: Connect to your Raspberry Pi from your Host computer (via SSH)
 
+- This pinout of the Raspberry Pi GPIO might be useful: [Raspberry Pi GPIO](resources/rpi_GPIO_pinout.png)
+
 ### Operating Systems
 
-- Watch this video: (intro to OSes)
-- *Task 3*: Python practice 
+- Watch this video: (Introduction to OSes)
+- *Task 3*: Python practice
 
 ----
 

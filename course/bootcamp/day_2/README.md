@@ -22,6 +22,8 @@
 - *Task 4*: Generate PWM for buzzer
 - *Task 5*: Build a Theremin
 
+- This pinout of the Arduino might be useful: [Anduino Nano Pinout](resources/pinout_arduino_nano.png)
+
 ### Programming Arduino
 
 - If you are new to programming microcontrollers (or programming in general), then watch this video before starting the programming tasks: https://vimeo.com/627783660
