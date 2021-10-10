@@ -6,7 +6,7 @@
 
 ### NB3 Build (forebrain)
 
-- Watch this video: (mount camera and NPU, connect camera...not NPU)
+- Watch this video: [NB3 Forebrain](https://vimeo.com/628545232)
 - *Task 1*: Mount a camera and a "cortex" on your robot
 
 ### Computer Vision
