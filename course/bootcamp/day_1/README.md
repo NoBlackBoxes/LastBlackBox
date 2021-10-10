@@ -45,7 +45,7 @@
 - *Task 1*: Build a MOSFET motor driver circuit
 
 <p align="center">
-<img src="../../../boxes/transistors/_data/images/MOSFET_motor_driver.png" alt="MOSEFT driver" width="400" height="300">
+<img src="resources/images/MOSFET_motor_driver.png" alt="MOSEFT driver" width="400" height="300">
 </p>
 
 - ***Project***: Build a Braitenberg Vehicle
