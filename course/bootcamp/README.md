@@ -27,7 +27,7 @@ You will be building a robot. The robot's physical layout mimics the basic anato
 
 ### Day 2 - Computers
 
-- Morning: Microcontrollers (Data, Logic, and Memory)
+- Morning: Microcontrollers
 - Afternoon: Programming
 
 ### Day 3 - Systems and Networks
