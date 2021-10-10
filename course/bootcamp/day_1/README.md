@@ -56,4 +56,11 @@
 
 ----
 
-- H-bridge
+### H-bridge
+
+In order for your robot to drive both forwards and backwards, you will need a special circuit that uses 4 MOSFETs to control the direction of current flowing through the motor's coils. This circuit is called an H-bridge, and you have two of them in your NeuroKit. If you would like to add this extra degree of control, then please complete the following *bonus* task. 
+
+- Watch this video: (set up H-bridge)
+- *Task 1*: Confirm that your direction "selector" works.
+
+*Note*: This extra control will be most useful tomorrow, when we add a "hindbrain" (computer) and can really take advantage of having independent bi-directional control of each wheel.
