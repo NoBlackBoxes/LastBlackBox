@@ -1,15 +1,14 @@
 # computers : programming : assembly
 
-Here we will start telling our computer what to do.
-
-----
-
-Videos              |Exercises                      |Kit
-:-------------------|:------------------------------|:-------------------------
-
-----
+Here we will start telling our computer what to do using Assmebly language.
 
 ## Prerequisites
+
+### Windows
+
+Hmmm...currently non-trivial. Look for VS code extensions.
+
+### Linux (Debian-based)
 
 We require an "assmebler" that can convert (assemble) our text into machine code. For this, we will install the gcc-avr package.
 
