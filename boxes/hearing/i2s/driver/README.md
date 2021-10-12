@@ -49,7 +49,7 @@ sudo insmod nb3-ear-module.ko
 You will have to insert the module each time you reboot (run the insmod command above). If you want to have it load automatically then you need to add its name to this file: "/etc/modules".
 
 ```bash
-sudo /etc/modules
+sudo nano /etc/modules
 ```
 
 and add...
@@ -78,5 +78,5 @@ card 1: NB3earcard [NB3_ear_card], device 0: simple-card_codec_link snd-soc-dumm
 To make a test recording.
 
 ```bash
-
+arecord -D plughw:1 -c2 -r 48000 -f S32_LE -t wav -V stereo -v file_stereo.wav
 ```
