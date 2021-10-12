@@ -40,7 +40,7 @@ clean:
 help:
 	$(MAKE) -C $(KDIR) M=$(PWD) help
 
-install: nb3-i2s-ear.ko
+install: nb3-ear-module.ko
 	rm -f ${MDIR}/kernel/sound/drivers/$(MOD_NAME).ko
 	install -m644 -b -D $(MOD_NAME).ko ${MDIR}/kernel/sound/drivers/$(MOD_NAME).ko
 	depmod -a
