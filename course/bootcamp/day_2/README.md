@@ -69,6 +69,16 @@
 
 ----
 
-- Logic Gates
-- SR Latch
-- FPGAs
+### Control
+
+In order to more accurately control the speed of your robot (or to detect when your desired speed is not the same as your actual speed, e.g. if your robot gets stuck), then you will need some ***sensory feedback*** about how fast your motor is spinning. Your motor has this ability.
+
+  - The other 4 cables coming out of your motor (xEa, xE+, xE-, xEb, where x is either "r" or "l" depending on the side of the motor) carry *sensory* information about how fast the motor is spinning. If you apply +5V to xE+ and 0V to xE-, then xEa and xEb will each pulse from low (0V) to high (+5V) every time the motor makes one revolution.
+  - *Note*: The pulse comes once for each revolution of the *motor*, not the wheel...which revoles mouch slower given the gears.
+  - The two *encoders* (Ea and Eb) are mounted asymmetrically. Why? So you can tell which direction the motor is spinning by looking at which one pulses first each revolution.
+
+<p align="center">
+<img src="resources/images/motor_interface.png" alt="Motor Interface" width="500" height="200">
+<p>
+
+In order to measure the signals from xEa and xEb, you will likely want to use "interrupts" in your Arduino program. Interrupts are little sections of code that run everytime a digital event is detected (e.g. xEa going from low to high). Your Arduino Nano does not have enough interrupt capable digital pins to monitor all 4 encoders (2 left, 2 right). Therefore, it is fine to monitor a single encoder on either side to measure the speed of each motor (the time between each encoder pulse) and then just infer the direction from the motor control signal you are sending.
