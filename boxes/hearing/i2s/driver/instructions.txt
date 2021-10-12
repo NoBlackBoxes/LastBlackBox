@@ -1,5 +1,11 @@
 - Download kernel headers
+
+sudo apt-get install raspberrypi-kernel-headers
+
 - make all
+
+
+
 -(install? or just insmod? - insmod seems to work)
 - no change to device tree (need i2s on)?
 - Needs to specifiy rpi4 reg

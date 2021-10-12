@@ -1,4 +1,4 @@
-MOD_NAME	:= snd-i2smic-rpi
+MOD_NAME	:= nb3-ear-module
 
 ifneq ($(KERNELRELEASE),)
 
@@ -6,10 +6,10 @@ ifneq ($(KERNELRELEASE),)
 
 all:
 	@echo "Building from the kernel build system"
-	@echo "Module build: $(CONFIG_SND_I2S_RPI)"
+	@echo "Module build: $(CONFIG_NB3_EAR_MODULE)"
 	@echo "Name: $(MOD_NAME)"
 
-obj-$(CONFIG_SND_I2S_RPI) := $(MOD_NAME).o
+obj-$(CONFIG_NB3_EAR_MODULE) := $(MOD_NAME).o
 
 else
 # external module build
@@ -29,7 +29,7 @@ KDIR	?= /lib/modules/$(shell uname -r)/build
 MDIR	?= /lib/modules/$(shell uname -r)
 PWD	:= $(shell pwd)
 
-export CONFIG_SND_I2S_RPI := m
+export CONFIG_NB3_EAR_MODULE := m
 
 all:
 	$(MAKE) -C $(KDIR) M=$(PWD) modules
@@ -40,7 +40,7 @@ clean:
 help:
 	$(MAKE) -C $(KDIR) M=$(PWD) help
 
-install: snd-i2smic-rpi.ko
+install: nb3-i2s-ear.ko
 	rm -f ${MDIR}/kernel/sound/drivers/$(MOD_NAME).ko
 	install -m644 -b -D $(MOD_NAME).ko ${MDIR}/kernel/sound/drivers/$(MOD_NAME).ko
 	depmod -a

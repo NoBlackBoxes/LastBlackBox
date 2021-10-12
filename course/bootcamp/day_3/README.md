@@ -24,6 +24,12 @@ sudo apt update
 
 # Upgrade the OS (and installed libraries) using the "package manager"
 sudo apt upgrade
+
+# Install git
+sudo apt-get install git
+
+# Clone the LastBlackBox git repository
+git clone https://github.com/NoBlackBoxes/LastBlackBox
 ```
 
 ### Operating Systems
