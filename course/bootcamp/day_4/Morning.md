@@ -124,9 +124,15 @@ both libraries. Here’s how you do it:
 
     pip3 install numpy --upgrade
 
-If you have any issues here, let us know. Next, transfer the
-cameraStream.py file somewhere on your Raspberry Pi, e.g. in
-/home/pi/Documents. You can then execute it using the following command:
+If you have any issues here, let us know. 
+
+**If you are using the headless Lite OS, it may happen that you need to install a couple of more libraries: ** 
+
+    sudo apt-get python3-opencv
+    sudo apt-get python3-pip
+
+Next, transfer the `cameraStream.py` file somewhere on your Raspberry Pi, e.g. in
+`/home/pi/Documents`. You can then execute it using the following command (starting with `python`):
 
     \~$ python3 Documents/cameraStream.py
 
@@ -134,7 +140,7 @@ On your computer or cell phone that is in the same network as your
 Raspberry Pi, go to an internet browser (Firefox, Chrome, …), type in
 the Raspberry Pi’s IP address with the port 8000, e.g.
 
-http://192.168.43.78:8000
+    http://192.168.43.78:8000
 
 and now you should see a live stream of your Raspberry Pi’s camera
 
