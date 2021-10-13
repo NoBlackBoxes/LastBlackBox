@@ -17,13 +17,13 @@ void loop() {
   if (Serial.available() > 0) {
     char newChar = Serial.read();
 
-    // Respond to command "o"
+    // Respond to command "x"
     if(newChar == 'x') {
       // Turn off LED pin 13
       digitalWrite(LED_BUILTIN, LOW);
     }
 
-    // Respond to command "x"
+    // Respond to command "o"
     if(newChar == 'o') {
       // Turn on LED pin 13
       digitalWrite(LED_BUILTIN, HIGH);

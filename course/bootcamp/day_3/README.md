@@ -69,6 +69,11 @@ git clone https://github.com/NoBlackBoxes/LastBlackBox
 - Live Lecture: "Communication, protocols, and the internet"
 - *Task 1*: Design and implement a protocol for communicating between your midbrain and hindbrain
 - ***Project***: Build a remote control robot
+- You will need the following library
+
+```bash
+sudo apt-get install python3-pyserial
+```
 
 ----
 
