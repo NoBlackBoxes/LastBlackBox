@@ -40,9 +40,7 @@ class StreamingOutput(object):
         return self.buffer.write(buf)
 
 class StreamingHandler(server.BaseHTTPRequestHandler):
-    i = 0
-    # bg = np.zeros((5, 480, 640, 3), dtype=np.uint8)
-    bg = np.zeros((5, 480, 640), dtype=np.uint8)
+    frame_i = 0
     
     def do_GET(self):
         if self.path == '/':
