@@ -72,7 +72,7 @@ git clone https://github.com/NoBlackBoxes/LastBlackBox
 - You will need the following library
 
 ```bash
-sudo apt-get install python3-pyserial
+sudo apt-get install python3-serial
 ```
 
 ----
