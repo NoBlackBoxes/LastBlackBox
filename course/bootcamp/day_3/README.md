@@ -4,9 +4,9 @@
 
 ----
 
-***WARNING***: The first task of this morning (mount and *connect to* a Raspberry Pi) can be frustrating. We have now fully entered the realm of "human generated complexity", and the reasons for why something works one way vs. another, will no longer be easy to explain *intuitively*. However, we live in a world dominated by "human generated complexity", and learning how to navigate it, by whatever means necessary, is a fundamental skill that you should take away from this course.
- - Google/Stackoverflow/etc. are your friend.
- - If you get stuck (particularly on *Task 3*), then know that this is ***normal*** and almost entirely dependent on how much control you were given over your "local network". Reach out and we will *ALL* learn from your quest to *connect*!
+> ***WARNING***: The first task of this morning (mount and *connect to* a Raspberry Pi) can be frustrating. We have now fully entered the realm of "human generated complexity", and the reasons for why something works one way vs. another, will no longer be easy to explain *intuitively*. However, we live in a world dominated by "human generated complexity", and learning how to navigate it, by whatever means necessary, is a fundamental skill that you should take away from this course.
+> - Google/Stackoverflow/etc. are your friend.
+> - If you get stuck (particularly on *Task 3*), then know that this is ***normal*** and almost entirely dependent on how much control you were given over your "local network". Reach out and we will *ALL* learn from your quest to *connect*!
 
 ### NB3 Build (midbrain)
 
@@ -16,7 +16,7 @@
 - *Task 2*: Copy a version of the Raspberry Pi OS (operating system) to your micro-SD card
   - You can download the most recent version here: [RPi OS Download](https://www.raspberrypi.com/software/operating-systems/)
     - The "Lite" version is sufficient, but the "Desktop" version will include some software that could be useful in later steps (i.e. debugging the WiFi connection).
-  - Use a program (such as [Etcher](https://www.balena.io/etcher/) to copy the downloaded image to your micro-SD card.
+  - Use a program (such as [Etcher](https://www.balena.io/etcher/)) to copy the downloaded image to your micro-SD card.
   - ***Before*** you insert the micro-SD card into the Raspberry Pi, complete the first steps of the next Task.
 - *Task 3*: Connect to your Raspberry Pi from your Host computer (via SSH)
   - This will require adding two files to the "boot" partition on the micro-SD card that tell your NB3's Raspberry Pi how to connect to a WiFi network.
