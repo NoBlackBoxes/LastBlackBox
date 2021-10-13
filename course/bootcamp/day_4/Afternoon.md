@@ -21,7 +21,7 @@ dynamically interact with the robot.
 Task 1: Incorporate the face detection algorithm
 ------------------------------------------------
 
-I prepared a little script called “faceDetection.py” that contains all
+I prepared a little script called `faceDetection.py` that contains all
 the code of the face detection algorithm. Ensure you understand what
 each line of code is doing. Run it locally on your computer to see if it
 works in general. Your aim is it to incorporate this code into the
@@ -43,14 +43,16 @@ Tipps:
 - How do you crop an image using numpy array indexing?
 - How do you save images?
 - Is there a way you could think of to give them a names like 0.jpg,
-1.jpg, … ?
+1.jpg, … ? I already sneaked in a variable called `frame_i` that you can 
+access with `self.frame_i`.
 
 Task 3: Let the robot react
 ---------------------------
 
 If you detect a face using your face detection algorithm, let the robot
 interact with the environment. For example, let an LED light up or make
-some noise using the speaker.
+some noise using the speaker. Use the serial connection introduced yesterday
+to connect to your Arduino.
 
 Task 4: Resizing images
 -----------------------
@@ -78,9 +80,9 @@ it, what does this mean?
 ![](./media/image11.png)
 
 You can use the bg variable in your image processing part by referring
-to it as `self.bg`.
+to it as `self.bg`, similar to `self.frame_i`.
 
-If you want to replace image 0, you can write `self.bg\[0\] = …`
+If you want to replace image 0, you can write `self.bg[0] = …`
 
 Ensure that you are cycling through your background images and always
 keep the five latest background images! Then subtract the average
