@@ -4,7 +4,7 @@
 
 ----
 
-***WARNING***: The first task of this morning (mount and *connect to* a Raspberry Pi) can be frustrating. We have now fully entered the realm of "human generated complexity", and the reasons for why something works one way vs. another, will no longer be easy to explain *intuitively*. However, we live a world dominated by "human generated complexity", and learning how to navigate it, by whatever means necessary, is a fundamental skill that you should take away from this course.
+***WARNING***: The first task of this morning (mount and *connect to* a Raspberry Pi) can be frustrating. We have now fully entered the realm of "human generated complexity", and the reasons for why something works one way vs. another, will no longer be easy to explain *intuitively*. However, we live in a world dominated by "human generated complexity", and learning how to navigate it, by whatever means necessary, is a fundamental skill that you should take away from this course.
  - Google/Stackoverflow/etc. are your friend.
  - If you get stuck (particularly on *Task 3*), then know that this is ***normal*** and almost entirely dependent on how much control you were given over your "local network". Reach out and we will *ALL* learn from your quest to *connect*!
 
