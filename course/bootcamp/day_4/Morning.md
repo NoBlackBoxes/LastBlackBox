@@ -149,9 +149,12 @@ Task 5: Transfer and open a photo
 
 The last task for the morning is to transfer a photo from your Raspberry
 Pi to your computer. Use either Jupyter notebooks or a Python script
-inside of Visual Studio Code to visualize the image. Try to work with
+inside of Visual Studio Code to visualize the image (see paragraphs below). Try to work with
 the image, for example crop it, or resize it, etc. This knowledge is
 important for the afternoon and tomorrow.
+
+I am assuming that you have either Anaconda installed on your machine (PC!) or 
+any other Python version that has Juptyter installed.
 
 Results
 -------

@@ -16,6 +16,7 @@
 
 ### Machine Vision
 
+- Watch the long video and the Jupyter notebook video [ENB Machine Vision](https://drive.google.com/drive/folders/1IFq9GW5x4-vth9P_7aa9M0LPKJwn1hfv?usp=sharing)
 - *Task 2*: Take a first photo and video
 - *Task 3*: Transfer photo and video to your computer
 - *Task 4*: Live stream camera feed
