@@ -104,7 +104,8 @@ class StreamingServer(socketserver.ThreadingMixIn, server.HTTPServer):
 
 # Open the camera and stream a low-res image (width 640, height 480 px)
 with picamera.PiCamera(resolution='640x480', framerate=24) as camera:
-    output = StreamingOutput()
+    camera.vflip = True # Flips image vertically, depends on your camera mounting
+    output = StreamingOutput() 
     camera.start_recording(output, format='mjpeg')
     try:
         address = ('', 8000) # port 8000

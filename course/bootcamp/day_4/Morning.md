@@ -39,7 +39,7 @@ Remember, you can SSH on your raspberry pi using PuTTY or KiTTY using
 your set username/password (by default pi and raspberry, respectively).
 Next, use the raspi-config (`sudo raspi-config`) to enable the camera:
 
-![](./media/image1.png){width="6.3in" height="2.673611111111111in"}
+![](./media/image1.png)
 
 Task 2: Take a first photo and video
 ------------------------------------
@@ -55,12 +55,11 @@ home folder), but you can specify the path.
 
 For taking a single photo you could for example use:
 
-    raspistill –w 640 –h 480 –q 75 –o test\_image.jpg\
-    (image with 640x480 pixel, saved as test\_image.jpg with a quality of 75
-    (lower worse))
+    raspistill -w 640 -h 480 -q 75 -vf -o test_image.jpg
+    (image with 640x480 pixel, vertically flipped, saved as test_image.jpg with a quality of 75 (lower worse))
 
-    raspivid –o test\_vid.h264 –t 5000 –fps 24\
-    (video with default 1920x1080 px (full HD), saved as test\_vid.h264 and
+    raspivid -o test_vid.h264 -t 5000 -fps 24
+    (video with default 1920x1080 px (full HD), saved as test_vid.h264 and
     records at 24 frames per second for 5 s (5000 ms))
 
 This records RAW h264 footage, and is not contained in a container file.
@@ -76,7 +75,7 @@ First, install MP4Box if it is not pre-installed:
 Next, use the following command to convert the raw video file to an mp4
 container.
 
-    MP4Box -add test\_vid.h264 test\_vid.mp4
+    MP4Box -add test_vid.h264 test_vid.mp4
 
 Task 3: Transfer them to your computer
 --------------------------------------
@@ -92,16 +91,16 @@ Setup your connection the following way by adding a new “Server”:
 
 I know it is in German, but you just click “New Server”, use the
 protocol SFTP, add the IP address of your Raspberry Pi (In the
-screenshot is MY IP-Address, which is not necessarily yours!), and add
+screenshot is MY IP-Address, which is not necessarily yours!), set the **port to 22** and add
 the username/password for connection. Next, click on “Connect”, and you
-will see something like this:
+will see something like this (the port is missing though):
 
 ![](./media/image3.png)
 
 On the left is your PC, on the right is your Rapsberry Pi. By using
 drag&drop, you can move files from your PC to the Raspberry Pi and vice
 versa. For example, you can now navigate to the folder, where you saved
-your videos (e.g. /home/pi/…) and transfer them to your computer. Try to
+your videos (e.g. `/home/pi/…`) and transfer them to your computer. Try to
 open the files and watch the video (check both, h264 – that shouldn’t
 work, and mp4 – that should work).
 
@@ -125,8 +124,7 @@ both libraries. Here’s how you do it:
     pip3 install numpy --upgrade
 
 If you have any issues here, let us know. 
-
-**If you are using the headless Lite OS, it may happen that you need to install a couple of more libraries: ** 
+Also, if you are using the **headless Lite OS**, it may happen that you need to install a couple of more libraries: 
 
     sudo apt-get python3-opencv
     sudo apt-get python3-pip
@@ -161,7 +159,7 @@ Results
 
 This is how your robot should look like:
 
-*image from adam*
+![](./media/image3a.png)
 
 And this is your camera stream
 
@@ -218,9 +216,9 @@ Use jupyter notebooks (preferred for this course) or python scripts to
 open, modify and save images. Use the imageio library to open and save
 images.
 
-    im = io.imread(“test\image.jpg”)
+    im = io.imread(“test_image.jpg”)
 
-    io.imwrite(“cropped.jpg”, im\[10:, 30:\])
+    io.imwrite(“cropped.jpg”, im[10:, 30:])
 
     # skips 30 px in x and 10 px in y
 
