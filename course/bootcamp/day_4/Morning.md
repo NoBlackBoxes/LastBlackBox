@@ -81,7 +81,7 @@ Task 3: Transfer them to your computer
 --------------------------------------
 
 You can use for example FileZilla
-([www.filezilla.org](http://www.filezilla.org)) to transfer files
+([www.filezilla.org](https://filezilla-project.org/)) to transfer files
 easily.
 
 Setup your connection the following way by adding a new “Server”:
