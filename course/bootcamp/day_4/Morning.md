@@ -125,8 +125,9 @@ both libraries. Here’s how you do it:
 If you have any issues here, let us know. 
 Also, if you are using the **headless Lite OS**, it may happen that you need to install a couple of more libraries: 
 
-    sudo apt-get python3-opencv
-    sudo apt-get python3-pip
+    sudo apt-get install python3-opencv
+    sudo apt-get install python3-pip
+    sudo apt-get install python3-picamera
 
 Next, transfer the `cameraStream.py` file somewhere on your Raspberry Pi, e.g. in
 `/home/pi/Documents`. You can then execute it using the following command (starting with `python`):
