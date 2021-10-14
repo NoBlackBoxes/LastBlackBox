@@ -12,7 +12,7 @@
 
 - Watch the following two videos: [Deep Learning 1](https://www.youtube.com/watch?v=aircAruvnKk) and [Deep Learning 2](https://www.youtube.com/watch?v=IHZwWFHWa-w)
 - *Task 2*: Get a pre-compiled model for pose estimation
-- *Task 3*: Run our sample script for inference with a test image
+- *Task 3*: Run our sample script on the Raspberry Pi for inference with a test image
 - *Task 4*: Incorporate code into your live streaming 
 
 More information on the tasks are found in a [separate document](Morning.md)
