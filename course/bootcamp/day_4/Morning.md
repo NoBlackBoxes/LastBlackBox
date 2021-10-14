@@ -139,7 +139,9 @@ the Raspberry Pi’s IP address with the port 8000, e.g.
 
     http://192.168.43.78:8000
 
-and now you should see a live stream of your Raspberry Pi’s camera
+and now you should see a live stream of your Raspberry Pi’s camera.
+
+*Stop the stream by `Ctrl+C`*
 
 Task 5: Transfer and open a photo
 ---------------------------------
