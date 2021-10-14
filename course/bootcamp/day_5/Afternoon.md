@@ -27,12 +27,12 @@ folder, e.g. `my_faces`. We prepared a folder from the CelebA dataset[^2]
 that contains in our case \~ 5,000 images of celebrities re-detected and
 resized using the same algorithm as you are using for your face
 detection. You can find this on [zenodo](https://zenodo.org/record/5561092#.YWQHg5pByUk).
-Upload everything to Google Colab.
+Upload everything to [Google Colab](https://colab.research.google.com/).
 
 Task 2: Train your own DNN
 --------------------------
 
-Use our `ENB train.ipynb` to train your own network. It should be easy
+Use our `ENB train.ipynb` to train your own network. Go to [Google Colab](https://colab.research.google.com/) and upload it there and open the Jupyter notebook. It should be easy
 going, however, try to understand what is happening: What are the
 convolutional layers, what are these settings doing? Ensure you
 understand:

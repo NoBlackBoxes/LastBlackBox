@@ -1,7 +1,7 @@
 import io
 import picamera # Camera
 
-#### THIS IS IMPORTANT FOR LIFE STREAMING ####
+#### THIS IS IMPORTANT FOR LIVE STREAMING ####
 import logging
 import socketserver
 from threading import Condition
@@ -14,7 +14,7 @@ import cv2
 PAGE="""\
 <html>
 <head>
-<title>picamera MJPEG streaming demo</title>
+<title>Hey people!</title>
 </head>
 <body>
 <img src="stream.mjpg" width="640" height="480" style="width:100%;height:100%;" />

@@ -27,6 +27,8 @@ each line of code is doing. Run it locally on your computer to see if it
 works in general. Your aim is it to incorporate this code into the
 cameraStream.py file to allow live face recognition with your robot.
 
+Please ensure that you download also the *XML FILE* and put it in the very same folder :-)
+
 Tipp: 
 - Check the variable names
 - Check the detector parameters
