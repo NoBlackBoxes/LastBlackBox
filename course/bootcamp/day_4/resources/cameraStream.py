@@ -103,6 +103,8 @@ class StreamingServer(socketserver.ThreadingMixIn, server.HTTPServer):
 # Open the camera and stream a low-res image (width 640, height 480 px)
 with picamera.PiCamera(resolution='640x480', framerate=24) as camera:
     camera.vflip = True # Flips image vertically, depends on your camera mounting
+    camera.awb_gains = (1.2, 1.5)
+    camera.awb_mode = 'off'
     output = StreamingOutput() 
     camera.start_recording(output, format='mjpeg')
     try:
