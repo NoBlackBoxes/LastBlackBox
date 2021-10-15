@@ -19,6 +19,13 @@ is using something called “Triplet Loss”; in this session we are largely
 simplifying this problem. However, the original idea is also in general
 capable of re-identifying cells or neurons.
 
+Task 0: MNIST
+-------------
+
+You can first look at the `MNIST.ipynb` and try to upload and run it on [Google Colab](https://colab.research.google.com/).
+This is the exact script of training and evaluation deep neural networks as shown in the lecture.
+
+
 Task 1: Data collection
 -----------------------
 
