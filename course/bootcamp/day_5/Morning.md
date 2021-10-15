@@ -37,11 +37,9 @@ Task 1: Install the Google Coral USB Accelerator
 First, install the appropriate drivers to interact with the Google Coral
 USB Accelerator:
 
-    echo "deb https://packages.cloud.google.com/apt coral-edgetpu-stable
-    main" | sudo tee /etc/apt/sources.list.d/coral-edgetpu.list
+    echo "deb https://packages.cloud.google.com/apt coral-edgetpu-stable main" | sudo tee /etc/apt/sources.list.d/coral-edgetpu.list
 
-    curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo
-    apt-key add -
+    curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 
     sudo apt-get update
 
@@ -60,17 +58,17 @@ Next, plugin the Google Coral USB Accelerator into a USB 3 port (the connectors 
 Task 2: Get a pre-compiled model for pose estimation
 ----------------------------------------------------
 
-Download e.g. the MoveNet model from [www.coral.ai](http://www.coral.ai) and upload it to the Raspberry Pi. It should be located in the same folder as the script for inference.
+Download e.g. the MoveNet model from [www.coral.ai](http://www.coral.ai) and upload it to the Raspberry Pi. It should be located in the same folder as the script for inference. 
 
 Task 3: Run our sample script for inference with a test image
 -------------------------------------------------------------
 
-We have a test script runCoral.py that uses a file called `test.jpg` and estimates the pose in this file. Double check if everything runs without any errors. If there are any errors, fix them!
+We have a test script coralPose.py that uses a file called `test.jpg` and estimates the pose in this file. Double check if everything runs without any errors. If there are any errors, fix them!
 
 Task 4: Incorporate the code into your streaming app
 ----------------------------------------------------
 
-Now you should be able to integrate the pose estimation into your streaming app. Tipp: You can create the interpreter at the very beginning of the program, and only once. Just set at each image processing step the input and invoke the interpreter, and draw the points.
+Now you should be able to integrate the pose estimation into your streaming app. Tipp: You can create the interpreter at the very beginning of the program, and only once. Just set at each image processing step the input and invoke the interpreter, and draw the points. Look at the `coralPose.py` file for the exact commands.
 
 Result
 ------
