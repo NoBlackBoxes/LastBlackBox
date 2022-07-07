@@ -71,7 +71,7 @@ def release(key):
     return True
 
 # Listen for keyboard events
-listen_keyboard(on_press=press, on_release=release,until="q")
+listen_keyboard(on_press=press, on_release=release, delay_second_char=0.10, until="q")
 
 # Turn on key echo
 os.system("stty echo")
