@@ -15,3 +15,18 @@
 
 ----
 
+Materials:
+
+(4xAA batteries)
+(4xAA battey holder)
+
+9V battery
+9V battery clip
+Test resistor
+IRF510 (x2) + extras
+IN4001 (x2) + extras
+(LDR) + extras
+(Resistor kit)
+(LEDs)
+(Active Buzzer)
+(Multimeter)
