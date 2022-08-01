@@ -77,7 +77,7 @@ Gate (NOR),4xNOR gate,1,_data/datasheets/NOR_gates.pdf,https://uk.farnell.com/te
 Gate (XOR),4xXOR gate,1,_data/datasheets/XOR_gates.pdf,https://uk.farnell.com/texas-instruments/cd4070be/ic-4000-cmos-4070-dip14-18v/dp/3120134
 memory,,,,
 Gate (NAND),4xNAND gate,2,_data/datasheets/NAND_gates.pdf,https://uk.farnell.com/texas-instruments/cd4011be/ic-4000-cmos-4011-dip14-18v/dp/3120113
-fpgas,,,,
+ics,,,,
 UpDuino,ICE40UP5K dev board,1,_data/datasheets/arduino_nano_rev3.pdf,https://uk.farnell.com/arduino/a000005/arduino-nano-evaluation-board/dp/1848691
 Cable (MiniUSB-1m),Mini-USB to Type-A cable (1 m),1,_data/datasheets/mini_USB_cable_1m.pdf,https://uk.farnell.com/molex/88732-8602/usb-cable-2-0-plug-plug-1m/dp/1221071
 Piezo Buzzer,Piezoelectric speaker/buzzer,1,_data/datasheets/piezo_speaker.pdf,https://uk.farnell.com/kingstate/kpeg110/piezo-transducer/dp/1193641
@@ -106,9 +106,9 @@ hearing,,,,
 NB3 Ear, I2S mems microphone breakout board,2,NB3_ear,
 vision,,,,
 Camera (RPiv2),Raspberry Pi 8 MP camera,1,_data/datasheets/rpi_camera_v2.pdf,https://uk.farnell.com/raspberry-pi/rpi-8mp-camera-board/raspberry-pi-camera-board-v2/dp/2510728
-Camera Mount,Custom laser cut pan-tilt base mount,1,NB3_camera_mount,
-Pan-Tilt Mount,2 DOF mount with micro servos,1,,https://www.adafruit.com/product/1967
-learning,,,,
+Camera Mount,Custom laser cut camera mount,1,NB3_camera_mount,
+M2 screw, M2 threaded bolt (8 mm),4,,
+M2 nut, M2 threaded nut,4,,learning,,,,
 Clicker,Loud sound maker (and whistle),1,,https://www.amazon.co.uk/gp/product/B07HD3RDMK
 intelligence,,,,
 NPU,Coral EdgeTPU USB Type-C,1,_data/datasheets/Coral-USB-Accelerator-datasheet.pdf,https://www.mouser.co.uk/ProductDetail/Coral/G950-01456-01?qs=sGAEpiMZZMu3sxpa5v1qrv9%252Bz890pMquX2qAISzny6s%3D
@@ -118,5 +118,3 @@ M3 screw (16), 16 mm long M3 screw with phillips socket,4,,
 M3 nut, M3 nut,4,,
 M2.5 Standoffs (15), 15 mm long female-to-female M2.5 brass standoffs,4,,
 M2.5 screw (12), 12 mm long M2.5 screw with phillips socket,4,,
-?,,,,
-?, your ideas and creativity,11,,

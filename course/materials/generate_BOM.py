@@ -161,7 +161,7 @@ boxes = [
     'data',
     'logic',
     'memory',
-    'fpgas',
+    'ics',
     'computers',
     'control',
     'behaviour',
@@ -171,8 +171,7 @@ boxes = [
     'hearing',
     'vision',
     'learning',
-    'intelligence',
-    '?'
+    'intelligence'
 ]
 
 # Insert materials table into README
