@@ -1,7 +1,7 @@
-### Module positions - created on Fri Jul  2 10:55:21 2021 ###
-### Printed by Pcbnew version (5.99.0-11065-g2a3d8e22b6)
+### Module positions - created on Thu 06 Oct 2022 12:21:17 BST ###
+### Printed by Pcbnew version (6.0.7)
 ## Unit = mm, Angle = deg.
 ## Side : bottom
 # Ref     Val       Package                PosX       PosY       Rot  Side
-G***      LOGO      Logo_VK_15mm       -34.0000     9.5000  180.0000  bottom
+G***      LOGO      Logo_VK_15mm       -34.0000     9.7500  180.0000  bottom
 ## End
