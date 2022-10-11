@@ -1,5 +1,5 @@
-### Module positions - created on Tue Aug  2 15:11:09 2022 ###
-### Printed by Pcbnew version (6.0.7)
+### Module positions - created on Tue Oct 11 12:00:08 2022 ###
+### Printed by Pcbnew version (6.0.8)
 ## Unit = mm, Angle = deg.
 ## Side : top
 # Ref     Val                           Package                                   PosX       PosY       Rot  Side
@@ -17,4 +17,6 @@ J11       Conn_02x03_Top_Bottom         PinHeader_2x03_P2.54mm_Vertical_SMD   -7
 J12       Conn_02x03_Top_Bottom         PinHeader_2x03_P2.54mm_Vertical_SMD    79.0000    55.0000  180.0000  top
 J13       JST_ZH_6-way_Socket           Connector_B6B-ZR-SM4-GW-TF(LF)(SN)    -93.0000    28.0000   90.0000  top
 J14       JST_ZH_6-way_Socket           Connector_B6B-ZR-SM4-GW-TF(LF)(SN)     93.0000    28.0000  -90.0000  top
+J15       Conn_02x03_Top_Bottom         PinHeader_2x03_P2.54mm_Vertical_SMD   -75.0000    10.0000    0.0000  top
+J16       Conn_02x03_Top_Bottom         PinHeader_2x03_P2.54mm_Vertical_SMD    75.0000    10.0000    0.0000  top
 ## End

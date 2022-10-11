@@ -33,9 +33,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": true,
         "pads": {
-          "drill": 2.7,
-          "height": 4.5,
-          "width": 4.5
+          "drill": 2.5,
+          "height": 5.0,
+          "width": 5.0
         },
         "silk_line_width": 0.12,
         "silk_text_italic": false,
@@ -391,6 +391,7 @@
     "page_layout_descr_file": ""
   },
   "schematic": {
+    "annotate_start_num": 0,
     "drawing": {
       "default_bus_thickness": 12.0,
       "default_junction_size": 40.0,
@@ -404,16 +405,19 @@
       "intersheets_ref_show": false,
       "intersheets_ref_suffix": "",
       "junction_size_choice": 3,
+      "label_size_ratio": 0.3,
       "pin_symbol_size": 25.0,
       "text_offset_ratio": 0.3
     },
     "legacy_lib_dir": "",
     "legacy_lib_list": [],
     "meta": {
-      "version": 0
+      "version": 1
     },
     "net_format_name": "Pcbnew",
     "ngspice": {
+      "fix_include_paths": true,
+      "fix_passive_vals": false,
       "meta": {
         "version": 0
       },
