@@ -15,6 +15,7 @@ _solutions/
 
 # Temporary Files
 tmp/
+_tmp/
 
 # Doxygen Builds
 documentation/html/

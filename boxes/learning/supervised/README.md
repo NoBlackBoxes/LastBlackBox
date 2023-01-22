@@ -17,7 +17,7 @@ Supervised learning requires *labeled data*, where the correct output for each i
 Install Jax (Autograd + XLA)
 
 ```bash
-pip intsall jax
+pip install jax
 pip install jaxlib
 ```
 
@@ -26,7 +26,8 @@ pip install jaxlib
 
 ## Neural networks
 
-10. Fit a simple neural network using Jax and Stax [simple network](10_network_autodiff_gradient_momentum.py)
+10. Fit a simple (perceptron) neural network using Jax [perceptron](10_perceptron_autodiff_gradient_momentum.py)
+10. Fit a nulti-layer neural network using Jax [neural network](11_network_autodiff_gradient_momentum.py)
 
 ----
 

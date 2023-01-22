@@ -50,13 +50,19 @@ report_interval = 100
 initial_loss = loss(x, y, params)
 losses = [initial_loss]
 for i in range(num_steps):
-    # gradients = grad_loss(x, y, params)           # Compute gradient (uncompiled)
-    gradients = grad_loss_jit(x, y, params)         # Compute gradient (compiled)
-    deltas = (alpha * gradients) + (beta * deltas)  # Update deltas
-    params -= (deltas)                              # Update parameters
+
+    # Compute gradients
+    # gradients = grad_loss(x, y, params)           # (uncompiled)
+    gradients = grad_loss_jit(x, y, params)         # (compiled)
+
+    # Update deltas
+    deltas = (alpha * gradients) + (beta * deltas)
+    
+    # Update parameters
+    params -= (deltas)
 
     # Store loss
-    final_loss = loss(x, y, params)             # Measure final loss
+    final_loss = loss(x, y, params)
     losses.append(final_loss)
 
     # Report?
