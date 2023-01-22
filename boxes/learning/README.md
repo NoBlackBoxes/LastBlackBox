@@ -1,6 +1,6 @@
 # Learning
 
-Change for the better.
+Supervised, unsupervised, and reinforcement learning
 
 ----
 
