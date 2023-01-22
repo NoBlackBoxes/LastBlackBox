@@ -26,7 +26,7 @@ biases = np.expand_dims(biases,0)   # Add dimension
         
 # Define function (perceptron)
 def func(x, weights, biases):
-    interim = x.dot(weights) + biases
+    interim = jnp.dot(x, weights) + biases
     output = jnp.sum(interim, axis=1)
     return output
 
@@ -47,7 +47,6 @@ deltas_weights = np.zeros(num_neurons)
 deltas_biases = np.zeros(num_neurons)
 report_interval = 100
 num_steps = 3000
-losses = []
 initial_loss = loss(x, y, weights, biases)
 losses = [initial_loss]
 for i in range(num_steps):    

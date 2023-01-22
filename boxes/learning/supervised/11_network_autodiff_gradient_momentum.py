@@ -15,86 +15,74 @@ y = data[:,1]
 x = np.expand_dims(x,1) # Add dimension
 y = np.expand_dims(y,1) # Add dimension
 
-# Define network
-num_inputs = 1
-num_outputs = 1
-num_hidden_layers = 1
-num_neurons_per_layer = [num_inputs, 10, num_outputs]
+# Define network (size of hidden layer)
+num_hidden_neurons = 2
 
-# Initialize parameters (weights and biases)
-weights = []
-biases = []
-deltas_weights = []
-deltas_biases = []
-for i in range(1, num_hidden_layers + num_outputs + 1):     # Skip inputs, include outputs
-    w = np.random.rand(num_neurons_per_layer[i] * num_neurons_per_layer[i-1]) - 0.5
-    w = np.expand_dims(w, 0)
-    b = np.random.rand(num_neurons_per_layer[i] * num_neurons_per_layer[i-1]) - 0.5
-    b = np.expand_dims(b, 0)
-    d = np.zeros(num_neurons_per_layer[i] * num_neurons_per_layer[i-1])
-    weights.append(w)
-    biases.append(b)
-    deltas_weights.append(d)
-    deltas_biases.append(d)
+# Initalize hidden layer (size: num_hidden_neurons)
+W1 = np.random.rand(num_hidden_neurons) - 0.5
+B1 = np.random.rand(num_hidden_neurons) - 0.5
+W1 = np.expand_dims(W1,0)
+B1 = np.expand_dims(B1,0)
 
-# Define function (perceptron)
-def func(x, weights, biases):
+# Initalize output layer (size: num_hidden_neurons)
+W2 = np.random.rand(num_hidden_neurons) - 0.5
+B2 = np.random.rand(num_hidden_neurons) - 0.5
+W2 = np.expand_dims(W2,0)
+B2 = np.expand_dims(B2,0)
 
-    num_layers = len(weights)
-    num_hidden_layers = num_layers - 1
-    output_layer = num_hidden_layers
-
-    # Set input layer
-    input = x
-
-    # Hidden layers
-    for i in range(num_hidden_layers):
-        interim = input.dot(weights[i]) + biases[i]
-        activations = nn.sigmoid(jnp.sum(interim, axis=1))
-        output = jnp.expand_dims(activations,1)
-        input = output
-    
-    # Output layer
-    interim = output.dot(weights[output_layer]) + biases[output_layer]
+# Define function (network)
+def func(x, W1, B1, W2, B2):
+    hidden = x.dot(W1) + B1
+    activations = nn.sigmoid(hidden)
+    interim = activations.dot(W2.T) + B2
     output = jnp.sum(interim, axis=1)
     return output
 
 # Define loss (mean squared error)
-def loss(x, y, weights, biases):
-    guess = func(x, weights, biases)
-    err = jnp.squeeze(y) - guess
+def loss(x, y, W1, B1, W2, B2):
+    guess = func(x, W1, B1, W2, B2)
+    err = np.squeeze(y) - guess
     return jnp.mean(err*err)
 
 # Compute gradient (w.r.t. parameters)
-grad_loss_weights = jit(grad(loss, argnums=2))
-grad_loss_biases = jit(grad(loss, argnums=3))
+grad_loss_W1 = jit(grad(loss, argnums=2))
+grad_loss_B1 = jit(grad(loss, argnums=3))
+grad_loss_W2 = jit(grad(loss, argnums=4))
+grad_loss_B2 = jit(grad(loss, argnums=5))
 
 # Train
-alpha = .00001
+alpha = .0001
 beta = 0.99
+deltas_W1 = np.zeros(num_hidden_neurons)
+deltas_B1 = np.zeros(num_hidden_neurons)
+deltas_W2 = np.zeros(num_hidden_neurons)
+deltas_B2 = np.zeros(num_hidden_neurons)
 report_interval = 100
-num_steps = 3000
-losses = []
-initial_loss = loss(x, y, weights, biases)
+num_steps = 10000
+initial_loss = loss(x, y, W1, B1, W2, B2)
 losses = [initial_loss]
 for i in range(num_steps):    
 
     # Compute gradients
-    gradients_weights = grad_loss_weights(x, y, weights, biases)                            # (weights)
-    gradients_biases = grad_loss_biases(x, y, weights, biases)                              # (biases)
+    gradients_W1 = grad_loss_W1(x, y, W1, B1, W2, B2)
+    gradients_B1 = grad_loss_B1(x, y, W1, B1, W2, B2)
+    gradients_W2 = grad_loss_W2(x, y, W1, B1, W2, B2)
+    gradients_B2 = grad_loss_B2(x, y, W1, B1, W2, B2)
 
     # Update deltas
-    for j in range(num_hidden_layers + num_outputs):
-        deltas_weights[j] = (alpha * gradients_weights[j]) + (beta * deltas_weights[j])     # (weights)
-        deltas_biases[j] = (alpha * gradients_biases[j]) + (beta * deltas_biases[j])        # (biases)
+    deltas_W1 = (alpha * gradients_W1) + (beta * deltas_W1)
+    deltas_B1 = (alpha * gradients_B1) + (beta * deltas_B1)
+    deltas_W2 = (alpha * gradients_W2) + (beta * deltas_W2)
+    deltas_B2 = (alpha * gradients_B2) + (beta * deltas_B2)
 
     # Update parameters
-    for j in range(num_hidden_layers + num_outputs):
-        weights[j] -= (deltas_weights[j])                                                   # (weights)
-        biases[j] -= (deltas_biases[j])                                                     # (biases)
+    W1 -= (deltas_W1)
+    B1 -= (deltas_B1)
+    W2 -= (deltas_W2)
+    B2 -= (deltas_B2)
 
     # Store loss
-    final_loss = loss(x, y, weights, biases)
+    final_loss = loss(x, y, W1, B1, W2, B2)
     losses.append(final_loss)
 
     # Report?
@@ -103,7 +91,7 @@ for i in range(num_steps):
         print("MSE: {0:.2f}".format(final_loss))
 
 # Compare prediction to data
-prediction = func(x, weights, biases)
+prediction = func(x, W1, B1, W2, B2)
 plt.subplot(1,2,1)
 plt.plot(x, y, 'b.', markersize=1)              # Plot data
 plt.plot(x, prediction, 'r.', markersize=1)     # Plot prediction
