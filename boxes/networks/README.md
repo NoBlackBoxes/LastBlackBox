@@ -18,7 +18,17 @@ Cable (Ethernet)|RJ45 cact5e ethernet patch cable (1 m)|1|[-D-](_data/datasheets
 
 ----
 
-# Goals
+## Goals
+
+### Grey
+
+1. Communicate between your midbrain and hindbrain
+2. Develop a remote control
+
+### White
+
+1. Setup a webserver
+2. 
 
 ----
 

@@ -16,6 +16,15 @@ Periodic Table|Periodic Table buisness card|1|-|-
 
 ## Goals
 
+### Grey
+
+1. Elements
+
+
+### White
+
+1. Chemistry
+
 ----
 
 ## NB3

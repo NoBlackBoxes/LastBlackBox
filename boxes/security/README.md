@@ -14,7 +14,17 @@ Secret Message|A SHA256 encrypted message (in HEX)|1|-|-
 
 ----
 
-# Goals
+## Goals
+
+### Grey
+
+1. Generate Keys
+2. Send encrypted message
+
+### White
+
+1. Mine a bitcoin on your NB3
+
 
 ----
 

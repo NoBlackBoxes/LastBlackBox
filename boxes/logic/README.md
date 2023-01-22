@@ -17,7 +17,17 @@ Gate (XOR)|4xXOR gate|1|[-D-](_data/datasheets/XOR_gates.pdf)|[-L-](https://uk.f
 
 ----
 
-# Goals
+## Goals
+
+### Grey
+
+1. Test your AND, OR, XOR, and NOR gates using buttons and LEDs.
+2. Turn 4-lvel comparator chain into 2-bit ADC.
+
+### White
+
+1. Build a 2-bit digital adder.
+
 
 ----
 

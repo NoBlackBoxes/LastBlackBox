@@ -16,6 +16,16 @@ Lightbulb|Mini incandescent bulb (6 V)|1|[-D-](_data/datasheets/lamp_6V.pdf)|[-L
 
 ## Goals
 
+### Grey
+
+1. Light a lightbulb, think about the jiggling electrons.
+
+### White
+
+1. Build two dipole antennas (transmitter and receiver)...a wireless telegraph.
+2. Use an inductor to build a "choke". Power a lightbulb (or LED) via an inductor in paralell. What happens? (decay times)
+
+
 ----
 
 ## NB3

@@ -14,7 +14,16 @@ Gate (NAND)|4xNAND gate|2|[-D-](_data/datasheets/NAND_gates.pdf)|[-L-](https://u
 
 ----
 
-# Goals
+## Goals
+
+### Grey
+
+1. Build a NAND SR latch. 
+
+### White
+
+1. Build a D-Flip-Flop.
+2. Build a shift register.
 
 ----
 

@@ -19,6 +19,16 @@ USB Sound Card| USB Type-A to 3.5 mm in/out audio jacks|1|-|-
 
 ## Goals
 
+### Grey
+
+1. Amplifier photodiode signal
+2. (Sound) controlled motor
+
+### White
+
+1. "Wireless" sound transmission
+
+
 ----
 
 ## NB3

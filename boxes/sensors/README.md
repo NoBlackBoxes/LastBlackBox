@@ -18,15 +18,16 @@ Piezo|Piezo element|1|[-D-](_data/datasheets/piezo.pdf)|[-L-](https://uk.farnell
 
 ## Goals
 
-To open this box, you must complete the following tasks:
+### Grey
 
 1. Build a light sensor
 2. Build a heat sensor
-3. Detect pressure using a piezo and your multimeter
+3. Detect pressure sensor using a piezo and your multimeter
 
-To explore this box, you should attempt the following challenges:
+### White
 
 1. Build a "gain control circut" for your light/heat sensor
+
 
 ----
 

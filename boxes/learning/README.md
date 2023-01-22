@@ -14,7 +14,16 @@ Clicker|Loud sound maker (and whistle)|1|-|[-L-](https://www.amazon.co.uk/gp/pro
 
 ----
 
-# Goals
+## Goals
+
+### Grey
+
+1. Clicker train yourself.
+
+### White
+
+1. Clicker train your robot.
+
 
 ----
 
