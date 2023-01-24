@@ -13,10 +13,10 @@ else:
     height = 512
 
 # Specify paths
-repo_path = '/home/kampff/NoBlackBoxes/repos/OtherBlackBoxes'
-box_path = repo_path + '/boxes/ai/tracking/nose/regression'
+repo_path = '/home/kampff/NoBlackBoxes/repos/LastBlackBox'
+box_path = repo_path + '/boxes/learning/transfer/tracking/regression'
 model_path = box_path + '/_tmp/custom.pt'
-video_path = repo_path + '/boxes/ai/tracking/_data/nose.mp4'
+video_path = repo_path + '/boxes/learning/transfer/tracking/_data/nose.mp4'
 
 # Load model
 custom_model = model.custom()

@@ -15,8 +15,8 @@ importlib.reload(dataset)
 importlib.reload(model)
 
 # Specify paths
-repo_path = '/home/kampff/NoBlackBoxes/repos/OtherBlackBoxes'
-box_path = repo_path + '/boxes/ai/tracking/nose/heatmap'
+repo_path = '/home/kampff/NoBlackBoxes/repos/LastBlackBox'
+box_path = repo_path + '/boxes/learning/transfer/tracking/regression'
 output_path = box_path + '/_tmp'
 
 # Specify transforms for inputs

@@ -5,7 +5,7 @@ import numpy as np
 from torchvision import transforms
 
 # Specify video or camera
-live_capture = False
+live_capture = True
 if live_capture:
     width = 640
     height = 480
@@ -14,9 +14,9 @@ else:
     height = 512
 
 # Specify paths
-repo_path = '/home/kampff/NoBlackBoxes/repos/OtherBlackBoxes'
-box_path = repo_path + '/boxes/ai/tracking/nose/heatmap'
-model_path = box_path + '/_tmp/custom.pt'
+repo_path = '/home/kampff/NoBlackBoxes/repos/LastBlackBox'
+box_path = repo_path + '/boxes/learning/transfer/tracking/heatmap'
+model_path = box_path + '/_tmp/previous.pt'
 video_path = repo_path + '/boxes/ai/tracking/_data/nose.mp4'
 
 # Load model
