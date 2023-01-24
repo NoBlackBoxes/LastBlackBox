@@ -21,7 +21,7 @@ class custom(torch.utils.data.Dataset):
         target = self.targets[idx,:]
         # Adjust color
         if image.shape[2] == 1: # Is grayscale?
-            image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+            image = cv2.cvtColor(image, cv2.COLOR_GRAY2RGB)
         else:
             image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
         # Augment (or just resize)
@@ -32,7 +32,7 @@ class custom(torch.utils.data.Dataset):
         if self.transform:
             image = self.transform(image)
         if self.target_transform:
-            label = self.target_transform(label)
+            target = self.target_transform(target)
         return image, target
 
 # Load dataset
