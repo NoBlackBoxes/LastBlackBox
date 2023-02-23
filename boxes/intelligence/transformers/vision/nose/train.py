@@ -73,7 +73,7 @@ custom_model = model.custom()
 custom_loss = loss.custom_loss()
 
 # Set optimizer
-adam_optimizer = torch.optim.AdamW(custom_model.parameters(), lr=0.0001, betas=(0.9, 0.999), weight_decay=0.1)
+adam_optimizer = torch.optim.AdamW(custom_model.parameters(), lr=0.0005, betas=(0.9, 0.999), weight_decay=0.1)
 
 # Layer-wise learning rate decay
 #lr_mult = [cfg.optimizer['paramwise_cfg']['layer_decay_rate']] * cfg.optimizer['paramwise_cfg']['num_layers']

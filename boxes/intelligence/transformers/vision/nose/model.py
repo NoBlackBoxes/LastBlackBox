@@ -18,7 +18,7 @@ class custom(torch.nn.Module):
             param.requires_grad = False
         
         # Unfreeze last blocks
-        for b in range(7,12):
+        for b in range(5,12):
             for param in backbone.blocks[b].parameters():
                 param.requires_grad = True
 
