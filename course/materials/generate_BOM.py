@@ -171,7 +171,8 @@ boxes = [
     'hearing',
     'vision',
     'learning',
-    'intelligence'
+    'intelligence',
+    'websites'
 ]
 
 # Insert materials table into README

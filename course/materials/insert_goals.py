@@ -99,7 +99,8 @@ boxes = [
     'vision',
     'learning',
     'intelligence',
-    'python'
+    'python',
+    'websites'
 ]
 
 # Insert goals table into README
