@@ -35,15 +35,15 @@ You will be building a robot. The robot's physical layout mimics the basic anato
 - Morning: Operating Systems
 - Afternoon: Networks
 
-### Day 4 - Computer Vision
+### Day 4 - Signal Processing
+
+- Morning: Audio detection and generation
+- Afternoon: FFT, filters, and voice recognition
+
+### Day 5 - Computer Vision
 
 - Morning: Image processing in Python
 - Afternoon: Classical face detection
-
-### Day 5 - Machine Learning
-
-- Morning: Supervised (deep) learning
-- Afternoon: Modern face detection (on an NPU)
 
 ----
 
