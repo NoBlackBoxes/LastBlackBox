@@ -35,6 +35,8 @@
 
 ### NB3 Build (motors)
 
+- CHANGE: We will now use servos in Day 2. Here, explain motors, spin a motor. Forward backward...control speed?
+
 - Watch this video: [NB3 Motors](https://vimeo.com/625827358)
 - *Task 6*: Mount the robot motors and wheels
 
@@ -55,23 +57,15 @@
 - Live Lecture: "Semiconductors, diodes, and transistors"
 - *Task 1*: Build a MOSFET motor driver circuit
 
+- Photodiodes, beam break, LEDs (IR and Color)
+- Mount motors, AA battery...braintenberg
+- Laser diode?
+
+
 <p align="center">
 <img src="resources/images/MOSFET_motor_driver.png" alt="MOSEFT driver" width="400" height="300">
 </p>
 
-- ***Project***: Build a Braitenberg Vehicle
+- ***Project***: Build a Servo
 
 ----
-
-## *Evening*
-
-----
-
-### H-bridge
-
-In order for your robot to drive both forwards and backwards, you will need a special circuit that uses 4 MOSFETs to control the direction of current flowing through the motor's coils. This circuit is called an H-bridge, and you have two of them in your NeuroKit. If you would like to add this extra degree of control, then please complete the following *bonus* task. 
-
-- Watch this video: [NB3 H-Bridge](https://vimeo.com/628542324)
-- *Task 1*: Confirm that your direction "selector" works.
-
-*Note*: This extra control will be most useful tomorrow, when we add a "hindbrain" (computer) and can really take advantage of having independent bi-directional control of both wheels.
