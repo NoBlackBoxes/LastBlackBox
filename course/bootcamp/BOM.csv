@@ -1,74 +1,66 @@
 Name,Description,QTY,Supplier
-,,,
 Day 1,,,
-NB3 Body,NB3 robot base PCB,1,VK
-Resistor,330 &Omega;/0.25 W,8,https://uk.farnell.com/multicomp/mcf-0-25w-330r/res-330r-5-250mw-axial-carbon/dp/9339418
-Resistor,470 &Omega;/0.25 W,1,https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943
-Resistor,1 k&Omega;/0.25 W,1,https://uk.farnell.com/multicomp/mf25-1k/res-1k-1-250mw-axial-metal-film/dp/9341102
+NB3 Body,NB3 robot base PCB (rev 3),1,VK
+Resistor,470 &Omega;/0.25 W,4,https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943
 Resistor,10 k&Omega;/0.25 W,2,https://uk.farnell.com/multicomp/mf25-10k/res-10k-1-250mw-axial-metal-film/dp/9341110
-Button,Tactile switch,2,https://uk.farnell.com/omron/b3f-1000/switch-spno-0-05a-24v-tht-0-98n/dp/176432
 Potentiometer,2.2 k&Omega; variable resistor,2,https://uk.farnell.com/bourns/3362p-1-222lf/trimmer-pot-2-2kohm-10-1turn-th/dp/2328599
-Breadboard (400),400-tie solderless breadboard,1,https://uk.farnell.com/multicomp/mcbb400/breadboard-solderless-300v-abs/dp/2395961
-Battery holder,4xAA battery holder with ON-OFF switch and male pins,1,Adafruit 830
+Breadboard (400),400-tie solderless breadboard,1,https://www.amazon.co.uk/gp/product/B0739XRX8F
+Battery holder,4xAA battery holder with ON-OFF switch and male pins,1,https://www.dfrobot.com/product-202.html
+AA Battery,1.5 Volt AA Alkaline battery,4,https://www.amazon.co.uk/Duracell-Base-MN1500-Pack-Batteries-black/dp/B002QIGO9U
 Jumper kit,Kit of multi-length 22 AWG breadboard jumpers,1,https://uk.farnell.com/multicomp/mc001810/hard-jumper-wire-22awg-140pc/dp/2770338
-Jumper wires,Assorted 22 AWG jumper wire leads (male/female) – 240 pcs,1,https://www.amazon.co.uk/240pcs-Solderless-Breadboard-Arduino-Project/dp/B08PJSTS3C/ref=sr_1_18
-Test Lead,Alligator clip to 0.64 mm pin (20 cm),2,https://www.amazon.co.uk/Oiyagai-Alligator-Crocodile-Arduino-Raspberry/dp/B07CXTSX8R/ref=sr_1_2
+Jumper wires,Assorted 22 AWG jumper wire leads (male/female) - 240 pcs,1,https://www.amazon.co.uk/240pcs-Solderless-Breadboard-Arduino-Project/dp/B08PJSTS3C/ref=sr_1_18
+Test Leads,Alligator clip to 0.64 mm pin (20 cm),2,https://www.amazon.co.uk/gp/product/B096JR15JW
 Rubber feet,Adhesive rubber standoffs (1421T6CL),4,https://uk.farnell.com/hammond/1421t6cl/feet-stick-on-pk24/dp/1876522
-Photoresistor (LDR),Light-dependent resistor (GL5516 and GL5528),8,https://www.amazon.co.uk/Resistor-Dependent-Photoresistor-Sensitive-Sensors/dp/B08SC1M7V7/ref=pd_sbs_2
-MOSFET,Power MOSFET/N-channel (IRF510),2,https://uk.farnell.com/vishay/irf510pbf/mosfet-n-100v-5-6a-to-220ab/dp/1653658
-Diode,IN4001,2,https://uk.farnell.com/on-semiconductor/1n4001g/diode-standard-1a-do-41/dp/1458986
-Motor (Geared),Brushed DC motor with gearbox - 6V/1:100/155 RPM with encoder (FIT0483),2,https://www.dfrobot.com/product-1433.html
-Motor Mount,Motor mounts and mounting hardware,2,https://www.pololu.com/product/1089
-Wheels,60 mm x 8 mm wheels (black),2,https://www.pololu.com/product/1420
-Caster,¾” metal ball caster,1,https://www.pololu.com/product/955
-Motor Cable,6-way JST cable,2,VK
-Spacer,NB3 spacer 3 mm spacer for mounting ball caster,4,VK
-Breadboards (170),170-tie solderless breadboard,4,https://www.amazon.co.uk/ELEGOO-tie-points-Breadboard-Breadboards-Electronic/dp/B01N0YWIR7/ref=sr_1_3
+Photoresistor (LDR),Light-dependent resistor (GL5516 and GL5528),2,https://www.amazon.co.uk/Resistor-Dependent-Photoresistor-Sensitive-Sensors/dp/B08SC1M7V7/ref=pd_sbs_2
+MOSFET,Power MOSFET/N-channel (IRF510),1,https://uk.farnell.com/vishay/irf510pbf/mosfet-n-100v-5-6a-to-220ab/dp/1653658
+Diode,IN4001,1,https://uk.farnell.com/on-semiconductor/1n4001g/diode-standard-1a-do-41/dp/1458986
+DC motor,1V-6V Dc Motor (Type 130),1,https://www.amazon.co.uk/Gikfun-1V-6V-Hobby-Arduino-EK1894/dp/B07BHHP2BT
+Mini Breadboard (170),170-tie solderless breadboard,4,https://www.amazon.co.uk/ELEGOO-tie-points-Breadboard-Breadboards-Electronic/dp/B01N0YWIR7
 ,,,
 Day 2,,,
+NB3 Servo mount,Acrylic servo motor mounting bracket,2,VK
+M2.5 screw,6 mm M2.5 thread screw ,4,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2
+M2.5 standoff (12 mm),12 mm female-to-female M2.5 standoffs,4,https://uk.farnell.com/wurth-elektronik/970120154/standoff-hex-female-female-12mm/dp/2987851
+Servo Motor,FS90R Micro Continuous Rotation Servo w/Wheel,2,https://www.rapidonline.com/feetech-fs90r-servo-and-wheel-37-1336
+Caster,"Ÿ"" metal ball caster",1,https://www.pololu.com/product/955
+NB3 Spacer,NB3 spacer 3 mm spacer for mounting ball caster,3,VK
 NB3 Power Board,Regulated DC-DC power supply (5 Volts - 4 Amps),1,VK
-Custom Cable,4-way JST power cable ,1,VK
-M2.5 standoffs (6 mm),6 mm female-to-female M2.5 standoffs,4,https://uk.farnell.com/harwin/r25-1000602/standoff-hex-female-brass-m2-5/dp/3754475
-M2.5 screw,6 mm M2.5 thread screw ,8,
+Custom Power Cable,4-way JST power cable ,1,https://dirtypcbs.com/store/new_cables/edit/13071
+M2.5 standoff (6 mm),6 mm female-to-female M2.5 standoffs,4,https://uk.farnell.com/wurth-elektronik/970060154/standoff-hex-female-female-6mm/dp/2987805
+M2.5 screw,6 mm M2.5 thread screw ,8,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2
 12V DC Power Supply,12V/2A - AC-DC transformer (UK/EU/USA plugs),1,https://uk.farnell.com/xp-power/ver24us120-ja/adaptor-ac-dc-12v-2a/dp/2643267
-LED (Green),3 mm/20 mA green LED,4,https://uk.farnell.com/multicomp/mcl034gd/led-3mm-70-green/dp/1581114
-LED (Red),3 mm/10 mA green LED,4,https://uk.farnell.com/multicomp-pro/mcl034pd/led-3mm-70-hi-red/dp/1581112
-Gate (AND),4xAND gate,1,https://uk.farnell.com/texas-instruments/cd4081be/ic-4000-cmos-4081-dip14-18v/dp/3120147
-Gate (OR),4xOR gate,1,https://uk.farnell.com/texas-instruments/cd4072be/ic-gate/dp/3120138
-Gate (NOR),4xNOR gate,1,https://uk.farnell.com/texas-instruments/cd4001be/ic-nor-quad-4000-cmos-14dip/dp/3120100
-Gate (XOR),4xXOR gate,1,https://uk.farnell.com/texas-instruments/cd4070be/ic-4000-cmos-4070-dip14-18v/dp/3120134
-Gate (NAND),4xNAND gate,2,https://uk.farnell.com/texas-instruments/cd4011be/ic-4000-cmos-4011-dip14-18v/dp/3120113
-UpDuino,ICE40UP5K dev board,1,https://uk.farnell.com/arduino/a000005/arduino-nano-evaluation-board/dp/1848691
-Cable (MiniUSB-1m),Mini-USB to Type-A cable (1 m),1,https://uk.farnell.com/molex/88732-8602/usb-cable-2-0-plug-plug-1m/dp/1221071
-Microcontroller,Arduino Nano (rev.3),1,https://uk.farnell.com/arduino/a000005/arduino-nano-evaluation-board/dp/1848691
+LED (Green),3 mm/20 mA green LED,2,https://uk.farnell.com/multicomp/mcl034gd/led-3mm-70-green/dp/1581114
+LED (Red),3 mm/10 mA red LED,2,https://uk.farnell.com/multicomp-pro/mcl034pd/led-3mm-70-hi-red/dp/1581112
+Cable (MicroUSB-2m),"USB Cable, Type A Plug to Micro Type B Plug, 2 m,  2.0",1,https://uk.farnell.com/multicomp/mc000950/cable-usb-2-0-a-micro-b-plug-2m/dp/2468268
+Microcontroller,Arduino Nano (rev.3),1,https://www.dfrobot.com/product-67.html
 Piezo Buzzer,Piezoelectric speaker/buzzer,1,https://uk.farnell.com/kingstate/kpeg110/piezo-transducer/dp/1193641
-H-bridge,Dual H-bridge motor driver (SN754410NE),2,https://uk.farnell.com/texas-instruments/sn754410ne/ic-peripheral-driver-half-h-1a/dp/3118977
-Cable (Mini-USB/15cm),Short mini-USB to Type-A cable (15 cm),1,https://www.amazon.co.uk/gp/product/B0763PPY51
-Battery,NiMH 9.6V 8-cell 2000 mAh battery,0,https://www.amazon.co.uk/BAKTH-Capacity-Rechargeable-Discharge-Customized/dp/B08VRC8KL7
-Battery Charger,NiMH battery charger (UK plug),0,https://www.amazon.co.uk/dp/B089VRXKWY?psc=1&smid=AOVA4BIXU2O7J&ref_=chk_typ_imgToDp
+Cable (Micro-USB/15cm),"USB Cable, Type A Plug to Micro Type B Plug, 150 mm, 2.0",1,https://uk.farnell.com/roline/11-02-8310/computer-cable-usb2-0-150mm-black/dp/2444222
+Battery,NiMH 9.6V 8-cell 2000 mAh battery,1,https://www.amazon.co.uk/BAKTH-Capacity-Rechargeable-Discharge-Customized/dp/B08VRC8KL7
+Battery Charger,NiMH battery charger (UK plug),1,https://www.amazon.co.uk/dp/B089VRXKWY?psc=1&smid=AOVA4BIXU2O7J&ref_=chk_typ_imgToDp
 Velcro Patch, Velcro adhesive,1,VK
-Barrel Adapter,Terminals to Barrel Jack,1,https://www.amazon.co.uk/gp/product/B077STNHRJ/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1
+Barrel Adapter,Terminals to Barrel Jack (male),1,https://www.amazon.co.uk/gp/product/B077F783NJ
 ,,,
 Day 3,,,
-Computer (RPi4),Raspberry Pi 4b with 4 GB RAM,1,https://uk.farnell.com/raspberry-pi/rpi4-modbp-4gb/raspberry-pi-4-model-b-4gb/dp/3051887
+Computer (RPi4),Raspberry Pi 4b with 2 GB RAM,1,https://uk.farnell.com/raspberry-pi/rpi4-modbp-4gb/raspberry-pi-4-model-b-4gb/dp/3051887
 Heatsinks,Heatsinks for RPi 4b chips,1,https://www.amazon.co.uk/gp/product/B07VRNT3HX
-SD card,16 GB micro SD card,1,https://uk.farnell.com/sandisk/sdsquar-016g-gn6ma/memory-card-microsdhc-uhs-i-16gb/dp/2931924
-M2.5 standoffs (6 mm),6 mm male-to-female M2.5 standoffs,4,
-M2.5 standoffs (20 mm),20 mm female-to-female M2.5 standoffs,4,https://uk.farnell.com/harwin/r25-1002002/standoff-hex-female-brass-m2-5/dp/3754484
-M2.5 screw,6 mm M2.5 thread screw ,4,
-USB SD card IO, SD card reader/writer,0,https://www.amazon.co.uk/Beikell-High-speed-Adapter-Supports-MMC-Compatible-Windows/dp/B07L9VT8YY
-NB3 Ear, I2S mems microphone breakout board,2,VK
+SD card,16 GB micro SD card,1,https://uk.farnell.com/integral/inmsdh16g-100v10/16gb-microsdhc-v10-uhs-i-u1/dp/3498606
+M2.5 standoff (15 mm),15 mm male-to-female M2.5 standoff,4,https://uk.farnell.com/wurth-elektronik/971150151/standoff-hex-male-female-15mm/dp/2884399
+M2.5 standoff (12 mm),12 mm female-to-female M2.5 standoff,4,https://uk.farnell.com/harwin/r25-1002002/standoff-hex-female-brass-m2-5/dp/3754484
+M2.5 screw,6 mm M2.5 thread screw ,4,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2
+USB SD card IO, SD card reader/writer,1,https://www.amazon.co.uk/Beikell-High-speed-Adapter-Supports-MMC-Compatible-Windows/dp/B07L9VT8YY
 ,,,
 Day 4,,,
-Camera (Rpiv2 – IR),Raspberry Pi 8 MP camera and cable (NOIR),1,https://uk.farnell.com/raspberry-pi/rpi-noir-camera-board/raspberry-pi-noir-camera-board/dp/2510729
-Cortex Camera Mount,Custom laser cut mount for camera (and NPU),1,VK
+NB3 Ear, I2S mems microphone breakout board,2,VK
 ,,,
 Day 5,,,
-NPU,Coral EdgeTPU USB Type-C,1,https://www.mouser.co.uk/ProductDetail/Coral/G950-01456-01?qs=sGAEpiMZZMu3sxpa5v1qrv9%252Bz890pMquX2qAISzny6s%3D
-M2.5 standoffs (14 mm),14 mm male-to-female M2.5 standoffs,4,
-M2.5 screw,6 mm M2.5 thread screw ,4,
-M2 standoffs (5 mm),5 mm male-to-female M2 standoffs,4,
-M2 nut,M2 thread nut ,4,
-M2 screw,5 mm M2 thread screw ,4,
-M3 screw (12 mm),12 mm M3 thread screw with phillips socket,5,https://uk.farnell.com/tr-fastenings/m3-12-prstmc-z100/screw-pozi-pan-steel-bzp-m3x12/dp/1420391
-M3 nut,M3 nut (square),5,https://uk.farnell.com/tr-fastenings/m3-sqst-z100bs4183/press-nut-square-bzp-m3/dp/1419469
+Camera (RPi v3),RPi color camera with auto-focus (version3),1,https://uk.farnell.com/raspberry-pi/rpi-noir-camera-board/raspberry-pi-noir-camera-board/dp/2510729
+NB3 Cortex Mount,Custom laser cut mount for cortex,1,VK
+NB3 Camera Mount,Custom laser cut mount for camera,1,VK
+M2.5 standoff (15 mm),15 mm male-to-female M2.5 standoff,4,https://uk.farnell.com/wurth-elektronik/971150151/standoff-hex-male-female-15mm/dp/2884399
+M2.5 screw,6 mm M2.5 thread screw ,4,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2
+M2 nut,M2 thread nut - CAMERA,4,ACCU
+M2 screw,8 mm M2 thread screw - CAMERA,4,ACCU
+M3 screw (12 mm),12 mm M3 thread screw with phillips socket,1,ACCU
+M3 nut,M3 nut (square),1,ACCU
+,,,
+Total Parts,,114,
