@@ -17,7 +17,7 @@
 
 - Watch this video: [NB3 Hindbrain](https://vimeo.com/626836554)
   - This pinout for the Arduino Nano might be useful: [Anduino Nano Pinout](resources/images/pinout_arduino_nano.png)
-- *Task 1*: Mount and power your Arduino based hindbrain (connect the mini-USB cable)
+- *Task 1*: Mount and power your Arduino based hindbrain (connect the mini-USB/micro-USB cable)
   - The built-in LED on the board should be blinking at 1 Hz
 
 - ***NOTE: If you are new to Arduino (or want a refresher), watch the "Programming Arduino" video before completing the following tasks.***

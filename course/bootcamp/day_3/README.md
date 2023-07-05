@@ -4,13 +4,13 @@
 
 ----
 
-> ***WARNING***: The first task of this morning (mount and *connect to* a Raspberry Pi) can be frustrating. We have now fully entered the realm of "human generated complexity", and the reasons for why something works one way vs. another, will no longer be easy to explain *intuitively*. However, we live in a world dominated by "human generated complexity", and learning how to navigate it, by whatever means necessary, is a fundamental skill that you should take away from this course.
-> - Google/Stackoverflow/etc. are your friend.
+> ***WARNING***: The first task of this morning (mount and *connect to* a Raspberry Pi) can be frustrating. We have now fully entered the realm of "human generated complexity", and the reasons for why something works one way vs. another will no longer be easy to explain *intuitively*. However, we live in a world dominated by "human generated complexity", and learning how to navigate it, by whatever means necessary, is a fundamental skill that you should take away from this course.
+> - Google/Stackoverflow/ChatGPT etc. are your friend.
 > - If you get stuck (particularly on *Task 3*), then know that this is ***normal*** and almost entirely dependent on how much control you were given over your "local network". Reach out and we will *ALL* learn from your quest to *connect*!
 
 ### NB3 Build (midbrain)
 
-- Watch this video: [NB3 hindbrain](https://vimeo.com/627777644)
+- Watch this video: [NB3 midbrain](https://vimeo.com/627777644)
 - *Task 1*: Mount a Raspberry Pi on your robot (and connect its power inputs, 2x5V and 2x0V from the NB3, to the correct GPIO pins on the RPi...please *double-check* the pin numbers)
   - This pinout of the Raspberry Pi GPIO might be useful: [Raspberry Pi GPIO](resources/images/rpi_GPIO_pinout.png)
 - *Task 2*: Copy a version of the Raspberry Pi OS (operating system) to your micro-SD card

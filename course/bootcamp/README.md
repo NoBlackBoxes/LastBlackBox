@@ -13,7 +13,7 @@
 You will be building a robot. The robot's physical layout mimics the basic anatomy of a (vertebrate) brain. As you progress through the course, your robot will *evolve* into an increasingly sophisticated machine. The goal is to create an "intelligent" machine without using any "black boxes". We thus call this robot the No-Black-Box-Bot or NBBB or ***NB3***.
 
 <p align="center">
-<img src="../designs/NB3/outline_dark.png" alt="NB3 outline" width="250" height="250">
+<img src="../designs/NB3/NB3_render.png" alt="NB3 outline" width="250" height="250">
 </p>
 
 ----
@@ -22,8 +22,8 @@ You will be building a robot. The robot's physical layout mimics the basic anato
 
 ### Day 1 - Electronics
 
-- Morning: Electrons, Sensors, and Motors
-- Afternoon: Transistors
+- Morning: Electrons, Magnets, Sensors, and Motors
+- Afternoon: Transistors and Amplifiers
 
 ### Day 2 - Computers
 
@@ -37,13 +37,13 @@ You will be building a robot. The robot's physical layout mimics the basic anato
 
 ### Day 4 - Signal Processing
 
-- Morning: Audio detection and generation
-- Afternoon: FFT, filters, and voice recognition
+- Morning: 1-D data acqusition (microphones)
+- Afternoon: Digital signal processing
 
 ### Day 5 - Computer Vision
 
-- Morning: Image processing in Python
-- Afternoon: Classical face detection
+- Morning: 2-d data acquisition (cameras)
+- Afternoon: Image processing
 
 ----
 
