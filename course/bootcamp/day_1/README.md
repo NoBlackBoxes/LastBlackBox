@@ -6,7 +6,7 @@
 
 ### Introduction
 
-- Watch this video: [The Last Black Box: Bootcamp - Introduction](https://vimeo.com/625626556)
+- Watch this video: [The Last Black Box: Bootcamp - Introduction](https://vimeo.com/843482137)
 
 ### NB3 Build (body)
 
