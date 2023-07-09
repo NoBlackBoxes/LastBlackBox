@@ -58,7 +58,7 @@
 <img src="resources/images/MOSFET_motor_driver.png" alt="MOSEFT driver" width="400" height="300">
 </p>
 
-- ***Project***: Build light sensitive motor!
+- ***Project***: Build light a sensitive motor! *(Use your LDR in a voltage divider to produce a light-dependent voltage on the gate of the MOSFET motor driver circuit)*
 
 ## Evening
 
