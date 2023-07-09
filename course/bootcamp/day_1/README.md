@@ -10,7 +10,7 @@
 
 ### NB3 Build (body)
 
-- Watch this video: [NB3 Body](https://vimeo.com/625664801)
+- Watch this video: [NB3 Body](https://vimeo.com/843622939)
 - The LastBlackBox GitHub Repo is here: [Last Black Box](https://github.com/NoBlackBoxes/LastBlackBox)
   - The NB3_body PCB design (in KiCAD) is here: [NB3 Body PCB](https://github.com/NoBlackBoxes/LastBlackBox/tree/master/boxes/electrons/NB3_body)
 
@@ -25,7 +25,7 @@
   - Measure the volatge of 4xAA batteries in series (in your battery holder).
   - Measure the resistance of some of your resistors (*Bonus:* Is their value consistent with the color coded bands on the resistor?)
 - ***Task 3***: Build a voltage divider using discrete resistors
-  -  Choose two resistors and construct a divider circuit. Does the voltage at the "middle" make sense given the two resistors your used?
+  -  Choose two resistors and construct a divider circuit. Does the voltage at the "middle" make sense given the two resistors you used?
 - ***Task 4***: Build a variable voltage divider using a potentionmeter
   - Use the reistance function of your Multimeter to measure the resistance of the potentionmeter (pot) across different pairs of its three pins (legs). Which pins show a varying resistance and which pins are stable as you turn the dial? The pin that varies is the one connected to the rotary screw. (*Clue*: It's the middle one.)
   - Turn your pot to an intermediate position...away from either extreme...and connect your batteries (+ and -) to the other pins. (***Caution***: If you connect your batteries across a pot turned to a very low resistance, then a **lot** of current will try to flow. This can cause your pot to heat up...and maybe even break....start somewhere in the middle.)
@@ -36,6 +36,10 @@
 ### Magnetism
 
 - Watch this video: [Magnets, Electromagnetism, and DC Motors](https://vimeo.com/626603421)
+
+### NB3 Build (motors)
+
+- Watch this video: [NB3 Motors](https://vimeo.com/843634014)
 - ***Task 6***: Spin your motor (forwards and backwards)...just flip the + and - connections.
 
 ----
@@ -60,8 +64,8 @@
 
 ### NB3 Build (servos)
 
-- Watch this video: [NB3 Servos](https://vimeo.com/625827358)
-- ***Task 1***: Mount the robot servo motors and wheels
+- Watch this video: [NB3 Servos](https://vimeo.com/)
+- ***Task 1***: Mount the robot servo motors, wheels, and caster (ball bearing)
 
 
 ----
