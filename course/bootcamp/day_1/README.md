@@ -64,7 +64,8 @@
 
 ### NB3 Build (servos)
 
-- Watch this video: [NB3 Servos](https://vimeo.com/)
+- Watch this video: [LBB Servos](https://vimeo.com/843653329)
+- Watch this video: [NB3 Servos](https://vimeo.com/843664157)
 - ***Task 1***: Mount the robot servo motors, wheels, and caster (ball bearing)
 
 

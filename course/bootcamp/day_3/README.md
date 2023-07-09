@@ -11,14 +11,14 @@
 ### NB3 Build (midbrain)
 
 - Watch this video: [NB3 midbrain](https://vimeo.com/627777644)
-- *Task 1*: Mount a Raspberry Pi on your robot (and connect its power inputs, 2x5V and 2x0V from the NB3, to the correct GPIO pins on the RPi...please *double-check* the pin numbers)
+- ***Task 1***: Mount a Raspberry Pi on your robot (and connect its power inputs, 2x5V and 2x0V from the NB3, to the correct GPIO pins on the RPi...please *double-check* the pin numbers)
   - This pinout of the Raspberry Pi GPIO might be useful: [Raspberry Pi GPIO](resources/images/rpi_GPIO_pinout.png)
-- *Task 2*: Copy a version of the Raspberry Pi OS (operating system) to your micro-SD card
+- ***Task 2***: Copy a version of the Raspberry Pi OS (operating system) to your micro-SD card
   - You can download the most recent version here: [RPi OS Download](https://www.raspberrypi.com/software/operating-systems/)
     - The "Lite" version is sufficient, but the "Desktop" version will include some software that could be useful in later steps (i.e. debugging the WiFi connection).
   - Use a program (such as [Etcher](https://www.balena.io/etcher/)) to copy the downloaded image to your micro-SD card.
   - ***Before*** you insert the micro-SD card into the Raspberry Pi, complete the first steps of the next Task.
-- *Task 3*: Connect to your Raspberry Pi from your Host computer (via SSH)
+- ***Task 3***: Connect to your Raspberry Pi from your Host computer (via SSH)
   - This will require adding two files to the "boot" partition on the micro-SD card that tell your NB3's Raspberry Pi how to connect to a WiFi network.
     - Examples of the files (*ssh* and *wpa_supplicant.conf*) that you need to add can be found here: [boot](resources/connecting/boot)
       - *Note*: you must change the Wifi name (SSID) and password in the *wpa_supplicant.conf* file to match your local WiFi network.
@@ -32,7 +32,7 @@
     - If you have a micro-HDMI cable and a spare monitor/TV, then you can connect it before the RPi boots and watch the "scrolling text logs" of the Linux OS while it boots up. At the very end, there will be a line that says..."connected, etc. IP addres: XXX.XXX.XXX.XX". Then you know the IP address.
     - There are *many* other ways. Let us know what works for you!
 
-- *Task 4: Update your Operating System
+- ***Task 4:*** Update your Operating System
   - When you are able to connect to your RPi, then run the following commands from the terminal prompt. (*These will update and upgrade the RPi OS and libraries to the latest version, which should prevent version conflicts in the subsequent exercises.*)
 
 ```bash
@@ -67,7 +67,7 @@ git clone https://github.com/NoBlackBoxes/LastBlackBox
 ### Networks
 
 - Live Lecture: "Communication, protocols, and the internet"
-- *Task 1*: Design and implement a protocol for communicating between your midbrain and hindbrain
+- ***Task 1***: Design and implement a protocol for communicating between your midbrain and hindbrain
 - ***Project***: Build a remote control robot
 - You will need the following library
 
