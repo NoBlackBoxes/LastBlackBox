@@ -20,7 +20,9 @@
 - ***Task 1***: Mount and power your Arduino based hindbrain (connect the mini-USB/micro-USB cable)
   - The built-in LED on the board should be blinking at 1 Hz
 
-- ***NOTE: If you are new to Arduino (or want a refresher), watch the "Programming Arduino" video before completing the following tasks.***
+### Programming Arduino
+
+- If you are new to programming microcontrollers (or programming in general), then watch this video before starting the programming tasks: [Programming Arduino](https://vimeo.com/627783660)
 
 - ***Task 2***: Blink an (external) LED 
   - Connect the LED to a digital output pin (D13 in the example below), but don't forget your current limiting resistor!
@@ -47,10 +49,6 @@
 - ***Task 5***: Build a Theremin
   - What if you used the analog voltage signal measured from your light sensor to change the frequency of the "tone" playing on your buzzer? Hmm...
 - ***Task 6***: ***Have fun!***
-
-### Programming Arduino
-
-- If you are new to programming microcontrollers (or programming in general), then watch this video before starting the programming tasks: [Programming Arduino](https://vimeo.com/627783660)
 
 ----
 
