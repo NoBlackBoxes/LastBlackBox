@@ -21,11 +21,31 @@
 
 ### NB3 Build (hindbrain)
 
-- *NOTE*: This year's NeuroKit contains and Arduino clone from DFRobot (see below), not from Arduino. Therefore, the package and board you have will look a bit different than the one shown in the subsequent videos. However, these clone boards work exactly the same (except they use a micro-USB cable, which is more common and included with your kit)
+*This year we are using Arduino "clones", functionally identicial copies of the original Arduino Nano computer. They work the same, but there are some differences from the video you will watch (particularly when connecting to your computer). I have listed some of things to pay attention to below, so please read through them before watching the video...just to be prepared.*
+
+- This year's NeuroKit contains an Arduino clone from DFRobot. Therefore, the package and board you have will look a bit different than the one shown in the videos. However, these clone boards work exactly*(see caveat) the same, except that they use a micro-USB cable, which is much more common and is included with your kit.
 
 <p align="center">
 <img src="resources/images/arduino_clone.png" alt="arduino clone" width="400" height="300">
 </p>
+
+- In the video below ("NB3 hindbrain"), the screen capture software did not show the dropdown menus used to select the Board, Processor, and Port for your specific Arduino board. Please select the following.
+
+  - Board: Arduino Nano
+  - Processor: ATmeag328P (or ATmega328P "old bootloader")
+  - Port: *this is unique to your setup and depends on your operating system*
+
+- *Caveat*: The Arduino communicates with your laptop via a USB-to-Serial chip. The original Arduino used a chip from FTDI, which during the pandemic, became impossible to find (it is used in a lot of automotive computers and they bought ***all of them***). Therefore, the newer Arduino clones use a different USB-to-Serial converter called the CH340. It works just fine, ***but*** it may require you to install a "driver" (a piece of software that knows how your operating system (OS) (macOS, windows, or linux) can talk to the chip) such that your Arduino clone board is detected and programmable. Furthermore, especially on Macs, you may need to give your OS "permission" to use the new chip. Below are a few links that might help you debug.
+
+- [General - Multiple OSes](https://sparks.gogo.co.nz/ch340.html)
+- [Macs - discussion thread](https://forum.arduino.cc/t/ch340-and-macos/1045166) 
+  - [Macs - link](https://blog.devgenius.io/using-arduino-ide-with-unofficial-arduino-clones-bearing-ch340-chip-752d1b90810d)
+- [Windows](https://blog.devgenius.io/using-arduino-ide-with-unofficial-arduino-clones-bearing-ch340-chip-752d1b90810d)
+- Linux: Try selecting the "Processor" ATMega32P (old bootloader)
+
+- ***If you encounter any issues talking to your Arduino clone, then post them in this Discord channel: [#connecting-arduino](https://discord.gg/d92UhdCu)***
+
+Finally...
 
 - Watch this video: [NB3 Hindbrain](https://vimeo.com/626836554)
   - This pinout for the Arduino Nano might be useful: [Anduino Nano Pinout](resources/images/pinout_arduino_nano_clone.png)
