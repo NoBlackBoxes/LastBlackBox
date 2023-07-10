@@ -15,8 +15,14 @@
 
 ### NB3 Build (hindbrain)
 
+- *NOTE*: This year's NeuroKit contains and Arduino clone from DFRobot (see below), not from Arduino. Therefore, the package and board you have will look a bit different than the one shown in the subsequent videos. However, these clone boards work exactly the same (except they use a micro-USB cable, which is more common and included with your kit)
+
+<p align="center">
+<img src="resources/images/arduino_clone.png" alt="LED driver" width="400" height="300">
+</p>
+
 - Watch this video: [NB3 Hindbrain](https://vimeo.com/626836554)
-  - This pinout for the Arduino Nano might be useful: [Anduino Nano Pinout](resources/images/pinout_arduino_nano.png)
+  - This pinout for the Arduino Nano might be useful: [Anduino Nano Pinout](resources/images/pinout_arduino_nano_clone.png)
 - ***Task 1***: Mount and power your Arduino based hindbrain (connect the mini-USB/micro-USB cable)
   - The built-in LED on the board should be blinking at 1 Hz
 
