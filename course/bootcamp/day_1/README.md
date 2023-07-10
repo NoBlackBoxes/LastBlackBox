@@ -52,7 +52,7 @@
 
 - Live Lecture: "Semiconductors, diodes, and transistors"
 - ***Task 1***: Build a MOSFET motor driver circuit
-
+- Recorded lecture video: [ENB2023](https://www.dropbox.com/s/qfhnsaylc489xaj/Semiconductors%2C%20diodes%2C%20and%20transistors_ENB2023.mp4?dl=0)
 
 <p align="center">
 <img src="resources/images/MOSFET_motor_driver.png" alt="MOSEFT driver" width="400" height="300">
