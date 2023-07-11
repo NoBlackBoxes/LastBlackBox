@@ -31,7 +31,7 @@ def send_to_host_pc(data):
     '''
     # Send the sensor value over the network
     value_bytes = struct.pack('!f', data)
-    print(value_bytes)
+
     client_socket.send(value_bytes)
 
 

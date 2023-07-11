@@ -3,7 +3,6 @@ import numpy as np
 from scipy.fft import rfft, rfftfreq
 
 
-
 def determine_whistling_frequency(path):
     """
     This function will determine the frequency of the whistling
