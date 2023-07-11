@@ -96,6 +96,6 @@ Finally...
 *Suggestion*: Try building a Braitenberg vehicle. The servo test code in today's [resources/arduino](resources/arduino/servo_test) folder will help you get your motors moving. Can you make there speed dependent on how bright it is on the left or right side of your NB33 (you will need *two* light sensors?
 
 <p align="center">
-<img src="resources/images/braitenberg vehicle.png" alt="Braitenberg Vehicle" width="600" height="300">
+<img src="resources/images/braitenberg_vehicle.png" alt="Braitenberg Vehicle" width="600" height="300">
 </p>
 ----

@@ -11,7 +11,15 @@
 ### NB3 Build (midbrain)
 
 - Watch this video: [NB3 midbrain](https://vimeo.com/627777644)
-- ***Task 1***: Mount a Raspberry Pi on your robot (and connect its power inputs, 2x5V and 2x0V from the NB3, to the correct GPIO pins on the RPi...please *double-check* the pin numbers)
+
+- *Note*: I suggest the following stack of mounting hardware to attach your Raspberry Pi to the NB3 body.
+= *Note*: Raspberry Pi OS now requires a *userconf.txt* file to be added to the "boot" partition along with the *ssh* and *wpa_supplicant.conf* files. This is documented in ***Task 3*** below.
+
+<p align="center">
+<img src="resources/images/raspberry_pi_mount.png" alt="Braitenberg Vehicle" width="300" height="200">
+</p>
+
+- ***Task 1***: Mount a Raspberry Pi on your robot (and connect its power inputs using your *shortest* jumper cables, 2x5V and 2x0V from the NB3, to the correct GPIO pins on the RPi...please *double-check* the pin numbers)
   - This pinout of the Raspberry Pi GPIO might be useful: [Raspberry Pi GPIO](resources/images/rpi_GPIO_pinout.png)
 - ***Task 2***: Copy a version of the Raspberry Pi OS (operating system) to your micro-SD card
   - You can download the most recent version here: [RPi OS Download](https://www.raspberrypi.com/software/operating-systems/)
@@ -19,10 +27,11 @@
   - Use a program (such as [Etcher](https://www.balena.io/etcher/)) to copy the downloaded image to your micro-SD card.
   - ***Before*** you insert the micro-SD card into the Raspberry Pi, complete the first steps of the next Task.
 - ***Task 3***: Connect to your Raspberry Pi from your Host computer (via SSH)
-  - This will require adding two files to the "boot" partition on the micro-SD card that tell your NB3's Raspberry Pi how to connect to a WiFi network.
-    - Examples of the files (*ssh* and *wpa_supplicant.conf*) that you need to add can be found here: [boot](resources/connecting/boot)
+  - This will require adding three files to the "boot" partition on the micro-SD card that tell your NB3's Raspberry Pi how to connect to a WiFi network.
+    - Examples of the files (*ssh* and *wpa_supplicant.conf* and *userconf.txt*) that you need to add can be found here: [boot](resources/connecting/boot)
       - *Note*: you must change the Wifi name (SSID) and password in the *wpa_supplicant.conf* file to match your local WiFi network.
       - *Note*: Make sure the "ssh" file has no extension (e.g. *.txt*), which sometimes is added by default.
+      - *Note*: The *userconf.txt* file creates a new user (pi) with a default password (raspberry)
   - What is SSH? It stands for "**s**ecure **sh**ell". It is a program that runs on your "host" computer that gives you access via a network to the terminal (shell) of a "remote" computer (e.g. your NB3).
     - *Windows*: you can use PuTTY and connect via the "ssh" protocol
     - *MacOS/Linux*: you can use *ssh* from the command line of a terminal
@@ -94,4 +103,3 @@ Let's let your NB3 hear. Let's add some ears (digital MEMS microphones).
 sudo apt-get install python3-pyaudio
 ```
   - Check out this example script: [Python Audio](resources/python/audio/record.py)
-  - Can you localize the sound source?...tricky. Can you respond accordingly? Have fun.
