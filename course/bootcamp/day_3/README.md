@@ -13,7 +13,7 @@
 - Watch this video: [NB3 midbrain](https://vimeo.com/627777644)
 
 - *Note*: I suggest the following stack of mounting hardware to attach your Raspberry Pi to the NB3 body.
-= *Note*: Raspberry Pi OS now requires a *userconf.txt* file to be added to the "boot" partition along with the *ssh* and *wpa_supplicant.conf* files. This is documented in ***Task 3*** below.
+- *Note*: Raspberry Pi OS now requires a *userconf.txt* file to be added to the "boot" partition along with the *ssh* and *wpa_supplicant.conf* files. This is documented in ***Task 3*** below.
 
 <p align="center">
 <img src="resources/images/raspberry_pi_mount.png" alt="Braitenberg Vehicle" width="300" height="200">
