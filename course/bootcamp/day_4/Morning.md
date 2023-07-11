@@ -68,6 +68,25 @@ Results
 
 
 
+
+TROUBLESHOOTING
+===============
+
+
+If the driver for the hearing modules are missing:
+
+    make -C /lib/modules/5.10.103-v7l+/build M=/home/pi/LastBlackBox/boxes/hearing/i2s/driver modules
+    make[1]: *** /lib/modules/5.10.103-v7l+/build: No such file or directory.  Stop.
+    make: *** [Makefile:35: all] Error 2
+
+Then try this solution:
+
+    sudo apt-get install linux-headers
+
+If `pyaudio` is not working on the Raspberry Pi, use this solution:
+
+    sudo apt-get install portaudio19-dev
+
 .py
 ---------------
 
