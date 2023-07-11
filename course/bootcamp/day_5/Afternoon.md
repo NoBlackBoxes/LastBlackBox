@@ -1,94 +1,85 @@
-Machine learning
-================
+Machine Vision
+==============
 
 Afternoon session
+
+You need
+--------
+
+-   The working cameraStream.py from the morning session
+
+-   Your computer and SSH connection to Raspberry Pi 4
 
 Goal
 ----
 
-Create your own deep neural network (esp. convolutional neural network)
-that can distinguish your face from other faces. Use the Coral USB
-Accelerator for network inference and make the robot react to your face.
-
-General note
-------------
-
-Typically, recognizing individuals is done differently, such that one
-can identify multiple people. This fantastic work by Schroff et al.[^1]
-is using something called “Triplet Loss”; in this session we are largely
-simplifying this problem. However, the original idea is also in general
-capable of re-identifying cells or neurons.
-
-Task 0: MNIST
--------------
-
-You can first look at the `MNIST.ipynb` and try to upload and run it on [Google Colab](https://colab.research.google.com/).
-This is the exact script of training and evaluation deep neural networks as shown in the lecture.
+You are able to use basic image processing, not only locally on your
+machine, but also on the live stream, and thus, being able to
+dynamically interact with the robot.
 
 
-Task 1: Data collection
+Task 1: Incorporate the face detection algorithm
+------------------------------------------------
+
+I prepared a little script called `faceDetection.py` that contains all
+the code of the face detection algorithm. Ensure you understand what
+each line of code is doing. Run it locally on your computer to see if it
+works in general. Your aim is it to incorporate this code into the
+cameraStream.py file to allow live face recognition with your robot.
+
+Please ensure that you download also the *XML FILE* and put it in the very same folder :-)
+
+Tipp: 
+- Check the variable names
+- Check the detector parameters
+
+![](./media/image9.jpeg)
+
+Task 2: Identify the face location
+----------------------------------
+
+Be sure that you understand where the face (or multiple ones?) is/are in the camera image. Identify the x-y location of the **face center**, what do you get from the face detector? Mostly, there is an (x,y) location anchor, as well as the `width` and `height` of the bounding box. Try to draw a line from the camera view center to the face center using OpenCV commands (directly draw on the image).
+
+Task 3: Let the robot react
+---------------------------
+
+If you detect a face using your face detection algorithm, let the robot
+interact with the environment. For example, let an LED light up or make
+some noise using the speaker. Use the serial connection introduced yesterday
+to connect to your Arduino. 
+
+Ideally, try to move the robotor as such that the face gets centered in the image view (you can move left, right, so the face should be centered left/right).
+
+Task 4: Be creative!
 -----------------------
 
-Get all your face data recorded and resized yesterday in a specific
-folder, e.g. `my_faces`. We prepared a folder from the CelebA dataset[^2]
-that contains in our case \~ 5,000 images of celebrities re-detected and
-resized using the same algorithm as you are using for your face
-detection. You can find this on [zenodo](https://zenodo.org/record/5561092#.YWQHg5pByUk).
-Upload everything to [Google Colab](https://colab.research.google.com/).
+Now it is your time: you can combine different streams, such as 1D signals and 2D images and make something special! What can the robot do for you? 
 
-Task 2: Train your own DNN
---------------------------
 
-Use our `ENB train.ipynb` to train your own network. Go to [Google Colab](https://colab.research.google.com/) and upload it there and open the Jupyter notebook. It should be easy
-going, however, try to understand what is happening: What are the
-convolutional layers, what are these settings doing? Ensure you
-understand:
+Pro-Task 1: Incorporate background subtraction to your live stream
+------------------------------------------------------------------
 
--   Conv2D
+Use a temporary variable that stores the information of the background.
+You have to define it below the class, similar to this one. Think about
+it, what does this mean?
 
--   Filters i.e. activation maps
+![](./media/image11.png)
 
--   Kernel size
+You can use the bg variable in your image processing part by referring
+to it as `self.bg`, similar to `self.frame_i`.
 
--   Activation function (relu, sigmoid, …)
+If you want to replace image 0, you can write `self.bg[0] = …`
 
--   MaxPool2D
+Ensure that you are cycling through your background images and always
+keep the five latest background images! Then subtract the average
+background from your camera frame. Be aware of the live lecture!
 
--   Flatten or GlobalAveragePooling2D
+![](./media/image12.png)
 
--   Dense layer
+Pro-Task 2: Threshold the background substracted frame
+------------------------------------------------------
 
--   Epochs
+Use thresholding to generate a black/white image. Problems you may run
+into: OpenCV wants uint8 images. Is there an OpenCV Thresholding
+function? Which threshold is good?
 
-Adjust Filters, Kernel Sizes, blocks of Conv2D and MaxPool2D operations
-to see how the network changes (use `model.summary()`!) Train different
-networks to see their learning behavior – specifically look at the loss
-plots. Maybe train the network for longer… Try several things!
-
-Task 3: Save and Convert and move your model to Edge TPU 
----------------------------------------------------------
-
-Finally, save after model training your model using
-`model.save(“your_model_name.h5”)`. Next, you need to deploy your model
-to the Edge TPU. This is, however, quite complex. We prepared a script
-(`ENB Keras to Edge TPU.ipynb`) for you that you can use on Google Colab
-to convert your TensorFlow/Keras model to a TensorFlowLite/Edge TPU
-version. Download the converted version, move it to your Raspberry Pi.
-
-This is available through Colab:
-
-<https://colab.research.google.com/drive/1mWneaXT_pd-MIO7jQn2s-UY8xHYE-8Qd?usp=sharing>
-
-Task 4: Is it your face?
-------------------------
-
-Integrate your face recognition model into your live stream. If your
-face is detected, maybe via the OpenCV face detector, it should be
-colored green, if it is not your face (photograph, a friend, collegue,
-PI, …) it should be colored differently. Let the robot react to your
-face: Make the robot approach you when your face is detected. It should
-escape, if not your face is detected. Estimate its specificity.
-
-[^1]: <https://arxiv.org/abs/1503.03832>
-
-[^2]: <http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html>

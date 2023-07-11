@@ -1,26 +1,29 @@
-# The Last Black Box Bootcamp: Day 4 - Machine Vision
+# The Last Black Box Bootcamp: Day 4 - Digital Signal Processing
 
 ## Morning
 
 ----
 
-### NB3 Build (forebrain)
+### Light sensor
 
-- Watch this video: [NB3 Forebrain](https://vimeo.com/628545232)
-- *Task 1a*: Mount a camera and a "cortex" on your robot
-- *Task 1b*: Enable the camera
-- *Task 2*: Take a first photo and video
-- *Task 3*: Transfer photo and video to your computer
-- *Task 4*: Live stream camera feed
-- *Task 5*: Image processing using Python
+- Watch this video: [Analog-Digital-Converter](https://www.youtube.com/watch?v=EnfjYwe2A0w&list=PLAROrg3NQn7cyu01HpOv5BWo217XWBZu0&index=29)
+- Here is some background for [matplotlib](https://matplotlib.org/stable/tutorials/introductory/quick_start.html)
+- *Task 1*: Use the light sensor and the hindbrain (Arduino) to read the light intensity.
+- *Task 2*: Use serial write to send the light intensity to the forebrain (Raspberry Pi).
+- *Task 3*: Use the Serial Plotter in the Arduino IDE to plot the light intensity.
+- *Task 4*: Read the light intensity in Python using the pySerial library.
+- *Task 5*: Forward the signal to the host computer using a UDP socket.
+- *Task 6*: Plot the light intensity in Python in real-time using the matplotlib library.
 
-### Machine Vision
+### Digital Signal Processing
 
-- Watch the long video and the Jupyter notebook video [ENB Machine Vision](https://drive.google.com/drive/folders/1IFq9GW5x4-vth9P_7aa9M0LPKJwn1hfv?usp=sharing)
-- *Task 2*: Take a first photo and video
-- *Task 3*: Transfer photo and video to your computer
-- *Task 4*: Live stream camera feed
-- *Task 5*: Image processing using Python
+- Watch this video: TODO video about DSP/Audio/FT
+- *Task 1*: Record audio (e.g. 5 seconds of speech) using the forebrain (Raspberry Pi) and the MEMS microphones.
+- *Task 2*: Copy the audio file to your host computer.
+- *Task 3*: Plot the audio data across time using matplotlib.
+- *Task 4*: Record an audio file where you whistle with a constant tone.
+
+*We need the recordings for the afternoon.*
 
 More information on the tasks are found in a [separate document](Morning.md)
 
@@ -30,20 +33,23 @@ More information on the tasks are found in a [separate document](Morning.md)
 
 ----
 
-### Machine Vision
+### Audio processing
 
-- Live Lecture: "Classic Machine Vision principles"
-- *Task 1*: Incorporate face detection algorithm
-- *Task 2*: Save images from your face (> 100)
-- *Task 3*: Let the robot react. If the robot identifies a face, let it do cool stuff
-- *Task 4*: Resizing images - each face image should have the same resolution (128, 128, 3)
+- Live Lecture: 1D signal processing
+- *Task 1*: Determine the frequency of the whistling in the audio file using an FFT.
+- *Task 2*: Use your forebrain to record audio data and send it to your host computer.
+- *Task 3*: Plot the audio data in time and in frequency domain in real-time on your host computer.
+- *Task 4* (On your Raspberry Pi): Detect if the determined frequency during whistling is present in the audio data and above a certain threshold.
+- *Task 5*: If the frequency is present, let the robot react by going forward or backward.
+
+Idea to task 5: you can create multiple events using `if` statements, such that you can make your robot dance!
+
 
 ### Pro tasks
 
 Depending on your progress, you can tackle the following tasks:
 
-- *Pro task 1*: Incorporate background subtraction to your live stream
-- *Pro task 2*: Threshold the background subtracted frame
-- *Pro task 3*: Find the center of mass of your thresholded image
-
+- *Pro task 1*: Connect the light sensor measurements to a Telegram bot that is giving you an update if your environment is getting darker or brighter.
+- *Pro task 2*: Calculate the STFT of the audio data and plot it in real-time.
+- 
 More information on the tasks are found in a [separate document](Afternoon.md)
