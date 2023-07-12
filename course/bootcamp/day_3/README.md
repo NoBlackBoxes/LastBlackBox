@@ -107,7 +107,7 @@ Let's let your NB3 hear. Let's add some ears (digital MEMS microphones).
 - Watch this video: [NB3 Ears](https://vimeo.com/630461945)
 - Example wiring below (many possible options)
 <p align="center">
-<img src="resources/images/NB3_ears_wiring.png" alt="NB3 Ears Wiring" width="500" height="200">
+<img src="resources/images/NB3_ears_wiring.png" alt="NB3 Ears Wiring" width="600" height="350">
 </p>
 
 - The instructions for installing the driver on your RPi are here: [NB3 Ear Driver Install](https://github.com/NoBlackBoxes/LastBlackBox/tree/master/boxes/hearing/i2s/driver)
