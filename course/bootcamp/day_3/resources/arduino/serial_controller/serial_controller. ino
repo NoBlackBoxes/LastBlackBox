@@ -37,12 +37,12 @@ void loop() {
 
     // Respond to command "l"
     if(newChar == 'l') {
-      left();
+      turn_left();
     }
 
     // Respond to command "r"
     if(newChar == 'r') {
-      right();
+      turn_right();
     }
 
     // Respond to command "x"
@@ -58,26 +58,26 @@ void loop() {
 // Forward
 void forward()
 {
-  left.write(0);
-  right.write(180);
+  left.write(180);
+  right.write(0);
 }
 
 // Backward
 void backward()
 {
-  left.write(180);
-  right.write(0);
+  left.write(0);
+  right.write(180);
 }
 
 // Left
-void left()
+void turn_left()
 {
   left.write(0);
   right.write(0);
 }
 
 // Right
-void right()
+void turn_right()
 {
   left.write(180);
   right.write(180);
@@ -89,4 +89,3 @@ void stop()
   left.write(90);
   right.write(90);
 }
-

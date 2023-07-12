@@ -1,4 +1,4 @@
-# The Last Black Box Bootcamp: Day 3 - Systems and Netowrks
+# The Last Black Box Bootcamp: Day 3 - Systems and Networks
 
 ## Morning
 
@@ -30,6 +30,7 @@
   - This will require adding three files to the "boot" partition on the micro-SD card that tell your NB3's Raspberry Pi how to connect to a WiFi network.
     - Examples of the files (*ssh* and *wpa_supplicant.conf* and *userconf.txt*) that you need to add can be found here: [boot](resources/connecting/boot)
       - *Note*: you must change the Wifi name (SSID) and password in the *wpa_supplicant.conf* file to match your local WiFi network.
+      - *Note*: you must *also* set the "country" code to the *two letter* code for whatever country you are in: [code list](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes)
       - *Note*: Make sure the "ssh" file has no extension (e.g. *.txt*), which sometimes is added by default.
       - *Note*: The *userconf.txt* file creates a new user (pi) with a default password (raspberry)
   - What is SSH? It stands for "**s**ecure **sh**ell". It is a program that runs on your "host" computer that gives you access via a network to the terminal (shell) of a "remote" computer (e.g. your NB3).
