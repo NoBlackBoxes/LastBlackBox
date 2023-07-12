@@ -100,13 +100,12 @@ this on your host computer:
 Task 1: Record audio data
 ---------------------------------
 Yesterday you used the MEMS microphones to record audio data. Today you will use the same setup to record audio data.
-Therefore, you need to connect the MEMS microphones to the Raspberry Pi. Use "arecord" to record 5 seconds of speech. 
+Therefore, you need to connect the MEMS microphones to the Raspberry Pi. Use "arecord" to record roughly 5 seconds of speech. 
 
 
 Task 2: Load it on your host computer and plot it
 ---------------------------------
-Transfer the recorded file to your host computer and plot it using matplotlib. For file transfer, you can use WinSCP or 
-FileZilla. 
+Transfer the recorded file to your host computer and plot it using matplotlib. For file transfer, you can use the commands as introduced before, or any other tool, such as WinSCP or FileZilla (see also day 5 instructions). 
 
 
 Task 3: Record a whistling sound do the same as in task 7

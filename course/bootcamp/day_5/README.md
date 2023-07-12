@@ -34,9 +34,9 @@ More information on the tasks are found in a [separate document](Morning.md)
 
 - Live Lecture: "Classic Machine Vision principles"
 - *Task 1*: Incorporate face detection algorithm
-- *Task 2*: Save images from your face (> 100)
+- *Task 2*: Find the vector from image center to the face(s)
 - *Task 3*: Let the robot react. If the robot identifies a face, let it do cool stuff
-- *Task 4*: Resizing images - each face image should have the same resolution (128, 128, 3)
+- *Task 4*: Be creative, what can you do?
 
 ### Pro tasks
 
@@ -44,6 +44,5 @@ Depending on your progress, you can tackle the following tasks:
 
 - *Pro task 1*: Incorporate background subtraction to your live stream
 - *Pro task 2*: Threshold the background subtracted frame
-- *Pro task 3*: Find the center of mass of your thresholded image
 
 More information on the tasks are found in a [separate document](Afternoon.md)

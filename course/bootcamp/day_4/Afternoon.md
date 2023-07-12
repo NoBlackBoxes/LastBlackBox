@@ -22,19 +22,19 @@ something special is happening. For analysis we will use the Fourier transform a
 
 Task 1: Determine whistling frequency
 ------------------------------------------------
-First, we will determine the whistling frequency of the recorded audio data. Therefore, we will use the Fourier transform.
+First, we will determine the whistling frequency of the recorded audio data. Therefore, we will use the [Fourier transform](https://en.wikipedia.org/wiki/Fourier_transform).
 The Fourier transform is a mathematical tool which transforms a signal from the time domain to the frequency domain.
 The frequency domain is a representation of the signal in the frequency space. 
 
-Go into the script "determine_whistling_frequency.py" and add the missing code to compute the Fourier transform of a 
-given signal. You can get the whistling frequency by finding the peak, i.e. the maximum value, of the Fourier transform 
-and take the corresponding frequency.
+Go into the script "determine_whistling_frequency.py" and find the relevant code to compute the Fourier transform of a 
+given signal. You can get the dominant, i.e. whistling, frequency by finding the peak, i.e. the maximum value, of the Fourier transform 
+and take that corresponding frequency.
 
 ```
 python host_pc/determine_whistling_frequency.py recorded_data/whistling.wav
 
 output (example):
-The frequency of the whistling is 1070 Hz
+The dominant frequency is 500 Hz
 ```
 
 Another way to visualize the Fourier transform is to use the Short-time Fourier transform (STFT). There, a window is
@@ -63,8 +63,7 @@ Task 2: Record audio data and plot it in real-time on your host computer
 ------------------------
 Now, we will extend everything to plot the audio data and the Fourier transform in real-time. Therefore, we will use
 script "record_and_send_audio_data.py" on the Raspberry Pi 4 and the script "receive_audio_host.py" on your host computer.
-Go to both scripts and add the missing lines of code. Afterwards, you can run the scripts and see the audio data and
-the Fourier transform in real-time.
+Go to both scripts and add the missing lines of code (we indicated the important parts with a lot of hashtags #). Afterwards, you can run the scripts and see the audio data and the Fourier transform in real-time.
 
     python host_pc/receive_audio_host.py
 
@@ -78,14 +77,17 @@ Task 3: Let the robot react
 ---------------------------
 We prepared the script "detect_whistling.py" for you. Within this script, the incoming audio signal should be analyzed
 and the robot should react if a whistling is detected. Therefore, you have to add the missing lines of code. Let the robot
-move forward if a whistling is detected and stop if the whistling stops. You can now also try to detect whistling
+move forward if a given frequency (e.g. whistling) is detected and stop if the whistling stops. You can now also try to detect whistling
 with different frequencies and let the robot dance, for example.
 
 
 
-Pro-Task 1: 
+Pro-Tasks: 
 ------------------------------------------------------------------
 
+* Try to use the LED to report the frequency. 
+* You may also create PWM signals for the motors such that the higher you whistle/making sound/sing, the faster it goes. 
+* Try to detect specific patterns, e.g. a high and low pitch to create an action
 
 
 

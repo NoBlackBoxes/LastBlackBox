@@ -2,6 +2,8 @@ import librosa
 import numpy as np
 from scipy.fft import rfft, rfftfreq
 
+import matplotlib.pyplot as plt
+
 
 def determine_whistling_frequency(path):
     """
@@ -16,12 +18,16 @@ def determine_whistling_frequency(path):
     freqs = rfftfreq(len(audio), 1 / rate)
 
     # find the frequency with the highest amplitude
-    max_amplitude = np.max(fourier)
-    max_amplitude_index = np.where(fourier == max_amplitude)[0][0]
+    max_amplitude_index = np.argmax(fourier)
     frequency = freqs[max_amplitude_index]
 
+    plt.figure()
+    plt.plot(freqs, fourier, 'k-', lw=1)
+    plt.scatter(freqs[max_amplitude_index], fourier[max_amplitude_index], s=100)
+    plt.show()
+
     # print the frequency
-    print(f"The frequency of the whistling is {int(frequency)} Hz")
+    print(f"The dominant frequency is {int(frequency)} Hz")
 
 
 if __name__ == '__main__':

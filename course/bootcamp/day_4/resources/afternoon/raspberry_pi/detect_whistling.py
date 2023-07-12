@@ -34,32 +34,33 @@ def detect_whistling():
             # Read audio data from the stream
             raw_data = stream.read(CHUNK_SIZE)
 
-            # Detect whistling
+            # Convert raw_data to left and right channel
             interleaved_data = np.frombuffer(raw_data, dtype=np.int16)
-            print(interleaved_data)
             left = interleaved_data[::2] 
-            #right = interleaved_data[1::2]  
+            right = interleaved_data[1::2]  
 
             # calculate Fourier transform
-            fourier = np.abs(rfft(left))
-            freqs = rfftfreq(len(left), 1 / RATE)
+            #############################
+            ### COMPUTE THE FOURIER TRANSFORM using RFFT and RFFTFREQ
+            #############################
+            # Write your code, you need either the "left" and/or the "right" variable
+            
+
 
             # find the frequency with the highest amplitude
-            max_amplitude = np.max(fourier)
-            max_amplitude_index = np.where(fourier == max_amplitude)[0][0]
-            peak_frequency = freqs[max_amplitude_index]
-            print(peak_frequency)
+            ##########################
+            ##### IDENTIFY THE CURRENT DOMINANT FREQUENCY
+            ##### and THE AMPLITUDE
+            ##### replace the cur_frequency = 0 with your code
+            ##########################
+            cur_frequency = 0
 
-            whistling_frequency = 1070 # this is the frequency you determined with the recorded audio file
 
-            # compare the current peak-frequency with the whistling_frequency
-            offset = 20  # define an offset to use a window of frequencies
-            if whistling_frequency - offset < peak_frequency and whistling_frequency + offset > peak_frequency:
+            target_frequency = 500 # this is the frequency you determined with the recorded audio file
+
+            if cur_frequency > target_frequency:
                 # Send intructions to the robot
-                message = b'o'
-                ser.write(message)
-            else:
-                message = b'x'
+                message = b'do something'                
                 ser.write(message)
 
     except KeyboardInterrupt:
