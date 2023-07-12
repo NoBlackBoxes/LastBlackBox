@@ -5,6 +5,7 @@ import struct
 # Set up the serial connection
 ser = serial.Serial('/dev/ttyUSB0', 9600) # Replace '/dev/ttyUSB0' with the appropriate serial port (you can find it in the Arduino IDE unter 'Tools' --> 'Port:')
 
+
 def receive_sensor_data():
     # Wait until data has been received
     while True:
@@ -25,10 +26,11 @@ SERVER_PORT = 5005
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client_socket.connect((SERVER_IP, SERVER_PORT))
 
+
 def send_to_host_pc(data):
-    '''
+    """
     Send it via socket to host PC
-    '''
+    """
     # Send the sensor value over the network
     value_bytes = struct.pack('!f', data)
 

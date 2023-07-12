@@ -17,7 +17,8 @@ class RollingBuffer:
 
     def getBuffer(self):
         return list(self.buffer)
-    
+
+
 # Define the host IP address and port number
 HOST_IP = ''  # Empty string means to listen on all interfaces
 HOST_PORT = 5005
@@ -75,6 +76,7 @@ def receive_data():
     except KeyboardInterrupt:
         # Close the socket when interrupted
         host_socket.close()
+
 
 if __name__ == '__main__':
     receive_data()

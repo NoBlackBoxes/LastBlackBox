@@ -36,10 +36,12 @@ More information on the tasks are found in a [separate document](Morning.md)
 ### Audio processing
 
 - Live Lecture: 1D signal processing
-- *Task 1*: Determine the frequency of the whistling in the audio file using an FFT.
+
+- *Task 1*: Determine the frequency of the whistling in the audio file using Fourier Transform.
 - *Task 2*: Use your forebrain to record audio data and send it to your host computer.
 - *Task 3*: Plot the audio data in time and in frequency domain in real-time on your host computer.
-- *Task 4* (On your Raspberry Pi): Detect if the determined frequency during whistling is present in the audio data and above a certain threshold.
+- *Task 4* (On your Raspberry Pi): Detect if the determined frequency during whistling is present in the audio data 
+- and above a certain threshold.
 - *Task 5*: If the frequency is present, let the robot react by going forward or backward.
 
 Idea to task 5: you can create multiple events using `if` statements, such that you can make your robot dance!
@@ -49,7 +51,6 @@ Idea to task 5: you can create multiple events using `if` statements, such that 
 
 Depending on your progress, you can tackle the following tasks:
 
-- *Pro task 1*: Connect the light sensor measurements to a Telegram bot that is giving you an update if your environment is getting darker or brighter.
-- *Pro task 2*: Calculate the STFT of the audio data and plot it in real-time.
-- 
+- *Pro task 1*: 
+
 More information on the tasks are found in a [separate document](Afternoon.md)
