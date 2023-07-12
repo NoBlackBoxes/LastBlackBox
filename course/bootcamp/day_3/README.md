@@ -85,6 +85,15 @@ git clone https://github.com/NoBlackBoxes/LastBlackBox
 sudo apt-get install python3-serial
 ```
 
+#### Day 3: Afternoon Tasks and Project: *Sugested steps*
+
+1. Tell your Arduino to listen for "serial commands" coming from either your laptop or RPi - [Example](resources/arduino/serial_server)
+2. Send serial commands from you laptop/RPi using python (pyserial) - [Example](resources/python/serial)
+3. Use python to detect keypresses... - [Example](resources/python/keyboard)
+4. ...and send corresponding serial commands in response - [Example](resources/python/kerial)
+5. Extend the Arduino code to respond to specific serial commands (usually single letters) with specific movements - [Example](resources/arduino/serial_controller)
+6. Find a way to use keypresses to send the correct serial commands to Arduino so you can drive it around at will! - [Example](resources/python/drive)
+
 ----
 
 ## *Evening*
