@@ -21,6 +21,14 @@ Then use the text editor to change the following (just uncomment the line):
 dtparam=i2s=on
 ```
 
+...and add the following (on any line) - this forces the RPi to use a 32-bit kernel
+
+```txt
+arm_64bit=0
+```
+
+***After this, you must reboot your Raspberry Pi to continue.***
+
 ### Driver module
 
 The NB3 Ear board needs a special driver that is not included by default in the Raspberry Pi Linux kernel. Thus you will have to build (compile and link) the driver as a "kernel module" and then install it in your system. Here are the steps.
@@ -57,6 +65,8 @@ and add...
 ```txt
 nb3-ear-module
 ```
+
+***After this, it is useful to reboot your Raspberry Pi to continue.***
 
 ## Testing
 
