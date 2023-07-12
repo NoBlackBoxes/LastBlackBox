@@ -16,7 +16,7 @@
 - *Note*: Raspberry Pi OS now requires a *userconf.txt* file to be added to the "boot" partition along with the *ssh* and *wpa_supplicant.conf* files. This is documented in ***Task 3*** below.
 
 <p align="center">
-<img src="resources/images/raspberry_pi_mount.png" alt="Braitenberg Vehicle" width="300" height="200">
+<img src="resources/images/raspberry_pi_mount.png" alt="Raspberry Pi Mount" width="300" height="200">
 </p>
 
 - ***Task 1***: Mount a Raspberry Pi on your robot (and connect its power inputs using your *shortest* jumper cables, 2x5V and 2x0V from the NB3, to the correct GPIO pins on the RPi...please *double-check* the pin numbers)
@@ -105,6 +105,11 @@ sudo apt-get install python3-serial
 Let's let your NB3 hear. Let's add some ears (digital MEMS microphones).
 
 - Watch this video: [NB3 Ears](https://vimeo.com/630461945)
+- Example wiring below (many possible options)
+<p align="center">
+<img src="resources/images/NB3_ears_wiring.png" alt="NB3 Ears Wiring" width="500" height="200">
+</p>
+
 - The instructions for installing the driver on your RPi are here: [NB3 Ear Driver Install](https://github.com/NoBlackBoxes/LastBlackBox/tree/master/boxes/hearing/i2s/driver)
 - Use Python to record sound from each microphone (left and right).
   - Install pyaudio library
