@@ -1,4 +1,4 @@
-# The Last Black Box Bootcamp: Day 3 - Systems and Netowrks
+# The Last Black Box Bootcamp: Day 3 - Systems and Networks
 
 ## Morning
 
