@@ -85,7 +85,7 @@ git clone https://github.com/NoBlackBoxes/LastBlackBox
 sudo apt-get install python3-serial
 ```
 
-#### Day 3: Afternoon Tasks and Project: *Sugested steps*
+#### Day 3: Afternoon Tasks and Project: *Suggested steps*
 
 1. Tell your Arduino to listen for "serial commands" coming from either your laptop or RPi - [Example](resources/arduino/serial_server)
 2. Send serial commands from you laptop/RPi using python (pyserial) - [Example](resources/python/serial)
