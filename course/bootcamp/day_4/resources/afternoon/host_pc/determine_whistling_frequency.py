@@ -21,13 +21,16 @@ def determine_whistling_frequency(path):
     max_amplitude_index = np.argmax(fourier)
     frequency = freqs[max_amplitude_index]
 
+    # print the frequency
+    print(f"The dominant frequency is {int(frequency)} Hz")
+
     plt.figure()
     plt.plot(freqs, fourier, 'k-', lw=1)
     plt.scatter(freqs[max_amplitude_index], fourier[max_amplitude_index], s=100)
+    plt.xlabel('Frequency (Hz)')
+    plt.ylabel('Amplitude')
+    plt.title('Fourier Transform')
     plt.show()
-
-    # print the frequency
-    print(f"The dominant frequency is {int(frequency)} Hz")
 
 
 if __name__ == '__main__':
