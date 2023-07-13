@@ -17,7 +17,6 @@
 
 ### Digital Signal Processing
 
-- Watch this video: TODO video about DSP/Audio/FT
 - *Task 1*: Record audio (e.g. 5 seconds of speech) using the forebrain (Raspberry Pi) and the MEMS microphones.
 - *Task 2*: Copy the audio file to your host computer.
 - *Task 3*: Plot the audio data across time using matplotlib.
