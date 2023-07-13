@@ -18,7 +18,7 @@ def receive_sensor_data():
             pass
 
 
-# Raspberry Pi IP address and port number
+# Host PC (e.g. laptop) IP address and port number
 SERVER_IP = '192.168.137.1'
 SERVER_PORT = 5005
 
