@@ -7,6 +7,13 @@
 ### NB3 Build (forebrain)
 
 - Watch this video: [NB3 Forebrain](https://vimeo.com/628545232)
+  - *Note*: We do ***NOT*** have the Google Coral NPU this year (they cannot accelerate the modern "Transformer" networks and have become very difficult to supply).   
+  - *However*: we do have new cameras (with auto-focus). These require a slight tweak to the mounting strategy shown in the video, see suggestion below.
+
+<p align="center">
+<img src="resources/images/NB3_camera_mount_alt.png" alt="NB3 Camera Mount" width="200" height="250">
+</p>
+
 - *Task 1a*: Mount a camera and a "cortex" on your robot
 - *Task 1b*: Enable the camera
 - *Task 2*: Take a first photo and video
