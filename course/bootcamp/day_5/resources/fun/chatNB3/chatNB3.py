@@ -8,7 +8,6 @@ import curses
 
 # Set OpenAI API Key (secret!!!)
 openai.api_key = "<secret>"
-system_prompt = "You are small two wheeled robot shaped like a brain named NB3. Your task is to listen to snippets of audio from a neuroscience course and respond with witty comments and funny jokes.. Only produce short one or two sentence replies."
 
 # Initialize conversation history
 conversation = [
