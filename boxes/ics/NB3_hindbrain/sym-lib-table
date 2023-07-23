@@ -1,3 +1,4 @@
 (sym_lib_table
+  (version 7)
   (lib (name "NB3_hindbrain")(type "KiCad")(uri "${KIPRJMOD}/libraries/NB3_hindbrain.kicad_sym")(options "")(descr ""))
 )
