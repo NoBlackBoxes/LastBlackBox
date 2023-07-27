@@ -2,6 +2,13 @@
 
 ## Installation (Software)
 
+### Install Kernal Headers
+
+```bash
+# Download the Linux kernel headers (for RPi's current kernel version )
+sudo apt-get install raspberrypi-kernel-headers
+```
+
 ### Change Configuration 
 
 The Raspberry Pi does not enable i2s by default. You can enable it by opening the file called "config.txt" in the /"boot" folder of your Raspberry Pi and changing a single line.
@@ -34,9 +41,6 @@ arm_64bit=0
 The NB3 Ear board needs a special driver that is not included by default in the Raspberry Pi Linux kernel. Thus you will have to build (compile and link) the driver as a "kernel module" and then install it in your system. Here are the steps.
 
 ```bash
-# Download the Linux kernel headers (for RPi's current kernel version )
-sudo apt-get install raspberrypi-kernel-headers
-
 # Clone the LastBlackBox repo (if you have not done so already)
 git clone https://github.com/NoBlackBoxes/LastBlackBox
 
