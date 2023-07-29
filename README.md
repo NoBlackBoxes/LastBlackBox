@@ -12,7 +12,10 @@ This is course about neuroscience *and* technology. You will learn about the bra
 
 ## Principles
 
-> ***"No Black Boxes"***
+<p align="center">
+<img src="course/designs/logo/noblackboxes_logo_white_text.png" alt="NBB" width="200" height="200">
+</p>
+
 
 ## Prerequisites
 
