@@ -3,15 +3,15 @@
   (descr "Max 21-0136_T1633-4")
   (tags "Integrated Circuit")
   (attr smd)
-  (fp_text reference "IC**" (at 0 0) (layer "F.SilkS")
+  (fp_text reference "IC**" (at 5.08 0) (layer "F.SilkS")
       (effects (font (size 1.27 1.27) (thickness 0.254)))
     (tstamp 2392665b-874b-48f5-afe1-3ac39c9e0756)
   )
-  (fp_text value "QFN50P300X300X80-17N" (at 0 0) (layer "F.SilkS") hide
+  (fp_text value "QFN50P300X300X80-17N" (at 0 5.08) (layer "F.SilkS") hide
       (effects (font (size 1.27 1.27) (thickness 0.254)))
     (tstamp 2687c312-bb47-491c-9892-d80d91c00137)
   )
-  (fp_text user "${REFERENCE}" (at 0 0) (layer "F.Fab")
+  (fp_text user "${REFERENCE}" (at 0 -5.08) (layer "F.Fab")
       (effects (font (size 1.27 1.27) (thickness 0.254)))
     (tstamp 062cd5df-6ab4-4f30-8aaf-7f4b52bd2c5e)
   )
