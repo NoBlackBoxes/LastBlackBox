@@ -1,4 +1,4 @@
-21738296548424670
+21739987650461437
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -63391,6 +63391,13 @@ Mounting 4.5mm 9774100982
 0
 8
 1
+NB3_mouth
+Connector_Female_JST-PH2
+JST-PH2
+Connector
+0
+4
+4
 NB3_mouth
 I2S_DAC-AMP_MAX98357A
 Max 21-0136_T1633-4

@@ -393,7 +393,8 @@
   },
   "libraries": {
     "pinned_footprint_libs": [
-      "NB3_ear"
+      "NB3_ear",
+      "NB3_mouth"
     ],
     "pinned_symbol_libs": [
       "NB3_mouth"
