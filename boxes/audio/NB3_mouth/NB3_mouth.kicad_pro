@@ -395,7 +395,9 @@
     "pinned_footprint_libs": [
       "NB3_ear"
     ],
-    "pinned_symbol_libs": []
+    "pinned_symbol_libs": [
+      "NB3_mouth"
+    ]
   },
   "meta": {
     "filename": "NB3_mouth.kicad_pro",

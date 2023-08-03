@@ -308,6 +308,11 @@
     (uuid b781648b-4443-4b09-ae20-fb6c9a96883b)
   )
 
+  (text "For Research and Education Only" (at 15.24 194.945 0)
+    (effects (font (size 2.54 2.54) (color 0 0 0 1)) (justify left bottom))
+    (uuid 72339be9-369a-4672-a19b-214f283fa952)
+  )
+
   (label "LR" (at 114.3 113.03 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 083fa62f-5284-4f83-88d8-6831cc7509a1)
@@ -339,6 +344,31 @@
   (label "WS" (at 127 110.49 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid d0338bf3-e46c-4ce8-923d-1d3b4c1cabb1)
+  )
+
+  (symbol (lib_id "power:GND") (at 154.94 107.95 270) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 01bb04b6-0852-40e7-a2d3-42acd9b3e508)
+    (property "Reference" "#PWR06" (at 148.59 107.95 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 151.7651 107.95 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Footprint" "" (at 154.94 107.95 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 154.94 107.95 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 7fdc9bce-ff2e-45bc-8966-0251228a622e))
+    (instances
+      (project "NB3_mouth"
+        (path "/df27637c-d6c9-48ad-83e5-144198b72706"
+          (reference "#PWR06") (unit 1)
+        )
+      )
+    )
   )
 
   (symbol (lib_id "NB3_mouth:I2S_DAC-AMP_MAX98357A") (at 154.94 102.87 0) (unit 1)
@@ -552,6 +582,31 @@
       (project "NB3_mouth"
         (path "/df27637c-d6c9-48ad-83e5-144198b72706"
           (reference "J1") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 195.58 105.41 90) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid d0f9b304-6397-47b3-aa18-2ee44915c0ba)
+    (property "Reference" "#PWR05" (at 201.93 105.41 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 199.39 106.0449 90)
+      (effects (font (size 1.27 1.27)) (justify right))
+    )
+    (property "Footprint" "" (at 195.58 105.41 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 195.58 105.41 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 888dc932-fd14-4ada-9463-423a23e7b3f1))
+    (instances
+      (project "NB3_mouth"
+        (path "/df27637c-d6c9-48ad-83e5-144198b72706"
+          (reference "#PWR05") (unit 1)
         )
       )
     )
