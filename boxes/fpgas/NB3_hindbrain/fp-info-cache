@@ -1,4 +1,4 @@
-21751245566285857
+21752936837679765
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -63391,6 +63391,13 @@ Mounting 4.5mm 9774100982
 0
 8
 1
+NB3_hindbrain
+ADC_MCP3004-I-SL
+MCP42010-E/SL
+Integrated Circuit
+0
+14
+14
 NB3_hindbrain
 Diode_1N4148WS-7-F
 
