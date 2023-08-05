@@ -20,7 +20,7 @@ Hindbrain|Midbrain|Forebrain|
 [2. Magnets](/boxes/magnets/README.md)|[10. Data](/boxes/data/README.md)|[18. Networks](/boxes/networks/README.md)
 [3. Light](/boxes/light/README.md)|[11. Logic](/boxes/logic/README.md)|[19. Security](/boxes/security/README.md)
 [4. Sensors](/boxes/sensors/README.md)|[12. Memory](/boxes/memory/README.md)|[20. Hearing](/boxes/hearing/README.md)
-[5. Motors](/boxes/motors/README.md)|[13. ICs](/boxes/fpgas/README.md)|[21. Vision](/boxes/vision/README.md)
+[5. Motors](/boxes/motors/README.md)|[13. FPGAs](/boxes/fpgas/README.md)|[21. Vision](/boxes/vision/README.md)
 [6. Transistors](/boxes/transistors/README.md)|[14. Computers](/boxes/computers/README.md)|[22. Learning](/boxes/learning/README.md)
 [7. Amplifiers](/boxes/amplifiers/README.md)|[15. Control](/boxes/control/README.md)|[23. Intelligence](/boxes/intelligence/README.md)
 [8. **Reflexes**](/boxes/reflexes/README.md)|[16. **Behaviour**](/boxes/behaviour/README.md)|[24. **?**](/boxes/?/README.md)
