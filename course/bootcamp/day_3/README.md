@@ -46,7 +46,7 @@
   - When you are able to connect to your RPi, then run the following commands from the terminal prompt. (*These will update and upgrade the RPi OS and libraries to the latest version, which should prevent version conflicts in the subsequent exercises.*)
 
 ```bash
-# Change the default password for the "pi" user
+# If you kept thedefaul username/password ("pi/raspberry"), then change the default password
 passwd
 
 # Update the "package manager" (so it knows where to looks for any upgrades)

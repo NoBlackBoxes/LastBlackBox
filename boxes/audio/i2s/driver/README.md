@@ -5,7 +5,7 @@
 ### Install Kernal Headers
 
 ```bash
-# Download the Linux kernel headers (for RPi's current kernel version )
+# Download the Linux kernel headers (for RPi's current kernel version) - after running update/upgrade
 sudo apt-get install raspberrypi-kernel-headers
 ```
 
@@ -28,12 +28,6 @@ Then use the text editor to change the following (just uncomment the line):
 dtparam=i2s=on
 ```
 
-...and add the following (on any line) - this forces the RPi to use a 32-bit kernel
-
-```txt
-arm_64bit=0
-```
-
 ***After this, you must reboot your Raspberry Pi to continue.***
 
 ### Driver module
@@ -45,7 +39,7 @@ The NB3 Ear board needs a special driver that is not included by default in the 
 git clone https://github.com/NoBlackBoxes/LastBlackBox
 
 # Navigate to the i2s/driver folder
-cd LastBlackBox/boxes/hearing/i2s/driver
+cd LastBlackBox/boxes/audio/i2s/driver
 
 # Run the Makefile
 make all
@@ -93,4 +87,10 @@ To make a test recording.
 
 ```bash
 arecord -D plughw:1 -c2 -r 48000 -f S32_LE -t wav -V stereo -v file_stereo.wav
+```
+
+To test playback.
+
+```bash
+aplay -D plughw:1 -c2 -r 48000 -f S32_LE -t wav -V stereo -v file_stereo.wav
 ```
