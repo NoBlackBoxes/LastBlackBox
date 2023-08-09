@@ -27,25 +27,23 @@ def list_devices():
 # Sound input thread (microphone)
 #
 class microphone:
-    def __init__(self, device, buffer_size, format, num_channels, sample_rate, max_duration):        
-        self.buffer_size = buffer_size
-        self.format = format
+    def __init__(self, device, num_channels, sample_rate, format, buffer_size_samples, max_samples):        
         self.num_channels = num_channels
         self.sample_rate = sample_rate
-        self.max_duration = max_duration
+        self.format = format
+        self.buffer_size_samples = buffer_size_samples
+        self.max_samples = max_samples
         self.valid_samples = 0
-        self.max_samples = 0
-        self.freq_bins = np.fft.fftfreq(buffer_size, 1.0/self.sample_rate)[1:]
+        self.freq_bins = np.fft.fftfreq(buffer_size_samples, 1.0/self.sample_rate)[1:]
 
         # Get pyaudio object
         self.pya = pyaudio.PyAudio()
 
         # Open audio input stream (from default device)
-        self.stream = self.pya.open(input_device_index=device, format=format, channels=num_channels, rate=sample_rate, input=True, output=False, frames_per_buffer=buffer_size)
+        self.stream = self.pya.open(input_device_index=device, format=format, channels=num_channels, rate=sample_rate, input=True, output=False, frames_per_buffer=buffer_size_samples)
 
-        # Create rolling buffer
-        self.max_samples = sample_rate * max_duration
-        self.sound = np.zeros(self.max_samples, dtype=np.int16)
+        # Create rolling buffer (assumes 16-bit signed int samples)
+        self.sound = np.zeros((self.max_samples, self.num_channels), dtype=np.int16)
         self.streaming = False
 
         # Create Speech parameters
@@ -55,8 +53,8 @@ class microphone:
         # Create WAV parameters
         self.wav_path = ''
         self.wav_file = 0
-        self.wav_max_duration = 0
-        self.wav_current_duration = 0
+        self.wav_max_samples = 0
+        self.wav_current_samples = 0
         self.wav_recording = False
 
         # Configure thread
@@ -76,28 +74,28 @@ class microphone:
                 break
             
             # Read raw data and append
-            raw_data = self.stream.read(self.buffer_size, exception_on_overflow = False)
+            raw_data = self.stream.read(self.buffer_size_samples, exception_on_overflow = False)
 
             # Write to WAV?
             if self.wav_recording:
                 self.wav_file.writeframes(raw_data)
-                self.wav_current_duration += (len(raw_data) / 2) # Hack, this is raw bytes, divide by sample byte size (int 16)
-                if self.wav_current_duration >= self.wav_max_duration:
+                self.wav_current_samples += (len(raw_data) / 2) # Hack, this is raw bytes, divide by sample byte size (int 16)
+                if self.wav_current_samples >= self.wav_max_samples:
                     self.stop_recording()
 
-            # Convert to numpy array
-            integer_data = np.frombuffer(raw_data, dtype=np.int16)
+            # Seperate channel data
+            channel_data = np.reshape(np.frombuffer(raw_data, dtype=np.int16), (-1,2))
 
             # Fill buffer...and then concat
             if self.valid_samples < self.max_samples:
-                self.sound[self.valid_samples:(self.valid_samples + self.buffer_size)] = integer_data
-                self.valid_samples = self.valid_samples + self.buffer_size
+                self.sound[self.valid_samples:(self.valid_samples + self.buffer_size_samples), :] = channel_data
+                self.valid_samples = self.valid_samples + self.buffer_size_samples
             else:
-                self.sound = np.hstack([self.sound[self.buffer_size:], integer_data])
+                self.sound = np.vstack([self.sound[self.buffer_size_samples:, :], channel_data])
                 self.valid_samples = self.max_samples
 
             # Is it speech or not? - Compute power in speech range for current buffer...if big change...speech...if not...silence...
-            amplitudes = np.abs(np.fft.fft(integer_data))[1:]
+            amplitudes = np.abs(np.fft.fft(channel_data[:,0]))[1:]
             energies = amplitudes**2
 
             # Compute total energy
@@ -142,13 +140,13 @@ class microphone:
     # Read most recent samples method
     def read_latest(self, num_samples):
         if(self.valid_samples < num_samples):
-            return self.sound[:num_samples]
+            return self.sound[:num_samples, :]
         else:
-            return self.sound[(self.valid_samples-num_samples):self.valid_samples]
+            return self.sound[(self.valid_samples-num_samples):self.valid_samples, :]
 
     # Reset sound input
     def reset(self):
-        self.sound = np.zeros(self.max_samples, dtype=np.int16)
+        self.sound = np.zeros((self.max_samples, self.num_channels), dtype=np.int16)
         self.valid_samples = 0
         return
 
@@ -197,11 +195,11 @@ class microphone:
 # Sound output thread (speaker)
 #
 class speaker:
-    def __init__(self, device, buffer_size, format, num_channels, sample_rate):        
-        self.buffer_size = buffer_size
-        self.format = format
+    def __init__(self, device, num_channels, sample_rate, format, buffer_size_samples):        
         self.num_channels = num_channels
         self.sample_rate = sample_rate
+        self.format = format
+        self.buffer_size_samples = buffer_size_samples
         self.current_sample = 0
         self.max_samples = 0
 
@@ -209,9 +207,9 @@ class speaker:
         self.pya = pyaudio.PyAudio()
 
         # Open audio output stream (from default device)
-        self.stream = self.pya.open(output_device_index=device, format=format, channels=num_channels, rate=sample_rate, input=False, output=True, frames_per_buffer=buffer_size)
+        self.stream = self.pya.open(output_device_index=device, format=format, channels=num_channels, rate=sample_rate, input=False, output=True, frames_per_buffer=buffer_size_samples)
 
-        # Create rolling buffer
+        # Set params
         self.streaming = False
 
         # Configure thread
@@ -225,7 +223,7 @@ class speaker:
 
     # Update thread method
     def update(self):
-        empty_buffer = np.zeros(self.buffer_size, dtype=np.int16)
+        empty_buffer = np.zeros((self.buffer_size_samples, self.num_channels), dtype=np.int16)
         while True :
             # End?
             if self.streaming is False :
@@ -234,13 +232,14 @@ class speaker:
             # Playing?
             if self.current_sample < self.max_samples:
                 # Write sound data buffer
-                integer_data = self.sound[self.current_sample:(self.current_sample + self.buffer_size)]
-                self.stream.write(integer_data, self.buffer_size, exception_on_underflow = False)
+                channel_data = self.sound[self.current_sample:(self.current_sample + self.buffer_size_samples), :]
+                raw_data = channel_data[:]
+                self.stream.write(raw_data, self.buffer_size_samples * self.num_channels, exception_on_underflow = False)
 
                 # Increment buffer position
-                self.current_sample = self.current_sample + self.buffer_size
+                self.current_sample = self.current_sample + self.buffer_size_samples
             else:
-                self.stream.write(empty_buffer, self.buffer_size, exception_on_underflow = False)
+                self.stream.write(empty_buffer, self.buffer_size_samples, exception_on_underflow = False)
         
         # Shutdown thread
         self.stream.stop_stream()
@@ -250,9 +249,9 @@ class speaker:
     # Write sound method
     def write(self, sound):
         num_samples = np.shape(sound)[0]
-        max_samples = num_samples + (self.buffer_size - (num_samples % self.buffer_size))
-        self.sound = np.zeros(max_samples)
-        self.sound[:num_samples] = sound
+        max_samples = num_samples + (self.buffer_size_samples - (num_samples % self.buffer_size_samples))
+        self.sound = np.zeros((max_samples, self.num_channels), dtype=np.int16)
+        self.sound = np.copy(sound)
         self.current_sample = 0
         self.max_samples = max_samples
         return

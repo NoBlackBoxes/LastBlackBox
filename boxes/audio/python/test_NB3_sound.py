@@ -17,16 +17,12 @@ username = os.getlogin()
 repo_path = '/home/' + username + '/LastBlackBox'
 box_path = repo_path + '/boxes/audio/python'
 
-# Initiliaze microphone thread
+# List available sound devices
 sound.list_devices()
 
-# Initiliaze microphone thread
-microphone = sound.microphone(1, 4800, pyaudio.paInt16, 1, 48000, 10)
+# Initialize microphone thread
+microphone = sound.microphone(1, 2, 48000, pyaudio.paInt16, 4800, 480000)
 microphone.start()
-
-# Initiliaze speaker thread
-speaker = sound.speaker(1, 4800, pyaudio.paInt16, 1, 48000)
-speaker.start()
 
 # Wait to start talking
 input("Press Enter to start recording...")
@@ -35,7 +31,7 @@ input("Press Enter to start recording...")
 microphone.reset()
 
 # Wait to stop talking
-input("Press Enter to stop recording and start playback.")
+input("Press Enter to stop recording.")
 
 # Read sound recorded
 recording = microphone.read()
@@ -43,14 +39,21 @@ recording = microphone.read()
 # Report
 print(len(recording))
 
+# Shutdown microphone
+microphone.stop()
+
+# Initialize speaker thread
+speaker = sound.speaker(1, 2, 48000, pyaudio.paInt16, 4800)
+speaker.start()
+
 # Output
 speaker.write(recording)
 
 # Wait to stop talking
-input("Press Enter to stop playback.")
+while speaker.playing():
+    time.sleep(0.001)
 
-# Shutdown
-microphone.stop()
+# Shutdown microphone
 speaker.stop()
 
 # FIN
