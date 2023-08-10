@@ -21,16 +21,20 @@ box_path = repo_path + '/boxes/audio/python'
 sound.list_devices()
 
 # Initialize microphone thread
-microphone = sound.microphone(1, 2, 48000, pyaudio.paInt16, 4800, 480000)
+microphone = sound.microphone(4, 2, 44100, 4410, 441000, False)
 microphone.start()
 
-# Wait to start talking
+# Initialize speaker thread
+speaker = sound.speaker(4, 2, 44100, 441)
+speaker.start()
+
+# Wait to start recording
 input("Press Enter to start recording...")
 
 # Start recording
 microphone.reset()
 
-# Wait to stop talking
+# Wait to stop recording
 input("Press Enter to stop recording.")
 
 # Read sound recorded
@@ -39,21 +43,15 @@ recording = microphone.read()
 # Report
 print(len(recording))
 
-# Shutdown microphone
-microphone.stop()
-
-# Initialize speaker thread
-speaker = sound.speaker(1, 2, 48000, pyaudio.paInt16, 4800)
-speaker.start()
-
 # Output
 speaker.write(recording)
 
-# Wait to stop talking
-while speaker.playing():
-    time.sleep(0.001)
+# Wait for playback to finish
+while speaker.is_playing():
+    time.sleep(0.01)
 
-# Shutdown microphone
+# Shutdown speaker
 speaker.stop()
+microphone.stop()
 
 # FIN
