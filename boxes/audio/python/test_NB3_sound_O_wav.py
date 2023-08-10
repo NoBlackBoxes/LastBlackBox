@@ -14,7 +14,7 @@ importlib.reload(sound)
 username = os.getlogin()
 
 # Specify paths
-repo_path = '/home/' + username + '/NoBlackBoxes/repos/LastBlackBox'
+repo_path = '/home/' + username + '/LastBlackBox'
 box_path = repo_path + '/boxes/audio'
 wav_path = box_path + '/_data/sounds/Bach_prelude_C_major.wav'
 
@@ -22,7 +22,7 @@ wav_path = box_path + '/_data/sounds/Bach_prelude_C_major.wav'
 sound.list_devices()
 
 # Initialize speaker thread
-speaker = sound.speaker(4, 2, 44100, 441)
+speaker = sound.speaker(1, 2, 44100, 4410)
 speaker.start()
 
 # Output

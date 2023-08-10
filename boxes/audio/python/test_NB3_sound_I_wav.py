@@ -14,7 +14,7 @@ importlib.reload(sound)
 username = os.getlogin()
 
 # Specify paths
-repo_path = '/home/' + username + '/NoBlackBoxes/repos/LastBlackBox'
+repo_path = '/home/' + username + '/LastBlackBox'
 box_path = repo_path + '/boxes/audio'
 wav_path = box_path + '/_tmp/test.wav'
 
@@ -22,7 +22,7 @@ wav_path = box_path + '/_tmp/test.wav'
 sound.list_devices()
 
 # Initialize microphone thread
-microphone = sound.microphone(4, 2, 44100, 4410, 441000, False)
+microphone = sound.microphone(1, 2, 44100, 4410, 441000, False)
 microphone.start()
 
 # Wait to start recording
@@ -30,7 +30,7 @@ input("Press Enter to start recording...")
 
 # Start recording
 microphone.reset()
-microphone.start_recording_wav(wav_path, 480000)
+microphone.start_recording_wav(wav_path, 441000)
 
 # Wait to stop recording
 input("Press Enter to stop recording.")
