@@ -53,7 +53,7 @@
   (pad "16" smd rect (at -0.75 -1.45) (size 0.3 0.85) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp 32be493e-2b76-4358-8222-80f508c33076))
   (pad "17" smd rect (at 0 0) (size 1.25 1.25) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp 4177267c-ff0e-4330-bd88-644e7e931325))
   (model "${KIPRJMOD}/libraries/parts/I2S_DAC-AMP_MAX98357A/I2S_DAC-AMP_MAX98357A.step"
-    (opacity 0.4400)    (offset (xyz 0 0 0))
+    (offset (xyz 0 0 0))
     (scale (xyz 1 1 1))
     (rotate (xyz 0 0 0))
   )

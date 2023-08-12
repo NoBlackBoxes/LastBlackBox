@@ -4173,6 +4173,24 @@
     (stroke (width 0.05) (type solid)) (fill none) (layer "F.CrtYd") (tstamp 97fca2d4-724e-432f-b447-b683ee1d4bdc))
   (gr_rect (start 46.5 186) (end 57.5 204)
     (stroke (width 0.05) (type solid)) (fill none) (layer "F.CrtYd") (tstamp 98dbcac6-7885-4a25-b2fc-bde9db556da9))
+  (gr_circle (center 38.5 193.25) (end 40 193.25)
+    (stroke (width 0.1) (type default)) (fill none) (layer "F.Fab") (tstamp 212a0e46-b750-4492-936b-ca5b356a0ce3))
+  (gr_rect (start 24.5 166.75) (end 45.5 228.75)
+    (stroke (width 0.1) (type default)) (fill none) (layer "F.Fab") (tstamp 298d3dd3-e368-49cb-ad45-c1deffc7bcee))
+  (gr_rect (start 24.5 166.75) (end 45.5 236.7754)
+    (stroke (width 0.1) (type default)) (fill none) (layer "F.Fab") (tstamp 2ca02961-fac7-459f-8807-1be1e89b3efd))
+  (gr_rect (start 24.5 206.5) (end 45.5 209.5)
+    (stroke (width 0.1) (type default)) (fill none) (layer "F.Fab") (tstamp 4ba69a4b-6b43-4859-8838-4456a0872431))
+  (gr_rect (start 16.5 217.75) (end 53.5 220.75)
+    (stroke (width 0.1) (type default)) (fill none) (layer "F.Fab") (tstamp 56d4925f-079b-424c-a438-05edeb057071))
+  (gr_rect (start 33.75 230.75) (end 37.25 236.7754)
+    (stroke (width 0.1) (type default)) (fill none) (layer "F.Fab") (tstamp 74805356-1432-4e35-9228-0b989e82abe9))
+  (gr_circle (center 28.5 193.25) (end 30 193.25)
+    (stroke (width 0.1) (type default)) (fill none) (layer "F.Fab") (tstamp a94d12e8-feb2-47b3-9f6b-ce2b33b589a0))
+  (gr_circle (center 38.5 205.25) (end 40 205.25)
+    (stroke (width 0.1) (type default)) (fill none) (layer "F.Fab") (tstamp bba5c731-384c-4683-8adc-adbaf99a5175))
+  (gr_circle (center 28.5 205.25) (end 30 205.25)
+    (stroke (width 0.1) (type default)) (fill none) (layer "F.Fab") (tstamp f2c10222-a597-450a-90bf-e58270811570))
   (gr_text "AA Battery Pack" (at 124.5 181) (layer "B.SilkS") (tstamp 1ca4baeb-7679-46b6-8741-ced0658234d1)
     (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
   )
@@ -36575,6 +36593,19 @@
         (xy 142.264126 24.049183)
         (xy 143.629362 24.041338)
       )
+    )
+  )
+  (group "" (id ae39a0cd-7ddf-414d-8996-bab8400f6678)
+    (members
+      212a0e46-b750-4492-936b-ca5b356a0ce3
+      298d3dd3-e368-49cb-ad45-c1deffc7bcee
+      2ca02961-fac7-459f-8807-1be1e89b3efd
+      4ba69a4b-6b43-4859-8838-4456a0872431
+      56d4925f-079b-424c-a438-05edeb057071
+      74805356-1432-4e35-9228-0b989e82abe9
+      a94d12e8-feb2-47b3-9f6b-ce2b33b589a0
+      bba5c731-384c-4683-8adc-adbaf99a5175
+      f2c10222-a597-450a-90bf-e58270811570
     )
   )
 )
