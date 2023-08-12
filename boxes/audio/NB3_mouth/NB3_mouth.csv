@@ -1,0 +1,7 @@
+"Id";"Designator";"Footprint";"Quantity";"Designation";"Supplier and ref";
+1;"IC1";"I2S_DAC-AMP_MAX98357A";1;"MAX98357AETE+T";;;
+2;"C1";"C_0805_2012Metric";1;"10uF";;;
+3;"R1";"R_0402_1005Metric";1;"1M";;;
+4;"C2";"C_0402_1005Metric";1;"0.1uF";;;
+5;"J2,J1";"PinHeader_2x03_P2.54mm_Vertical_SMD";2;"Conn_02x03_Odd_Even";;;
+6;"J3";"Connector_Female_JST-PH2";1;" JST-PH2";;;

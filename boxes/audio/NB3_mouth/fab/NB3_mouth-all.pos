@@ -1,0 +1,13 @@
+### Footprint positions - created on Sat 12 Aug 2023 22:15:33 CEST ###
+### Printed by KiCad version 7.0.4
+## Unit = mm, Angle = deg.
+## Side : All
+# Ref     Val                  Package                                   PosX       PosY       Rot  Side
+J3        _JST-PH2             Connector_Female_JST-PH2               10.0000    10.0000    0.0000  bottom
+C1        10uF                 C_0805_2012Metric                       5.0000    15.4250   90.0000  top
+C2        0.1uF                C_0402_1005Metric                       6.8000    13.9800  -90.0000  top
+IC1       MAX98357AETE+T       I2S_DAC-AMP_MAX98357A                  10.0000    15.0000  -90.0000  top
+J1        Conn_02x03_Odd_Even  PinHeader_2x03_P2.54mm_Vertical_SMD     4.9200     6.5000   90.0000  top
+J2        Conn_02x03_Odd_Even  PinHeader_2x03_P2.54mm_Vertical_SMD    15.0800     6.5250   90.0000  top
+R1        1M                   R_0402_1005Metric                       6.8000    16.2500   90.0000  top
+## End
