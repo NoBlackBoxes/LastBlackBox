@@ -1,10 +1,10 @@
-# Eelectrons : NB3_body
+# Electrons : NB3_body
 
 PCB design and fabrication for NB3 body, a brain-shaped electronics prototyping base
 
 ## Parts
 
-- AP64501SP-13, DC-DC converter, Diodes Inc. [datasheet](libraries/parts/Voltage_Regulator_AP64501/Voltage_Regulator_AP64501.pdf)
+- Just connnectors and passives
 
 ## Fabrication
 
