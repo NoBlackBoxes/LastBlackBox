@@ -1,10 +1,10 @@
-# Audio : NB3_ear
+# Power : NB3_power
 
-PCB design and fabrication for NB3 ear, a stereo i2s MEMS microphone
+PCB design and fabrication for NB3 power, a 5V/3A DC to Dc power supply
 
 ## Parts
 
-- ICS-43434 from IvenSense: [datasheet](libraries/parts/Mic_ICS-43434/Mic_ICS-43434.pdf)
+- AP64501SP-13, DC-DC converter, Diodes Inc. [datasheet](libraries/parts/Voltage_Regulator_AP64501/Voltage_Regulator_AP64501.pdf)
 
 ## Fabrication
 
@@ -13,9 +13,9 @@ PCB design and fabrication for NB3 ear, a stereo i2s MEMS microphone
 1. Create "fab" folder in KiCAD project root
 2. Export BOM (as CSV): File->Fabrication outputs->BOM
 3. Edit BOM: Open as ODS and save as XLSX in "fab" folder
-4. Generate Gerbers: File->Fabrication outputs->Gerbers [settings](NB3_ear_FAB_plot_settings.png)
-5. Generate Drill: File->Fabrication outputs->Drill Files [settings](NB3_ear_FAB_drill_settings.png)
-6. Generate Centroids: File->Fabrication outputs->Componenet Placement [settings](NB3_ear_FAB_pos_settings.png)
+4. Generate Gerbers: File->Fabrication outputs->Gerbers [settings](NB3_power_FAB_plot_settings.png)
+5. Generate Drill: File->Fabrication outputs->Drill Files [settings](NB3_power_FAB_drill_settings.png)
+6. Generate Centroids: File->Fabrication outputs->Componenet Placement [settings](NB3_power_FAB_pos_settings.png)
 7. Zip entire fab folder (including BOM.xlsx)
 
 ### Upload boards(s) - PCBWay
@@ -24,21 +24,21 @@ PCB design and fabrication for NB3 ear, a stereo i2s MEMS microphone
 - Service: Turnkey Assembly
 - Board type: Panelized PCBs
 - Assembly: Top-Side
-- Quantity: *160*
+- Quantity: *80*
 
 ##### Other Parameters
-- Number of unique Parts: 4
-- Number of SMD Parts: 5
-- Number of BGA/QFP Parts: 0
+- Number of unique Parts: 17
+- Number of SMD Parts: 29
+- Number of BGA/QFP Parts: 1
 - Number of Through-Hole Parts: 0
 			
 #### PCB Specifications
 - Board type: Panel by PCBWay
-- Panel requirements: Panel in 2*4, total 20 sets=160pcs boards.
-- Route Process: Panel as Tab Route
+- Panel requirements: Panel in 2*2, total 20 sets=80pcs boards.
+- Route Process: Panel as V-Scoring
 - X-out Allowance in Panel: Accept
 - Different design in panel: 1
-- Size: 56 x 78 mm
+- Size: 102 x 100 mm
 - Quantity: 20
 - Layer: 2 Layers
 - Material: FR-4: TG150-160

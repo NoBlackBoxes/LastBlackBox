@@ -1,7 +1,7 @@
-### Module positions - created on Thu 06 Oct 2022 12:21:17 BST ###
-### Printed by Pcbnew version (6.0.7)
+### Footprint positions - created on Sat 12 Aug 2023 12:24:21 CEST ###
+### Printed by KiCad version 7.0.4
 ## Unit = mm, Angle = deg.
-## Side : top
+## Side : All
 # Ref     Val                              Package                                  PosX       PosY       Rot  Side
 C1        10uF_35v                         C_0805_2012Metric                     22.5000    19.9000  -90.0000  top
 C2        10uF_35v                         C_0805_2012Metric                     25.0000    19.9000  -90.0000  top

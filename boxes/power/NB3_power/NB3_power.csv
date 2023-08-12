@@ -1,26 +1,21 @@
-"Source:","/home/kampff/NoBlackBoxes/repos/LastBlackBox/boxes/power/NB3_power/NB3_power.kicad_sch"
-"Date:","Tue Jun 29 17:02:57 2021"
-"Tool:","Eeschema (5.99.0-11105-gfb4343bc8f)"
-"Generator:","/usr/share/kicad-nightly/plugins/bom_csv_grouped_by_value_with_fp.py"
-"Component Count:","33"
-"Ref","Qnty","Value","Cmp name","Footprint","Description","Vendor"
-"C1, C2, C3, C4, C5, C6, ","6","10uF 35v","C","Capacitor_SMD:C_0805_2012Metric","Unpolarized capacitor",""
-"C7, C8, ","2","100nF","C","Capacitor_SMD:C_0402_1005Metric","Unpolarized capacitor",""
-"C9, C11, ","2","1nF","C","Capacitor_SMD:C_0402_1005Metric","Unpolarized capacitor",""
-"C10, ","1","1.2nF","C","Capacitor_SMD:C_0402_1005Metric","Unpolarized capacitor",""
-"C12, C13, C14, C15, ","4","10uF","C","Capacitor_SMD:C_0805_2012Metric","Unpolarized capacitor",""
-"C16, ","1","100uF","C_Polarized","Capacitor_Tantalum_SMD:CP_EIA-7343-31_Kemet-D","Polarized capacitor",""
-"D1, ","1","LED (Green)","LED","LED_SMD:LED_0603_1608Metric","Light emitting diode",""
-"D2, ","1","LED (Red)","LED","LED_SMD:LED_0603_1608Metric","Light emitting diode",""
-"H1, H2, H3, H4, ","4","MountingHole","MountingHole","MountingHole:MountingHole_2.7mm_M2.5_ISO7380_Pad","Mounting Hole without connection",""
-"J1, ","1","Barrel_Jack_PJ-036AH-SMT-TR","Barrel_Jack_PJ-036AH-SMT-TR","NB3_power:Barrel_Jack_PJ-036AH-SMT-TR","",""
-"J2, ","1","Connector_S4B-PH-SM4-TB(LF)(SN)","Connector_S4B-PH-SM4-TB(LF)(SN)","NB3_power:Connector_S4B-PH-SM4-TB(LF)(SN)","",""
-"L1, ","1","SRN6045TA-2R2Y","INDUCTOR","Inductor_SMD:L_Bourns_SRN6045TA","Inductor symbol for simulation only",""
-"R1, ","1","5.6k","R","Resistor_SMD:R_0402_1005Metric","Resistor",""
-"R2, ","1","10R","R","Resistor_SMD:R_0402_1005Metric","Resistor",""
-"R3, ","1","20K 1%","R","Resistor_SMD:R_0402_1005Metric","Resistor",""
-"R4, ","1","12K 1%","R","Resistor_SMD:R_0402_1005Metric","Resistor",""
-"R5, ","1","2.2K 1%","R","Resistor_SMD:R_0402_1005Metric","Resistor",""
-"R6, ","1","1.6k","R","Resistor_SMD:R_0402_1005Metric","Resistor",""
-"SW1, ","1","SW_SPDT","SW_SPDT","NB3_power:Switch_SPDT_SMD_Slide_JS102011JCQN","Switch, single pole double throw",""
-"U1, ","1","Voltage_Regulator_AP64501","Voltage_Regulator_AP64501","NB3_power:Voltage_Regulator_AP64501","",""
+"Id";"Designator";"Footprint";"Quantity";"Designation";"Supplier and ref";
+1;"H3,H2,H4,H1";"MountingHole_2.7mm_M2.5_ISO7380_Pad";4;"MountingHole";;;
+2;"C12,C14,C15,C13";"C_0805_2012Metric";4;"10uF";;;
+3;"R2";"R_0402_1005Metric";1;"10R";;;
+4;"R6";"R_0402_1005Metric";1;"1.6k";;;
+5;"C6,C4,C3,C1,C5,C2";"C_0805_2012Metric";6;"10uF 35v";;;
+6;"D2";"LED_0603_1608Metric";1;"LED (Red)";;;
+7;"C16";"CP_EIA-7343-31_Kemet-D";1;"100uF";;;
+8;"R3";"R_0402_1005Metric";1;"20K 1%";;;
+9;"R1";"R_0402_1005Metric";1;"5.6k";;;
+10;"J1";"Barrel_Jack_PJ-036AH-SMT-TR";1;"Barrel_Jack_PJ-036AH-SMT-TR";;;
+11;"SW1";"Switch_SPDT_SMD_Slide_JS102011JCQN";1;"SW_SPDT";;;
+12;"C10";"C_0402_1005Metric";1;"1.2nF";;;
+13;"D1";"LED_0603_1608Metric";1;"LED (Green)";;;
+14;"C9,C11";"C_0402_1005Metric";2;"1nF";;;
+15;"C7,C8";"C_0402_1005Metric";2;"100nF";;;
+16;"R4";"R_0402_1005Metric";1;"12K 1%";;;
+17;"L1";"L_Bourns_SRN6045TA";1;"SRN6045TA-2R2Y";;;
+18;"R5";"R_0402_1005Metric";1;"2.2K 1%";;;
+19;"J2";"Connector_S4B-PH-SM4-TB(LF)(SN)";1;"Connector_S4B-PH-SM4-TB(LF)(SN)";;;
+20;"U1";"Voltage_Regulator_AP64501";1;"Voltage_Regulator_AP64501";;;
