@@ -65,8 +65,8 @@
       35,
       36
     ],
-    "visible_layers": "ffcffef_7fffffff",
-    "zone_display_mode": 1
+    "visible_layers": "ffcffef_ffffffff",
+    "zone_display_mode": 0
   },
   "meta": {
     "filename": "NB3_mouth.kicad_prl",

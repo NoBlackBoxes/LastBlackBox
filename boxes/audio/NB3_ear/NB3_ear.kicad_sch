@@ -6,7 +6,7 @@
 
   (title_block
     (title "NB3 Ear")
-    (date "2023-08-03")
+    (date "2023-08-12")
     (rev "0.0.2")
     (company "Voight-Kampff")
     (comment 1 "MEMS microphone with I2S interface")

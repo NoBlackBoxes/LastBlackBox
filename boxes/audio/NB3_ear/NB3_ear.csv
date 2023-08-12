@@ -1,6 +1,5 @@
-"Id";"Designator";"Package";"Quantity";"Designation";"Supplier and ref";
-1;"J2,J1";"PinHeader_2x03_P2.54mm_Vertical_SMD";2;"Conn_02x03_Odd_Even";;;
-2;"MK1";"Mic_ICS-43434";1;"Mic_ICS-43434";;;
-3;"C1";"C_0402_1005Metric";1;"0.1 uF";;;
-4;"R1";"R_0402_1005Metric";1;"100k";;;
-5;"G***";"Logo_VK_5mm";1;"LOGO";;;
+"Id";"Designator";"Footprint";"Quantity";"Designation";"Supplier and ref";
+1;"MK1";"Mic_ICS-43434";1;"Mic_ICS-43434";;;
+2;"C1";"C_0402_1005Metric";1;"0.1 uF";;;
+3;"R1";"R_0402_1005Metric";1;"100k";;;
+4;"J2,J1";"PinHeader_2x03_P2.54mm_Vertical_SMD";2;"Conn_02x03_Odd_Even";;;
