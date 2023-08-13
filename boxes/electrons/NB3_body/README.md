@@ -22,24 +22,20 @@ PCB design and fabrication for NB3 body, a brain-shaped electronics prototyping 
 
 #### Assembly Service
 - Service: Turnkey Assembly
-- Board type: Panelized PCBs
+- Board type: Single Pieces
 - Assembly: Top-Side
-- Quantity: *80*
+- Quantity: *50*
 
 ##### Other Parameters
-- Number of unique Parts: 17
-- Number of SMD Parts: 29
-- Number of BGA/QFP Parts: 1
+- Number of unique Parts: 4
+- Number of SMD Parts: 14
+- Number of BGA/QFP Parts: 0
 - Number of Through-Hole Parts: 0
 			
 #### PCB Specifications
-- Board type: Panel by PCBWay
-- Panel requirements: Panel in 2*2, total 20 sets=80pcs boards.
-- Route Process: Panel as V-Scoring
-- X-out Allowance in Panel: Accept
-- Different design in panel: 1
-- Size: 102 x 100 mm
-- Quantity: 20
+- Board type: Single Pieces
+- Size: 200 x 200 mm
+- Quantity: 50
 - Layer: 2 Layers
 - Material: FR-4: TG150-160
 - Thickness: 1.6 mm
