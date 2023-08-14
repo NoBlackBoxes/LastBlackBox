@@ -1,9 +1,8 @@
-// Main Decoder
-module main_decoder(opcode, funct3, reg_write, ALU_select, memory_control, result_select, branch, ALU_op, jump);
+// Decoder (NBBPU)
+module decoder(opcode, reg_write, ALU_select, memory_control, result_select, branch, ALU_op, jump);
 
     // Declarations
-    input [6:0] opcode;
-    input [2:0] funct3;
+    input [3:0] opcode;
     output reg_write;
     output ALU_select;
     output [3:0] memory_control;

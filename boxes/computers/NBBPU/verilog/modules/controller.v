@@ -1,7 +1,7 @@
 // Controller (NBBPU)
 // -----------------------------------------
 // This is the "controller" sub-module for the NBBPU. It is responsible for decoding the opcode and generating the required
-//  control signals. 
+// control signals. 
 // -----------------------------------------
 module controller(opcode, x, y, z, zero, result_select, memory_control, PC_select, ALU_select, reg_write, jump, ALU_control);
 
