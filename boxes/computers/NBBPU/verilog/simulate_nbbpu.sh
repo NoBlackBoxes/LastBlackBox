@@ -12,7 +12,16 @@ MODULES=$NBBPU"/modules"
 mkdir -p bin
 
 # Build
-iverilog -o bin/nbbpu $MODULES/adder.v $MODULES/flopr.v nbbpu.v nbbpu_tb.v
+iverilog -o bin/nbbpu \
+    $MODULES/controller.v \
+    $MODULES/datapath.v \
+    $MODULES/regfile.v \
+    $MODULES/alu.v \
+    $MODULES/rom.v \
+    $MODULES/adder.v \
+    $MODULES/flopr.v \
+    $MODULES/mux2.v \
+    nbbpu.v nbbpu_tb.v
 
 # Simulate
 vvp bin/nbbpu

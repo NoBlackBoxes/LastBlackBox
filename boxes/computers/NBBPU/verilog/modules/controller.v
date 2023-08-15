@@ -3,69 +3,76 @@
 // This is the "controller" sub-module for the NBBPU. It is responsible for decoding the opcode and generating the required
 // control signals. 
 // -----------------------------------------
-module controller(opcode, x, y, z, zero, result_select, memory_control, PC_select, ALU_select, reg_write, jump, ALU_control);
+module controller(opcode, reg_write, data_write, pc_select);
 
     // Declarations
     input [3:0] opcode;
-    input [3:0] x;
-    input [3:0] y;
-    input [3:0] z;
-    input zero;
-    output [2:0] result_select;
-    output [3:0] memory_control;
-    output reg [1:0] PC_select;
-    output ALU_select;
     output reg_write;
-    output jump;
-    output [3:0] ALU_control;
+    output data_write;
+    output pc_select;
     
     // Intermediates
-    wire [1:0] ALU_op;
-    wire branch;
-    
-    // Instruction Decoder Sub-module
-    instruction_decoder main_decoder
-    (
-        opcode,             // (input)
-        reg_write,          // (output)
-        ALU_select,         // (output)
-        memory_control,     // (output)
-        result_select,      // (output)
-        branch,             // (output)
-        ALU_op,             // (output)
-        jump                // (output)
-    );
-    
-    // ALU Decoder Sub-module
-    alu_decoder alu_decoder
-    (
-        opcode[5],      // (input) opcode_b5
-        funct3,         // (input)
-        funct7b5,       // (input)
-        ALU_op,         // (input)
-        ALU_control     // (output)
-    );
-
-    // Program Counter update for branch instructions
+    reg [3:0] controls;
+    assign {reg_write, data_write, pc_select} = controls;
+   
+    // Logic
     always @*
-        if(jump)
-            case(opcode[3])
-                1'b0: PC_select = 2'b10;            // jalr
-                1'b1: PC_select = 2'b01;            // jal
-                default: PC_select = 2'b01;
-            endcase
-        else
-            case(funct3)
-                3'b000: PC_select = branch & zero;   // beq
-                3'b001: PC_select = branch & ~zero;  // bne
-                3'b100: PC_select = branch & ~zero;  // blt
-                3'b101: PC_select = branch & zero;   // bge
-                3'b110: PC_select = branch & ~zero;  // bltu
-                3'b111: PC_select = branch & zero;   // bgeu
-                default: PC_select = 2'b00;
-            endcase           
-        
-        // Compute memory offset for misaligned read/writes
+        case(opcode)      
+            4'b0000: // ADD
+                controls = 3'b100;
+            4'b0001: // SUB
+                controls = 3'b100;
+            4'b0010: // AND 
+                controls = 3'b100;
+            4'b0011: // IOR
+                controls = 3'b100;
+            4'b0100: // XOR
+                controls = 3'b100;
+            4'b0101: // SHR
+                controls = 3'b100;
+            4'b0110: // SHL
+                controls = 3'b100;
+            4'b0111: // CMP
+                controls = 3'b100;
+            4'b1000: // JMP
+                controls = 3'b100;
+            4'b1001: // BRE
+                controls = 3'b100;
+            4'b1010: // BRN
+                controls = 3'b100;
+            4'b1011: // RES
+                controls = 3'b100;
+            4'b1100: // LOD
+                controls = 3'b100;
+            4'b1101: // STR
+                controls = 2'b11;
+            4'b1110: // SEL
+                controls = 3'b100;
+            4'b1111: // SEU
+                controls = 3'b100;
+            default: // ???
+                controls = 3'b100;
+        endcase
 
+//    // Program Counter update for branch instructions
+//    always @*
+//        if(jump)
+//            case(opcode[3])
+//                1'b0: PC_select = 3'b100;            // jalr
+//                1'b1: PC_select = 2'b01;            // jal
+//                default: PC_select = 2'b01;
+//            endcase
+//        else
+//            case(funct3)
+//                3'b000: PC_select = branch & zero;   // beq
+//                3'b001: PC_select = branch & ~zero;  // bne
+//                3'b100: PC_select = branch & ~zero;  // blt
+//                3'b101: PC_select = branch & zero;   // bge
+//                3'b110: PC_select = branch & ~zero;  // bltu
+//                3'b111: PC_select = branch & zero;   // bgeu
+//                default: PC_select = 3'b100;
+//            endcase           
+//        
+//        // Compute memory offset for misaligned read/writes
 
 endmodule

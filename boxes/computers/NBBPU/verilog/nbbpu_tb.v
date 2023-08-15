@@ -4,45 +4,49 @@ module nbbpu_tb;
     // Declarations
     reg t_clock;
     reg t_reset;
-    reg [15:0] t_instruction;
-    reg [15:0] t_data_in;
-    wire [15:0] t_PC;
-    wire [3:0] t_memory_control;
+    wire [15:0] t_instruction;
+    wire [15:0] t_data_in;
+    wire t_data_write;
+    wire [15:0] t_data_address;
     wire [15:0] t_data_out;
+    wire [15:0] t_PC;
 
+    // Debug    
+    reg [7:0] instruction_counter;
+    
     // Create instance of nbbpu module
-    nbbpu test_nbbpu(t_clock, t_reset, t_instruction, t_data_in, t_PC, t_memory_control, t_data_out);
+    nbbpu test_nbbpu(t_clock, t_reset, t_instruction, t_data_in, t_data_write, t_data_address, t_data_out, t_PC);
 
-    // Create clock
-    always #5 t_clock = ~t_clock;
+    // Create instance of Instruction and Data Memory modules
+    rom test_rom(t_PC, t_instruction);    
+    //ram test_ram(clock, memory_control, data_adr, write_data, read_data);
 
-    // Test
+    // Initialize
     initial
         begin
             $dumpfile("bin/nbbpu_tb.vcd");
             $dumpvars(0, nbbpu_tb);
-            $monitor(t_clock, t_reset, t_PC);
+            $monitor(t_clock, t_reset, t_instruction, t_data_in, t_data_write, t_data_address, t_data_out, t_PC);
 
-            // Initial
-            t_clock <= 1'b0;
-            t_reset <= 1'b0;
+            instruction_counter <= 0;
+            t_reset <= 1; # 22; t_reset <= 0;
+        end   
 
-            // Initial: Reset
-            t_reset <= 1'b1;
-            #10 // 100 ns delay
-            t_reset <= 1'b0;
-
-            // Wait
-            #200 // 100 ns delay
-            ;
-
-            // Final: Reset
-            t_reset = 1'b1;
-            #10 // 100 ns delay
-            t_reset = 1'b0;
-
-            // Finish
-            #100 $finish; // 100 ns delay    
+    // Generate clock
+    always
+        begin
+            t_clock <= 1; # 5; t_clock <= 0; # 5;
+        end
+    
+    // Test
+    always @(negedge t_clock)
+        begin
+            instruction_counter <= instruction_counter + 1;
+            if(instruction_counter >= 24)
+                begin
+                    $display("IC stopped");
+                    $stop;
+                end 
         end
 
 endmodule
