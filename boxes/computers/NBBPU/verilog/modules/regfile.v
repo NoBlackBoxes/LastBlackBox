@@ -14,6 +14,26 @@ module regfile(clock, write_enable, address_read_1, address_read_2, address_writ
     // Intermediates (16 x 16-bit registers)
     reg [15:0] registers[15:0];
     
+    // Initialize (DEBUG)
+    initial
+        begin
+            registers[0] = 16'd0;
+            registers[1] = 16'd0;
+            registers[2] = 16'd11;
+            registers[3] = 16'd31;
+            registers[4] = 16'd0;
+            registers[5] = 16'd0;
+            registers[6] = 16'd0;
+            registers[7] = 16'd0;
+            registers[8] = 16'd0;
+            registers[9] = 16'd0;
+            registers[10] = 16'd0;
+            registers[12] = 16'd0;
+            registers[13] = 16'd0;
+            registers[14] = 16'd0;
+            registers[15] = 16'd0;
+        end   
+
     // Logic
     always @(posedge clock)
         begin

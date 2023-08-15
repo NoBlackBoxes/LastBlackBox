@@ -2,7 +2,7 @@
 module flopr(clock, reset, d, q);
 
     // Parameters
-    parameter WIDTH = 8;
+    parameter WIDTH = 16;
     
     // Declarations
     input clock; 

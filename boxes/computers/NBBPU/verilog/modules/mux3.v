@@ -2,7 +2,7 @@
 module mux3(d0, d1, d2, s, y);
     
     // Parameters
-    parameter WIDTH = 8;
+    parameter WIDTH = 16;
 
     // Declarations
     input [WIDTH-1:0] d0; 

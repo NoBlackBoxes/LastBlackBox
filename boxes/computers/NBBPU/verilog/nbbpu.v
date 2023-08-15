@@ -20,14 +20,16 @@ module nbbpu(clock, reset, instruction, data_in, data_write, data_address, data_
 
     // Intermediates
     wire reg_write;
+    wire reg_set;
     wire data_write;
     wire PC_select;
 
     // Sub-module: Controller
     controller controller
     (
-        instruction[3:0],     // (input) Opcode
+        instruction[15:12],   // (input) Opcode
         reg_write,            // (output) Register write enable
+        reg_set,              // (output) Register set enable
         data_write,           // (output) Data write enable
         PC_select             // (output) PC select signal
     );
@@ -39,6 +41,7 @@ module nbbpu(clock, reset, instruction, data_in, data_write, data_address, data_
         reset,                // (input) reset
         instruction,          // (input) instruction
         reg_write,            // (input) reg_write
+        reg_set,              // (input) reg_set
         PC_select,            // (input) PC select signal
         data_in,              // (input) data_in
         data_out,             // (output) data_out
