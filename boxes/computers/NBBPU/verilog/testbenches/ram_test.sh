@@ -12,20 +12,12 @@ MODULES=$NBBPU"/modules"
 mkdir -p bin
 
 # Build
-iverilog -o bin/nbbpu \
-    $MODULES/controller.v \
-    $MODULES/datapath.v \
-    $MODULES/regfile.v \
-    $MODULES/alu.v \
-    $MODULES/rom.v \
+iverilog -o bin/ram \
     $MODULES/ram.v \
-    $MODULES/adder.v \
-    $MODULES/flopr.v \
-    $MODULES/mux2.v \
-    nbbpu.v nbbpu_tb.v
+    ram_tb.v
 
 # Simulate
-vvp bin/nbbpu
+vvp bin/ram
 
 # Visualize
-gtkwave bin/nbbpu_tb.vcd
+gtkwave bin/ram_tb.vcd

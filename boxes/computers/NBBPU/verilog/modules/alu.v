@@ -1,10 +1,11 @@
 // ALU
-module alu(X, Y, opcode, Z);
+module alu(X, Y, opcode, read_data, Z);
     
     // Declarations
     input [15:0] X;
     input [15:0] Y;
     input [3:0] opcode;
+    input [15:0] read_data;
     output reg [15:0] Z;
 
     // Logic
@@ -18,6 +19,9 @@ module alu(X, Y, opcode, Z);
             4'b0101: Z <= X >> Y[3:0];      // shift right (logical)
             4'b0110: Z <= X << Y[3:0];      // shift left (logical)
             4'b0101: Z <= X >= Y ? 1 : 0;   // compare (greater or equal)
+            4'b1100: Z <= read_data;        // (memory operation) load data
+            4'b1101: Z <= X;                // (memory operation) store data
+            default: Z <= 15'd0;            // Output Zero
 
         endcase
 
