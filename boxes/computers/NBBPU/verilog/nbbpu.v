@@ -56,6 +56,7 @@ module nbbpu(clock, reset, instruction, read_data, write_enable, address, write_
         reg_set,                // (input) reg_set
         PC_select,              // (input) PC select signal
         read_data,              // (input) read_data
+        address,                // (output) address
         write_data,             // (output) write_data
         PC                      // (output) PC
     );

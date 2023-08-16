@@ -37,7 +37,7 @@ BRE |1001:9|*branch to z if x == y*              |BRE x y z|
 BRN |1010:A|*branch to z if x != y*:             |BRN x y z|
 RES |1011:B|*reserved op code*                   |RES 0 0 0|
 ***Memory***                                               |
-LOD |1100:C|*load data at memory address z in x* |LOD x 0 z|
-STR |1101:D|*store data in x at memory address z*|STR x 0 z|
+LOD |1100:C|*load data at address x into z*      |LOD x 0 z|
+STR |1101:D|*store data in y at address x*       |STR x y 0|
 SEL |1110:E|*set lower byte of z*                |SEL b8 z |
 SEU |1111:F|*set upper byte of z*                |SEU b8 z |

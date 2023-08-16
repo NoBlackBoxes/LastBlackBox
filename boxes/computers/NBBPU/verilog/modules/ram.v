@@ -16,10 +16,10 @@ module ram(clock, write_enable, address, write_data, read_data);
         $readmemh("bin/ram.txt", RAM);
 
     // Assign output data
-    assign read_data = RAM[address[15:1]];
+    assign read_data = RAM[address[15:0]];
     
     // Logic (write input data)
     always @(posedge clock)
         if (write_enable) 
-                RAM[address[15:1]] <= write_data;
+                RAM[address[15:0]] <= write_data;
 endmodule

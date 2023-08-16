@@ -38,12 +38,12 @@ module regfile(clock, write_lower_enable, write_upper_enable, address_write, wri
     // Logic
     always @(posedge clock)
         begin
-            if (write_lower_enable)
+            if (write_lower_enable & !write_upper_enable)
                 registers[address_write][7:0] <= write_data[7:0];
-                //registers[address_write] <= write_data;
-            if (write_upper_enable) 
+            if (write_upper_enable & !write_lower_enable) 
                 registers[address_write][15:8] <= write_data[7:0];
-                //registers[address_write] <= write_data;
+            if (write_lower_enable & write_upper_enable) 
+                registers[address_write] <= write_data;
         end
     assign read_data_1 = (address_read_1 != 0) ? registers[address_read_1] : 0; // Register 0 ia always 0
     assign read_data_2 = (address_read_2 != 0) ? registers[address_read_2] : 0; // Register 0 ia always 0

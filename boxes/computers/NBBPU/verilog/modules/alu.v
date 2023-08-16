@@ -20,7 +20,7 @@ module alu(X, Y, opcode, read_data, Z);
             4'b0110: Z <= X << Y[3:0];      // shift left (logical)
             4'b0101: Z <= X >= Y ? 1 : 0;   // compare (greater or equal)
             4'b1100: Z <= read_data;        // (memory operation) load data
-            4'b1101: Z <= X;                // (memory operation) store data
+            4'b1101: Z <= Y;                // (memory operation) store data
             default: Z <= 15'd0;            // Output Zero
 
         endcase
