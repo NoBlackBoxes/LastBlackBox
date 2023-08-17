@@ -6,6 +6,27 @@ The No Black Box Processing Unit
 
 A custom CPU loosely based on the MOS 6502 (and the RISC-V/AVR ISAs)
 
+## Requirements
+
+```bash
+# Create a python virtual environment
+mkdir _tmp
+cd _tmp
+python -m venv nbbpu
+source nbbpu/bin/activate
+
+# Install python packages
+pip install apio
+
+# Install APIO packages
+apio install system scons ice40 iverilog  # or just oss-cad-suite
+apio drivers --serial-enable
+
+# Add user to dialout (not sure for Upduino 3.0)
+sudo usermod -a -G dialout $USER # Debian
+sudo usermod -a -G uucp $USER # Arch
+```
+
 ## Instructions
 
 All 16-bit instructions are of the format:
