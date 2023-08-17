@@ -23,26 +23,20 @@ module nbbpu(clock, reset, instruction, read_data, write_enable, address, write_
     output [15:0] write_data;
     output [15:0] PC;
 
-
-    // Need to set address and write data somewhere in datapath!
-
-
     // Intermediates
-    wire reg_write_lower;
-    wire reg_write_upper;
-    wire reg_set;
+    wire reg_write;
     wire write_enable;
-    wire PC_select;
+    wire jump_PC;
+    wire branch_PC;
 
     // Sub-module: Controller
     controller controller
     (
         instruction[15:12],     // (input) Opcode
-        reg_write_lower,        // (output) Register write (lower byte) enable
-        reg_write_upper,        // (output) Register write (upper byte) enable
-        reg_set,                // (output) Register set enable
+        reg_write,              // (output) Register write enable
         write_enable,           // (output) Data write enable
-        PC_select               // (output) PC select signal
+        jump_PC,                // (output) jump PC signal
+        branch_PC               // (output) branch PC signal
     );
 
     // Sub-module: Datapath
@@ -51,10 +45,9 @@ module nbbpu(clock, reset, instruction, read_data, write_enable, address, write_
         clock,                  // (input) clock
         reset,                  // (input) reset
         instruction,            // (input) instruction
-        reg_write_lower,        // (input) reg_write_lower
-        reg_write_upper,        // (input) reg_write_upper
-        reg_set,                // (input) reg_set
-        PC_select,              // (input) PC select signal
+        reg_write,              // (input) reg_write
+        jump_PC,                // (input) jump_PC
+        branch_PC,              // (input) branch_PC
         read_data,              // (input) read_data
         address,                // (output) address
         write_data,             // (output) write_data

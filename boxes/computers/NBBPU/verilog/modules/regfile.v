@@ -1,14 +1,13 @@
-// Regfile (NBBPU) - 16 x 16-bit registers - two read ports and one write port. It is is possible to only write lower/upper byte.)
-module regfile(clock, write_lower_enable, write_upper_enable, address_write, write_data, address_read_1, address_read_2, read_data_1, read_data_2);
+// Regfile (NBBPU) - 16 x 16-bit registers - two read ports and one write port.
+module regfile(clock, write_enable, write_address, write_data, read_address_1, read_address_2, read_data_1, read_data_2);
 
     // Declarations
     input clock;
-    input write_lower_enable;
-    input write_upper_enable;
-    input [3:0] address_write;
+    input write_enable;
+    input [3:0] write_address;
     input [15:0] write_data;
-    input [3:0] address_read_1;
-    input [3:0] address_read_2;
+    input [3:0] read_address_1;
+    input [3:0] read_address_2;
     output [15:0] read_data_1;
     output [15:0] read_data_2;
     
@@ -38,14 +37,10 @@ module regfile(clock, write_lower_enable, write_upper_enable, address_write, wri
     // Logic
     always @(posedge clock)
         begin
-            if (write_lower_enable & !write_upper_enable)
-                registers[address_write][7:0] <= write_data[7:0];
-            if (write_upper_enable & !write_lower_enable) 
-                registers[address_write][15:8] <= write_data[7:0];
-            if (write_lower_enable & write_upper_enable) 
-                registers[address_write] <= write_data;
+            if (write_enable) 
+                registers[write_address] <= write_data;
         end
-    assign read_data_1 = (address_read_1 != 0) ? registers[address_read_1] : 0; // Register 0 ia always 0
-    assign read_data_2 = (address_read_2 != 0) ? registers[address_read_2] : 0; // Register 0 ia always 0
+    assign read_data_1 = (read_address_1 != 0) ? registers[read_address_1] : 0; // Register 0 ia always 0
+    assign read_data_2 = (read_address_2 != 0) ? registers[read_address_2] : 0; // Register 0 ia always 0
 
 endmodule

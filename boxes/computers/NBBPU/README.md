@@ -11,14 +11,14 @@ A custom CPU loosely based on the MOS 6502 (and the RISC-V/AVR ISAs)
 All 16-bit instructions are of the format:
 
 ```
-OpCode(0:3) regX(4:7) regY(8:11) regZ(12:15)"
+OpCode(0:3) regX(4:7) regY(8:11) regZ(12:15)
 ```
 
 - PC: 16-bit unsigned (max 65K instructions)
 - Data type: Signed 16-bit intergers (-32,768 to +32,767)
 - Registers (16x16-bit): r0 to r15
  -- r0 is always 0
- -- r1 is always the return adress from a jump
+ -- r1 *should* always be the return adress from a jump
 
 Name|OpCode|Description                          |Example  |
 :--:|:----:|:-----------------------------------:|:-------:|
@@ -32,9 +32,9 @@ SHR |5:0101|*shift x right by y-bits: x >> y = z*|SHR x y z|
 SHL |6:0110|*shift x left by y-bits: x << y = z* |SHL x y z|
 CMP |7:0111|*compare x to y: x >= y = z*         |CMP x y z|
 |***Control Flow***                                        |
-JMP |8:1000|*jump PC to x, store next PC in r1*  |JMP x 0 0|
-BRE |9:1001|*branch to z if x == y*              |BRE x y z| 
-BRN |A:1010|*branch to z if x != y*:             |BRN x y z|
+JMP |8:1000|*jump PC to x, store next PC in z*   |JMP x 0 z|
+BRZ |9:1001|*branch to x if y == 0*              |BRZ x y 0| 
+BRN |A:1010|*branch to x if y != 0*:             |BRN x y 0|
 RES |B:1011|*reserved op code*                   |RES 0 0 0|
 ***Memory***                                               |
 LOD |C:1100|*load data at address x into z*      |LOD x 0 z|

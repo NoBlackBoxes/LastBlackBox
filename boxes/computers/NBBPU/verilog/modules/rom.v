@@ -13,6 +13,6 @@ module rom(address, data_out);
         $readmemh("bin/rom.txt", ROM);
 
     // Logic    
-    assign data_out = ROM[address[15:1]]; // 16-bit word aligned
+    assign data_out = ROM[address[15:0]];
 
 endmodule

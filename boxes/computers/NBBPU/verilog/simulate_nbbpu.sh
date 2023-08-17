@@ -19,7 +19,6 @@ iverilog -o bin/nbbpu \
     $MODULES/alu.v \
     $MODULES/rom.v \
     $MODULES/ram.v \
-    $MODULES/adder.v \
     $MODULES/flopr.v \
     $MODULES/mux2.v \
     nbbpu.v nbbpu_tb.v

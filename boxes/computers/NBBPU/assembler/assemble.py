@@ -12,7 +12,7 @@ OpCodes = {
     "SHL" : "6",
     "CMP" : "7",
     "JMP" : "8",
-    "BRE" : "9",
+    "BRZ" : "9",
     "BRN" : "A",
     "RES" : "B",
     "LOD" : "C",
