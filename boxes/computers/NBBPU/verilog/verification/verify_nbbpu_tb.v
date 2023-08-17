@@ -1,5 +1,5 @@
-// Testbench for NBBPU
-module nbbpu_tb;
+// Testbench for verifying NBBPU
+module verify_nbbpu_tb();
 
     // Declarations
     reg t_clock;
@@ -13,10 +13,10 @@ module nbbpu_tb;
 
     // Debug    
     reg [7:0] instruction_counter;
-    
+
     // Create instance of nbbpu module
     nbbpu test_nbbpu(t_clock, t_reset, t_instruction, t_read_data, t_write_enable, t_address, t_write_data, t_PC);
-
+    
     // Create instance of Instruction and Data Memory modules
     rom test_rom(t_PC, t_instruction);
     ram test_ram(t_clock, t_write_enable, t_address, t_write_data, t_read_data);
@@ -24,29 +24,45 @@ module nbbpu_tb;
     // Initialize
     initial
         begin
-            $dumpfile("bin/nbbpu_tb.vcd");
-            $dumpvars(0, nbbpu_tb);
-            $monitor(t_clock, t_reset, t_instruction, t_read_data, t_write_enable, t_address, t_write_data, t_PC);
-
+            $dumpfile("bin/verify_nbbpu_tb.vcd");
+            $dumpvars(0, verify_nbbpu_tb);
+            
             instruction_counter <= 0;
             t_reset <= 1; # 22; t_reset <= 0;
         end   
-
+    
     // Generate clock
     always
         begin
             t_clock <= 1; # 5; t_clock <= 0; # 5;
-        end
+        end   
     
-    // Test
+    // check results
     always @(negedge t_clock)
         begin
             instruction_counter <= instruction_counter + 1;
-            if(instruction_counter >= 24)
+            if(instruction_counter >= 255)
                 begin
                     $display("IC stopped");
                     $stop;
                 end 
+            if(t_write_enable) 
+                begin
+                    if(t_address === 16'hFFF0 & t_write_data === 1) 
+                        begin
+                            $write("%c[1;32m",27);
+                            $display(" - Verification succeeded");
+                            $write("%c[0m",27);
+                            $finish;
+                        end 
+                    else if (t_address === 16'hFFF0)
+                        begin
+                            $write("%c[1;31m",27);
+                            $display(" ! Verification failed");
+                            $write("%c[0m",27);
+                            $stop;
+                        end
+                end   
         end
 
 endmodule

@@ -6,7 +6,7 @@ module rom(address, data_out);
     output [15:0] data_out;   
 
     // Intermediates
-    reg [15:0] ROM[0:31];
+    reg [15:0] ROM[0:255];
 
     // Initialize
     initial
