@@ -1,11 +1,12 @@
 // Datapath (NBBPU)
-module datapath(clock, reset, instruction, reg_write, jump_PC, branch_PC, read_data, address, write_data, PC);
+module datapath(clock, reset, instruction, reg_write, reg_set, jump_PC, branch_PC, read_data, address, write_data, PC);
 
     // Declarations
     input clock;
     input reset;
     input [15:0] instruction;
     input reg_write;
+    input reg_set;
     input jump_PC;
     input branch_PC;
     input [15:0] read_data;
@@ -14,7 +15,7 @@ module datapath(clock, reset, instruction, reg_write, jump_PC, branch_PC, read_d
     output [15:0] PC;
     
     // Intermediates
-    wire [3:0] opcode, x, y, z;
+    wire [3:0] opcode, _x, x, y, z;
     wire [15:0] PC_next;
     wire [15:0] PC_plus1;
     wire [15:0] X;
@@ -24,9 +25,12 @@ module datapath(clock, reset, instruction, reg_write, jump_PC, branch_PC, read_d
 
     // Assignments
     assign opcode = instruction[15:12];
-    assign x = instruction[11:8];
+    assign _x = instruction[11:8];
     assign y = instruction[7:4];
     assign z = instruction[3:0];
+
+    // Logic (register set)
+    mux2 #(4) x_mux(_x, z, reg_set, x);
 
     // Logic (register file)
     regfile regfile(clock, reg_write, z, Z, x, y, X, Y);

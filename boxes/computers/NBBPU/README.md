@@ -25,6 +25,10 @@ apio drivers --serial-enable
 # Add user to dialout (not sure for Upduino 3.0)
 sudo usermod -a -G dialout $USER # Debian
 sudo usermod -a -G uucp $USER # Arch
+
+# Other dependencies
+sudo pacman -S graphviz
+# https://github.com/YosysHQ/yosys/blob/master/README.md#getting-started
 ```
 
 ## Instructions

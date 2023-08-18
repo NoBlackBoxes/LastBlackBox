@@ -11,9 +11,10 @@ module alu(X, Y, instruction, read_data, PC_plus1, Z);
 
     // Intermediates
     wire [3:0] opcode;
-    wire [7:0] set_byte;
+    wire [15:0] lower_byte, upper_byte;
     assign opcode = instruction[15:12];
-    assign set_byte = instruction[11:4];
+    assign lower_byte = {X[15:8], instruction[11:4]};
+    assign upper_byte = {instruction[11:4], X[7:0]};
 
     // Logic
     always @*
@@ -32,8 +33,8 @@ module alu(X, Y, instruction, read_data, PC_plus1, Z);
             4'b1011: Z <= 15'd0;            // (reserved operation)
             4'b1100: Z <= read_data;        // (memory operation) load data
             4'b1101: Z <= Y;                // (memory operation) store data
-            4'b1110: Z[7:0] <= set_byte;    // (memory operation) set register lower byte
-            4'b1111: Z[15:8] <= set_byte;   // (memory operation) set register upper byte
+            4'b1110: Z <= lower_byte;       // (memory operation) set register lower byte
+            4'b1111: Z <= upper_byte;       // (memory operation) set register upper byte
             default: Z <= 15'd0;            // Output Zero
 
         endcase

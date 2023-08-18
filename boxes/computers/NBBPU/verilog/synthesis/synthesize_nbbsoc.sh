@@ -5,7 +5,7 @@ set -eu
 NBB_ROOT="/home/kampff/NoBlackBoxes"
 LBB_ROOT=$NBB_ROOT"/repos/LastBlackBox"
 
-# Set NBBPU, Modules, and Tests folders
+# Set NBBPU and Modules folders
 NBBPU=$LBB_ROOT"/boxes/computers/NBBPU"
 MODULES=$NBBPU"/verilog/modules"
 
@@ -14,11 +14,12 @@ mkdir -p bin
 mkdir -p bin/bin
 
 # Copy verilog module(s)
+cp $NBBPU/verilog/nbbsoc.v bin/.
 cp $NBBPU/verilog/nbbpu.v bin/.
 cp $MODULES/* bin/.
 
 # Copy constraints file
-cp upduino.pcf bin/.
+cp nbbsoc.pcf bin/.
 
 # Copy memory contents
 cp rom.txt bin/bin/.
@@ -28,8 +29,8 @@ cp ram.txt bin/bin/.
 apio verify --project-dir=bin --board upduino3 --verbose
 
 # Synthesize
-#apio build --project-dir=bin --board upduino3 --verbose
-cd bin
-nextpnr-ice40 --up5k --package sg48 --json hardware.json --asc hardware.asc --pcf upduino.pcf --pcf-allow-unconstrained
+apio build --project-dir=bin --board upduino3 --verbose
+#cd bin
+#nextpnr-ice40 --up5k --package sg48 --json hardware.json --asc hardware.asc --pcf nbbsoc.pcf --pcf-allow-unconstrained
 
 # FIN

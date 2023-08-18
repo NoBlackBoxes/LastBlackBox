@@ -25,7 +25,7 @@ module nbbpu(clock, reset, instruction, read_data, write_enable, address, write_
 
     // Intermediates
     wire reg_write;
-    wire write_enable;
+    wire reg_set;
     wire jump_PC;
     wire branch_PC;
 
@@ -34,6 +34,7 @@ module nbbpu(clock, reset, instruction, read_data, write_enable, address, write_
     (
         instruction[15:12],     // (input) Opcode
         reg_write,              // (output) Register write enable
+        reg_set,                // (output) Register set enable
         write_enable,           // (output) Data write enable
         jump_PC,                // (output) jump PC signal
         branch_PC               // (output) branch PC signal
@@ -46,6 +47,7 @@ module nbbpu(clock, reset, instruction, read_data, write_enable, address, write_
         reset,                  // (input) reset
         instruction,            // (input) instruction
         reg_write,              // (input) reg_write
+        reg_set,                // (input) reg_set
         jump_PC,                // (input) jump_PC
         branch_PC,              // (input) branch_PC
         read_data,              // (input) read_data
