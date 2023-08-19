@@ -11,7 +11,7 @@
 //
 // The nbbpu module invokes two sub-modules (controller and datapath)
 // -----------------------------------------
-module nbbpu(clock, reset, instruction, read_data, write_enable, address, write_data, PC);
+module nbbpu(clock, reset, instruction, read_data, write_enable, address, write_data, PC, debug);
     
     // Declarations
     input clock;
@@ -22,6 +22,7 @@ module nbbpu(clock, reset, instruction, read_data, write_enable, address, write_
     output [15:0] address;
     output [15:0] write_data;
     output [15:0] PC;
+    output reg debug;
 
     // Intermediates
     wire reg_write;
@@ -55,5 +56,17 @@ module nbbpu(clock, reset, instruction, read_data, write_enable, address, write_
         write_data,             // (output) write_data
         PC                      // (output) PC
     );
+
+    // Assign debug signal
+    initial 
+        begin
+            debug = 1'b1;
+        end
+    always @(posedge clock)
+    begin
+        if((write_data[15] == 1'b1) & write_enable)
+            debug = !debug;     
+    end
+
 
 endmodule

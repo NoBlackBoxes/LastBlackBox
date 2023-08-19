@@ -10,6 +10,7 @@ module nbbsoc(clock, reset, blink);
     output blink;
 
     // Intermediates
+    wire select;
     wire write_enable;
     wire [15:0] instruction;
     wire [15:0] read_data;
@@ -17,14 +18,17 @@ module nbbsoc(clock, reset, blink);
     wire [15:0] write_data;
     wire [15:0] PC;
 
+    // Assignments
+    assign select = 1'b1;
+
     // CPU module
-    nbbpu nbbpu(clock, reset, instruction, read_data, write_enable, address, write_data, PC);
+    nbbpu nbbpu(clock, reset, instruction, read_data, write_enable, address, write_data, PC, debug);
     
     // Create Instruction and Data Memory modules
-    rom rom(PC, instruction);
-    ram ram(clock, write_enable, address, write_data, read_data);
-
+    rom rom(clock, select, PC, instruction);
+    ram ram(clock, select, write_enable, address, write_data, read_data);
+    
     // Assign Debug signals
-    assign blink = write_enable;
+    assign blink = debug;
 
 endmodule

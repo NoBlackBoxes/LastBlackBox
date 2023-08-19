@@ -1,9 +1,11 @@
 // ROM
-module rom(address, data_out);
+module rom(clock, select, address, data_out);
 
     // Declarations
+    input clock;
+    input select;
     input [15:0] address;
-    output [15:0] data_out;   
+    output reg [15:0] data_out;   
 
     // Intermediates
     reg [15:0] ROM[0:255];
@@ -13,6 +15,10 @@ module rom(address, data_out);
         $readmemh("bin/rom.txt", ROM);
 
     // Logic    
-    assign data_out = ROM[address[15:0]];
+    always @(posedge clock)
+        begin
+            if(select)
+                data_out <= ROM[address[15:0]];
+        end
 
 endmodule

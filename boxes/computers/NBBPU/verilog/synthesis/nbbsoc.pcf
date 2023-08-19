@@ -3,8 +3,9 @@
 # These are also brought out to the left side of the board. 
 # Cut the board trace on jumper R28 to disable the onboard 3 color LED.
 set_io -nowarn led_green 39
-set_io -nowarn led_red	41
+#set_io -nowarn led_red	41
 set_io -nowarn led_blue	40
+set_io -nowarn blink	41
 
 # FTDI chip interface
 set_io -nowarn serial_txd 14 # FPGA transmit to USB
@@ -45,7 +46,7 @@ set_io -nowarn clock 20
 set_io -nowarn reset 10
 
 # Following are also found on v2.x of the UPduino
-set_io -nowarn blink 12
+set_io -nowarn gpio_12 12
 set_io -nowarn gpio_21 21
 set_io -nowarn gpio_13 13
 set_io -nowarn gpio_19 19

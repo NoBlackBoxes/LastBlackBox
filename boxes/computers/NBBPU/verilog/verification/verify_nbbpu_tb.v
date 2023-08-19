@@ -4,22 +4,27 @@ module verify_nbbpu_tb();
     // Declarations
     reg t_clock;
     reg t_reset;
+    wire t_select;
     wire [15:0] t_instruction;
     wire [15:0] t_read_data;
     wire t_write_enable;
     wire [15:0] t_address;
     wire [15:0] t_write_data;
     wire [15:0] t_PC;
+    wire t_debug;
+
+    // Assignments
+    assign t_select = 1'b1;
 
     // Debug    
-    reg [7:0] instruction_counter;
+    reg [20:0] instruction_counter;
 
     // Create instance of nbbpu module
-    nbbpu test_nbbpu(t_clock, t_reset, t_instruction, t_read_data, t_write_enable, t_address, t_write_data, t_PC);
+    nbbpu test_nbbpu(t_clock, t_reset, t_instruction, t_read_data, t_write_enable, t_address, t_write_data, t_PC, t_debug);
     
     // Create instance of Instruction and Data Memory modules
-    rom test_rom(t_PC, t_instruction);
-    ram test_ram(t_clock, t_write_enable, t_address, t_write_data, t_read_data);
+    rom test_rom(t_clock, t_select, t_PC, t_instruction);
+    ram test_ram(t_clock, t_select, t_write_enable, t_address, t_write_data, t_read_data);
 
     // Initialize
     initial
@@ -28,7 +33,7 @@ module verify_nbbpu_tb();
             $dumpvars(0, verify_nbbpu_tb);
             
             instruction_counter <= 0;
-            t_reset <= 1; # 22; t_reset <= 0;
+            t_reset <= 0; # 22; t_reset <= 1; # 20; t_reset <= 0;
         end   
     
     // Generate clock
@@ -41,7 +46,7 @@ module verify_nbbpu_tb();
     always @(negedge t_clock)
         begin
             instruction_counter <= instruction_counter + 1;
-            if(instruction_counter >= 255)
+            if(instruction_counter >= 32'h0004FFFF)
                 begin
                     $display("IC stopped");
                     $stop;

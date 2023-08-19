@@ -11,10 +11,14 @@ module flopr(clock, reset, d, q);
     output reg [WIDTH-1:0] q;   
     
     // Logic
-    always @(posedge clock, posedge reset)
+    always @(negedge clock)
         if (reset)
             q <= 0;
         else 
             q <= d;
+
+    // Logic (reset)
+    always @(reset)
+            q <= 0;
 
 endmodule
