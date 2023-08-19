@@ -7,6 +7,8 @@ module verify_nbbpu_tb();
     wire t_select;
     wire [15:0] t_instruction;
     wire [15:0] t_read_data;
+    wire t_instruction_enable;
+    wire t_read_enable;
     wire t_write_enable;
     wire [15:0] t_address;
     wire [15:0] t_write_data;
@@ -20,11 +22,23 @@ module verify_nbbpu_tb();
     reg [20:0] instruction_counter;
 
     // Create instance of nbbpu module
-    nbbpu test_nbbpu(t_clock, t_reset, t_instruction, t_read_data, t_write_enable, t_address, t_write_data, t_PC, t_debug);
+    nbbpu test_nbbpu(
+                        t_clock, 
+                        t_reset, 
+                        t_instruction, 
+                        t_read_data, 
+                        t_instruction_enable, 
+                        t_read_enable, 
+                        t_write_enable, 
+                        t_address, 
+                        t_write_data, 
+                        t_PC, 
+                        t_debug
+                    );
     
     // Create instance of Instruction and Data Memory modules
-    rom test_rom(t_clock, t_select, t_PC, t_instruction);
-    ram test_ram(t_clock, t_select, t_write_enable, t_address, t_write_data, t_read_data);
+    rom test_rom(t_clock, t_select, t_instruction_enable, t_PC, t_instruction);
+    ram test_ram(t_clock, t_select, t_read_enable, t_write_enable, t_address, t_write_data, t_read_data);
 
     // Initialize
     initial
@@ -46,7 +60,7 @@ module verify_nbbpu_tb();
     always @(negedge t_clock)
         begin
             instruction_counter <= instruction_counter + 1;
-            if(instruction_counter >= 32'h0004FFFF)
+            if(instruction_counter >= 32'h00000FFF)
                 begin
                     $display("IC stopped");
                     $stop;

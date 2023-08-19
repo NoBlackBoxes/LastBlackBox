@@ -15,7 +15,7 @@ BRN 6 4 0   #07 Branch to reg 6 if reg 4 != 0
 SEL 0 0 2   #yy Set lower byte of reg 2 to 00
 SEU 0 0 2   #yy Set upper byte of reg 2 to 00
 SEL 0 0 3   #yy Set lower byte of reg 3 to 00
-SEU F 0 3   #yy Set upper byte of reg 3 to F0
+SEU F 1 3   #yy Set upper byte of reg 3 to F0
 STR 2 3 0   #yy Store value in reg 3 at address in reg 2
 SEL 1 7 6   #04 Set lower byte of reg 5 to 06 - Outer loop address (23)
 SEU 0 0 6   #05 Set upper byte of reg 5 to 00 - 

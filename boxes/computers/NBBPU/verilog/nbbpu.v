@@ -1,39 +1,67 @@
 // NBBPU
 // -----------------------------------------
-// This is the top module of the NBBPU (CPU). It receives a clock, reset signal, and 16-bit instruction.
-// It also receives "read_data" coming from RAM.
-// It outputs a control signal for memory ("write_enable"), the address to write to ("wrtie_address"),
-// and the value to write ("write_data").
-// It also updates the the value of the program counter (PC) to retrieve the next instruction.
-//
-// Not all of the outputs (or inputs) are used for every instruction,
-// but the connections always exist and the logic decides what gets used and what is ignored.
-//
-// The nbbpu module invokes two sub-modules (controller and datapath)
+// This is the top module of the NBBPU (CPU)
 // -----------------------------------------
-module nbbpu(clock, reset, instruction, read_data, write_enable, address, write_data, PC, debug);
+module nbbpu(
+                clock, 
+                reset, 
+                instruction, 
+                read_data, 
+                instruction_enable, 
+                read_enable, 
+                write_enable, 
+                address, 
+                write_data, 
+                PC, 
+                debug
+            );
     
     // Declarations
     input clock;
     input reset;
     input [15:0] instruction;
     input [15:0] read_data;
+    output instruction_enable;
+    output read_enable;
     output write_enable;
-    output [15:0] address;
-    output [15:0] write_data;
-    output [15:0] PC;
+    output reg [15:0] address;
+    output reg [15:0] write_data;
+    output reg [15:0] PC;
     output reg debug;
 
+    // Parameters (Cycle States)
+    parameter FETCH     = 2'b00;    // Fetch next instruction from ROM
+    parameter DECODE    = 2'b01;    // Decode instruction and generate control signals
+    parameter EXECUTE   = 2'b10;    // Execute instruction inside ALU
+    parameter STORE     = 2'b11;    // Store results in memory (register file or RAM)
+
     // Intermediates
+    reg [1:0] current_state;
+    reg [1:0] next_state;
+    wire [3:0] opcode, _x, x, y, z;
     wire reg_write;
     wire reg_set;
     wire jump_PC;
     wire branch_PC;
+    wire branch_or_jump_PC;
+    wire [15:0] X;
+    wire [15:0] Y;
+    wire [15:0] Z;
+    reg [15:0] PC_next;
+
+    // Assignments
+    assign opcode = instruction[15:12];
+    assign _x = instruction[11:8];
+    assign y = instruction[7:4];
+    assign z = instruction[3:0];
 
     // Sub-module: Controller
     controller controller
     (
-        instruction[15:12],     // (input) Opcode
+        current_state,          // (input) Cycle state
+        opcode,                 // (input) Op Code
+        instruction_enable,     // (output) Instruction read enable
+        read_enable,            // (output) Data read enable
         reg_write,              // (output) Register write enable
         reg_set,                // (output) Register set enable
         write_enable,           // (output) Data write enable
@@ -41,32 +69,76 @@ module nbbpu(clock, reset, instruction, read_data, write_enable, address, write_
         branch_PC               // (output) branch PC signal
     );
 
-    // Sub-module: Datapath
-    datapath datapath
-    (
-        clock,                  // (input) clock
-        reset,                  // (input) reset
-        instruction,            // (input) instruction
-        reg_write,              // (input) reg_write
-        reg_set,                // (input) reg_set
-        jump_PC,                // (input) jump_PC
-        branch_PC,              // (input) branch_PC
-        read_data,              // (input) read_data
-        address,                // (output) address
-        write_data,             // (output) write_data
-        PC                      // (output) PC
-    );
+    // Logic (register set)
+    mux2 #(4) x_mux(_x, z, reg_set, x);
 
-    // Assign debug signal
+    // Logic (register file)
+    regfile regfile(clock, reg_write, z, Z, x, y, X, Y);
+
+    // Logic (branch)
+    assign branch_or_jump_PC = (jump_PC | (Z[0] & branch_PC));
+
+    // Logic (ALU)
+    alu alu(X, Y, instruction, read_data, PC, Z);
+
+    // Cycle State Machine
+    initial 
+        begin
+            current_state = FETCH;
+            PC = 0;
+        end
+    always @(*)
+        begin
+            case(current_state)
+                FETCH:
+                    begin
+                        next_state = DECODE;
+                    end
+                DECODE:
+                    begin
+                        next_state = EXECUTE;
+                    end
+                EXECUTE:
+                    begin
+                        if(branch_or_jump_PC)
+                            PC_next = X;
+                        else
+                            PC_next = PC + 1;
+                        address = X;
+                        write_data = Z;
+                        next_state = STORE;
+                    end
+                STORE:
+                    begin
+                        PC = PC_next;
+                        next_state = FETCH;
+                    end
+            endcase
+        end
+
+    // Update State
+    always @(posedge clock, posedge reset)
+        begin
+            if(reset) 
+                begin
+                    current_state <= FETCH;
+                    PC <= 0;
+                end
+            else
+                begin
+                    current_state <= next_state;
+                end
+        end
+
+    // Assign Debug Signal
     initial 
         begin
             debug = 1'b1;
         end
     always @(posedge clock)
-    begin
-        if((write_data[15] == 1'b1) & write_enable)
-            debug = !debug;     
-    end
-
+        begin
+            if((write_data[15] == 1'b1) & write_enable)
+                debug = write_data[0];     
+        end
 
 endmodule

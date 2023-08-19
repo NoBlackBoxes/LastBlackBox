@@ -18,12 +18,10 @@ mkdir -p bin
 iverilog -o bin/verify_nbbpu \
     $NBBPU/verilog/nbbpu.v \
     $MODULES/controller.v \
-    $MODULES/datapath.v \
     $MODULES/regfile.v \
     $MODULES/alu.v \
     $MODULES/rom.v \
     $MODULES/ram.v \
-    $MODULES/flopr.v \
     $MODULES/mux2.v \
     verify_nbbpu_tb.v
 

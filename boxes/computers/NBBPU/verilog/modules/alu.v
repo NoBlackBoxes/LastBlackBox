@@ -1,12 +1,12 @@
 // ALU
-module alu(X, Y, instruction, read_data, PC_plus1, Z);
+module alu(X, Y, instruction, read_data, PC, Z);
     
     // Declarations
     input [15:0] X;
     input [15:0] Y;
     input [15:0] instruction;
     input [15:0] read_data;
-    input [15:0] PC_plus1;
+    input [15:0] PC;
     output reg [15:0] Z;
 
     // Intermediates
@@ -27,7 +27,7 @@ module alu(X, Y, instruction, read_data, PC_plus1, Z);
             4'b0101: Z <= X >> Y[3:0];      // shift right (logical)
             4'b0110: Z <= X << Y[3:0];      // shift left (logical)
             4'b0111: Z <= X >= Y ? 1 : 0;   // compare (greater or equal)
-            4'b1000: Z <= PC_plus1;         // (control operation) jump
+            4'b1000: Z <= PC + 16'd1;       // (control operation) jump
             4'b1001: Z <= Y == 0 ? 1 : 0;   // (control operation) branch if equal
             4'b1010: Z <= Y != 0 ? 1 : 0;   // (control operation) branch if not equal
             4'b1011: Z <= 15'd0;            // (reserved operation)

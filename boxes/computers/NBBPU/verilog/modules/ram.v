@@ -1,9 +1,10 @@
 // RAM (NBBPU)
-module ram(clock, select, write_enable, address, write_data, read_data);
+module ram(clock, select, read_enable, write_enable, address, write_data, read_data);
 
     // Declarations
     input clock;
     input select;
+    input read_enable;
     input write_enable;
     input [15:0] address;
     input [15:0] write_data;
@@ -19,7 +20,7 @@ module ram(clock, select, write_enable, address, write_data, read_data);
     // Logic (read output data)
     always @(posedge clock)
         begin
-            if(select)
+            if(select & read_enable)
                 read_data <= RAM[address[15:0]];
         end
 

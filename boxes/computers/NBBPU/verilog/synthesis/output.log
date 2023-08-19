@@ -1,0 +1,2360 @@
+(DEBUG) Profile path: /home/kampff/.apio/profile.json
+(DEBUG) Home_dir: /home/kampff/.apio
+
+PATH: /home/kampff/.apio/packages/tools-oss-cad-suite/bin:/home/kampff/.apio/packages/tools-oss-cad-suite/lib:/home/kampff/.apio/packages/tools-system/bin:/home/kampff/.apio/packages/toolchain-icesprog/bin:/home/kampff/.apio/packages/toolchain-iverilog/bin:/home/kampff/.apio/packages/toolchain-ice40/bin:/home/kampff/.apio/packages/toolchain-yosys/bin:/home/kampff/.apio/packages/tool-scons/script:/home/kampff/NoBlackBoxes/repos/LastBlackBox/boxes/computers/NBBPU/_tmp/nbbpu/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/cuda/bin:/opt/cuda/nsight_compute:/opt/cuda/nsight_systems/bin:/home/kampff/.dotnet/tools:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+
+iverilog -B "/home/kampff/.apio/packages/tools-oss-cad-suite/lib/ivl" -o hardware.out -D VCD_OUTPUT= -D NO_ICE40_DEFAULT_ASSIGNMENTS "/home/kampff/.apio/packages/tools-oss-cad-suite/share/yosys/ice40/cells_sim.v" alu.v controller.v mux2.v nbbpu.v nbbsoc.v ram.v regfile.v rom.v
+========================= [SUCCESS] Took 0.12 seconds =========================
+(DEBUG) Profile path: /home/kampff/.apio/profile.json
+(DEBUG) Home_dir: /home/kampff/.apio
+
+PATH: /home/kampff/.apio/packages/tools-oss-cad-suite/bin:/home/kampff/.apio/packages/tools-oss-cad-suite/lib:/home/kampff/.apio/packages/tools-system/bin:/home/kampff/.apio/packages/toolchain-icesprog/bin:/home/kampff/.apio/packages/toolchain-iverilog/bin:/home/kampff/.apio/packages/toolchain-ice40/bin:/home/kampff/.apio/packages/toolchain-yosys/bin:/home/kampff/.apio/packages/tool-scons/script:/home/kampff/NoBlackBoxes/repos/LastBlackBox/boxes/computers/NBBPU/_tmp/nbbpu/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/cuda/bin:/opt/cuda/nsight_compute:/opt/cuda/nsight_systems/bin:/home/kampff/.dotnet/tools:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
+
+[Sat Aug 19 16:36:02 2023] Processing upduino3
+--------------------------------------------------------------------------------
+yosys -p "synth_ice40 -json hardware.json" alu.v controller.v mux2.v nbbpu.v nbbsoc.v ram.v regfile.v rom.v
+
+/----------------------------------------------------------------------------\
+|                                                                            |
+|  yosys -- Yosys Open SYnthesis Suite                                       |
+|                                                                            |
+|  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+|                                                                            |
+|  Permission to use, copy, modify, and/or distribute this software for any  |
+|  purpose with or without fee is hereby granted, provided that the above    |
+|  copyright notice and this permission notice appear in all copies.         |
+|                                                                            |
+|  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+|  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+|  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+|  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+|  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+|  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+|  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+|                                                                            |
+\----------------------------------------------------------------------------/
+
+Yosys 0.9+4081 (git sha1 862e84eb, clang 10.0.0-4ubuntu1 -fPIC -Os)
+
+
+-- Parsing `alu.v' using frontend `verilog' --
+
+1. Executing Verilog-2005 frontend: alu.v
+Parsing Verilog input from `alu.v' to AST representation.
+Generating RTLIL representation for module `\alu'.
+Successfully finished Verilog frontend.
+
+-- Parsing `controller.v' using frontend `verilog' --
+
+2. Executing Verilog-2005 frontend: controller.v
+Parsing Verilog input from `controller.v' to AST representation.
+Generating RTLIL representation for module `\controller'.
+Successfully finished Verilog frontend.
+
+-- Parsing `mux2.v' using frontend `verilog' --
+
+3. Executing Verilog-2005 frontend: mux2.v
+Parsing Verilog input from `mux2.v' to AST representation.
+Generating RTLIL representation for module `\mux2'.
+Successfully finished Verilog frontend.
+
+-- Parsing `nbbpu.v' using frontend `verilog' --
+
+4. Executing Verilog-2005 frontend: nbbpu.v
+Parsing Verilog input from `nbbpu.v' to AST representation.
+Generating RTLIL representation for module `\nbbpu'.
+Successfully finished Verilog frontend.
+
+-- Parsing `nbbsoc.v' using frontend `verilog' --
+
+5. Executing Verilog-2005 frontend: nbbsoc.v
+Parsing Verilog input from `nbbsoc.v' to AST representation.
+Generating RTLIL representation for module `\nbbsoc'.
+Successfully finished Verilog frontend.
+
+-- Parsing `ram.v' using frontend `verilog' --
+
+6. Executing Verilog-2005 frontend: ram.v
+Parsing Verilog input from `ram.v' to AST representation.
+Generating RTLIL representation for module `\ram'.
+Successfully finished Verilog frontend.
+
+-- Parsing `regfile.v' using frontend `verilog' --
+
+7. Executing Verilog-2005 frontend: regfile.v
+Parsing Verilog input from `regfile.v' to AST representation.
+Generating RTLIL representation for module `\regfile'.
+Successfully finished Verilog frontend.
+
+-- Parsing `rom.v' using frontend `verilog' --
+
+8. Executing Verilog-2005 frontend: rom.v
+Parsing Verilog input from `rom.v' to AST representation.
+Generating RTLIL representation for module `\rom'.
+Successfully finished Verilog frontend.
+
+-- Running command `synth_ice40 -json hardware.json' --
+
+9. Executing SYNTH_ICE40 pass.
+
+9.1. Executing Verilog-2005 frontend: /home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v
+Parsing Verilog input from `/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v' to AST representation.
+Generating RTLIL representation for module `\SB_IO'.
+Generating RTLIL representation for module `\SB_GB_IO'.
+Generating RTLIL representation for module `\SB_GB'.
+Generating RTLIL representation for module `\SB_LUT4'.
+Generating RTLIL representation for module `\SB_CARRY'.
+Generating RTLIL representation for module `\SB_DFF'.
+Generating RTLIL representation for module `\SB_DFFE'.
+Generating RTLIL representation for module `\SB_DFFSR'.
+Generating RTLIL representation for module `\SB_DFFR'.
+Generating RTLIL representation for module `\SB_DFFSS'.
+Generating RTLIL representation for module `\SB_DFFS'.
+Generating RTLIL representation for module `\SB_DFFESR'.
+Generating RTLIL representation for module `\SB_DFFER'.
+Generating RTLIL representation for module `\SB_DFFESS'.
+Generating RTLIL representation for module `\SB_DFFES'.
+Generating RTLIL representation for module `\SB_DFFN'.
+Generating RTLIL representation for module `\SB_DFFNE'.
+Generating RTLIL representation for module `\SB_DFFNSR'.
+Generating RTLIL representation for module `\SB_DFFNR'.
+Generating RTLIL representation for module `\SB_DFFNSS'.
+Generating RTLIL representation for module `\SB_DFFNS'.
+Generating RTLIL representation for module `\SB_DFFNESR'.
+Generating RTLIL representation for module `\SB_DFFNER'.
+Generating RTLIL representation for module `\SB_DFFNESS'.
+Generating RTLIL representation for module `\SB_DFFNES'.
+Generating RTLIL representation for module `\SB_RAM40_4K'.
+Generating RTLIL representation for module `\SB_RAM40_4KNR'.
+Generating RTLIL representation for module `\SB_RAM40_4KNW'.
+Generating RTLIL representation for module `\SB_RAM40_4KNRNW'.
+Generating RTLIL representation for module `\ICESTORM_LC'.
+Generating RTLIL representation for module `\SB_PLL40_CORE'.
+Generating RTLIL representation for module `\SB_PLL40_PAD'.
+Generating RTLIL representation for module `\SB_PLL40_2_PAD'.
+Generating RTLIL representation for module `\SB_PLL40_2F_CORE'.
+Generating RTLIL representation for module `\SB_PLL40_2F_PAD'.
+Generating RTLIL representation for module `\SB_WARMBOOT'.
+Generating RTLIL representation for module `\SB_SPRAM256KA'.
+Generating RTLIL representation for module `\SB_HFOSC'.
+Generating RTLIL representation for module `\SB_LFOSC'.
+Generating RTLIL representation for module `\SB_RGBA_DRV'.
+Generating RTLIL representation for module `\SB_LED_DRV_CUR'.
+Generating RTLIL representation for module `\SB_RGB_DRV'.
+Generating RTLIL representation for module `\SB_I2C'.
+Generating RTLIL representation for module `\SB_SPI'.
+Generating RTLIL representation for module `\SB_LEDDA_IP'.
+Generating RTLIL representation for module `\SB_FILTER_50NS'.
+Generating RTLIL representation for module `\SB_IO_I3C'.
+Generating RTLIL representation for module `\SB_IO_OD'.
+Generating RTLIL representation for module `\SB_MAC16'.
+Generating RTLIL representation for module `\ICESTORM_RAM'.
+Successfully finished Verilog frontend.
+
+9.2. Executing HIERARCHY pass (managing design hierarchy).
+
+9.2.1. Finding top of design hierarchy..
+root of   0 design levels: rom
+root of   0 design levels: regfile
+root of   0 design levels: ram
+root of   2 design levels: nbbsoc
+root of   1 design levels: nbbpu
+root of   0 design levels: mux2
+root of   0 design levels: controller
+root of   0 design levels: alu
+Automatically selected nbbsoc as design top module.
+
+9.2.2. Analyzing design hierarchy..
+Top module:  \nbbsoc
+Used module:     \ram
+Used module:     \rom
+Used module:     \nbbpu
+Used module:         \alu
+Used module:         \regfile
+Used module:         \mux2
+Used module:         \controller
+Parameter 1 (\WIDTH) = 4
+
+9.2.3. Executing AST frontend in derive mode using pre-parsed AST for module `\mux2'.
+Parameter 1 (\WIDTH) = 4
+Generating RTLIL representation for module `$paramod\mux2\WIDTH=s32'00000000000000000000000000000100'.
+
+9.2.4. Analyzing design hierarchy..
+Top module:  \nbbsoc
+Used module:     \ram
+Used module:     \rom
+Used module:     \nbbpu
+Used module:         \alu
+Used module:         \regfile
+Used module:         $paramod\mux2\WIDTH=s32'00000000000000000000000000000100
+Used module:         \controller
+
+9.2.5. Analyzing design hierarchy..
+Top module:  \nbbsoc
+Used module:     \ram
+Used module:     \rom
+Used module:     \nbbpu
+Used module:         \alu
+Used module:         \regfile
+Used module:         $paramod\mux2\WIDTH=s32'00000000000000000000000000000100
+Used module:         \controller
+Removing unused module `\mux2'.
+Removed 1 unused modules.
+Mapping positional arguments of cell nbbsoc.ram (ram).
+Mapping positional arguments of cell nbbsoc.rom (rom).
+Mapping positional arguments of cell nbbsoc.nbbpu (nbbpu).
+Mapping positional arguments of cell nbbpu.alu (alu).
+Mapping positional arguments of cell nbbpu.regfile (regfile).
+Mapping positional arguments of cell nbbpu.x_mux ($paramod\mux2\WIDTH=s32'00000000000000000000000000000100).
+Mapping positional arguments of cell nbbpu.controller (controller).
+
+9.3. Executing PROC pass (convert processes to netlists).
+
+9.3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `rom.$proc$rom.v:0$93'.
+Removing empty process `regfile.$proc$regfile.v:0$88'.
+Removing empty process `ram.$proc$ram.v:0$41'.
+Cleaned up 0 empty switches.
+
+9.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1346$334 in module SB_DFFNES.
+Marked 1 switch rules as full_case in process $proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1290$327 in module SB_DFFNESS.
+Marked 1 switch rules as full_case in process $proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1215$323 in module SB_DFFNER.
+Marked 1 switch rules as full_case in process $proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1159$316 in module SB_DFFNESR.
+Marked 1 switch rules as full_case in process $proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1090$313 in module SB_DFFNS.
+Marked 1 switch rules as full_case in process $proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1042$310 in module SB_DFFNSS.
+Marked 1 switch rules as full_case in process $proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:973$307 in module SB_DFFNR.
+Marked 1 switch rules as full_case in process $proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:925$304 in module SB_DFFNSR.
+Marked 1 switch rules as full_case in process $proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:769$296 in module SB_DFFES.
+Marked 1 switch rules as full_case in process $proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:713$289 in module SB_DFFESS.
+Marked 1 switch rules as full_case in process $proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:638$285 in module SB_DFFER.
+Marked 1 switch rules as full_case in process $proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:582$278 in module SB_DFFESR.
+Marked 1 switch rules as full_case in process $proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:513$275 in module SB_DFFS.
+Marked 1 switch rules as full_case in process $proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:465$272 in module SB_DFFSS.
+Marked 1 switch rules as full_case in process $proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:396$269 in module SB_DFFR.
+Marked 1 switch rules as full_case in process $proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:348$266 in module SB_DFFSR.
+Marked 1 switch rules as full_case in process $proc$regfile.v:38$58 in module regfile.
+Marked 1 switch rules as full_case in process $proc$ram.v:28$32 in module ram.
+Marked 1 switch rules as full_case in process $proc$nbbpu.v:138$23 in module nbbpu.
+Marked 1 switch rules as full_case in process $proc$nbbpu.v:120$22 in module nbbpu.
+Removed 1 dead cases from process $proc$nbbpu.v:90$20 in module nbbpu.
+Marked 2 switch rules as full_case in process $proc$nbbpu.v:90$20 in module nbbpu.
+Removed 4 dead cases from process $proc$controller.v:58$16 in module controller.
+Marked 4 switch rules as full_case in process $proc$controller.v:58$16 in module controller.
+Removed 1 dead cases from process $proc$alu.v:20$1 in module alu.
+Marked 1 switch rules as full_case in process $proc$alu.v:20$1 in module alu.
+Removed a total of 6 dead cases.
+
+9.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 10 redundant assignments.
+Promoted 38 assignments to connections.
+
+9.3.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\SB_DFFNES.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$337'.
+Set init value: \Q = 1'0
+Found init rule in `\SB_DFFNESS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$333'.
+Set init value: \Q = 1'0
+Found init rule in `\SB_DFFNER.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$326'.
+Set init value: \Q = 1'0
+Found init rule in `\SB_DFFNESR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$322'.
+Set init value: \Q = 1'0
+Found init rule in `\SB_DFFNS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$315'.
+Set init value: \Q = 1'0
+Found init rule in `\SB_DFFNSS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$312'.
+Set init value: \Q = 1'0
+Found init rule in `\SB_DFFNR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$309'.
+Set init value: \Q = 1'0
+Found init rule in `\SB_DFFNSR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$306'.
+Set init value: \Q = 1'0
+Found init rule in `\SB_DFFNE.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$303'.
+Set init value: \Q = 1'0
+Found init rule in `\SB_DFFN.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$301'.
+Set init value: \Q = 1'0
+Found init rule in `\SB_DFFES.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$299'.
+Set init value: \Q = 1'0
+Found init rule in `\SB_DFFESS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$295'.
+Set init value: \Q = 1'0
+Found init rule in `\SB_DFFER.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$288'.
+Set init value: \Q = 1'0
+Found init rule in `\SB_DFFESR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$284'.
+Set init value: \Q = 1'0
+Found init rule in `\SB_DFFS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$277'.
+Set init value: \Q = 1'0
+Found init rule in `\SB_DFFSS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$274'.
+Set init value: \Q = 1'0
+Found init rule in `\SB_DFFR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$271'.
+Set init value: \Q = 1'0
+Found init rule in `\SB_DFFSR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$268'.
+Set init value: \Q = 1'0
+Found init rule in `\SB_DFFE.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$265'.
+Set init value: \Q = 1'0
+Found init rule in `\SB_DFF.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$263'.
+Set init value: \Q = 1'0
+Found init rule in `\nbbpu.$proc$nbbpu.v:0$27'.
+Set init value: \debug = 1'1
+Found init rule in `\nbbpu.$proc$nbbpu.v:0$26'.
+Set init value: \PC = 16'0000000000000000
+Set init value: \current_state = 2'00
+
+9.3.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \S in `\SB_DFFNES.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1346$334'.
+Found async reset \R in `\SB_DFFNER.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1215$323'.
+Found async reset \S in `\SB_DFFNS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1090$313'.
+Found async reset \R in `\SB_DFFNR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:973$307'.
+Found async reset \S in `\SB_DFFES.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:769$296'.
+Found async reset \R in `\SB_DFFER.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:638$285'.
+Found async reset \S in `\SB_DFFS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:513$275'.
+Found async reset \R in `\SB_DFFR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:396$269'.
+Found async reset \reset in `\nbbpu.$proc$nbbpu.v:120$22'.
+
+9.3.6. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\SB_DFFNES.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$337'.
+Creating decoders for process `\SB_DFFNES.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1346$334'.
+1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFNESS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$333'.
+Creating decoders for process `\SB_DFFNESS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1290$327'.
+1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFNER.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$326'.
+Creating decoders for process `\SB_DFFNER.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1215$323'.
+1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFNESR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$322'.
+Creating decoders for process `\SB_DFFNESR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1159$316'.
+1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFNS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$315'.
+Creating decoders for process `\SB_DFFNS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1090$313'.
+1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFNSS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$312'.
+Creating decoders for process `\SB_DFFNSS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1042$310'.
+1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFNR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$309'.
+Creating decoders for process `\SB_DFFNR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:973$307'.
+1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFNSR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$306'.
+Creating decoders for process `\SB_DFFNSR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:925$304'.
+1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFNE.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$303'.
+Creating decoders for process `\SB_DFFNE.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:882$302'.
+1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFN.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$301'.
+Creating decoders for process `\SB_DFFN.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:846$300'.
+Creating decoders for process `\SB_DFFES.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$299'.
+Creating decoders for process `\SB_DFFES.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:769$296'.
+1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFESS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$295'.
+Creating decoders for process `\SB_DFFESS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:713$289'.
+1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFER.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$288'.
+Creating decoders for process `\SB_DFFER.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:638$285'.
+1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFESR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$284'.
+Creating decoders for process `\SB_DFFESR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:582$278'.
+1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$277'.
+Creating decoders for process `\SB_DFFS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:513$275'.
+1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFSS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$274'.
+Creating decoders for process `\SB_DFFSS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:465$272'.
+1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$271'.
+Creating decoders for process `\SB_DFFR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:396$269'.
+1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFSR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$268'.
+Creating decoders for process `\SB_DFFSR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:348$266'.
+1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFFE.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$265'.
+Creating decoders for process `\SB_DFFE.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:305$264'.
+1/1: $0\Q[0:0]
+Creating decoders for process `\SB_DFF.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$263'.
+Creating decoders for process `\SB_DFF.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:269$262'.
+Creating decoders for process `\rom.$proc$rom.v:19$89'.
+1/1: $0\read_data[15:0]
+Creating decoders for process `\regfile.$proc$regfile.v:38$58'.
+1/3: $1$memwr$\registers$regfile.v:41$57_EN[15:0]$64
+2/3: $1$memwr$\registers$regfile.v:41$57_DATA[15:0]$63
+3/3: $1$memwr$\registers$regfile.v:41$57_ADDR[3:0]$62
+Creating decoders for process `\ram.$proc$ram.v:28$32'.
+1/3: $1$memwr$\RAM$ram.v:31$28_EN[15:0]$39
+2/3: $1$memwr$\RAM$ram.v:31$28_DATA[15:0]$38
+3/3: $1$memwr$\RAM$ram.v:31$28_ADDR[15:0]$37
+Creating decoders for process `\ram.$proc$ram.v:21$29'.
+1/1: $0\read_data[15:0]
+Creating decoders for process `\nbbpu.$proc$nbbpu.v:0$27'.
+Creating decoders for process `\nbbpu.$proc$nbbpu.v:0$26'.
+Creating decoders for process `\nbbpu.$proc$nbbpu.v:138$23'.
+1/1: $1\debug[0:0]
+Creating decoders for process `\nbbpu.$proc$nbbpu.v:120$22'.
+1/2: $0\current_state[1:0]
+2/2: $2\PC[15:0]
+Creating decoders for process `\nbbpu.$proc$nbbpu.v:90$20'.
+1/6: $2\PC_next[15:0]
+2/6: $1\next_state[1:0]
+3/6: $1\PC_next[15:0]
+4/6: $1\write_data[15:0]
+5/6: $1\address[15:0]
+6/6: $1\PC[15:0]
+Creating decoders for process `\controller.$proc$controller.v:58$16'.
+1/4: $4\controls[6:0]
+2/4: $3\controls[6:0]
+3/4: $2\controls[6:0]
+4/4: $1\controls[6:0]
+Creating decoders for process `\alu.$proc$alu.v:20$1'.
+1/1: $0\Z[15:0]
+
+9.3.7. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\nbbpu.\next_state' from process `\nbbpu.$proc$nbbpu.v:90$20'.
+Latch inferred for signal `\nbbpu.\PC' from process `\nbbpu.$proc$nbbpu.v:90$20': $auto$proc_dlatch.cc:427:proc_dlatch$657
+Latch inferred for signal `\nbbpu.\address' from process `\nbbpu.$proc$nbbpu.v:90$20': $auto$proc_dlatch.cc:427:proc_dlatch$674
+Latch inferred for signal `\nbbpu.\write_data' from process `\nbbpu.$proc$nbbpu.v:90$20': $auto$proc_dlatch.cc:427:proc_dlatch$691
+Latch inferred for signal `\nbbpu.\PC_next' from process `\nbbpu.$proc$nbbpu.v:90$20': $auto$proc_dlatch.cc:427:proc_dlatch$708
+No latch inferred for signal `\controller.\controls' from process `\controller.$proc$controller.v:58$16'.
+No latch inferred for signal `\alu.\Z' from process `\alu.$proc$alu.v:20$1'.
+
+9.3.8. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\SB_DFFNES.\Q' using process `\SB_DFFNES.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1346$334'.
+created $adff cell `$procdff$725' with negative edge clock and positive level reset.
+Creating register for signal `\SB_DFFNESS.\Q' using process `\SB_DFFNESS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1290$327'.
+created $dff cell `$procdff$726' with negative edge clock.
+Creating register for signal `\SB_DFFNER.\Q' using process `\SB_DFFNER.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1215$323'.
+created $adff cell `$procdff$727' with negative edge clock and positive level reset.
+Creating register for signal `\SB_DFFNESR.\Q' using process `\SB_DFFNESR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1159$316'.
+created $dff cell `$procdff$728' with negative edge clock.
+Creating register for signal `\SB_DFFNS.\Q' using process `\SB_DFFNS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1090$313'.
+created $adff cell `$procdff$729' with negative edge clock and positive level reset.
+Creating register for signal `\SB_DFFNSS.\Q' using process `\SB_DFFNSS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1042$310'.
+created $dff cell `$procdff$730' with negative edge clock.
+Creating register for signal `\SB_DFFNR.\Q' using process `\SB_DFFNR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:973$307'.
+created $adff cell `$procdff$731' with negative edge clock and positive level reset.
+Creating register for signal `\SB_DFFNSR.\Q' using process `\SB_DFFNSR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:925$304'.
+created $dff cell `$procdff$732' with negative edge clock.
+Creating register for signal `\SB_DFFNE.\Q' using process `\SB_DFFNE.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:882$302'.
+created $dff cell `$procdff$733' with negative edge clock.
+Creating register for signal `\SB_DFFN.\Q' using process `\SB_DFFN.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:846$300'.
+created $dff cell `$procdff$734' with negative edge clock.
+Creating register for signal `\SB_DFFES.\Q' using process `\SB_DFFES.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:769$296'.
+created $adff cell `$procdff$735' with positive edge clock and positive level reset.
+Creating register for signal `\SB_DFFESS.\Q' using process `\SB_DFFESS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:713$289'.
+created $dff cell `$procdff$736' with positive edge clock.
+Creating register for signal `\SB_DFFER.\Q' using process `\SB_DFFER.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:638$285'.
+created $adff cell `$procdff$737' with positive edge clock and positive level reset.
+Creating register for signal `\SB_DFFESR.\Q' using process `\SB_DFFESR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:582$278'.
+created $dff cell `$procdff$738' with positive edge clock.
+Creating register for signal `\SB_DFFS.\Q' using process `\SB_DFFS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:513$275'.
+created $adff cell `$procdff$739' with positive edge clock and positive level reset.
+Creating register for signal `\SB_DFFSS.\Q' using process `\SB_DFFSS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:465$272'.
+created $dff cell `$procdff$740' with positive edge clock.
+Creating register for signal `\SB_DFFR.\Q' using process `\SB_DFFR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:396$269'.
+created $adff cell `$procdff$741' with positive edge clock and positive level reset.
+Creating register for signal `\SB_DFFSR.\Q' using process `\SB_DFFSR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:348$266'.
+created $dff cell `$procdff$742' with positive edge clock.
+Creating register for signal `\SB_DFFE.\Q' using process `\SB_DFFE.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:305$264'.
+created $dff cell `$procdff$743' with positive edge clock.
+Creating register for signal `\SB_DFF.\Q' using process `\SB_DFF.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:269$262'.
+created $dff cell `$procdff$744' with positive edge clock.
+Creating register for signal `\rom.\read_data' using process `\rom.$proc$rom.v:19$89'.
+created $dff cell `$procdff$745' with positive edge clock.
+Creating register for signal `\regfile.$memwr$\registers$regfile.v:41$57_ADDR' using process `\regfile.$proc$regfile.v:38$58'.
+created $dff cell `$procdff$746' with positive edge clock.
+Creating register for signal `\regfile.$memwr$\registers$regfile.v:41$57_DATA' using process `\regfile.$proc$regfile.v:38$58'.
+created $dff cell `$procdff$747' with positive edge clock.
+Creating register for signal `\regfile.$memwr$\registers$regfile.v:41$57_EN' using process `\regfile.$proc$regfile.v:38$58'.
+created $dff cell `$procdff$748' with positive edge clock.
+Creating register for signal `\ram.$memwr$\RAM$ram.v:31$28_ADDR' using process `\ram.$proc$ram.v:28$32'.
+created $dff cell `$procdff$749' with positive edge clock.
+Creating register for signal `\ram.$memwr$\RAM$ram.v:31$28_DATA' using process `\ram.$proc$ram.v:28$32'.
+created $dff cell `$procdff$750' with positive edge clock.
+Creating register for signal `\ram.$memwr$\RAM$ram.v:31$28_EN' using process `\ram.$proc$ram.v:28$32'.
+created $dff cell `$procdff$751' with positive edge clock.
+Creating register for signal `\ram.\read_data' using process `\ram.$proc$ram.v:21$29'.
+created $dff cell `$procdff$752' with positive edge clock.
+Creating register for signal `\nbbpu.\debug' using process `\nbbpu.$proc$nbbpu.v:138$23'.
+created $dff cell `$procdff$753' with positive edge clock.
+Creating register for signal `\nbbpu.\PC' using process `\nbbpu.$proc$nbbpu.v:120$22'.
+created $adff cell `$procdff$754' with positive edge clock and positive level reset.
+Creating register for signal `\nbbpu.\current_state' using process `\nbbpu.$proc$nbbpu.v:120$22'.
+created $adff cell `$procdff$755' with positive edge clock and positive level reset.
+
+9.3.9. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+9.3.10. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `SB_DFFNES.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$337'.
+Found and cleaned up 1 empty switch in `\SB_DFFNES.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1346$334'.
+Removing empty process `SB_DFFNES.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1346$334'.
+Removing empty process `SB_DFFNESS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$333'.
+Found and cleaned up 2 empty switches in `\SB_DFFNESS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1290$327'.
+Removing empty process `SB_DFFNESS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1290$327'.
+Removing empty process `SB_DFFNER.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$326'.
+Found and cleaned up 1 empty switch in `\SB_DFFNER.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1215$323'.
+Removing empty process `SB_DFFNER.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1215$323'.
+Removing empty process `SB_DFFNESR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$322'.
+Found and cleaned up 2 empty switches in `\SB_DFFNESR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1159$316'.
+Removing empty process `SB_DFFNESR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1159$316'.
+Removing empty process `SB_DFFNS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$315'.
+Removing empty process `SB_DFFNS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1090$313'.
+Removing empty process `SB_DFFNSS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$312'.
+Found and cleaned up 1 empty switch in `\SB_DFFNSS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1042$310'.
+Removing empty process `SB_DFFNSS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:1042$310'.
+Removing empty process `SB_DFFNR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$309'.
+Removing empty process `SB_DFFNR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:973$307'.
+Removing empty process `SB_DFFNSR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$306'.
+Found and cleaned up 1 empty switch in `\SB_DFFNSR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:925$304'.
+Removing empty process `SB_DFFNSR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:925$304'.
+Removing empty process `SB_DFFNE.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$303'.
+Found and cleaned up 1 empty switch in `\SB_DFFNE.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:882$302'.
+Removing empty process `SB_DFFNE.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:882$302'.
+Removing empty process `SB_DFFN.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$301'.
+Removing empty process `SB_DFFN.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:846$300'.
+Removing empty process `SB_DFFES.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$299'.
+Found and cleaned up 1 empty switch in `\SB_DFFES.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:769$296'.
+Removing empty process `SB_DFFES.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:769$296'.
+Removing empty process `SB_DFFESS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$295'.
+Found and cleaned up 2 empty switches in `\SB_DFFESS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:713$289'.
+Removing empty process `SB_DFFESS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:713$289'.
+Removing empty process `SB_DFFER.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$288'.
+Found and cleaned up 1 empty switch in `\SB_DFFER.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:638$285'.
+Removing empty process `SB_DFFER.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:638$285'.
+Removing empty process `SB_DFFESR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$284'.
+Found and cleaned up 2 empty switches in `\SB_DFFESR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:582$278'.
+Removing empty process `SB_DFFESR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:582$278'.
+Removing empty process `SB_DFFS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$277'.
+Removing empty process `SB_DFFS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:513$275'.
+Removing empty process `SB_DFFSS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$274'.
+Found and cleaned up 1 empty switch in `\SB_DFFSS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:465$272'.
+Removing empty process `SB_DFFSS.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:465$272'.
+Removing empty process `SB_DFFR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$271'.
+Removing empty process `SB_DFFR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:396$269'.
+Removing empty process `SB_DFFSR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$268'.
+Found and cleaned up 1 empty switch in `\SB_DFFSR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:348$266'.
+Removing empty process `SB_DFFSR.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:348$266'.
+Removing empty process `SB_DFFE.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$265'.
+Found and cleaned up 1 empty switch in `\SB_DFFE.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:305$264'.
+Removing empty process `SB_DFFE.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:305$264'.
+Removing empty process `SB_DFF.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:0$263'.
+Removing empty process `SB_DFF.$proc$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_sim.v:269$262'.
+Found and cleaned up 1 empty switch in `\rom.$proc$rom.v:19$89'.
+Removing empty process `rom.$proc$rom.v:19$89'.
+Found and cleaned up 1 empty switch in `\regfile.$proc$regfile.v:38$58'.
+Removing empty process `regfile.$proc$regfile.v:38$58'.
+Found and cleaned up 1 empty switch in `\ram.$proc$ram.v:28$32'.
+Removing empty process `ram.$proc$ram.v:28$32'.
+Found and cleaned up 1 empty switch in `\ram.$proc$ram.v:21$29'.
+Removing empty process `ram.$proc$ram.v:21$29'.
+Removing empty process `nbbpu.$proc$nbbpu.v:0$27'.
+Removing empty process `nbbpu.$proc$nbbpu.v:0$26'.
+Found and cleaned up 1 empty switch in `\nbbpu.$proc$nbbpu.v:138$23'.
+Removing empty process `nbbpu.$proc$nbbpu.v:138$23'.
+Removing empty process `nbbpu.$proc$nbbpu.v:120$22'.
+Found and cleaned up 2 empty switches in `\nbbpu.$proc$nbbpu.v:90$20'.
+Removing empty process `nbbpu.$proc$nbbpu.v:90$20'.
+Found and cleaned up 4 empty switches in `\controller.$proc$controller.v:58$16'.
+Removing empty process `controller.$proc$controller.v:58$16'.
+Found and cleaned up 1 empty switch in `\alu.$proc$alu.v:20$1'.
+Removing empty process `alu.$proc$alu.v:20$1'.
+Cleaned up 30 empty switches.
+
+9.4. Executing FLATTEN pass (flatten design).
+Deleting now unused module rom.
+Deleting now unused module regfile.
+Deleting now unused module ram.
+Deleting now unused module nbbpu.
+Deleting now unused module $paramod\mux2\WIDTH=s32'00000000000000000000000000000100.
+Deleting now unused module controller.
+Deleting now unused module alu.
+<suppressed ~7 debug messages>
+
+9.5. Executing TRIBUF pass.
+
+9.6. Executing DEMINOUT pass (demote inout ports to input or output).
+
+9.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module nbbsoc.
+<suppressed ~51 debug messages>
+
+9.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \nbbsoc..
+Removed 15 unused cells and 103 unused wires.
+<suppressed ~18 debug messages>
+
+9.9. Executing CHECK pass (checking for obvious problems).
+Checking module nbbsoc...
+Warning: multiple conflicting drivers for nbbsoc.\nbbpu.PC [15]:
+port Q[15] of cell $flatten\nbbpu.$auto$proc_dlatch.cc:427:proc_dlatch$657 ($dlatch)
+port Q[15] of cell $flatten\nbbpu.$procdff$754 ($adff)
+Warning: multiple conflicting drivers for nbbsoc.\nbbpu.PC [14]:
+port Q[14] of cell $flatten\nbbpu.$auto$proc_dlatch.cc:427:proc_dlatch$657 ($dlatch)
+port Q[14] of cell $flatten\nbbpu.$procdff$754 ($adff)
+Warning: multiple conflicting drivers for nbbsoc.\nbbpu.PC [13]:
+port Q[13] of cell $flatten\nbbpu.$auto$proc_dlatch.cc:427:proc_dlatch$657 ($dlatch)
+port Q[13] of cell $flatten\nbbpu.$procdff$754 ($adff)
+Warning: multiple conflicting drivers for nbbsoc.\nbbpu.PC [12]:
+port Q[12] of cell $flatten\nbbpu.$auto$proc_dlatch.cc:427:proc_dlatch$657 ($dlatch)
+port Q[12] of cell $flatten\nbbpu.$procdff$754 ($adff)
+Warning: multiple conflicting drivers for nbbsoc.\nbbpu.PC [11]:
+port Q[11] of cell $flatten\nbbpu.$auto$proc_dlatch.cc:427:proc_dlatch$657 ($dlatch)
+port Q[11] of cell $flatten\nbbpu.$procdff$754 ($adff)
+Warning: multiple conflicting drivers for nbbsoc.\nbbpu.PC [10]:
+port Q[10] of cell $flatten\nbbpu.$auto$proc_dlatch.cc:427:proc_dlatch$657 ($dlatch)
+port Q[10] of cell $flatten\nbbpu.$procdff$754 ($adff)
+Warning: multiple conflicting drivers for nbbsoc.\nbbpu.PC [9]:
+port Q[9] of cell $flatten\nbbpu.$auto$proc_dlatch.cc:427:proc_dlatch$657 ($dlatch)
+port Q[9] of cell $flatten\nbbpu.$procdff$754 ($adff)
+Warning: multiple conflicting drivers for nbbsoc.\nbbpu.PC [8]:
+port Q[8] of cell $flatten\nbbpu.$auto$proc_dlatch.cc:427:proc_dlatch$657 ($dlatch)
+port Q[8] of cell $flatten\nbbpu.$procdff$754 ($adff)
+Warning: multiple conflicting drivers for nbbsoc.\nbbpu.PC [7]:
+port Q[7] of cell $flatten\nbbpu.$auto$proc_dlatch.cc:427:proc_dlatch$657 ($dlatch)
+port Q[7] of cell $flatten\nbbpu.$procdff$754 ($adff)
+Warning: multiple conflicting drivers for nbbsoc.\nbbpu.PC [6]:
+port Q[6] of cell $flatten\nbbpu.$auto$proc_dlatch.cc:427:proc_dlatch$657 ($dlatch)
+port Q[6] of cell $flatten\nbbpu.$procdff$754 ($adff)
+Warning: multiple conflicting drivers for nbbsoc.\nbbpu.PC [5]:
+port Q[5] of cell $flatten\nbbpu.$auto$proc_dlatch.cc:427:proc_dlatch$657 ($dlatch)
+port Q[5] of cell $flatten\nbbpu.$procdff$754 ($adff)
+Warning: multiple conflicting drivers for nbbsoc.\nbbpu.PC [4]:
+port Q[4] of cell $flatten\nbbpu.$auto$proc_dlatch.cc:427:proc_dlatch$657 ($dlatch)
+port Q[4] of cell $flatten\nbbpu.$procdff$754 ($adff)
+Warning: multiple conflicting drivers for nbbsoc.\nbbpu.PC [3]:
+port Q[3] of cell $flatten\nbbpu.$auto$proc_dlatch.cc:427:proc_dlatch$657 ($dlatch)
+port Q[3] of cell $flatten\nbbpu.$procdff$754 ($adff)
+Warning: multiple conflicting drivers for nbbsoc.\nbbpu.PC [2]:
+port Q[2] of cell $flatten\nbbpu.$auto$proc_dlatch.cc:427:proc_dlatch$657 ($dlatch)
+port Q[2] of cell $flatten\nbbpu.$procdff$754 ($adff)
+Warning: multiple conflicting drivers for nbbsoc.\nbbpu.PC [1]:
+port Q[1] of cell $flatten\nbbpu.$auto$proc_dlatch.cc:427:proc_dlatch$657 ($dlatch)
+port Q[1] of cell $flatten\nbbpu.$procdff$754 ($adff)
+Warning: multiple conflicting drivers for nbbsoc.\nbbpu.PC [0]:
+port Q[0] of cell $flatten\nbbpu.$auto$proc_dlatch.cc:427:proc_dlatch$657 ($dlatch)
+port Q[0] of cell $flatten\nbbpu.$procdff$754 ($adff)
+Found and reported 16 problems.
+
+9.10. Executing OPT pass (performing simple optimizations).
+
+9.10.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module nbbsoc.
+
+9.10.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\nbbsoc'.
+<suppressed ~207 debug messages>
+Removed a total of 69 cells.
+
+9.10.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \nbbsoc..
+Creating internal representation of mux trees.
+Evaluating internal representation of mux trees.
+Analyzing evaluation results.
+dead port 2/2 on $mux $flatten\nbbpu.\controller.$procmux$592.
+dead port 2/2 on $mux $flatten\nbbpu.\controller.$procmux$612.
+dead port 2/2 on $mux $flatten\nbbpu.\controller.$procmux$633.
+Removed 3 multiplexer ports.
+<suppressed ~16 debug messages>
+
+9.10.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+Optimizing cells in module \nbbsoc.
+New ctrl vector for $pmux cell $flatten\nbbpu.\controller.$procmux$595: { $flatten\nbbpu.\alu.$procmux$648_CMP $auto$opt_reduce.cc:134:opt_mux$763 $auto$opt_reduce.cc:134:opt_mux$761 $flatten\nbbpu.\alu.$procmux$644_CMP $flatten\nbbpu.\alu.$procmux$643_CMP $auto$opt_reduce.cc:134:opt_mux$759 }
+New ctrl vector for $pmux cell $flatten\nbbpu.\controller.$procmux$616: { $flatten\nbbpu.\alu.$procmux$648_CMP $auto$opt_reduce.cc:134:opt_mux$767 $auto$opt_reduce.cc:134:opt_mux$765 }
+New ctrl vector for $pmux cell $flatten\nbbpu.\controller.$procmux$575: { $auto$opt_reduce.cc:134:opt_mux$773 $flatten\nbbpu.\alu.$procmux$648_CMP $auto$opt_reduce.cc:134:opt_mux$771 $flatten\nbbpu.\alu.$procmux$645_CMP $flatten\nbbpu.\alu.$procmux$644_CMP $flatten\nbbpu.\alu.$procmux$643_CMP $auto$opt_reduce.cc:134:opt_mux$769 }
+Consolidated identical input bits for $mux cell $flatten\nbbpu.\regfile.$procmux$522:
+Old ports: A=16'0000000000000000, B=16'1111111111111111, Y=$flatten\nbbpu.\regfile.$0$memwr$\registers$regfile.v:41$57_EN[15:0]$61
+New ports: A=1'0, B=1'1, Y=$flatten\nbbpu.\regfile.$0$memwr$\registers$regfile.v:41$57_EN[15:0]$61 [0]
+New connections: $flatten\nbbpu.\regfile.$0$memwr$\registers$regfile.v:41$57_EN[15:0]$61 [15:1] = { $flatten\nbbpu.\regfile.$0$memwr$\registers$regfile.v:41$57_EN[15:0]$61 [0] $flatten\nbbpu.\regfile.$0$memwr$\registers$regfile.v:41$57_EN[15:0]$61 [0] $flatten\nbbpu.\regfile.$0$memwr$\registers$regfile.v:41$57_EN[15:0]$61 [0] $flatten\nbbpu.\regfile.$0$memwr$\registers$regfile.v:41$57_EN[15:0]$61 [0] $flatten\nbbpu.\regfile.$0$memwr$\registers$regfile.v:41$57_EN[15:0]$61 [0] $flatten\nbbpu.\regfile.$0$memwr$\registers$regfile.v:41$57_EN[15:0]$61 [0] $flatten\nbbpu.\regfile.$0$memwr$\registers$regfile.v:41$57_EN[15:0]$61 [0] $flatten\nbbpu.\regfile.$0$memwr$\registers$regfile.v:41$57_EN[15:0]$61 [0] $flatten\nbbpu.\regfile.$0$memwr$\registers$regfile.v:41$57_EN[15:0]$61 [0] $flatten\nbbpu.\regfile.$0$memwr$\registers$regfile.v:41$57_EN[15:0]$61 [0] $flatten\nbbpu.\regfile.$0$memwr$\registers$regfile.v:41$57_EN[15:0]$61 [0] $flatten\nbbpu.\regfile.$0$memwr$\registers$regfile.v:41$57_EN[15:0]$61 [0] $flatten\nbbpu.\regfile.$0$memwr$\registers$regfile.v:41$57_EN[15:0]$61 [0] $flatten\nbbpu.\regfile.$0$memwr$\registers$regfile.v:41$57_EN[15:0]$61 [0] $flatten\nbbpu.\regfile.$0$memwr$\registers$regfile.v:41$57_EN[15:0]$61 [0] }
+Consolidated identical input bits for $mux cell $flatten\ram.$procmux$531:
+Old ports: A=16'0000000000000000, B=16'1111111111111111, Y=$flatten\ram.$0$memwr$\RAM$ram.v:31$28_EN[15:0]$35
+New ports: A=1'0, B=1'1, Y=$flatten\ram.$0$memwr$\RAM$ram.v:31$28_EN[15:0]$35 [0]
+New connections: $flatten\ram.$0$memwr$\RAM$ram.v:31$28_EN[15:0]$35 [15:1] = { $flatten\ram.$0$memwr$\RAM$ram.v:31$28_EN[15:0]$35 [0] $flatten\ram.$0$memwr$\RAM$ram.v:31$28_EN[15:0]$35 [0] $flatten\ram.$0$memwr$\RAM$ram.v:31$28_EN[15:0]$35 [0] $flatten\ram.$0$memwr$\RAM$ram.v:31$28_EN[15:0]$35 [0] $flatten\ram.$0$memwr$\RAM$ram.v:31$28_EN[15:0]$35 [0] $flatten\ram.$0$memwr$\RAM$ram.v:31$28_EN[15:0]$35 [0] $flatten\ram.$0$memwr$\RAM$ram.v:31$28_EN[15:0]$35 [0] $flatten\ram.$0$memwr$\RAM$ram.v:31$28_EN[15:0]$35 [0] $flatten\ram.$0$memwr$\RAM$ram.v:31$28_EN[15:0]$35 [0] $flatten\ram.$0$memwr$\RAM$ram.v:31$28_EN[15:0]$35 [0] $flatten\ram.$0$memwr$\RAM$ram.v:31$28_EN[15:0]$35 [0] $flatten\ram.$0$memwr$\RAM$ram.v:31$28_EN[15:0]$35 [0] $flatten\ram.$0$memwr$\RAM$ram.v:31$28_EN[15:0]$35 [0] $flatten\ram.$0$memwr$\RAM$ram.v:31$28_EN[15:0]$35 [0] $flatten\ram.$0$memwr$\RAM$ram.v:31$28_EN[15:0]$35 [0] }
+Optimizing cells in module \nbbsoc.
+Performed a total of 5 changes.
+
+9.10.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\nbbsoc'.
+<suppressed ~9 debug messages>
+Removed a total of 3 cells.
+
+9.10.6. Executing OPT_DFF pass (perform DFF optimizations).
+Handling D = Q on $flatten\nbbpu.$procdff$754 ($adff) from module nbbsoc (removing D path).
+Setting constant 0-bit at position 0 on $flatten\nbbpu.$procdff$754 ($adff) from module nbbsoc.
+Setting constant 0-bit at position 1 on $flatten\nbbpu.$procdff$754 ($adff) from module nbbsoc.
+Setting constant 0-bit at position 2 on $flatten\nbbpu.$procdff$754 ($adff) from module nbbsoc.
+Setting constant 0-bit at position 3 on $flatten\nbbpu.$procdff$754 ($adff) from module nbbsoc.
+Setting constant 0-bit at position 4 on $flatten\nbbpu.$procdff$754 ($adff) from module nbbsoc.
+Setting constant 0-bit at position 5 on $flatten\nbbpu.$procdff$754 ($adff) from module nbbsoc.
+Setting constant 0-bit at position 6 on $flatten\nbbpu.$procdff$754 ($adff) from module nbbsoc.
+Setting constant 0-bit at position 7 on $flatten\nbbpu.$procdff$754 ($adff) from module nbbsoc.
+Setting constant 0-bit at position 8 on $flatten\nbbpu.$procdff$754 ($adff) from module nbbsoc.
+Setting constant 0-bit at position 9 on $flatten\nbbpu.$procdff$754 ($adff) from module nbbsoc.
+Setting constant 0-bit at position 10 on $flatten\nbbpu.$procdff$754 ($adff) from module nbbsoc.
+Setting constant 0-bit at position 11 on $flatten\nbbpu.$procdff$754 ($adff) from module nbbsoc.
+Setting constant 0-bit at position 12 on $flatten\nbbpu.$procdff$754 ($adff) from module nbbsoc.
+Setting constant 0-bit at position 13 on $flatten\nbbpu.$procdff$754 ($adff) from module nbbsoc.
+Setting constant 0-bit at position 14 on $flatten\nbbpu.$procdff$754 ($adff) from module nbbsoc.
+Setting constant 0-bit at position 15 on $flatten\nbbpu.$procdff$754 ($adff) from module nbbsoc.
+
+9.10.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \nbbsoc..
+Warning: Driver-driver conflict for \nbbpu.PC [15] between cell $flatten\nbbpu.$auto$proc_dlatch.cc:427:proc_dlatch$657.Q and constant 1'0 in nbbsoc: Resolved using constant.
+Warning: Driver-driver conflict for \nbbpu.PC [14] between cell $flatten\nbbpu.$auto$proc_dlatch.cc:427:proc_dlatch$657.Q and constant 1'0 in nbbsoc: Resolved using constant.
+Warning: Driver-driver conflict for \nbbpu.PC [13] between cell $flatten\nbbpu.$auto$proc_dlatch.cc:427:proc_dlatch$657.Q and constant 1'0 in nbbsoc: Resolved using constant.
+Warning: Driver-driver conflict for \nbbpu.PC [12] between cell $flatten\nbbpu.$auto$proc_dlatch.cc:427:proc_dlatch$657.Q and constant 1'0 in nbbsoc: Resolved using constant.
+Warning: Driver-driver conflict for \nbbpu.PC [11] between cell $flatten\nbbpu.$auto$proc_dlatch.cc:427:proc_dlatch$657.Q and constant 1'0 in nbbsoc: Resolved using constant.
+Warning: Driver-driver conflict for \nbbpu.PC [10] between cell $flatten\nbbpu.$auto$proc_dlatch.cc:427:proc_dlatch$657.Q and constant 1'0 in nbbsoc: Resolved using constant.
+Warning: Driver-driver conflict for \nbbpu.PC [9] between cell $flatten\nbbpu.$auto$proc_dlatch.cc:427:proc_dlatch$657.Q and constant 1'0 in nbbsoc: Resolved using constant.
+Warning: Driver-driver conflict for \nbbpu.PC [8] between cell $flatten\nbbpu.$auto$proc_dlatch.cc:427:proc_dlatch$657.Q and constant 1'0 in nbbsoc: Resolved using constant.
+Warning: Driver-driver conflict for \nbbpu.PC [7] between cell $flatten\nbbpu.$auto$proc_dlatch.cc:427:proc_dlatch$657.Q and constant 1'0 in nbbsoc: Resolved using constant.
+Warning: Driver-driver conflict for \nbbpu.PC [6] between cell $flatten\nbbpu.$auto$proc_dlatch.cc:427:proc_dlatch$657.Q and constant 1'0 in nbbsoc: Resolved using constant.
+Warning: Driver-driver conflict for \nbbpu.PC [5] between cell $flatten\nbbpu.$auto$proc_dlatch.cc:427:proc_dlatch$657.Q and constant 1'0 in nbbsoc: Resolved using constant.
+Warning: Driver-driver conflict for \nbbpu.PC [4] between cell $flatten\nbbpu.$auto$proc_dlatch.cc:427:proc_dlatch$657.Q and constant 1'0 in nbbsoc: Resolved using constant.
+Warning: Driver-driver conflict for \nbbpu.PC [3] between cell $flatten\nbbpu.$auto$proc_dlatch.cc:427:proc_dlatch$657.Q and constant 1'0 in nbbsoc: Resolved using constant.
+Warning: Driver-driver conflict for \nbbpu.PC [2] between cell $flatten\nbbpu.$auto$proc_dlatch.cc:427:proc_dlatch$657.Q and constant 1'0 in nbbsoc: Resolved using constant.
+Warning: Driver-driver conflict for \nbbpu.PC [1] between cell $flatten\nbbpu.$auto$proc_dlatch.cc:427:proc_dlatch$657.Q and constant 1'0 in nbbsoc: Resolved using constant.
+Warning: Driver-driver conflict for \nbbpu.PC [0] between cell $flatten\nbbpu.$auto$proc_dlatch.cc:427:proc_dlatch$657.Q and constant 1'0 in nbbsoc: Resolved using constant.
+Removed 7 unused cells and 81 unused wires.
+<suppressed ~10 debug messages>
+
+9.10.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module nbbsoc.
+<suppressed ~1 debug messages>
+
+9.10.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+9.10.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \nbbsoc..
+Creating internal representation of mux trees.
+Evaluating internal representation of mux trees.
+Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~15 debug messages>
+
+9.10.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+Optimizing cells in module \nbbsoc.
+Performed a total of 0 changes.
+
+9.10.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\nbbsoc'.
+Removed a total of 0 cells.
+
+9.10.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.10.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \nbbsoc..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+9.10.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module nbbsoc.
+
+9.10.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+9.10.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \nbbsoc..
+Creating internal representation of mux trees.
+Evaluating internal representation of mux trees.
+Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~15 debug messages>
+
+9.10.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+Optimizing cells in module \nbbsoc.
+Performed a total of 0 changes.
+
+9.10.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\nbbsoc'.
+Removed a total of 0 cells.
+
+9.10.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.10.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \nbbsoc..
+
+9.10.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module nbbsoc.
+
+9.10.23. Finished OPT passes. (There is nothing left to do.)
+
+9.11. Executing FSM pass (extract and optimize FSM).
+
+9.11.1. Executing FSM_DETECT pass (finding FSMs in design).
+Not marking nbbsoc.nbbpu.current_state as FSM state register:
+Register has an initialization value.
+Circuit seems to be self-resetting.
+
+9.11.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+9.11.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+9.11.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \nbbsoc..
+
+9.11.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+9.11.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+9.11.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+9.11.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+9.12. Executing OPT pass (performing simple optimizations).
+
+9.12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module nbbsoc.
+
+9.12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\nbbsoc'.
+Removed a total of 0 cells.
+
+9.12.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \nbbsoc..
+Creating internal representation of mux trees.
+Evaluating internal representation of mux trees.
+Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~15 debug messages>
+
+9.12.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+Optimizing cells in module \nbbsoc.
+Performed a total of 0 changes.
+
+9.12.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\nbbsoc'.
+Removed a total of 0 cells.
+
+9.12.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $flatten\rom.$procdff$745 ($dff) from module nbbsoc (D = $flatten\rom.$memrd$\ROM$rom.v:22$91_DATA, Q = \rom.read_data).
+Adding EN signal on $flatten\ram.$procdff$752 ($dff) from module nbbsoc (D = $flatten\ram.$memrd$\RAM$ram.v:24$31_DATA, Q = \ram.read_data).
+Adding EN signal on $flatten\nbbpu.$procdff$753 ($dff) from module nbbsoc (D = \nbbpu.write_data [0], Q = \nbbpu.debug).
+
+9.12.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \nbbsoc..
+Removed 3 unused cells and 3 unused wires.
+<suppressed ~4 debug messages>
+
+9.12.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module nbbsoc.
+
+9.12.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+9.12.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \nbbsoc..
+Creating internal representation of mux trees.
+Evaluating internal representation of mux trees.
+Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~12 debug messages>
+
+9.12.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+Optimizing cells in module \nbbsoc.
+Performed a total of 0 changes.
+
+9.12.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\nbbsoc'.
+Removed a total of 0 cells.
+
+9.12.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.12.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \nbbsoc..
+
+9.12.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module nbbsoc.
+
+9.12.16. Finished OPT passes. (There is nothing left to do.)
+
+9.13. Executing WREDUCE pass (reducing word size of cells).
+Removed top 28 address bits (of 32) from memory init port nbbsoc.$flatten\nbbpu.\regfile.$meminit$\registers$regfile.v:20$73 (nbbpu.regfile.registers).
+Removed top 28 address bits (of 32) from memory init port nbbsoc.$flatten\nbbpu.\regfile.$meminit$\registers$regfile.v:21$74 (nbbpu.regfile.registers).
+Removed top 28 address bits (of 32) from memory init port nbbsoc.$flatten\nbbpu.\regfile.$meminit$\registers$regfile.v:22$75 (nbbpu.regfile.registers).
+Removed top 28 address bits (of 32) from memory init port nbbsoc.$flatten\nbbpu.\regfile.$meminit$\registers$regfile.v:23$76 (nbbpu.regfile.registers).
+Removed top 28 address bits (of 32) from memory init port nbbsoc.$flatten\nbbpu.\regfile.$meminit$\registers$regfile.v:24$77 (nbbpu.regfile.registers).
+Removed top 28 address bits (of 32) from memory init port nbbsoc.$flatten\nbbpu.\regfile.$meminit$\registers$regfile.v:25$78 (nbbpu.regfile.registers).
+Removed top 28 address bits (of 32) from memory init port nbbsoc.$flatten\nbbpu.\regfile.$meminit$\registers$regfile.v:26$79 (nbbpu.regfile.registers).
+Removed top 28 address bits (of 32) from memory init port nbbsoc.$flatten\nbbpu.\regfile.$meminit$\registers$regfile.v:27$80 (nbbpu.regfile.registers).
+Removed top 28 address bits (of 32) from memory init port nbbsoc.$flatten\nbbpu.\regfile.$meminit$\registers$regfile.v:28$81 (nbbpu.regfile.registers).
+Removed top 28 address bits (of 32) from memory init port nbbsoc.$flatten\nbbpu.\regfile.$meminit$\registers$regfile.v:29$82 (nbbpu.regfile.registers).
+Removed top 28 address bits (of 32) from memory init port nbbsoc.$flatten\nbbpu.\regfile.$meminit$\registers$regfile.v:30$83 (nbbpu.regfile.registers).
+Removed top 28 address bits (of 32) from memory init port nbbsoc.$flatten\nbbpu.\regfile.$meminit$\registers$regfile.v:31$84 (nbbpu.regfile.registers).
+Removed top 28 address bits (of 32) from memory init port nbbsoc.$flatten\nbbpu.\regfile.$meminit$\registers$regfile.v:32$85 (nbbpu.regfile.registers).
+Removed top 28 address bits (of 32) from memory init port nbbsoc.$flatten\nbbpu.\regfile.$meminit$\registers$regfile.v:33$86 (nbbpu.regfile.registers).
+Removed top 28 address bits (of 32) from memory init port nbbsoc.$flatten\nbbpu.\regfile.$meminit$\registers$regfile.v:34$87 (nbbpu.regfile.registers).
+Removed top 8 address bits (of 16) from memory write port nbbsoc.$flatten\ram.$auto$proc_memwr.cc:37:proc_memwr$757 (ram.RAM).
+Removed top 24 address bits (of 32) from memory init port nbbsoc.$flatten\ram.$meminit$\RAM$ram.v:0$40 (ram.RAM).
+Removed top 8 address bits (of 16) from memory read port nbbsoc.$flatten\ram.$memrd$\RAM$ram.v:24$31 (ram.RAM).
+Removed top 24 address bits (of 32) from memory init port nbbsoc.$flatten\rom.$meminit$\ROM$rom.v:0$92 (rom.ROM).
+Removed top 8 address bits (of 16) from memory read port nbbsoc.$flatten\rom.$memrd$\ROM$rom.v:22$91 (rom.ROM).
+Removed top 31 bits (of 32) from mux cell nbbsoc.$flatten\nbbpu.\alu.$ternary$alu.v:29$10 ($mux).
+Removed top 31 bits (of 32) from mux cell nbbsoc.$flatten\nbbpu.\alu.$ternary$alu.v:31$13 ($mux).
+Removed top 31 bits (of 32) from mux cell nbbsoc.$flatten\nbbpu.\alu.$ternary$alu.v:32$15 ($mux).
+Removed top 1 bits (of 4) from port B of cell nbbsoc.$flatten\nbbpu.\alu.$procmux$649_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell nbbsoc.$flatten\nbbpu.\alu.$procmux$650_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell nbbsoc.$flatten\nbbpu.\alu.$procmux$651_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell nbbsoc.$flatten\nbbpu.\alu.$procmux$652_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell nbbsoc.$flatten\nbbpu.\alu.$procmux$653_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell nbbsoc.$flatten\nbbpu.\alu.$procmux$654_CMP0 ($eq).
+Removed top 3 bits (of 4) from port B of cell nbbsoc.$flatten\nbbpu.\alu.$procmux$655_CMP0 ($eq).
+Removed top 16 bits (of 32) from mux cell nbbsoc.$flatten\nbbpu.\regfile.$ternary$regfile.v:43$68 ($mux).
+Removed top 16 bits (of 32) from mux cell nbbsoc.$flatten\nbbpu.\regfile.$ternary$regfile.v:44$72 ($mux).
+Removed cell nbbsoc.$flatten\nbbpu.\regfile.$procmux$525 ($mux).
+Removed cell nbbsoc.$flatten\nbbpu.\regfile.$procmux$528 ($mux).
+Removed top 1 bits (of 7) from mux cell nbbsoc.$flatten\nbbpu.\controller.$procmux$575 ($pmux).
+Removed top 1 bits (of 7) from mux cell nbbsoc.$flatten\nbbpu.\controller.$procmux$595 ($pmux).
+Removed top 5 bits (of 7) from mux cell nbbsoc.$flatten\nbbpu.\controller.$procmux$616 ($pmux).
+Removed top 1 bits (of 2) from port B of cell nbbsoc.$flatten\nbbpu.$procmux$553_CMP0 ($eq).
+Removed cell nbbsoc.$flatten\ram.$procmux$537 ($mux).
+Removed cell nbbsoc.$flatten\ram.$procmux$534 ($mux).
+Removed top 31 bits (of 32) from wire nbbsoc.$flatten\nbbpu.\alu.$ternary$alu.v:29$10_Y.
+Removed top 31 bits (of 32) from wire nbbsoc.$flatten\nbbpu.\alu.$ternary$alu.v:31$13_Y.
+Removed top 31 bits (of 32) from wire nbbsoc.$flatten\nbbpu.\alu.$ternary$alu.v:32$15_Y.
+Removed top 5 bits (of 7) from wire nbbsoc.$flatten\nbbpu.\controller.$2\controls[6:0].
+Removed top 1 bits (of 7) from wire nbbsoc.$flatten\nbbpu.\controller.$3\controls[6:0].
+Removed top 1 bits (of 7) from wire nbbsoc.$flatten\nbbpu.\controller.$4\controls[6:0].
+Removed top 16 bits (of 32) from wire nbbsoc.$flatten\nbbpu.\regfile.$extend$regfile.v:43$67_Y.
+Removed top 16 bits (of 32) from wire nbbsoc.$flatten\nbbpu.\regfile.$extend$regfile.v:44$71_Y.
+Removed top 8 bits (of 16) from wire nbbsoc.$flatten\ram.$0$memwr$\RAM$ram.v:31$28_ADDR[15:0]$33.
+
+9.14. Executing PEEPOPT pass (run peephole optimizers).
+
+9.15. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \nbbsoc..
+Removed 0 unused cells and 15 unused wires.
+<suppressed ~1 debug messages>
+
+9.16. Executing SHARE pass (SAT-based resource sharing).
+Found 4 cells in module nbbsoc that may be considered for resource sharing.
+Analyzing resource sharing options for $flatten\nbbpu.\regfile.$memrd$\registers$regfile.v:44$70 ($memrd):
+Found 11 activation_patterns using ctrl signal { $flatten\nbbpu.\regfile.$ne$regfile.v:44$69_Y $flatten\nbbpu.\alu.$procmux$656_CMP $flatten\nbbpu.\alu.$procmux$655_CMP $flatten\nbbpu.\alu.$procmux$654_CMP $flatten\nbbpu.\alu.$procmux$653_CMP $flatten\nbbpu.\alu.$procmux$652_CMP $flatten\nbbpu.\alu.$procmux$651_CMP $flatten\nbbpu.\alu.$procmux$650_CMP $flatten\nbbpu.\alu.$procmux$649_CMP $flatten\nbbpu.\alu.$procmux$647_CMP $flatten\nbbpu.\alu.$procmux$646_CMP $flatten\nbbpu.\alu.$procmux$643_CMP }.
+Found 1 candidates: $flatten\nbbpu.\regfile.$memrd$\registers$regfile.v:43$66
+Analyzing resource sharing with $flatten\nbbpu.\regfile.$memrd$\registers$regfile.v:43$66 ($memrd):
+Found 1 activation_patterns using ctrl signal $flatten\nbbpu.\regfile.$ne$regfile.v:43$65_Y.
+Forbidden control signals for this pair of cells: { $flatten\nbbpu.\alu.$ne$alu.v:32$14_Y $flatten\nbbpu.\alu.$eq$alu.v:31$12_Y $flatten\nbbpu.\alu.$ge$alu.v:29$9_Y }
+Activation pattern for cell $flatten\nbbpu.\regfile.$memrd$\registers$regfile.v:44$70: { $flatten\nbbpu.\regfile.$ne$regfile.v:44$69_Y $flatten\nbbpu.\alu.$procmux$652_CMP } = 2'11
+Activation pattern for cell $flatten\nbbpu.\regfile.$memrd$\registers$regfile.v:44$70: { $flatten\nbbpu.\regfile.$ne$regfile.v:44$69_Y $flatten\nbbpu.\alu.$procmux$655_CMP } = 2'11
+Activation pattern for cell $flatten\nbbpu.\regfile.$memrd$\registers$regfile.v:44$70: { $flatten\nbbpu.\regfile.$ne$regfile.v:44$69_Y $flatten\nbbpu.\alu.$procmux$653_CMP } = 2'11
+Activation pattern for cell $flatten\nbbpu.\regfile.$memrd$\registers$regfile.v:44$70: { $flatten\nbbpu.\regfile.$ne$regfile.v:44$69_Y $flatten\nbbpu.\alu.$procmux$646_CMP } = 2'11
+Activation pattern for cell $flatten\nbbpu.\regfile.$memrd$\registers$regfile.v:44$70: { $flatten\nbbpu.\regfile.$ne$regfile.v:44$69_Y $flatten\nbbpu.\alu.$procmux$649_CMP } = 2'11
+Activation pattern for cell $flatten\nbbpu.\regfile.$memrd$\registers$regfile.v:44$70: { $flatten\nbbpu.\regfile.$ne$regfile.v:44$69_Y $flatten\nbbpu.\alu.$procmux$647_CMP } = 2'11
+Activation pattern for cell $flatten\nbbpu.\regfile.$memrd$\registers$regfile.v:44$70: { $flatten\nbbpu.\regfile.$ne$regfile.v:44$69_Y $flatten\nbbpu.\alu.$procmux$654_CMP } = 2'11
+Activation pattern for cell $flatten\nbbpu.\regfile.$memrd$\registers$regfile.v:44$70: { $flatten\nbbpu.\regfile.$ne$regfile.v:44$69_Y $flatten\nbbpu.\alu.$procmux$656_CMP } = 2'11
+Activation pattern for cell $flatten\nbbpu.\regfile.$memrd$\registers$regfile.v:44$70: { $flatten\nbbpu.\regfile.$ne$regfile.v:44$69_Y $flatten\nbbpu.\alu.$procmux$651_CMP } = 2'11
+Activation pattern for cell $flatten\nbbpu.\regfile.$memrd$\registers$regfile.v:44$70: { $flatten\nbbpu.\regfile.$ne$regfile.v:44$69_Y $flatten\nbbpu.\alu.$procmux$650_CMP } = 2'11
+Activation pattern for cell $flatten\nbbpu.\regfile.$memrd$\registers$regfile.v:44$70: { $flatten\nbbpu.\regfile.$ne$regfile.v:44$69_Y $flatten\nbbpu.\alu.$procmux$643_CMP } = 2'11
+Activation pattern for cell $flatten\nbbpu.\regfile.$memrd$\registers$regfile.v:43$66: $flatten\nbbpu.\regfile.$ne$regfile.v:43$65_Y = 1'1
+Adding exclusive control bits: $flatten\nbbpu.$auto$rtlil.cc:2177:And$679 vs. $flatten\nbbpu.$auto$rtlil.cc:2177:And$662
+Adding exclusive control bits: $flatten\nbbpu.$auto$rtlil.cc:2177:And$679 vs. $flatten\nbbpu.$auto$rtlil.cc:2177:And$666
+Adding exclusive control bits: $flatten\nbbpu.$auto$rtlil.cc:2177:And$679 vs. $flatten\nbbpu.$auto$rtlil.cc:2177:And$670
+Adding exclusive control bits: $flatten\nbbpu.$auto$rtlil.cc:2177:And$666 vs. $flatten\nbbpu.$auto$rtlil.cc:2177:And$662
+Adding exclusive control bits: $flatten\nbbpu.$auto$rtlil.cc:2177:And$670 vs. $flatten\nbbpu.$auto$rtlil.cc:2177:And$662
+Adding exclusive control bits: $flatten\nbbpu.$auto$rtlil.cc:2177:And$670 vs. $flatten\nbbpu.$auto$rtlil.cc:2177:And$666
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$641_CMP vs. $flatten\nbbpu.\alu.$procmux$642_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$641_CMP vs. $flatten\nbbpu.\alu.$procmux$643_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$641_CMP vs. $flatten\nbbpu.\alu.$procmux$644_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$641_CMP vs. $flatten\nbbpu.\alu.$procmux$645_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$641_CMP vs. $flatten\nbbpu.\alu.$procmux$646_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$641_CMP vs. $flatten\nbbpu.\alu.$procmux$647_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$641_CMP vs. $flatten\nbbpu.\alu.$procmux$648_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$641_CMP vs. $flatten\nbbpu.\alu.$procmux$649_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$641_CMP vs. $flatten\nbbpu.\alu.$procmux$650_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$641_CMP vs. $flatten\nbbpu.\alu.$procmux$651_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$641_CMP vs. $flatten\nbbpu.\alu.$procmux$652_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$641_CMP vs. $flatten\nbbpu.\alu.$procmux$653_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$641_CMP vs. $flatten\nbbpu.\alu.$procmux$654_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$641_CMP vs. $flatten\nbbpu.\alu.$procmux$655_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$641_CMP vs. $flatten\nbbpu.\alu.$procmux$656_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$642_CMP vs. $flatten\nbbpu.\alu.$procmux$643_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$642_CMP vs. $flatten\nbbpu.\alu.$procmux$644_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$642_CMP vs. $flatten\nbbpu.\alu.$procmux$645_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$642_CMP vs. $flatten\nbbpu.\alu.$procmux$646_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$642_CMP vs. $flatten\nbbpu.\alu.$procmux$647_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$642_CMP vs. $flatten\nbbpu.\alu.$procmux$648_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$642_CMP vs. $flatten\nbbpu.\alu.$procmux$649_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$642_CMP vs. $flatten\nbbpu.\alu.$procmux$650_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$642_CMP vs. $flatten\nbbpu.\alu.$procmux$651_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$642_CMP vs. $flatten\nbbpu.\alu.$procmux$652_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$642_CMP vs. $flatten\nbbpu.\alu.$procmux$653_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$642_CMP vs. $flatten\nbbpu.\alu.$procmux$654_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$642_CMP vs. $flatten\nbbpu.\alu.$procmux$655_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$642_CMP vs. $flatten\nbbpu.\alu.$procmux$656_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$643_CMP vs. $flatten\nbbpu.\alu.$procmux$644_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$643_CMP vs. $flatten\nbbpu.\alu.$procmux$645_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$643_CMP vs. $flatten\nbbpu.\alu.$procmux$646_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$643_CMP vs. $flatten\nbbpu.\alu.$procmux$647_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$643_CMP vs. $flatten\nbbpu.\alu.$procmux$648_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$643_CMP vs. $flatten\nbbpu.\alu.$procmux$649_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$643_CMP vs. $flatten\nbbpu.\alu.$procmux$650_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$643_CMP vs. $flatten\nbbpu.\alu.$procmux$651_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$643_CMP vs. $flatten\nbbpu.\alu.$procmux$652_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$643_CMP vs. $flatten\nbbpu.\alu.$procmux$653_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$643_CMP vs. $flatten\nbbpu.\alu.$procmux$654_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$643_CMP vs. $flatten\nbbpu.\alu.$procmux$655_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$643_CMP vs. $flatten\nbbpu.\alu.$procmux$656_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$644_CMP vs. $flatten\nbbpu.\alu.$procmux$645_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$644_CMP vs. $flatten\nbbpu.\alu.$procmux$646_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$644_CMP vs. $flatten\nbbpu.\alu.$procmux$647_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$644_CMP vs. $flatten\nbbpu.\alu.$procmux$648_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$644_CMP vs. $flatten\nbbpu.\alu.$procmux$649_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$644_CMP vs. $flatten\nbbpu.\alu.$procmux$650_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$644_CMP vs. $flatten\nbbpu.\alu.$procmux$651_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$644_CMP vs. $flatten\nbbpu.\alu.$procmux$652_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$644_CMP vs. $flatten\nbbpu.\alu.$procmux$653_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$644_CMP vs. $flatten\nbbpu.\alu.$procmux$654_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$644_CMP vs. $flatten\nbbpu.\alu.$procmux$655_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$644_CMP vs. $flatten\nbbpu.\alu.$procmux$656_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$645_CMP vs. $flatten\nbbpu.\alu.$procmux$646_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$645_CMP vs. $flatten\nbbpu.\alu.$procmux$647_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$645_CMP vs. $flatten\nbbpu.\alu.$procmux$648_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$645_CMP vs. $flatten\nbbpu.\alu.$procmux$649_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$645_CMP vs. $flatten\nbbpu.\alu.$procmux$650_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$645_CMP vs. $flatten\nbbpu.\alu.$procmux$651_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$645_CMP vs. $flatten\nbbpu.\alu.$procmux$652_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$645_CMP vs. $flatten\nbbpu.\alu.$procmux$653_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$645_CMP vs. $flatten\nbbpu.\alu.$procmux$654_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$645_CMP vs. $flatten\nbbpu.\alu.$procmux$655_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$645_CMP vs. $flatten\nbbpu.\alu.$procmux$656_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$646_CMP vs. $flatten\nbbpu.\alu.$procmux$647_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$646_CMP vs. $flatten\nbbpu.\alu.$procmux$648_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$646_CMP vs. $flatten\nbbpu.\alu.$procmux$649_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$646_CMP vs. $flatten\nbbpu.\alu.$procmux$650_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$646_CMP vs. $flatten\nbbpu.\alu.$procmux$651_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$646_CMP vs. $flatten\nbbpu.\alu.$procmux$652_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$646_CMP vs. $flatten\nbbpu.\alu.$procmux$653_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$646_CMP vs. $flatten\nbbpu.\alu.$procmux$654_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$646_CMP vs. $flatten\nbbpu.\alu.$procmux$655_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$646_CMP vs. $flatten\nbbpu.\alu.$procmux$656_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$647_CMP vs. $flatten\nbbpu.\alu.$procmux$648_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$647_CMP vs. $flatten\nbbpu.\alu.$procmux$649_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$647_CMP vs. $flatten\nbbpu.\alu.$procmux$650_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$647_CMP vs. $flatten\nbbpu.\alu.$procmux$651_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$647_CMP vs. $flatten\nbbpu.\alu.$procmux$652_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$647_CMP vs. $flatten\nbbpu.\alu.$procmux$653_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$647_CMP vs. $flatten\nbbpu.\alu.$procmux$654_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$647_CMP vs. $flatten\nbbpu.\alu.$procmux$655_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$647_CMP vs. $flatten\nbbpu.\alu.$procmux$656_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$648_CMP vs. $flatten\nbbpu.\alu.$procmux$649_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$648_CMP vs. $flatten\nbbpu.\alu.$procmux$650_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$648_CMP vs. $flatten\nbbpu.\alu.$procmux$651_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$648_CMP vs. $flatten\nbbpu.\alu.$procmux$652_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$648_CMP vs. $flatten\nbbpu.\alu.$procmux$653_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$648_CMP vs. $flatten\nbbpu.\alu.$procmux$654_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$648_CMP vs. $flatten\nbbpu.\alu.$procmux$655_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$648_CMP vs. $flatten\nbbpu.\alu.$procmux$656_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$649_CMP vs. $flatten\nbbpu.\alu.$procmux$650_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$649_CMP vs. $flatten\nbbpu.\alu.$procmux$651_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$649_CMP vs. $flatten\nbbpu.\alu.$procmux$652_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$649_CMP vs. $flatten\nbbpu.\alu.$procmux$653_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$649_CMP vs. $flatten\nbbpu.\alu.$procmux$654_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$649_CMP vs. $flatten\nbbpu.\alu.$procmux$655_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$649_CMP vs. $flatten\nbbpu.\alu.$procmux$656_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$650_CMP vs. $flatten\nbbpu.\alu.$procmux$651_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$650_CMP vs. $flatten\nbbpu.\alu.$procmux$652_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$650_CMP vs. $flatten\nbbpu.\alu.$procmux$653_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$650_CMP vs. $flatten\nbbpu.\alu.$procmux$654_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$650_CMP vs. $flatten\nbbpu.\alu.$procmux$655_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$650_CMP vs. $flatten\nbbpu.\alu.$procmux$656_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$651_CMP vs. $flatten\nbbpu.\alu.$procmux$652_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$651_CMP vs. $flatten\nbbpu.\alu.$procmux$653_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$651_CMP vs. $flatten\nbbpu.\alu.$procmux$654_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$651_CMP vs. $flatten\nbbpu.\alu.$procmux$655_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$651_CMP vs. $flatten\nbbpu.\alu.$procmux$656_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$652_CMP vs. $flatten\nbbpu.\alu.$procmux$653_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$652_CMP vs. $flatten\nbbpu.\alu.$procmux$654_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$652_CMP vs. $flatten\nbbpu.\alu.$procmux$655_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$652_CMP vs. $flatten\nbbpu.\alu.$procmux$656_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$653_CMP vs. $flatten\nbbpu.\alu.$procmux$654_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$653_CMP vs. $flatten\nbbpu.\alu.$procmux$655_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$653_CMP vs. $flatten\nbbpu.\alu.$procmux$656_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$654_CMP vs. $flatten\nbbpu.\alu.$procmux$655_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$654_CMP vs. $flatten\nbbpu.\alu.$procmux$656_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$655_CMP vs. $flatten\nbbpu.\alu.$procmux$656_CMP
+Adding exclusive control bits: $auto$opt_reduce.cc:134:opt_mux$759 vs. $auto$opt_reduce.cc:134:opt_mux$763
+Adding exclusive control bits: $auto$opt_reduce.cc:134:opt_mux$759 vs. $auto$opt_reduce.cc:134:opt_mux$773
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$643_CMP vs. $auto$opt_reduce.cc:134:opt_mux$759
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$643_CMP vs. $flatten\nbbpu.\alu.$procmux$644_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$643_CMP vs. $flatten\nbbpu.\alu.$procmux$645_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$643_CMP vs. $auto$opt_reduce.cc:134:opt_mux$763
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$643_CMP vs. $flatten\nbbpu.\alu.$procmux$648_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$643_CMP vs. $auto$opt_reduce.cc:134:opt_mux$773
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$644_CMP vs. $auto$opt_reduce.cc:134:opt_mux$759
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$644_CMP vs. $flatten\nbbpu.\alu.$procmux$645_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$644_CMP vs. $auto$opt_reduce.cc:134:opt_mux$763
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$644_CMP vs. $flatten\nbbpu.\alu.$procmux$648_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$644_CMP vs. $auto$opt_reduce.cc:134:opt_mux$773
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$645_CMP vs. $auto$opt_reduce.cc:134:opt_mux$759
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$645_CMP vs. $auto$opt_reduce.cc:134:opt_mux$763
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$645_CMP vs. $flatten\nbbpu.\alu.$procmux$648_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$645_CMP vs. $auto$opt_reduce.cc:134:opt_mux$773
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$648_CMP vs. $auto$opt_reduce.cc:134:opt_mux$759
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$648_CMP vs. $auto$opt_reduce.cc:134:opt_mux$763
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$648_CMP vs. $auto$opt_reduce.cc:134:opt_mux$773
+Adding exclusive control bits: $auto$opt_reduce.cc:134:opt_mux$773 vs. $auto$opt_reduce.cc:134:opt_mux$763
+Adding exclusive control bits: $auto$opt_reduce.cc:134:opt_mux$759 vs. $auto$opt_reduce.cc:134:opt_mux$761
+Adding exclusive control bits: $auto$opt_reduce.cc:134:opt_mux$759 vs. $auto$opt_reduce.cc:134:opt_mux$763
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$643_CMP vs. $auto$opt_reduce.cc:134:opt_mux$759
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$643_CMP vs. $flatten\nbbpu.\alu.$procmux$644_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$643_CMP vs. $auto$opt_reduce.cc:134:opt_mux$761
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$643_CMP vs. $auto$opt_reduce.cc:134:opt_mux$763
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$643_CMP vs. $flatten\nbbpu.\alu.$procmux$648_CMP
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$644_CMP vs. $auto$opt_reduce.cc:134:opt_mux$759
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$644_CMP vs. $auto$opt_reduce.cc:134:opt_mux$761
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$644_CMP vs. $auto$opt_reduce.cc:134:opt_mux$763
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$644_CMP vs. $flatten\nbbpu.\alu.$procmux$648_CMP
+Adding exclusive control bits: $auto$opt_reduce.cc:134:opt_mux$763 vs. $auto$opt_reduce.cc:134:opt_mux$761
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$648_CMP vs. $auto$opt_reduce.cc:134:opt_mux$759
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$648_CMP vs. $auto$opt_reduce.cc:134:opt_mux$761
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$648_CMP vs. $auto$opt_reduce.cc:134:opt_mux$763
+Adding exclusive control bits: $auto$opt_reduce.cc:134:opt_mux$765 vs. $auto$opt_reduce.cc:134:opt_mux$763
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$648_CMP vs. $auto$opt_reduce.cc:134:opt_mux$765
+Adding exclusive control bits: $flatten\nbbpu.\alu.$procmux$648_CMP vs. $auto$opt_reduce.cc:134:opt_mux$763
+Adding exclusive control bits: $flatten\nbbpu.$auto$rtlil.cc:2177:And$679 vs. $flatten\nbbpu.$auto$rtlil.cc:2177:And$662
+Adding exclusive control bits: $flatten\nbbpu.$auto$rtlil.cc:2177:And$679 vs. $flatten\nbbpu.$auto$rtlil.cc:2177:And$666
+Adding exclusive control bits: $flatten\nbbpu.$auto$rtlil.cc:2177:And$679 vs. $flatten\nbbpu.$auto$rtlil.cc:2177:And$670
+Adding exclusive control bits: $flatten\nbbpu.$auto$rtlil.cc:2177:And$666 vs. $flatten\nbbpu.$auto$rtlil.cc:2177:And$662
+Adding exclusive control bits: $flatten\nbbpu.$auto$rtlil.cc:2177:And$670 vs. $flatten\nbbpu.$auto$rtlil.cc:2177:And$662
+Adding exclusive control bits: $flatten\nbbpu.$auto$rtlil.cc:2177:And$670 vs. $flatten\nbbpu.$auto$rtlil.cc:2177:And$666
+Size of SAT problem: 32 cells, 676 variables, 2117 clauses
+According to the SAT solver this pair of cells can not be shared.
+Model from SAT solver: { $flatten\nbbpu.\regfile.$ne$regfile.v:44$69_Y $flatten\nbbpu.\regfile.$ne$regfile.v:43$65_Y $flatten\nbbpu.\alu.$procmux$656_CMP $flatten\nbbpu.\alu.$procmux$655_CMP $flatten\nbbpu.\alu.$procmux$654_CMP $flatten\nbbpu.\alu.$procmux$653_CMP $flatten\nbbpu.\alu.$procmux$652_CMP $flatten\nbbpu.\alu.$procmux$651_CMP $flatten\nbbpu.\alu.$procmux$650_CMP $flatten\nbbpu.\alu.$procmux$649_CMP $flatten\nbbpu.\alu.$procmux$647_CMP $flatten\nbbpu.\alu.$procmux$646_CMP $flatten\nbbpu.\alu.$procmux$643_CMP } = 13'1100000000010
+Analyzing resource sharing options for $flatten\nbbpu.\regfile.$memrd$\registers$regfile.v:43$66 ($memrd):
+Found 1 activation_patterns using ctrl signal $flatten\nbbpu.\regfile.$ne$regfile.v:43$65_Y.
+No candidates found.
+Analyzing resource sharing options for $flatten\nbbpu.\alu.$shr$alu.v:27$7 ($shr):
+Found 1 activation_patterns using ctrl signal $flatten\nbbpu.\alu.$procmux$651_CMP.
+No candidates found.
+Analyzing resource sharing options for $flatten\nbbpu.\alu.$shl$alu.v:28$8 ($shl):
+Found 1 activation_patterns using ctrl signal $flatten\nbbpu.\alu.$procmux$650_CMP.
+No candidates found.
+
+9.17. Executing TECHMAP pass (map to technology primitives).
+
+9.17.1. Executing Verilog-2005 frontend: /home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/cmp2lut.v
+Parsing Verilog input from `/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/cmp2lut.v' to AST representation.
+Generating RTLIL representation for module `\_90_lut_cmp_'.
+Successfully finished Verilog frontend.
+
+9.17.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~36 debug messages>
+
+9.18. Executing OPT_EXPR pass (perform const folding).
+Optimizing module nbbsoc.
+
+9.19. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \nbbsoc..
+
+9.20. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module nbbsoc:
+creating $macc model for $flatten\nbbpu.\alu.$add$alu.v:22$2 ($add).
+creating $macc model for $flatten\nbbpu.\alu.$sub$alu.v:23$3 ($sub).
+creating $alu model for $macc $flatten\nbbpu.\alu.$sub$alu.v:23$3.
+creating $alu model for $macc $flatten\nbbpu.\alu.$add$alu.v:22$2.
+creating $alu model for $flatten\nbbpu.\alu.$ge$alu.v:29$9 ($ge): new $alu
+creating $alu cell for $flatten\nbbpu.\alu.$ge$alu.v:29$9: $auto$alumacc.cc:485:replace_alu$788
+creating $alu cell for $flatten\nbbpu.\alu.$add$alu.v:22$2: $auto$alumacc.cc:485:replace_alu$797
+creating $alu cell for $flatten\nbbpu.\alu.$sub$alu.v:23$3: $auto$alumacc.cc:485:replace_alu$800
+created 3 $alu and 0 $macc cells.
+
+9.21. Executing OPT pass (performing simple optimizations).
+
+9.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module nbbsoc.
+
+9.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\nbbsoc'.
+Removed a total of 0 cells.
+
+9.21.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \nbbsoc..
+Creating internal representation of mux trees.
+Evaluating internal representation of mux trees.
+Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~8 debug messages>
+
+9.21.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+Optimizing cells in module \nbbsoc.
+Performed a total of 0 changes.
+
+9.21.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\nbbsoc'.
+Removed a total of 0 cells.
+
+9.21.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.21.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \nbbsoc..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+9.21.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module nbbsoc.
+
+9.21.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+9.21.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \nbbsoc..
+Creating internal representation of mux trees.
+Evaluating internal representation of mux trees.
+Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~8 debug messages>
+
+9.21.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+Optimizing cells in module \nbbsoc.
+Performed a total of 0 changes.
+
+9.21.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\nbbsoc'.
+Removed a total of 0 cells.
+
+9.21.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.21.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \nbbsoc..
+
+9.21.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module nbbsoc.
+
+9.21.16. Finished OPT passes. (There is nothing left to do.)
+
+9.22. Executing MEMORY pass.
+
+9.22.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+9.22.2. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `\nbbpu.regfile.registers'[0] in module `\nbbsoc': no output FF found.
+Checking read port `\nbbpu.regfile.registers'[1] in module `\nbbsoc': no output FF found.
+Checking read port `\ram.RAM'[0] in module `\nbbsoc': merged output FF to cell.
+Checking read port `\rom.ROM'[0] in module `\nbbsoc': merged output FF to cell.
+Checking read port address `\nbbpu.regfile.registers'[0] in module `\nbbsoc': no address FF found.
+Checking read port address `\nbbpu.regfile.registers'[1] in module `\nbbsoc': no address FF found.
+
+9.22.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \nbbsoc..
+Removed 2 unused cells and 34 unused wires.
+<suppressed ~3 debug messages>
+
+9.22.4. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+Analyzing nbbsoc.nbbpu.regfile.registers write port 0.
+
+9.22.5. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+Consolidating read ports of memory nbbsoc.nbbpu.regfile.registers by address:
+
+9.22.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \nbbsoc..
+
+9.22.7. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+9.23. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \nbbsoc..
+
+9.24. Executing MEMORY_BRAM pass (mapping $mem cells to block memories).
+Processing nbbsoc.nbbpu.regfile.registers:
+Properties: ports=3 bits=256 rports=2 wports=1 dbits=16 abits=4 words=16
+Checking rule #1 for bram type $__ICE40_RAM4K_M0 (variant 1):
+Bram geometry: abits=8 dbits=16 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Metrics for $__ICE40_RAM4K_M0: awaste=240 dwaste=0 bwaste=3840 waste=3840 efficiency=6
+Rule #1 for bram type $__ICE40_RAM4K_M0 (variant 1) accepted.
+Mapping to bram type $__ICE40_RAM4K_M0 (variant 1):
+Write port #0 is in clock domain \clock.
+Mapped to bram port B1.
+Read port #0 is in clock domain !~async~.
+Bram port A1.1 has incompatible clock type.
+Failed to map read port #0.
+Mapping to bram type $__ICE40_RAM4K_M0 failed.
+Checking rule #2 for bram type $__ICE40_RAM4K_M0 (variant 1):
+Bram geometry: abits=8 dbits=16 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Checking rule #3 for bram type $__ICE40_RAM4K_M0 (variant 1):
+Bram geometry: abits=8 dbits=16 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Checking rule #4 for bram type $__ICE40_RAM4K_M123 (variant 1):
+Bram geometry: abits=9 dbits=8 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Metrics for $__ICE40_RAM4K_M123: awaste=496 dwaste=0 bwaste=3968 waste=3968 efficiency=3
+Rule #4 for bram type $__ICE40_RAM4K_M123 (variant 1) accepted.
+Mapping to bram type $__ICE40_RAM4K_M123 (variant 1):
+Write port #0 is in clock domain \clock.
+Mapped to bram port B1.
+Read port #0 is in clock domain !~async~.
+Bram port A1.1 has incompatible clock type.
+Failed to map read port #0.
+Mapping to bram type $__ICE40_RAM4K_M123 failed.
+Checking rule #4 for bram type $__ICE40_RAM4K_M123 (variant 2):
+Bram geometry: abits=10 dbits=4 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Metrics for $__ICE40_RAM4K_M123: awaste=1008 dwaste=0 bwaste=4032 waste=4032 efficiency=1
+Rule #4 for bram type $__ICE40_RAM4K_M123 (variant 2) rejected: requirement 'min efficiency 2' not met.
+Checking rule #4 for bram type $__ICE40_RAM4K_M123 (variant 3):
+Bram geometry: abits=11 dbits=2 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Metrics for $__ICE40_RAM4K_M123: awaste=2032 dwaste=0 bwaste=4064 waste=4064 efficiency=0
+Rule #4 for bram type $__ICE40_RAM4K_M123 (variant 3) rejected: requirement 'min efficiency 2' not met.
+Checking rule #5 for bram type $__ICE40_RAM4K_M123 (variant 1):
+Bram geometry: abits=9 dbits=8 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Checking rule #5 for bram type $__ICE40_RAM4K_M123 (variant 2):
+Bram geometry: abits=10 dbits=4 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Metrics for $__ICE40_RAM4K_M123: awaste=1008 dwaste=0 bwaste=4032 waste=4032 efficiency=1
+Rule for bram type $__ICE40_RAM4K_M123 (variant 2) rejected: requirement 'attribute syn_ramstyle="block_ram" ...' not met.
+Checking rule #5 for bram type $__ICE40_RAM4K_M123 (variant 3):
+Bram geometry: abits=11 dbits=2 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Metrics for $__ICE40_RAM4K_M123: awaste=2032 dwaste=0 bwaste=4064 waste=4064 efficiency=0
+Rule for bram type $__ICE40_RAM4K_M123 (variant 3) rejected: requirement 'attribute syn_ramstyle="block_ram" ...' not met.
+Checking rule #6 for bram type $__ICE40_RAM4K_M123 (variant 1):
+Bram geometry: abits=9 dbits=8 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Checking rule #6 for bram type $__ICE40_RAM4K_M123 (variant 2):
+Bram geometry: abits=10 dbits=4 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Metrics for $__ICE40_RAM4K_M123: awaste=1008 dwaste=0 bwaste=4032 waste=4032 efficiency=1
+Rule #6 for bram type $__ICE40_RAM4K_M123 (variant 2) rejected: requirement 'max wports 0' not met.
+Checking rule #6 for bram type $__ICE40_RAM4K_M123 (variant 3):
+Bram geometry: abits=11 dbits=2 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Metrics for $__ICE40_RAM4K_M123: awaste=2032 dwaste=0 bwaste=4064 waste=4064 efficiency=0
+Rule #6 for bram type $__ICE40_RAM4K_M123 (variant 3) rejected: requirement 'max wports 0' not met.
+No acceptable bram resources found.
+Processing nbbsoc.ram.RAM:
+Properties: ports=2 bits=4096 rports=1 wports=1 dbits=16 abits=8 words=256
+Checking rule #1 for bram type $__ICE40_RAM4K_M0 (variant 1):
+Bram geometry: abits=8 dbits=16 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Metrics for $__ICE40_RAM4K_M0: awaste=0 dwaste=0 bwaste=0 waste=0 efficiency=100
+Rule #1 for bram type $__ICE40_RAM4K_M0 (variant 1) accepted.
+Mapping to bram type $__ICE40_RAM4K_M0 (variant 1):
+Write port #0 is in clock domain \clock.
+Mapped to bram port B1.
+Read port #0 is in clock domain \clock.
+Mapped to bram port A1.1.
+Updated properties: dups=1 waste=0 efficiency=100
+Storing for later selection.
+Checking rule #2 for bram type $__ICE40_RAM4K_M0 (variant 1):
+Bram geometry: abits=8 dbits=16 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Metrics for $__ICE40_RAM4K_M0: awaste=0 dwaste=0 bwaste=0 waste=0 efficiency=100
+Rule for bram type $__ICE40_RAM4K_M0 (variant 1) rejected: requirement 'attribute syn_ramstyle="block_ram" ...' not met.
+Checking rule #3 for bram type $__ICE40_RAM4K_M0 (variant 1):
+Bram geometry: abits=8 dbits=16 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Metrics for $__ICE40_RAM4K_M0: awaste=0 dwaste=0 bwaste=0 waste=0 efficiency=100
+Rule #3 for bram type $__ICE40_RAM4K_M0 (variant 1) rejected: requirement 'max wports 0' not met.
+Checking rule #4 for bram type $__ICE40_RAM4K_M123 (variant 1):
+Bram geometry: abits=9 dbits=8 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Metrics for $__ICE40_RAM4K_M123: awaste=256 dwaste=0 bwaste=2048 waste=2048 efficiency=50
+Rule #4 for bram type $__ICE40_RAM4K_M123 (variant 1) accepted.
+Mapping to bram type $__ICE40_RAM4K_M123 (variant 1):
+Write port #0 is in clock domain \clock.
+Mapped to bram port B1.
+Read port #0 is in clock domain \clock.
+Mapped to bram port A1.1.
+Updated properties: dups=1 waste=2048 efficiency=50
+Storing for later selection.
+Checking rule #4 for bram type $__ICE40_RAM4K_M123 (variant 2):
+Bram geometry: abits=10 dbits=4 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Metrics for $__ICE40_RAM4K_M123: awaste=768 dwaste=0 bwaste=3072 waste=3072 efficiency=25
+Rule #4 for bram type $__ICE40_RAM4K_M123 (variant 2) accepted.
+Mapping to bram type $__ICE40_RAM4K_M123 (variant 2):
+Write port #0 is in clock domain \clock.
+Mapped to bram port B1.
+Read port #0 is in clock domain \clock.
+Mapped to bram port A1.1.
+Updated properties: dups=1 waste=3072 efficiency=25
+Storing for later selection.
+Checking rule #4 for bram type $__ICE40_RAM4K_M123 (variant 3):
+Bram geometry: abits=11 dbits=2 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Metrics for $__ICE40_RAM4K_M123: awaste=1792 dwaste=0 bwaste=3584 waste=3584 efficiency=12
+Rule #4 for bram type $__ICE40_RAM4K_M123 (variant 3) accepted.
+Mapping to bram type $__ICE40_RAM4K_M123 (variant 3):
+Write port #0 is in clock domain \clock.
+Mapped to bram port B1.
+Read port #0 is in clock domain \clock.
+Mapped to bram port A1.1.
+Updated properties: dups=1 waste=3584 efficiency=12
+Storing for later selection.
+Checking rule #5 for bram type $__ICE40_RAM4K_M123 (variant 1):
+Bram geometry: abits=9 dbits=8 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Metrics for $__ICE40_RAM4K_M123: awaste=256 dwaste=0 bwaste=2048 waste=2048 efficiency=50
+Rule for bram type $__ICE40_RAM4K_M123 (variant 1) rejected: requirement 'attribute syn_ramstyle="block_ram" ...' not met.
+Checking rule #5 for bram type $__ICE40_RAM4K_M123 (variant 2):
+Bram geometry: abits=10 dbits=4 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Metrics for $__ICE40_RAM4K_M123: awaste=768 dwaste=0 bwaste=3072 waste=3072 efficiency=25
+Rule for bram type $__ICE40_RAM4K_M123 (variant 2) rejected: requirement 'attribute syn_ramstyle="block_ram" ...' not met.
+Checking rule #5 for bram type $__ICE40_RAM4K_M123 (variant 3):
+Bram geometry: abits=11 dbits=2 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Metrics for $__ICE40_RAM4K_M123: awaste=1792 dwaste=0 bwaste=3584 waste=3584 efficiency=12
+Rule for bram type $__ICE40_RAM4K_M123 (variant 3) rejected: requirement 'attribute syn_ramstyle="block_ram" ...' not met.
+Checking rule #6 for bram type $__ICE40_RAM4K_M123 (variant 1):
+Bram geometry: abits=9 dbits=8 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Metrics for $__ICE40_RAM4K_M123: awaste=256 dwaste=0 bwaste=2048 waste=2048 efficiency=50
+Rule #6 for bram type $__ICE40_RAM4K_M123 (variant 1) rejected: requirement 'max wports 0' not met.
+Checking rule #6 for bram type $__ICE40_RAM4K_M123 (variant 2):
+Bram geometry: abits=10 dbits=4 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Metrics for $__ICE40_RAM4K_M123: awaste=768 dwaste=0 bwaste=3072 waste=3072 efficiency=25
+Rule #6 for bram type $__ICE40_RAM4K_M123 (variant 2) rejected: requirement 'max wports 0' not met.
+Checking rule #6 for bram type $__ICE40_RAM4K_M123 (variant 3):
+Bram geometry: abits=11 dbits=2 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Metrics for $__ICE40_RAM4K_M123: awaste=1792 dwaste=0 bwaste=3584 waste=3584 efficiency=12
+Rule #6 for bram type $__ICE40_RAM4K_M123 (variant 3) rejected: requirement 'max wports 0' not met.
+Selecting best of 4 rules:
+Efficiency for rule 4.3: efficiency=12, cells=8, acells=1
+Efficiency for rule 4.2: efficiency=25, cells=4, acells=1
+Efficiency for rule 4.1: efficiency=50, cells=2, acells=1
+Efficiency for rule 1.1: efficiency=100, cells=1, acells=1
+Selected rule 1.1 with efficiency 100.
+Mapping to bram type $__ICE40_RAM4K_M0 (variant 1):
+Write port #0 is in clock domain \clock.
+Mapped to bram port B1.
+Read port #0 is in clock domain \clock.
+Mapped to bram port A1.1.
+Creating $__ICE40_RAM4K_M0 cell at grid position <0 0 0>: ram.RAM.0.0.0
+Processing nbbsoc.rom.ROM:
+Properties: ports=1 bits=4096 rports=1 wports=0 dbits=16 abits=8 words=256
+Checking rule #1 for bram type $__ICE40_RAM4K_M0 (variant 1):
+Bram geometry: abits=8 dbits=16 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Metrics for $__ICE40_RAM4K_M0: awaste=0 dwaste=0 bwaste=0 waste=0 efficiency=100
+Rule #1 for bram type $__ICE40_RAM4K_M0 (variant 1) accepted.
+Mapping to bram type $__ICE40_RAM4K_M0 (variant 1):
+Read port #0 is in clock domain \clock.
+Mapped to bram port A1.1.
+Updated properties: dups=1 waste=0 efficiency=100
+Storing for later selection.
+Checking rule #2 for bram type $__ICE40_RAM4K_M0 (variant 1):
+Bram geometry: abits=8 dbits=16 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Metrics for $__ICE40_RAM4K_M0: awaste=0 dwaste=0 bwaste=0 waste=0 efficiency=100
+Rule #2 for bram type $__ICE40_RAM4K_M0 (variant 1) rejected: requirement 'min wports 1' not met.
+Checking rule #3 for bram type $__ICE40_RAM4K_M0 (variant 1):
+Bram geometry: abits=8 dbits=16 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Metrics for $__ICE40_RAM4K_M0: awaste=0 dwaste=0 bwaste=0 waste=0 efficiency=100
+Rule for bram type $__ICE40_RAM4K_M0 (variant 1) rejected: requirement 'attribute syn_romstyle="ebr" ...' not met.
+Checking rule #4 for bram type $__ICE40_RAM4K_M123 (variant 1):
+Bram geometry: abits=9 dbits=8 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Metrics for $__ICE40_RAM4K_M123: awaste=256 dwaste=0 bwaste=2048 waste=2048 efficiency=50
+Rule #4 for bram type $__ICE40_RAM4K_M123 (variant 1) accepted.
+Mapping to bram type $__ICE40_RAM4K_M123 (variant 1):
+Read port #0 is in clock domain \clock.
+Mapped to bram port A1.1.
+Updated properties: dups=1 waste=2048 efficiency=50
+Storing for later selection.
+Checking rule #4 for bram type $__ICE40_RAM4K_M123 (variant 2):
+Bram geometry: abits=10 dbits=4 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Metrics for $__ICE40_RAM4K_M123: awaste=768 dwaste=0 bwaste=3072 waste=3072 efficiency=25
+Rule #4 for bram type $__ICE40_RAM4K_M123 (variant 2) accepted.
+Mapping to bram type $__ICE40_RAM4K_M123 (variant 2):
+Read port #0 is in clock domain \clock.
+Mapped to bram port A1.1.
+Updated properties: dups=1 waste=3072 efficiency=25
+Storing for later selection.
+Checking rule #4 for bram type $__ICE40_RAM4K_M123 (variant 3):
+Bram geometry: abits=11 dbits=2 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Metrics for $__ICE40_RAM4K_M123: awaste=1792 dwaste=0 bwaste=3584 waste=3584 efficiency=12
+Rule #4 for bram type $__ICE40_RAM4K_M123 (variant 3) accepted.
+Mapping to bram type $__ICE40_RAM4K_M123 (variant 3):
+Read port #0 is in clock domain \clock.
+Mapped to bram port A1.1.
+Updated properties: dups=1 waste=3584 efficiency=12
+Storing for later selection.
+Checking rule #5 for bram type $__ICE40_RAM4K_M123 (variant 1):
+Bram geometry: abits=9 dbits=8 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Metrics for $__ICE40_RAM4K_M123: awaste=256 dwaste=0 bwaste=2048 waste=2048 efficiency=50
+Rule #5 for bram type $__ICE40_RAM4K_M123 (variant 1) rejected: requirement 'min wports 1' not met.
+Checking rule #5 for bram type $__ICE40_RAM4K_M123 (variant 2):
+Bram geometry: abits=10 dbits=4 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Metrics for $__ICE40_RAM4K_M123: awaste=768 dwaste=0 bwaste=3072 waste=3072 efficiency=25
+Rule #5 for bram type $__ICE40_RAM4K_M123 (variant 2) rejected: requirement 'min wports 1' not met.
+Checking rule #5 for bram type $__ICE40_RAM4K_M123 (variant 3):
+Bram geometry: abits=11 dbits=2 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Metrics for $__ICE40_RAM4K_M123: awaste=1792 dwaste=0 bwaste=3584 waste=3584 efficiency=12
+Rule #5 for bram type $__ICE40_RAM4K_M123 (variant 3) rejected: requirement 'min wports 1' not met.
+Checking rule #6 for bram type $__ICE40_RAM4K_M123 (variant 1):
+Bram geometry: abits=9 dbits=8 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Metrics for $__ICE40_RAM4K_M123: awaste=256 dwaste=0 bwaste=2048 waste=2048 efficiency=50
+Rule for bram type $__ICE40_RAM4K_M123 (variant 1) rejected: requirement 'attribute syn_romstyle="ebr" ...' not met.
+Checking rule #6 for bram type $__ICE40_RAM4K_M123 (variant 2):
+Bram geometry: abits=10 dbits=4 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Metrics for $__ICE40_RAM4K_M123: awaste=768 dwaste=0 bwaste=3072 waste=3072 efficiency=25
+Rule for bram type $__ICE40_RAM4K_M123 (variant 2) rejected: requirement 'attribute syn_romstyle="ebr" ...' not met.
+Checking rule #6 for bram type $__ICE40_RAM4K_M123 (variant 3):
+Bram geometry: abits=11 dbits=2 wports=0 rports=0
+Estimated number of duplicates for more read ports: dups=1
+Metrics for $__ICE40_RAM4K_M123: awaste=1792 dwaste=0 bwaste=3584 waste=3584 efficiency=12
+Rule for bram type $__ICE40_RAM4K_M123 (variant 3) rejected: requirement 'attribute syn_romstyle="ebr" ...' not met.
+Selecting best of 4 rules:
+Efficiency for rule 4.3: efficiency=12, cells=8, acells=1
+Efficiency for rule 4.2: efficiency=25, cells=4, acells=1
+Efficiency for rule 4.1: efficiency=50, cells=2, acells=1
+Efficiency for rule 1.1: efficiency=100, cells=1, acells=1
+Selected rule 1.1 with efficiency 100.
+Mapping to bram type $__ICE40_RAM4K_M0 (variant 1):
+Read port #0 is in clock domain \clock.
+Mapped to bram port A1.1.
+Creating $__ICE40_RAM4K_M0 cell at grid position <0 0 0>: rom.ROM.0.0.0
+
+9.25. Executing TECHMAP pass (map to technology primitives).
+
+9.25.1. Executing Verilog-2005 frontend: /home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/brams_map.v
+Parsing Verilog input from `/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/brams_map.v' to AST representation.
+Generating RTLIL representation for module `\$__ICE40_RAM4K'.
+Generating RTLIL representation for module `\$__ICE40_RAM4K_M0'.
+Generating RTLIL representation for module `\$__ICE40_RAM4K_M123'.
+Successfully finished Verilog frontend.
+
+9.25.2. Continuing TECHMAP pass.
+Using template $paramod$22f9311f7faaea3ed8ead2b32bbd6da639e494d1\$__ICE40_RAM4K_M0 for cells of type $__ICE40_RAM4K_M0.
+Using template $paramod$c4d5eea66b09f1d997c77cc5a911f9249b3d99f8\$__ICE40_RAM4K_M0 for cells of type $__ICE40_RAM4K_M0.
+Using template $paramod$2a419a9fc365cdea87befac4612e4622b6cfd070\$__ICE40_RAM4K for cells of type $__ICE40_RAM4K.
+Using template $paramod$9a60c1a9215153db7fafbb96b2fcd1805d8e862b\$__ICE40_RAM4K for cells of type $__ICE40_RAM4K.
+No more expansions possible.
+<suppressed ~135 debug messages>
+
+9.26. Executing ICE40_BRAMINIT pass.
+
+9.27. Executing OPT pass (performing simple optimizations).
+
+9.27.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module nbbsoc.
+<suppressed ~21 debug messages>
+
+9.27.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\nbbsoc'.
+Removed a total of 0 cells.
+
+9.27.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.27.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \nbbsoc..
+Removed 1 unused cells and 55 unused wires.
+<suppressed ~2 debug messages>
+
+9.27.5. Finished fast OPT passes.
+
+9.28. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory \nbbpu.regfile.registers in module \nbbsoc:
+created 16 $dff cells and 0 static cells of width 16.
+read interface: 0 $dff and 30 $mux cells.
+write interface: 16 write mux blocks.
+
+9.29. Executing OPT pass (performing simple optimizations).
+
+9.29.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module nbbsoc.
+<suppressed ~8 debug messages>
+
+9.29.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\nbbsoc'.
+Removed a total of 0 cells.
+
+9.29.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \nbbsoc..
+Creating internal representation of mux trees.
+Evaluating internal representation of mux trees.
+Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~22 debug messages>
+
+9.29.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+Optimizing cells in module \nbbsoc.
+Consolidated identical input bits for $pmux cell $flatten\nbbpu.\controller.$procmux$595:
+Old ports: A=6'000010, B=30'000001000000100000000100001000, Y=$auto$wreduce.cc:454:run$781 [5:0]
+New ports: A=5'00010, B=25'0000100000100000010001000, Y={ $auto$wreduce.cc:454:run$781 [5] $auto$wreduce.cc:454:run$781 [3:0] }
+New connections: $auto$wreduce.cc:454:run$781 [4] = 1'0
+Optimizing cells in module \nbbsoc.
+Performed a total of 1 changes.
+
+9.29.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\nbbsoc'.
+Removed a total of 0 cells.
+
+9.29.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.29.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \nbbsoc..
+Removed 0 unused cells and 52 unused wires.
+<suppressed ~1 debug messages>
+
+9.29.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module nbbsoc.
+
+9.29.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+9.29.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \nbbsoc..
+Creating internal representation of mux trees.
+Evaluating internal representation of mux trees.
+Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~22 debug messages>
+
+9.29.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+Optimizing cells in module \nbbsoc.
+Performed a total of 0 changes.
+
+9.29.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\nbbsoc'.
+Removed a total of 0 cells.
+
+9.29.13. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $memory\nbbpu.regfile.registers[9]$870 ($dff) from module nbbsoc (D = { \nbbpu.regfile.write_data [15:1] \nbbpu.Z [0] }, Q = \nbbpu.regfile.registers[9]).
+Adding EN signal on $memory\nbbpu.regfile.registers[8]$868 ($dff) from module nbbsoc (D = { \nbbpu.regfile.write_data [15:1] \nbbpu.Z [0] }, Q = \nbbpu.regfile.registers[8]).
+Adding EN signal on $memory\nbbpu.regfile.registers[7]$866 ($dff) from module nbbsoc (D = { \nbbpu.regfile.write_data [15:1] \nbbpu.Z [0] }, Q = \nbbpu.regfile.registers[7]).
+Adding EN signal on $memory\nbbpu.regfile.registers[6]$864 ($dff) from module nbbsoc (D = { \nbbpu.regfile.write_data [15:1] \nbbpu.Z [0] }, Q = \nbbpu.regfile.registers[6]).
+Adding EN signal on $memory\nbbpu.regfile.registers[5]$862 ($dff) from module nbbsoc (D = { \nbbpu.regfile.write_data [15:1] \nbbpu.Z [0] }, Q = \nbbpu.regfile.registers[5]).
+Adding EN signal on $memory\nbbpu.regfile.registers[4]$860 ($dff) from module nbbsoc (D = { \nbbpu.regfile.write_data [15:1] \nbbpu.Z [0] }, Q = \nbbpu.regfile.registers[4]).
+Adding EN signal on $memory\nbbpu.regfile.registers[3]$858 ($dff) from module nbbsoc (D = { \nbbpu.regfile.write_data [15:1] \nbbpu.Z [0] }, Q = \nbbpu.regfile.registers[3]).
+Adding EN signal on $memory\nbbpu.regfile.registers[2]$856 ($dff) from module nbbsoc (D = { \nbbpu.regfile.write_data [15:1] \nbbpu.Z [0] }, Q = \nbbpu.regfile.registers[2]).
+Adding EN signal on $memory\nbbpu.regfile.registers[1]$854 ($dff) from module nbbsoc (D = { \nbbpu.regfile.write_data [15:1] \nbbpu.Z [0] }, Q = \nbbpu.regfile.registers[1]).
+Adding EN signal on $memory\nbbpu.regfile.registers[15]$882 ($dff) from module nbbsoc (D = { \nbbpu.regfile.write_data [15:1] \nbbpu.Z [0] }, Q = \nbbpu.regfile.registers[15]).
+Adding EN signal on $memory\nbbpu.regfile.registers[14]$880 ($dff) from module nbbsoc (D = { \nbbpu.regfile.write_data [15:1] \nbbpu.Z [0] }, Q = \nbbpu.regfile.registers[14]).
+Adding EN signal on $memory\nbbpu.regfile.registers[13]$878 ($dff) from module nbbsoc (D = { \nbbpu.regfile.write_data [15:1] \nbbpu.Z [0] }, Q = \nbbpu.regfile.registers[13]).
+Adding EN signal on $memory\nbbpu.regfile.registers[12]$876 ($dff) from module nbbsoc (D = { \nbbpu.regfile.write_data [15:1] \nbbpu.Z [0] }, Q = \nbbpu.regfile.registers[12]).
+Adding EN signal on $memory\nbbpu.regfile.registers[11]$874 ($dff) from module nbbsoc (D = { \nbbpu.regfile.write_data [15:1] \nbbpu.Z [0] }, Q = \nbbpu.regfile.registers[11]).
+Adding EN signal on $memory\nbbpu.regfile.registers[10]$872 ($dff) from module nbbsoc (D = { \nbbpu.regfile.write_data [15:1] \nbbpu.Z [0] }, Q = \nbbpu.regfile.registers[10]).
+Adding EN signal on $memory\nbbpu.regfile.registers[0]$852 ($dff) from module nbbsoc (D = { \nbbpu.regfile.write_data [15:1] \nbbpu.Z [0] }, Q = \nbbpu.regfile.registers[0]).
+
+9.29.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \nbbsoc..
+Removed 16 unused cells and 16 unused wires.
+<suppressed ~17 debug messages>
+
+9.29.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module nbbsoc.
+
+9.29.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+9.29.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \nbbsoc..
+Creating internal representation of mux trees.
+Evaluating internal representation of mux trees.
+Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~6 debug messages>
+
+9.29.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+Optimizing cells in module \nbbsoc.
+Performed a total of 0 changes.
+
+9.29.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\nbbsoc'.
+Removed a total of 0 cells.
+
+9.29.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.29.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \nbbsoc..
+
+9.29.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module nbbsoc.
+
+9.29.23. Finished OPT passes. (There is nothing left to do.)
+
+9.30. Executing ICE40_WRAPCARRY pass (wrap carries).
+
+9.31. Executing TECHMAP pass (map to technology primitives).
+
+9.31.1. Executing Verilog-2005 frontend: /home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/techmap.v
+Parsing Verilog input from `/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+9.31.2. Executing Verilog-2005 frontend: /home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/arith_map.v
+Parsing Verilog input from `/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/arith_map.v' to AST representation.
+Generating RTLIL representation for module `\_80_ice40_alu'.
+Successfully finished Verilog frontend.
+
+9.31.3. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $reduce_or.
+Using template $paramod$6df0329addda9228fcc2546de2aaf14ad26c98e1\_80_ice40_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $dffe.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod$constmap:00a5b8c078faac2d9dcf7d1311e85cfd31359fcf$paramod$e31da3c1e7d1078ed1477dabeabe646dcd7d3c9b\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shr.
+Using template $paramod$constmap:00a5b8c078faac2d9dcf7d1311e85cfd31359fcf$paramod$b1f8e9a58fee383a65180922397f7058048191fe\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shl.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using extmapper simplemap for cells of type $eq.
+Using template $paramod$e85bcdd999a9f7e1064fcb77207041270947b77a\_90_pmux for cells of type $pmux.
+Using template $paramod$d843018565ef722782d28339c99ecf00b278e074\_90_pmux for cells of type $pmux.
+Using template $paramod$77db613179eb70c5e4e5c5aca72d602a7c6017b6\_90_pmux for cells of type $pmux.
+Using template $paramod$521ce43182eecb9f60c72393a788160d2c356bf5\_90_pmux for cells of type $pmux.
+Using template $paramod$231afaec00e6fad0c71d9f677e0405124d548ad2\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $adff.
+Using extmapper simplemap for cells of type $dlatch.
+Using template $paramod$97565c3687be688407d1272a293bd9d0ae6852dc\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $pos.
+No more expansions possible.
+<suppressed ~830 debug messages>
+
+9.32. Executing OPT pass (performing simple optimizations).
+
+9.32.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module nbbsoc.
+<suppressed ~406 debug messages>
+
+9.32.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\nbbsoc'.
+<suppressed ~342 debug messages>
+Removed a total of 114 cells.
+
+9.32.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.32.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \nbbsoc..
+Removed 46 unused cells and 394 unused wires.
+<suppressed ~49 debug messages>
+
+9.32.5. Finished fast OPT passes.
+
+9.33. Executing ICE40_OPT pass (performing simple optimizations).
+
+9.33.1. Running ICE40 specific optimizations.
+
+9.33.2. Executing OPT_EXPR pass (perform const folding).
+Optimizing module nbbsoc.
+<suppressed ~10 debug messages>
+
+9.33.3. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\nbbsoc'.
+Removed a total of 0 cells.
+
+9.33.4. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.33.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \nbbsoc..
+
+9.33.6. Rerunning OPT passes. (Removed registers in this run.)
+
+9.33.7. Running ICE40 specific optimizations.
+
+9.33.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module nbbsoc.
+
+9.33.9. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\nbbsoc'.
+Removed a total of 0 cells.
+
+9.33.10. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.33.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \nbbsoc..
+
+9.33.12. Finished OPT passes. (There is nothing left to do.)
+
+9.34. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+
+9.35. Executing TECHMAP pass (map to technology primitives).
+
+9.35.1. Executing Verilog-2005 frontend: /home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/ff_map.v
+Parsing Verilog input from `/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/ff_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DFF_N_'.
+Generating RTLIL representation for module `\$_DFF_P_'.
+Generating RTLIL representation for module `\$_DFFE_NP_'.
+Generating RTLIL representation for module `\$_DFFE_PP_'.
+Generating RTLIL representation for module `\$_DFF_NP0_'.
+Generating RTLIL representation for module `\$_DFF_NP1_'.
+Generating RTLIL representation for module `\$_DFF_PP0_'.
+Generating RTLIL representation for module `\$_DFF_PP1_'.
+Generating RTLIL representation for module `\$_DFFE_NP0P_'.
+Generating RTLIL representation for module `\$_DFFE_NP1P_'.
+Generating RTLIL representation for module `\$_DFFE_PP0P_'.
+Generating RTLIL representation for module `\$_DFFE_PP1P_'.
+Generating RTLIL representation for module `\$_SDFF_NP0_'.
+Generating RTLIL representation for module `\$_SDFF_NP1_'.
+Generating RTLIL representation for module `\$_SDFF_PP0_'.
+Generating RTLIL representation for module `\$_SDFF_PP1_'.
+Generating RTLIL representation for module `\$_SDFFCE_NP0P_'.
+Generating RTLIL representation for module `\$_SDFFCE_NP1P_'.
+Generating RTLIL representation for module `\$_SDFFCE_PP0P_'.
+Generating RTLIL representation for module `\$_SDFFCE_PP1P_'.
+Successfully finished Verilog frontend.
+
+9.35.2. Continuing TECHMAP pass.
+Using template \$_DFFE_PP_ for cells of type $_DFFE_PP_.
+Using template \$_DFF_PP0_ for cells of type $_DFF_PP0_.
+No more expansions possible.
+<suppressed ~281 debug messages>
+
+9.36. Executing OPT_EXPR pass (perform const folding).
+Optimizing module nbbsoc.
+
+9.37. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+9.38. Executing ICE40_OPT pass (performing simple optimizations).
+
+9.38.1. Running ICE40 specific optimizations.
+
+9.38.2. Executing OPT_EXPR pass (perform const folding).
+Optimizing module nbbsoc.
+<suppressed ~43 debug messages>
+
+9.38.3. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\nbbsoc'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+9.38.4. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.38.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \nbbsoc..
+Removed 0 unused cells and 1296 unused wires.
+<suppressed ~1 debug messages>
+
+9.38.6. Rerunning OPT passes. (Removed registers in this run.)
+
+9.38.7. Running ICE40 specific optimizations.
+
+9.38.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module nbbsoc.
+
+9.38.9. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\nbbsoc'.
+Removed a total of 0 cells.
+
+9.38.10. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.38.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \nbbsoc..
+
+9.38.12. Finished OPT passes. (There is nothing left to do.)
+
+9.39. Executing TECHMAP pass (map to technology primitives).
+
+9.39.1. Executing Verilog-2005 frontend: /home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/latches_map.v
+Parsing Verilog input from `/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/latches_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DLATCH_N_'.
+Generating RTLIL representation for module `\$_DLATCH_P_'.
+Successfully finished Verilog frontend.
+
+9.39.2. Continuing TECHMAP pass.
+
+9.39.3. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+Mapping \$_DLATCH_N_.$ternary$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/latches_map.v:4$4255 ($mux).
+Mapping \$_DLATCH_N_.$logic_not$/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/latches_map.v:4$4254 ($logic_not).
+<suppressed ~4 debug messages>
+
+9.39.4. Executing OPT pass (performing simple optimizations).
+
+9.39.4.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module \$_DLATCH_N_.
+<suppressed ~1 debug messages>
+
+9.39.4.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\$_DLATCH_N_'.
+Removed a total of 0 cells.
+
+9.39.4.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \$_DLATCH_N_..
+Creating internal representation of mux trees.
+No muxes found in this module.
+Removed 0 multiplexer ports.
+
+9.39.4.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+Optimizing cells in module \$_DLATCH_N_.
+Performed a total of 0 changes.
+
+9.39.4.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\$_DLATCH_N_'.
+Removed a total of 0 cells.
+
+9.39.4.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.39.4.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \$_DLATCH_N_..
+Removed 1 unused cells and 2 unused wires.
+<suppressed ~2 debug messages>
+
+9.39.4.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module \$_DLATCH_N_.
+
+9.39.4.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+9.39.4.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \$_DLATCH_N_..
+Creating internal representation of mux trees.
+No muxes found in this module.
+Removed 0 multiplexer ports.
+
+9.39.4.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+Optimizing cells in module \$_DLATCH_N_.
+Performed a total of 0 changes.
+
+9.39.4.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\$_DLATCH_N_'.
+Removed a total of 0 cells.
+
+9.39.4.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+9.39.4.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \$_DLATCH_N_..
+
+9.39.4.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module \$_DLATCH_N_.
+
+9.39.4.16. Finished OPT passes. (There is nothing left to do.)
+Using template \$_DLATCH_N_ for cells of type $_DLATCH_N_.
+No more expansions possible.
+<suppressed ~24 debug messages>
+
+9.40. Executing ABC pass (technology mapping using ABC).
+
+9.40.1. Extracting gate netlist of module `\nbbsoc' to `<abc-temp-dir>/input.blif'..
+Breaking loop using new signal $abcloop$4260: \nbbpu.write_data [0] -> \nbbpu.write_data [0]
+\nbbpu.write_data [0] -> $auto$rtlil.cc:2307:NotGate$3992
+Breaking loop using new signal $abcloop$4261: \nbbpu.write_data [15] -> \nbbpu.write_data [15]
+\nbbpu.write_data [15] -> $flatten\nbbpu.$and$nbbpu.v:140$25_Y
+Breaking loop using new signal $abcloop$4262: \nbbpu.address [0] -> \nbbpu.address [0]
+Breaking loop using new signal $abcloop$4263: \nbbpu.address [1] -> \nbbpu.address [1]
+Breaking loop using new signal $abcloop$4264: \nbbpu.address [2] -> \nbbpu.address [2]
+Breaking loop using new signal $abcloop$4265: \nbbpu.address [3] -> \nbbpu.address [3]
+Breaking loop using new signal $abcloop$4266: \nbbpu.address [4] -> \nbbpu.address [4]
+Breaking loop using new signal $abcloop$4267: \nbbpu.address [5] -> \nbbpu.address [5]
+Breaking loop using new signal $abcloop$4268: \nbbpu.address [6] -> \nbbpu.address [6]
+Breaking loop using new signal $abcloop$4269: \nbbpu.address [7] -> \nbbpu.address [7]
+Breaking loop using new signal $abcloop$4270: \nbbpu.write_data [1] -> \nbbpu.write_data [1]
+Breaking loop using new signal $abcloop$4271: \nbbpu.write_data [2] -> \nbbpu.write_data [2]
+Breaking loop using new signal $abcloop$4272: \nbbpu.write_data [3] -> \nbbpu.write_data [3]
+Breaking loop using new signal $abcloop$4273: \nbbpu.write_data [4] -> \nbbpu.write_data [4]
+Breaking loop using new signal $abcloop$4274: \nbbpu.write_data [5] -> \nbbpu.write_data [5]
+Breaking loop using new signal $abcloop$4275: \nbbpu.write_data [6] -> \nbbpu.write_data [6]
+Breaking loop using new signal $abcloop$4276: \nbbpu.write_data [7] -> \nbbpu.write_data [7]
+Breaking loop using new signal $abcloop$4277: \nbbpu.write_data [8] -> \nbbpu.write_data [8]
+Breaking loop using new signal $abcloop$4278: \nbbpu.write_data [9] -> \nbbpu.write_data [9]
+Breaking loop using new signal $abcloop$4279: \nbbpu.write_data [10] -> \nbbpu.write_data [10]
+Breaking loop using new signal $abcloop$4280: \nbbpu.write_data [11] -> \nbbpu.write_data [11]
+Breaking loop using new signal $abcloop$4281: \nbbpu.write_data [12] -> \nbbpu.write_data [12]
+Breaking loop using new signal $abcloop$4282: \nbbpu.write_data [13] -> \nbbpu.write_data [13]
+Breaking loop using new signal $abcloop$4283: \nbbpu.write_data [14] -> \nbbpu.write_data [14]
+Extracted 1299 gates and 1649 wires to a netlist network with 348 inputs and 131 outputs.
+
+9.40.1.1. Executing ABC.
+Running ABC command: <yosys-exe-dir>/yosys-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC:
+ABC: + read_blif <abc-temp-dir>/input.blif
+ABC: + read_lut <abc-temp-dir>/lutdefs.txt
+ABC: + strash
+ABC: + ifraig
+ABC: + scorr
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2
+ABC: + dretime
+ABC: + strash
+ABC: + dch -f
+ABC: + if
+ABC: + mfs2
+ABC: + lutpack -S 1
+ABC: + dress
+ABC: Total number of equiv classes                =     265.
+ABC: Participating nodes from both networks       =     648.
+ABC: Participating nodes from the first network   =     302. (  36.61 % of nodes)
+ABC: Participating nodes from the second network  =     346. (  41.94 % of nodes)
+ABC: Node pairs (any polarity)                    =     299. (  36.24 % of names can be moved)
+ABC: Node pairs (same polarity)                   =     206. (  24.97 % of names can be moved)
+ABC: Total runtime =     0.01 sec
+ABC: + write_blif <abc-temp-dir>/output.blif
+
+9.40.1.2. Re-integrating ABC results.
+ABC RESULTS:              $lut cells:      824
+ABC RESULTS:        internal signals:     1170
+ABC RESULTS:           input signals:      348
+ABC RESULTS:          output signals:      131
+Removing temp directory.
+
+9.41. Executing ICE40_WRAPCARRY pass (wrap carries).
+
+9.42. Executing TECHMAP pass (map to technology primitives).
+
+9.42.1. Executing Verilog-2005 frontend: /home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/ff_map.v
+Parsing Verilog input from `/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/ff_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DFF_N_'.
+Generating RTLIL representation for module `\$_DFF_P_'.
+Generating RTLIL representation for module `\$_DFFE_NP_'.
+Generating RTLIL representation for module `\$_DFFE_PP_'.
+Generating RTLIL representation for module `\$_DFF_NP0_'.
+Generating RTLIL representation for module `\$_DFF_NP1_'.
+Generating RTLIL representation for module `\$_DFF_PP0_'.
+Generating RTLIL representation for module `\$_DFF_PP1_'.
+Generating RTLIL representation for module `\$_DFFE_NP0P_'.
+Generating RTLIL representation for module `\$_DFFE_NP1P_'.
+Generating RTLIL representation for module `\$_DFFE_PP0P_'.
+Generating RTLIL representation for module `\$_DFFE_PP1P_'.
+Generating RTLIL representation for module `\$_SDFF_NP0_'.
+Generating RTLIL representation for module `\$_SDFF_NP1_'.
+Generating RTLIL representation for module `\$_SDFF_PP0_'.
+Generating RTLIL representation for module `\$_SDFF_PP1_'.
+Generating RTLIL representation for module `\$_SDFFCE_NP0P_'.
+Generating RTLIL representation for module `\$_SDFFCE_NP1P_'.
+Generating RTLIL representation for module `\$_SDFFCE_PP0P_'.
+Generating RTLIL representation for module `\$_SDFFCE_PP1P_'.
+Successfully finished Verilog frontend.
+
+9.42.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~22 debug messages>
+Removed 18 unused cells and 801 unused wires.
+
+9.43. Executing OPT_LUT pass (optimize LUTs).
+Discovering LUTs.
+Number of LUTs:      856
+1-LUT               37
+2-LUT               62
+3-LUT              224
+4-LUT              533
+
+Eliminating LUTs.
+Number of LUTs:      856
+1-LUT               37
+2-LUT               62
+3-LUT              224
+4-LUT              533
+
+Combining LUTs.
+Number of LUTs:      850
+1-LUT               36
+2-LUT               57
+3-LUT              219
+4-LUT              538
+
+Eliminated 0 LUTs.
+Combined 6 LUTs.
+<suppressed ~6467 debug messages>
+
+9.44. Executing TECHMAP pass (map to technology primitives).
+
+9.44.1. Executing Verilog-2005 frontend: /home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_map.v
+Parsing Verilog input from `/home/kampff/.apio/packages/tools-oss-cad-suite/lib/../share/yosys/ice40/cells_map.v' to AST representation.
+Generating RTLIL representation for module `\$lut'.
+Successfully finished Verilog frontend.
+
+9.44.2. Continuing TECHMAP pass.
+Using template $paramod$571404c0889eaf57f492cb5e37f8acb5df5852f9\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00110101 for cells of type $lut.
+Using template $paramod$973818279bc95792902f3c09371fd2407d04a2a5\$lut for cells of type $lut.
+Using template $paramod$e49f6e3576ef1a6d2f58c54414dbb786af8cc869\$lut for cells of type $lut.
+Using template $paramod$c5b694ec89d7629b942ccf6a9be1d39e24f8edec\$lut for cells of type $lut.
+Using template $paramod$b431bfd938e35871dd0b7668e1503c7e8b9d491c\$lut for cells of type $lut.
+Using template $paramod$a50be0e6fa3a01511bb234559cb74fb8bd3e2061\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00000001 for cells of type $lut.
+Using template $paramod$81d8a60fd95b1a9f9ef71c12a774ae6988cb9fd5\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0001 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0100 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00010000 for cells of type $lut.
+Using template $paramod$179512a187da069f3b79ef6612a41e494e7d54b6\$lut for cells of type $lut.
+Using template $paramod$a670b08a47dd8a34f954c50cd06e9996d77e8467\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11001010 for cells of type $lut.
+Using template $paramod$fd904e9e35cfd343a9df248824bd3f1408724879\$lut for cells of type $lut.
+Using template $paramod$456518d681b099e47e304359458496f2552b5118\$lut for cells of type $lut.
+Using template $paramod$ad3a97108c9f4d10f8acfa309b668b9455d3d733\$lut for cells of type $lut.
+Using template $paramod$a44bfc089ebe40b83c2c06bb965c500df992ecfb\$lut for cells of type $lut.
+Using template $paramod$d6d3aaeac1b9aa2c4b652c48e0deb565040dda72\$lut for cells of type $lut.
+Using template $paramod$19ec49f31a8d230a567aa44ce3ea81a03c101e2b\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01010011 for cells of type $lut.
+Using template $paramod$658b9ed803f0d3d335616d3858b53e0a2522f1e8\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000001\LUT=2'01 for cells of type $lut.
+Using template $paramod$99a2a175d178a040bb1ffceb53184fb0f59423c6\$lut for cells of type $lut.
+Using template $paramod$272652f6c6fbe9a75eff76e45cc7e2788835518b\$lut for cells of type $lut.
+Using template $paramod$6e238df02989b317f10820a22773676e71120644\$lut for cells of type $lut.
+Using template $paramod$608f40069c27841a5b3bdf03643a34bdc8974072\$lut for cells of type $lut.
+Using template $paramod$51307cdec77060d17363ea3d60427c9afef1ddc2\$lut for cells of type $lut.
+Using template $paramod$de3d8c0ac9a85f776878d56395b6e0bf04ae72e7\$lut for cells of type $lut.
+Using template $paramod$adac5163f2ca606e303e4fcb6e4ac1a8cfe9825d\$lut for cells of type $lut.
+Using template $paramod$2c4c7dfdf674b9c90d6c2cae622d527a6d7d0c22\$lut for cells of type $lut.
+Using template $paramod$64669a7e87c28e39425dffff48145545533b4971\$lut for cells of type $lut.
+Using template $paramod$7a9d9396461df152f697894fa3b294ad1b285e08\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1000 for cells of type $lut.
+Using template $paramod$8b24407096beec47292ddeb1567a058197a320b9\$lut for cells of type $lut.
+Using template $paramod$94ac66a11090dca84889e55fcf03297912a5b7ec\$lut for cells of type $lut.
+Using template $paramod$c24ed72ebb67e9ead6029e42e909ef7fc0abbb11\$lut for cells of type $lut.
+Using template $paramod$e9c77024ca501b890c641f9c0b10e27242db8730\$lut for cells of type $lut.
+Using template $paramod$ab8bb87959c5d7cfa27886cee1355b38e054a61a\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00001110 for cells of type $lut.
+Using template $paramod$4da6fe9957da309dc16b8f31a6b80b19c05c808d\$lut for cells of type $lut.
+Using template $paramod$2f99e7dde0142f5eb4336d05fd90a596d3f2e038\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01011100 for cells of type $lut.
+Using template $paramod$bdb7f9ed72fd4f5c7ad81c376f2d8a5c72a0098d\$lut for cells of type $lut.
+Using template $paramod$048d4aa2263b685fba6c6b0d38f6224df0dc3042\$lut for cells of type $lut.
+Using template $paramod$b297295e19b03521716155b85537bbe86d6a9ae6\$lut for cells of type $lut.
+Using template $paramod$0de052767abdccc3aefc818722bdc3c7850d25d6\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00001101 for cells of type $lut.
+Using template $paramod$c7c1a54242e1cb74aaf706de14d1eb29e4c0d7fd\$lut for cells of type $lut.
+Using template $paramod$1674868d909954f1798905b10bc8fc182227e6d9\$lut for cells of type $lut.
+Using template $paramod$4282def8dbd6df3d1248ad282c629bee684502c2\$lut for cells of type $lut.
+Using template $paramod$6d6beead1425af15cf78b27fd9b11b41b5d4bce8\$lut for cells of type $lut.
+Using template $paramod$12879138d1e376f344e47ea40be66b776233be75\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11100001 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01000000 for cells of type $lut.
+Using template $paramod$bf60f6ec407ee294958b6566514fc3125ec42258\$lut for cells of type $lut.
+Using template $paramod$fceb3a526de44b8f6b38e567360f59f7cf5878fb\$lut for cells of type $lut.
+Using template $paramod$b637cf4714c2e93484bb499728e176a6ab69c910\$lut for cells of type $lut.
+Using template $paramod$f63fe32f78d5f3c5de711945c592c8c5ec2303ae\$lut for cells of type $lut.
+Using template $paramod$53ce561f80f32d4298a3beadc88b6c5c78293221\$lut for cells of type $lut.
+Using template $paramod$f9ade28f1669c608093cfc771d07571aec15660d\$lut for cells of type $lut.
+Using template $paramod$71d951b20e73043168c1656217d126e617052faa\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'01110000 for cells of type $lut.
+Using template $paramod$04b674496422df8889c01c3744b94097628ccfbc\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'11000101 for cells of type $lut.
+Using template $paramod$1843b3c15f2447d117e2d5de9b00f791ef5f9fa3\$lut for cells of type $lut.
+Using template $paramod$bba54c1ef87367812b4c15f4aed5ac70773df775\$lut for cells of type $lut.
+Using template $paramod$41326ad8644342a66dfb051d050f2b6fbf15015b\$lut for cells of type $lut.
+Using template $paramod$10b0fe3049cfd7e6d38533387eb2b0cfded868cf\$lut for cells of type $lut.
+Using template $paramod$d6cf0a4b6f6ccd87588da28c41b5b6c258da2509\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'00111010 for cells of type $lut.
+Using template $paramod$cd05f04889088c47a0a5abae8c2d644fd314805e\$lut for cells of type $lut.
+Using template $paramod$b2a4860cd839ff40d9dca4c3f237b2b534267028\$lut for cells of type $lut.
+Using template $paramod$044e8b1893c94f717651c5cd428e71c892566f52\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10101100 for cells of type $lut.
+Using template $paramod$fe9a0158d0352193457c4f5b6282ac86d35fb3ee\$lut for cells of type $lut.
+Using template $paramod$b93d1ea7a612a32c185108f67a153d44ffb9aac2\$lut for cells of type $lut.
+Using template $paramod$89add7395f09a7f1d31ba23a20843f5b8e155407\$lut for cells of type $lut.
+Using template $paramod$4e1cecab63d8e9cc19cb0241724b1211fb7856cb\$lut for cells of type $lut.
+Using template $paramod$e5e9da8fed769f971686eed8c5eea50e61f73aaa\$lut for cells of type $lut.
+Using template $paramod$d35161d1d7976dcc02e7c7d51172431be85143b4\$lut for cells of type $lut.
+Using template $paramod$49308c380d4434ff502cc9276068deff427c75f2\$lut for cells of type $lut.
+Using template $paramod$c1a19a87ccbbb03d43a72335db63f692ddf82cc1\$lut for cells of type $lut.
+Using template $paramod$71cb81cd7ec213b39129c5f3867d1aa22dffde1b\$lut for cells of type $lut.
+Using template $paramod$314fe9458b07176c4d2c8c59533027c4c55155b5\$lut for cells of type $lut.
+Using template $paramod$332a399730bfc61adea04021a76b1c4e4030f37d\$lut for cells of type $lut.
+Using template $paramod$38f9bf4dd2329347b8471f0a98443dd323386889\$lut for cells of type $lut.
+Using template $paramod$b4d0f4738a5ce50c7f36c2aa2ecc09cfb874f2b6\$lut for cells of type $lut.
+Using template $paramod$703a13a751e631ef123f38f7d2125aeabec0f94c\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10100011 for cells of type $lut.
+Using template $paramod$06a49eeef9c9c0ca3eeb308c4b5ee09a412d6201\$lut for cells of type $lut.
+Using template $paramod$38a207c707820f72f67386d2619ee46ee88964f9\$lut for cells of type $lut.
+Using template $paramod$4b2297966ddb718657b80566604f97685ffc0120\$lut for cells of type $lut.
+Using template $paramod$440c55e9b86a4d19d2d9af4513ac1f3c626292af\$lut for cells of type $lut.
+Using template $paramod$40882341c54dcd36f630f00dd7e46a35652abd36\$lut for cells of type $lut.
+Using template $paramod$b4f85a6321a00b090afc4e21d68e7b99eb94d149\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'1011 for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000011\LUT=8'10000000 for cells of type $lut.
+Using template $paramod$388dbf93bee91918d385c696f1b8d4515b94b317\$lut for cells of type $lut.
+Using template $paramod$1bf62ab10e48d71d6497bccacf5c70420c470fe9\$lut for cells of type $lut.
+Using template $paramod\$lut\WIDTH=32'00000000000000000000000000000010\LUT=4'0110 for cells of type $lut.
+No more expansions possible.
+<suppressed ~2179 debug messages>
+Removed 0 unused cells and 2056 unused wires.
+
+9.45. Executing AUTONAME pass.
+Renamed 23162 objects in module nbbsoc (65 iterations).
+<suppressed ~1525 debug messages>
+
+9.46. Executing HIERARCHY pass (managing design hierarchy).
+
+9.46.1. Analyzing design hierarchy..
+Top module:  \nbbsoc
+
+9.46.2. Analyzing design hierarchy..
+Top module:  \nbbsoc
+Removed 0 unused modules.
+
+9.47. Printing statistics.
+
+=== nbbsoc ===
+
+Number of wires:                462
+Number of wire bits:           2186
+Number of public wires:         462
+Number of public wire bits:    2186
+Number of memories:               0
+Number of memory bits:            0
+Number of processes:              0
+Number of cells:               1157
+SB_CARRY                       46
+SB_DFFE                       257
+SB_DFFR                         2
+SB_LUT4                       850
+SB_RAM40_4K                     2
+
+9.48. Executing CHECK pass (checking for obvious problems).
+Checking module nbbsoc...
+Found and reported 0 problems.
+
+9.49. Executing JSON backend.
+
+Warnings: 32 unique messages, 32 total
+End of script. Logfile hash: d3c43cdbc7, CPU: user 0.98s system 0.02s, MEM: 63.75 MB peak
+Yosys 0.9+4081 (git sha1 862e84eb, clang 10.0.0-4ubuntu1 -fPIC -Os)
+Time spent: 57% 1x abc (1 sec), 8% 7x techmap (0 sec), ...
+nextpnr-ice40 --up5k --package sg48 --json hardware.json --asc hardware.asc --pcf nbbsoc.pcf
+Info: constrained 'blink' to bel 'X6/Y31/io0'
+Info: constrained 'clock' to bel 'X19/Y0/io1'
+Info: constrained 'reset' to bel 'X16/Y0/io0'
+
+Info: Packing constants..
+Info: Packing IOs..
+Info: Packing LUT-FFs..
+Info:      846 LCs used as LUT4 only
+Info:        4 LCs used as LUT4 and DFF
+Info: Packing non-LUT FFs..
+Info:      255 LCs used as DFF only
+Info: Packing carries..
+Info:       18 LCs used as CARRY only
+Info: Packing RAMs..
+Info: Placing PLLs..
+Info: Packing special functions..
+Info: Packing PLLs..
+Info: Promoting globals..
+Info: promoting clock$SB_IO_IN (fanout 262)
+Info: promoting nbbpu.current_state_SB_LUT4_I2_O_SB_LUT4_I3_O_SB_LUT4_I1_O [cen] (fanout 16)
+Info: promoting nbbpu.current_state_SB_LUT4_I2_O_SB_LUT4_I3_O_SB_LUT4_I2_O [cen] (fanout 16)
+Info: promoting nbbpu.current_state_SB_LUT4_I2_O_SB_LUT4_I1_O_SB_LUT4_I1_O [cen] (fanout 16)
+Info: promoting nbbpu.current_state_SB_LUT4_I2_O_SB_LUT4_I1_O_SB_LUT4_I2_O [cen] (fanout 16)
+Info: promoting $PACKER_GND_NET (fanout 1)
+Info: Constraining chains...
+Info:        1 LCs used to legalise carry chains.
+Info: Checksum: 0x994571f4
+
+Info: Annotating ports with timing budgets for target frequency 12.00 MHz
+Info:    remaining fanin includes O (net write_data[9])
+Info:         driver = nbbpu.write_data_SB_LUT4_O_6_LC.O
+Info:         user: nbbpu.write_data_SB_LUT4_O_6_LC.I1
+Info:         user: ram.RAM.0.0.0_RAM.WDATA_9
+Info:    remaining fanin includes O (net address[6])
+Info:         driver = nbbpu.address_SB_LUT4_O_1_LC.O
+Info:         user: nbbpu.address_SB_LUT4_O_1_LC.I1
+Info:         user: ram.RAM.0.0.0_RAM.RADDR_6
+Info:         user: ram.RAM.0.0.0_RAM.WADDR_6
+Info:    remaining fanin includes O (net address[3])
+Info:         driver = nbbpu.address_SB_LUT4_O_4_LC.O
+Info:         user: nbbpu.address_SB_LUT4_O_4_LC.I1
+Info:         user: ram.RAM.0.0.0_RAM.RADDR_3
+Info:         user: ram.RAM.0.0.0_RAM.WADDR_3
+Info:    remaining fanin includes O (net write_data[14])
+Info:         driver = nbbpu.write_data_SB_LUT4_O_1_LC.O
+Info:         user: nbbpu.write_data_SB_LUT4_O_1_LC.I1
+Info:         user: ram.RAM.0.0.0_RAM.WDATA_14
+Info:    remaining fanin includes O (net write_data[7])
+Info:         driver = nbbpu.write_data_SB_LUT4_O_8_LC.O
+Info:         user: nbbpu.write_data_SB_LUT4_O_8_LC.I1
+Info:         user: ram.RAM.0.0.0_RAM.WDATA_7
+Info:    remaining fanin includes O (net write_data[11])
+Info:         driver = nbbpu.write_data_SB_LUT4_O_4_LC.O
+Info:         user: nbbpu.write_data_SB_LUT4_O_4_LC.I1
+Info:         user: ram.RAM.0.0.0_RAM.WDATA_11
+Info:    remaining fanin includes O (net write_data[4])
+Info:         driver = nbbpu.write_data_SB_LUT4_O_11_LC.O
+Info:         user: nbbpu.write_data_SB_LUT4_O_11_LC.I1
+Info:         user: ram.RAM.0.0.0_RAM.WDATA_4
+Info:    remaining fanin includes O (net write_data[2])
+Info:         driver = nbbpu.write_data_SB_LUT4_O_13_LC.O
+Info:         user: nbbpu.write_data_SB_LUT4_O_13_LC.I1
+Info:         user: ram.RAM.0.0.0_RAM.WDATA_2
+Info:    remaining fanin includes O (net address[4])
+Info:         driver = nbbpu.address_SB_LUT4_O_3_LC.O
+Info:         user: nbbpu.address_SB_LUT4_O_3_LC.I1
+Info:         user: ram.RAM.0.0.0_RAM.RADDR_4
+Info:         user: ram.RAM.0.0.0_RAM.WADDR_4
+Info:    remaining fanin includes O (net write_data[6])
+Info:         driver = nbbpu.write_data_SB_LUT4_O_9_LC.O
+Info:         user: nbbpu.write_data_SB_LUT4_O_9_LC.I1
+Info:         user: ram.RAM.0.0.0_RAM.WDATA_6
+Info:    remaining fanin includes O (net write_data[13])
+Info:         driver = nbbpu.write_data_SB_LUT4_O_2_LC.O
+Info:         user: nbbpu.write_data_SB_LUT4_O_2_LC.I1
+Info:         user: ram.RAM.0.0.0_RAM.WDATA_13
+Info:    remaining fanin includes O (net address[5])
+Info:         driver = nbbpu.address_SB_LUT4_O_2_LC.O
+Info:         user: nbbpu.address_SB_LUT4_O_2_LC.I1
+Info:         user: ram.RAM.0.0.0_RAM.RADDR_5
+Info:         user: ram.RAM.0.0.0_RAM.WADDR_5
+Info:    remaining fanin includes O (net address[7])
+Info:         driver = nbbpu.address_SB_LUT4_O_LC.O
+Info:         user: nbbpu.address_SB_LUT4_O_LC.I1
+Info:         user: ram.RAM.0.0.0_RAM.RADDR_7
+Info:         user: ram.RAM.0.0.0_RAM.WADDR_7
+Info:    remaining fanin includes O (net blink_SB_LUT4_O_I3_SB_DFFE_Q_E)
+Info:         driver = nbbpu.controller.write_enable_SB_LUT4_I2_LC.O
+Info:         user: blink_SB_LUT4_O_I3_SB_DFFE_Q_D_SB_LUT4_O_LC.CEN
+Info:    remaining fanin includes O (net write_data[5])
+Info:         driver = nbbpu.write_data_SB_LUT4_O_10_LC.O
+Info:         user: nbbpu.write_data_SB_LUT4_O_10_LC.I1
+Info:         user: ram.RAM.0.0.0_RAM.WDATA_5
+Info:    remaining fanin includes O (net write_data[8])
+Info:         driver = nbbpu.write_data_SB_LUT4_O_7_LC.O
+Info:         user: nbbpu.write_data_SB_LUT4_O_7_LC.I1
+Info:         user: ram.RAM.0.0.0_RAM.WDATA_8
+Info:    remaining fanin includes O (net write_data[0])
+Info:         driver = nbbpu.write_data_SB_LUT4_O_15_LC.O
+Info:         user: blink_SB_LUT4_O_I3_SB_DFFE_Q_D_SB_LUT4_O_LC.I3
+Info:         user: nbbpu.write_data_SB_LUT4_O_15_LC.I2
+Info:         user: ram.RAM.0.0.0_RAM.WDATA_0
+Info:    remaining fanin includes O (net address[2])
+Info:         driver = nbbpu.address_SB_LUT4_O_5_LC.O
+Info:         user: nbbpu.address_SB_LUT4_O_5_LC.I1
+Info:         user: ram.RAM.0.0.0_RAM.RADDR_2
+Info:         user: ram.RAM.0.0.0_RAM.WADDR_2
+Info:    remaining fanin includes O (net write_data[10])
+Info:         driver = nbbpu.write_data_SB_LUT4_O_5_LC.O
+Info:         user: nbbpu.write_data_SB_LUT4_O_5_LC.I1
+Info:         user: ram.RAM.0.0.0_RAM.WDATA_10
+Info:    remaining fanin includes O (net write_data[15])
+Info:         driver = nbbpu.write_data_SB_LUT4_O_LC.O
+Info:         user: nbbpu.controller.write_enable_SB_LUT4_I2_LC.I3
+Info:         user: nbbpu.write_data_SB_LUT4_O_LC.I1
+Info:         user: ram.RAM.0.0.0_RAM.WDATA_15
+Info:    remaining fanin includes O (net address[0])
+Info:         driver = nbbpu.address_SB_LUT4_O_7_LC.O
+Info:         user: nbbpu.address_SB_LUT4_O_7_LC.I1
+Info:         user: ram.RAM.0.0.0_RAM.RADDR_0
+Info:         user: ram.RAM.0.0.0_RAM.WADDR_0
+Info:    remaining fanin includes O (net write_data[3])
+Info:         driver = nbbpu.write_data_SB_LUT4_O_12_LC.O
+Info:         user: nbbpu.write_data_SB_LUT4_O_12_LC.I1
+Info:         user: ram.RAM.0.0.0_RAM.WDATA_3
+Info:    remaining fanin includes O (net address[1])
+Info:         driver = nbbpu.address_SB_LUT4_O_6_LC.O
+Info:         user: nbbpu.address_SB_LUT4_O_6_LC.I1
+Info:         user: ram.RAM.0.0.0_RAM.RADDR_1
+Info:         user: ram.RAM.0.0.0_RAM.WADDR_1
+Info:    remaining fanin includes O (net write_data[1])
+Info:         driver = nbbpu.write_data_SB_LUT4_O_14_LC.O
+Info:         user: nbbpu.write_data_SB_LUT4_O_14_LC.I1
+Info:         user: ram.RAM.0.0.0_RAM.WDATA_1
+Info:    remaining fanin includes O (net write_data[12])
+Info:         driver = nbbpu.write_data_SB_LUT4_O_3_LC.O
+Info:         user: nbbpu.write_data_SB_LUT4_O_3_LC.I1
+Info:         user: ram.RAM.0.0.0_RAM.WDATA_12
+ERROR: timing analysis failed due to presence of combinatorial loops, incomplete specification of timing ports, etc.
+0 warnings, 1 error
+scons: *** [hardware.asc] Error 255
