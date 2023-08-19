@@ -10,6 +10,7 @@ NBBPU=$LBB_ROOT"/boxes/computers/NBBPU"
 MODULES=$NBBPU"/verilog/modules"
 
 # Create out directory
+rm -rf bin
 mkdir -p bin
 mkdir -p bin/bin
 
@@ -33,4 +34,6 @@ apio build --project-dir=bin --board upduino3 --verbose
 #cd bin
 #nextpnr-ice40 --up5k --package sg48 --json hardware.json --asc hardware.asc --pcf nbbsoc.pcf --pcf-allow-unconstrained
 
+# Upload
+#apio upload --project-dir=bin --board upduino3 --verbose
 # FIN

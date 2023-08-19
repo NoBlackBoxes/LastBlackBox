@@ -2,12 +2,12 @@
 // --------------------------------------------------------
 // This is the top module of the NBBSOC (System-on-a-chip). 
 // --------------------------------------------------------
-module nbbsoc(clock, reset, blink);
+module nbbsoc(clock, reset, RGB);
     
     // Declarations
     input clock;
     input reset;
-    output blink;
+    output [2:0] RGB;
 
     // Intermediates
     wire select;
@@ -19,7 +19,7 @@ module nbbsoc(clock, reset, blink);
     wire [15:0] address;
     wire [15:0] write_data;
     wire [15:0] PC;
-    wire debug;
+    wire [2:0] debug_RGB;
 
     // Assignments
     assign select = 1'b1;
@@ -36,13 +36,13 @@ module nbbsoc(clock, reset, blink);
                 address, 
                 write_data, 
                 PC, 
-                debug);
+                debug_RGB);
     
     // Create Instruction and Data Memory modules
     rom rom(clock, select, instruction_enable, PC, instruction);
     ram ram(clock, select, read_enable, write_enable, address, write_data, read_data);
     
     // Assign Debug signals
-    assign blink = debug;
+    assign RGB = debug_RGB;
 
 endmodule

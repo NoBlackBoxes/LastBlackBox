@@ -13,8 +13,10 @@ module rom(clock, select, read_enable, address, read_data);
 
     // Initialize
     initial
-        $readmemh("bin/rom.txt", ROM);
-
+        begin
+            $readmemh("bin/rom.txt", ROM);
+        end
+    
     // Logic (read output data)
     always @(posedge clock)
         begin

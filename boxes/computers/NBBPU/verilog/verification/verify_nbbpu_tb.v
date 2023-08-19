@@ -47,7 +47,7 @@ module verify_nbbpu_tb();
             $dumpvars(0, verify_nbbpu_tb);
             
             instruction_counter <= 0;
-            t_reset <= 0; # 22; t_reset <= 1; # 20; t_reset <= 0;
+            t_reset <= 1; # 22; t_reset <= 0; # 20; t_reset <= 1;
         end   
     
     // Generate clock

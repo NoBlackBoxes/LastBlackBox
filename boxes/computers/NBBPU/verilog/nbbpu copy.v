@@ -13,7 +13,7 @@ module nbbpu(
                 address, 
                 write_data, 
                 PC, 
-                debug_RGB
+                debug
             );
     
     // Declarations
@@ -27,7 +27,7 @@ module nbbpu(
     output [15:0] address;
     output [15:0] write_data;
     output reg [15:0] PC;
-    output [2:0] debug_RGB;
+    output reg debug;
 
     // Parameters (Cycle States)
     parameter FETCH     = 2'b00;    // Fetch next instruction from ROM
@@ -51,11 +51,13 @@ module nbbpu(
 
     // Assignments
     assign opcode = instruction[15:12];
-    //assign _x = instruction[11:8];
-    //assign y = instruction[7:4];
-    //assign z = instruction[3:0];
-    //assign address = X;             // ??
-    //assign write_data = Z;          // ??
+    assign _x = instruction[11:8];
+    assign y = instruction[7:4];
+    assign z = instruction[3:0];
+
+
+    assign address = X;
+    assign write_data = Z;
 
     // Sub-module: Controller
     controller controller
@@ -71,32 +73,25 @@ module nbbpu(
         branch_PC               // (output) branch PC signal
     );
 
-    // Debug
-    //assign instruction_enable = 1'b1;
-    reg [31:0] counter; // 32-bit counter
-    //assign debug_RGB = {counter[23], counter[23], counter[23]};
-    assign debug_RGB = instruction[2:0];
+    // Logic (register set)
+    mux2 #(4) x_mux(_x, z, reg_set, x);
 
-    //// Logic (register set)
-    //mux2 #(4) x_mux(_x, z, reg_set, x);
-    //
-    //// Logic (register file)
-    //regfile regfile(clock, reg_write, z, Z, x, y, X, Y);
-    //
-    //// Logic (branch)
-    //assign branch_or_jump_PC = (jump_PC | (Z[0] & branch_PC));
-    //
-    //// Logic (ALU)
-    //alu alu(X, Y, instruction, read_data, PC, Z);
+    // Logic (register file)
+    regfile regfile(clock, reg_write, z, Z, x, y, X, Y);
+
+    // Logic (branch)
+    assign branch_or_jump_PC = (jump_PC | (Z[0] & branch_PC));
+
+    // Logic (ALU)
+    alu alu(X, Y, instruction, read_data, PC, Z);
 
     // Cycle State Machine
     initial 
         begin
-            PC = 16'd0;
-            counter = 32'd0;
             current_state = FETCH;
+            PC = 0;
         end
-    always @(current_state)
+    always @(*)
         begin
             case(current_state)
                 FETCH:
@@ -109,34 +104,43 @@ module nbbpu(
                     end
                 EXECUTE:
                     begin
+                        if(branch_or_jump_PC)
+                            PC_next = X;
+                        else
+                            PC_next = PC + 1;
                         next_state = STORE;
                     end
                 STORE:
                     begin
-                        next_state <= FETCH;
+                        PC = PC_next;
+                        next_state = FETCH;
                     end
             endcase
         end
 
     // Update State
-    always @(posedge clock, posedge reset)
+    always @(posedge clock)
         begin
-            if(reset)
+            if(!reset) 
                 begin
-                    PC <= 16'd0;
-                    counter <= 32'd0;
                     current_state <= FETCH;
+                    PC <= 0;
                 end
             else
                 begin
-                    counter <= counter + 32'd1;
-                    if(counter >= 32'h00FFFFFF)
-                        begin
-                            counter <= 32'd0;
-                            PC <= PC + 1;
-                            current_state = next_state;
-                        end
+                    current_state <= next_state;
                 end
+        end
+
+    // Assign Debug Signal
+    initial 
+        begin
+            debug = 1'b1;
+        end
+    always @(posedge clock)
+        begin
+            if((write_data[15] == 1'b1) & write_enable)
+                debug = write_data[0];     
         end
 
 endmodule
