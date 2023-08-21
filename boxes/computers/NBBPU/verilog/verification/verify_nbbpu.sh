@@ -11,7 +11,8 @@ MODULES=$NBBPU"/verilog/modules"
 TESTS=$NBBPU"/verilog/verification/tests/*.as"
 ASSEMBLER=$NBBPU"/assembler/assemble.py"
 
-# Create out directory
+# Create (new) output directory
+rm -rf bin
 mkdir -p bin
 
 # Build CPU
@@ -22,6 +23,7 @@ iverilog -o bin/verify_nbbpu \
     $MODULES/alu.v \
     $MODULES/rom.v \
     $MODULES/ram.v \
+    $MODULES/flopenr.v \
     $MODULES/mux2.v \
     verify_nbbpu_tb.v
 

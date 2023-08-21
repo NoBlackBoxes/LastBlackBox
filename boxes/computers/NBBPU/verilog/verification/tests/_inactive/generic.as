@@ -15,9 +15,9 @@ SUB 8 7 9   #13 Subtract values in regs 8 and 7, store result in reg 9
 SEL 0 6 4   #14 Set lower byte of reg 4 to 07
 SEU 0 6 4   #15 Set upper byte of reg 4 to 06
 SUB 9 4 2   #16 Subtract values in regs 9 and 4, store result in reg 2
-SEL F 0 2   #00 Set lower byte of reg 2 to F0
-SEU F F 2   #01 Set upper byte of reg 2 to FF
-SEL 0 1 3   #00 Set lower byte of reg 3 to 01
-SEU 0 0 3   #01 Set upper byte of reg 3 to 00
-STR 2 3 0   #08 Store value in reg 3 at address in reg 2
+SEL F 0 2   #xx Set lower byte of reg 2 to F0
+SEU F F 2   #xx Set upper byte of reg 2 to FF
+SEL 2 A 3   #xx Set lower byte of reg 3 to 2A (d42)
+SEU 0 0 3   #xx Set upper byte of reg 3 to 00
+STR 2 3 0   #xx Store value in reg 3 at address in reg 2
 #FIN

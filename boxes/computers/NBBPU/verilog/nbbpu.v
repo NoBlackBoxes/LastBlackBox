@@ -3,8 +3,8 @@
 // This is the top module of the NBBPU (CPU)
 // -----------------------------------------
 module nbbpu(
-                clock, 
-                reset, 
+                fast_clock,
+                reset,
                 instruction, 
                 read_data, 
                 instruction_enable, 
@@ -17,7 +17,7 @@ module nbbpu(
             );
     
     // Declarations
-    input clock;
+    input fast_clock;
     input reset;
     input [15:0] instruction;
     input [15:0] read_data;
@@ -26,14 +26,14 @@ module nbbpu(
     output write_enable;
     output [15:0] address;
     output [15:0] write_data;
-    output reg [15:0] PC;
-    output [2:0] debug_RGB;
+    output [15:0] PC;
+    output reg [2:0] debug_RGB;
 
     // Parameters (Cycle States)
-    parameter FETCH     = 2'b00;    // Fetch next instruction from ROM
-    parameter DECODE    = 2'b01;    // Decode instruction and generate control signals
-    parameter EXECUTE   = 2'b10;    // Execute instruction inside ALU
-    parameter STORE     = 2'b11;    // Store results in memory (register file or RAM)
+    localparam FETCH     = 2'b00;    // Fetch next instruction from ROM
+    localparam DECODE    = 2'b01;    // Decode instruction and generate control signals
+    localparam EXECUTE   = 2'b10;    // Execute instruction inside ALU
+    localparam STORE     = 2'b11;    // Store results in memory (register file or RAM)
 
     // Intermediates
     reg [1:0] current_state;
@@ -43,19 +43,21 @@ module nbbpu(
     wire reg_set;
     wire jump_PC;
     wire branch_PC;
+    wire store_PC;
     wire branch_or_jump_PC;
     wire [15:0] X;
     wire [15:0] Y;
     wire [15:0] Z;
-    reg [15:0] PC_next;
+    wire [15:0] PC_next;
+    wire [15:0] PC_plus1;
 
     // Assignments
     assign opcode = instruction[15:12];
-    //assign _x = instruction[11:8];
-    //assign y = instruction[7:4];
-    //assign z = instruction[3:0];
-    //assign address = X;             // ??
-    //assign write_data = Z;          // ??
+    assign _x = instruction[11:8];
+    assign y = instruction[7:4];
+    assign z = instruction[3:0];
+    assign address = X;
+    assign write_data = Z;
 
     // Sub-module: Controller
     controller controller
@@ -63,80 +65,94 @@ module nbbpu(
         current_state,          // (input) Cycle state
         opcode,                 // (input) Op Code
         instruction_enable,     // (output) Instruction read enable
-        read_enable,            // (output) Data read enable
-        reg_write,              // (output) Register write enable
-        reg_set,                // (output) Register set enable
-        write_enable,           // (output) Data write enable
+        read_enable,            // (output) Memory read enable
+        write_enable,           // (output) Memory write enable
+        reg_write,              // (output) Register write
+        reg_set,                // (output) Register set
         jump_PC,                // (output) jump PC signal
-        branch_PC               // (output) branch PC signal
+        branch_PC,              // (output) branch PC signal
+        store_PC                // (output) store PC signal
     );
 
-    // Debug
-    //assign instruction_enable = 1'b1;
-    reg [31:0] counter; // 32-bit counter
-    //assign debug_RGB = {counter[23], counter[23], counter[23]};
-    assign debug_RGB = instruction[2:0];
+    // Registers
+    flopenr #(16) pc_reg(clock, reset, store_PC, PC_next, PC);
 
-    //// Logic (register set)
-    //mux2 #(4) x_mux(_x, z, reg_set, x);
-    //
-    //// Logic (register file)
-    //regfile regfile(clock, reg_write, z, Z, x, y, X, Y);
-    //
-    //// Logic (branch)
-    //assign branch_or_jump_PC = (jump_PC | (Z[0] & branch_PC));
-    //
-    //// Logic (ALU)
-    //alu alu(X, Y, instruction, read_data, PC, Z);
+    // Muxes
+    mux2 #(16) pc_next_mux(PC_plus1, X, branch_or_jump_PC, PC_next);
 
-    // Cycle State Machine
+    // Logic (PC)
+    assign PC_plus1 = PC + 1;
+
+    // Logic (register set)
+    mux2 #(4) x_mux(_x, z, reg_set, x);
+    
+    // Logic (branch) - !!! This is wrong, all of Z should be zero...I think...not just Z[0]
+    assign branch_or_jump_PC = (jump_PC || (Z[0] && branch_PC));
+
+    // Register File
+    regfile regfile(clock, reg_write, z, Z, x, y, X, Y);
+
+    // ALU
+    alu alu(X, Y, instruction, read_data, PC, Z);
+
+    // Define State Machine
     initial 
         begin
-            PC = 16'd0;
-            counter = 32'd0;
-            current_state = FETCH;
+           current_state = FETCH;
         end
-    always @(current_state)
+    always @(*)
         begin
             case(current_state)
-                FETCH:
-                    begin
-                        next_state = DECODE;
-                    end
-                DECODE:
-                    begin
-                        next_state = EXECUTE;
-                    end
-                EXECUTE:
-                    begin
-                        next_state = STORE;
-                    end
-                STORE:
-                    begin
-                        next_state <= FETCH;
-                    end
+                FETCH:      next_state = DECODE;
+                DECODE:     next_state = EXECUTE;
+                EXECUTE:    next_state = STORE;
+                STORE:      next_state = FETCH;
             endcase
         end
 
     // Update State
     always @(posedge clock, posedge reset)
+            if(reset)       current_state <= FETCH;
+            else            current_state <= next_state;
+
+    // --------------------------
+
+    // DEBUG: Parameters
+    reg clock;                              // Slow clock
+    reg [31:0] counter;                     // Counter to produce slow clock
+    parameter CLOCK_DIV = 32'h000FFFFF;
+
+    // DEBUG: Assign RGB output
+    wire pass;
+    reg passed;
+    assign pass = (address == 16'hFFF0) && (write_data == 16'd42);
+
+    // DEBUG: Generate Slow Clock
+    always @(posedge fast_clock, posedge reset)
         begin
             if(reset)
                 begin
-                    PC <= 16'd0;
+                    passed <= 1'b0;
                     counter <= 32'd0;
-                    current_state <= FETCH;
+                    clock <= 1'b0;
                 end
             else
                 begin
                     counter <= counter + 32'd1;
-                    if(counter >= 32'h00FFFFFF)
+                    if(counter >= CLOCK_DIV)
                         begin
                             counter <= 32'd0;
-                            PC <= PC + 1;
-                            current_state = next_state;
+                            clock <= !clock;
+                        end
+                    if(pass && !passed)
+                        passed <= 1'b1;
+                    if (passed)
+                        debug_RGB <= {1'b0, 1'b1, 1'b0};
+                    else
+                        begin
+                            if(write_enable)
+                                debug_RGB <= write_data[2:0];
                         end
                 end
         end
-
 endmodule

@@ -1,18 +1,19 @@
 // Controller (NBBPU)
-// -----------------------------------------
-// This is the "controller" sub-module for the NBBPU. It is responsible for decoding the opcode and generating the required
-// control signals. 
-// -----------------------------------------
+// ------------------------------------------------------------------------
+// This is the "controller" sub-module for the NBBPU. It is responsible for
+// decoding the opcode and generating the required control signals. 
+// ------------------------------------------------------------------------
 module controller(
-                    state, 
-                    opcode, 
-                    instruction_enable, 
-                    read_enable, 
-                    reg_write, 
-                    reg_set, 
-                    write_enable, 
-                    jump_PC, 
-                    branch_PC
+                    state,
+                    opcode,
+                    instruction_enable,
+                    read_enable,
+                    write_enable,
+                    reg_write,
+                    reg_set,
+                    jump_PC,
+                    branch_PC,
+                    store_PC
                 );
 
     // Declarations
@@ -20,53 +21,45 @@ module controller(
     input [3:0] opcode;
     output instruction_enable;
     output read_enable;
+    output write_enable;
     output reg_write;
     output reg_set;
-    output write_enable;
     output jump_PC;
     output branch_PC;
+    output store_PC;
 
     // Parameters (Op Codes)
-    parameter ADD = 4'b0000;
-    parameter SUB = 4'b0001;
-    parameter AND = 4'b0010;
-    parameter IOR = 4'b0011;
-    parameter XOR = 4'b0100;
-    parameter SHR = 4'b0101;
-    parameter SHL = 4'b0110;
-    parameter CMP = 4'b0111;
-    parameter JMP = 4'b1000;
-    parameter BRZ = 4'b1001;
-    parameter BRN = 4'b1010;
-    parameter RES = 4'b1011;
-    parameter LOD = 4'b1100;
-    parameter STR = 4'b1101;
-    parameter SEL = 4'b1110;
-    parameter SEU = 4'b1111;
+    localparam ADD = 4'b0000;
+    localparam SUB = 4'b0001;
+    localparam AND = 4'b0010;
+    localparam IOR = 4'b0011;
+    localparam XOR = 4'b0100;
+    localparam SHR = 4'b0101;
+    localparam SHL = 4'b0110;
+    localparam CMP = 4'b0111;
+    localparam JMP = 4'b1000;
+    localparam BRZ = 4'b1001;
+    localparam BRN = 4'b1010;
+    localparam RES = 4'b1011;
+    localparam LOD = 4'b1100;
+    localparam STR = 4'b1101;
+    localparam SEL = 4'b1110;
+    localparam SEU = 4'b1111;
 
     // Parameters (Cycle States)
-    parameter FETCH     = 2'b00;    // Fetch next instruction from ROM
-    parameter DECODE    = 2'b01;    // Decode instruction and generate control signals
-    parameter EXECUTE   = 2'b10;    // Execute instruction inside ALU
-    parameter STORE     = 2'b11;    // Store results in memory (register file or RAM)
+    localparam FETCH     = 2'b00;    // Fetch next instruction from ROM
+    localparam DECODE    = 2'b01;    // Decode instruction and generate control signals
+    localparam EXECUTE   = 2'b10;    // Execute instruction inside ALU
+    localparam STORE     = 2'b11;    // Store results in memory (register file or RAM)
 
-    // Intermediates
-    reg [6:0] controls;
-    assign {instruction_enable, read_enable, reg_write, reg_set, write_enable, jump_PC, branch_PC} = controls;
-   
-    // Logic
-    always @(*)
-        begin
-            case(state)
-                FETCH:
-                    controls = 7'b1000000;
-                DECODE:
-                    controls = 7'b1000000;
-                EXECUTE:
-                    controls = 7'b1000000;
-                STORE:
-                    controls = 7'b1000000;
-            endcase
-        end
-
+    // Logic (controls)
+    assign instruction_enable = (state == FETCH);
+    assign read_enable = (opcode == LOD) && (state == EXECUTE);
+    assign write_enable = (opcode == STR) && (state == STORE);
+    assign reg_write = ((!opcode[3]) || (opcode == JMP) || (opcode == LOD) || reg_set) && (state == STORE);
+    assign reg_set = (opcode[3:1] == 3'b111);
+    assign jump_PC = opcode == JMP;
+    assign branch_PC = (opcode == BRZ) || (opcode == BRN);
+    assign store_PC = (state == STORE);
+    
 endmodule

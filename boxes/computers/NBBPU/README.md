@@ -64,5 +64,5 @@ RES |B:1011|*reserved op code*                   |RES 0 0 0|
 ***Memory***                                               |
 LOD |C:1100|*load data at address x into z*      |LOD x 0 z|
 STR |D:1101|*store data in y at address x*       |STR x y 0|
-SEL |E:1110|*set lower byte of z*                |SEL b8 z |
-SEU |F:1111|*set upper byte of z*                |SEU b8 z |
+SEL |E:1110|*set lower byte of z*                |SEL 8'b z|
+SEU |F:1111|*set upper byte of z*                |SEU 8'b z|

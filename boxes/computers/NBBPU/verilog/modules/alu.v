@@ -30,12 +30,12 @@ module alu(X, Y, instruction, read_data, PC, Z);
             4'b1000: Z <= PC + 16'd1;       // (control operation) jump
             4'b1001: Z <= Y == 0 ? 1 : 0;   // (control operation) branch if equal
             4'b1010: Z <= Y != 0 ? 1 : 0;   // (control operation) branch if not equal
-            4'b1011: Z <= 15'd0;            // (reserved operation)
+            4'b1011: Z <= 16'd0;            // (reserved operation)
             4'b1100: Z <= read_data;        // (memory operation) load data
             4'b1101: Z <= Y;                // (memory operation) store data
             4'b1110: Z <= lower_byte;       // (memory operation) set register lower byte
             4'b1111: Z <= upper_byte;       // (memory operation) set register upper byte
-            default: Z <= 15'd0;            // Output Zero
+            default: Z <= 16'd0;            // Output Zero
 
         endcase
 

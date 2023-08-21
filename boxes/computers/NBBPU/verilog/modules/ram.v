@@ -1,9 +1,8 @@
 // RAM (NBBPU)
-module ram(clock, select, read_enable, write_enable, address, write_data, read_data);
+module ram(clock, read_enable, write_enable, address, write_data, read_data);
 
     // Declarations
     input clock;
-    input select;
     input read_enable;
     input write_enable;
     input [15:0] address;
@@ -15,19 +14,21 @@ module ram(clock, select, read_enable, write_enable, address, write_data, read_d
 
     // Initialize (RAM)
     initial
-        $readmemh("bin/ram.txt", RAM);
-
-    // Logic (read output data)
+        begin
+            $readmemh("bin/ram.txt", RAM);
+        end
+    
+    // Logic (output read data)
     always @(posedge clock)
         begin
-            if(select & read_enable)
+            if(read_enable)
                 read_data <= RAM[address[15:0]];
         end
 
-    // Logic (write input data)
+    // Logic (input write data)
     always @(posedge clock)
         begin
-            if (select & write_enable) 
+            if (write_enable) 
                 RAM[address[15:0]] <= write_data;
         end
         

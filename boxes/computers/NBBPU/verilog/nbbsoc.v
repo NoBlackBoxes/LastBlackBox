@@ -25,7 +25,7 @@ module nbbsoc(clock, reset, RGB);
     assign select = 1'b1;
 
     // CPU module
-    nbbpu nbbpu(
+    nbbpu #(.CLOCK_DIV(32'h0000FFFF)) nbbpu(
                 clock, 
                 reset, 
                 instruction, 
@@ -39,10 +39,10 @@ module nbbsoc(clock, reset, RGB);
                 debug_RGB);
     
     // Create Instruction and Data Memory modules
-    rom rom(clock, select, instruction_enable, PC, instruction);
-    ram ram(clock, select, read_enable, write_enable, address, write_data, read_data);
+    rom rom(clock, instruction_enable, PC, instruction);
+    ram ram(clock, read_enable, write_enable, address, write_data, read_data);
     
     // Assign Debug signals
-    assign RGB = debug_RGB;
+    assign RGB = ~debug_RGB;
 
 endmodule

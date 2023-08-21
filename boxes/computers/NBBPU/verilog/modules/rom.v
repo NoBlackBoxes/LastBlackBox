@@ -1,9 +1,8 @@
-// ROM
-module rom(clock, select, read_enable, address, read_data);
+// ROM (NBBPU)
+module rom(clock, read_enable, address, read_data);
 
     // Declarations
     input clock;
-    input select;
     input read_enable;
     input [15:0] address;
     output reg [15:0] read_data;   
@@ -17,10 +16,10 @@ module rom(clock, select, read_enable, address, read_data);
             $readmemh("bin/rom.txt", ROM);
         end
     
-    // Logic (read output data)
+    // Logic (output read data)
     always @(posedge clock)
         begin
-            if(select & read_enable)
+            if(read_enable)
                 read_data <= ROM[address[15:0]];
         end
 
