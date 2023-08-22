@@ -18,7 +18,7 @@ module verify_nbbpu_tb();
     reg [20:0] instruction_counter;
 
     // Create instance of nbbpu module
-    nbbpu #(.CLOCK_DIV(32'h0000000F)) test_nbbpu(
+    nbbpu #(.CLOCK_DIV(32'h00000001)) test_nbbpu(
                         t_clock, 
                         t_reset, 
                         t_instruction, 

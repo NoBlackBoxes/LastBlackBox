@@ -138,7 +138,7 @@ module nbbpu(
                 end
             else
                 begin
-                    counter <= counter + 32'd1;
+                    counter <= (counter + 32'd1);
                     if(counter >= CLOCK_DIV)
                         begin
                             counter <= 32'd0;
