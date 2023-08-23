@@ -31,10 +31,10 @@ set_io -nowarn gpio_31 31
 set_io -nowarn gpio_37 37
 set_io -nowarn gpio_34 34
 set_io -nowarn gpio_43 43
-set_io -nowarn adc_reset 36
-set_io -nowarn D_in 42
-set_io -nowarn D_out 38
-set_io -nowarn sample_clock 28
+set_io ADC_control[2] 36    # ADC reset (active low)
+set_io ADC_control[0] 42    # ADC control signal (D_in)
+set_io ADC_data 38          # ADC data (D_out)
+set_io ADC_control[1] 28    # ADC sample clock
 
 # Normal GPIO pins, right side
 

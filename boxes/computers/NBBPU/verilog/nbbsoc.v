@@ -2,15 +2,13 @@
 // --------------------------------------------------------
 // This is the top module of the NBBSOC (System-on-a-chip). 
 // --------------------------------------------------------
-module nbbsoc(clock, reset, D_out, sample_clock, D_in, adc_reset, RGB);
+module nbbsoc(clock, reset, ADC_data, ADC_control, RGB);
     
     // Declarations
     input clock;
     input reset;
-    input D_out;
-    output wire sample_clock;
-    output wire D_in;
-    output reg adc_reset;
+    input ADC_data;
+    output [2:0] ADC_control;
     output [2:0] RGB;
 
     // Intermediates
@@ -59,9 +57,13 @@ module nbbsoc(clock, reset, D_out, sample_clock, D_in, adc_reset, RGB);
     pwm pwm(clock, duty_cycle, pulse);
 
     // Peripherals (ADC) - Address: 16'h8010
+    reg adc_reset;
+    wire sample_clock;
+    wire D_in;
     wire [4:0] adc_state;
     wire [9:0] sample;
-    adc adc(clock, adc_reset, D_out, sample_clock, D_in, adc_state, sample);
+    adc adc(clock, adc_reset, ADC_data, sample_clock, D_in, adc_state, sample);
+    assign ADC_control = {adc_reset, sample_clock, D_in};
 
     // Peripherals (MMIO)
     always @(posedge clock)
@@ -77,11 +79,25 @@ module nbbsoc(clock, reset, D_out, sample_clock, D_in, adc_reset, RGB);
                             adc_reset <= 1'b0;
                     endcase
                 end
+            else if(read_enable == 1'b1)
+                begin 
+                    case (address)      // Need to deal with bus conflict!
+                        16'h8010:
+                            read_data <= {6'b000000, sample};
+                        default:
+                            adc_reset <= 1'b0;
+                    endcase
+                end
             else
                 begin
                     adc_reset <= 1'b0;
                     duty_cycle = sample[9:2];
                 end
         end
+
+    // --------------------
+    // Communication (UART) 
+    // --------------------
+
 
 endmodule
