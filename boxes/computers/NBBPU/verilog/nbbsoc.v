@@ -23,6 +23,14 @@ module nbbsoc(clock, reset, ADC_data, ADC_control, RGB);
     wire [15:0] PC;
     wire [2:0] debug_RGB;
 
+    // Enable USB-to-serial (after SPI flashing) 
+    // - internal UART Tx on pin 14 (marked SCK)
+    // - internal UART Rx on pin 15 (marked SI)
+    // No hardware flow control, 115200 bps
+    // >>> picocom -b 115200 /dev/ttyUSB0
+    //       NOTE: Ctrl-A then Atrl-X to exit
+    // For RPi, must add enable_uart=1 to config.txt
+
     // Assignments
     assign select = 1'b1;
 
@@ -79,15 +87,15 @@ module nbbsoc(clock, reset, ADC_data, ADC_control, RGB);
                             adc_reset <= 1'b0;
                     endcase
                 end
-            else if(read_enable == 1'b1)
-                begin 
-                    case (address)      // Need to deal with bus conflict!
-                        16'h8010:
-                            read_data <= {6'b000000, sample};
-                        default:
-                            adc_reset <= 1'b0;
-                    endcase
-                end
+            //else if(read_enable == 1'b1)
+            //    begin 
+            //        case (address)      // Need to deal with bus conflict!
+            //            16'h8010:
+            //                read_data <= {6'b000000, sample};
+            //            default:
+            //                adc_reset <= 1'b0;
+            //        endcase
+            //    end
             else
                 begin
                     adc_reset <= 1'b0;
