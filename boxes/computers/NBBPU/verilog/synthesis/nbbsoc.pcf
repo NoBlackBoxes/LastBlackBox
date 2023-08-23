@@ -31,7 +31,7 @@ set_io -nowarn gpio_31 31
 set_io -nowarn gpio_37 37
 set_io -nowarn gpio_34 34
 set_io -nowarn gpio_43 43
-set_io -nowarn adc_enable 36
+set_io -nowarn adc_reset 36
 set_io -nowarn D_in 42
 set_io -nowarn D_out 38
 set_io -nowarn sample_clock 28

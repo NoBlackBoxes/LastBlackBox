@@ -150,8 +150,9 @@ module nbbpu(
                         debug_RGB <= {1'b0, 1'b1, 1'b0};
                     else
                         begin
-                            if(write_enable)
-                                debug_RGB <= write_data[2:0];
+                            debug_RGB <= z[2:0];
+                            //if(write_enable)
+                            //    debug_RGB <= write_data[2:0];
                         end
                 end
         end
