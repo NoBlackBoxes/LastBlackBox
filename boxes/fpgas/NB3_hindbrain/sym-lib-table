@@ -1,4 +1,5 @@
 (sym_lib_table
   (version 7)
   (lib (name "NB3_hindbrain")(type "KiCad")(uri "${KIPRJMOD}/libraries/NB3_hindbrain.kicad_sym")(options "")(descr ""))
+  (lib (name "Osc_12MHz_ECS-2520MV-120-BN-TR")(type "KiCad")(uri "${KIPRJMOD}/libraries/parts/Osc_12MHz_ECS-2520MV-120-BN-TR/Osc_12MHz_ECS-2520MV-120-BN-TR.kicad_sym")(options "")(descr ""))
 )
