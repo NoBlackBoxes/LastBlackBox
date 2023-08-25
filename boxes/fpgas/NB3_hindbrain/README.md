@@ -1,6 +1,6 @@
 # FPGAs : NB3_hindbrain
 
-PCB design and fabrication for NB3 hindbrain, a FPGA development board
+PCB design and fabrication for the NB3 hindbrain, an FPGA development board with ADC and DAC
 
 ## Parts
 
@@ -17,7 +17,14 @@ FPGA|Lattice ICE40 UltraPlus 5280 LUTs 1.2V|Lattice|ICE40UP5K-SG48I|Mouser|842-I
 NOR Flash|32M-bit 4Kb uniform sector SPI flash|WinBond|W25Q32JVSSIQ|LCSC|C179173|[datasheet](NB3_hindbrain/libraries/parts/NOR_Flash_W25Q32JVSSIQ/NOR_Flash_W25Q32JVSSIQ.pdf)
 Oscillator|Clock oscillators 12MHz 1.6-3.6V|ECS|ECS-2520MV-120-BN-TR|Mouser|520-2520MV-120-BN-T|[datasheet](NB3_hindbrain/libraries/parts/Osc_12MHz_ECS-2520MV-120-BN-TR/Osc_12MHz_ECS-2520MV-120-BN-TR.pdf)
 ADC|10-bit SPI 4 channel ADC|Microchip|MCP3004-I/SL|Mouser|579-MCP3004-I/SL|[datasheet](NB3_hindbrain/libraries/parts/ADC_MCP3004-I-SL/ADC_MCP3004-I-SL.pdf)
+DAC|10-bit SPI 2 channel DAC|Microchip|MCP4812-E/SN|Mouser|579-MCP4812-E/SN|[datasheet](NB3_hindbrain/libraries/parts/DAC_MCP4812-E-SN/DAC_MCP4812-E-SN.pdf)
 Pin Header|1x20 2.54 mm through-hole pin header|BOOMELE|C50981|LCSC|C50981|[datasheet](NB3_hindbrain/libraries/parts/PinHeader_C50981/PinHeader_C50981.pdf)
+Diode|Fast switching diode: FV 0.8V @ 2.5 mA|Diodes Inc.|1N4148WS-7-F|LCSC|C60580|[datasheet](NB3_hindbrain/libraries/parts/Diode_1N4148WS-7-F/Diode_1N4148WS-7-F.pdf)
+Fuse (resttable)|PTC 6V 750 mA trip|Bourns|MF-FSMF035X-2|LCSC|C116602|[datasheet](NB3_hindbrain/libraries/parts/PTC_MF-FSMF035X-2/PTC_MF-FSMF035X-2.pdf)
+ESD Diode|ESD suppressors / TVS diodes|Nexperia|PRTR5V0U2F-115|LCSC|C478118|[datasheet](NB3_hindbrain/libraries/parts/ESD_Diodes_PRTR5V0U2F-115/ESD_Diodes_PRTR5V0U2F-115.pdf)
+MOSEFT|SOT-723 N-Ch - 1.2 V gate|Rohm|RUM001L02T2CL|LCSC|C253528|[datasheet](NB3_hindbrain/libraries/parts/MOSFET_Nch_SOT-723/MOSFET_Nch_SOT-723_RUM001L02T2CL.pdf)
+LED (Blue)|5 mA SMD 0402 Blue LED|Yongyu Photoelectric|SZYY0402B|LCSC|C434447|[datasheet](NB3_hindbrain/libraries/parts/LED_0402_SMD_Blue/LED_0402_SMD_Blue.pdf)
+LED (Red)|5 mA SMD 0402 Red LED|Yongyu Photoelectric|SZYY0402R|LCSC|C434445|[datasheet](NB3_hindbrain/libraries/parts/LED_0402_SMD_Red/LED_0402_SMD_Red.pdf)
 
 ## Fabrication
 
@@ -26,9 +33,9 @@ Pin Header|1x20 2.54 mm through-hole pin header|BOOMELE|C50981|LCSC|C50981|[data
 1. Create "fab" folder in KiCAD project root
 2. Export BOM (as CSV): File->Fabrication outputs->BOM
 3. Edit BOM: Open as ODS and save as XLSX in "fab" folder
-4. Generate Gerbers: File->Fabrication outputs->Gerbers [settings](NB3_body_FAB_plot_settings.png)
-5. Generate Drill: File->Fabrication outputs->Drill Files [settings](NB3_body_FAB_drill_settings.png)
-6. Generate Centroids: File->Fabrication outputs->Componenet Placement [settings](NB3_body_FAB_pos_settings.png)
+4. Generate Gerbers: File->Fabrication outputs->Gerbers [settings](NB3_hindbrain_FAB_plot_settings.png)
+5. Generate Drill: File->Fabrication outputs->Drill Files [settings](NB3_hindbrain_FAB_drill_settings.png)
+6. Generate Centroids: File->Fabrication outputs->Componenet Placement [settings](NB3_hindbrain_FAB_pos_settings.png)
 7. Zip entire fab folder (including BOM.xlsx)
 
 ### Upload boards(s) - PCBWay

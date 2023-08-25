@@ -1,4 +1,4 @@
-21947542688723660
+21957700604725215
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -63574,6 +63574,13 @@ Integrated Circuit
 14
 14
 NB3_hindbrain
+DAC_MCP4812-E-SN
+8-Pin SOIC-ren3
+Integrated Circuit
+0
+8
+8
+NB3_hindbrain
 Diode_1N4148WS-7-F
 
 
@@ -63584,6 +63591,13 @@ NB3_hindbrain
 EEPROM_93LC56BT-I-OT
 
 
+0
+6
+6
+NB3_hindbrain
+ESD_Diodes_PRTR5V0U2F-115
+SOT886
+Diode
 0
 6
 6
@@ -63616,6 +63630,27 @@ LDO_3v3_LM1117IMPX-3.3
 4
 4
 NB3_hindbrain
+Logo_NBB_5mm
+
+
+0
+0
+0
+NB3_hindbrain
+Logo_VK_5mm
+
+
+0
+0
+0
+NB3_hindbrain
+MOSFET_Nch_SOT-723_RUM001L02T2CL
+SOT723
+MOSFET (N-Channel)
+0
+3
+3
+NB3_hindbrain
 MicroUSB_10103594-0001LF
 
 
@@ -63636,6 +63671,13 @@ Osc_12MHz_ECS-2520MV-120-BN-TR
 0
 4
 4
+NB3_hindbrain
+PTC_MF-FSMF035X-2
+MF-FSMF010X
+Fuse
+0
+2
+2
 NB3_hindbrain
 RGB_CLMVC-FKA-CLBDGL7LBB79353
 CLMVC-FKA-CLBDGL7LBB79353-3
