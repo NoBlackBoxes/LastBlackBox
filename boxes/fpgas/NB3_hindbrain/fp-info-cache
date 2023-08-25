@@ -1,4 +1,4 @@
-21949169191654563
+21947542688723660
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -63602,8 +63602,8 @@ FPGA_ICE40UP5K-SG48I
 70
 70
 NB3_hindbrain
-LDO_1v2_AP7217D-12YG-13
-SOT89-3L_1
+LDO_1v2_LD1117S12TR
+SOT-223-2020
 Integrated Circuit
 0
 4
@@ -63643,13 +63643,6 @@ LED
 0
 4
 4
-NB3_hindbrain
-USBtoSerial_FT2232HL
-LQFP-64
-Integrated Circuit
-0
-64
-64
 NB3_hindbrain
 USBtoSerial_FT2232HQ
 FT2232HQ

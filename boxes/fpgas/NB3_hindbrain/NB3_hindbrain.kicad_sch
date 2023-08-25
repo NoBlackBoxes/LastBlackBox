@@ -1103,72 +1103,59 @@
         )
       )
     )
-    (symbol "NB3_hindbrain:LDO_1v2_AP7217D-12YG-13" (pin_names (offset 0.762)) (in_bom yes) (on_board yes)
-      (property "Reference" "VR2" (at 2.54 1.27 0)
+    (symbol "NB3_hindbrain:LDO_1v2_LD1117S12TR" (in_bom yes) (on_board yes)
+      (property "Reference" "VR" (at 1.27 1.27 0)
         (effects (font (size 1.27 1.27)))
       )
-      (property "Value" "LDO_1v2_AP7217D-12YG-13" (at 14.605 0.635 0)
-        (effects (font (size 0.5 0.5)))
+      (property "Value" "LD1117S12TR" (at 7.62 -8.89 0)
+        (effects (font (size 1.27 1.27)))
       )
-      (property "Footprint" "NB3_hindbrain:LDO_1v2_AP7217D-12YG-13" (at 0 -16.51 0)
-        (effects (font (size 1.27 1.27)) (justify left) hide)
+      (property "Footprint" "NB3_hindbrain:LDO_1v2_LD1117S12TR" (at 31.75 -94.92 0)
+        (effects (font (size 1.27 1.27)) (justify left top) hide)
       )
-      (property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP7217D.pdf" (at 0 -19.05 0)
-        (effects (font (size 1.27 1.27)) (justify left) hide)
+      (property "Datasheet" "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000544.pdf" (at 31.75 -194.92 0)
+        (effects (font (size 1.27 1.27)) (justify left top) hide)
       )
-      (property "Height" "1.6" (at 0 -24.13 0)
-        (effects (font (size 1.27 1.27)) (justify left) hide)
+      (property "Height" "1.8" (at 31.75 -394.92 0)
+        (effects (font (size 1.27 1.27)) (justify left top) hide)
       )
-      (property "Description" "Diodes Inc AP7217D-12YG-13, Single Linear Voltage Regulator, 600mA 1.2 V, 3-Pin SOT-89" (at 0 -21.59 0)
-        (effects (font (size 1.27 1.27)) (justify left) hide)
+      (property "Mouser Part Number" "511-LD1117S12" (at 31.75 -494.92 0)
+        (effects (font (size 1.27 1.27)) (justify left top) hide)
       )
-      (property "Manufacturer_Name" "Diodes Inc." (at 0 -26.67 0)
-        (effects (font (size 1.27 1.27)) (justify left) hide)
+      (property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/STMicroelectronics/LD1117S12TR?qs=61zNq1xPlVSs7%252BqGq4VslA%3D%3D" (at 31.75 -594.92 0)
+        (effects (font (size 1.27 1.27)) (justify left top) hide)
       )
-      (property "Manufacturer_Part_Number" "AP7217D-12YG-13" (at 0 -29.21 0)
-        (effects (font (size 1.27 1.27)) (justify left) hide)
+      (property "Manufacturer_Name" "STMicroelectronics" (at 31.75 -694.92 0)
+        (effects (font (size 1.27 1.27)) (justify left top) hide)
       )
-      (property "Mouser Part Number" "621-AP7217D-12YG-13" (at 0 -31.75 0)
-        (effects (font (size 1.27 1.27)) (justify left) hide)
+      (property "Manufacturer_Part_Number" "LD1117S12TR" (at 31.75 -794.92 0)
+        (effects (font (size 1.27 1.27)) (justify left top) hide)
       )
-      (property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/AP7217D-12YG-13?qs=oUsD4qhOtFxAsgfC3gYrSw%3D%3D" (at 0 -34.29 0)
-        (effects (font (size 1.27 1.27)) (justify left) hide)
+      (property "ki_description" "LD1117S12TR, Low Dropout Voltage Regulator, 1.3A, 1.2 V +/-1%, 4-Pin SOT-223" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
       )
-      (property "Arrow Part Number" "AP7217D-12YG-13" (at 0 -36.83 0)
-        (effects (font (size 1.27 1.27)) (justify left) hide)
+      (symbol "LDO_1v2_LD1117S12TR_0_1"
+        (rectangle (start 0 0) (end 25.4 -10.16)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
       )
-      (property "Arrow Price/Stock" "https://www.arrow.com/en/products/ap7217d-12yg-13/diodes-incorporated" (at 0 -39.37 0)
-        (effects (font (size 1.27 1.27)) (justify left) hide)
-      )
-      (symbol "LDO_1v2_AP7217D-12YG-13_0_0"
-        (pin passive line (at 25.4 -5.08 180) (length 5.08)
-          (name "GND" (effects (font (size 1.27 1.27))))
+      (symbol "LDO_1v2_LD1117S12TR_1_1"
+        (pin passive line (at 30.48 -8.89 180) (length 5.08)
+          (name "ADJ/GND" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
         )
-        (pin passive line (at -5.08 -2.54 0) (length 5.08)
-          (name "VIN_1" (effects (font (size 1.27 1.27))))
+        (pin passive line (at 30.48 -2.54 180) (length 5.08)
+          (name "VOUT_1" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27))))
         )
-        (pin passive line (at 25.4 -2.54 180) (length 5.08)
-          (name "VOUT" (effects (font (size 1.27 1.27))))
+        (pin passive line (at -5.08 -2.54 0) (length 5.08)
+          (name "VIN" (effects (font (size 1.27 1.27))))
           (number "3" (effects (font (size 1.27 1.27))))
         )
-        (pin passive line (at -5.08 -5.08 0) (length 5.08)
-          (name "VIN_2" (effects (font (size 1.27 1.27))))
+        (pin passive line (at 30.48 -5.08 180) (length 5.08)
+          (name "VOUT_2" (effects (font (size 1.27 1.27))))
           (number "4" (effects (font (size 1.27 1.27))))
-        )
-      )
-      (symbol "LDO_1v2_AP7217D-12YG-13_0_1"
-        (polyline
-          (pts
-            (xy 0 0)
-            (xy 20.32 0)
-            (xy 20.32 -7.62)
-            (xy 0 -7.62)
-            (xy 0 0)
-          )
-          (stroke (width 0.1524) (type default))
-          (fill (type none))
         )
       )
     )
@@ -2075,11 +2062,8 @@
   (junction (at 344.805 110.49) (diameter 0) (color 0 0 0 0)
     (uuid 069633f9-aab5-4c62-a0fc-e4f0885f556e)
   )
-  (junction (at 88.265 137.16) (diameter 0.9144) (color 0 0 0 0)
+  (junction (at 84.455 137.795) (diameter 0.9144) (color 0 0 0 0)
     (uuid 0a3671b9-1494-4cdf-ad04-1ea16e3526ee)
-  )
-  (junction (at 99.695 137.16) (diameter 0.9144) (color 0 0 0 0)
-    (uuid 0c274962-b208-4be0-bb61-48ce3356a8c7)
   )
   (junction (at 31.75 135.89) (diameter 0) (color 0 0 0 0)
     (uuid 132f4141-75ad-4c8a-9623-63d6498b05ad)
@@ -2117,7 +2101,7 @@
   (junction (at 25.4 135.89) (diameter 0.9144) (color 0 0 0 0)
     (uuid 37a1b5bc-7104-4618-85dc-97ebb243da1e)
   )
-  (junction (at 94.615 144.78) (diameter 0.9144) (color 0 0 0 0)
+  (junction (at 90.805 145.415) (diameter 0.9144) (color 0 0 0 0)
     (uuid 3b43d127-e8bb-4ae0-9a2d-b8aaed286505)
   )
   (junction (at 353.06 35.56) (diameter 0) (color 0 0 0 0)
@@ -2171,8 +2155,14 @@
   (junction (at 292.735 48.26) (diameter 0) (color 0 0 0 0)
     (uuid 570682cb-cd8c-4bed-9941-8cc1bb26f713)
   )
+  (junction (at 142.875 137.795) (diameter 0) (color 0 0 0 0)
+    (uuid 5c6b94ab-d763-46b2-8314-204daf5e190a)
+  )
   (junction (at 125.095 27.94) (diameter 0) (color 0 0 0 0)
     (uuid 602f334b-ef50-4c35-9cc9-51b516e81c5b)
+  )
+  (junction (at 139.7 137.795) (diameter 0) (color 0 0 0 0)
+    (uuid 6286eebe-1b58-4a24-91c4-f73b81f2ef19)
   )
   (junction (at 338.455 110.49) (diameter 0) (color 0 0 0 0)
     (uuid 67dc33ea-4dc0-42d4-a4ff-8bbdbb59e52c)
@@ -2189,7 +2179,7 @@
   (junction (at 147.955 165.735) (diameter 0.9144) (color 0 0 0 0)
     (uuid 6e54a509-ba02-422b-aae0-7cb57cf377b2)
   )
-  (junction (at 146.685 144.78) (diameter 0.9144) (color 0 0 0 0)
+  (junction (at 151.765 145.415) (diameter 0.9144) (color 0 0 0 0)
     (uuid 6e60557c-bf22-4433-94be-5dc4ddcac14d)
   )
   (junction (at 316.23 125.73) (diameter 0) (color 0 0 0 0)
@@ -2219,13 +2209,13 @@
   (junction (at 57.15 135.89) (diameter 0) (color 0 0 0 0)
     (uuid 86011825-b1bc-432e-9b04-42362353ce6f)
   )
-  (junction (at 163.83 183.515) (diameter 0) (color 0 0 0 0)
+  (junction (at 165.1 184.15) (diameter 0) (color 0 0 0 0)
     (uuid 87d9eab6-35bc-4195-b129-4c2dd28521ef)
   )
   (junction (at 304.165 110.49) (diameter 0) (color 0 0 0 0)
     (uuid 8b729ff3-995c-4997-b3f3-3b624e755822)
   )
-  (junction (at 146.685 137.16) (diameter 0.9144) (color 0 0 0 0)
+  (junction (at 151.765 137.795) (diameter 0.9144) (color 0 0 0 0)
     (uuid 8b910c95-363f-4c5e-8491-2dc4551128b3)
   )
   (junction (at 57.15 156.21) (diameter 0.9144) (color 0 0 0 0)
@@ -2242,6 +2232,9 @@
   )
   (junction (at 31.75 143.51) (diameter 0.9144) (color 0 0 0 0)
     (uuid 92aab996-7590-4c23-9642-d5990e259715)
+  )
+  (junction (at 142.875 145.415) (diameter 0) (color 0 0 0 0)
+    (uuid 9374be59-ae6e-4137-bc32-4ecd61c4f913)
   )
   (junction (at 98.425 158.115) (diameter 0) (color 0 0 0 0)
     (uuid 9446b3fa-7b56-4610-9f69-22c80cfaca11)
@@ -2267,6 +2260,9 @@
   (junction (at 300.99 110.49) (diameter 0) (color 0 0 0 0)
     (uuid a295903d-bb37-42d9-af69-3ad814e95661)
   )
+  (junction (at 95.885 137.795) (diameter 0) (color 0 0 0 0)
+    (uuid a5cdff91-4c3a-4c49-893c-7cfd120c8d63)
+  )
   (junction (at 316.23 162.56) (diameter 0) (color 0 0 0 0)
     (uuid a639fd24-fbcf-4c54-980f-9876ed1f998b)
   )
@@ -2288,7 +2284,7 @@
   (junction (at 13.97 39.37) (diameter 0.9144) (color 0 0 0 0)
     (uuid c4209d8e-9a54-4908-b00f-f9a994c6d465)
   )
-  (junction (at 160.655 137.16) (diameter 0.9144) (color 0 0 0 0)
+  (junction (at 165.735 137.795) (diameter 0.9144) (color 0 0 0 0)
     (uuid c446b60d-7a18-4c6c-a567-16b87ef39c1f)
   )
   (junction (at 203.835 135.89) (diameter 0) (color 0 0 0 0)
@@ -2326,9 +2322,6 @@
   )
   (junction (at 323.85 162.56) (diameter 0) (color 0 0 0 0)
     (uuid e78ef484-6495-4f79-b213-6357ecc1b4b3)
-  )
-  (junction (at 111.125 137.16) (diameter 0.9144) (color 0 0 0 0)
-    (uuid eb5f5829-6326-4819-86cf-c4d5748c17cf)
   )
   (junction (at 214.63 106.68) (diameter 0.9144) (color 0 0 0 0)
     (uuid f0936a16-ea9c-4e17-8a4a-3de10eefa9c0)
@@ -2483,7 +2476,7 @@
     (stroke (width 0) (type default))
     (uuid 13cb9320-335a-4098-bb64-e58efe68e825)
   )
-  (wire (pts (xy 141.605 137.16) (xy 146.685 137.16))
+  (wire (pts (xy 139.7 137.795) (xy 142.875 137.795))
     (stroke (width 0) (type solid))
     (uuid 142d520e-5c14-453a-8e6c-2928163ea0cc)
   )
@@ -2551,11 +2544,7 @@
     (stroke (width 0) (type solid))
     (uuid 1dc533ac-d721-4848-85ff-6a619e8e9435)
   )
-  (wire (pts (xy 99.695 137.16) (xy 111.125 137.16))
-    (stroke (width 0) (type solid))
-    (uuid 1e8aab9a-16f2-4ba0-9af3-7263d307caa5)
-  )
-  (wire (pts (xy 154.94 183.515) (xy 163.83 183.515))
+  (wire (pts (xy 156.21 184.15) (xy 165.1 184.15))
     (stroke (width 0) (type default))
     (uuid 1ef20290-2326-4965-a276-647d87017afd)
   )
@@ -2604,7 +2593,7 @@
     (stroke (width 0) (type solid))
     (uuid 27c5e2a6-9189-44c8-a0af-df1907dd0316)
   )
-  (wire (pts (xy 88.265 137.16) (xy 99.695 137.16))
+  (wire (pts (xy 84.455 137.795) (xy 95.885 137.795))
     (stroke (width 0) (type solid))
     (uuid 27e7df2f-702e-4bb2-bec7-eff1718c9a4e)
   )
@@ -2676,7 +2665,7 @@
     (stroke (width 0) (type default))
     (uuid 369c0b15-381e-4aed-9def-d5e9dc70efa2)
   )
-  (wire (pts (xy 88.265 144.78) (xy 94.615 144.78))
+  (wire (pts (xy 84.455 145.415) (xy 90.805 145.415))
     (stroke (width 0) (type solid))
     (uuid 36babfb5-5acc-4b18-8f4d-dd8f5fc26b07)
   )
@@ -2750,7 +2739,7 @@
     (stroke (width 0) (type solid))
     (uuid 4de22924-8452-43ae-9e61-46f1fdbb501a)
   )
-  (wire (pts (xy 94.615 144.78) (xy 99.695 144.78))
+  (wire (pts (xy 90.805 145.415) (xy 95.885 145.415))
     (stroke (width 0) (type solid))
     (uuid 4eec36bb-edc1-4a00-a3f6-27d76e48dfac)
   )
@@ -2807,7 +2796,7 @@
     (stroke (width 0) (type default))
     (uuid 5a79b7c2-7f55-482a-9e1b-7ae36cc5bec7)
   )
-  (wire (pts (xy 146.685 144.78) (xy 160.655 144.78))
+  (wire (pts (xy 151.765 145.415) (xy 165.735 145.415))
     (stroke (width 0) (type solid))
     (uuid 5b34a433-1bdf-4a3d-9d34-d76f17e64384)
   )
@@ -2852,7 +2841,7 @@
     (stroke (width 0) (type default))
     (uuid 60e064ab-34d0-4b4c-814f-e435367b4be8)
   )
-  (wire (pts (xy 146.685 137.16) (xy 160.655 137.16))
+  (wire (pts (xy 151.765 137.795) (xy 165.735 137.795))
     (stroke (width 0) (type solid))
     (uuid 62384af6-6182-4857-8baa-bb5ded0025bc)
   )
@@ -2885,6 +2874,10 @@
     (uuid 70795f53-fa2c-469c-a4c7-574a3510537a)
   )
 
+  (wire (pts (xy 139.7 145.415) (xy 142.875 145.415))
+    (stroke (width 0) (type default))
+    (uuid 71dad028-9705-4e16-bf50-dba3ddd513cf)
+  )
   (wire (pts (xy 292.735 45.085) (xy 292.735 48.26))
     (stroke (width 0) (type default))
     (uuid 72c38a21-f7c3-47b9-b537-2a464524ebce)
@@ -2956,6 +2949,10 @@
   (wire (pts (xy 209.55 106.68) (xy 209.55 113.665))
     (stroke (width 0) (type default))
     (uuid 860de9e5-f96b-4ee5-ad87-25c353214898)
+  )
+  (wire (pts (xy 142.875 137.795) (xy 151.765 137.795))
+    (stroke (width 0) (type solid))
+    (uuid 86374d65-19ac-43cf-8b45-995bac4fefd0)
   )
   (wire (pts (xy 42.545 108.585) (xy 52.705 108.585))
     (stroke (width 0) (type default))
@@ -3123,11 +3120,7 @@
     (stroke (width 0) (type solid))
     (uuid ad2fa1f6-fcf2-489a-aefc-f717738207d2)
   )
-  (wire (pts (xy 141.605 139.7) (xy 141.605 144.78))
-    (stroke (width 0) (type solid))
-    (uuid ada0b6fb-e324-4e52-836a-b82fcec254f5)
-  )
-  (wire (pts (xy 141.605 144.78) (xy 146.685 144.78))
+  (wire (pts (xy 142.875 145.415) (xy 151.765 145.415))
     (stroke (width 0) (type solid))
     (uuid ada0b6fb-e324-4e52-836a-b82fcec254f6)
   )
@@ -3188,6 +3181,10 @@
     (stroke (width 0) (type solid))
     (uuid b69dd8a6-983e-45e6-91ae-0bf65342d176)
   )
+  (wire (pts (xy 139.7 144.145) (xy 139.7 145.415))
+    (stroke (width 0) (type default))
+    (uuid b6be2037-d4ed-4e75-bdb7-2f4e73d8350d)
+  )
   (wire (pts (xy 307.34 97.79) (xy 307.34 100.33))
     (stroke (width 0) (type solid))
     (uuid b7857e90-cf24-4825-9d69-4f89ad6a2da0)
@@ -3216,6 +3213,10 @@
     (stroke (width 0) (type solid))
     (uuid c2035336-286a-46e5-b7d4-c6f9cc358463)
   )
+  (wire (pts (xy 95.885 137.795) (xy 104.14 137.795))
+    (stroke (width 0) (type default))
+    (uuid c245f6bf-3293-4993-aba6-0d6062370cff)
+  )
   (wire (pts (xy 203.835 143.51) (xy 203.835 149.86))
     (stroke (width 0) (type solid))
     (uuid c3f85bac-efe4-491f-b124-0ffd53d52af3)
@@ -3231,6 +3232,10 @@
   (wire (pts (xy 324.485 110.49) (xy 332.105 110.49))
     (stroke (width 0) (type solid))
     (uuid c6b49209-379e-429f-82e6-787450265d63)
+  )
+  (wire (pts (xy 139.7 137.795) (xy 139.7 140.335))
+    (stroke (width 0) (type default))
+    (uuid c6f59dd3-6941-46f2-b83b-37ba43aeba3f)
   )
   (wire (pts (xy 292.735 55.245) (xy 292.735 58.42))
     (stroke (width 0) (type default))
@@ -3397,10 +3402,6 @@
     (uuid e9e045cd-4ece-4887-b290-63f988e8d19e)
   )
 
-  (wire (pts (xy 111.125 137.16) (xy 111.125 139.7))
-    (stroke (width 0) (type solid))
-    (uuid e9f1a10c-baa3-4a5b-b0bc-8e5f944fba1b)
-  )
   (wire (pts (xy 300.99 87.63) (xy 300.99 90.17))
     (stroke (width 0) (type solid))
     (uuid eb15627c-b107-413e-b664-d319291ba09c)
@@ -3527,7 +3528,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 020e8ad0-25ae-4a85-a221-3d920bf9c135)
   )
-  (text "+1.2V" (at 121.92 145.415 0)
+  (text "+1.2V" (at 116.205 149.225 0)
     (effects (font (size 2 2) (thickness 0.4) bold) (justify left bottom))
     (uuid 05dc4563-6f86-4e7a-b83a-654718f766eb)
   )
@@ -3571,7 +3572,7 @@
     (effects (font (size 2 2) (thickness 0.4) bold) (justify left bottom))
     (uuid 988f3aa2-99ca-4b04-9d90-75a47c0c6242)
   )
-  (text "+3.3V" (at 116.205 170.815 0)
+  (text "+3.3V" (at 116.84 170.815 0)
     (effects (font (size 2 2) (thickness 0.4) bold) (justify left bottom))
     (uuid 989cf341-8e92-49d9-bf28-3d1cbfdeaeec)
   )
@@ -3972,7 +3973,7 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid a81f313e-e2b4-418b-bff2-1e681724cc18)
   )
-  (label "RGB2" (at 154.94 180.975 0) (fields_autoplaced)
+  (label "RGB2" (at 156.21 181.61 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid a9c643ba-8b63-4210-a7e1-b8b5419e7fb4)
   )
@@ -4060,7 +4061,7 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid cfe02c02-74da-4c14-8aea-680f65806b6a)
   )
-  (label "RGB0" (at 137.16 180.975 180) (fields_autoplaced)
+  (label "RGB0" (at 138.43 181.61 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid d2aac698-b711-4af4-9e4a-f00424198a60)
   )
@@ -4096,7 +4097,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid ea46f3cc-9f19-4eae-9442-2235f623e625)
   )
-  (label "RGB1" (at 137.16 183.515 180) (fields_autoplaced)
+  (label "RGB1" (at 138.43 184.15 180) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid eeb479af-2bd3-4530-ba33-3f2cf9f9e728)
   )
@@ -4218,7 +4219,7 @@
   (symbol (lib_id "Device:LED") (at 335.28 93.98 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 01e7b7be-1ff8-4496-9db9-9b3dc5144e41)
-    (property "Reference" "D22" (at 334.01 92.075 90)
+    (property "Reference" "D14" (at 334.01 92.075 90)
       (effects (font (size 0.5 0.5)))
     )
     (property "Value" "LED" (at 339.09 94.1705 90)
@@ -4235,7 +4236,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "D22") (unit 1)
+          (reference "D14") (unit 1)
         )
       )
     )
@@ -4294,19 +4295,19 @@
     )
   )
 
-  (symbol (lib_id "Device:C") (at 99.695 140.97 0) (unit 1)
+  (symbol (lib_id "Device:C") (at 95.885 141.605 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 066d24ed-a980-41fb-a293-f580b6bfc693)
-    (property "Reference" "C17" (at 103.505 140.3349 0)
+    (property "Reference" "C16" (at 99.695 140.9699 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "100nF" (at 103.505 142.8749 0)
+    (property "Value" "100nF" (at 99.695 143.5099 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 100.6602 144.78 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 96.8502 145.415 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 99.695 140.97 0)
+    (property "Datasheet" "~" (at 95.885 141.605 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 31ed707e-89a2-42a6-a5dd-cd97e15e61a9))
@@ -4314,7 +4315,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "C17") (unit 1)
+          (reference "C16") (unit 1)
         )
       )
     )
@@ -4399,7 +4400,7 @@
   (symbol (lib_id "Device:R") (at 288.925 48.26 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0c9c046c-eea5-42fc-be2b-cbec401377ec)
-    (property "Reference" "R52" (at 290.195 50.165 90)
+    (property "Reference" "R21" (at 290.195 50.165 90)
       (effects (font (size 1 1)) (justify left))
     )
     (property "Value" "33k" (at 290.195 48.26 90)
@@ -4416,7 +4417,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "R52") (unit 1)
+          (reference "R21") (unit 1)
         )
       )
     )
@@ -4476,7 +4477,7 @@
   (symbol (lib_id "power:+3V3") (at 353.06 35.56 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0f211beb-8f37-4ce8-95eb-29d49905f447)
-    (property "Reference" "#PWR066" (at 349.25 35.56 0)
+    (property "Reference" "#PWR071" (at 349.25 35.56 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 355.6 35.56 90)
@@ -4492,7 +4493,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "#PWR066") (unit 1)
+          (reference "#PWR071") (unit 1)
         )
       )
     )
@@ -4501,7 +4502,7 @@
   (symbol (lib_id "power:+5V") (at 311.15 134.62 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 0ff23e59-373a-4085-a659-ba9eaba7d008)
-    (property "Reference" "#PWR067" (at 314.96 134.62 0)
+    (property "Reference" "#PWR065" (at 314.96 134.62 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 306.07 134.62 90)
@@ -4517,7 +4518,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "#PWR067") (unit 1)
+          (reference "#PWR065") (unit 1)
         )
       )
     )
@@ -4526,7 +4527,7 @@
   (symbol (lib_id "power:+3V3") (at 92.075 113.03 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 11654139-a596-4407-914c-eae00d4381aa)
-    (property "Reference" "#PWR023" (at 92.075 109.22 0)
+    (property "Reference" "#PWR024" (at 92.075 109.22 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 92.075 118.745 90)
@@ -4542,7 +4543,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "#PWR023") (unit 1)
+          (reference "#PWR024") (unit 1)
         )
       )
     )
@@ -4551,7 +4552,7 @@
   (symbol (lib_id "power:GND") (at 285.115 58.42 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 11a11a10-8870-4a5c-b532-41285435d8cd)
-    (property "Reference" "#PWR072" (at 278.765 58.42 0)
+    (property "Reference" "#PWR064" (at 278.765 58.42 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 280.035 58.42 90)
@@ -4567,7 +4568,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "#PWR072") (unit 1)
+          (reference "#PWR064") (unit 1)
         )
       )
     )
@@ -4628,7 +4629,7 @@
   (symbol (lib_id "Device:LED") (at 338.455 93.98 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 12c79c37-3317-4182-8de2-6ebc09cc9a21)
-    (property "Reference" "D23" (at 337.185 92.075 90)
+    (property "Reference" "D15" (at 337.185 92.075 90)
       (effects (font (size 0.5 0.5)))
     )
     (property "Value" "LED" (at 342.265 94.1705 90)
@@ -4645,7 +4646,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "D23") (unit 1)
+          (reference "D15") (unit 1)
         )
       )
     )
@@ -4679,7 +4680,7 @@
   (symbol (lib_id "Device:R") (at 288.925 58.42 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1569cd33-767b-4347-a3cb-a4c1a33b38d4)
-    (property "Reference" "R54" (at 290.195 60.325 90)
+    (property "Reference" "R23" (at 290.195 60.325 90)
       (effects (font (size 1 1)) (justify left))
     )
     (property "Value" "33k" (at 290.195 58.42 90)
@@ -4696,7 +4697,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "R54") (unit 1)
+          (reference "R23") (unit 1)
         )
       )
     )
@@ -4705,7 +4706,7 @@
   (symbol (lib_id "Device:LED") (at 310.515 93.98 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1c8e826f-d2df-482e-baf5-9a08b4f60cf1)
-    (property "Reference" "D18" (at 309.245 92.075 90)
+    (property "Reference" "D10" (at 309.245 92.075 90)
       (effects (font (size 0.5 0.5)))
     )
     (property "Value" "LED" (at 314.325 94.1705 90)
@@ -4722,7 +4723,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "D18") (unit 1)
+          (reference "D10") (unit 1)
         )
       )
     )
@@ -4731,7 +4732,7 @@
   (symbol (lib_id "Device:R") (at 300.99 104.14 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 1d2ebebd-2c00-497d-bddd-d306d0e2d2e2)
-    (property "Reference" "R25" (at 300.99 104.14 90)
+    (property "Reference" "R26" (at 300.99 104.14 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "150" (at 300.355 107.95 90)
@@ -4748,7 +4749,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "R25") (unit 1)
+          (reference "R26") (unit 1)
         )
       )
     )
@@ -4808,7 +4809,7 @@
   (symbol (lib_id "power:GND") (at 285.115 48.26 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 20c70778-7978-4c0e-91f1-e365b0093a32)
-    (property "Reference" "#PWR071" (at 278.765 48.26 0)
+    (property "Reference" "#PWR063" (at 278.765 48.26 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 280.035 48.26 90)
@@ -4824,7 +4825,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "#PWR071") (unit 1)
+          (reference "#PWR063") (unit 1)
         )
       )
     )
@@ -4881,26 +4882,26 @@
     )
   )
 
-  (symbol (lib_id "power:GND") (at 94.615 144.78 0) (unit 1)
+  (symbol (lib_id "power:GND") (at 90.805 145.415 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 26c60336-35e0-43ac-8f2a-cde439eaf326)
-    (property "Reference" "#PWR027" (at 94.615 151.13 0)
+    (property "Reference" "#PWR023" (at 90.805 151.765 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "GND" (at 94.615 148.59 0)
+    (property "Value" "GND" (at 90.805 149.225 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 94.615 144.78 0)
+    (property "Footprint" "" (at 90.805 145.415 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 94.615 144.78 0)
+    (property "Datasheet" "" (at 90.805 145.415 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid c56313ea-1ab1-40f8-9c12-8da88c79f90c))
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "#PWR027") (unit 1)
+          (reference "#PWR023") (unit 1)
         )
       )
     )
@@ -4956,27 +4957,27 @@
     )
   )
 
-  (symbol (lib_id "Device:C") (at 163.83 187.325 0) (unit 1)
+  (symbol (lib_id "Device:C") (at 165.1 187.96 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 294a863e-e2bf-4f35-9d4b-c5ab4c9d2b79)
-    (property "Reference" "C23" (at 166.37 186.6899 0)
+    (property "Reference" "C22" (at 167.64 187.3249 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "4.7uF" (at 166.37 189.2299 0)
+    (property "Value" "4.7uF" (at 167.64 189.8649 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 164.7952 191.135 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 166.0652 191.77 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 163.83 187.325 0)
+    (property "Datasheet" "~" (at 165.1 187.96 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid baa276b6-89cf-46bf-83a2-5510c17ed9c0))
-    (pin "2" (uuid f19c7e2a-6ff7-42ee-987d-a937ab1c90a8))
+    (pin "1" (uuid 793e3e92-2ab2-49ec-922c-37d17909c276))
+    (pin "2" (uuid 377df9a5-a8ee-4ad2-81ef-ba4fc05f8a42))
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "C23") (unit 1)
+          (reference "C22") (unit 1)
         )
       )
     )
@@ -4985,7 +4986,7 @@
   (symbol (lib_id "Device:C") (at 86.995 161.925 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2ac20cc7-94f5-458d-8796-8da298331639)
-    (property "Reference" "C14" (at 90.805 161.2899 0)
+    (property "Reference" "C15" (at 90.805 161.2899 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10uF" (at 90.805 163.8299 0)
@@ -5002,7 +5003,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "C14") (unit 1)
+          (reference "C15") (unit 1)
         )
       )
     )
@@ -5062,7 +5063,7 @@
   (symbol (lib_id "Device:R") (at 288.925 38.1 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 2fd1123b-02da-49e6-8a1a-b2299b0c9d96)
-    (property "Reference" "R48" (at 290.195 40.005 90)
+    (property "Reference" "R19" (at 290.195 40.005 90)
       (effects (font (size 1 1)) (justify left))
     )
     (property "Value" "33k" (at 290.195 38.1 90)
@@ -5079,7 +5080,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "R48") (unit 1)
+          (reference "R19") (unit 1)
         )
       )
     )
@@ -5088,7 +5089,7 @@
   (symbol (lib_id "Device:R_Small") (at 203.835 140.97 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3206e405-7085-42ad-8811-48985e33e958)
-    (property "Reference" "R12" (at 206.375 140.3349 0)
+    (property "Reference" "R13" (at 206.375 140.3349 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 206.375 142.8749 0)
@@ -5105,7 +5106,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "R12") (unit 1)
+          (reference "R13") (unit 1)
         )
       )
     )
@@ -5114,7 +5115,7 @@
   (symbol (lib_id "Device:R") (at 332.105 104.14 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 329163f5-56c5-4fd2-9460-f88e754e57eb)
-    (property "Reference" "R31" (at 332.105 104.14 90)
+    (property "Reference" "R32" (at 332.105 104.14 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "150" (at 331.47 107.95 90)
@@ -5131,7 +5132,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "R31") (unit 1)
+          (reference "R32") (unit 1)
         )
       )
     )
@@ -5209,7 +5210,7 @@
   (symbol (lib_id "power:GND") (at 285.115 38.1 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 36bbe3b3-762a-437f-a3a5-ab3c690a916a)
-    (property "Reference" "#PWR070" (at 278.765 38.1 0)
+    (property "Reference" "#PWR062" (at 278.765 38.1 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 280.035 38.1 90)
@@ -5225,7 +5226,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "#PWR070") (unit 1)
+          (reference "#PWR062") (unit 1)
         )
       )
     )
@@ -5285,7 +5286,7 @@
   (symbol (lib_id "Device:R_Small") (at 188.595 140.97 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 3a57b1c8-1c51-480b-912e-ca4a639e696b)
-    (property "Reference" "R11" (at 191.135 140.3349 0)
+    (property "Reference" "R12" (at 191.135 140.3349 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 191.135 142.8749 0)
@@ -5302,7 +5303,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "R11") (unit 1)
+          (reference "R12") (unit 1)
         )
       )
     )
@@ -5311,7 +5312,7 @@
   (symbol (lib_id "Device:LED") (at 351.155 93.98 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3b805e72-0927-4ef4-a6b8-815f95d592fe)
-    (property "Reference" "D27" (at 349.885 92.075 90)
+    (property "Reference" "D19" (at 349.885 92.075 90)
       (effects (font (size 0.5 0.5)))
     )
     (property "Value" "LED" (at 354.965 94.1705 90)
@@ -5328,7 +5329,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "D27") (unit 1)
+          (reference "D19") (unit 1)
         )
       )
     )
@@ -5337,7 +5338,7 @@
   (symbol (lib_id "power:GND") (at 285.115 27.94 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3be8d443-4e7c-4f25-9bb8-2758163fe68d)
-    (property "Reference" "#PWR069" (at 278.765 27.94 0)
+    (property "Reference" "#PWR061" (at 278.765 27.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 280.035 27.94 90)
@@ -5353,7 +5354,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "#PWR069") (unit 1)
+          (reference "#PWR061") (unit 1)
         )
       )
     )
@@ -5362,7 +5363,7 @@
   (symbol (lib_id "Device:LED") (at 347.98 93.98 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 3d9949af-df83-4da3-af14-108e44e243bd)
-    (property "Reference" "D26" (at 346.71 92.075 90)
+    (property "Reference" "D18" (at 346.71 92.075 90)
       (effects (font (size 0.5 0.5)))
     )
     (property "Value" "LED" (at 351.79 94.1705 90)
@@ -5379,7 +5380,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "D26") (unit 1)
+          (reference "D18") (unit 1)
         )
       )
     )
@@ -5413,7 +5414,7 @@
   (symbol (lib_id "power:GND") (at 316.23 125.73 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 416170e3-81c3-46f0-8fb6-32c625fb150a)
-    (property "Reference" "#PWR064" (at 309.88 125.73 0)
+    (property "Reference" "#PWR067" (at 309.88 125.73 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 311.15 125.73 90)
@@ -5429,7 +5430,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "#PWR064") (unit 1)
+          (reference "#PWR067") (unit 1)
         )
       )
     )
@@ -5490,7 +5491,7 @@
   (symbol (lib_id "power:+1V8") (at 86.995 21.59 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 425ab10e-5b4e-4866-ada5-deaaa1f9db06)
-    (property "Reference" "#PWR020" (at 86.995 25.4 0)
+    (property "Reference" "#PWR021" (at 86.995 25.4 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+1V8" (at 86.995 15.875 90)
@@ -5506,7 +5507,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "#PWR020") (unit 1)
+          (reference "#PWR021") (unit 1)
         )
       )
     )
@@ -5565,7 +5566,7 @@
   (symbol (lib_id "power:GND") (at 324.485 110.49 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 4669cd37-4b5d-4b4f-b7f0-fffdc31f7e27)
-    (property "Reference" "#PWR065" (at 324.485 116.84 0)
+    (property "Reference" "#PWR070" (at 324.485 116.84 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 324.485 114.6231 0)
@@ -5581,32 +5582,32 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "#PWR065") (unit 1)
+          (reference "#PWR070") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "power:+3V3") (at 163.83 183.515 0) (unit 1)
+  (symbol (lib_id "power:+3V3") (at 165.1 184.15 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 4bf7df1b-c12f-4e2e-a2f8-7381d8074682)
-    (property "Reference" "#PWR047" (at 163.83 187.325 0)
+    (property "Reference" "#PWR046" (at 165.1 187.96 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+3V3" (at 167.64 181.61 0)
+    (property "Value" "+3V3" (at 168.91 182.245 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 163.83 183.515 0)
+    (property "Footprint" "" (at 165.1 184.15 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 163.83 183.515 0)
+    (property "Datasheet" "" (at 165.1 184.15 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 9ba6e913-906e-43d1-b097-932d0626e642))
+    (pin "1" (uuid d6506e38-3ef9-4e11-a278-a24ad62ecc1f))
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "#PWR047") (unit 1)
+          (reference "#PWR046") (unit 1)
         )
       )
     )
@@ -5766,26 +5767,26 @@
     )
   )
 
-  (symbol (lib_id "power:PWR_FLAG") (at 146.685 137.16 0) (unit 1)
+  (symbol (lib_id "power:PWR_FLAG") (at 151.765 137.795 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5321c4a1-6db6-47e9-8dfc-403a9782875b)
-    (property "Reference" "#FLG08" (at 146.685 135.255 0)
+    (property "Reference" "#FLG06" (at 151.765 135.89 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "PWR_FLAG" (at 146.685 133.35 0)
+    (property "Value" "PWR_FLAG" (at 151.765 133.985 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 146.685 137.16 0)
+    (property "Footprint" "" (at 151.765 137.795 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 146.685 137.16 0)
+    (property "Datasheet" "~" (at 151.765 137.795 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 8e4130ee-b9ba-4380-96d9-37f26096d7e5))
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "#FLG08") (unit 1)
+          (reference "#FLG06") (unit 1)
         )
       )
     )
@@ -5820,7 +5821,7 @@
   (symbol (lib_id "Device:R") (at 288.925 24.765 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 54583bb4-f8b4-4c55-bfb8-8745a1a996ec)
-    (property "Reference" "R50" (at 287.02 22.86 90)
+    (property "Reference" "R16" (at 287.02 22.86 90)
       (effects (font (size 1 1)) (justify left))
     )
     (property "Value" "17k" (at 287.655 24.765 90)
@@ -5837,7 +5838,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "R50") (unit 1)
+          (reference "R16") (unit 1)
         )
       )
     )
@@ -5872,7 +5873,7 @@
   (symbol (lib_id "Device:R") (at 344.805 104.14 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 59745ffe-7c86-4f6d-863d-519c9dbf8428)
-    (property "Reference" "R35" (at 344.805 104.14 90)
+    (property "Reference" "R36" (at 344.805 104.14 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "150" (at 344.17 107.95 90)
@@ -5889,7 +5890,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "R35") (unit 1)
+          (reference "R36") (unit 1)
         )
       )
     )
@@ -5898,7 +5899,7 @@
   (symbol (lib_id "Device:LED") (at 344.805 93.98 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5a233721-b8ff-46f3-b2df-7f8934449c37)
-    (property "Reference" "D25" (at 343.535 92.075 90)
+    (property "Reference" "D17" (at 343.535 92.075 90)
       (effects (font (size 0.5 0.5)))
     )
     (property "Value" "LED" (at 348.615 94.1705 90)
@@ -5915,7 +5916,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "D25") (unit 1)
+          (reference "D17") (unit 1)
         )
       )
     )
@@ -5974,19 +5975,19 @@
     )
   )
 
-  (symbol (lib_id "Device:C") (at 146.685 140.97 0) (unit 1)
+  (symbol (lib_id "Device:C") (at 151.765 141.605 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5c4fb9f8-1b00-49cb-9810-5400cbae45c9)
-    (property "Reference" "C19" (at 150.495 140.3349 0)
+    (property "Reference" "C20" (at 155.575 140.9699 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "100nF" (at 150.495 142.8749 0)
+    (property "Value" "100nF" (at 155.575 143.5099 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 147.6502 144.78 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 152.7302 145.415 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 146.685 140.97 0)
+    (property "Datasheet" "~" (at 151.765 141.605 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid abb9aacc-c65e-4c65-b816-4041874950e4))
@@ -5994,7 +5995,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "C19") (unit 1)
+          (reference "C20") (unit 1)
         )
       )
     )
@@ -6028,7 +6029,7 @@
   (symbol (lib_id "power:+5V") (at 86.995 158.115 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5f78cf5f-e9df-4ce4-8039-beccaa6448b8)
-    (property "Reference" "#PWR021" (at 86.995 161.925 0)
+    (property "Reference" "#PWR022" (at 86.995 161.925 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 86.995 154.305 0)
@@ -6044,7 +6045,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "#PWR021") (unit 1)
+          (reference "#PWR022") (unit 1)
         )
       )
     )
@@ -6053,7 +6054,7 @@
   (symbol (lib_id "power:+3V3") (at 359.41 153.67 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 6334ab53-46bb-477f-8ae8-2ff3e90e5984)
-    (property "Reference" "#PWR062" (at 355.6 153.67 0)
+    (property "Reference" "#PWR073" (at 355.6 153.67 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 365.125 153.67 90)
@@ -6069,32 +6070,32 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "#PWR062") (unit 1)
+          (reference "#PWR073") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "power:GND") (at 163.83 191.135 0) (unit 1)
+  (symbol (lib_id "power:GND") (at 165.1 191.77 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 636341d9-5357-4cba-a780-573d4ef41c12)
-    (property "Reference" "#PWR048" (at 163.83 197.485 0)
+    (property "Reference" "#PWR047" (at 165.1 198.12 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "GND" (at 163.83 194.945 0)
+    (property "Value" "GND" (at 165.1 195.58 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 163.83 191.135 0)
+    (property "Footprint" "" (at 165.1 191.77 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 163.83 191.135 0)
+    (property "Datasheet" "" (at 165.1 191.77 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid a95625a3-38dd-4cc4-963d-c23ce25f6de5))
+    (pin "1" (uuid d8555dc2-9bb3-4de4-9cee-a3f67b2ef116))
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "#PWR048") (unit 1)
+          (reference "#PWR047") (unit 1)
         )
       )
     )
@@ -6103,7 +6104,7 @@
   (symbol (lib_id "Device:R") (at 297.815 104.14 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 637d67c5-ea20-4b5d-b73e-ab35a26956e4)
-    (property "Reference" "R24" (at 297.815 104.14 90)
+    (property "Reference" "R25" (at 297.815 104.14 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "150" (at 297.18 107.95 90)
@@ -6120,59 +6121,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "R24") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "NB3_hindbrain:LDO_1v2_AP7217D-12YG-13") (at 116.205 134.62 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 6623c096-638b-40b5-a519-bc2628c9ec03)
-    (property "Reference" "VR2" (at 118.745 133.35 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "LDO_1v2_AP7217D-12YG-13" (at 130.81 133.985 0)
-      (effects (font (size 0.5 0.5)))
-    )
-    (property "Footprint" "NB3_hindbrain:LDO_1v2_AP7217D-12YG-13" (at 116.205 151.13 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-    (property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP7217D.pdf" (at 116.205 153.67 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-    (property "Description" "Diodes Inc AP7217D-12YG-13, Single Linear Voltage Regulator, 600mA 1.2 V, 3-Pin SOT-89" (at 116.205 156.21 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-    (property "Height" "1.6" (at 116.205 158.75 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-    (property "Manufacturer_Name" "Diodes Inc." (at 116.205 161.29 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-    (property "Manufacturer_Part_Number" "AP7217D-12YG-13" (at 116.205 163.83 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-    (property "Mouser Part Number" "621-AP7217D-12YG-13" (at 116.205 166.37 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-    (property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/AP7217D-12YG-13?qs=oUsD4qhOtFxAsgfC3gYrSw%3D%3D" (at 116.205 168.91 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-    (property "Arrow Part Number" "AP7217D-12YG-13" (at 116.205 171.45 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-    (property "Arrow Price/Stock" "https://www.arrow.com/en/products/ap7217d-12yg-13/diodes-incorporated" (at 116.205 173.99 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-    (pin "1" (uuid 9316d7b5-1221-403a-b558-234b3fcac1b3))
-    (pin "2" (uuid 3d12f811-2b1b-4f6d-9a96-ac43cc4df96c))
-    (pin "3" (uuid b01b9cf1-d34b-4de9-b58d-e65b75f8093a))
-    (pin "4" (uuid 594ace21-49a1-41ae-9716-1555f1fc1cce))
-    (instances
-      (project "NB3_hindbrain"
-        (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "VR2") (unit 1)
+          (reference "R25") (unit 1)
         )
       )
     )
@@ -6181,7 +6130,7 @@
   (symbol (lib_id "Device:LED") (at 304.165 93.98 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 66dfc485-3959-4b13-ab99-e28ee8d79a90)
-    (property "Reference" "D16" (at 302.895 92.075 90)
+    (property "Reference" "D8" (at 302.895 92.075 90)
       (effects (font (size 0.5 0.5)))
     )
     (property "Value" "LED" (at 307.975 94.1705 90)
@@ -6198,7 +6147,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "D16") (unit 1)
+          (reference "D8") (unit 1)
         )
       )
     )
@@ -6207,7 +6156,7 @@
   (symbol (lib_id "Device:R") (at 288.925 34.925 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 68128a0c-7d85-4da2-a479-250dd8a58a34)
-    (property "Reference" "R47" (at 287.02 33.02 90)
+    (property "Reference" "R18" (at 287.02 33.02 90)
       (effects (font (size 1 1)) (justify left))
     )
     (property "Value" "17k" (at 287.655 34.925 90)
@@ -6224,32 +6173,32 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "R47") (unit 1)
+          (reference "R18") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "power:GND") (at 146.685 144.78 0) (unit 1)
+  (symbol (lib_id "power:GND") (at 151.765 145.415 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 68e0291f-ed6f-42f8-a7f0-9e7dbb35b2b7)
-    (property "Reference" "#PWR042" (at 146.685 151.13 0)
+    (property "Reference" "#PWR043" (at 151.765 151.765 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "GND" (at 146.685 148.59 0)
+    (property "Value" "GND" (at 151.765 149.225 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 146.685 144.78 0)
+    (property "Footprint" "" (at 151.765 145.415 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 146.685 144.78 0)
+    (property "Datasheet" "" (at 151.765 145.415 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 8bc5bc8c-f06a-405e-951f-3b66cf920288))
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "#PWR042") (unit 1)
+          (reference "#PWR043") (unit 1)
         )
       )
     )
@@ -6258,7 +6207,7 @@
   (symbol (lib_id "Device:LED") (at 332.105 93.98 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 697e4084-9ec8-43bc-aafb-46535c7b96f2)
-    (property "Reference" "D21" (at 330.835 92.075 90)
+    (property "Reference" "D13" (at 330.835 92.075 90)
       (effects (font (size 0.5 0.5)))
     )
     (property "Value" "LED" (at 335.915 94.1705 90)
@@ -6275,7 +6224,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "D21") (unit 1)
+          (reference "D13") (unit 1)
         )
       )
     )
@@ -6309,7 +6258,7 @@
   (symbol (lib_id "Device:LED") (at 341.63 93.98 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 6a2025b2-365b-442c-a109-b39c2e852d73)
-    (property "Reference" "D24" (at 340.36 92.075 90)
+    (property "Reference" "D16" (at 340.36 92.075 90)
       (effects (font (size 0.5 0.5)))
     )
     (property "Value" "LED" (at 345.44 94.1705 90)
@@ -6326,7 +6275,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "D24") (unit 1)
+          (reference "D16") (unit 1)
         )
       )
     )
@@ -6360,7 +6309,7 @@
   (symbol (lib_id "Device:C") (at 161.925 161.925 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 6b8ed5a6-979c-49b9-a7ba-a4420da16e71)
-    (property "Reference" "C22" (at 165.735 161.2899 0)
+    (property "Reference" "C21" (at 165.735 161.2899 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10uF" (at 165.735 163.8299 0)
@@ -6377,7 +6326,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "C22") (unit 1)
+          (reference "C21") (unit 1)
         )
       )
     )
@@ -6386,7 +6335,7 @@
   (symbol (lib_id "Device:R") (at 335.28 104.14 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 6e7932c4-b46e-43a3-b6b5-f2e9ec7a4e16)
-    (property "Reference" "R32" (at 335.28 104.14 90)
+    (property "Reference" "R33" (at 335.28 104.14 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "150" (at 334.645 107.95 90)
@@ -6403,7 +6352,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "R32") (unit 1)
+          (reference "R33") (unit 1)
         )
       )
     )
@@ -6456,7 +6405,7 @@
   (symbol (lib_id "power:PWR_FLAG") (at 48.26 36.83 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 71e6425d-7a14-49fe-be4f-0613093de03c)
-    (property "Reference" "#FLG03" (at 48.26 34.925 0)
+    (property "Reference" "#FLG02" (at 48.26 34.925 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "PWR_FLAG" (at 49.53 32.5756 0)
@@ -6472,7 +6421,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "#FLG03") (unit 1)
+          (reference "#FLG02") (unit 1)
         )
       )
     )
@@ -6652,40 +6601,40 @@
     )
   )
 
-  (symbol (lib_id "NB3_hindbrain:RGB_CLMVC-FKA-CLBDGL7LBB79353") (at 142.24 179.705 0) (unit 1)
+  (symbol (lib_id "NB3_hindbrain:RGB_CLMVC-FKA-CLBDGL7LBB79353") (at 143.51 180.34 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 7b787784-7048-4ba6-bcae-52c80ced53ef)
-    (property "Reference" "LED1" (at 146.05 177.8 0)
+    (property "Reference" "LED1" (at 147.32 178.435 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "CLMVC-FKA-CLBDGL7LBB79353" (at 146.05 186.055 0)
+    (property "Value" "CLMVC-FKA-CLBDGL7LBB79353" (at 147.32 186.69 0)
       (effects (font (size 0.5 0.5)))
     )
-    (property "Footprint" "NB3_hindbrain:RGB_CLMVC-FKA-CLBDGL7LBB79353" (at 191.77 275.895 0)
+    (property "Footprint" "NB3_hindbrain:RGB_CLMVC-FKA-CLBDGL7LBB79353" (at 193.04 276.53 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
-    (property "Datasheet" "https://www.arrow.com/en/products/clmvc-fka-clbdgl7lbb79353/cree" (at 191.77 375.895 0)
+    (property "Datasheet" "https://www.arrow.com/en/products/clmvc-fka-clbdgl7lbb79353/cree" (at 193.04 376.53 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
-    (property "Height" "1" (at 191.77 575.895 0)
+    (property "Height" "1" (at 193.04 576.53 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
-    (property "Mouser Part Number" "941-CLMVCFKACLBDGL7L" (at 191.77 675.895 0)
+    (property "Mouser Part Number" "941-CLMVCFKACLBDGL7L" (at 193.04 676.53 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
-    (property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Cree-LED/CLMVC-FKA-CLBDGL7LBB79353?qs=fSnNYG2PaKLnACIKsEWrKA%3D%3D" (at 191.77 775.895 0)
+    (property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Cree-LED/CLMVC-FKA-CLBDGL7LBB79353?qs=fSnNYG2PaKLnACIKsEWrKA%3D%3D" (at 193.04 776.53 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
-    (property "Manufacturer_Name" "CREE LED" (at 191.77 875.895 0)
+    (property "Manufacturer_Name" "CREE LED" (at 193.04 876.53 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
-    (property "Manufacturer_Part_Number" "CLMVC-FKA-CLBDGL7LBB79353" (at 191.77 975.895 0)
+    (property "Manufacturer_Part_Number" "CLMVC-FKA-CLBDGL7LBB79353" (at 193.04 976.53 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
-    (pin "1" (uuid 42620a52-40db-4299-9b7a-7592fb85679b))
-    (pin "2" (uuid 0d0e882e-9454-4aa6-b7f9-6c4419fee38e))
-    (pin "3" (uuid 1913c4c3-25ca-4ae7-b1b5-f22430d49910))
-    (pin "4" (uuid e4fa4cf8-4297-4bf2-a0b3-e9b422b37a46))
+    (pin "1" (uuid f98f18d7-e2d4-48f5-b3d1-d9072edfa8b7))
+    (pin "2" (uuid dbdab42b-5f8a-42ef-8cdb-048770842342))
+    (pin "3" (uuid f5163218-0c5b-4602-a797-7c1916a46415))
+    (pin "4" (uuid 321aaeb8-e600-44ff-8edb-58eb51a7734d))
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
@@ -6801,7 +6750,7 @@
   (symbol (lib_id "power:GND") (at 147.955 165.735 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 82a5842c-bdc7-49be-adb2-a17b777ba8db)
-    (property "Reference" "#PWR043" (at 147.955 172.085 0)
+    (property "Reference" "#PWR042" (at 147.955 172.085 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 147.955 169.545 0)
@@ -6817,7 +6766,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "#PWR043") (unit 1)
+          (reference "#PWR042") (unit 1)
         )
       )
     )
@@ -6826,7 +6775,7 @@
   (symbol (lib_id "Device:R") (at 347.98 104.14 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 838e57d2-b658-4721-9693-5112680a5e66)
-    (property "Reference" "R36" (at 347.98 104.14 90)
+    (property "Reference" "R37" (at 347.98 104.14 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "150" (at 347.345 107.95 90)
@@ -6843,7 +6792,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "R36") (unit 1)
+          (reference "R37") (unit 1)
         )
       )
     )
@@ -6852,7 +6801,7 @@
   (symbol (lib_id "Device:R") (at 354.33 104.14 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 83d210f9-be37-4869-a876-81363aaea956)
-    (property "Reference" "R38" (at 354.33 104.14 90)
+    (property "Reference" "R39" (at 354.33 104.14 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "150" (at 353.695 107.95 90)
@@ -6869,7 +6818,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "R38") (unit 1)
+          (reference "R39") (unit 1)
         )
       )
     )
@@ -6953,7 +6902,7 @@
   (symbol (lib_id "power:GND") (at 93.345 165.735 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8a05b55c-6c40-4cfc-a108-2fb67daa19c3)
-    (property "Reference" "#PWR026" (at 93.345 172.085 0)
+    (property "Reference" "#PWR027" (at 93.345 172.085 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 93.345 169.545 0)
@@ -6969,7 +6918,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "#PWR026") (unit 1)
+          (reference "#PWR027") (unit 1)
         )
       )
     )
@@ -6978,7 +6927,7 @@
   (symbol (lib_id "Device:R") (at 307.34 104.14 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 8b295f22-a1ae-4546-b405-dc5050a1efb0)
-    (property "Reference" "R27" (at 307.34 104.14 90)
+    (property "Reference" "R28" (at 307.34 104.14 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "150" (at 306.705 107.95 90)
@@ -6995,7 +6944,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "R27") (unit 1)
+          (reference "R28") (unit 1)
         )
       )
     )
@@ -7136,7 +7085,7 @@
   (symbol (lib_id "power:PWR_FLAG") (at 104.775 158.115 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 9688e1b4-752b-41c2-a1a2-19e12acbe974)
-    (property "Reference" "#FLG06" (at 104.775 156.21 0)
+    (property "Reference" "#FLG03" (at 104.775 156.21 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "PWR_FLAG" (at 104.775 154.305 0)
@@ -7152,7 +7101,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "#FLG06") (unit 1)
+          (reference "#FLG03") (unit 1)
         )
       )
     )
@@ -7161,7 +7110,7 @@
   (symbol (lib_id "power:PWR_FLAG") (at 214.63 106.68 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9b53cf48-3cad-4b97-b43e-36c91a0d8517)
-    (property "Reference" "#FLG010" (at 214.63 108.585 0)
+    (property "Reference" "#FLG07" (at 214.63 108.585 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "PWR_FLAG" (at 214.63 119.8244 90)
@@ -7177,7 +7126,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "#FLG010") (unit 1)
+          (reference "#FLG07") (unit 1)
         )
       )
     )
@@ -7186,7 +7135,7 @@
   (symbol (lib_id "Device:R") (at 351.155 104.14 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 9c75046b-8613-4920-854d-a91c8f43b92f)
-    (property "Reference" "R37" (at 351.155 104.14 90)
+    (property "Reference" "R38" (at 351.155 104.14 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "150" (at 350.52 107.95 90)
@@ -7203,7 +7152,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "R37") (unit 1)
+          (reference "R38") (unit 1)
         )
       )
     )
@@ -7237,7 +7186,7 @@
   (symbol (lib_id "Device:C") (at 98.425 161.925 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a03c882f-86c5-4f0b-849c-c58f351c1852)
-    (property "Reference" "C16" (at 102.235 161.2899 0)
+    (property "Reference" "C17" (at 102.235 161.2899 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (at 102.235 163.8299 0)
@@ -7254,7 +7203,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "C16") (unit 1)
+          (reference "C17") (unit 1)
         )
       )
     )
@@ -7263,10 +7212,10 @@
   (symbol (lib_id "NB3_hindbrain:LDO_3v3_LM1117IMPX-3.3") (at 109.855 155.575 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a1684357-f948-46e5-85a6-3ee14a9ba386)
-    (property "Reference" "VR1" (at 112.395 154.305 0)
+    (property "Reference" "VR2" (at 121.92 154.305 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "LDO_3v3_LM1117IMPX-3.3" (at 130.175 154.94 0)
+    (property "Value" "LDO_3v3_LM1117IMPX-3.3" (at 115.57 165.735 0)
       (effects (font (size 0.5 0.5)))
     )
     (property "Footprint" "NB3_hindbrain:LDO_3v3_LM1117IMPX-3.3" (at 109.855 173.355 0)
@@ -7294,7 +7243,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "VR1") (unit 1)
+          (reference "VR2") (unit 1)
         )
       )
     )
@@ -7303,7 +7252,7 @@
   (symbol (lib_id "Device:R") (at 288.925 27.94 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a3d4fef2-cc2d-404a-82b3-8bba6d123e6d)
-    (property "Reference" "R51" (at 290.195 29.845 90)
+    (property "Reference" "R17" (at 290.195 29.845 90)
       (effects (font (size 1 1)) (justify left))
     )
     (property "Value" "33k" (at 290.195 27.94 90)
@@ -7320,7 +7269,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "R51") (unit 1)
+          (reference "R17") (unit 1)
         )
       )
     )
@@ -7381,7 +7330,7 @@
   (symbol (lib_id "Device:R") (at 288.925 45.085 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid a53c313f-021b-460c-a0dd-9e65d8918fc9)
-    (property "Reference" "R49" (at 287.02 43.18 90)
+    (property "Reference" "R20" (at 287.02 43.18 90)
       (effects (font (size 1 1)) (justify left))
     )
     (property "Value" "17k" (at 287.655 45.085 90)
@@ -7398,7 +7347,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "R49") (unit 1)
+          (reference "R20") (unit 1)
         )
       )
     )
@@ -7458,7 +7407,7 @@
   (symbol (lib_id "Device:C") (at 147.955 161.925 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid a93f9ab7-e19d-4cb0-83ce-539636d466ff)
-    (property "Reference" "C20" (at 151.765 161.2899 0)
+    (property "Reference" "C19" (at 151.765 161.2899 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100nF" (at 151.765 163.8299 0)
@@ -7475,25 +7424,25 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "C20") (unit 1)
+          (reference "C19") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "Device:C") (at 88.265 140.97 0) (unit 1)
+  (symbol (lib_id "Device:C") (at 84.455 141.605 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid aa0e289a-e762-48ab-b596-8c46c7ff30fc)
-    (property "Reference" "C15" (at 92.075 140.3349 0)
+    (property "Reference" "C14" (at 88.265 140.9699 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "10uF" (at 92.075 142.8749 0)
+    (property "Value" "10uF" (at 88.265 143.5099 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 89.2302 144.78 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 85.4202 145.415 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 88.265 140.97 0)
+    (property "Datasheet" "~" (at 84.455 141.605 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid e3915221-286c-4a7c-af6b-ba953f3b5e16))
@@ -7501,7 +7450,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "C15") (unit 1)
+          (reference "C14") (unit 1)
         )
       )
     )
@@ -7536,7 +7485,7 @@
   (symbol (lib_id "Device:R") (at 313.69 104.14 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ac90a102-ffac-4bf5-bdff-9c1f7a493860)
-    (property "Reference" "R29" (at 313.69 104.14 90)
+    (property "Reference" "R30" (at 313.69 104.14 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "150" (at 313.055 107.95 90)
@@ -7553,7 +7502,33 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "R29") (unit 1)
+          (reference "R30") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Device:R") (at 142.875 141.605 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid aeb66490-2ec0-4bce-9d86-742428eb8db0)
+    (property "Reference" "R10" (at 144.145 141.605 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "120:1%" (at 142.875 143.51 90)
+      (effects (font (size 0.75 0.75)) (justify left))
+    )
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 141.097 141.605 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 142.875 141.605 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid a978960f-0eb9-4716-9ff7-970263bbcec8))
+    (pin "2" (uuid 1c6d3fc5-03a5-4cce-ab8a-2bfe756a7a46))
+    (instances
+      (project "NB3_hindbrain"
+        (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
+          (reference "R10") (unit 1)
         )
       )
     )
@@ -7562,7 +7537,7 @@
   (symbol (lib_id "power:PWR_FLAG") (at 132.08 27.94 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid af849e35-2c3d-4070-ba38-81685ce41678)
-    (property "Reference" "#FLG07" (at 132.08 26.035 0)
+    (property "Reference" "#FLG04" (at 132.08 26.035 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "PWR_FLAG" (at 137.16 24.13 0)
@@ -7578,7 +7553,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "#FLG07") (unit 1)
+          (reference "#FLG04") (unit 1)
         )
       )
     )
@@ -7684,6 +7659,49 @@
     )
   )
 
+  (symbol (lib_id "NB3_hindbrain:LDO_1v2_LD1117S12TR") (at 109.22 135.255 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid b627d0f7-31e2-4273-b633-cb05f2277e73)
+    (property "Reference" "VR1" (at 121.92 133.985 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "LD1117S12TR" (at 114.935 144.145 0)
+      (effects (font (size 1 1)))
+    )
+    (property "Footprint" "NB3_hindbrain:LDO_1v2_LD1117S12TR" (at 140.97 230.175 0)
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+    )
+    (property "Datasheet" "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000544.pdf" (at 140.97 330.175 0)
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+    )
+    (property "Height" "1.8" (at 140.97 530.175 0)
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+    )
+    (property "Mouser Part Number" "511-LD1117S12" (at 140.97 630.175 0)
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+    )
+    (property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/STMicroelectronics/LD1117S12TR?qs=61zNq1xPlVSs7%252BqGq4VslA%3D%3D" (at 140.97 730.175 0)
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+    )
+    (property "Manufacturer_Name" "STMicroelectronics" (at 140.97 830.175 0)
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+    )
+    (property "Manufacturer_Part_Number" "LD1117S12TR" (at 140.97 930.175 0)
+      (effects (font (size 1.27 1.27)) (justify left top) hide)
+    )
+    (pin "1" (uuid e643156a-2cc6-4d93-bac4-a08e12113e7e))
+    (pin "2" (uuid 4ead2ae6-de87-4b8f-a132-f75cfe4799b9))
+    (pin "3" (uuid edcdd1d1-69db-440a-96f5-31efbddc9604))
+    (pin "4" (uuid 70f302d1-9b80-4aae-8845-6be5536346fc))
+    (instances
+      (project "NB3_hindbrain"
+        (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
+          (reference "VR1") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:+3V3") (at 121.92 177.8 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b6dd56c4-f9f6-44b8-a0da-88c61cdc3e5e)
@@ -7709,26 +7727,26 @@
     )
   )
 
-  (symbol (lib_id "power:+3V3") (at 88.265 137.16 0) (unit 1)
+  (symbol (lib_id "power:+3V3") (at 84.455 137.795 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b71c557f-5f7d-4122-b406-822fe21d3b8e)
-    (property "Reference" "#PWR022" (at 88.265 140.97 0)
+    (property "Reference" "#PWR020" (at 84.455 141.605 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+3V3" (at 88.265 132.9054 0)
+    (property "Value" "+3V3" (at 84.455 133.5404 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 88.265 137.16 0)
+    (property "Footprint" "" (at 84.455 137.795 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 88.265 137.16 0)
+    (property "Datasheet" "" (at 84.455 137.795 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 782771d1-5fe1-47dd-a077-934597b3f7dd))
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "#PWR022") (unit 1)
+          (reference "#PWR020") (unit 1)
         )
       )
     )
@@ -7737,7 +7755,7 @@
   (symbol (lib_id "power:PWR_FLAG") (at 238.76 66.04 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b7e00c94-c841-4d41-9219-04189b9f9997)
-    (property "Reference" "#FLG011" (at 240.665 66.04 0)
+    (property "Reference" "#FLG08" (at 240.665 66.04 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "PWR_FLAG" (at 237.9344 64.77 90)
@@ -7753,7 +7771,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "#FLG011") (unit 1)
+          (reference "#FLG08") (unit 1)
         )
       )
     )
@@ -7762,7 +7780,7 @@
   (symbol (lib_id "power:+3V3") (at 161.925 158.115 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid b7f4ff93-d81c-44c3-a312-54aec718db32)
-    (property "Reference" "#PWR046" (at 161.925 161.925 0)
+    (property "Reference" "#PWR045" (at 161.925 161.925 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 161.925 153.8604 0)
@@ -7778,7 +7796,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "#PWR046") (unit 1)
+          (reference "#PWR045") (unit 1)
         )
       )
     )
@@ -7787,7 +7805,7 @@
   (symbol (lib_id "Device:R") (at 288.925 55.245 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bada800b-85b5-4a12-a9da-b3b0cda6c295)
-    (property "Reference" "R53" (at 287.02 53.34 90)
+    (property "Reference" "R22" (at 287.02 53.34 90)
       (effects (font (size 1 1)) (justify left))
     )
     (property "Value" "17k" (at 287.655 55.245 90)
@@ -7804,7 +7822,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "R53") (unit 1)
+          (reference "R22") (unit 1)
         )
       )
     )
@@ -7813,7 +7831,7 @@
   (symbol (lib_id "power:PWR_FLAG") (at 147.955 158.115 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid bbc7c83e-df97-4039-90fe-349956c12588)
-    (property "Reference" "#FLG02" (at 147.955 156.21 0)
+    (property "Reference" "#FLG05" (at 147.955 156.21 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "PWR_FLAG" (at 147.955 154.305 0)
@@ -7829,7 +7847,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "#FLG02") (unit 1)
+          (reference "#FLG05") (unit 1)
         )
       )
     )
@@ -7838,7 +7856,7 @@
   (symbol (lib_id "Device:R") (at 341.63 104.14 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid be4e87cd-369d-4b7a-8c2b-b65df3c56230)
-    (property "Reference" "R34" (at 341.63 104.14 90)
+    (property "Reference" "R35" (at 341.63 104.14 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "150" (at 340.995 107.95 90)
@@ -7855,7 +7873,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "R34") (unit 1)
+          (reference "R35") (unit 1)
         )
       )
     )
@@ -7864,7 +7882,7 @@
   (symbol (lib_id "Device:R") (at 294.64 104.14 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid be80878d-a680-42d0-ab90-214642c2b412)
-    (property "Reference" "R23" (at 294.64 104.14 90)
+    (property "Reference" "R24" (at 294.64 104.14 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "150" (at 294.005 107.95 90)
@@ -7881,7 +7899,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "R23") (unit 1)
+          (reference "R24") (unit 1)
         )
       )
     )
@@ -7890,7 +7908,7 @@
   (symbol (lib_id "Device:R") (at 338.455 104.14 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid bfd38192-12a9-4d7d-888b-aea999e4e072)
-    (property "Reference" "R33" (at 338.455 104.14 90)
+    (property "Reference" "R34" (at 338.455 104.14 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "150" (at 337.82 107.95 90)
@@ -7907,7 +7925,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "R33") (unit 1)
+          (reference "R34") (unit 1)
         )
       )
     )
@@ -7916,7 +7934,7 @@
   (symbol (lib_id "Device:R") (at 248.92 67.31 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c4bfccd1-2e83-4b0d-b622-d8d46284fa12)
-    (property "Reference" "R13" (at 243.205 67.31 0)
+    (property "Reference" "R14" (at 243.205 67.31 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "100" (at 248.92 68.58 90)
@@ -7933,7 +7951,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "R13") (unit 1)
+          (reference "R14") (unit 1)
         )
       )
     )
@@ -7993,7 +8011,7 @@
   (symbol (lib_id "Device:R") (at 316.865 104.14 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d10137e8-4540-43a4-9fcd-84e3d4edb06b)
-    (property "Reference" "R30" (at 316.865 104.14 90)
+    (property "Reference" "R31" (at 316.865 104.14 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "150" (at 316.23 107.95 90)
@@ -8010,7 +8028,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "R30") (unit 1)
+          (reference "R31") (unit 1)
         )
       )
     )
@@ -8122,7 +8140,7 @@
   (symbol (lib_id "power:+5V") (at 92.71 177.8 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid d44b4469-d391-4993-ad7f-c029ff5df00a)
-    (property "Reference" "#PWR024" (at 96.52 177.8 0)
+    (property "Reference" "#PWR025" (at 96.52 177.8 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 93.345 177.8 90)
@@ -8138,7 +8156,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "#PWR024") (unit 1)
+          (reference "#PWR025") (unit 1)
         )
       )
     )
@@ -8222,7 +8240,7 @@
   (symbol (lib_id "Device:R") (at 304.165 104.14 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d9b51540-982a-4185-845d-8e969814c389)
-    (property "Reference" "R26" (at 304.165 104.14 90)
+    (property "Reference" "R27" (at 304.165 104.14 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "150" (at 303.53 107.95 90)
@@ -8239,7 +8257,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "R26") (unit 1)
+          (reference "R27") (unit 1)
         )
       )
     )
@@ -8248,7 +8266,7 @@
   (symbol (lib_id "Device:LED") (at 354.33 93.98 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid d9c9d2cf-07f1-47e8-89df-9d9015b90455)
-    (property "Reference" "D28" (at 353.06 92.075 90)
+    (property "Reference" "D20" (at 353.06 92.075 90)
       (effects (font (size 0.5 0.5)))
     )
     (property "Value" "LED" (at 358.14 94.1705 90)
@@ -8265,7 +8283,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "D28") (unit 1)
+          (reference "D20") (unit 1)
         )
       )
     )
@@ -8299,7 +8317,7 @@
   (symbol (lib_id "Device:LED") (at 307.34 93.98 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid db9d1e6f-1f89-4f54-91c6-53bd3dd6f386)
-    (property "Reference" "D17" (at 306.07 92.075 90)
+    (property "Reference" "D9" (at 306.07 92.075 90)
       (effects (font (size 0.5 0.5)))
     )
     (property "Value" "LED" (at 311.15 94.1705 90)
@@ -8316,7 +8334,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "D17") (unit 1)
+          (reference "D9") (unit 1)
         )
       )
     )
@@ -8366,19 +8384,19 @@
     )
   )
 
-  (symbol (lib_id "Device:C") (at 160.655 140.97 0) (unit 1)
+  (symbol (lib_id "Device:C") (at 165.735 141.605 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid dec3eeb7-2676-41ec-89a1-f9c1b869b8b9)
-    (property "Reference" "C21" (at 164.465 140.3349 0)
+    (property "Reference" "C23" (at 169.545 140.9699 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "10uF" (at 164.465 142.8749 0)
+    (property "Value" "10uF" (at 169.545 143.5099 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 161.6202 144.78 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 166.7002 145.415 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (at 160.655 140.97 0)
+    (property "Datasheet" "~" (at 165.735 141.605 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid c1d4b0f0-ee92-40cf-8914-576f5fc713dc))
@@ -8386,7 +8404,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "C21") (unit 1)
+          (reference "C23") (unit 1)
         )
       )
     )
@@ -8421,7 +8439,7 @@
   (symbol (lib_id "power:+5V") (at 311.15 153.67 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e02d9157-6afe-476d-938b-29c36b700116)
-    (property "Reference" "#PWR061" (at 314.96 153.67 0)
+    (property "Reference" "#PWR066" (at 314.96 153.67 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+5V" (at 306.07 153.67 90)
@@ -8437,7 +8455,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "#PWR061") (unit 1)
+          (reference "#PWR066") (unit 1)
         )
       )
     )
@@ -8446,7 +8464,7 @@
   (symbol (lib_id "power:+3V3") (at 359.41 134.62 270) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e11e8a47-f241-4b81-91a6-d0d86db9ae69)
-    (property "Reference" "#PWR073" (at 355.6 134.62 0)
+    (property "Reference" "#PWR072" (at 355.6 134.62 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "+3V3" (at 365.125 134.62 90)
@@ -8462,7 +8480,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "#PWR073") (unit 1)
+          (reference "#PWR072") (unit 1)
         )
       )
     )
@@ -8471,7 +8489,7 @@
   (symbol (lib_id "power:GND") (at 92.71 193.04 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid e3be8663-9566-408e-af44-c5045e686f24)
-    (property "Reference" "#PWR025" (at 92.71 199.39 0)
+    (property "Reference" "#PWR026" (at 92.71 199.39 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 96.52 194.31 0)
@@ -8487,7 +8505,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "#PWR025") (unit 1)
+          (reference "#PWR026") (unit 1)
         )
       )
     )
@@ -8552,7 +8570,7 @@
   (symbol (lib_id "Device:R") (at 310.515 104.14 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ec36df03-2a75-4c28-bc2c-ef5cd0cbaacb)
-    (property "Reference" "R28" (at 310.515 104.14 90)
+    (property "Reference" "R29" (at 310.515 104.14 90)
       (effects (font (size 1.27 1.27)))
     )
     (property "Value" "150" (at 309.88 107.95 90)
@@ -8569,7 +8587,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "R28") (unit 1)
+          (reference "R29") (unit 1)
         )
       )
     )
@@ -8578,7 +8596,7 @@
   (symbol (lib_id "Device:LED") (at 316.865 93.98 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ed3082b1-7a77-41d8-9551-080a4608d9a7)
-    (property "Reference" "D20" (at 315.595 92.075 90)
+    (property "Reference" "D12" (at 315.595 92.075 90)
       (effects (font (size 0.5 0.5)))
     )
     (property "Value" "LED" (at 320.675 94.1705 90)
@@ -8595,7 +8613,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "D20") (unit 1)
+          (reference "D12") (unit 1)
         )
       )
     )
@@ -8659,7 +8677,7 @@
   (symbol (lib_id "Device:R") (at 158.75 53.975 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f05cb705-f8cb-434b-b8ec-bb908227a243)
-    (property "Reference" "R10" (at 160.02 52.705 0)
+    (property "Reference" "R11" (at 160.02 52.705 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "10k" (at 160.02 54.6099 0)
@@ -8676,7 +8694,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "R10") (unit 1)
+          (reference "R11") (unit 1)
         )
       )
     )
@@ -8685,7 +8703,7 @@
   (symbol (lib_id "Device:LED") (at 297.815 93.98 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f11f5d18-c1a4-4095-8e73-7237074833e0)
-    (property "Reference" "D14" (at 296.545 92.075 90)
+    (property "Reference" "D6" (at 296.545 92.075 90)
       (effects (font (size 0.5 0.5)))
     )
     (property "Value" "LED" (at 301.625 94.1705 90)
@@ -8702,32 +8720,32 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "D14") (unit 1)
+          (reference "D6") (unit 1)
         )
       )
     )
   )
 
-  (symbol (lib_id "power:+1V2") (at 160.655 137.16 0) (unit 1)
+  (symbol (lib_id "power:+1V2") (at 165.735 137.795 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid f1216983-7d06-4981-a2ab-e4f6a7615b64)
-    (property "Reference" "#PWR045" (at 160.655 140.97 0)
+    (property "Reference" "#PWR048" (at 165.735 141.605 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Value" "+1V2" (at 160.655 133.35 0)
+    (property "Value" "+1V2" (at 165.735 133.985 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 160.655 137.16 0)
+    (property "Footprint" "" (at 165.735 137.795 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "" (at 160.655 137.16 0)
+    (property "Datasheet" "" (at 165.735 137.795 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid e76fbebe-6aa8-4fbc-8194-2f0fdbcaf6d0))
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "#PWR045") (unit 1)
+          (reference "#PWR048") (unit 1)
         )
       )
     )
@@ -8762,7 +8780,7 @@
   (symbol (lib_id "power:GND") (at 323.215 58.42 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f3cb892d-9ac5-4490-af54-9b66019e6f55)
-    (property "Reference" "#PWR063" (at 323.215 64.77 0)
+    (property "Reference" "#PWR069" (at 323.215 64.77 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (at 323.215 62.23 0)
@@ -8778,7 +8796,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "#PWR063") (unit 1)
+          (reference "#PWR069") (unit 1)
         )
       )
     )
@@ -8838,7 +8856,7 @@
   (symbol (lib_id "Device:LED") (at 313.69 93.98 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f58726bd-028f-48b7-a501-bfe5df810d34)
-    (property "Reference" "D19" (at 312.42 92.075 90)
+    (property "Reference" "D11" (at 312.42 92.075 90)
       (effects (font (size 0.5 0.5)))
     )
     (property "Value" "LED" (at 317.5 94.1705 90)
@@ -8855,7 +8873,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "D19") (unit 1)
+          (reference "D11") (unit 1)
         )
       )
     )
@@ -8914,7 +8932,7 @@
   (symbol (lib_id "Device:LED") (at 294.64 93.98 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid f8c3dfde-534d-498d-a87e-1ab2081713f1)
-    (property "Reference" "D13" (at 293.37 92.075 90)
+    (property "Reference" "D5" (at 293.37 92.075 90)
       (effects (font (size 0.5 0.5)))
     )
     (property "Value" "LED" (at 298.45 94.1705 90)
@@ -8931,7 +8949,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "D13") (unit 1)
+          (reference "D5") (unit 1)
         )
       )
     )
@@ -9093,7 +9111,7 @@
   (symbol (lib_id "Device:LED") (at 300.99 93.98 90) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid ff38ffff-c8a8-4803-b3dd-f00363fdce04)
-    (property "Reference" "D15" (at 299.72 92.075 90)
+    (property "Reference" "D7" (at 299.72 92.075 90)
       (effects (font (size 0.5 0.5)))
     )
     (property "Value" "LED" (at 304.8 94.1705 90)
@@ -9110,7 +9128,7 @@
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
-          (reference "D15") (unit 1)
+          (reference "D7") (unit 1)
         )
       )
     )
