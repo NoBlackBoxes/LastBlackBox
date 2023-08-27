@@ -12244,8 +12244,8 @@
     (property "Datasheet" "~" (at 158.75 53.975 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid b3b9149a-6278-47d0-8108-738ce8752aa5))
-    (pin "2" (uuid 6c0afa3e-b0aa-4d93-a682-15278c64aef7))
+    (pin "1" (uuid d7b8c9cd-57fc-4a60-8e49-42981c8fbd23))
+    (pin "2" (uuid 7d0be581-ab36-4e97-a518-0ae6011e8226))
     (instances
       (project "NB3_hindbrain"
         (path "/c49eb9c2-071f-42f1-813b-8f9aeee9d910"
