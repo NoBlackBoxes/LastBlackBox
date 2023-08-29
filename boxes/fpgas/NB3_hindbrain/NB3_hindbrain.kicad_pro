@@ -463,7 +463,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "NB3_hindbrain.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
