@@ -34,9 +34,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.2,
-          "height": 0.45,
-          "width": 0.45
+          "drill": 0.0,
+          "height": 0.425,
+          "width": 0.37
         },
         "silk_line_width": 0.12,
         "silk_text_italic": false,
@@ -56,7 +56,17 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "clearance|82880000|77285000|77d964b4-1a83-4fde-a271-37f548114d34|e923ba49-a956-4135-aeda-2980cebf27c4",
+        "clearance|82880000|82735000|23aea18e-5f0f-477c-88ce-af6c111758f8|c6ac2148-6fd4-4f49-b12b-d7feee832466",
+        "clearance|85675000|77585000|545f22e9-a571-48a0-a8ac-bfbf4dd5fddd|bb896057-b803-4a0d-a843-d8fccce503ce",
+        "clearance|85675000|82435000|5a1dbe33-ed08-43bb-8d16-8cc5f08ab5a7|5092a024-1522-48b3-ade6-a0cfbd350c92",
+        "lib_footprint_mismatch|124580000|79738500|296e42f4-3d8c-4205-9cba-186f04206946|00000000-0000-0000-0000-000000000000",
+        "solder_mask_bridge|82880000|77285000|e923ba49-a956-4135-aeda-2980cebf27c4|77d964b4-1a83-4fde-a271-37f548114d34",
+        "solder_mask_bridge|82880000|82735000|c6ac2148-6fd4-4f49-b12b-d7feee832466|23aea18e-5f0f-477c-88ce-af6c111758f8",
+        "solder_mask_bridge|84580000|78110000|60b8a46d-9c3f-4167-aac6-b4a567d91c3a|545f22e9-a571-48a0-a8ac-bfbf4dd5fddd",
+        "solder_mask_bridge|84580000|81910000|c6af3041-dca4-4362-bc1d-6af0831e8f99|5a1dbe33-ed08-43bb-8d16-8cc5f08ab5a7"
+      ],
       "meta": {
         "version": 2
       },
@@ -114,7 +124,7 @@
         "allow_blind_buried_vias": false,
         "allow_microvias": false,
         "max_error": 0.005,
-        "min_clearance": 0.127,
+        "min_clearance": 0.0,
         "min_connection": 0.0,
         "min_copper_edge_clearance": 0.01,
         "min_hole_clearance": 0.0,
@@ -126,8 +136,8 @@
         "min_text_height": 0.7999999999999999,
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.19999999999999998,
-        "min_track_width": 0.127,
-        "min_via_annular_width": 0.049999999999999996,
+        "min_track_width": 0.125,
+        "min_via_annular_width": 0.01,
         "min_via_diameter": 0.44999999999999996,
         "solder_mask_clearance": 0.0,
         "solder_mask_min_width": 0.0,
