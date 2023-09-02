@@ -8,7 +8,7 @@ Breadboard (400),400-tie solderless breadboard,1,https://www.amazon.co.uk/gp/pro
 Battery holder,4xAA battery holder with ON-OFF switch and male pins,1,https://www.dfrobot.com/product-202.html
 AA Battery,1.5 Volt AA Alkaline battery,4,https://www.amazon.co.uk/Duracell-Base-MN1500-Pack-Batteries-black/dp/B002QIGO9U
 Jumper kit,Kit of multi-length 22 AWG breadboard jumpers,1,https://uk.farnell.com/multicomp/mc001810/hard-jumper-wire-22awg-140pc/dp/2770338
-Jumper wires,Assorted 22 AWG jumper wire leads (male/female) - 240 pcs,1,https://www.amazon.co.uk/240pcs-Solderless-Breadboard-Arduino-Project/dp/B08PJSTS3C/ref=sr_1_18
+Jumper wires,Assorted 22 AWG jumper wire leads (male/socket) - 240 pcs,1,https://www.amazon.co.uk/240pcs-Solderless-Breadboard-Arduino-Project/dp/B08PJSTS3C/ref=sr_1_18
 Test Leads,Alligator clip to 0.64 mm pin (20 cm),2,https://www.amazon.co.uk/gp/product/B096JR15JW
 Rubber feet,Adhesive rubber standoffs (1421T6CL),4,https://uk.farnell.com/hammond/1421t6cl/feet-stick-on-pk24/dp/1876522
 Photoresistor (LDR),Light-dependent resistor (GL5516 and GL5528),2,https://www.amazon.co.uk/Resistor-Dependent-Photoresistor-Sensitive-Sensors/dp/B08SC1M7V7/ref=pd_sbs_2
@@ -20,13 +20,13 @@ Mini Breadboard (170),170-tie solderless breadboard,4,https://www.amazon.co.uk/E
 Day 2,,,
 NB3 Servo mount,Acrylic servo motor mounting bracket,2,VK
 M2.5 screw,6 mm M2.5 thread screw ,4,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2
-M2.5 standoff (12 mm),12 mm female-to-female M2.5 standoffs,4,https://uk.farnell.com/wurth-elektronik/970120154/standoff-hex-female-female-12mm/dp/2987851
+M2.5 standoff (12 mm),12 mm socket-to-socket M2.5 standoffs,4,https://uk.farnell.com/wurth-elektronik/970120154/standoff-hex-female-female-12mm/dp/2987851
 Servo Motor,FS90R Micro Continuous Rotation Servo w/Wheel,2,https://www.rapidonline.com/feetech-fs90r-servo-and-wheel-37-1336
 Caster,"Ÿ"" metal ball caster",1,https://www.pololu.com/product/955
 NB3 Spacer,NB3 spacer 3 mm spacer for mounting ball caster,3,VK
 NB3 Power Board,Regulated DC-DC power supply (5 Volts - 4 Amps),1,VK
 Custom Power Cable,4-way JST power cable ,1,https://dirtypcbs.com/store/new_cables/edit/13071
-M2.5 standoff (6 mm),6 mm female-to-female M2.5 standoffs,4,https://uk.farnell.com/wurth-elektronik/970060154/standoff-hex-female-female-6mm/dp/2987805
+M2.5 standoff (6 mm),6 mm socket-to-socket M2.5 standoffs,4,https://uk.farnell.com/wurth-elektronik/970060154/standoff-hex-female-female-6mm/dp/2987805
 M2.5 screw,6 mm M2.5 thread screw ,8,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2
 12V DC Power Supply,12V/2A - AC-DC transformer (UK/EU/USA plugs),1,https://uk.farnell.com/xp-power/ver24us120-ja/adaptor-ac-dc-12v-2a/dp/2643267
 LED (Green),3 mm/20 mA green LED,2,https://uk.farnell.com/multicomp/mcl034gd/led-3mm-70-green/dp/1581114
@@ -44,8 +44,8 @@ Day 3,,,
 Computer (RPi4),Raspberry Pi 4b with 2 GB RAM,1,https://uk.farnell.com/raspberry-pi/rpi4-modbp-4gb/raspberry-pi-4-model-b-4gb/dp/3051887
 Heatsinks,Heatsinks for RPi 4b chips,1,https://www.amazon.co.uk/gp/product/B07VRNT3HX
 SD card,16 GB micro SD card,1,https://uk.farnell.com/integral/inmsdh16g-100v10/16gb-microsdhc-v10-uhs-i-u1/dp/3498606
-M2.5 standoff (15 mm),15 mm male-to-female M2.5 standoff,4,https://uk.farnell.com/wurth-elektronik/971150151/standoff-hex-male-female-15mm/dp/2884399
-M2.5 standoff (12 mm),12 mm female-to-female M2.5 standoff,4,https://uk.farnell.com/harwin/r25-1002002/standoff-hex-female-brass-m2-5/dp/3754484
+M2.5 standoff (15 mm),15 mm male-to-socket M2.5 standoff,4,https://uk.farnell.com/wurth-elektronik/971150151/standoff-hex-male-female-15mm/dp/2884399
+M2.5 standoff (12 mm),12 mm socket-to-socket M2.5 standoff,4,https://uk.farnell.com/harwin/r25-1002002/standoff-hex-female-brass-m2-5/dp/3754484
 M2.5 screw,6 mm M2.5 thread screw ,4,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2
 USB SD card IO, SD card reader/writer,1,https://www.amazon.co.uk/Beikell-High-speed-Adapter-Supports-MMC-Compatible-Windows/dp/B07L9VT8YY
 ,,,
@@ -56,7 +56,7 @@ Day 5,,,
 Camera (RPi v3),RPi color camera with auto-focus (version3),1,https://uk.farnell.com/raspberry-pi/rpi-noir-camera-board/raspberry-pi-noir-camera-board/dp/2510729
 NB3 Cortex Mount,Custom laser cut mount for cortex,1,VK
 NB3 Camera Mount,Custom laser cut mount for camera,1,VK
-M2.5 standoff (15 mm),15 mm male-to-female M2.5 standoff,4,https://uk.farnell.com/wurth-elektronik/971150151/standoff-hex-male-female-15mm/dp/2884399
+M2.5 standoff (15 mm),15 mm male-to-socket M2.5 standoff,4,https://uk.farnell.com/wurth-elektronik/971150151/standoff-hex-male-female-15mm/dp/2884399
 M2.5 screw,6 mm M2.5 thread screw ,4,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2
 M2 nut,M2 thread nut - CAMERA,4,ACCU
 M2 screw,8 mm M2 thread screw - CAMERA,4,ACCU
