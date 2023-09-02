@@ -1,4 +1,4 @@
-NB3 Body,NB3 robot base PCB,1,NB3_body,
+NB3 Body,NB3 robot base PCB,1,NB3_body,VK
 Resistor,330 &Omega;/0.25 W,2,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-330r/res-330r-1-250mw-axial-metal-film/dp/9341730
 Resistor,470 &Omega;/0.25 W,1,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943
 Resistor,1 k&Omega;/0.25 W,1,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-1k/res-1k-1-250mw-axial-metal-film/dp/9341102

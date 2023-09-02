@@ -59,8 +59,6 @@ def insert_goals(box):
 
     # Insert goals
     readme = pre_readme + goals_section + post_readme
-    print(start)
-    print(stop)
 
     # Store README.md
     f = open(readme_path, 'w', encoding='utf8')
@@ -88,14 +86,14 @@ boxes = [
     'data',
     'logic',
     'memory',
-    'ics',
+    'fpgas',
     'computers',
     'control',
     'behaviour',
     'systems',
     'networks',
     'security',
-    'hearing',
+    'audio',
     'vision',
     'learning',
     'intelligence',

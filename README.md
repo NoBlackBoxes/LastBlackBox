@@ -17,10 +17,6 @@ This is course about neuroscience *and* technology. You will learn about the bra
 </p>
 
 
-## Prerequisites
-
-A variety of tools (hardware and software) will be required to complete the course exercises and construct the NB3. These tools are all included in the "White Box", but you can use your own if available. Please complete the initial setup by following the instructions on the ["White Box" page](/boxes/white/README.md).
-
 ----
 
 <p align="center" style="font-size:32px">
@@ -32,5 +28,3 @@ A variety of tools (hardware and software) will be required to complete the cour
 ## License
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />The entire LastBlackBox repository and website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
-
-https://open.spotify.com/socialsession/4XgfHWLPKHpeeDaWbK79qfG4BoRgnRG203PP7RpCCRQzEoBYGLsqRvtuULSSv6Rp3ZBOW68lYpvqzYcnIlCfTXzdlYIQTE6kRdV6n1toD17k?si=TZsWzh_QRaqs0Em9n9OnyA&utm_source=copy-link

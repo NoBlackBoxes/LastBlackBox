@@ -3,7 +3,7 @@ Name,Description,QTY,Datasheet,Supplier
 atoms,,,,
 Periodic Table,Periodic Table buisness card,1,,
 electrons,,,,
-NB3 Body,NB3 robot base PCB,1,NB3_body,
+NB3 Body,NB3 robot base PCB,1,NB3_body,VK
 Resistor,330 &Omega;/0.25 W,2,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-330r/res-330r-1-250mw-axial-metal-film/dp/9341730
 Resistor,470 &Omega;/0.25 W,1,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943
 Resistor,1 k&Omega;/0.25 W,1,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-1k/res-1k-1-250mw-axial-metal-film/dp/9341102
@@ -36,7 +36,8 @@ Piezo,Piezo element,1,_data/datasheets/piezo.pdf,https://uk.farnell.com/multicom
 motors,,,,
 DC brushed motor,6V Brushed DC motor,1,,https://uk.farnell.com/multicomp/mm28/motor-miniature-3-6v-9600rpm/dp/599128?st=dc%20motor
 Propeller,Motor shaft attachment,1,,https://www.amazon.co.uk/Winterworm-Propeller-Project-Science-Accessories/dp/B07D8SZHZ8
-transistors,,,,
+DC Gearbox Motor,TT Gearbox DC Motor - 200RPM - 3 to 6VDC,2,,https://www.adafruit.com/product/3777#technical-details
+Motor Mount,Mount for TT Gearbox DC Motors - L-Bracket Type,2,,https://www.adafruit.com/product/3768transistors,,,,
 MOSFET,Power MOSFET/N-channel (IRF510),2,_data/datasheets/IRF510.pdf,https://uk.farnell.com/vishay/irf510pbf/mosfet-n-100v-5-6a-to-220ab/dp/1653658
 Diode,IN4001,2,_data/datasheets/IN4001.pdf,https://uk.farnell.com/on-semiconductor/1n4001g/diode-standard-1a-do-41/dp/1458986
 Photodiode,Visible (broadband) photodiode,2,,https://uk.farnell.com/vishay/tefd4300/photodiode-950nm-3mm/dp/2251271
@@ -77,7 +78,7 @@ Gate (NOR),4xNOR gate,1,_data/datasheets/NOR_gates.pdf,https://uk.farnell.com/te
 Gate (XOR),4xXOR gate,1,_data/datasheets/XOR_gates.pdf,https://uk.farnell.com/texas-instruments/cd4070be/ic-4000-cmos-4070-dip14-18v/dp/3120134
 memory,,,,
 Gate (NAND),4xNAND gate,2,_data/datasheets/NAND_gates.pdf,https://uk.farnell.com/texas-instruments/cd4011be/ic-4000-cmos-4011-dip14-18v/dp/3120113
-ics,,,,
+fpgas,,,,
 UpDuino,ICE40UP5K dev board,1,_data/datasheets/arduino_nano_rev3.pdf,https://uk.farnell.com/arduino/a000005/arduino-nano-evaluation-board/dp/1848691
 Cable (MiniUSB-1m),Mini-USB to Type-A cable (1 m),1,_data/datasheets/mini_USB_cable_1m.pdf,https://uk.farnell.com/molex/88732-8602/usb-cable-2-0-plug-plug-1m/dp/1221071
 Piezo Buzzer,Piezoelectric speaker/buzzer,1,_data/datasheets/piezo_speaker.pdf,https://uk.farnell.com/kingstate/kpeg110/piezo-transducer/dp/1193641
@@ -102,11 +103,17 @@ networks,,,,
 Cable (Ethernet),RJ45 cact5e ethernet patch cable (1 m),1,_data/datasheets/ethernet_cable_1m.pdf,https://uk.farnell.com/pro-signal/ps11074/lead-patch-cat-5e-1-00m-black/dp/1734943
 security,,,,
 Secret Message,A SHA256 encrypted message (in HEX),1,,
-hearing,,,,
-NB3 Ear, I2S mems microphone breakout board,2,NB3_ear,
+audio,,,,
+NB3 Ear,I2S mems microphone breakout board,2,NB3_ear,VK
+NB3 Mouth,I2S DAC-AMP breakout board,1,NB3_mouth,VK
+Speaker,3 Watt 4 Ohm with JST-PH2.0,1,_data/datasheets/CQR0508.jpg,https://www.amazon.co.uk/dp/B0822Z4LPH
+Speaker Mount,Custom laser cut mount for speaker,1,-,VK
+M3 standoff (15mm ps),M3 15 mm long plug-to-socket standoffs,2,-,https://uk.farnell.com/ettinger/05-13-151/spacer-m3x15-vzk/dp/1466726
+M3 nut (square),square M3 nut 1.8 mm thick,2,-,ACCU
+M3 screw (6 mm),6 mm M3 pan headed screw,2,-,ACCU
 vision,,,,
-Camera (RPiv2),Raspberry Pi 8 MP camera,1,_data/datasheets/rpi_camera_v2.pdf,https://uk.farnell.com/raspberry-pi/rpi-8mp-camera-board/raspberry-pi-camera-board-v2/dp/2510728
-Camera Mount,Custom laser cut camera mount,1,NB3_camera_mount,
+Camera (RPi v3),RPi color camera with auto-focus (version 3),1,_data/datasheets/rpi_camera_v3.pdf,https://uk.farnell.com/raspberry-pi/rpi-noir-camera-board/raspberry-pi-noir-camera-board/dp/2510729
+NB3 Camera Mount,Custom laser cut mount for RPi camera,1,NB3_camera_mount,VK
 M2 screw, M2 threaded bolt (8 mm),4,,
 M2 nut, M2 threaded nut,4,,learning,,,,
 Clicker,Loud sound maker (and whistle),1,,https://www.amazon.co.uk/gp/product/B07HD3RDMK

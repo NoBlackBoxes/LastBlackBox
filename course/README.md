@@ -29,8 +29,8 @@ Hindbrain|Midbrain|Forebrain|
 
 ### Week 1
 
-- Day 1: Electrons
-- Day 2: Magnets + Light
+- Day 1: Electrons + Magnets
+- Day 2: Light
 - Day 3: Sensors + Motors
 - Day 4: Transistors + Amplifiers
 - Day 5: Reflexes

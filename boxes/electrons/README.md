@@ -10,7 +10,7 @@ In this box, we will learn about electricity...how to measure it and how to **co
 
 Contents|Description| # |Data|Link|
 :-------|:----------|:-:|:--:|:--:|
-NB3 Body|NB3 robot base PCB|1|[-D-](NB3_body)|-
+NB3 Body|NB3 robot base PCB|1|[-D-](NB3_body)|[-L-](VK)
 Resistor|330 &Omega;/0.25 W|2|[-D-](_data/datsheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-330r/res-330r-1-250mw-axial-metal-film/dp/9341730)
 Resistor|470 &Omega;/0.25 W|1|[-D-](_data/datsheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943)
 Resistor|1 k&Omega;/0.25 W|1|[-D-](_data/datsheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-1k/res-1k-1-250mw-axial-metal-film/dp/9341102)
