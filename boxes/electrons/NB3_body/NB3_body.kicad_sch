@@ -6,8 +6,8 @@
 
   (title_block
     (title "NB3 Body Board")
-    (date "2023-08-12")
-    (rev "0.0.4")
+    (date "2023-09-02")
+    (rev "0.0.5")
     (company "Voight-Kampff")
     (comment 1 "NoBlackBoxes: NB3 robot base")
   )
