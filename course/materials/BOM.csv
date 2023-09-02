@@ -37,7 +37,8 @@ motors,,,,
 DC brushed motor,6V Brushed DC motor,1,,https://uk.farnell.com/multicomp/mm28/motor-miniature-3-6v-9600rpm/dp/599128?st=dc%20motor
 Propeller,Motor shaft attachment,1,,https://www.amazon.co.uk/Winterworm-Propeller-Project-Science-Accessories/dp/B07D8SZHZ8
 DC Gearbox Motor,TT Gearbox DC Motor - 200RPM - 3 to 6VDC,2,,https://www.adafruit.com/product/3777#technical-details
-Motor Mount,Mount for TT Gearbox DC Motors - L-Bracket Type,2,,https://www.adafruit.com/product/3768transistors,,,,
+Motor Mount,Mount for TT Gearbox DC Motors - L-Bracket Type,2,,https://www.adafruit.com/product/3768
+transistors,,,,
 MOSFET,Power MOSFET/N-channel (IRF510),2,_data/datasheets/IRF510.pdf,https://uk.farnell.com/vishay/irf510pbf/mosfet-n-100v-5-6a-to-220ab/dp/1653658
 Diode,IN4001,2,_data/datasheets/IN4001.pdf,https://uk.farnell.com/on-semiconductor/1n4001g/diode-standard-1a-do-41/dp/1458986
 Photodiode,Visible (broadband) photodiode,2,,https://uk.farnell.com/vishay/tefd4300/photodiode-950nm-3mm/dp/2251271
@@ -115,7 +116,8 @@ vision,,,,
 Camera (RPi v3),RPi color camera with auto-focus (version 3),1,_data/datasheets/rpi_camera_v3.pdf,https://uk.farnell.com/raspberry-pi/rpi-noir-camera-board/raspberry-pi-noir-camera-board/dp/2510729
 NB3 Camera Mount,Custom laser cut mount for RPi camera,1,NB3_camera_mount,VK
 M2 screw, M2 threaded bolt (8 mm),4,,
-M2 nut, M2 threaded nut,4,,learning,,,,
+M2 nut, M2 threaded nut,4,,
+learning,,,,
 Clicker,Loud sound maker (and whistle),1,,https://www.amazon.co.uk/gp/product/B07HD3RDMK
 intelligence,,,,
 NPU,Coral EdgeTPU USB Type-C,1,_data/datasheets/Coral-USB-Accelerator-datasheet.pdf,https://www.mouser.co.uk/ProductDetail/Coral/G950-01456-01?qs=sGAEpiMZZMu3sxpa5v1qrv9%252Bz890pMquX2qAISzny6s%3D
