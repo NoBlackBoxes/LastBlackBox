@@ -1,3 +1,0 @@
-#FTDI cable (for upduino and other)
-ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6014", MODE="0666"
-
