@@ -12,6 +12,18 @@
 
 You will be building a robot. The robot's physical layout mimics the basic anatomy of a (vertebrate) brain. As you progress through the "boxes", your robot will *evolve* into an increasingly sophisticated machine. The goal of this course is to create an "intelligent" machine without using any "black boxes". We thus call this robot the No-Black-Box-Bot or NBBB or ***NB3***.
 
+## Repository
+The course is a combination of this code repo (LBB) and a submodule repo called "BlackBoxes". All of the subsequent exercises assume that you have "cloned" both repos to your Host computer. On Linux, there is an additional assumption that the LBB repo is in a folder called "NoBlackBoxes" in your home directory. You can setup everything with the followinf commands.
+
+```bash
+# ...from your "home" directory
+mkdir NoBlackBoxes  # Create NoBlackBoxes directory
+cd NoBlackBoxes     # Change to NoBlackBoxes directory
+
+# Clone LBB repo with submodules
+git clone --recurse-submodules https://github.com/NoBlackBoxes/LastBlackBox
+```
+
 ## Boxes
 
 Hindbrain|Midbrain|Forebrain|
