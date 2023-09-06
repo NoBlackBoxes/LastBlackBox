@@ -1,7 +1,7 @@
 Name,Description,QTY,Datasheet,Supplier
 ,,,,
 atoms,,,,
-Periodic Table,Periodic Table business card,1,,
+Periodic Table,Periodic Table business card,1,card,
 electrons,,,,
 NB3 Body,NB3 robot base PCB,1,NB3_body,VK
 Resistor,330 &Omega;/0.25 W,2,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-330r/res-330r-1-250mw-axial-metal-film/dp/9341730
@@ -11,30 +11,30 @@ Resistor,10 k&Omega;/0.25 W,2,_data/datsheets/resistor.pdf,https://uk.farnell.co
 Capacitor,0.1 uF ceramic capacitor,1,_data/datasheets/capacitor_ceramic.pdf,https://uk.farnell.com/kemet/c322c104k1r5ta/cap-0-1-f-100v-10-x7r/dp/1457685
 Capacitor,100 uF aluminum electrolytic capacitor,1,_data/datsheets/capacitor_electrolytic.pdf,https://uk.farnell.com/rubycon/16zlh100mefc5x11/cap-100-f-16v-20/dp/8126283
 Button,Tactile switch,2,_data/datasheets/button.pdf,https://uk.farnell.com/omron/b3f-1000/switch-spno-0-05a-24v-tht-0-98n/dp/176432
-Potentiometer,2.2 k&Omega; variable resistor,2,_data/datasheets/pot_20k.pdf,https://uk.farnell.com/bourns/3362p-1-203lf/trimmer-20k/dp/9354344
-Breadboard (400),400-tie solderless breadboard,1,_data/datasheets/breadboard_400.pdf,https://uk.farnell.com/multicomp/mcbb400/breadboard-solderless-300v-abs/dp/2395961
+Potentiometer,2.2 k&Omega; variable resistor,2,_data/datasheets/pot_2k2.pdf,https://uk.farnell.com/bourns/3362p-1-222lf/trimmer-pot-2-2kohm-10-1turn-th/dp/2328599
+Breadboard (400),400-tie solderless breadboard,1,_data/datasheets/breadboard_400.pdf,https://www.amazon.co.uk/gp/product/B0739XRX8F
 Batteries (AA),AA 1.5 V alkaline battery,4,,
-Battery holder,4xAA battery holder with ON-OFF switch,1,,https://www.dfrobot.com/product-202.html
+Battery holder,4xAA battery holder with ON-OFF switch,1,,https://www.amazon.co.uk/gp/product/B0814ZH68F
 Jumper kit,Kit of multi-length 22 AWG breadboard jumpers,1,_data/datasheets/jumper_kit.pdf,https://uk.farnell.com/multicomp/mc001810/hard-jumper-wire-22awg-140pc/dp/2770338
-Jumper wires,Assorted 22 AWG jumper wire leads (male/female),1,_data/datasheets/jumper_wires.pdf,https://uk.farnell.com/multicomp/mcbbj65/jumper-wire-assortment-65pcs/dp/2396146
-Test Lead,Alligator clip to 0.64 mm pin (20 cm),2,,https://www.amazon.co.uk/Oiyagai-Alligator-Crocodile-Arduino-Raspberry/dp/B07CXTSX8R/ref=sr_1_2?dchild=1&keywords=Oiyagai-Alligator-Crocodile-Arduino-Raspberry&qid=1598887302&s=computers&sr=1-2
+Jumper wires,Assorted 22 AWG jumper wire leads (male/female),1,_data/datasheets/jumper_wires.pdf,https://www.amazon.co.uk/240pcs-Solderless-Breadboard-Arduino-Project/dp/B08PJSTS3C
+Test Lead,Alligator clip to 0.64 mm pin (20 cm),2,,https://www.amazon.co.uk/gp/product/B096JR15JW
 Rubber feet,Adhesive rubber standoffs (1421T6CL),4,_data/datasheets/rubber_feet.pdf,https://uk.farnell.com/hammond/1421t6cl/feet-stick-on-pk24/dp/1876522
 magnets,,,,
 Inductor,1 mH torroidal inductor,1,_data/datasheets/inductor_torroidal.pdf,https://uk.farnell.com/bourns/2124-v-rc/inductor-1000uh-15-1-3a-toroid/dp/1929753
-Magnet wire,Narrow gaurge epoxy insulated (1 m),1,,
+Magnet wire,Narrow gaurge epoxy insulated (1 m),1,,https://www.amazon.co.uk/Enameled-Magnet-Soldering-Winding-Enamelled/dp/B07N65LRVD
 Bolt,12 mm long M4 hex bolt (stainless steel),1,,
 Paper Clip,26 mm zinc coated steel clip,1,,
 Magnet,Neodymium disc (8 mm x 3 mm),2,,https://uk.farnell.com/duratool/d01766/magnets-rare-earth-8-x-3mm-pk10/dp/1888095
-USB sound card,USB to 3.5 mm Audio out/in,1,,https://www.amazon.co.uk/UGREEN-Headphone-Microphone-Raspberry-Ultrabook/dp/B01N905VOY/ref=sr_1_5
-Stereo plug terminal,3.5 mm plug to screw terminal,2,,https://www.amazon.co.uk/dp/B07MNYBFL9/ref=sspa_dk_detail_1
+USB sound card,USB to 3.5 mm Audio out/in,1,,https://www.amazon.co.uk/UGREEN-Headphone-Microphone-Raspberry-Ultrabook/dp/B01N905VOY
+Stereo plug terminal,3.5 mm plug to screw terminal,2,,https://www.amazon.co.uk/dp/B07MNYBFL9
 light,,,,
 Lightbulb,Mini incandescent bulb (6 V),1,_data/datasheets/lamp_6V.pdf,https://uk.farnell.com/cml-innovative-technologies/3820al/lamp-w-e-axial-t3-8-6v-0-6w/dp/1139454
 sensors,,,,
 Thermistor,Temperature sensitive resistor,2,_data/datasheets/thermistor.pdf,https://uk.farnell.com/epcos/b57891m0103k000/thermistor-ntc-radial-leaded/dp/2285471
-Photoresistor (LDR),Light-dependent resistor (GL5516 and GL5528),8,,https://www.amazon.co.uk/Resistor-Dependent-Photoresistor-Sensitive-Sensors/dp/B08SC1M7V7/ref=pd_sbs_2
-Piezo,Piezo element,1,_data/datasheets/piezo.pdf,https://uk.farnell.com/multicomp/mcabt-455-rc/audio-element-piezo-2-8khz-35mm/dp/2433035?st=piezo
+Photoresistor (LDR),Light-dependent resistor (GL5516 and GL5528),8,,https://www.amazon.co.uk/Resistor-Dependent-Photoresistor-Sensitive-Sensors/dp/B08SC1M7V7
+Piezo,Piezo element,1,_data/datasheets/piezo.pdf,https://uk.farnell.com/multicomp/mcabt-455-rc/audio-element-piezo-2-8khz-35mm/dp/2433035
 motors,,,,
-DC brushed motor,6V Brushed DC motor,1,,https://uk.farnell.com/multicomp/mm28/motor-miniature-3-6v-9600rpm/dp/599128?st=dc%20motor
+DC brushed motor,6V Brushed DC motor,1,,https://www.amazon.co.uk/Gikfun-1V-6V-Hobby-Arduino-EK1894/dp/B07BHHP2BT
 Propeller,Motor shaft attachment,1,,https://www.amazon.co.uk/Winterworm-Propeller-Project-Science-Accessories/dp/B07D8SZHZ8
 DC Gearbox Motor,TT Gearbox DC Motor - 200RPM - 3 to 6VDC,2,,https://www.adafruit.com/product/3777#technical-details
 Motor Mount,Mount for TT Gearbox DC Motors - L-Bracket Type,2,,https://www.adafruit.com/product/3768
@@ -109,10 +109,11 @@ NB3 Ear,I2S mems microphone breakout board,2,NB3_ear,VK
 NB3 Mouth,I2S DAC-AMP breakout board,1,NB3_mouth,VK
 Speaker,3 Watt 4 Ohm with JST-PH2.0,1,_data/datasheets/CQR0508.jpg,https://www.amazon.co.uk/dp/B0822Z4LPH
 Speaker Mount,Custom laser cut mount for speaker,1,-,VK
-M3 standoff (15mm ps),M3 15 mm long plug-to-socket standoffs,2,-,https://uk.farnell.com/ettinger/05-13-151/spacer-m3x15-vzk/dp/1466726
-M3 nut (square),square M3 nut 1.8 mm thick,2,-,ACCU
-M3 screw (6 mm),6 mm M3 pan headed screw,2,-,ACCU
-vision,,,,
+M3 standoff (15/PS),15 mm long plug-to-socket M3 standoff,2,-,https://uk.farnell.com/ettinger/05-13-151/spacer-m3x15-vzk/dp/1466726
+M3 nut (square),square M3 nut 1.8 mm thick,2,-,https://www.accu.co.uk/flat-square-nuts/21326-HFSN-M3-A2
+M3 bolt (6 mm),6 mm long M3 bolt,2,-,https://www.accu.co.uk/pozi-pan-head-screws/500113-SPP-M3-6-ST-BZP
+M2.5 bolt (8 mm),8 mm long M2.5 bolt,2,-,https://www.accu.co.uk/pozi-pan-head-screws/9256-SPP-M2-5-8-A2
+M2.5 nut,regular M2.5 nut,2,-,https://www.accu.co.uk/hexagon-nuts/456430-HPN-M2-5-C8-Zvision,,,,
 Camera (RPi v3),RPi color camera with auto-focus (version 3),1,_data/datasheets/rpi_camera_v3.pdf,https://uk.farnell.com/raspberry-pi/rpi-noir-camera-board/raspberry-pi-noir-camera-board/dp/2510729
 NB3 Camera Mount,Custom laser cut mount for RPi camera,1,NB3_camera_mount,VK
 M2 screw, M2 threaded bolt (8 mm),4,,
