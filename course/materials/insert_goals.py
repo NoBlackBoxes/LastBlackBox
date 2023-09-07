@@ -5,15 +5,12 @@
 """
 import os
 
-# Get LBB root -- KeyError if not found
-try:
-    LBBREPO = os.environ['LBBROOT']
+# Get user name
+username = os.getlogin()
 
-except KeyError:
-    LBBREPO = '../..'
-
-# Specify LBB boxes folder
-LBBBOXES = LBBREPO + '/boxes'
+# Specify paths
+repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
+boxes_path = repo_path + '/boxes'
 
 #
 # Helper functions
@@ -38,8 +35,9 @@ def find_goals_section(readme):
 # Insert goal list into README file
 def insert_goals(box):
     # Store paths
-    box_path = LBBBOXES + "/" + box
+    box_path = boxes_path + "/" + box
     goals_path = box_path + "/goals.md"
+    topics_path = box_path + "/topics.md"
     readme_path = box_path + "/README.md"
     print(readme_path)
 
@@ -50,6 +48,10 @@ def insert_goals(box):
     # Read goals.md
     with open(goals_path, encoding='utf8') as f:
         goals = f.readlines()
+
+    # Read topics.md
+    with open(topics_path, encoding='utf8') as f:
+        topics = f.readlines()
 
     # Find start and end of goals section and split readme
     goals_section = ['## Goals\n'] + ['\n'] + goals + ['\n\n']

@@ -6,15 +6,12 @@
 """
 import os
 
-# Get LBB root -- KeyError if not found
-try:
-    LBBREPO = os.environ['LBBROOT']
+# Get user name
+username = os.getlogin()
 
-except KeyError:
-    LBBREPO = '../..'
-
-# Specify LBB boxes folder
-LBBBOXES = LBBREPO + '/boxes'
+# Specify paths
+repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
+boxes_path = repo_path + '/boxes'
 
 #
 # Helper functions
@@ -68,7 +65,7 @@ def convert_materials(materials):
 # Insert materials table into README file
 def insert_materials(box):
     # Store paths
-    box_path = LBBBOXES + "/" + box
+    box_path = boxes_path + "/" + box
     materials_path = box_path + "/materials.csv"
     readme_path = box_path + "/README.md"
     print(readme_path)
@@ -120,7 +117,7 @@ def insert_materials(box):
 # Append materials contents to BOM
 def append_materials(BOM, box):
     # Store paths
-    box_path = LBBBOXES + "/" + box
+    box_path = boxes_path + "/" + box
     materials_path = box_path + "/materials.csv"
 
     # Read materials.csv
@@ -172,6 +169,7 @@ boxes = [
     'vision',
     'learning',
     'intelligence',
+    'python',
     'websites'
 ]
 
@@ -185,7 +183,7 @@ for box in boxes:
     BOM = append_materials(BOM, box)
 
 # Store BOM
-bom_path = LBBREPO + "/course/materials/BOM.csv"
+bom_path = repo_path + "/course/materials/BOM.csv"
 f = open(bom_path, 'w', encoding='utf8')
 f.writelines(BOM)
 f.close()
