@@ -90,7 +90,7 @@ Heatsinks,Heatsinks for RPi 4b chips,1,_data/datasheets/rpi4b_heatsinks.jpg,http
 SD card,16 GB micro SD card,1,_data/datasheets/SanDisk-SDSQUAR-016G-GN6MA-datasheet.pdf,https://uk.farnell.com/sandisk/sdsquar-016g-gn6ma/memory-card-microsdhc-uhs-i-16gb/dp/2931924
 USB SD card IO, SD card reader/writer,1,,https://www.amazon.co.uk/Beikell-High-speed-Adapter-Supports-MMC-Compatible-Windows/dp/B07L9VT8YY
 M2.5 bolt (6),6 mm long M2.5 bolt,4,,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2
-M2.5 standoff (12/SS),12 mm long socket-to-socket M2.5 standoff,4,,https://uk.farnell.com/wurth-elektronik/970120151/standoff-hex-female-female-12mm/dp/2884528
+M2.5 standoff (20/SS),20 mm long socket-to-socket M2.5 standoff,4,,https://uk.farnell.com/wurth-elektronik/970200154/standoff-hex-female-female-20mm/dp/2987903
 M2.5 standoff (20/PS),20 mm long plug-to-socket M2.5 standoff,4,,https://uk.farnell.com/wurth-elektronik/971200151/standoff-hex-male-female-20mm/dp/2884418
 networks,,,,
 Cable (Ethernet),RJ45 cact5e ethernet patch cable (1 m),1,_data/datasheets/ethernet_cable_1m.pdf,https://uk.farnell.com/pro-signal/ps11074/lead-patch-cat-5e-1-00m-black/dp/1734943
@@ -109,6 +109,8 @@ M2.5 nut,regular M2.5 nut,2,-,https://www.accu.co.uk/hexagon-nuts/456430-HPN-M2-
 vision,,,,
 Camera (RPi v3),RPi color camera with auto-focus (version 3),1,_data/datasheets/rpi_camera_v3.pdf,https://uk.farnell.com/raspberry-pi/rpi-noir-camera-board/raspberry-pi-noir-camera-board/dp/2510729
 NB3 Camera Mount,Custom laser cut mount for RPi camera,1,NB3_camera_mount,VK
+NB3 Cortex Mount,Custom laser cut holder for NPU,1,NB3_cortex_mount,VK
+M2.5 bolt (6),6 mm long M2.5 bolt,4,,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2
 M3 nut (square),square M3 nut 1.8 mm thick,1,,https://www.accu.co.uk/flat-square-nuts/21326-HFSN-M3-A2
 M3 bolt (12),12 mm long M3 bolt,1,,https://www.accu.co.uk/pozi-pan-head-screws/500116-SPP-M3-12-ST-BZP
 M2 bolt (8),8 mm long M2 bolt,4,,https://www.accu.co.uk/pozi-pan-head-screws/500101-SPP-M2-8-ST-BZP
@@ -117,9 +119,6 @@ learning,,,,
 Clicker,Loud sound maker (and whistle),1,,https://www.amazon.co.uk/gp/product/B07HD3RDMK
 intelligence,,,,
 NPU,Coral EdgeTPU USB Type-C,1,_data/datasheets/Coral-USB-Accelerator-datasheet.pdf,https://coral.ai/products/accelerator/
-Cortex Mount,Custom laser cut holder for NPU,1,NB3_cortex_mount,VK
-M2.5 standoff (15/PS),15 mm long plug-to-socket M2.5 standoff,4,,https://uk.farnell.com/ettinger/05-20-215/spacer-m2-5-d2-5-15/dp/1466873
-M2.5 bolt (6),6 mm long M2.5 bolt,4,,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2
 M3 screw (16),16 mm long M3 screw with phillips socket,4,,
 M3 nut,regular M3 nut,4,,
 python,,,,
