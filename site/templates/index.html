@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<head>
+  <title>The Last Black Box</title>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='icon.png') }}"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+
+<body>
+{% filter markdown %}
+{% include 'README.md' %}
+{% endfilter %}
+</body>
