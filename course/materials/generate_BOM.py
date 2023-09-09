@@ -163,14 +163,16 @@ boxes = [
     'control',
     'behaviour',
     'systems',
+    'linux',
+    'python',
     'networks',
+    'websites',
+    'servers',
     'security',
     'audio',
     'vision',
     'learning',
-    'intelligence',
-    'python',
-    'websites'
+    'intelligence'
 ]
 
 # Insert materials table into README

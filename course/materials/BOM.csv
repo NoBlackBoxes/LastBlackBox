@@ -92,8 +92,16 @@ USB SD card IO, SD card reader/writer,1,,https://www.amazon.co.uk/Beikell-High-s
 M2.5 bolt (6),6 mm long M2.5 bolt,4,,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2
 M2.5 standoff (20/SS),20 mm long socket-to-socket M2.5 standoff,4,,https://uk.farnell.com/wurth-elektronik/970200154/standoff-hex-female-female-20mm/dp/2987903
 M2.5 standoff (20/PS),20 mm long plug-to-socket M2.5 standoff,4,,https://uk.farnell.com/wurth-elektronik/971200151/standoff-hex-male-female-20mm/dp/2884418
+linux,,,,
+Laptop,,1,,
+python,,,,
+Laptop,,1,,
+Camera (USB webcam or built-in),,1,,
 networks,,,,
 Cable (Ethernet),RJ45 cact5e ethernet patch cable (1 m),1,_data/datasheets/ethernet_cable_1m.pdf,https://uk.farnell.com/pro-signal/ps11074/lead-patch-cat-5e-1-00m-black/dp/1734943
+websites,,,,
+Laptop, Any laptop with a text editor,1,,servers,,,,
+Laptop,,1,,
 security,,,,
 Secret Message,A SHA256 encrypted message (in HEX),1,,
 audio,,,,
@@ -121,8 +129,3 @@ intelligence,,,,
 NPU,Coral EdgeTPU USB Type-C,1,_data/datasheets/Coral-USB-Accelerator-datasheet.pdf,https://coral.ai/products/accelerator/
 M3 screw (16),16 mm long M3 screw with phillips socket,4,,
 M3 nut,regular M3 nut,4,,
-python,,,,
-Laptop,,1,,
-Camera (USB webcam or built-in),,1,,
-websites,,,,
-Laptop, Any laptop with a text editor,1,,
