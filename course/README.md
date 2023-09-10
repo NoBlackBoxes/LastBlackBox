@@ -3,7 +3,7 @@
 > A kit containing a collection of black boxes that you "open" in sequence.
 
 <p align="center">
-<img src="designs/layout/layout.png" alt="Course Layout" width="700" height="400">
+<img src="designs/layout/layout.png" alt="Course Layout" width="100%" height="100%">
 </p>
 
 ----
