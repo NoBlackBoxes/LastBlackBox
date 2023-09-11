@@ -3,7 +3,7 @@
 > A ***Bootcamp Version*** of the Last Black Box course
 
 <p align="center">
-<img src="../designs/logo/logo_dark.png" alt="LBB logo" width="275" height="275">
+<img src="../designs/logo/logo.svg" alt="LBB logo" width="300" height="300">
 </p>
 
 ----
@@ -13,7 +13,7 @@
 You will be building a robot. The robot's physical layout mimics the basic anatomy of a (vertebrate) brain. As you progress through the course, your robot will *evolve* into an increasingly sophisticated machine. The goal is to create an "intelligent" machine without using any "black boxes". We thus call this robot the No-Black-Box-Bot or NBBB or ***NB3***.
 
 <p align="center">
-<img src="../designs/NB3/NB3_render.png" alt="NB3 outline" width="250" height="250">
+<img src="../designs/NB3/NB3_render.png" alt="NB3 outline" width="300" height="300">
 </p>
 
 ----

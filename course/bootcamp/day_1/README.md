@@ -12,7 +12,7 @@
 
 - Watch this video: [NB3 Body](https://vimeo.com/843622939)
 - The LastBlackBox GitHub Repo is here: [Last Black Box](https://github.com/NoBlackBoxes/LastBlackBox)
-  - The NB3_body PCB design (in KiCAD) is here: [NB3 Body PCB](https://github.com/NoBlackBoxes/LastBlackBox/tree/master/boxes/electrons/NB3_body)
+  - The NB3_body PCB design (in KiCAD) is here: [NB3 Body PCB](https://github.com/NoBlackBoxes/BlackBoxes/tree/master/electrons/NB3_body)
 
 - ***Task 1***: Assemble the robot body (prototyping base board)
 
