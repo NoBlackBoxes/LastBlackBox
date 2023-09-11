@@ -17,7 +17,7 @@ You will be building a robot. The robot's physical layout mimics the basic anato
 </p>
 
 ## Repository
-The course is a combination of this code repo (LBB) and a submodule repo called "BlackBoxes". All of the subsequent exercises assume that you have "cloned" both repos to your Host computer. On Linux, there is an additional assumption that the LBB repo is in a folder called "NoBlackBoxes" in your home directory. You can setup everything with the followinf commands.
+The course is a combination of this code repo (LBB) and a submodule repo called "BlackBoxes". All of the subsequent exercises assume that you have "cloned" both repos to your Host computer. On Linux, there is an additional assumption that the LBB repo is in a folder called "NoBlackBoxes" in your home directory. You can setup everything with the following commands.
 
 ```bash
 # ...from your "home" directory
