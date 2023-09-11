@@ -1,6 +1,7 @@
 # Generate LastBlackBox Layout
-import csv
 import os
+import csv
+import numpy as np
 
 # Get user name
 username = os.getlogin()
@@ -8,7 +9,7 @@ username = os.getlogin()
 # Specify paths
 repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
 boxes_path = repo_path + '/boxes'
-layout_path = repo_path + '/course/designs/layout'
+layout_path = repo_path + '/course/bootcamp/designs/layout'
 box_parameters_path = layout_path + "/box_parameters.csv"
 svg_path = layout_path + "/output.svg"
 
@@ -17,19 +18,11 @@ boxes = [
     'Atoms',
     'Electrons',
     'Magnets',
-    'Light',
     'Sensors',
     'Motors',
     'Transistors',
-    'Amplifiers',
-    'Reflexes',
     'Power',
-    'Data',
-    'Logic',
-    'Memory',
-    'FPGAs',
     'Computers',
-    'Control',
     'Behaviour',
     'Systems',
     'Linux',
@@ -37,10 +30,8 @@ boxes = [
     'Networks',
     'Websites',
     'Servers',
-    'Security',
     'Audio',
     'Vision',
-    'Learning',
     'Intelligence'
 ]
 num_boxes = len(boxes)
@@ -48,8 +39,8 @@ num_boxes = len(boxes)
 # Defaults
 box_size = 13.0
 box_stroke = 0.125
-num_rows = 4
-num_cols = 7
+num_rows = 3
+num_cols = 6
 
 # Generate box parameters
 box_parameters = []

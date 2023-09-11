@@ -8,7 +8,7 @@ username = os.getlogin()
 # Specify paths
 repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
 boxes_path = repo_path + '/boxes'
-layout_path = repo_path + '/course/designs/layout'
+layout_path = repo_path + '/course/bootcamp/designs/layout'
 box_parameters_path = layout_path + "/box_parameters.csv"
 svg_path = layout_path + "/output.svg"
 
@@ -57,7 +57,7 @@ def draw_box(file, name, x, y, width, height, fill, arrow_state):
 # Headers
 xml_header = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n"
 #svg_header = "<svg id=\"layout\" width=\"100mm\" height=\"100mm\" viewBox=\"0 0 100 100\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:svg=\"http://www.w3.org/2000/svg\">\n"
-svg_header = "<svg id=\"layout\" width=\"100mm\" height=\"60mm\" viewBox=\"0 0 100 60\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:svg=\"http://www.w3.org/2000/svg\">\n"
+svg_header = "<svg id=\"layout\" width=\"84.5mm\" height=\"41.7mm\" viewBox=\"0 0 84.5 41.7\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:svg=\"http://www.w3.org/2000/svg\">\n"
 
 # Open SVG ouput
 svg_file = open(svg_path, "w")
