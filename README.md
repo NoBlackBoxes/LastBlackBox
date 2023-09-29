@@ -8,7 +8,7 @@
 
 ## Goals
 
-This is course about neuroscience *and* technology. You will learn about the brain by building an increasingly complex robot.
+This is course about neuroscience *and* technology. You will learn about the brain by building an increasingly complex brain-shaped robot.
 
 ## Principles
 
