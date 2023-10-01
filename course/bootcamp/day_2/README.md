@@ -4,52 +4,29 @@
 
 ----
 
-### NB3 Build (power)
+### Logic and Memory
 
-- *NOTE*: Your NB3_power board cable *might* have inverted colors (black to +5V, red to 0V) relative to that shown in the assembly video. This doesn't matter, as the plugs will only work in one orientation and the correct voltage is conveyed to the correct position on the body.
+- MOSFET Gates and floating gate MOSFET memory
 
-<p align="center">
-<img src="resources/images/NB3_power_wiring.png" alt="NB3 power wiring" width="400" height="300">
-</p>
-
-- Watch this video: [NB3 Power](https://vimeo.com/626839902)
-- ***Task 1***: Add a (regulated) 5 volt power supply to your robo, which you can use while debugging to save your batteries
-
-### Analog to Digital
-
-- Watch this video: [ADCs](https://vimeo.com/627773247)
+- Computers!
 
 ### NB3 Build (hindbrain)
 
-*This year we are using Arduino "clones", functionally identicial copies of the original Arduino Nano computer. They work the same, but there are some differences from the video you will watch (particularly when connecting to your computer). I have listed some of things to pay attention to below, so please read through them before watching the video...just to be prepared.*
-
-- This year's NeuroKit contains an Arduino clone from DFRobot. Therefore, the package and board you have will look a bit different than the one shown in the videos. However, these clone boards work exactly*(see caveat) the same, except that they use a micro-USB cable, which is much more common and is included with your kit.
+- Add an Arduino as your NB3 Hindbrain
 
 <p align="center">
-<img src="resources/images/arduino_clone.png" alt="arduino clone" width="400" height="300">
+<img src="resources/images/pinout_arduino_nano.png" alt="arduino pinout" width="650" height="700">
 </p>
 
-- In the video below ("NB3 hindbrain"), the screen capture software did not show the dropdown menus used to select the Board, Processor, and Port for your specific Arduino board. Please select the following.
+- Install the Arduino IDE
 
   - Board: Arduino Nano
-  - Processor: ATmeag328P (or ATmega328P "old bootloader")
+  - Processor: ATmeag328P
   - Port: *this is unique to your setup and depends on your operating system*
-
-- *Caveat*: The Arduino communicates with your laptop via a USB-to-Serial chip. The original Arduino used a chip from FTDI, which during the pandemic, became impossible to find (it is used in a lot of automotive computers and they bought ***all of them***). Therefore, the newer Arduino clones use a different USB-to-Serial converter called the CH340. It works just fine, ***but*** it may require you to install a "driver" (a piece of software that knows how your operating system (OS) (macOS, windows, or linux) can talk to the chip) such that your Arduino clone board is detected and programmable. Furthermore, especially on Macs, you may need to give your OS "permission" to use the new chip. Below are a few links that might help you debug.
-
-- [General - Multiple OSes](https://sparks.gogo.co.nz/ch340.html)
-- [Macs - discussion thread](https://forum.arduino.cc/t/ch340-and-macos/1045166) 
-  - [Macs - link](https://blog.devgenius.io/using-arduino-ide-with-unofficial-arduino-clones-bearing-ch340-chip-752d1b90810d)
-- [Windows](https://blog.devgenius.io/using-arduino-ide-with-unofficial-arduino-clones-bearing-ch340-chip-752d1b90810d)
-- Linux: Try selecting the "Processor" ATMega32P (old bootloader)
-
-- ***If you encounter any issues talking to your Arduino clone, then post them in this Discord channel: [#connecting-arduino](https://discord.gg/d92UhdCu)***
-
-Finally...
 
 - Watch this video: [NB3 Hindbrain](https://vimeo.com/626836554)
   - This pinout for the Arduino Nano might be useful: [Anduino Nano Pinout](resources/images/pinout_arduino_nano_clone.png)
-- ***Task 2***: Mount and power your Arduino based hindbrain (connect the mini-USB/micro-USB cable)
+- ***Task 2***: Mount and power your Arduino based hindbrain (connect the mini-USB cable)
   - The built-in LED on the board should be blinking at 1 Hz
 
 ### Programming Arduino
@@ -88,9 +65,14 @@ Finally...
 
 ----
 
-### Computers
+### Behaviour (and programming)
 
-- Live Lecture: "Logic, memory, and the *programmable* computer"
+### NB3 Build (servos)
+
+- Watch this video: [LBB Servos](https://vimeo.com/843653329)
+- Watch this video: [NB3 Servos](https://vimeo.com/843664157)
+- ***Task 1***: Mount the robot servo motors, wheels, and caster (ball bearing)
+
 - ***Project***: Extend your robot's behaviour (be creative!)
 
 *Suggestion*: Try building a Braitenberg vehicle. The servo test code in today's [resources/arduino](resources/arduino/servo_test) folder will help you get your motors moving. Can you make there speed dependent on how bright it is on the left or right side of your NB33 (you will need *two* light sensors?
@@ -98,4 +80,5 @@ Finally...
 <p align="center">
 <img src="resources/images/braitenberg_vehicle.png" alt="Braitenberg Vehicle" width="600" height="300">
 </p>
+
 ----

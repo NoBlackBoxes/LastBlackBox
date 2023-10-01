@@ -51,22 +51,13 @@
 ### Transistors
 
 - Live Lecture: "Semiconductors, diodes, and transistors"
-- ***Task 1***: Build a MOSFET motor driver circuit
-- Recorded lecture video: [ENB2023](https://www.dropbox.com/s/qfhnsaylc489xaj/Semiconductors%2C%20diodes%2C%20and%20transistors_ENB2023.mp4?dl=0)
+- ***Task 1***: Measure the gate threshold (Vg) or your MOSFET.
+- ***Task 2***: Build a MOSFET motor driver circuit
 
 <p align="center">
 <img src="resources/images/MOSFET_motor_driver.png" alt="MOSEFT driver" width="400" height="300">
 </p>
 
 - ***Project***: Build light a sensitive motor! *(Use your LDR in a voltage divider to produce a light-dependent voltage on the gate of the MOSFET motor driver circuit)*
-
-## Evening
-
-### NB3 Build (servos)
-
-- Watch this video: [LBB Servos](https://vimeo.com/843653329)
-- Watch this video: [NB3 Servos](https://vimeo.com/843664157)
-- ***Task 1***: Mount the robot servo motors, wheels, and caster (ball bearing)
-
 
 ----

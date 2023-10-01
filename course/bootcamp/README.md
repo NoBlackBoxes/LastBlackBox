@@ -22,27 +22,27 @@ You will be building a robot. The robot's physical layout mimics the basic anato
 
 ### Day 1 - Electronics
 
-- Morning: Electrons, Magnets, Sensors, and Motors
-- Afternoon: Transistors and Amplifiers
+- Morning: Atoms, Electrons, Magnets, Sensors, and Motors
+- Afternoon: Transistors
 
 ### Day 2 - Computers
 
-- Morning: Microcontrollers
-- Afternoon: Programming
+- Morning: Computers
+- Afternoon: Behaviour (i.e. programming)
 
 ### Day 3 - Systems and Networks
 
-- Morning: Operating Systems
-- Afternoon: Networks
+- Morning: Power, Systems, Linux, Python
+- Afternoon: Networks, Websites, and Servers
 
 ### Day 4 - Signal Processing
 
-- Morning: 1-D data acqusition (microphones)
+- Morning: Audio (1-D data)
 - Afternoon: Digital signal processing
 
 ### Day 5 - Computer Vision
 
-- Morning: 2-d data acquisition (cameras)
+- Morning: Vision (2-D data)
 - Afternoon: Image processing
 
 ----
