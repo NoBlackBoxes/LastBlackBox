@@ -4,28 +4,59 @@
 
 ----
 
+### Recap
+
+*"Atoms, Conductors, Voltage, Resistors, Ohm's Law, Voltage Divider, LDRs, Light sensor, magnetism, motors (stepper, DC brushed), motor speed control."*
+
+### Transistors
+
+- Review of this lecture: [Semiconductors, diodes, and transistors](https://www.dropbox.com/s/qfhnsaylc489xaj/Semiconductors%2C%20diodes%2C%20and%20transistors_ENB2023.mp4?dl=0)
+
+- ***Task 1***: Measure the gate threshold (Vg) or your MOSFET.
+- ***Task 2***: Build a MOSFET motor driver circuit
+
+<p align="center">
+<img src="resources/images/MOSFET_motor_driver.png" alt="MOSEFT driver" width="400" height="300">
+</p>
+
+- ***Morning Project***: Build light a sensitive motor! *(Use your LDR in a voltage divider to produce a light-dependent voltage on the gate of the MOSFET motor driver circuit)*
+
+### Servos - Speed and direction control
+- Watch this video: [LBB Servos](https://vimeo.com/843653329)
+
+### NB3 Build (muscles)
+
+- Watch this video: [NB3 Servos](https://vimeo.com/843664157)
+- ***Task 1***: Mount the robot servo motors, wheels, and caster (ball bearing)
+
+
 ### Logic and Memory
 
 - MOSFET Gates and floating gate MOSFET memory
 
 - Computers!
 
+----
+
+## Afternoon
+
+----
+
 ### NB3 Build (hindbrain)
 
-- Add an Arduino as your NB3 Hindbrain
+- ***Task 1***: Add an Arduino as your NB3 Hindbrain
 
 <p align="center">
 <img src="resources/images/pinout_arduino_nano.png" alt="arduino pinout" width="650" height="700">
 </p>
 
-- Install the Arduino IDE
+- Install the Arduino IDE and select your Arduino version
 
   - Board: Arduino Nano
   - Processor: ATmeag328P
   - Port: *this is unique to your setup and depends on your operating system*
 
 - Watch this video: [NB3 Hindbrain](https://vimeo.com/626836554)
-  - This pinout for the Arduino Nano might be useful: [Anduino Nano Pinout](resources/images/pinout_arduino_nano_clone.png)
 - ***Task 2***: Mount and power your Arduino based hindbrain (connect the mini-USB cable)
   - The built-in LED on the board should be blinking at 1 Hz
 
@@ -52,7 +83,7 @@
   - This is a piezo buzzer:
 
 <p align="center">
-<img src="resources/images/piezo_buzzer.png" alt="Piezo Buzzer" width="400" height="300">
+<img src="resources/images/piezo_buzzer.png" alt="Piezo Buzzer" width="300" height="300">
 </p>
  
 - ***Task 6***: Build a Theremin
@@ -61,17 +92,11 @@
 
 ----
 
-## Afternoon
+## Evening (and very likely tomorrow morning)
 
 ----
 
 ### Behaviour (and programming)
-
-### NB3 Build (servos)
-
-- Watch this video: [LBB Servos](https://vimeo.com/843653329)
-- Watch this video: [NB3 Servos](https://vimeo.com/843664157)
-- ***Task 1***: Mount the robot servo motors, wheels, and caster (ball bearing)
 
 - ***Project***: Extend your robot's behaviour (be creative!)
 

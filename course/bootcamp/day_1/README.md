@@ -33,6 +33,12 @@
 - ***Task 5***: Build a light sensor
   - Build a voltage divider with one of the fixed resistors replaced with an LDR (light-dependent resistor). Does the "output" voltage vary with light? What should the value of the fixed resistor be to maximize the sensitivity of the output voltage varying light levels?
 
+----
+
+## Afternoon
+
+----
+
 ### Magnetism
 
 - Watch this video: [Magnets, Electromagnetism, and DC Motors](https://vimeo.com/626603421)
@@ -44,21 +50,12 @@
 
 ----
 
-## Afternoon
+## Evening
 
 ----
 
 ### Transistors
 
 - Watch this lecture: [Semiconductors, diodes, and transistors](https://www.dropbox.com/s/qfhnsaylc489xaj/Semiconductors%2C%20diodes%2C%20and%20transistors_ENB2023.mp4?dl=0)
-
-- ***Task 1***: Measure the gate threshold (Vg) or your MOSFET.
-- ***Task 2***: Build a MOSFET motor driver circuit
-
-<p align="center">
-<img src="resources/images/MOSFET_motor_driver.png" alt="MOSEFT driver" width="400" height="300">
-</p>
-
-- ***Project***: Build light a sensitive motor! *(Use your LDR in a voltage divider to produce a light-dependent voltage on the gate of the MOSFET motor driver circuit)*
 
 ----
