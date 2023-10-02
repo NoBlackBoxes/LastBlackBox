@@ -50,7 +50,8 @@
 
 ### Transistors
 
-- Live Lecture: "Semiconductors, diodes, and transistors"
+- Watch this lecture: [Semiconductors, diodes, and transistors](https://www.dropbox.com/s/qfhnsaylc489xaj/Semiconductors%2C%20diodes%2C%20and%20transistors_ENB2023.mp4?dl=0)
+
 - ***Task 1***: Measure the gate threshold (Vg) or your MOSFET.
 - ***Task 2***: Build a MOSFET motor driver circuit
 
