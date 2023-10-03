@@ -4,7 +4,7 @@
 
 ----
 
-## Websites
+### Websites
 
 This is a website. Just a text file written in the hyper-text markup language (HTML) that your "web browser" knows how to display in a nicely formatted way.
 
@@ -21,7 +21,7 @@ This is a <b>website</b>
 
 - ***Task 1***: Make your own website (an HTML file). Open it in your web browser.
 
-## Servers
+### Servers
 
 A server is just a computer that you can connect to and ask it to send (serve) you a file (e.g. an HTML file).
 
@@ -75,7 +75,7 @@ while True:
 #FIN
 ```
 
-- ***Task 2***: Use the web browser on your laptop to "navigate" to the URL (universal record locator) at your NB£'s IP address and the PORT specified in the Python programe (1234):
+- ***Task 2***: Use the web browser on your laptop to "navigate" to the URL (universal record locator) at your NB3's IP address and the PORT specified in the Python program (1234):
 
 ```bash
 http://IP-ADDRESS:1234
@@ -83,7 +83,7 @@ http://IP-ADDRESS:1234
 # Example: http://192.168.1.157:1234 
 ```
 
-This is the internet.
+***This is the internet.***
 
 ----
 
@@ -96,10 +96,6 @@ This is the internet.
 Let's let your NB3 hear. Let's add some ears (digital MEMS microphones).
 
 - Watch this video: [NB3 Ears](https://vimeo.com/630461945)
-- Example wiring below (many possible options)
-<p align="center">
-<img src="resources/images/NB3_ears_wiring.png" alt="NB3 Ears Wiring" width="600" height="350">
-</p>
 
 - The instructions for installing the driver on your RPi are here: [NB3 Ear Driver Install](https://github.com/NoBlackBoxes/BlackBoxes/tree/master/audio/i2s/driver)
 - Use Python to record sound from each microphone (left and right).
@@ -109,11 +105,5 @@ Let's let your NB3 hear. Let's add some ears (digital MEMS microphones).
 sudo apt-get install python3-pyaudio
 ```
   - Check out this example script: [Python Audio](resources/python/audio/record.py)
-
-----
-
-## Afternoon
-
-----
 
 ----
