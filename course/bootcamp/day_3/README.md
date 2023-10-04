@@ -81,17 +81,6 @@ sudo apt update
 
 # Upgrade the OS (and installed libraries) using the "package manager"
 sudo apt upgrade
-
-# Install git
-sudo apt-get install git
-
-# Create a new folder in your Home directory and chnage to it
-cd ~                # Go to your home directory
-mkdir NoBlackBoxes  # Create NoBlackBoxes directory
-cd NoBlackBoxes     # Change to NoBlackBoxes directory
-
-# Clone LBB repo with submodules
-git clone --depth 1 --recurse-submodules https://github.com/NoBlackBoxes/LastBlackBox
 ```
 
 ### Operating Systems
@@ -99,22 +88,3 @@ git clone --depth 1 --recurse-submodules https://github.com/NoBlackBoxes/LastBla
 - Watch this video: [Operating Systems](https://vimeo.com/630456267)
 - *Task 5*: Explore Linux. Spend any extra time you have fiddling, playing with the UNIX approach to controlling a computer.
 
-### Networks
-
-- Live Lecture: "Communication, protocols, and the internet"
-- ***Task 1***: Design and implement a protocol for communicating between your midbrain and hindbrain
-- ***Project***: Build a remote control robot
-- You will need the following library
-
-```bash
-sudo apt-get install python3-serial
-```
-
-#### Day 3: Afternoon Tasks and Project: *Suggested steps*
-
-1. Tell your Arduino to listen for "serial commands" coming from either your laptop or RPi - [Example](resources/arduino/serial_server)
-2. Send serial commands from you laptop/RPi using python (pyserial) - [Example](resources/python/serial)
-3. Use python to detect keypresses... - [Example](resources/python/keyboard)
-4. ...and send corresponding serial commands in response - [Example](resources/python/kerial)
-5. Extend the Arduino code to respond to specific serial commands (usually single letters) with specific movements - [Example](resources/arduino/serial_controller)
-6. Find a way to use keypresses to send the correct serial commands to Arduino so you can drive it around at will! - [Example](resources/python/drive)

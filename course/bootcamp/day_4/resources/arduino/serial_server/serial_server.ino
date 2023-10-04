@@ -4,7 +4,7 @@
 */
 
 void setup() {
-  // initialize serial port
+  // Initialize serial port
   Serial.begin(19200);
 
   // Initialize output pins
