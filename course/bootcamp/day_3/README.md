@@ -8,6 +8,10 @@
 
 ----
 
+## Afternoon
+
+----
+
 ### NB3 Build (power)
 
 - *NOTE*: Your NB3_power board cable *might* have inverted colors (black to +5V, red to 0V) relative to that shown in the assembly video. This doesn't matter, as the plugs will only work in one orientation and the correct voltage is conveyed to the correct position on the body.
@@ -94,12 +98,6 @@ git clone --depth 1 --recurse-submodules https://github.com/NoBlackBoxes/LastBla
 
 - Watch this video: [Operating Systems](https://vimeo.com/630456267)
 - *Task 5*: Explore Linux. Spend any extra time you have fiddling, playing with the UNIX approach to controlling a computer.
-
-----
-
-## Afternoon
-
-----
 
 ### Networks
 
