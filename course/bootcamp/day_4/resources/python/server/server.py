@@ -1,5 +1,4 @@
 # Simple HTTP server
-import os
 import socket
 
 # Load your HTML page (index.html)

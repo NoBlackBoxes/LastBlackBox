@@ -4,35 +4,51 @@
 
 ----
 
-### Ears
+### Cameras
 
-Let's let your NB3 hear. Let's add some ears (digital MEMS microphones).
-
-- Watch this video: [NB3 Ears](https://vimeo.com/630461945)
-
-- The instructions for installing the driver on your RPi are here: [NB3 Ear Driver Install](https://github.com/NoBlackBoxes/BlackBoxes/tree/master/audio/i2s/driver)
-- Use Python to record sound from each microphone (left and right).
-  - Install pyaudio library
-
-```bash
-sudo apt-get install python3-pyaudio
-```
-  - Check out this example script: [Python Audio](resources/python/audio/record.py)
-
-----
-
-### NB3 Build (forebrain)
+Let's add a camera (eyes) to your NB3!
 
 - Watch this video: [NB3 Forebrain](https://vimeo.com/628545232)
 
-<p align="center">
-<img src="resources/images/NB3_camera_mount_alt.png" alt="NB3 Camera Mount" width="200" height="250">
-</p>
+----
+
+When your camera is mounted and connected, you can test whether it works by running the following command from the Linux terminal.
+
+```bash
+libcamera-still -o test.png
+```
+
+This command will take a picture and save it as a PNG in the same folder where you run the command. You can open it directly in VS Code.
+
+## Computer Vision
+
+Taking a picture is just the first step in making a computer "see". How do we extract useful information from the image? How do we detect movement? How do we identify and localise different objects? Many of these tasks are surprisingly hard and remain unsolved problems in both engineering and neuroscience?
+
+Let's get started.
+
+The first step will be acquiring an image using Python (so we can then manipulate and analyse the image using code).
+
+### Acquire an image using Python
+
+- Run this [Example](resources/python/camera/capture_save.py) code to acquire a still image and save it to a file.
+
+### Process an image using Python and the Numpy library
+
+- Run this [Example](resources/python/camera/capture_process_save.py) code to acquire a still image and save it to a file.
+- Note: you may need to install another library to save the numpy array as an image
+
+  ```bash
+  pip install pillow
+  ```
+
+### Stream images from your NB3 camera to the local network (so we can view the live stream on your laptop)
+
+- Run this [Example](resources/python/camera/capture_stream.py) code to continously acquire images and stream them to a website.
 
 ----
 
 ## Afternoon
 
-----
+Project Work
 
 ----
