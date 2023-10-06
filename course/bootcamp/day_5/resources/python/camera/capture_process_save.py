@@ -18,7 +18,8 @@ time.sleep(2)
 array = camera.capture_array("main")
 
 # Process image (binary threshold)
-binary = array > 127
+red = array[:,:,0]
+binary = red > 127
 
 # Convert Numpy array to image
 image = Image.fromarray(binary)
