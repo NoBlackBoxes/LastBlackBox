@@ -52,3 +52,33 @@ The first step will be acquiring an image using Python (so we can then manipulat
 Project Work
 
 ----
+
+## Extra
+
+----
+
+### Ears and Mouth
+
+Let's let your NB3 hear and soeak. Let's add some ears (digital MEMS microphones) and a moutg (digital 3W mono amplifier).
+
+***Install the software first, then shutdown the robot and install the hardware***
+
+- The instructions for installing the software driver on your RPi are here: [NB3 Ear Driver Install](https://github.com/NoBlackBoxes/LastBlackBox/tree/master/boxes/hearing/i2s/driver)
+
+- Install the hardware boards.
+
+***Note***: The NB3 ear boards are not symetric. The left ear pints out and the right ear points in. Sorry. The NB3 mouth faces outward.
+
+- Wire up the Raspberry Pi to the NB3 base.
+
+
+
+- Use Python to record sound from each microphone (left and right).
+  - Install pyaudio library
+
+```bash
+sudo apt-get install python3-pyaudio
+```
+  - Check out this example script: [Python Audio](resources/python/audio/record.py)
+
+  ----
