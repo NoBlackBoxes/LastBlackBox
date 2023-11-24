@@ -175,6 +175,8 @@ To talk "serial" in Python, we will need to install an extra library.
 sudo apt-get install python3-serial
 # This uses Linux's apt package manager to install the pyserial library
 
+# Install Pip
+sudo apt-get install python3-pip
 pip install pyserial
 # This uses Python's pip package manager to install the pyserial library
 ```
