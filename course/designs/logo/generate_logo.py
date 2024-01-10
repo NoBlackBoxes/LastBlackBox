@@ -9,24 +9,32 @@ username = os.getlogin()
 repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
 boxes_path = repo_path + '/boxes'
 logo_path = repo_path + '/course/designs/logo'
-box_parameters_path = logo_path + "/box_parameters.csv"
-svg_path = logo_path + "/output.svg"
+
+## LBB Defaults
+#box_parameters_path = logo_path + "/box_parameters_LBB.csv"
+#svg_path = logo_path + "/logo_LBB.svg"
+#with_text = False
+#box_size = 13.0
+#box_stroke = 1.0
+#box_style = "fill-opacity:1;stroke:#FFFFFF;stroke-width:{0};stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1".format(box_stroke)
+
+# NBB Defaults
+box_parameters_path = logo_path + "/box_parameters_NBB.csv"
+svg_path = logo_path + "/logo_NBB.svg"
+with_text = False
+box_size = 13.0
+box_stroke = 1.0
+box_style = "fill-opacity:1;stroke:#000000;stroke-width:{0};stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1".format(box_stroke)
 
 # Load box parameters
 box_parameters = np.genfromtxt(box_parameters_path, delimiter=",", dtype=str)
 num_boxes = box_parameters.shape[0]
 
 # Params
-with_text = False
 if with_text:
     offset = -7.5
 else:
     offset = 0.0
-
-# Defaults
-box_size = 13.0
-box_stroke = 1.0
-box_syle = "fill-opacity:1;stroke:#FFFFFF;stroke-width:{0};stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1".format(box_stroke)
 
 # Draw box (add SVG text for a rectangle)
 def draw_box(file, name, x, y, width, height, fill, style):
@@ -59,7 +67,7 @@ for i in range(num_boxes):
     x = float(box_parameters[i,1])
     y = float(box_parameters[i,2])
     fill = box_parameters[i,3]
-    draw_box(svg_file, name, x, y, box_size, box_size, fill, box_syle)
+    draw_box(svg_file, name, x, y, box_size, box_size, fill, box_style)
 
 # Add text?
 if(with_text):
