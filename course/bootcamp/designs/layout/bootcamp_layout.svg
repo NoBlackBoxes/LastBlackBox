@@ -35,10 +35,10 @@
 	<text class= "text" id="text_Computers" x="77.875" y="20.875" style="font-style:normal;font-weight:bold;font-size:1.75;line-height:1.00;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Computers</text>
 	<polygon class="arrow" id="arrow_Computers" style="fill:#DDDDDD;stroke:none" points="71.3125,21.4375 71.3125,20.4375 70.175,20.9375"/>
 </g>
-<g id="Behaviour">
-	<rect class="box" id="box_Behaviour" transform="scale(1,1) translate(0, 0)" x="57.125000" y="14.375000" width="13.000000" height="13.000000" style="fill:#000000;fill-opacity:1;stroke:#FFFFFF;stroke-width:0.125;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
-	<text class= "text" id="text_Behaviour" x="63.625" y="20.875" style="font-style:normal;font-weight:bold;font-size:1.75;line-height:1.00;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Behaviour</text>
-	<polygon class="arrow" id="arrow_Behaviour" style="fill:#DDDDDD;stroke:none" points="57.0625,21.4375 57.0625,20.4375 55.925,20.9375"/>
+<g id="Robotics">
+	<rect class="box" id="box_Robotics" transform="scale(1,1) translate(0, 0)" x="57.125000" y="14.375000" width="13.000000" height="13.000000" style="fill:#000000;fill-opacity:1;stroke:#FFFFFF;stroke-width:0.125;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Robotics" x="63.625" y="20.875" style="font-style:normal;font-weight:bold;font-size:1.75;line-height:1.00;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Robotics</text>
+	<polygon class="arrow" id="arrow_Robotics" style="fill:#DDDDDD;stroke:none" points="57.0625,21.4375 57.0625,20.4375 55.925,20.9375"/>
 </g>
 <g id="Power">
 	<rect class="box" id="box_Power" transform="scale(1,1) translate(0, 0)" x="42.875000" y="14.375000" width="13.000000" height="13.000000" style="fill:#000000;fill-opacity:1;stroke:#FFFFFF;stroke-width:0.125;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>

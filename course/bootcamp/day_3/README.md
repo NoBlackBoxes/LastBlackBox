@@ -2,7 +2,7 @@
 
 ## Morning
 
-### Behaviour (and programming) continued...
+### Robotics (and programming) continued...
 
 - ***Project***: Extend your robot's behaviour (be creative!)
 

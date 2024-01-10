@@ -1,4 +1,4 @@
-# Reflexes
+# Circuits
 
 Simple sensory-motor loops can accomplish quite a bit.
 

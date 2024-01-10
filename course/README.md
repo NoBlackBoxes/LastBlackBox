@@ -39,7 +39,7 @@ Hindbrain|Midbrain|Forebrain|
 [5. Motors](/boxes/motors/README.md)|[13. FPGAs](/boxes/fpgas/README.md)|[21. Vision](/boxes/vision/README.md)
 [6. Transistors](/boxes/transistors/README.md)|[14. Computers](/boxes/computers/README.md)|[22. Learning](/boxes/learning/README.md)
 [7. Amplifiers](/boxes/amplifiers/README.md)|[15. Control](/boxes/control/README.md)|[23. Intelligence](/boxes/intelligence/README.md)
-[8. **Reflexes**](/boxes/reflexes/README.md)|[16. **Behaviour**](/boxes/behaviour/README.md)|[24. **?**](/boxes/?/README.md)
+[8. **Circuits**](/boxes/reflexes/README.md)|[16. **Robotics**](/boxes/behaviour/README.md)|[24. **?**](/boxes/?/README.md)
 
 ## Timeline
 
@@ -49,7 +49,7 @@ Hindbrain|Midbrain|Forebrain|
 - Day 2: Light
 - Day 3: Sensors + Motors
 - Day 4: Transistors + Amplifiers
-- Day 5: Reflexes
+- Day 5: Circuits
 
 ### Week 2
 
@@ -57,7 +57,7 @@ Hindbrain|Midbrain|Forebrain|
 - Day 2: FPGAs
 - Day 3: Computers
 - Day 4: Control
-- Day 5: Behaviour
+- Day 5: Robotics
 
 ### Week 3
 
@@ -111,7 +111,7 @@ Hindbrain|Midbrain|Forebrain|
     - *Brain*: Multiplicative NMJ, gain
     - *Exercises*: Move a motor with your sensor, better theremin?
 
-8. **Reflexes**
+8. **Circuits**
 
     - *Tech*: Intro to control
     - *Brain*: Simple sensorimotor behaviour
@@ -159,7 +159,7 @@ Hindbrain|Midbrain|Forebrain|
     - *Brain*: Motor control
     - *Exercises*: Write direction, speed (and position?) controller
 
-16. **Behaviour**
+16. **Robotics**
 
     - *Tech*: Smarter robots
     - *Brain*: Smarter bot

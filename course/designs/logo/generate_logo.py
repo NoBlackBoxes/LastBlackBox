@@ -10,21 +10,21 @@ repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
 boxes_path = repo_path + '/boxes'
 logo_path = repo_path + '/course/designs/logo'
 
-## LBB Defaults
-#box_parameters_path = logo_path + "/box_parameters_LBB.csv"
-#svg_path = logo_path + "/logo_LBB.svg"
-#with_text = False
-#box_size = 13.0
-#box_stroke = 1.0
-#box_style = "fill-opacity:1;stroke:#FFFFFF;stroke-width:{0};stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1".format(box_stroke)
-
-# NBB Defaults
-box_parameters_path = logo_path + "/box_parameters_NBB.csv"
-svg_path = logo_path + "/logo_NBB.svg"
+# LBB Defaults
+box_parameters_path = logo_path + "/box_parameters_LBB.csv"
+svg_path = logo_path + "/logo_LBB.svg"
 with_text = False
 box_size = 13.0
 box_stroke = 1.0
-box_style = "fill-opacity:1;stroke:#000000;stroke-width:{0};stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1".format(box_stroke)
+box_style = "fill-opacity:1;stroke:#FFFFFF;stroke-width:{0};stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1".format(box_stroke)
+
+## NBB Defaults
+#box_parameters_path = logo_path + "/box_parameters_NBB.csv"
+#svg_path = logo_path + "/logo_NBB.svg"
+#with_text = False
+#box_size = 13.0
+#box_stroke = 1.0
+#box_style = "fill-opacity:1;stroke:#000000;stroke-width:{0};stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1".format(box_stroke)
 
 # Load box parameters
 box_parameters = np.genfromtxt(box_parameters_path, delimiter=",", dtype=str)

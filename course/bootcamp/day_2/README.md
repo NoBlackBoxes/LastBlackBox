@@ -96,7 +96,7 @@
 
 ----
 
-### Behaviour (and programming)
+### Robotics (and programming)
 
 - ***Project***: Extend your robot's behaviour (be creative!)
 

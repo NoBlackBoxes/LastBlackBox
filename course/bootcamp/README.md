@@ -28,7 +28,7 @@ You will be building a robot. The robot's physical layout mimics the basic anato
 ### Day 2 - Computers
 
 - Morning: Computers
-- Afternoon: Behaviour (i.e. programming)
+- Afternoon: Robotics (i.e. programming)
 
 ### Day 3 - Systems and Networks
 

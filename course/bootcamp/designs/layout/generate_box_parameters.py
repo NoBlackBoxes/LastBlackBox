@@ -22,7 +22,7 @@ boxes = [
     'Motors',
     'Transistors',
     'Computers',
-    'Behaviour',
+    'Robotics',
     'Power',
     'Systems',
     'Linux',

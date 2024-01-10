@@ -22,7 +22,7 @@ boxes = [
     'Motors',
     'Transistors',
     'Amplifiers',
-    'Reflexes',
+    'Circuits',
     'Power',
     'Data',
     'Logic',
@@ -30,7 +30,7 @@ boxes = [
     'FPGAs',
     'Computers',
     'Control',
-    'Behaviour',
+    'Robotics',
     'Systems',
     'Linux',
     'Python',
@@ -62,12 +62,10 @@ y_offset = box_stroke
 for i in range(num_boxes):
 
     # Determine arrow state: 1: right, -1: left, 0: down, 2: none 
-    if (i == num_rows*num_cols-1):           # Last box
+    if (i % num_cols) == (num_cols - 1):  # Last col
         arrow_state = 2
-    elif (i % num_cols) == (num_cols - 1):  # Last col
-        arrow_state = 0
     else:
-        arrow_state = np.sign(x_step)
+        arrow_state = 1
 
     # Write box parameters
     name = boxes[i]
@@ -75,7 +73,7 @@ for i in range(num_boxes):
 
     # Set next X,Y (and steps)
     if (i % num_cols) == (num_cols - 1): # Last col
-        x_step = -1 * x_step
+        x = 0.0
         y = y + y_step
     else:
         x = x + x_step

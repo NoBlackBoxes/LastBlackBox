@@ -10,7 +10,7 @@ repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
 boxes_path = repo_path + '/boxes'
 layout_path = repo_path + '/course/designs/layout'
 box_parameters_path = layout_path + "/box_parameters.csv"
-svg_path = layout_path + "/output.svg"
+svg_path = layout_path + "/layout.svg"
 
 # Load box parameters
 box_parameters = np.genfromtxt(box_parameters_path, delimiter=",", dtype=str)
@@ -28,7 +28,7 @@ def draw_box(file, name, x, y, width, height, fill, arrow_state):
     text_id = 'text_' + name
     text_fontsize = 1.75
     text_style = "font-style:normal;font-weight:bold;font-size:{0};line-height:1.00;font-family:'Arial';white-space:pre;display:inline;fill:#{1};fill-opacity:1;stroke:none".format(text_fontsize, text_fill)
-    text_tag = "\t<text class= \"text\" id=\"{0}\" x=\"{1}\" y=\"{2}\" style=\"{3}\" alignment-baseline=\"middle\" text-anchor=\"middle\">{4}</text>\n".format(text_id, x+width/2.0, y+height/2.0, text_style, name)
+    text_tag = "\t<text class= \"text\" id=\"{0}\" x=\"{1}\" y=\"{2}\" style=\"{3}\" alignment-baseline=\"middle\" text-anchor=\"middle\">{4}</text>\n".format(text_id, x+width/2.0, y+text_fontsize/3.0+height/2.0, text_style, name)
     box_fill = fill
     box_id = 'box_' + name
     box_style = "fill:#{0};fill-opacity:1;stroke:#FFFFFF;stroke-width:{1};stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1".format(box_fill, box_stroke)
