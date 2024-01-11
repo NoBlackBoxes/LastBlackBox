@@ -13,7 +13,7 @@ This is course about neuroscience *and* technology. You will learn about the bra
 ## Principles
 
 <p align="center">
-<img src="course/designs/logo/noblackboxes_logo_white_text_black_circle_background.png" alt="NBB" width="200" height="200">
+<img src="course/designs/logo/png/logo_NBB_white_text.png" alt="NBB" width="200" height="200" style="background-color:black; border-radius: 15%">
 </p>
 
 
