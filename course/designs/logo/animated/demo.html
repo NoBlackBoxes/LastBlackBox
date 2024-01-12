@@ -46,7 +46,7 @@
                             #box_reload_Magnets 		{animation: animate_box 1.3s linear; animation-fill-mode: forwards; animation-delay: 1s}
                             #box_reload_Light 			{animation: animate_box 0.6s linear; animation-fill-mode: forwards; animation-delay: 1s}
                             #box_reload_Sensors 		{animation: animate_box 0.9s linear; animation-fill-mode: forwards; animation-delay: 1s}
-                            #box_reload_Motors 		    {animation: animate_box 1.1s linear; animation-fill-mode: forwards; animation-delay: 1s}
+                            #box_reload_Motors 		    {animation: animate_lag 3.1s linear; animation-fill-mode: forwards; animation-delay: 1s}
                             #box_reload_Transistors	    {animation: animate_box 0.3s linear; animation-fill-mode: forwards; animation-delay: 1s}
                             #box_reload_Amplifiers 	    {animation: animate_box 1.0s linear; animation-fill-mode: forwards; animation-delay: 1s}
                             #box_reload_Circuits 		{animation: animate_box 1.2s linear; animation-fill-mode: forwards; animation-delay: 1s}
@@ -54,20 +54,20 @@
                             #box_reload_Data 			{animation: animate_box 0.7s linear; animation-fill-mode: forwards; animation-delay: 1s}
                             #box_reload_Logic 			{animation: animate_box 1.2s linear; animation-fill-mode: forwards; animation-delay: 1s}
                             #box_reload_Memory 		    {animation: animate_box 0.7s linear; animation-fill-mode: forwards; animation-delay: 1s}
-                            #box_reload_FPGAs 			{animation: animate_box 1.4s linear; animation-fill-mode: forwards; animation-delay: 1s}
+                            #box_reload_FPGAs 			{animation: animate_lag 1.1s linear; animation-fill-mode: forwards; animation-delay: 1s}
                             #box_reload_Computers 		{animation: animate_box 0.7s linear; animation-fill-mode: forwards; animation-delay: 1s}
                             #box_reload_Control 		{animation: animate_box 0.4s linear; animation-fill-mode: forwards; animation-delay: 1s}
                             #box_reload_Robotics 		{animation: animate_box 0.7s linear; animation-fill-mode: forwards; animation-delay: 1s}
                             #box_reload_Systems 		{animation: animate_box 1.5s linear; animation-fill-mode: forwards; animation-delay: 1s}
                             #box_reload_Linux 			{animation: animate_box 1.0s linear; animation-fill-mode: forwards; animation-delay: 1s}
-                            #box_reload_Python 	    	{animation: animate_box 0.9s linear; animation-fill-mode: forwards; animation-delay: 1s}
+                            #box_reload_Python 		    {animation: animate_lag 2.9s linear; animation-fill-mode: forwards; animation-delay: 1s}
                             #box_reload_Networks 		{animation: animate_box 0.6s linear; animation-fill-mode: forwards; animation-delay: 1s}
                             #box_reload_Websites 		{animation: animate_box 1.4s linear; animation-fill-mode: forwards; animation-delay: 1s}
                             #box_reload_Servers 		{animation: animate_box 0.4s linear; animation-fill-mode: forwards; animation-delay: 1s}
                             #box_reload_Security 		{animation: animate_box 0.9s linear; animation-fill-mode: forwards; animation-delay: 1s}
-                            #box_reload_Audio 			{animation: animate_box 0.4s linear; animation-fill-mode: forwards; animation-delay: 1s}
+                            #box_reload_Audio 			{animation: animate_lag 2.4s linear; animation-fill-mode: forwards; animation-delay: 1s}
                             #box_reload_Vision 		    {animation: animate_box 0.6s linear; animation-fill-mode: forwards; animation-delay: 1s}
-                            #box_reload_Learning 		{animation: animate_box 1.1s linear; animation-fill-mode: forwards; animation-delay: 1s}
+                            #box_reload_Learning 		{animation: animate_lag 1.4s linear; animation-fill-mode: forwards; animation-delay: 1s}
                             #box_reload_Intelligence 	{animation: animate_box 0.3s linear; animation-fill-mode: forwards; animation-delay: 1s}
                     
                             @keyframes animate_box {
@@ -75,7 +75,12 @@
                                 95% 	{fill:white;	stroke:black}
                                 100% 	{fill:white;	stroke:black}
                             }
-                            
+                    
+                            @keyframes animate_lag {
+                                0% 		{fill:black;	stroke:white}
+                                95% 	{fill:black;	stroke:white}
+                                100% 	{fill:white;	stroke:black}
+                            }
                         </style>
                     </svg>
                 </div>
@@ -111,13 +116,13 @@
                         <rect class="box" id="box_Learning" transform="scale(1,1) translate(1, 1)" x="32.286000" y="42.810000" height="13.0" width="13.0" style="fill:#000000;fill-opacity:1;stroke:#FFFFFF;stroke-width:1.0;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
                         <rect class="box" id="box_Intelligence" transform="scale(1,1) translate(1, 1)" x="22.050000" y="46.314000" height="13.0" width="13.0" style="fill:#000000;fill-opacity:1;stroke:#FFFFFF;stroke-width:1.0;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
                         <style>
-                    
+
                             #logo:hover #box_Atoms 			{animation: animate_box 0.6s linear; animation-fill-mode: forwards; animation-delay: 0s}
                             #logo:hover #box_Electrons 		{animation: animate_box 1.2s linear; animation-fill-mode: forwards; animation-delay: 0s}
                             #logo:hover #box_Magnets 		{animation: animate_box 1.3s linear; animation-fill-mode: forwards; animation-delay: 0s}
                             #logo:hover #box_Light 			{animation: animate_box 0.6s linear; animation-fill-mode: forwards; animation-delay: 0s}
                             #logo:hover #box_Sensors 		{animation: animate_box 0.9s linear; animation-fill-mode: forwards; animation-delay: 0s}
-                            #logo:hover #box_Motors 		{animation: animate_box 1.1s linear; animation-fill-mode: forwards; animation-delay: 0s}
+                            #logo:hover #box_Motors 		{animation: animate_lag 3.1s linear; animation-fill-mode: forwards; animation-delay: 0s}
                             #logo:hover #box_Transistors	{animation: animate_box 0.3s linear; animation-fill-mode: forwards; animation-delay: 0s}
                             #logo:hover #box_Amplifiers 	{animation: animate_box 1.0s linear; animation-fill-mode: forwards; animation-delay: 0s}
                             #logo:hover #box_Circuits 		{animation: animate_box 1.2s linear; animation-fill-mode: forwards; animation-delay: 0s}
@@ -125,29 +130,33 @@
                             #logo:hover #box_Data 			{animation: animate_box 0.7s linear; animation-fill-mode: forwards; animation-delay: 0s}
                             #logo:hover #box_Logic 			{animation: animate_box 1.2s linear; animation-fill-mode: forwards; animation-delay: 0s}
                             #logo:hover #box_Memory 		{animation: animate_box 0.7s linear; animation-fill-mode: forwards; animation-delay: 0s}
-                            #logo:hover #box_FPGAs 			{animation: animate_box 1.4s linear; animation-fill-mode: forwards; animation-delay: 0s}
+                            #logo:hover #box_FPGAs 			{animation: animate_lag 1.1s linear; animation-fill-mode: forwards; animation-delay: 0s}
                             #logo:hover #box_Computers 		{animation: animate_box 0.7s linear; animation-fill-mode: forwards; animation-delay: 0s}
                             #logo:hover #box_Control 		{animation: animate_box 0.4s linear; animation-fill-mode: forwards; animation-delay: 0s}
                             #logo:hover #box_Robotics 		{animation: animate_box 0.7s linear; animation-fill-mode: forwards; animation-delay: 0s}
                             #logo:hover #box_Systems 		{animation: animate_box 1.5s linear; animation-fill-mode: forwards; animation-delay: 0s}
                             #logo:hover #box_Linux 			{animation: animate_box 1.0s linear; animation-fill-mode: forwards; animation-delay: 0s}
-                            #logo:hover #box_Python 		{animation: animate_box 0.9s linear; animation-fill-mode: forwards; animation-delay: 0s}
+                            #logo:hover #box_Python 		{animation: animate_lag 2.9s linear; animation-fill-mode: forwards; animation-delay: 0s}
                             #logo:hover #box_Networks 		{animation: animate_box 0.6s linear; animation-fill-mode: forwards; animation-delay: 0s}
                             #logo:hover #box_Websites 		{animation: animate_box 1.4s linear; animation-fill-mode: forwards; animation-delay: 0s}
                             #logo:hover #box_Servers 		{animation: animate_box 0.4s linear; animation-fill-mode: forwards; animation-delay: 0s}
                             #logo:hover #box_Security 		{animation: animate_box 0.9s linear; animation-fill-mode: forwards; animation-delay: 0s}
-                            #logo:hover #box_Audio 			{animation: animate_box 0.4s linear; animation-fill-mode: forwards; animation-delay: 0s}
+                            #logo:hover #box_Audio 			{animation: animate_lag 2.4s linear; animation-fill-mode: forwards; animation-delay: 0s}
                             #logo:hover #box_Vision 		{animation: animate_box 0.6s linear; animation-fill-mode: forwards; animation-delay: 0s}
-                            #logo:hover #box_Learning 		{animation: animate_box 1.1s linear; animation-fill-mode: forwards; animation-delay: 0s}
+                            #logo:hover #box_Learning 		{animation: animate_lag 1.4s linear; animation-fill-mode: forwards; animation-delay: 0s}
                             #logo:hover #box_Intelligence 	{animation: animate_box 0.3s linear; animation-fill-mode: forwards; animation-delay: 0s}
-                    
+
                             @keyframes animate_box {
                                 0% 		{fill:black;	stroke:white}
-                                10% 	{fill:black;	stroke:black}
                                 95% 	{fill:white;	stroke:black}
                                 100% 	{fill:white;	stroke:black}
                             }
-                            
+
+                            @keyframes animate_lag {
+                                0% 		{fill:black;	stroke:white}
+                                95% 	{fill:black;	stroke:white}
+                                100% 	{fill:white;	stroke:black}
+                            }
                         </style>
                     </svg>
                 </div>
