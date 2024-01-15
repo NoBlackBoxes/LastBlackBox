@@ -129,9 +129,10 @@ def append_materials(BOM, box):
             break
         # Add line to materials
         materials.append(line)
+    materials.append("\n")
 
     # Create "box" header
-    box_header = [box + ",,,,\n"]
+    box_header = [box + ",,,,,,,,\n"]
 
     # Append header and materials contents to BOM
     BOM = BOM + box_header + materials
@@ -180,7 +181,7 @@ for box in boxes:
     insert_materials(box)
 
 # Generate BOM.csv by appending individual materials.csv
-BOM = ['Name,Description,QTY,Datasheet,Supplier\n', ',,,,\n']
+BOM = ['Part,Description,Quantity,Datasheet,Supplier,Package,x(mm),y(mm),z(mm)\n', ',,,,,,,,\n']
 for box in boxes:
     BOM = append_materials(BOM, box)
 
