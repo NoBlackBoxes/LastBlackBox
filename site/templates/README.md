@@ -35,7 +35,7 @@ Hindbrain|Midbrain|Forebrain|
 [5. Motors](/boxes/motors/README.md)|[13. FPGAs](/boxes/fpgas/README.md)|[21. Vision](/boxes/vision/README.md)
 [6. Transistors](/boxes/transistors/README.md)|[14. Computers](/boxes/computers/README.md)|[22. Learning](/boxes/learning/README.md)
 [7. Amplifiers](/boxes/amplifiers/README.md)|[15. Control](/boxes/control/README.md)|[23. Intelligence](/boxes/intelligence/README.md)
-[8. **Circuits**](/boxes/reflexes/README.md)|[16. **Robotics**](/boxes/behaviour/README.md)|[24. **?**](/boxes/?/README.md)
+[8. **Circuits**](/boxes/circuits/README.md)|[16. **Robotics**](/boxes/robotics/README.md)|[24. **?**](/boxes/?/README.md)
 
 ## Timeline
 

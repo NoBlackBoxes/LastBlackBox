@@ -1,4 +1,4 @@
-# behaviour
+# robotics
 
 Mid-brain does most of it.
 
@@ -41,7 +41,7 @@ Velcro Patch| Velcro adhesive|1|-|-
 This box will contribute the following (red) components to your NB3
 
 <p align="center">
-<img src="_images/NB3_behaviour.png" alt="NB3 stage" width="400" height="400">
+<img src="_images/NB3_robotics.png" alt="NB3 stage" width="400" height="400">
 <p>
 
 ----

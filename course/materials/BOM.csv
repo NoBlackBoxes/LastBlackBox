@@ -53,7 +53,7 @@ LED (IR),Low power IR light emitting diode,2,,https://uk.farnell.com/vishay/tsal
 amplifiers,,,,
 LM741,OpAmp,1,_data/datasheets/IRF510.pdf,https://uk.farnell.com/vishay/irf510pbf/mosfet-n-100v-5-6a-to-220ab/dp/1653658
 LM386N-4/NOPB,Audio-Amp,2,_data/datasheets/IRF510.pdf,https://uk.farnell.com/vishay/irf510pbf/mosfet-n-100v-5-6a-to-220ab/dp/1653658
-reflexes,,,,
+circuits,,,,
 Caster,¾” metal ball caster,1,https://www.pololu.com/product/955,https://www.hobbytronics.co.uk/ball-caster-metal?keyword=caster
 Spacer,NB3 spacer 3 mm spacer for mounting ball caster,5,NB3_spacer,
 power,,,,
@@ -84,7 +84,7 @@ Piezo Buzzer,Piezoelectric speaker/transducer,1,_data/datasheets/piezo_buzzer.pd
 Cable (MiniUSB-1m),Mini-USB to Type-A cable (1 m),1,,https://uk.farnell.com/molex/88732-8602/usb-cable-2-0-plug-plug-1m/dp/1221071
 control,,,,
 H-bridge,H-bridge motor driver (SN754410NE),2,_data/datasheets/sn754410.pdf,https://uk.farnell.com/texas-instruments/sn754410ne/ic-peripheral-driver-half-h-1a/dp/3118977
-behaviour,,,,
+robotics,,,,
 Cable (Mini-USB/20cm),Short mini-USB to Type-A cable (20 cm),1,,https://www.amazon.co.uk/LINDY-0-2-Type-Mini-B-Cable/dp/B01IZ4VFCO
 Battery,NiMH 9.6V 8-cell 2000 mAh battery,1,,https://www.amazon.co.uk/BAKTH-Capacity-Rechargeable-Discharge-Customized/dp/B08VRC8KL7
 Battery Charger,NiMH battery charger (UK plug),1,,https://www.amazon.co.uk/dp/B089VRXKWY?psc=1&smid=AOVA4BIXU2O7J&ref_=chk_typ_imgToDp

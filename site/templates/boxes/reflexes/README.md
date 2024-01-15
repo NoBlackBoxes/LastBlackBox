@@ -48,7 +48,7 @@ Spacer|NB3 spacer 3 mm spacer for mounting ball caster|5|[-D-](NB3_spacer)|-
 This box will contribute the following (red) components to your NB3
 
 <p align="center">
-<img src="_data/images/NB3_reflexes.png" alt="NB3 stage" width="400" height="400">
+<img src="_data/images/NB3_circuits.png" alt="NB3 stage" width="400" height="400">
 <p>
 
 ----
