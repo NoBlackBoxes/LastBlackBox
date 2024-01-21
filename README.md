@@ -1,21 +1,26 @@
 # The Last Black Box
 
-> *A course for brains interested in brains (not for tools interested in tools)*
+> - Do you depend on technology to work? to learn? to socialize?
+> - Do you want to know what is going on inside the machines that run your life?
+> - Do you want to be ready for the coming era of AI?
 
 <p align="center">
-<img src="course/designs/logo/logo.svg" alt="LBB" width="400" height="400">
+<img src="course/designs/logo/animated/logo_LBB_animated_delay.svg" alt="LBB" width="300" height="300">
 </p>
 
-## Goals
+## Summary
 
-This is course about neuroscience *and* technology. You will learn about the brain by building an increasingly complex brain-shaped robot.
+Imagine a world without "black boxes". A world where you understand how your tools work and can use them to do what you want.
+
+This world is much closer than you realize, and we have developed this training course to help get you there as quickly (and enjoyably!) as possible.
+
+**The Last Black Box** is a hands-on introduction to the foundations of modern technology...from ***electrons*** to ***AI***.
 
 ## Principles
 
 <p align="center">
 <img src="course/designs/logo/png/logo_NBB_white_text.png" alt="NBB" width="200" height="200" style="background-color:black; border-radius: 15%">
 </p>
-
 
 ----
 
