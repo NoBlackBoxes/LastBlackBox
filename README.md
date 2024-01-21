@@ -14,7 +14,7 @@ Imagine a world without "black boxes". A world where you understand how your too
 
 This world is much closer than you realize, and we have developed this training course to help get you there as quickly (and enjoyably!) as possible.
 
-**The Last Black Box** is a hands-on introduction to the foundations of modern technology...from ***electrons*** to ***AI***.
+**The Last Black Box** is a hands-on introduction to the foundations of modern technology<p>...from ***electrons*** to ***AI***.
 
 ## Principles
 
