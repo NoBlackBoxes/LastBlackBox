@@ -5,28 +5,28 @@ Periodic Table,Periodic Table business card,1,card,VK,Loose,40,60,0.5
 
 electrons,,,,,,,,
 NB3 Body,NB3 robot base PCB,1,NB3_body,VK,Loose,200,200,10
-Resistor,330 &Omega;/0.25 W,2,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-330r/res-330r-1-250mw-axial-metal-film/dp/9341730,Passive,50,5,3
-Resistor,470 &Omega;/0.25 W,1,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943,Passive,50,5,3
-Resistor,1 k&Omega;/0.25 W,1,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-1k/res-1k-1-250mw-axial-metal-film/dp/9341102,Passive,50,5,3
-Resistor,10 k&Omega;/0.25 W,2,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-10k/res-10k-1-250mw-axial-metal-film/dp/9341110,Passive,50,5,3
-Capacitor,0.1 uF ceramic capacitor,1,_data/datasheets/capacitor_ceramic.pdf,https://uk.farnell.com/kemet/c322c104k1r5ta/cap-0-1-f-100v-10-x7r/dp/1457685,Passive,50,5,3
-Capacitor,100 uF aluminum electrolytic capacitor,1,_data/datsheets/capacitor_electrolytic.pdf,https://uk.farnell.com/rubycon/16zlh100mefc5x11/cap-100-f-16v-20/dp/8126283,Passive,50,5,3
+Resistor (330),330 &Omega;/0.25 W,2,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-330r/res-330r-1-250mw-axial-metal-film/dp/9341730,Passive,50,5,3
+Resistor (470),470 &Omega;/0.25 W,1,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943,Passive,50,5,3
+Resistor (1k),1 k&Omega;/0.25 W,1,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-1k/res-1k-1-250mw-axial-metal-film/dp/9341102,Passive,50,5,3
+Resistor (10k),10 k&Omega;/0.25 W,2,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-10k/res-10k-1-250mw-axial-metal-film/dp/9341110,Passive,50,5,3
+Capacitor (small),0.1 uF ceramic capacitor,1,_data/datasheets/capacitor_ceramic.pdf,https://uk.farnell.com/kemet/c322c104k1r5ta/cap-0-1-f-100v-10-x7r/dp/1457685,Passive,50,5,3
+Capacitor (large),100 uF aluminum electrolytic capacitor,1,_data/datsheets/capacitor_electrolytic.pdf,https://uk.farnell.com/rubycon/16zlh100mefc5x11/cap-100-f-16v-20/dp/8126283,Passive,50,5,3
 Button,Tactile switch,2,_data/datasheets/button.pdf,https://uk.farnell.com/omron/b3f-1000/switch-spno-0-05a-24v-tht-0-98n/dp/176432,Passive,5,5,3
 Potentiometer,2.2 k&Omega; variable resistor,2,_data/datasheets/pot_2k2.pdf,https://uk.farnell.com/bourns/3362p-1-222lf/trimmer-pot-2-2kohm-10-1turn-th/dp/2328599,Passive,5,5,3
 Breadboard (400),400-tie solderless breadboard,1,_data/datasheets/breadboard_400.pdf,https://www.amazon.co.uk/gp/product/B0739XRX8F,Loose,100,60,8
 Batteries (AA),AA 1.5 V alkaline battery,4,,,Loose,60,80,10
 Battery holder,4xAA battery holder with ON-OFF switch,1,,https://www.amazon.co.uk/gp/product/B0814ZH68F,Loose,80,100,15
-Jumper kit,Kit of multi-length 22 AWG breadboard jumpers,1,_data/datasheets/jumper_kit.pdf,https://uk.farnell.com/multicomp/mc001810/hard-jumper-wire-22awg-140pc/dp/2770338,Loose,200,50,15
-Jumper wires,Assorted 22 AWG jumper wire leads (male/female),1,_data/datasheets/jumper_wires.pdf,https://www.amazon.co.uk/240pcs-Solderless-Breadboard-Arduino-Project/dp/B08PJSTS3C,Loose,250,75,5
+Jumper Kit,Kit of multi-length 22 AWG breadboard jumpers,1,_data/datasheets/jumper_kit.pdf,https://uk.farnell.com/multicomp/mc001810/hard-jumper-wire-22awg-140pc/dp/2770338,Loose,200,50,15
+Jumper Wires,Assorted 22 AWG jumper wire leads (male/female),1,_data/datasheets/jumper_wires.pdf,https://www.amazon.co.uk/240pcs-Solderless-Breadboard-Arduino-Project/dp/B08PJSTS3C,Loose,250,75,5
 Test Lead,Alligator clip to 0.64 mm pin (20 cm),2,,https://www.amazon.co.uk/gp/product/B096JR15JW,Loose,250,30,10
 Rubber feet,Adhesive rubber standoffs (1421T6CL),4,_data/datasheets/rubber_feet.pdf,https://uk.farnell.com/hammond/1421t6cl/feet-stick-on-pk24/dp/1876522,Passive,20,20,4
 
 magnets,,,,,,,,
 Inductor,1 mH torroidal inductor,1,_data/datasheets/inductor_torroidal.pdf,https://uk.farnell.com/bourns/2124-v-rc/inductor-1000uh-15-1-3a-toroid/dp/1929753,Passive,30,30,10
-Magnet wire,Narrow gaurge epoxy insulated (1 m),1,,https://www.amazon.co.uk/Enameled-Magnet-Soldering-Winding-Enamelled/dp/B07N65LRVD,Passive,30,30,10
+Magnet Wire,Narrow gaurge epoxy insulated (1 m),1,,https://www.amazon.co.uk/Enameled-Magnet-Soldering-Winding-Enamelled/dp/B07N65LRVD,Passive,30,30,10
 Magnet,Neodymium disc (8 mm x 3 mm),2,,https://uk.farnell.com/duratool/d01766/magnets-rare-earth-8-x-3mm-pk10/dp/1888095,Magnets,20,20,5
-USB sound card,USB to 3.5 mm Audio out/in,1,,https://www.amazon.co.uk/UGREEN-Headphone-Microphone-Raspberry-Ultrabook/dp/B01N905VOY,Loose,75,50,10
-Stereo plug terminal,3.5 mm plug to screw terminal,2,,https://www.amazon.co.uk/dp/B07MNYBFL9,Loose,30,30,8
+USB Sound Card,USB to 3.5 mm Audio out/in,1,,https://www.amazon.co.uk/UGREEN-Headphone-Microphone-Raspberry-Ultrabook/dp/B01N905VOY,Loose,75,50,10
+Stereo Plug Terminal,3.5 mm plug to screw terminal,2,,https://www.amazon.co.uk/dp/B07MNYBFL9,Loose,30,30,8
 
 light,,,,,,,,
 Lightbulb,Mini incandescent bulb (6 V),1,_data/datasheets/lamp_6V.pdf,https://uk.farnell.com/cml-innovative-technologies/3820al/lamp-w-e-axial-t3-8-6v-0-6w/dp/1139454,Active,25,10,5
@@ -38,7 +38,7 @@ Piezo,Piezo element,1,_data/datasheets/piezo.pdf,https://uk.farnell.com/multicom
 Breadboards (170),170-tie solderless breadboard,4,_data/datasheets/breadboard_170.pdf,https://www.amazon.co.uk/ELEGOO-tie-points-Breadboard-Breadboards-Electronic/dp/B01N0YWIR7,Loose,50,60,6
 
 motors,,,,,,,,
-DC brushed motor,6V Brushed DC motor,1,,https://www.amazon.co.uk/Gikfun-1V-6V-Hobby-Arduino-EK1894/dp/B07BHHP2BT,Loose,20,30,20
+DC Brushed Motor,6V Brushed DC motor,1,,https://www.amazon.co.uk/Gikfun-1V-6V-Hobby-Arduino-EK1894/dp/B07BHHP2BT,Loose,20,30,20
 DC Gearbox Motor,TT Gearbox DC Motor - 200RPM - 3 to 6VDC and wheel,2,,https://www.adafruit.com/product/3777#technical-details,Loose,30,15,15
 Motor Mount,Mount for TT Gearbox DC Motors - L-Bracket Type with hardware,2,,https://www.adafruit.com/product/3768,Mounts,15,15,15
 *Servo Mount,Mount for servo motor,2,,VK,Mounts,30,15,5
@@ -49,9 +49,9 @@ Motor Mount,Mount for TT Gearbox DC Motors - L-Bracket Type with hardware,2,,htt
 transistors,,,,,,,,
 MOSFET,Power MOSFET/N-channel (IRF510),2,_data/datasheets/IRF510.pdf,https://uk.farnell.com/vishay/irf510pbf/mosfet-n-100v-5-6a-to-220ab/dp/1653658,Active,40,15,4
 Diode,IN4001,2,_data/datasheets/IN4001.pdf,https://uk.farnell.com/on-semiconductor/1n4001g/diode-standard-1a-do-41/dp/1458986,Active,40,5,3
-Photodiode,Visible (broadband) photodiode,2,,https://uk.farnell.com/vishay/tefd4300/photodiode-950nm-3mm/dp/2251271,Active,40,5,3
+Photodiode (Visible),Visible (broadband) photodiode,2,,https://uk.farnell.com/vishay/tefd4300/photodiode-950nm-3mm/dp/2251271,Active,40,5,3
 Photodiode (IR),IR sensitive photodiode,2,,https://uk.farnell.com/osram-opto-semiconductors/sfh203-fa/photodiode-ir-filtered/dp/1212743,Active,40,5,3
-LED (blue),Low power blue light emitting diode,2,,https://uk.farnell.com/broadcom-limited/hlmp-ka45-e0000/led-3mm-blue-85mcd-470nm/dp/1863182,Active,40,5,3
+LED (Blue),Low power blue light emitting diode,2,,https://uk.farnell.com/broadcom-limited/hlmp-ka45-e0000/led-3mm-blue-85mcd-470nm/dp/1863182,Active,40,5,3
 LED (IR),Low power IR light emitting diode,2,,https://uk.farnell.com/vishay/tsal6100/infrared-emitter-940nm-t-1-3-4/dp/1328299,Active,40,5,3
 
 amplifiers,,,,,,,,
@@ -74,7 +74,7 @@ data,,,,,,,,
 Comparator,LM339 (DIP-14),2,_data/datasheets/lm2901.pdf,https://uk.farnell.com/texas-instruments/lm2901n/ic-comparator-quad-2901-dip14/dp/3118410,Active,7,6,5
 LED (Red),5 mm/2 mA red LED,2,_data/datasheets/led_HLMP.pdf,https://uk.farnell.com/broadcom-limited/hlmp-4700/led-5mm-red-2-3mcd-626nm/dp/1003232,Active,50,5,3
 LED (Green),3 mm/2 mA green LED,2,_data/datasheets/led_HLMP.pdf,https://uk.farnell.com/broadcom-limited/hlmp-1790/led-3mm-green-2-3mcd-569nm/dp/1003209,Active,50,5,3
-Resistor,330 &Omega;/0.25 W,6,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-2k4/res-2k4-1-250mw-axial-metal-film/dp/9341595,Passive,50,5,3
+Resistor (330),330 &Omega;/0.25 W,6,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-2k4/res-2k4-1-250mw-axial-metal-film/dp/9341595,Passive,50,5,3
 
 logic,,,,,,,,
 Gate (AND),4xAND gate,1,_data/datasheets/AND_gates.pdf,https://uk.farnell.com/texas-instruments/cd4081be/ic-4000-cmos-4081-dip14-18v/dp/3120147,Active,10,20,8
@@ -106,8 +106,8 @@ Velcro Patch, Velcro adhesive,1,,,Loose,50,75,4
 systems,,,,,,,,
 Computer (RPi4),Raspberry Pi 4b with 4 GB RAM,1,_data/datasheets/rpi4b_4gb.pdf,https://uk.farnell.com/raspberry-pi/rpi4-modbp-4gb/raspberry-pi-4-model-b-4gb/dp/3051887,Loose,100,80,15
 Heatsinks,Heatsinks for RPi 4b chips,1,_data/datasheets/rpi4b_heatsinks.jpg,https://www.amazon.co.uk/gp/product/B07VRNT3HX,Loose,40,20,10
-SD card,16 GB micro SD card,1,_data/datasheets/SanDisk-SDSQUAR-016G-GN6MA-datasheet.pdf,https://uk.farnell.com/sandisk/sdsquar-016g-gn6ma/memory-card-microsdhc-uhs-i-16gb/dp/2931924,Loose,100,50,3
-USB SD card IO, SD card reader/writer,1,,https://www.amazon.co.uk/Beikell-High-speed-Adapter-Supports-MMC-Compatible-Windows/dp/B07L9VT8YY,Loose,70,40,15
+SD Card,16 GB micro SD card,1,_data/datasheets/SanDisk-SDSQUAR-016G-GN6MA-datasheet.pdf,https://uk.farnell.com/sandisk/sdsquar-016g-gn6ma/memory-card-microsdhc-uhs-i-16gb/dp/2931924,Loose,100,50,3
+USB SD Card IO, SD card reader/writer,1,,https://www.amazon.co.uk/Beikell-High-speed-Adapter-Supports-MMC-Compatible-Windows/dp/B07L9VT8YY,Loose,70,40,15
 M2.5 bolt (6),6 mm long M2.5 bolt,4,,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2,Hardware,5,5,6
 M2.5 standoff (20/SS),20 mm long socket-to-socket M2.5 standoff,4,,https://uk.farnell.com/wurth-elektronik/970200154/standoff-hex-female-female-20mm/dp/2987903,Hardware,5,5,20
 M2.5 standoff (20/PS),20 mm long plug-to-socket M2.5 standoff,4,,https://uk.farnell.com/wurth-elektronik/971200151/standoff-hex-male-female-20mm/dp/2884418,Hardware,5,5,20
