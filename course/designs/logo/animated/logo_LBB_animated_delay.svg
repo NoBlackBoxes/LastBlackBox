@@ -57,7 +57,7 @@
 		#box_Audio 			{animation: animate_lag 2.4s linear; animation-fill-mode: forwards; animation-delay: 1s}
 		#box_Vision 		{animation: animate_box 0.6s linear; animation-fill-mode: forwards; animation-delay: 1s}
 		#box_Learning 		{animation: animate_box 0.3s linear; animation-fill-mode: forwards; animation-delay: 1s}
-		#box_Intelligence 	{animation: animate_nan 3.1s linear; animation-fill-mode: forwards; animation-delay: 1s}
+		#box_Intelligence 	{animation: animate_lag 3.9s linear; animation-fill-mode: forwards; animation-delay: 1s}
 
 		@keyframes animate_box {
 			0% 		{fill:black;	stroke:white}
@@ -71,10 +71,5 @@
 			100% 	{fill:white;	stroke:black}
 		}
 
-		@keyframes animate_nan {
-			0% 		{fill:black;	stroke:white}
-			95% 	{fill:black;	stroke:white}
-			100% 	{fill:black;	stroke:black}
-		}
 	</style>
 </svg>
