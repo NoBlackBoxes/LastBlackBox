@@ -35,6 +35,13 @@ importlib.reload(Lesson)
 readme_path = "/home/kampff/NoBlackBoxes/LastBlackBox/boxes/electrons/README_new.md"
 box = Box.Box(readme_path)
 
+# To Do
+# - parse video (new class)
+# - parse task (class)
+# - parse images (remove centering tags in markdown....)
+# - create task spec (box/button labels...)
+# - Think about task completion assement (automated)
+
 # Print Box
 print(box.name)
 print("-------------")
@@ -42,9 +49,10 @@ print(box.description[0])
 print("-------------")
 for topic in box.topics:
     print("\t" + topic.name)
-    print("\t  " + topic.description[0])
+    print("\t::" + topic.description[0])
     print("\t-------------")
     for lesson in topic.lessons:
         print("\t" + str(lesson.level))
-        print("\t\t" + lesson.instructions[0])
+        for instruction in lesson.instructions:
+            print("\t\t" + instruction)
 print("-------------")
