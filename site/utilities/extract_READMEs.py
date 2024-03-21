@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
- Copy box READMEs to Flask "templates" folde
+ Extract box READMEs to Flask "templates" folder
 """
 import os
 import shutil
@@ -48,7 +48,6 @@ def extract_README(box):
 
     return
 
-
 #
 # Script
 #
@@ -73,28 +72,17 @@ boxes = [
     'control',
     'robotics',
     'systems',
+    'linux',
+    'python',
     'networks',
+    'websites',
+    'servers',
     'security',
     'audio',
     'vision',
     'learning',
-    'intelligence',
-    'python',
-    'websites'
+    'intelligence'
 ]
-
-# Extract (and pre-process) course README for website rendering
-readme_path = repo_path + "/course/README.md"
-template_readme_path = templates_path + "/README.md"
-with open(readme_path, encoding='utf8') as f:
-    readme = f.readlines()
-
-# Process README here!
-
-# Store README.md in templates folder
-f = open(template_readme_path, 'w', encoding='utf8')
-f.writelines(readme)
-f.close()
 
 # Extract (and pre-process) box READMEs for website rendering
 for box in boxes:

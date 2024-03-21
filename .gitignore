@@ -17,6 +17,9 @@ _solutions/
 tmp/
 _tmp/
 
+# Environment Files
+.env*
+
 # Doxygen Builds
 documentation/html/
 documentation/latex/
