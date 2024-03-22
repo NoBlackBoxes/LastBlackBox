@@ -9,21 +9,21 @@ LBB: Lesson Class
 import os
 
 # Import modules
+import LBB.instruction as Instruction
+import LBB.image as Image
+import LBB.video as Video
 import LBB.task as Task
 
 # Topic Class
 class Lesson:
     def __init__(self, text=None):
-        self.level = None           # level
-        self.instructions = None    # instructions
-        self.images = None          # images
-        self.videos = None          # videos
-        self.tasks = None           # tasks
+        self.level = None       # level
+        self.steps = None       # steps
         if text:
-            self.parse_text(text)
+            self.parse(text)
         return
 
-    def parse_text(self, text):
+    def parse(self, text):
         # Extract level
         if text[0] == f"{{01}}":
             self.level = 1
@@ -35,19 +35,32 @@ class Lesson:
             print(f"Malformed level indicator during lesson parsing: {text[0]} vs {{01}}")
             return
 
-        # Extract instructions
-        self.instructions = []
+        # Extract steps
+        self.steps = []
         line_count = 1
         max_count = len(text)
         while line_count < max_count:
             if text[line_count][0] != '\n':
-                self.instructions.append(text[line_count][:-1])
+                # Classify step
+                if text[line_count][0:4] == '- *V':
+                    video = Video.Video(text[line_count])
+                    self.steps.append(video)
+                elif text[line_count][0:7] == '  - **T':
+                    task = Task.Task(text[line_count])
+                    self.steps.append(task)
+                elif text[line_count][0:4] == '<img':
+                    image = Image.Image(text[line_count])
+                    self.steps.append(image)
+                else:
+                    instruction = Instruction.Instruction(text[line_count])
+                    self.steps.append(instruction)
             line_count += 1
-    
-        # Extract images
-        # Extract videos
-        # Extract tasks
-
         return
+    
+    def render(self):
+        output = ''
+        for step in self.steps:
+            output = output + step.render()
+        return output
 
 #FIN

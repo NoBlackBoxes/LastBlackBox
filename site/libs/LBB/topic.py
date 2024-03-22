@@ -17,11 +17,12 @@ class Topic:
         self.name = None            # name
         self.description = None     # description
         self.lessons = None         # lessons
+        self.levels = None          # levels
         if text:
-            self.parse_text(text)
+            self.parse(text)
         return
 
-    def parse_text(self, text):
+    def parse(self, text):
         # Line counter
         line_count = 0
         max_count = len(text)
@@ -34,7 +35,7 @@ class Topic:
         line_count = 1
         while text[line_count][0] != '{':
             if text[line_count][0] != '\n':
-                self.description.append(text[line_count][:-1])
+                self.description.append(text[line_count])
             line_count += 1
 
         # Extract lessons
@@ -45,12 +46,21 @@ class Topic:
             line_count += 1
             while text[line_count][0] != '{':
                 if text[line_count][0] != '\n':
-                    lesson_text.append(text[line_count][:-1])
+                    lesson_text.append(text[line_count])
                 line_count += 1
                 if line_count >= max_count:
                     break
             lesson = Lesson.Lesson(lesson_text)
             self.lessons.append(lesson)
+        
+        # Extract levels
+        self.levels = [lesson.level for lesson in self.lessons]
 
-        return
+    def render(self):
+        header = "<!DOCTYPE html>\n<html>\n<body>\n"
+        footer = "\n</body>\n</html>"
+        output = header + f"<h1>{self.name}</h1>\n"
+        for lesson in self.lessons:
+            output = output + lesson.render()
+        return output + footer
 #FIN

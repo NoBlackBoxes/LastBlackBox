@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-LBB: Task Class
+LBB: Instruction Class
 
 @author: kampff
 """
@@ -10,20 +10,19 @@ import os
 
 # Import modules
 
-# Task Class
-class Task:
+# Instruction Class
+class Instruction:
     def __init__(self, text=None):
-        self.name = None            # name
-        self.description = None     # description
+        self.html = None     # instruction text
         if text:
             self.parse(text)
         return
     
     def parse(self, text):
-        self.name = "TASK\n"
+        self.html = text
+        # should convert emphasis tags
         return
-    
-    def render(self):
-        return self.name
 
+    def render(self):
+        return self.html
 #FIN

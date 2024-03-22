@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-LBB: Task Class
+LBB: Image Class
 
 @author: kampff
 """
@@ -10,20 +10,19 @@ import os
 
 # Import modules
 
-# Task Class
-class Task:
+# Image Class
+class Image:
     def __init__(self, text=None):
-        self.name = None            # name
-        self.description = None     # description
+        self.html = None        # html
         if text:
             self.parse(text)
         return
     
     def parse(self, text):
-        self.name = "TASK\n"
+        self.html = "<img src=\"../boxes" + text[12:]
         return
-    
+
     def render(self):
-        return self.name
+        return "<p align=\"center\">\n" + self.html + "\n</p>"
 
 #FIN
