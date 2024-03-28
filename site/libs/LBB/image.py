@@ -19,7 +19,7 @@ class Image:
         return
     
     def parse(self, text):
-        self.html = "<img src=\"../boxes" + text[12:]
+        self.html = "<img src=\"../../../boxes" + text[12:]
         return
 
     def render(self):

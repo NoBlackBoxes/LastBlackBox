@@ -10,6 +10,7 @@ import os
 
 # Import modules
 import LBB.topic as Topic
+import LBB.utilities as Utilities
 
 # Box Class
 class Box:
@@ -41,6 +42,7 @@ class Box:
             if readme[line_count][0] != '\n':
                 self.description.append(readme[line_count][:-1])
             line_count += 1
+        self.description = "".join(self.description)
 
         # Extract material lists for each depth (01,10,11)
         self.materials = []
@@ -66,5 +68,17 @@ class Box:
             self.topics.append(topic)
 
         return
+
+    def render_topics(self, output_path):
+        box_path = output_path + f'/{self.name.lower()}'
+        Utilities.clear_folder(box_path)
+        for t, topic in enumerate(self.topics):
+            header = Utilities.render_header(self, t)
+            footer = Utilities.render_footer(self, t)
+            body = topic.render()
+            output = header + body + footer
+            topic_path = box_path + f'/{topic.name.replace(" ", "_").lower()}.html'
+            with open(topic_path, "w") as file:
+                file.write(output)
 
 #FIN

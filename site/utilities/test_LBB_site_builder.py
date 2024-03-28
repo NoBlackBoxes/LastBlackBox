@@ -28,6 +28,7 @@ import LBB.instruction as Instruction
 import LBB.image as Image
 import LBB.video as Video
 import LBB.task as Task
+import LBB.utilities as Utilities
 
 # Reload modules
 import importlib
@@ -38,14 +39,18 @@ importlib.reload(Instruction)
 importlib.reload(Image)
 importlib.reload(Video)
 importlib.reload(Task)
+importlib.reload(Utilities)
+
 #----------------------------------------------------------
 
 readme_path = "/home/kampff/NoBlackBoxes/LastBlackBox/boxes/electrons/README_new.md"
 box = Box.Box(readme_path)
 
-output = box.topics[0].render()
-with open("output.html", "w") as file:
-    file.write(output)
+# Create output folder
+output_path = '/home/kampff/NoBlackBoxes/LastBlackBox/site/templates'
+
+# Render box
+box.render_topics(output_path)
 
 # To Do
 # - parse video (new class)

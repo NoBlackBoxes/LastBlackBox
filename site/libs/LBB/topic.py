@@ -37,7 +37,8 @@ class Topic:
             if text[line_count][0] != '\n':
                 self.description.append(text[line_count])
             line_count += 1
-
+        self.description = "".join(self.description)
+        
         # Extract lessons
         self.lessons = []
         while line_count < max_count:
@@ -57,10 +58,8 @@ class Topic:
         self.levels = [lesson.level for lesson in self.lessons]
 
     def render(self):
-        header = "<!DOCTYPE html>\n<html>\n<body>\n"
-        footer = "\n</body>\n</html>"
-        output = header + f"<h1>{self.name}</h1>\n"
+        output = ''
         for lesson in self.lessons:
             output = output + lesson.render()
-        return output + footer
+        return output
 #FIN
