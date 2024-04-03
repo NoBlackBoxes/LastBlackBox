@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Test the LBB site building tools
+Build the LBB site
 
 @author: kampff
 """
@@ -15,6 +15,7 @@ base_path = os.getenv('BASE_PATH')
 # Set library paths
 import sys
 sys.path.append(libs_path)
+#----------------------------------------------------------
 
 # Import libraries
 import os
@@ -28,6 +29,7 @@ import LBB.instruction as Instruction
 import LBB.image as Image
 import LBB.video as Video
 import LBB.task as Task
+import LBB.input as Input
 import LBB.utilities as Utilities
 
 # Reload modules
@@ -39,9 +41,12 @@ importlib.reload(Instruction)
 importlib.reload(Image)
 importlib.reload(Video)
 importlib.reload(Task)
+importlib.reload(Input)
 importlib.reload(Utilities)
 
 #----------------------------------------------------------
+
+# Copy media from Repo (to static)
 
 readme_path = "/home/kampff/NoBlackBoxes/LastBlackBox/boxes/electrons/README_new.md"
 box = Box.Box(readme_path)
@@ -52,16 +57,9 @@ output_path = '/home/kampff/NoBlackBoxes/LastBlackBox/site/templates'
 # Render box
 box.render_topics(output_path)
 
-# To Do
-# - parse video (new class)
-# - parse task (class)
-# - parse images
-# - create task spec (box/button labels...)
-# - Think about task completion assement (automated)
-
 # Print Box
 print(box.name)
-print("-------------")
+print("-------------") 
 print(box.description[0])
 print("-------------")
 for topic in box.topics:
