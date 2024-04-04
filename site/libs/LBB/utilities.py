@@ -26,11 +26,11 @@ def render_footer(box, topic_index):
     footer.append("<hr>")
     if topic_index > 0:
         previous_topic_name = box.topics[topic_index-1].name.replace(" ", "_").lower()
-        previous_topic = f"{previous_topic_name}.html"
+        previous_topic = f"{previous_topic_name}"
         footer.append(f"<a href=\"{previous_topic}\">Previous Topic</a><br>")
     if topic_index < (len(box.topics)-1):
         next_topic_name = box.topics[topic_index+1].name.replace(" ", "_").lower()
-        next_topic = f"{next_topic_name}.html"
+        next_topic = f"{next_topic_name}"
         footer.append(f"<a href=\"{next_topic}\">Next Topic</a><br>")
     footer.append("\n</body>\n</html>")
     return "".join(footer)

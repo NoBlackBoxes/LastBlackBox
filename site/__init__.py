@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-LBB web application
+LBB Web Qpplication
 
 @author: kampff
 """
@@ -26,12 +26,22 @@ from werkzeug.utils import secure_filename
 UPLOAD_FOLDER = base_path + '/_tmp'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
+# Create App
 app = Flask(__name__)
+
+# Config App
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
+###############################################################################
+# Helper Functions
+###############################################################################
 def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+###############################################################################
+# Routes
+###############################################################################
 
 # Serve manifest (for PWA)
 @app.route('/manifest.json')
@@ -63,18 +73,35 @@ def serve_sw():
 #            return render_template('index.html')
 #    return render_template('index.html')
 
-@app.route('/', defaults={'path': ''})
-@app.route('/<path:path>')
-def catch_all(path):
-    print(path)
+# Serve Home
+@app.route('/')
+def homepage():
+    return render_template('index.html')
+
+# Serve Student
+@app.route('/student')
+def student():
+    return render_template('student.html')
+
+# Serve Instructor
+@app.route('/instructor')
+def instructor():
+    return render_template('instructor.html')
+
+# Serve Topic
+@app.route('/<box>/<topic>')
+def topic(box, topic):
+    print(box, topic)
     if request.method == 'GET':
-        if path != '':
-            route_url = path
-        else:
-            route_url = "index.html"
+        route_url = f"{box}/{topic}.html"
+        print(route_url)
+    else:
+        route_url = f"{box}/{topic}.html"
     return render_template(route_url)
 
-# Maim
+###############################################################################
+# Run Application
+###############################################################################
 if __name__ == '__main__':
     app.run(debug=True, port=5000, host='0.0.0.0')
 
