@@ -3,7 +3,7 @@
 ## Install Flask and Tools
 
 ```bash
-pip install Flask python-dotenv
+pip install flask flask-login python-dotenv 
 ```
 
 ## Environment

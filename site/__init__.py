@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-LBB Web Qpplication
+LBB Web Application
 
 @author: kampff
 """
@@ -18,9 +18,12 @@ sys.path.append(libs_path)
 #----------------------------------------------------------
 
 import os
-from flask import Flask, render_template, send_file
-from flask import Flask, flash, request, redirect, url_for
+from flask import Flask, render_template, send_file, request, redirect
+from flask_login import LoginManager, current_user, login_user
 from werkzeug.utils import secure_filename
+
+# Import modules
+import LBB.user as User
 
 # Define constants
 UPLOAD_FOLDER = base_path + '/_tmp'
@@ -31,6 +34,15 @@ app = Flask(__name__)
 
 # Config App
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+# Create login
+login_manager = LoginManager(app)
+
+@login_manager.user_loader
+def load_user(user_id):
+    # Load user (student or instructor) from filesystem
+    user = User.get(user_id)
+    return user
 
 ###############################################################################
 # Helper Functions
@@ -48,7 +60,7 @@ def allowed_file(filename):
 def serve_manifest():
     return send_file('manifest.json', mimetype='application/manifest+json')
 
-# Serve service orker
+# Serve service worker
 @app.route('/service_worker.js')
 def serve_sw():
     return send_file('service_worker.js', mimetype='application/javascript')
@@ -77,6 +89,17 @@ def serve_sw():
 @app.route('/')
 def homepage():
     return render_template('index.html')
+
+# Serve Login
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if current_user.is_authenticated:
+        return redirect('student.html')
+    if request.method == 'POST':
+        student_name = request.form['student_name']
+        student_password = request.form['student_password']
+        print(f"login!!!: {student_name}:{student_password}")
+    return render_template('login.html')
 
 # Serve Student
 @app.route('/student')
