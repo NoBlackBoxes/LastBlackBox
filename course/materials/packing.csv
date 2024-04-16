@@ -1,81 +1,82 @@
 Part,Description,Quantity,Package,x(mm),y(mm),z(mm)
 Gate (AND),4xAND gate,1.0,Active,10.0,20.0,8.0
+Gate (OR),4xOR gate,1.0,Active,10.0,20.0,8.0
 Gate (NOR),4xNOR gate,1.0,Active,10.0,20.0,8.0
 Gate (NAND),4xNAND gate,2.0,Active,10.0,20.0,8.0
-H-bridge,H-bridge motor driver (SN754410NE),2.0,Active,8.0,25.0,6.0
 Diode,IN4001,2.0,Active,40.0,5.0,3.0
-Comparator,LM339 (DIP-14),2.0,Active,7.0,6.0,5.0
 MOSFET,Power MOSFET/N-channel (IRF510),2.0,Active,40.0,15.0,4.0
+Comparator,LM339 (DIP-14),2.0,Active,7.0,6.0,5.0
 LED (Blue),Low power blue light emitting diode,2.0,Active,40.0,5.0,3.0
-LED (Green),3 mm/2 mA green LED,2.0,Active,50.0,5.0,3.0
-Gate (OR),4xOR gate,1.0,Active,10.0,20.0,8.0
-LED (IR),Low power IR light emitting diode,2.0,Active,40.0,5.0,3.0
 Gate (XOR),4xXOR gate,1.0,Active,10.0,20.0,8.0
-LED (Red),5 mm/2 mA red LED,2.0,Active,50.0,5.0,3.0
-LM386N-4/NOPB,Audio-Amp,2.0,Active,5.0,5.0,3.0
+LED (IR),Low power IR light emitting diode,2.0,Active,40.0,5.0,3.0
+LED (Green),3 mm/2 mA green LED,2.0,Active,50.0,5.0,3.0
 Photodiode (IR),IR sensitive photodiode,2.0,Active,40.0,5.0,3.0
-Photodiode (Visible),Visible (broadband) photodiode,2.0,Active,40.0,5.0,3.0
-LM741,OpAmp,1.0,Active,5.0,5.0,3.0
+LED (Red),5 mm/2 mA red LED,2.0,Active,50.0,5.0,3.0
 Lightbulb,Mini incandescent bulb (6 V),1.0,Active,25.0,10.0,5.0
-NB3 Mouth,I2S DAC-AMP breakout board,1.0,Audio,20.0,20.0,20.0
+LM741,OpAmp,1.0,Active,5.0,5.0,3.0
+H-bridge,H-bridge motor driver (SN754410NE),2.0,Active,8.0,25.0,6.0
+Photodiode (Visible),Visible (broadband) photodiode,2.0,Active,40.0,5.0,3.0
+LM386N-4/NOPB,Audio-Amp,2.0,Active,5.0,5.0,3.0
 NB3 Ear,I2S mems microphone breakout board,2.0,Audio,20.0,20.0,20.0
+NB3 Mouth,I2S DAC-AMP breakout board,1.0,Audio,20.0,20.0,20.0
 M2.5 standoff (7/PS),7 mm long plug-to-socket M2.5 standoff,4.0,Hardware,5.0,5.0,7.0
-M3 bolt (12),12 mm long M3 bolt,1.0,Hardware,5.0,5.0,12.0
 M3 bolt (6),6 mm long M3 bolt,2.0,Hardware,5.0,5.0,6.0
 M2 bolt (8),8 mm long M2 bolt,4.0,Hardware,5.0,5.0,8.0
+M3 nut (square),square M3 nut 1.8 mm thick,7.0,Hardware,5.0,5.0,3.0
 M2 nut,regular M2 nut,4.0,Hardware,5.0,5.0,3.0
 M2.5 bolt (6),6 mm long M2.5 bolt,22.0,Hardware,5.0,5.0,6.0
 M2.5 nut,regular M2.5 nut,6.0,Hardware,5.0,5.0,3.0
+M3 bolt (12),12 mm long M3 bolt,1.0,Hardware,5.0,5.0,12.0
 M2.5 standoff (20/SS),20 mm long socket-to-socket M2.5 standoff,4.0,Hardware,5.0,5.0,20.0
-M3 nut (square),square M3 nut 1.8 mm thick,7.0,Hardware,5.0,5.0,3.0
-M2.5 standoff (12/SS),12 mm long socket-to-socket M2.5 standoff,4.0,Hardware,5.0,5.0,12.0
-M2.5 standoff (20/PS),20 mm long plug-to-socket M2.5 standoff,4.0,Hardware,5.0,5.0,20.0
 M3 screw (16),16 mm long M3 screw with phillips socket,4.0,Hardware,5.0,5.0,16.0
 M3 standoff (15/PS),15 mm long plug-to-socket M3 standoff,2.0,Hardware,5.0,5.0,15.0
+M2.5 standoff (12/SS),12 mm long socket-to-socket M2.5 standoff,4.0,Hardware,5.0,5.0,12.0
+M2.5 standoff (20/PS),20 mm long plug-to-socket M2.5 standoff,4.0,Hardware,5.0,5.0,20.0
 NB3 Hindbrain,ICE40UP5K dev board with ADC/DAC,1.0,Hindbrain,60.0,30.0,20.0
-USB Sound Card,USB to 3.5 mm Audio out/in,1.0,Loose,150.0,90.0,15.0
 Microcontroller,Arduino Nano (rev.3),1.0,Loose,82.0,60.0,25.0
 NB3 Body,NB3 robot base PCB,1.0,Loose,200.0,200.0,15.0
 NPU,Coral EdgeTPU USB Type-C,1.0,Loose,100.0,140.0,30.0
+Periodic Table,Periodic Table business card,1.0,Loose,40.0,60.0,0.5
 SD Card,16 GB micro SD card,1.0,Loose,100.0,50.0,3.0
 Secret Message,A SHA256 encrypted message (in HEX),1.0,Loose,100.0,60.0,1.0
+Servos,FS90R Micro Continuous Rotation Servo w/Wheel,2.0,Loose,100.0,70.0,15.0
 Speaker,3 Watt 4 Ohm with Dupont 2.54 mm socket,1.0,Loose,0.0,30.0,15.0
 Stereo Plug Terminal,3.5 mm plug to screw terminal,2.0,Loose,40.0,20.0,15.0
 Test Lead,Alligator clip to 0.64 mm pin (20 cm),2.0,Loose,220.0,20.0,10.0
 USB SD Card IO, SD card reader/writer,1.0,Loose,70.0,40.0,15.0
-Periodic Table,Periodic Table business card,1.0,Loose,40.0,60.0,0.5
 12V DC Power Supply,12 V AC-DC transformer (UK/EU/USA plugs),1.0,Loose,100.0,100.0,80.0
-Jumper Kit,Kit of multi-length 22 AWG breadboard jumpers,1.0,Loose,170.0,55.0,15.0
+Jumper Wires,Assorted 22 AWG jumper wire leads (male/female),1.0,Loose,200.0,40.0,10.0
 Batteries (AA),AA 1.5 V alkaline battery,4.0,Loose,60.0,15.0,15.0
 Battery,NiMH 9.6V 8-cell 2000 mAh battery,1.0,Loose,100.0,60.0,15.0
 Battery Charger,NiMH battery charger (UK plug),1.0,Loose,90.0,90.0,70.0
 Battery holder,4xAA battery holder with ON-OFF switch,1.0,Loose,65.0,70.0,20.0
 Breadboard (400),400-tie solderless breadboard,1.0,Loose,85.0,60.0,10.0
 Breadboards (170),170-tie solderless breadboard,4.0,Loose,35.0,50.0,10.0
-Jumper Wires,Assorted 22 AWG jumper wire leads (male/female),1.0,Loose,200.0,40.0,10.0
+USB Sound Card,USB to 3.5 mm Audio out/in,1.0,Loose,150.0,90.0,15.0
 Cable (Ethernet),RJ45 cact5e ethernet patch cable (1 m),1.0,Loose,100.0,50.0,10.0
 Cable (MicroUSB-1m),Micro-USB to Type-A cable (1 m),1.0,Loose,100.0,50.0,15.0
 Cable (Mini-USB/20cm),Short mini-USB to Type-A cable (20 cm),1.0,Loose,100.0,25.0,10.0
 Cable (MiniUSB-1m),Mini-USB to Type-A cable (1 m),1.0,Loose,100.0,50.0,15.0
 Camera (RPi v3),RPi color camera with auto-focus (version 3),1.0,Loose,120.0,75.0,23.0
 Velcro Patch, Velcro adhesive,1.0,Loose,50.0,75.0,4.0
+Jumper Kit,Kit of multi-length 22 AWG breadboard jumpers,1.0,Loose,170.0,55.0,15.0
+Caster,¾” metal ball caster,1.0,Loose,70.0,50.0,20.0
 Clicker,Loud sound maker (and whistle),1.0,Loose,70.0,20.0,30.0
 Computer (RPi4),Raspberry Pi 4b with 4 GB RAM,1.0,Loose,95.0,70.0,26.0
-DC Brushed Motor,6V Brushed DC motor,1.0,Loose,20.0,40.0,15.0
-DC Gearbox Motor,TT Gearbox DC Motor - 200RPM - 3 to 6VDC and wheel,2.0,Loose,130.0,70.0,30.0
 Heatsinks,Heatsinks for RPi 4b chips,1.0,Loose,40.0,20.0,10.0
-Caster,¾” metal ball caster,1.0,Loose,70.0,50.0,20.0
+DC Gearbox Motor,TT Gearbox DC Motor - 200RPM - 3 to 6VDC and wheel,2.0,Loose,130.0,70.0,30.0
+DC Brushed Motor,6V Brushed DC motor,1.0,Loose,20.0,40.0,15.0
 Magnet,Neodymium disc (8 mm x 3 mm),2.0,Magnets,20.0,20.0,5.0
+NB3 Camera Mount,Custom laser cut mount for RPi camera,1.0,Mounts,40.0,30.0,5.0
 NB3 Cortex Mount,Custom laser cut holder for NPU,1.0,Mounts,75.0,65.0,5.0
+Motor Mount,Mount for TT Gearbox DC Motors - L-Bracket Type with hardware,2.0,Mounts,25.0,25.0,25.0
+Servo Mount,Mount for servo motor,2.0,Mounts,30.0,15.0,5.0
 Speaker Mount,Custom laser cut mount for speaker,1.0,Mounts,75.0,20.0,5.0
 Spacer,NB3 spacer 3 mm spacer for mounting ball caster,5.0,Mounts,25.0,25.0,5.0
-Servos,FS90R Micro Continuous Rotation Servo w/Wheel,2.0,Mounts,100.0,70.0,15.0
-Servo Mount,Mount for servo motor,2.0,Mounts,30.0,15.0,5.0
-NB3 Camera Mount,Custom laser cut mount for RPi camera,1.0,Mounts,40.0,30.0,5.0
-Motor Mount,Mount for TT Gearbox DC Motors - L-Bracket Type with hardware,2.0,Mounts,25.0,25.0,25.0
+Capacitor (small),0.1 uF ceramic capacitor,1.0,Passive,50.0,5.0,3.0
 Thermistor,Temperature sensitive resistor,2.0,Passive,50.0,10.0,3.0
 Inductor,1 mH torroidal inductor,1.0,Passive,30.0,30.0,15.0
-Capacitor (large),100 uF aluminum electrolytic capacitor,1.0,Passive,50.0,5.0,3.0
+Button,Tactile switch,2.0,Passive,5.0,5.0,3.0
 Resistor (330),330 &Omega;/0.25 W,8.0,Passive,50.0,5.0,3.0
 Resistor (470),470 &Omega;/0.25 W,1.0,Passive,50.0,5.0,3.0
 Resistor (1k),1 k&Omega;/0.25 W,1.0,Passive,50.0,5.0,3.0
@@ -83,9 +84,8 @@ Resistor (10k),10 k&Omega;/0.25 W,2.0,Passive,50.0,5.0,3.0
 Potentiometer,2.2 k&Omega; variable resistor,2.0,Passive,5.0,5.0,3.0
 Piezo Buzzer,Piezoelectric speaker/transducer,1.0,Passive,30.0,30.0,1.0
 Piezo,Piezo element,1.0,Passive,50.0,50.0,3.0
-Button,Tactile switch,2.0,Passive,5.0,5.0,3.0
 Magnet Wire,Narrow gaurge epoxy insulated (1 m),1.0,Passive,30.0,30.0,20.0
-Capacitor (small),0.1 uF ceramic capacitor,1.0,Passive,50.0,5.0,3.0
+Capacitor (large),100 uF aluminum electrolytic capacitor,1.0,Passive,50.0,5.0,3.0
 Rubber feet,Adhesive rubber standoffs (1421T6CL),4.0,Passive,20.0,20.0,4.0
 Photoresistor (LDR),Light-dependent resistor (GL5516 and GL5528),8.0,Passive,50.0,10.0,3.0
 Power Cable,Custom 4 pin NB3 power connector cable,1.0,Power,50.0,10.0,5.0
