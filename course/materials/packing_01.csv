@@ -1,0 +1,61 @@
+Part,Description,Quantity,Package,#Kits,#Required,#Available,#Order,#Ordered,Supplier,x(mm),y(mm),z(mm)
+LED (Red),5 mm/2 mA red LED,2.0,Active,16,32,0,0,0,https://uk.farnell.com/broadcom-limited/hlmp-4700/led-5mm-red-2-3mcd-626nm/dp/1003232,50.0,5.0,3.0
+LED (Green),3 mm/2 mA green LED,2.0,Active,16,32,0,0,0,https://uk.farnell.com/broadcom-limited/hlmp-1790/led-3mm-green-2-3mcd-569nm/dp/1003209,50.0,5.0,3.0
+MOSFET,Power MOSFET/N-channel (IRF510),2.0,Active,16,32,0,0,0,https://uk.farnell.com/vishay/irf510pbf/mosfet-n-100v-5-6a-to-220ab/dp/1653658,40.0,15.0,4.0
+H-bridge,H-bridge motor driver (SN754410NE),2.0,Active,16,32,0,0,0,https://uk.farnell.com/texas-instruments/sn754410ne/ic-peripheral-driver-half-h-1a/dp/3118977,8.0,25.0,6.0
+Diode,IN4001,2.0,Active,16,32,0,0,0,https://uk.farnell.com/on-semiconductor/1n4001g/diode-standard-1a-do-41/dp/1458986,40.0,5.0,3.0
+NB3 Mouth,I2S DAC-AMP breakout board,1.0,Audio,16,16,0,0,0,VK,20.0,20.0,20.0
+NB3 Ear,I2S mems microphone breakout board,2.0,Audio,16,32,0,0,0,VK,20.0,20.0,20.0
+M3 bolt (12),12 mm long M3 bolt,1.0,Hardware,16,16,0,0,0,https://www.accu.co.uk/pozi-pan-head-screws/500116-SPP-M3-12-ST-BZP,5.0,5.0,12.0
+M2.5 nut,regular M2.5 nut,6.0,Hardware,16,96,0,0,0,https://www.accu.co.uk/hexagon-nuts/456430-HPN-M2-5-C8-Z,5.0,5.0,3.0
+M2.5 bolt (6),6 mm long M2.5 bolt,22.0,Hardware,16,352,0,0,0,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2,5.0,5.0,6.0
+M2 nut,regular M2 nut,4.0,Hardware,16,64,0,0,0,https://www.accu.co.uk/hexagon-nuts/456429-HPN-M2-C8-Z,5.0,5.0,3.0
+M2 bolt (8),8 mm long M2 bolt,4.0,Hardware,16,64,0,0,0,https://www.accu.co.uk/pozi-pan-head-screws/500101-SPP-M2-8-ST-BZP,5.0,5.0,8.0
+M2.5 standoff (20/SS),20 mm long socket-to-socket M2.5 standoff,4.0,Hardware,16,64,0,0,0,https://uk.farnell.com/wurth-elektronik/970200154/standoff-hex-female-female-20mm/dp/2987903,5.0,5.0,20.0
+M2.5 standoff (7/PS),7 mm long plug-to-socket M2.5 standoff,4.0,Hardware,16,64,0,0,0,https://uk.farnell.com/wurth-elektronik/971070151/standoff-hex-male-female-7mm-m2/dp/2884371,5.0,5.0,7.0
+M3 bolt (6),6 mm long M3 bolt,2.0,Hardware,16,32,0,0,0,https://www.accu.co.uk/pozi-pan-head-screws/500113-SPP-M3-6-ST-BZP,5.0,5.0,6.0
+M3 nut (square),square M3 nut 1.8 mm thick,3.0,Hardware,16,48,0,0,0,https://www.accu.co.uk/flat-square-nuts/21326-HFSN-M3-A2,5.0,5.0,3.0
+M3 standoff (15/PS),15 mm long plug-to-socket M3 standoff,2.0,Hardware,16,32,0,0,0,https://uk.farnell.com/ettinger/05-13-151/spacer-m3x15-vzk/dp/1466726,5.0,5.0,15.0
+M2.5 standoff (12/SS),12 mm long socket-to-socket M2.5 standoff,4.0,Hardware,16,64,0,0,0,https://uk.farnell.com/wurth-elektronik/970120151/standoff-hex-female-female-12mm/dp/2884528,5.0,5.0,12.0
+M2.5 standoff (20/PS),20 mm long plug-to-socket M2.5 standoff,4.0,Hardware,16,64,0,0,0,https://uk.farnell.com/wurth-elektronik/971200151/standoff-hex-male-female-20mm/dp/2884418,5.0,5.0,20.0
+USB SD Card IO, SD card reader/writer,1.0,Loose,16,16,0,0,0,https://www.amazon.co.uk/Beikell-High-speed-Adapter-Supports-MMC-Compatible-Windows/dp/B07L9VT8YY,70.0,40.0,15.0
+Microcontroller,Arduino Nano (rev.3),1.0,Loose,16,16,0,0,0,https://uk.farnell.com/arduino/a000005/arduino-nano-evaluation-board/dp/1848691,82.0,60.0,25.0
+NB3 Body,NB3 robot base PCB,1.0,Loose,16,16,0,0,0,VK,200.0,200.0,15.0
+Periodic Table,Periodic Table business card,1.0,Loose,16,16,0,0,0,VK,40.0,60.0,0.5
+SD Card,16 GB micro SD card,1.0,Loose,16,16,0,0,0,https://uk.farnell.com/sandisk/sdsquar-016g-gn6ma/memory-card-microsdhc-uhs-i-16gb/dp/2931924,100.0,50.0,3.0
+Servos,FS90R Micro Continuous Rotation Servo w/Wheel,2.0,Loose,16,32,0,0,0,https://www.rapidonline.com/feetech-fs90r-servo-and-wheel-37-1336,100.0,70.0,15.0
+Speaker,3 Watt 4 Ohm with Dupont 2.54 mm socket,1.0,Loose,16,16,0,0,0,https://www.amazon.co.uk/dp/B09JJ28D6R,0.0,30.0,15.0
+Test Lead,Alligator clip to 0.64 mm pin (20 cm),2.0,Loose,16,32,0,0,0,https://www.amazon.co.uk/gp/product/B096JR15JW,220.0,20.0,10.0
+12V DC Power Supply,12 V AC-DC transformer (UK/EU/USA plugs),1.0,Loose,16,16,0,0,0,https://www.amazon.co.uk/gp/product/B09QG4R1R4,100.0,100.0,80.0
+Jumper Kit,Kit of multi-length 22 AWG breadboard jumpers,1.0,Loose,16,16,0,0,0,https://uk.farnell.com/multicomp/mc001810/hard-jumper-wire-22awg-140pc/dp/2770338,170.0,55.0,15.0
+Batteries (AA),AA 1.5 V alkaline battery,4.0,Loose,16,64,0,0,0,,60.0,15.0,15.0
+Battery,NiMH 9.6V 8-cell 2000 mAh battery,1.0,Loose,16,16,0,0,0,https://www.amazon.co.uk/BAKTH-Capacity-Rechargeable-Discharge-Customized/dp/B08VRC8KL7,100.0,60.0,15.0
+Battery Charger,NiMH battery charger (UK plug),1.0,Loose,16,16,0,0,0,https://www.amazon.co.uk/dp/B089VRXKWY?psc=1&smid=AOVA4BIXU2O7J&ref_=chk_typ_imgToDp,90.0,90.0,70.0
+Battery holder,4xAA battery holder with ON-OFF switch,1.0,Loose,16,16,0,0,0,https://www.amazon.co.uk/gp/product/B0814ZH68F,65.0,70.0,20.0
+Jumper Wires,Assorted 22 AWG jumper wire leads (male/female),1.0,Loose,16,16,0,0,0,https://www.amazon.co.uk/240pcs-Solderless-Breadboard-Arduino-Project/dp/B08PJSTS3C,200.0,40.0,10.0
+Breadboard (400),400-tie solderless breadboard,1.0,Loose,16,16,0,0,0,https://www.amazon.co.uk/gp/product/B0739XRX8F,85.0,60.0,10.0
+Breadboards (170),170-tie solderless breadboard,4.0,Loose,16,64,0,0,0,https://www.amazon.co.uk/ELEGOO-tie-points-Breadboard-Breadboards-Electronic/dp/B01N0YWIR7,35.0,50.0,10.0
+Cable (Mini-USB/20cm),Short mini-USB to Type-A cable (20 cm),1.0,Loose,16,16,0,0,0,https://www.amazon.co.uk/LINDY-0-2-Type-Mini-B-Cable/dp/B01IZ4VFCO,100.0,25.0,10.0
+Velcro Patch,Velcro adhesive,1.0,Loose,16,16,0,0,0,,50.0,75.0,4.0
+Cable (MiniUSB-1m),Mini-USB to Type-A cable (1 m),1.0,Loose,16,16,0,0,0,https://uk.farnell.com/molex/88732-8602/usb-cable-2-0-plug-plug-1m/dp/1221071,100.0,50.0,15.0
+Heatsinks,Heatsinks for RPi 4b chips,1.0,Loose,16,16,0,0,0,https://www.amazon.co.uk/gp/product/B07VRNT3HX,40.0,20.0,10.0
+Camera (RPi v3),RPi color camera with auto-focus (version 3),1.0,Loose,16,16,0,0,0,https://uk.farnell.com/raspberry-pi/rpi-noir-camera-board/raspberry-pi-noir-camera-board/dp/2510729,120.0,75.0,23.0
+Caster,¾” metal ball caster,1.0,Loose,16,16,0,0,0,https://www.hobbytronics.co.uk/ball-caster-metal?keyword=caster,70.0,50.0,20.0
+DC Gearbox Motor,TT Gearbox DC Motor - 200RPM - 3 to 6VDC and wheel,2.0,Loose,16,32,0,0,0,https://www.adafruit.com/product/3777#technical-details,130.0,70.0,30.0
+DC Brushed Motor,6V Brushed DC motor,1.0,Loose,16,16,0,0,0,https://www.amazon.co.uk/Gikfun-1V-6V-Hobby-Arduino-EK1894/dp/B07BHHP2BT,20.0,40.0,15.0
+Computer (RPi4),Raspberry Pi 4b with 4 GB RAM,1.0,Loose,16,16,0,0,0,https://uk.farnell.com/raspberry-pi/rpi4-modbp-4gb/raspberry-pi-4-model-b-4gb/dp/3051887,95.0,70.0,26.0
+NB3 Cortex Mount,Custom laser cut holder for NPU,1.0,Mounts,16,16,0,0,0,VK,75.0,65.0,5.0
+Motor Mount,Mount for TT Gearbox DC Motors - L-Bracket Type with hardware,2.0,Mounts,16,32,0,0,0,https://www.adafruit.com/product/3768,25.0,25.0,25.0
+Speaker Mount,Custom laser cut mount for speaker,1.0,Mounts,16,16,0,0,0,VK,75.0,20.0,5.0
+Spacer,NB3 spacer 3 mm spacer for mounting ball caster,5.0,Mounts,16,80,0,0,0,VK,25.0,25.0,5.0
+NB3 Camera Mount,Custom laser cut mount for RPi camera,1.0,Mounts,16,16,0,0,0,VK,40.0,30.0,5.0
+Servo Mount,Mount for servo motor,2.0,Mounts,16,32,0,0,0,VK,30.0,15.0,5.0
+Resistor (330),330 &Omega;/0.25 W,6.0,Passive,16,96,0,0,0,https://uk.farnell.com/multicomp/mf25-2k4/res-2k4-1-250mw-axial-metal-film/dp/9341595,50.0,5.0,3.0
+Resistor (470),470 &Omega;/0.25 W,1.0,Passive,16,16,0,0,0,https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943,50.0,5.0,3.0
+Resistor (10k),10 k&Omega;/0.25 W,2.0,Passive,16,32,0,0,0,https://uk.farnell.com/multicomp/mf25-10k/res-10k-1-250mw-axial-metal-film/dp/9341110,50.0,5.0,3.0
+Potentiometer,2.2 k&Omega; variable resistor,2.0,Passive,16,32,0,0,0,https://uk.farnell.com/bourns/3362p-1-222lf/trimmer-pot-2-2kohm-10-1turn-th/dp/2328599,5.0,5.0,3.0
+Piezo Buzzer,Piezoelectric speaker/transducer,1.0,Passive,16,16,0,0,0,https://uk.farnell.com/tdk/ps1240p02bt/piezoelectric-buzzer-4khz-70dba/dp/3267212,30.0,30.0,1.0
+Rubber feet,Adhesive rubber standoffs (1421T6CL),4.0,Passive,16,64,0,0,0,https://uk.farnell.com/hammond/1421t6cl/feet-stick-on-pk24/dp/1876522,20.0,20.0,4.0
+Photoresistor (LDR),Light-dependent resistor (GL5516 and GL5528),8.0,Passive,16,128,0,0,0,https://www.amazon.co.uk/Resistor-Dependent-Photoresistor-Sensitive-Sensors/dp/B08SC1M7V7,50.0,10.0,3.0
+Power Cable,Custom 4 pin NB3 power connector cable,1.0,Power,16,16,0,0,0,VK,50.0,10.0,5.0
+NB3 Power Board,Regulated DC-DC power supply (5 Volts - 4 Amps),1.0,Power,16,16,0,0,0,VK,50.0,50.0,15.0

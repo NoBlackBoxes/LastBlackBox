@@ -1,10 +1,13 @@
 # Course : materials
 
 ### Materials Format
-Part, Description, Quantity, Datasheet (optional), Supplier (optional), Package, x(mm), y(mm), z(mm)
+Part, Level, Description, Quantity, Datasheet (optional), Supplier (optional), Package, x(mm), y(mm), z(mm)
 
-### Bill of Materials (BOM) Format
+### Bill of Materials (BOM) Format (per course)
 Part, Description, Quantity, Datasheet (optional), Link (optional)
+
+### Packing List Format (per course)
+Part, Description, Quantity, Package, #Kits, #Required, #Available, #Order, #Ordered, Supplier (optional), x(mm), y(mm), z(mm)
 
 ### Package Names
 Loose (packed in original packaging, dimensions reflect this package size)

@@ -2,8 +2,9 @@
 # -*- coding: utf-8 -*-
 """
  - Generate a packing list from the BOM
+  - Specify level limt
   - Group identical items
-  - Estimate oackage volume
+  - Estimate package volume
 """
 import os
 import numpy as np
@@ -14,10 +15,22 @@ username = os.getlogin()
 
 # Specify paths
 repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
-bom_path = repo_path + "/course/materials/BOM.csv"
+
+# Specify Number of Kits
+num_kits = 16
+
+# Specify Level Limit
+level_limt = '01'
+#level_limt = '10'
+#level_limt = '11'
 
 # Load BOM
-bom_path = repo_path + "/course/materials/BOM.csv"
+if level_limt == '01':
+    bom_path = repo_path + "/course/materials/BOM_01.csv"
+elif level_limt == '10':
+    bom_path = repo_path + "/course/materials/BOM_10.csv"
+else:
+    bom_path = repo_path + "/course/materials/BOM_11.csv"
 bom = pd.read_csv(bom_path)
 
 # Remove empty rows and label
@@ -29,6 +42,7 @@ aggregations = {
     'Description': 'first',     # First value
     'Quantity': 'sum',          # Sum the quantities
     'Package': 'first',         # First value
+    'Supplier': 'first',        # First value
     'x(mm)': 'first',           # First value
     'y(mm)': 'first',           # First value
     'z(mm)': 'first',           # First value
@@ -38,8 +52,15 @@ combined = filtered.groupby('Part', as_index=False).agg(aggregations)
 # Sort by packages
 sorted = combined.sort_values('Package')
 
-# Save to packing file    
-packing_path = repo_path + "/course/materials/packing.csv"
+# Insert additional fields
+sorted.insert(4, '#Kits', int(num_kits))
+sorted.insert(5, '#Required', num_kits*sorted['Quantity'].astype(int))
+sorted.insert(6, '#Available', 0)
+sorted.insert(7, '#Order', 0)
+sorted.insert(8, '#Ordered', 0)
+
+# Save to packing file
+packing_path = repo_path + f"/course/materials/packing_{level_limt}.csv"
 sorted.to_csv(packing_path, index=False)  # Set index=False if you don't want to include the index in the CSV
 
 # Group packages
