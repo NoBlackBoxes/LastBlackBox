@@ -41,10 +41,10 @@ motors,,,,,,,,
 DC Brushed Motor,6V Brushed DC motor,1,,https://www.amazon.co.uk/Gikfun-1V-6V-Hobby-Arduino-EK1894/dp/B07BHHP2BT,Loose,20,40,15
 DC Gearbox Motor,TT Gearbox DC Motor - 200RPM - 3 to 6VDC and wheel,2,,https://www.adafruit.com/product/3777#technical-details,Loose,130,70,30
 Motor Mount,Mount for TT Gearbox DC Motors - L-Bracket Type with hardware,2,,https://www.adafruit.com/product/3768,Mounts,25,25,25
-*Servo Mount,Mount for servo motor,2,,VK,Mounts,30,15,5
-*Servos,FS90R Micro Continuous Rotation Servo w/Wheel,2,,https://www.rapidonline.com/feetech-fs90r-servo-and-wheel-37-1336,Mounts,100,70,15
-*M2.5 bolt (6),6 mm long M2.5 bolt,8,,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2,Hardware,5,5,6
-*M2.5 standoff (12/SS),12 mm long socket-to-socket M2.5 standoff,4,,https://uk.farnell.com/wurth-elektronik/970120151/standoff-hex-female-female-12mm/dp/2884528,Hardware,5,5,12
+Servo Mount,Mount for servo motor,2,,VK,Mounts,30,15,5
+Servos,FS90R Micro Continuous Rotation Servo w/Wheel,2,,https://www.rapidonline.com/feetech-fs90r-servo-and-wheel-37-1336,Loose,100,70,15
+M2.5 bolt (6),6 mm long M2.5 bolt,8,,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2,Hardware,5,5,6
+M2.5 standoff (12/SS),12 mm long socket-to-socket M2.5 standoff,4,,https://uk.farnell.com/wurth-elektronik/970120151/standoff-hex-female-female-12mm/dp/2884528,Hardware,5,5,12
 
 transistors,,,,,,,,
 MOSFET,Power MOSFET/N-channel (IRF510),2,_data/datasheets/IRF510.pdf,https://uk.farnell.com/vishay/irf510pbf/mosfet-n-100v-5-6a-to-220ab/dp/1653658,Active,40,15,4
@@ -137,8 +137,8 @@ Speaker,3 Watt 4 Ohm with Dupont 2.54 mm socket,1,_data/datasheets/CQR0508.jpg,h
 Speaker Mount,Custom laser cut mount for speaker,1,-,VK,Mounts,75,20,5
 M3 standoff (15/PS),15 mm long plug-to-socket M3 standoff,2,-,https://uk.farnell.com/ettinger/05-13-151/spacer-m3x15-vzk/dp/1466726,Hardware,5,5,15
 M3 nut (square),square M3 nut 1.8 mm thick,2,-,https://www.accu.co.uk/flat-square-nuts/21326-HFSN-M3-A2,Hardware,5,5,3
-M3 bolt (6 mm),6 mm long M3 bolt,2,-,https://www.accu.co.uk/pozi-pan-head-screws/500113-SPP-M3-6-ST-BZP,Hardware,5,5,6
-M2.5 bolt (8 mm),8 mm long M2.5 bolt,2,-,https://www.accu.co.uk/pozi-pan-head-screws/9256-SPP-M2-5-8-A2,Hardware,5,5,8
+M3 bolt (6),6 mm long M3 bolt,2,-,https://www.accu.co.uk/pozi-pan-head-screws/500113-SPP-M3-6-ST-BZP,Hardware,5,5,6
+M2.5 bolt (6),6 mm long M2.5 bolt,2,,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2,Hardware,5,5,6
 M2.5 nut,regular M2.5 nut,2,-,https://www.accu.co.uk/hexagon-nuts/456430-HPN-M2-5-C8-Z,Hardware,5,5,3
 
 vision,,,,,,,,
@@ -157,5 +157,5 @@ Clicker,Loud sound maker (and whistle),1,,https://www.amazon.co.uk/gp/product/B0
 intelligence,,,,,,,,
 NPU,Coral EdgeTPU USB Type-C,1,_data/datasheets/Coral-USB-Accelerator-datasheet.pdf,https://coral.ai/products/accelerator/,Loose,100,140,30
 M3 screw (16),16 mm long M3 screw with phillips socket,4,,,Hardware,5,5,16
-M3 nut,regular M3 nut,4,,,Hardware,5,5,4
+M3 nut (square),square M3 nut 1.8 mm thick,4,,https://www.accu.co.uk/flat-square-nuts/21326-HFSN-M3-A2,Hardware,5,5,3
 
