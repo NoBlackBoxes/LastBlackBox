@@ -18,7 +18,7 @@ sys.path.append(libs_path)
 #----------------------------------------------------------
 
 import os
-from flask import Flask, render_template, send_file, request, redirect
+from flask import Flask, render_template, send_file, request, redirect, session
 from flask_login import LoginManager, current_user, login_user
 from werkzeug.utils import secure_filename
 
@@ -34,6 +34,7 @@ app = Flask(__name__)
 
 # Config App
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['SECRET_KEY'] = os.getenv('FLASK_SECRET_KEY')
 
 # Create login
 login_manager = LoginManager(app)
@@ -94,17 +95,25 @@ def homepage():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
-        return redirect('student.html')
+        return redirect('user')
     if request.method == 'POST':
-        student_name = request.form['student_name']
-        student_password = request.form['student_password']
-        print(f"login!!!: {student_name}:{student_password}")
+        user_name = request.form['user_name']
+        user_password = request.form['user_password']
+
+        # Retrieve user
+        user = User.get(user_name)
+
+        # Validate password
+        if user_password == "poop":
+            login_user(user)
+            print(f"login!!!: {user_name}:{user_password}")
+            return redirect('user')
     return render_template('login.html')
 
-# Serve Student
-@app.route('/student')
-def student():
-    return render_template('student.html')
+# Serve User
+@app.route('/user')
+def user():
+    return render_template('user.html')
 
 # Serve Instructor
 @app.route('/instructor')

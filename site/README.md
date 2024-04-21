@@ -13,8 +13,15 @@ You will need a .env file in the site root directory.
 ```bash
 FLASK_APP=app
 FLASK_ENV=development
+FLASK_SECRET_KEY='your-secret-key-here'
 LIBS_PATH="/home/kampff/NoBlackBoxes/LastBlackBox/site/libs"
 BASE_PATH="/home/kampff/NoBlackBoxes/LastBlackBox/site"
+```
+
+### Secret Key
+Generate a secret key using the following command
+```bash
+python -c 'import secrets; print(secrets.token_hex())'
 ```
 
 ## Model

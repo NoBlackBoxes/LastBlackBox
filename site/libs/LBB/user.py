@@ -7,6 +7,7 @@ LBB: User Class
 
 # Import libraries
 import os
+from werkzeug.security import generate_password_hash, check_password_hash
 
 # Import modules
 
@@ -17,6 +18,8 @@ class User:
         self.name = None            # name
         self.is_instructor = False  # instructor boolean
         self.is_admin = False       # instructor boolean
+        self.email = None
+        self.authenticated = False
         return
     
     def is_active(self):
@@ -34,3 +37,14 @@ class User:
     def is_anonymous(self):
         """False, as anonymous users aren't supported."""
         return False
+
+
+# User helper functions
+
+# Get user
+def get(user_id):
+    user = User()
+    user.id = 000000
+    return user
+
+# FIN
