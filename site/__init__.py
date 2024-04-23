@@ -100,8 +100,14 @@ def login():
         user_name = request.form['user_name']
         user_password = request.form['user_password']
 
+        # Validate form input
+        if (user_name == '') or (user_password == ''):
+            return render_template('login.html', error="Please enter a valid LBB ID and password.")
+
         # Retrieve user
         user = User.get(user_name)
+        if user is None:
+            return render_template('login.html', error="LBB ID not found. Have you registered?")
 
         # Validate password
         if user_password == "poop":
