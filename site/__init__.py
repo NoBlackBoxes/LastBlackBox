@@ -21,6 +21,7 @@ import os
 from flask import Flask, render_template, send_file, request, redirect, session
 from flask_login import LoginManager, current_user, login_user
 from werkzeug.utils import secure_filename
+from werkzeug.security import generate_password_hash, check_password_hash
 
 # Import modules
 import LBB.user as User
@@ -41,9 +42,12 @@ login_manager = LoginManager(app)
 
 @login_manager.user_loader
 def load_user(user_id):
-    # Load user (student or instructor) from filesystem
-    user = User.get(user_id)
-    return user
+    user = User.User()
+    user.load(user_id)
+    if user.loaded:
+        return user
+    else:
+        return None
 
 ###############################################################################
 # Helper Functions
@@ -105,15 +109,18 @@ def login():
             return render_template('login.html', error="Please enter a valid LBB ID and password.")
 
         # Retrieve user
-        user = User.get(user_name)
-        if user is None:
+        user = User.User()
+        user.load(user_name)
+        if not user.loaded:
             return render_template('login.html', error="LBB ID not found. Have you registered?")
 
         # Validate password
-        if user_password == "poop":
+        if check_password_hash(user.password_hash, user_password):
             login_user(user)
-            print(f"login!!!: {user_name}:{user_password}")
             return redirect('user')
+        else:
+            return render_template('login.html', error="Incorrect password.")
+
     return render_template('login.html')
 
 # Serve User

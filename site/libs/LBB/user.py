@@ -19,7 +19,6 @@ sys.path.append(libs_path)
 #----------------------------------------------------------
 
 # Import libraries
-import os
 import pickle
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -32,9 +31,10 @@ class User:
         self.password_hash = None   # Password hash
         self.name = None            # Name
         self.email = None           # Email
-        self.is_instructor = False  # Instructor boolean
-        self.is_admin = False       # Administrator boolean
-        self.authenticated = False  # Authenticated?
+        self.instructor = False     # Instructor boolean
+        self.admin = False          # Administrator boolean
+        self.authenticated = False  # Authenticated boolean
+        self.loaded = False         # Loaded boolean
         return
     
     def is_active(self):
@@ -59,27 +59,32 @@ class User:
             "password_hash" : self.password_hash,
             "name" : self.name,
             "email" : self.email,
-            "is_instructor" : self.is_instructor,
-            "is_admin" : self.is_admin,
+            "instructor" : self.instructor,
+            "admin" : self.admin,
         }
         user_folder = f"{data_path}/users/{self.id}"
         user_path = f"{user_folder}/user_data.pkl"
         with open(user_path, 'wb') as fp:
             pickle.dump(user_data, fp)
-
         return
 
-# User helper functions
-
-# Get user
-def get(user_id):
-    user_folder = f"{data_path}/users/{user_id}"
-    user_path = f"{user_folder}/user_data.pkl"
-    with open(user_path, 'rb') as pickle_file:
-        user_data = pickle.load(pickle_file)
-    print(user_data)
-    #user = User.User()
-    #user.id = "000000"
-    return None
+    def load(self, user_id):
+        user_folder = f"{data_path}/users/{user_id}"
+        user_path = f"{user_folder}/user_data.pkl"
+        # Does user (data file) exist?
+        if not os.path.isfile(user_path):
+            return None
+        # Load user data
+        with open(user_path, 'rb') as pickle_file:
+            user_data = pickle.load(pickle_file)
+        self.id = user_data['id']
+        self.password_hash = user_data['password_hash']
+        self.name = user_data['name']
+        self.email = user_data['email']
+        self.instructor = user_data['instructor']
+        self.admin = user_data['admin']
+        self.loaded = True
+        print(user_data)
+        return
 
 # FIN
