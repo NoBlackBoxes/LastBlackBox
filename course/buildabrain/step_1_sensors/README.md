@@ -2,5 +2,9 @@
 
 ### Introduction
 
-- Watch this video: [The Last Black Box: Build A Brain - Sensors](https://vimeo.com/XXXXXX)
+- Watch this video: [The Last Black Box: Build a Brain - Sensors](https://vimeo.com/XXXXXX)
 
+## Boxes
+- Atoms
+- Electrons
+- Sensors

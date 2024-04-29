@@ -2,5 +2,9 @@
 
 ### Introduction
 
-- Watch this video: [The Last Black Box: Build A Brain - Motors](https://vimeo.com/XXXXXX)
+- Watch this video: [The Last Black Box: Build a Brain - Motors](https://vimeo.com/XXXXXX)
 
+## Boxes
+- Magnets
+- Motors
+- Light
