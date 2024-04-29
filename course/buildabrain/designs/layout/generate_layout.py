@@ -1,4 +1,4 @@
-# Generate LastBlackBox - Bootcamp Layout
+# Generate LastBlackBox - Buila a Brain Layout
 import numpy as np
 import os
 
@@ -8,10 +8,10 @@ username = os.getlogin()
 # Specify paths
 repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
 boxes_path = repo_path + '/boxes'
-layout_path = repo_path + '/course/bootcamp/designs/layout'
+layout_path = repo_path + '/course/buildabrain/designs/layout'
 box_parameters_path = layout_path + "/box_parameters.csv"
-svg_path = layout_path + "/bootcamp_layout.svg"
-png_path = layout_path + "/bootcamp_layout.png"
+svg_path = layout_path + "/buildabrain_layout.svg"
+png_path = layout_path + "/buildabrain_layout.png"
 
 # Load box parameters
 box_parameters = np.genfromtxt(box_parameters_path, delimiter=",", dtype=str)
@@ -21,8 +21,8 @@ num_boxes = box_parameters.shape[0]
 box_size = 13.0
 box_stroke = 0.125
 box_spacing = 1.25
-num_rows = 2
-num_cols = 4
+num_rows = 3
+num_cols = 6
 layout_width = (box_size*num_cols)+(box_spacing*(num_cols-1))+(2*box_stroke)
 layout_height = (box_size*num_rows)+(box_spacing*(num_rows-1))+(2*box_stroke)
 

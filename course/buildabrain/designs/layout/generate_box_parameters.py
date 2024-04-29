@@ -1,4 +1,4 @@
-# Generate LastBlackBox - Bootcamp Layout
+# Generate LastBlackBox - Build a Brain Layout
 import os
 import csv
 import numpy as np
@@ -9,29 +9,19 @@ username = os.getlogin()
 # Specify paths
 repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
 boxes_path = repo_path + '/boxes'
-layout_path = repo_path + '/course/bootcamp/designs/layout'
+layout_path = repo_path + '/course/buildabrain/designs/layout'
 box_parameters_path = layout_path + "/box_parameters.csv"
 svg_path = layout_path + "/output.svg"
 
 # List all "boxes" in order of opening
 boxes = [
-    'Atoms',
-    'Electrons',
-    'Magnets',
     'Sensors',
     'Motors',
     'Transistors',
     'Computers',
     'Robotics',
-    'Power',
     'Systems',
-    'Linux',
-    'Python',
     'Networks',
-    'Websites',
-    'Servers',
-    'Audio',
-    'Vision',
     'Intelligence'
 ]
 num_boxes = len(boxes)
@@ -40,8 +30,8 @@ num_boxes = len(boxes)
 box_size = 13.0
 box_stroke = 0.125
 box_spacing = 1.25
-num_rows = 3
-num_cols = 6
+num_rows = 2
+num_cols = 4
 
 # Generate box parameters
 box_parameters = []

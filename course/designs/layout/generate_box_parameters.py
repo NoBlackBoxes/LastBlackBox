@@ -48,6 +48,7 @@ num_boxes = len(boxes)
 # Defaults
 box_size = 13.0
 box_stroke = 0.125
+box_spacing = 1.25
 num_rows = 4
 num_cols = 7
 
@@ -55,8 +56,8 @@ num_cols = 7
 box_parameters = []
 x = 0.0
 y = 0.0
-x_step = box_size + 1.25
-y_step = box_size + 1.25
+x_step = box_size + box_spacing
+y_step = box_size + box_spacing
 x_offset = box_stroke
 y_offset = box_stroke
 for i in range(num_boxes):

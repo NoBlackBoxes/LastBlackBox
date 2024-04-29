@@ -11,6 +11,7 @@ boxes_path = repo_path + '/boxes'
 layout_path = repo_path + '/course/designs/layout'
 box_parameters_path = layout_path + "/box_parameters.csv"
 svg_path = layout_path + "/layout.svg"
+png_path = layout_path + "/layout.png"
 
 # Load box parameters
 box_parameters = np.genfromtxt(box_parameters_path, delimiter=",", dtype=str)
@@ -19,8 +20,11 @@ num_boxes = box_parameters.shape[0]
 # Defaults
 box_size = 13.0
 box_stroke = 0.125
+box_spacing = 1.25
 num_rows = 4
 num_cols = 7
+layout_width = (box_size*num_cols)+(box_spacing*(num_cols-1))+(2*box_stroke)
+layout_height = (box_size*num_rows)+(box_spacing*(num_rows-1))+(2*box_stroke)
 
 # Draw box (add SVG text for a rectangle with text name)
 def draw_box(file, name, x, y, width, height, fill, arrow_state):
@@ -56,8 +60,7 @@ def draw_box(file, name, x, y, width, height, fill, arrow_state):
 
 # Headers
 xml_header = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n"
-#svg_header = "<svg id=\"layout\" width=\"100mm\" height=\"100mm\" viewBox=\"0 0 100 100\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:svg=\"http://www.w3.org/2000/svg\">\n"
-svg_header = "<svg id=\"layout\" width=\"100mm\" height=\"60mm\" viewBox=\"0 0 100 60\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:svg=\"http://www.w3.org/2000/svg\">\n"
+svg_header = f"<svg id=\"layout\" width=\"{layout_width}mm\" height=\"{layout_height}mm\" viewBox=\"0 0 {layout_width} {layout_height}\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:svg=\"http://www.w3.org/2000/svg\">\n"
 
 # Open SVG ouput
 svg_file = open(svg_path, "w")
@@ -78,5 +81,8 @@ for i in range(num_boxes):
 # Close SVG output
 ret = svg_file.write("</svg>")
 svg_file.close()
+
+# Convert to PNG
+os.system(f"inkscape -D --export-dpi=600 {svg_path} -o {png_path}")
 
 #FIN
