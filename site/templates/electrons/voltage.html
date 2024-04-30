@@ -1,14 +1,22 @@
 <!DOCTYPE html>
+<head>
+{% include 'pwa.html' %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/topic_style.css')}}"/>
+</head>
+
 <html>
 <body>
+
 <title>LBB : Electrons : Voltage</title>
-<h2>LBB : Electrons</h2>
-<h3>Voltage</h3>
-<h4>Voltage describes the difference in net charge in one location versus another.</h4>
+<h2 id="box_name">LBB : Electrons</h2>
+<h3 id="topic_name">Voltage</h3>
+<h4 id="topic_description">Voltage describes the difference in net charge in one location versus another.</h4>
 <hr>
 <p align="center">
-<iframe src="https://player.vimeo.com/video/XXX?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="LBB:Electrons:Voltage"></iframe>
+<iframe id="video_player" src="https://player.vimeo.com/video/XXX?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="LBB:Electrons:Voltage"></iframe>
 </p>
-<hr><a href="electric_fields">Previous Topic</a><br><a href="batteries">Next Topic</a><br>
+<hr>
+<a href="electric_fields">Previous Topic</a><br>
+<a href="batteries">Next Topic</a><br>
 </body>
 </html>

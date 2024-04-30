@@ -1,0 +1,33 @@
+body {
+    background-color: rgb(0, 0, 0);
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    color: rgb(255, 255, 255);
+}
+
+#box_name {
+    color: yellow;
+    font-size: 8px;
+}
+
+#topic_name {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 0px;
+}
+
+#topic_description {
+    color: yellow;
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+
+#video_player {
+    border-width: 7px;
+    border-color: rgb(86, 86, 86);
+    border-radius: 7px;
+}
