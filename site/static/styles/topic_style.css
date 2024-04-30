@@ -31,3 +31,35 @@ body {
     border-color: rgb(86, 86, 86);
     border-radius: 7px;
 }
+
+#task_box {
+    margin: auto;
+    width: 50%;
+    border-width: 7px;
+    border-color: rgb(56, 56, 56);
+    border-radius: 7px;
+    border-style: solid;
+    background-color: rgb(36, 36, 36);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#task_label {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 36px;
+}
+
+#task_name {
+    text-align: center;
+    margin-top: 0px;
+    font-size: 10px;
+    color: yellow;
+}
+
+#task_form {
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}

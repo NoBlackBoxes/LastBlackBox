@@ -43,14 +43,17 @@ class Task:
     
     def render(self):
         output = []
-        output.append(f"<h4>TASK:</h4><i>{self.name}</i><br>")
-        output.append(f"<form method=post enctype=multipart/form-data>")
+        output.append("<div id=\"task_box\">\n")
+        output.append("<h4 id=\"task_label\">TASK</h4>\n")
+        output.append(f"<h3 id=\"task_name\">{self.name}</h3><br>\n")
+        output.append("<form id=\"task_form\" method=post enctype=multipart/form-data>")
         num_subtasks = len(self.descriptions)
         for i in range(num_subtasks):
             output.append(f"{self.descriptions[i]}")
             output.append(self.inputs[i].render())
         output.append("<br><input type=\"submit\" value=\"Submit\">")
         output.append(f"</form>")
+        output.append(f"</div>\n")
         return "".join(output)
 
 #FIN
