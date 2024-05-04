@@ -19,9 +19,9 @@ class Input:
     def render(self):
         output = []
         if self.type == "number":
-            output.append("<input type=\"text\" id=\"task_input_text\" name = \"test\">")
+            output.append("<input type=\"text\" id=\"task_input_text\" name = \"text\">")
         if self.type == "photo":
-            output.append("<input type=\"file\" id=\"task_input_photo\" name = \"picture\" accept=\"image/x-png,image/jpeg,image/gif\">")
+            output.append("<input type=\"file\" id=\"task_input_photo\" name = \"file\" accept=\"image/x-png,image/jpeg,image/gif\">")
         return "".join(output)
 
 #FIN
