@@ -50,8 +50,10 @@ class Task:
         num_subtasks = len(self.descriptions)
         for i in range(num_subtasks):
             output.append(f"{self.descriptions[i]}")
+            if self.inputs[i].type == "photo":
+                output.append("<br><br>")
             output.append(self.inputs[i].render())
-        output.append("<br><input type=\"submit\" value=\"Submit\">")
+        output.append("<br><input id=\"task_submit\" type=\"submit\" value=\"Submit\">")
         output.append(f"</form>")
         output.append(f"</div>\n")
         return "".join(output)

@@ -26,6 +26,12 @@ body {
     margin-bottom: 0px;
 }
 
+#instruction {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 400;
+}
+
 #video_player {
     border-width: 7px;
     border-color: rgb(86, 86, 86);
@@ -34,7 +40,7 @@ body {
 
 #task_box {
     margin: auto;
-    width: 50%;
+    width: 40%;
     border-width: 7px;
     border-color: rgb(56, 56, 56);
     border-radius: 7px;
@@ -62,4 +68,24 @@ body {
     text-align: center;
     font-size: 16px;
     color: white;
+}
+
+#task_submit {
+    margin-top: 20px;
+    border-color: white;
+    border-radius: 11px;
+    border-style: solid;
+    background-color: yellow;
+    font-weight: 600;
+    font-size: 18px;
+    font-family:'Poppins';
+    color: black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#task_submit:hover {
+    border-color: grey;
 }

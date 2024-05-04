@@ -45,7 +45,7 @@ class Lesson:
                 if text[line_count][0:4] == '- *V':
                     video = Video.Video(text[line_count])
                     self.steps.append(video)
-                elif text[line_count][0:7] == '  - **T':
+                elif text[line_count][0:5] == '- **T':
                     task = Task.Task(text[line_count])
                     self.steps.append(task)
                 elif text[line_count][0:4] == '<img':

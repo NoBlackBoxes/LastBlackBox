@@ -20,9 +20,9 @@ class Instruction:
     
     def parse(self, text):
         self.html = text
-        # should convert emphasis tags
+        # TO DO: convert emphasis tags
         return
 
     def render(self):
-        return self.html
+        return f"<h4 id=\"instruction\">{self.html}</h4>"
 #FIN
