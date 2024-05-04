@@ -36,6 +36,10 @@ body {
     border-width: 7px;
     border-color: rgb(86, 86, 86);
     border-radius: 7px;
+
+    @media (max-width:768px){
+        width: 90%;
+    }
 }
 
 #task_box {
@@ -48,6 +52,10 @@ body {
     background-color: rgb(36, 36, 36);
     padding-top: 10px;
     padding-bottom: 10px;
+
+    @media (max-width:768px){
+        width: 90%;
+    }
 }
 
 #task_label {
@@ -88,4 +96,8 @@ body {
 
 #task_submit:hover {
     border-color: grey;
+}
+
+#task_input_text {
+    width: 50px;
 }
