@@ -9,9 +9,8 @@ username = os.getlogin()
 # Specify paths
 repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
 boxes_path = repo_path + '/boxes'
-layout_path = repo_path + '/course/buildabrain/designs/layout'
+layout_path = repo_path + '/course/buildabrain/_designs/layout'
 box_parameters_path = layout_path + "/box_parameters.csv"
-svg_path = layout_path + "/output.svg"
 
 # List all "boxes" in order of opening
 boxes = [

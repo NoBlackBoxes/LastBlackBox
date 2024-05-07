@@ -3,7 +3,7 @@
 > **LBB-101**: Build a brain without using *any* black boxes
 
 <p align="center">
-<img src="designs/schedule/buildabrain_schedule.png" alt="LBB buildabrain layout" width="582" height="826">
+<img src="_designs/schedule/buildabrain_schedule.png" alt="LBB buildabrain layout" width="582" height="826">
 </p>
 
 ----
@@ -13,7 +13,7 @@
 You will be building a brain for your robot. The robot's physical layout mimics the basic anatomy of a (vertebrate) brain. As you progress through the course, your robot will *evolve* into an increasingly sophisticated machine. The goal is to create an "intelligent" machine without using any "black boxes". We thus call this robot the No-Black-Box-Brain or NBBB or ***NB3***.
 
 <p align="center">
-<img src="../designs/NB3/NB3_render.png" alt="NB3 outline" width="300" height="300">
+<img src="../_designs/NB3/NB3_render.png" alt="NB3 outline" width="300" height="300">
 </p>
 
 ----
@@ -50,7 +50,7 @@ You will be building a brain for your robot. The robot's physical layout mimics 
 - Extend your brain with some human-engineered complexity
   - Learn about Linux and Python
 
-### Step 7 - Systems
+### Step 7 - Networks
 
 - Connect and communicate...like a machine
   - Learn about websites, servers, networks, and security

@@ -8,10 +8,10 @@ username = os.getlogin()
 # Specify paths
 repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
 boxes_path = repo_path + '/boxes'
-layout_path = repo_path + '/course/buildabrain/designs/layout'
+layout_path = repo_path + '/course/ownphone/_designs/layout'
 box_parameters_path = layout_path + "/box_parameters.csv"
-svg_path = layout_path + "/buildabrain_layout.svg"
-png_path = layout_path + "/buildabrain_layout.png"
+svg_path = layout_path + "/ownphone_layout.svg"
+png_path = layout_path + "/ownphone_layout.png"
 
 # Load box parameters
 box_parameters = np.genfromtxt(box_parameters_path, delimiter=",", dtype=str)
@@ -22,7 +22,7 @@ box_size = 13.0
 box_stroke = 0.125
 box_spacing = 1.25
 num_rows = 3
-num_cols = 6
+num_cols = 3
 layout_width = (box_size*num_cols)+(box_spacing*(num_cols-1))+(2*box_stroke)
 layout_height = (box_size*num_rows)+(box_spacing*(num_rows-1))+(2*box_stroke)
 
@@ -81,6 +81,7 @@ for i in range(num_boxes):
 # Close SVG output
 ret = svg_file.write("</svg>")
 svg_file.close()
+print(svg_path)
 
 # Convert to PNG
 os.system(f"inkscape -D --export-dpi=600 {svg_path} -o {png_path}")

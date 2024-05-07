@@ -8,7 +8,7 @@ username = os.getlogin()
 # Specify paths
 repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
 boxes_path = repo_path + '/boxes'
-logo_path = repo_path + '/course/designs/logo'
+logo_path = repo_path + '/course/_designs/logo'
 
 # Parameters Class
 class Parameters:

@@ -26,11 +26,11 @@ level_limt = '01'
 
 # Load BOM
 if level_limt == '01':
-    bom_path = repo_path + "/course/materials/BOM_01.csv"
+    bom_path = repo_path + "/course/_materials/BOM_01.csv"
 elif level_limt == '10':
-    bom_path = repo_path + "/course/materials/BOM_10.csv"
+    bom_path = repo_path + "/course/_materials/BOM_10.csv"
 else:
-    bom_path = repo_path + "/course/materials/BOM_11.csv"
+    bom_path = repo_path + "/course/_materials/BOM_11.csv"
 bom = pd.read_csv(bom_path)
 
 # Remove empty rows and label
@@ -60,7 +60,7 @@ sorted.insert(7, '#Order', 0)
 sorted.insert(8, '#Ordered', 0)
 
 # Save to packing file
-packing_path = repo_path + f"/course/materials/packing_{level_limt}.csv"
+packing_path = repo_path + f"/course/_materials/packing_{level_limt}.csv"
 sorted.to_csv(packing_path, index=False)  # Set index=False if you don't want to include the index in the CSV
 
 # Group packages

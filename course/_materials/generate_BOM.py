@@ -200,7 +200,7 @@ for box in boxes:
     BOM = append_materials(BOM, box)
 
 # Store BOM
-bom_path = repo_path + "/course/materials/BOM.csv"
+bom_path = repo_path + "/course/_materials/BOM.csv"
 f = open(bom_path, 'w', encoding='utf8')
 f.writelines(BOM)
 f.close()
