@@ -141,6 +141,11 @@ def topic(box, topic):
         route_url = f"{box}/{topic}.html"
         print(route_url)
     elif request.method == 'POST':
+        form = request.form
+        print(form.keys())
+        for key in form.keys():
+            for value in form.getlist(key):
+                print(key,":",value)                
         ## Check if the post request has the file part
         #if 'file' not in request.files:
         #    flash('No file part')
