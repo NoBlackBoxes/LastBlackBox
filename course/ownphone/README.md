@@ -1,6 +1,6 @@
 # The Last Black Box: *Own Phone*
 
-> **LBB-102**: You should be smarter than your *smart*phone
+> **LBB-102**: Smarter than your *smart*phone
 
 <p align="center">
 <img src="_designs/layout/ownphone_layout.png" alt="LBB ownphone layout" width="500" height="500">
@@ -13,6 +13,24 @@
 You will be building a phone...without using any "black boxes". We thus call this phone the No-Black-Box-Phone or NBBP or ***NB2P***.
 
 ----
+
+## Topics
+
+- What is a phone?
+  - learn about sound, light, and radio
+- What is data?
+  - learn about digital, compression
+- Where are you?
+  - learn about GPS
+- Apps
+
+- Attention/Focus
+- Addiction
+- Manipulation
+- Advertisements
+- Loot-boxes
+- Mental health
+
 
 ## Timeline
 
