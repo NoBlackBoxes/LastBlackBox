@@ -35,10 +35,16 @@ class Task:
             left_bracket_split = chunk.split('[')
             if len(left_bracket_split) > 1:
                 self.descriptions.append(left_bracket_split[0])
-                self.inputs.append(Input.Input(left_bracket_split[1]))
+                input_descriptor = left_bracket_split[1].split('.')
+                input_type = input_descriptor[0]
+                if len(input_descriptor) > 1:
+                    input_name = input_descriptor[1]
+                    self.inputs.append(Input.Input(input_type, input_name))
+                else:
+                    self.inputs.append(Input.Input(input_type, input_type))
             else:
                 self.descriptions.append(left_bracket_split[0])
-                self.inputs.append(Input.Input("none"))
+                self.inputs.append(Input.Input("none", "none"))
         return
     
     def render(self):

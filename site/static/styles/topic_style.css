@@ -98,6 +98,6 @@ body {
     border-color: grey;
 }
 
-#task_input_text {
+.task_input_text {
     width: 50px;
 }
