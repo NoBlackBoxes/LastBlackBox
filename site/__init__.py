@@ -25,6 +25,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 # Import modules
 import LBB.user as User
+import LBB.utilities as Utilities
 
 # Define constants
 UPLOAD_FOLDER = base_path + '/_tmp'
@@ -69,26 +70,6 @@ def serve_manifest():
 @app.route('/service_worker.js')
 def serve_sw():
     return send_file('service_worker.js', mimetype='application/javascript')
-
-## Serve home
-#@app.route('/', methods=['GET', 'POST'])
-#def upload_file():
-#    if request.method == 'POST':
-#        # check if the post request has the file part
-#        if 'file' not in request.files:
-#            flash('No file part')
-#            return redirect(request.url)
-#        file = request.files['file']
-#        # if user does not select file, browser also
-#        # submit an empty part without filename
-#        if file.filename == '':
-#            flash('No selected file')
-#            return redirect(request.url)
-#        if file and allowed_file(file.filename):
-#            filename = secure_filename(file.filename)
-#            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-#            return render_template('index.html')
-#    return render_template('index.html')
 
 # Serve Home
 @app.route('/')
@@ -142,24 +123,32 @@ def topic(box, topic):
         print(route_url)
     elif request.method == 'POST':
         form = request.form
-        print(form.keys())
-        for key in form.keys():
-            for value in form.getlist(key):
-                print(key,":",value)                
-        ## Check if the post request has the file part
+        task_name = request.form['task_name']
+        print(task_name)
+        task_folder_path = f"{app.config['UPLOAD_FOLDER']}/users/000000/{box}/{topic}"
+        Utilities.create_folder(task_folder_path)
+        task_file_path = f"{task_folder_path}/{task_name}.txt"
+        f = open(task_file_path, 'w')
+        f.write("yay")
+        f.close()
+        route_url = f"{box}/{topic}.html"
+        ## Validate form submission
+        #print(form.keys())
+        #for key in form.keys():
+        #    for value in form.getlist(key):
+        #        print(key,":",value)
+        ## Is there a file to upload?
         #if 'file' not in request.files:
-        #    flash('No file part')
-        #    return redirect(request.url)
-        file = request.files['file']
-        ## if user does not select file, browser also
-        ## submit an empty part without filename
-        #if file.filename == '':
-        #    flash('No selected file')
-        #    return redirect(request.url)
-        if file and allowed_file(file.filename):
-            filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            route_url = f"{box}/{topic}.html"
+        #    file = request.files['file']
+        #    ## if user does not select file, browser also
+        #    ## submit an empty part without filename
+        #    if file.filename == '':
+        #        flash('No selected file')
+        #        return redirect(request.url)
+        #    if file and allowed_file(file.filename):
+        #        filename = secure_filename(file.filename)
+        #        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        #        route_url = f"{box}/{topic}.html"
     else:
         route_url = f"{box}/{topic}.html"
     return render_template(route_url)

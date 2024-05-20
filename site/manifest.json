@@ -9,19 +9,19 @@
     "orientation": "portrait-primary",
     "icons": [
         {
-        "src": "/static/images/icon/icon-144.png",
+        "src": "/static/images/favicon/favicon-144.png",
         "type": "image/png",
         "sizes": "144x144",
         "purpose": "any maskable"
         },
         {
-        "src": "/static/images/icon/icon-192.png",
+        "src": "/static/images/favicon/favicon-192.png",
         "type": "image/png",
         "sizes": "192x192",
         "purpose": "any maskable"
         },
         {
-        "src": "/static/images/icon/icon-512.png",
+        "src": "/static/images/favicon/favicon-512.png",
         "type": "image/png",
         "sizes": "512x512",
         "purpose": "any maskable"

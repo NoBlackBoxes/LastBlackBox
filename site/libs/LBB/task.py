@@ -49,18 +49,19 @@ class Task:
     
     def render(self):
         output = []
-        output.append("<div id=\"task_box\">\n")
-        output.append("<h4 id=\"task_label\">TASK</h4>\n")
-        output.append(f"<h3 id=\"task_name\">{self.name}</h3><br>\n")
-        output.append("<form id=\"task_form\" method=post enctype=multipart/form-data>")
+        output.append(f"<div id=\"task_box\">\n")
+        output.append(f"\t<h4 id=\"task_label\">TASK</h4>\n")
+        output.append(f"\t<h3 id=\"task_name\">{self.name}</h3><br>\n")
+        output.append(f"\t<form id=\"task_form\" method=post enctype=multipart/form-data>")
         num_subtasks = len(self.descriptions)
         for i in range(num_subtasks):
             output.append(f"{self.descriptions[i]}")
             if self.inputs[i].type == "photo":
                 output.append("<br><br>")
             output.append(self.inputs[i].render())
-        output.append("<br><input id=\"task_submit\" type=\"submit\" value=\"Submit\">")
-        output.append(f"</form>")
+        output.append(f"\t<br><input id=\"task_submit\" type=\"submit\" value=\"Submit\">\n")
+        output.append(f"\t\t<input type=\"hidden\" name=\"task_name\" value=\"{self.name}\"/>\n")        
+        output.append(f"\t</form>\n")
         output.append(f"</div>\n")
         return "".join(output)
 

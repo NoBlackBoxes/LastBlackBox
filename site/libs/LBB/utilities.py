@@ -43,7 +43,7 @@ def render_footer(box, topic_index):
 # Create a folder (if it does not exist)
 def create_folder(folder_path):
     if not os.path.exists(folder_path):
-        os.makedirs(folder_path)
+        os.makedirs(folder_path, exist_ok=True)
     return
 
 # Clear a folder (or create)
