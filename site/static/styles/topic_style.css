@@ -58,6 +58,22 @@ body {
     }
 }
 
+#task_box_complete {
+    margin: auto;
+    width: 40%;
+    border-width: 7px;
+    border-color: rgb(251, 255, 0);
+    border-radius: 7px;
+    border-style: solid;
+    background-color: rgb(169, 184, 135);
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    @media (max-width:768px){
+        width: 90%;
+    }
+}
+
 #task_label {
     text-align: center;
     margin-top: 0px;

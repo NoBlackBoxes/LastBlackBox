@@ -15,10 +15,16 @@
 <p align="center">
 <iframe id="video_player" src="https://player.vimeo.com/video/XXX?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="LBB:Electrons:Current"></iframe>
 </p>
+{% if task_status['measure_current'] == 1 %}
+<div id="task_box_complete">
+
+{% else %}
 <div id="task_box">
+
+{% endif %}
 	<h4 id="task_label">TASK</h4>
 	<h3 id="task_name">measure_current</h3><br>
-	<form id="task_form" method=post enctype=multipart/form-data>Measure the current flowing across a resitor. Enter the votage you used here <input type="text" class="task_input_text" name = "voltage">, the resistor value here <input type="text" class="task_input_text" name = "resistance">, and the measured current here <input type="text" class="task_input_text" name = "current">.	<br><input id="task_submit" type="submit" value="Submit">
+	<form id="task_form" method=post enctype=multipart/form-data>Measure the current flowing across a resitor. Enter the votage you used here 	<input type="text" class="task_input_text" name = "voltage" required>, the resistor value here 	<input type="text" class="task_input_text" name = "resistance" required>, and the measured current here 	<input type="text" class="task_input_text" name = "current" required>.	<br><input id="task_submit" type="submit" value="Submit">
 		<input type="hidden" name="task_name" value="measure_current"/>
 	</form>
 </div>

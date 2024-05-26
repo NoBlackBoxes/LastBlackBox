@@ -3,7 +3,7 @@
 ## Install Flask and Tools
 
 ```bash
-pip install flask flask-login python-dotenv 
+pip install numpy flask flask-login python-dotenv 
 ```
 
 ## Environment
@@ -23,6 +23,14 @@ Generate a secret key using the following command
 ```bash
 python -c 'import secrets; print(secrets.token_hex())'
 ```
+
+## To Do
+Things to complete
+- Standardized task submissions (with validation and feedback)
+- Student progress bars?
+- Student topic/box completion state
+- Discord integration?
+- Run on S3?
 
 ## Model
 

@@ -40,7 +40,6 @@ app.config['SECRET_KEY'] = os.getenv('FLASK_SECRET_KEY')
 
 # Create login
 login_manager = LoginManager(app)
-
 @login_manager.user_loader
 def load_user(user_id):
     user = User.User()
@@ -123,15 +122,22 @@ def topic(box, topic):
         print(route_url)
     elif request.method == 'POST':
         form = request.form
+        topic_folder_path = f"{app.config['UPLOAD_FOLDER']}/users/000000/{box}/{topic}"
+        Utilities.create_folder(topic_folder_path)
         task_name = request.form['task_name']
-        print(task_name)
-        task_folder_path = f"{app.config['UPLOAD_FOLDER']}/users/000000/{box}/{topic}"
-        Utilities.create_folder(task_folder_path)
-        task_file_path = f"{task_folder_path}/{task_name}.txt"
+        # Retrieve Task Status (0=incomplete, 1=complete)
+        # - Check user folder for submission for this task
+        for key in form.keys():
+            for value in form.getlist(key):
+                print(key,":",value)
+        task_file_path = f"{topic_folder_path}/{task_name}.txt"
         f = open(task_file_path, 'w')
         f.write("yay")
         f.close()
         route_url = f"{box}/{topic}.html"
+        task_status = {task_name : 1}
+        print(task_status)
+        return render_template(route_url, task_status=task_status)
         ## Validate form submission
         #print(form.keys())
         #for key in form.keys():

@@ -15,10 +15,16 @@
 <p align="center">
 <iframe id="video_player" src="https://player.vimeo.com/video/XXX?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="NB3:Electrons:Assemble NB3 Body"></iframe>
 </p>
+{% if task_status['assemble_nb3_body'] == 1 %}
+<div id="task_box_complete">
+
+{% else %}
 <div id="task_box">
+
+{% endif %}
 	<h4 id="task_label">TASK</h4>
 	<h3 id="task_name">assemble_nb3_body</h3><br>
-	<form id="task_form" method=post enctype=multipart/form-data>Build your NB3 body <br><br><input type="file" class="task_input_photo" name = "photo" accept="image/x-png,image/jpeg,image/gif">.	<br><input id="task_submit" type="submit" value="Submit">
+	<form id="task_form" method=post enctype=multipart/form-data>Build your NB3 body <br><br><input type="file" class="task_input_photo" name = "photo" accept="image/x-png,image/jpeg,image/gif" required>.	<br><input id="task_submit" type="submit" value="Submit">
 		<input type="hidden" name="task_name" value="assemble_nb3_body"/>
 	</form>
 </div>

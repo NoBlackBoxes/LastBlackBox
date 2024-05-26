@@ -20,10 +20,16 @@
 </p>
 <h4 id="instruction">Use the following image as a starting point for the next task.</h4><p align="center">
 <img src="/static/images/boxes/electrons/_data/images/dipole_field_template.png" alt="dipole field template" height="250" style="border: 2px solid #000000;"/>
-</p><div id="task_box">
+</p>{% if task_status['draw_a_dipole_field'] == 1 %}
+<div id="task_box_complete">
+
+{% else %}
+<div id="task_box">
+
+{% endif %}
 	<h4 id="task_label">TASK</h4>
 	<h3 id="task_name">draw_a_dipole_field</h3><br>
-	<form id="task_form" method=post enctype=multipart/form-data>Draw the electric field around an electron(-) and a proton(+) seperated by some small distance (as experienced by another electon). Upload a photo of your field drawing. <br><br><input type="file" class="task_input_photo" name = "photo" accept="image/x-png,image/jpeg,image/gif">	<br><input id="task_submit" type="submit" value="Submit">
+	<form id="task_form" method=post enctype=multipart/form-data>Draw the electric field around an electron(-) and a proton(+) seperated by some small distance (as experienced by another electon). Upload a photo of your field drawing. <br><br><input type="file" class="task_input_photo" name = "photo" accept="image/x-png,image/jpeg,image/gif" required>	<br><input id="task_submit" type="submit" value="Submit">
 		<input type="hidden" name="task_name" value="draw_a_dipole_field"/>
 	</form>
 </div>

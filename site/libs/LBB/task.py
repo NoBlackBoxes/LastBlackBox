@@ -49,20 +49,36 @@ class Task:
     
     def render(self):
         output = []
+        self.header(output)
+        self.body(output)
+        self.footer(output)
+        return "".join(output)
+    
+    def header(self, output):
+        output.append(f"{{% if task_status['{self.name}'] == 1 %}}\n")
+        output.append(f"<div id=\"task_box_complete\">\n")
+        output.append("\n{% else %}\n")
         output.append(f"<div id=\"task_box\">\n")
+        output.append("\n{% endif %}\n")
         output.append(f"\t<h4 id=\"task_label\">TASK</h4>\n")
         output.append(f"\t<h3 id=\"task_name\">{self.name}</h3><br>\n")
         output.append(f"\t<form id=\"task_form\" method=post enctype=multipart/form-data>")
+        return output
+
+    def body(self, output):
         num_subtasks = len(self.descriptions)
         for i in range(num_subtasks):
             output.append(f"{self.descriptions[i]}")
             if self.inputs[i].type == "photo":
                 output.append("<br><br>")
             output.append(self.inputs[i].render())
+        return output
+
+    def footer(self, output):
         output.append(f"\t<br><input id=\"task_submit\" type=\"submit\" value=\"Submit\">\n")
         output.append(f"\t\t<input type=\"hidden\" name=\"task_name\" value=\"{self.name}\"/>\n")        
         output.append(f"\t</form>\n")
         output.append(f"</div>\n")
-        return "".join(output)
+        return output
 
 #FIN
