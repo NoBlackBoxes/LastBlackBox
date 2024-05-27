@@ -17,9 +17,11 @@ import sys
 sys.path.append(libs_path)
 #----------------------------------------------------------
 
+# Import libraries
 import os
 from flask import Flask, render_template, send_file, request, redirect, session
 from flask_login import LoginManager, current_user, login_user, logout_user, login_required
+from flask_mail import Mail, Message
 from werkzeug.utils import secure_filename
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -37,8 +39,18 @@ app = Flask(__name__)
 # Config App
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['SECRET_KEY'] = os.getenv('FLASK_SECRET_KEY')
+app.config['MAIL_SERVER'] = 'smtp.protonmail.ch'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USE_SSL'] = False
+app.config['MAIL_USERNAME'] = os.getenv('PROTONMAIL_USERNAME')
+app.config['MAIL_PASSWORD'] = os.getenv('PROTONMAIL_SMTP_TOKEN')
+app.config['MAIL_DEFAULT_SENDER'] = 'info@voight-kampff.tech'
 
-# Create login
+# Create mail sender
+mail = Mail(app)
+
+# Create login manager
 login_manager = LoginManager(app)
 @login_manager.user_loader
 def load_user(user_id):
@@ -64,7 +76,7 @@ def allowed_file(filename):
 def serve_manifest():
     return send_file('manifest.json', mimetype='application/manifest+json')
 
-# Serve service worker
+# Serve service worker (for PWA)
 @app.route('/service_worker.js')
 def serve_sw():
     return send_file('service_worker.js', mimetype='application/javascript')
@@ -80,17 +92,17 @@ def login():
     if current_user.is_authenticated:
         return redirect('user')
     if request.method == 'POST':
-        user_name = request.form['user_name']
+        user_id = request.form['user_id']
         user_password = request.form['user_password']
 
         # Validate form input
-        if (user_name == '') or (user_password == ''):
-            return render_template('login.html', error="Please enter a valid LBB ID and password.")
+        if (user_id == '') or (user_password == ''):
+            return render_template('login.html', error="Please enter a valid LBB user ID and password.")
 
         # Retrieve user
-        user = User.User(user_name)
+        user = User.User(user_id)
         if not user.loaded:
-            return render_template('login.html', error="LBB ID not found. Have you registered?")
+            return render_template('login.html', error="LBB user ID not found. Have you registered?")
 
         # Validate password
         if check_password_hash(user.password_hash, user_password):
@@ -115,6 +127,17 @@ def logout():
 def user():
     print(current_user.name)
     return render_template('user.html', user=current_user)
+
+# Serve Reset
+@app.route('/reset')
+def reset():
+    msg = Message(
+            'Hello',
+            recipients=['adam.kampff@gmail.com'],
+            body='This is a test email sent from Flask-Mail!'
+        )
+    mail.send(msg)
+    return redirect('login')
 
 # Serve Instructor
 @app.route('/instructor')

@@ -8,11 +8,14 @@
     <h1>The Last Black Box</h1>
 
     <form action="/login" method="post">
-      <input type="text" name="user_name" placeholder="Enter your LBB ID" required />
+      <input type="text" name="user_id" placeholder="Enter your LBB ID" required />
       <input type="text" name="user_password" placeholder="Enter your password" required />
       <input type="submit" value="Login" />
     </form>
     <h4>{{error}}</h4>
+    <b>Not registered?</b> <a href="https://www.noblackboxes.org/courses" target=”_blank”>Get your LastBlackBox user ID here.</a><br>
+    <b>Did you forget your LBB user ID?</b> <a href="send_login">Send your login details via email.</a><br>
+    <b>Did you forget your password?</b> <a href="reset_password">Send a temporary password via email.</a><br>
 
   </body>
 </html>

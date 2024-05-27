@@ -3,7 +3,7 @@
 ## Install Flask and Tools
 
 ```bash
-pip install numpy flask flask-login python-dotenv 
+pip install numpy flask flask-login flask-mail python-dotenv 
 ```
 
 ## Environment

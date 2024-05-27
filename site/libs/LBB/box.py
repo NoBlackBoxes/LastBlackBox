@@ -80,5 +80,6 @@ class Box:
             topic_path = box_path + f'/{topic.name.replace(" ", "_").lower()}.html'
             with open(topic_path, "w") as file:
                 file.write(output)
+        return
 
 #FIN
