@@ -19,7 +19,7 @@ sys.path.append(libs_path)
 
 import os
 from flask import Flask, render_template, send_file, request, redirect, session
-from flask_login import LoginManager, current_user, login_user
+from flask_login import LoginManager, current_user, login_user, logout_user, login_required
 from werkzeug.utils import secure_filename
 from werkzeug.security import generate_password_hash, check_password_hash
 
@@ -42,8 +42,7 @@ app.config['SECRET_KEY'] = os.getenv('FLASK_SECRET_KEY')
 login_manager = LoginManager(app)
 @login_manager.user_loader
 def load_user(user_id):
-    user = User.User()
-    user.load(user_id)
+    user = User.User(user_id)
     if user.loaded:
         return user
     else:
@@ -89,13 +88,13 @@ def login():
             return render_template('login.html', error="Please enter a valid LBB ID and password.")
 
         # Retrieve user
-        user = User.User()
-        user.load(user_name)
+        user = User.User(user_name)
         if not user.loaded:
             return render_template('login.html', error="LBB ID not found. Have you registered?")
 
         # Validate password
         if check_password_hash(user.password_hash, user_password):
+            user.authenticated = True
             login_user(user)
             return redirect('user')
         else:
@@ -103,26 +102,38 @@ def login():
 
     return render_template('login.html')
 
+# Serve Logout
+@app.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    return redirect('login')
+
 # Serve User
 @app.route('/user')
+@login_required
 def user():
-    return render_template('user.html')
+    print(current_user.name)
+    return render_template('user.html', user=current_user)
 
 # Serve Instructor
 @app.route('/instructor')
+@login_required
 def instructor():
     return render_template('instructor.html')
 
 # Serve Topic
 @app.route('/<box>/<topic>', methods=['GET', 'POST'])
+@login_required
 def topic(box, topic):
     print(box, topic)
+    task_status = None
     if request.method == 'GET':
         route_url = f"{box}/{topic}.html"
         print(route_url)
     elif request.method == 'POST':
         form = request.form
-        topic_folder_path = f"{app.config['UPLOAD_FOLDER']}/users/000000/{box}/{topic}"
+        topic_folder_path = f"{app.config['UPLOAD_FOLDER']}/users/{current_user.id}/{box}/{topic}"
         Utilities.create_folder(topic_folder_path)
         task_name = request.form['task_name']
         # Retrieve Task Status (0=incomplete, 1=complete)
@@ -137,7 +148,6 @@ def topic(box, topic):
         route_url = f"{box}/{topic}.html"
         task_status = {task_name : 1}
         print(task_status)
-        return render_template(route_url, task_status=task_status)
         ## Validate form submission
         #print(form.keys())
         #for key in form.keys():
@@ -157,7 +167,7 @@ def topic(box, topic):
         #        route_url = f"{box}/{topic}.html"
     else:
         route_url = f"{box}/{topic}.html"
-    return render_template(route_url)
+    return render_template(route_url, task_status=task_status)
 
 ###############################################################################
 # Run Application

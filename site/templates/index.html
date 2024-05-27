@@ -5,39 +5,8 @@
 
 <html>
   <body>
-    <h1>Test PWA</h1>
-
-    <input text="upload" type="file" accept="image/x-png,image/jpeg,image/gif""/>
-
-    
-    <img id="uploadPreview" style="width: 100px; height: 100px;" />
-    <input id="uploadImage" type="file" name="myPhoto" onchange="PreviewImage();" />
-
-    <form method="post" enctype="multipart/form-data">
-      <input name="file" type="file" multiple>
-      <button type="submit">Upload</button>
-    </form>
-
-    <script type="text/javascript">
-
-        function PreviewImage() {
-            var oFReader = new FileReader();
-            oFReader.readAsDataURL(document.getElementById("uploadImage").files[0]);
-
-            oFReader.onload = function (oFREvent) {
-                document.getElementById("uploadPreview").src = oFREvent.target.result;
-            };
-        };
-
-    </script>
-
-  <h1>Upload new File</h1>
-  <form method=post enctype=multipart/form-data>
-    <input type=file name=file>
-    <input type=submit value=Upload>
-  </form>
-
-  <a href="electrons/electric_fields">Start Course!</a>
-
+    <h1>The Last Black Box</h1>
+    You must be logged in as a student or instructor to continue.<br>
+    <a href="/login">Login</a>
   </body>
 </html>

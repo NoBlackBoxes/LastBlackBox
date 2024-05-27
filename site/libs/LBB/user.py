@@ -26,7 +26,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 # User Class
 class User:
-    def __init__(self):
+    def __init__(self, _user_id=None):
         self.id = None              # ID
         self.password_hash = None   # Password hash
         self.name = None            # Name
@@ -35,22 +35,20 @@ class User:
         self.admin = False          # Administrator boolean
         self.authenticated = False  # Authenticated boolean
         self.loaded = False         # Loaded boolean
+        if (_user_id != None):
+            self.load(user_id=_user_id)
         return
     
     def is_active(self):
-        """True, as all users are active."""
         return True
 
     def get_id(self):
-        """Return the email address to satisfy Flask-Login's requirements."""
-        return self.email
+        return self.id
 
     def is_authenticated(self):
-        """Return True if the user is authenticated."""
         return self.authenticated
 
     def is_anonymous(self):
-        """False, as anonymous users aren't supported."""
         return False
 
     def store(self):
@@ -73,7 +71,7 @@ class User:
         user_path = f"{user_folder}/user_data.pkl"
         # Does user (data file) exist?
         if not os.path.isfile(user_path):
-            return None
+            return self
         # Load user data
         with open(user_path, 'rb') as pickle_file:
             user_data = pickle.load(pickle_file)
