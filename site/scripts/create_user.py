@@ -19,19 +19,19 @@ sys.path.append(libs_path)
 #----------------------------------------------------------
 
 # Import libraries
-from werkzeug.security import generate_password_hash, check_password_hash
+from werkzeug.security import generate_password_hash
 
 # Import modules
 import LBB.user as User
 
 # Define User
 user = User.User()
-user.id = "000000"
-user.password_hash = generate_password_hash("1234")
-user.name = "Adam Kampff"
-user.email = "kampff@voight-kampff.tech"
-user.instructor = True
-user.admin = True
+user.id = "000011"
+user.password_hash = generate_password_hash("4321")
+user.name = "Adam Kampff-Student"
+user.email = "adam.kampff@gmail.com"
+user.instructor = False
+user.admin = False
 
 # Store User
 user.store()

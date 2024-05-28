@@ -26,6 +26,7 @@ python -c 'import secrets; print(secrets.token_hex())'
 
 ## To Do
 Things to complete
+- Send emails asynchronously
 - Standardized task submissions (with validation and feedback)
 - Student progress bars?
 - Student topic/box completion state
@@ -33,7 +34,6 @@ Things to complete
 - Run on S3?
 
 ## Model
-
 Courses are composed of a sequence of boxes/depths. Each box is composed of a sequence of topics. Each topic is composed of a sequence of lessons covering up to 3 depths (level 01, 10, and 11).
 
 ```markdown

@@ -122,11 +122,10 @@ def recovery():
         if user_email_found:
             msg = Message('LBB Login Details', recipients=[user_email], body=f"Your LBB login recovery details:\n User ID: {user.id}\n Temporary Password: Dudes\n\nHave a nice day!\nLBB Team")
             mail.send(msg)
+            return render_template('recovery_sent.html', message=f"Recovery details sent to {user_email}. Redirecting to login page."), {"Refresh": "5; url=login"}
         else:
             return render_template('recovery.html', error="This email was not registered by any LBB users!")
-    else:
-        return render_template('recovery.html')
-    return redirect('login')
+    return render_template('recovery.html')
 
 # Serve Instructor
 @app.route('/instructor')
