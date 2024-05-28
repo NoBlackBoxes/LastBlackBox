@@ -155,7 +155,7 @@ def topic(box, topic):
         f.write("yay")
         f.close()
         route_url = f"{box}/{topic}.html"
-        task_status = {task_name : 1}
+        task_status.update({task_name : 1})
         print(task_status)
         ## Validate form submission
         #print(form.keys())

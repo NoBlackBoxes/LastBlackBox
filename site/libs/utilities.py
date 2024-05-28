@@ -45,7 +45,7 @@ def retrieve_task_status(topic_folder_path):
     submissions = glob.glob(topic_folder_path + f"/*.txt")
     for submission in submissions:
         task_name = os.path.basename(submission)[:-4]
-        task_status = {task_name : 1}
+        task_status.update({task_name : 1})
     return task_status
 
 # Archive previous task submissions for named task on topic page
