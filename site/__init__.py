@@ -24,19 +24,18 @@ from flask_login import LoginManager, current_user, login_user, logout_user, log
 from flask_mail import Mail, Message
 from werkzeug.utils import secure_filename
 from werkzeug.security import generate_password_hash, check_password_hash
+import utilities as Utilities
 
 # Import modules
 import LBB.user as User
-import LBB.utilities as Utilities
 
 # Define constants
 UPLOAD_FOLDER = base_path + '/_tmp'
-ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
-# Create App
+# Create application
 app = Flask(__name__)
 
-# Config App
+# Configure application
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['SECRET_KEY'] = os.getenv('FLASK_SECRET_KEY')
 app.config['MAIL_SERVER'] = 'smtp.protonmail.ch'
@@ -57,15 +56,7 @@ def load_user(user_id):
     user = User.User(user_id)
     if user.loaded:
         return user
-    else:
-        return None
-
-###############################################################################
-# Helper Functions
-###############################################################################
-def allowed_file(filename):
-    return '.' in filename and \
-           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+    return None
 
 ###############################################################################
 # Routes
@@ -94,24 +85,16 @@ def login():
     if request.method == 'POST':
         user_id = request.form['user_id']
         user_password = request.form['user_password']
-
-        # Validate form input
-        if (user_id == '') or (user_password == ''):
-            return render_template('login.html', error="Please enter a valid LBB user ID and password.")
-
-        # Retrieve user
+        if (len(user_id) != 6):
+            return render_template('login.html', error="Please enter a valid (six digit) LBB user ID.")
         user = User.User(user_id)
         if not user.loaded:
             return render_template('login.html', error="LBB user ID not found. Have you registered?")
-
-        # Validate password
-        if check_password_hash(user.password_hash, user_password):
-            user.authenticated = True
+        if user.authenticate(user_password):
             login_user(user)
             return redirect('user')
         else:
             return render_template('login.html', error="Incorrect password.")
-
     return render_template('login.html')
 
 # Serve Logout
@@ -125,18 +108,24 @@ def logout():
 @app.route('/user')
 @login_required
 def user():
-    print(current_user.name)
     return render_template('user.html', user=current_user)
 
-# Serve Reset
-@app.route('/reset')
-def reset():
-    msg = Message(
-            'Hello',
-            recipients=['adam.kampff@gmail.com'],
-            body='This is a test email sent from Flask-Mail!'
-        )
-    mail.send(msg)
+# Serve Recovery
+@app.route('/recovery', methods=['GET', 'POST'])
+def recovery():
+    if request.method == 'POST':
+        user_email = request.form['user_email']
+        if not Utilities.is_valid_email(user_email):
+            return render_template('recovery.html', error="Please enter a valid email address.")
+        user = User.User()
+        user_email_found = user.find(user_email)
+        if user_email_found:
+            msg = Message('LBB Login Details', recipients=[user_email], body=f"Your LBB login recovery details:\n User ID: {user.id}\n Temporary Password: Dudes\n\nHave a nice day!\nLBB Team")
+            mail.send(msg)
+        else:
+            return render_template('recovery.html', error="This email was not registered by any LBB users!")
+    else:
+        return render_template('recovery.html')
     return redirect('login')
 
 # Serve Instructor
@@ -149,18 +138,16 @@ def instructor():
 @app.route('/<box>/<topic>', methods=['GET', 'POST'])
 @login_required
 def topic(box, topic):
-    print(box, topic)
-    task_status = None
+    topic_folder_path = f"{app.config['UPLOAD_FOLDER']}/users/{current_user.id}/{box}/{topic}"
+    task_status = Utilities.retrieve_task_status(topic_folder_path)
     if request.method == 'GET':
         route_url = f"{box}/{topic}.html"
-        print(route_url)
     elif request.method == 'POST':
         form = request.form
-        topic_folder_path = f"{app.config['UPLOAD_FOLDER']}/users/{current_user.id}/{box}/{topic}"
-        Utilities.create_folder(topic_folder_path)
         task_name = request.form['task_name']
-        # Retrieve Task Status (0=incomplete, 1=complete)
-        # - Check user folder for submission for this task
+        Utilities.archive_task_submission(topic_folder_path, task_name)
+
+        # Store new submission(s)
         for key in form.keys():
             for value in form.getlist(key):
                 print(key,":",value)
@@ -184,7 +171,7 @@ def topic(box, topic):
         #    if file.filename == '':
         #        flash('No selected file')
         #        return redirect(request.url)
-        #    if file and allowed_file(file.filename):
+        #    if file and is_allowed_file(file.filename):
         #        filename = secure_filename(file.filename)
         #        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         #        route_url = f"{box}/{topic}.html"

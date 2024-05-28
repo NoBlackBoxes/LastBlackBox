@@ -6,7 +6,6 @@ LBB: Instruction Class
 """
 
 # Import libraries
-import os
 
 # Import modules
 
@@ -24,5 +23,5 @@ class Instruction:
         return
 
     def render(self):
-        return f"<h4 id=\"instruction\">{self.html}</h4>"
+        return f"<h4 id=\"instruction\">{self.html}</h4>\n"
 #FIN

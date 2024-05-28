@@ -7,10 +7,10 @@ LBB: Box Class
 
 # Import libraries
 import os
+import utilities as Utilities
 
 # Import modules
 import LBB.topic as Topic
-import LBB.utilities as Utilities
 
 # Box Class
 class Box:
@@ -66,20 +66,49 @@ class Box:
                     break
             topic = Topic.Topic(topic_text)
             self.topics.append(topic)
-
         return
 
     def render_topics(self, output_path):
         box_path = output_path + f'/{self.name.lower()}'
         Utilities.clear_folder(box_path)
         for t, topic in enumerate(self.topics):
-            header = Utilities.render_header(self, t)
-            footer = Utilities.render_footer(self, t)
+            header = self.render_header(t)
+            footer = self.render_footer(t)
             body = topic.render()
             output = header + body + footer
             topic_path = box_path + f'/{topic.name.replace(" ", "_").lower()}.html'
             with open(topic_path, "w") as file:
                 file.write(output)
         return
+
+    def render_header(self, topic_index):
+        header = []
+        header.append("<!DOCTYPE html>\n")
+        header.append("<head>\n")
+        header.append("{% include 'pwa.html' %}\n")
+        header.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"{{url_for('static', filename='styles/topic_style.css')}}\"/>\n")
+        header.append("</head>\n\n")
+        header.append("<html>\n<body>\n\n")
+        header.append(f"<title>LBB : {self.name} : {self.topics[topic_index].name}</title>\n")
+        header.append(f"<h2 id=\"box_name\">LBB : {self.name}</h2>\n")
+        header.append(f"<h3 id=\"topic_name\">{self.topics[topic_index].name}</h3>\n")
+        header.append(f"<h4 id=\"topic_description\">{self.topics[topic_index].description}</h4>\n")
+        header.append(f"<hr>\n")
+        return "".join(header)
+
+    def render_footer(self, topic_index):
+        footer = []
+        footer.append("<hr>\n")
+        if topic_index > 0:
+            previous_topic_name = self.topics[topic_index-1].name.replace(" ", "_").lower()
+            previous_topic = f"{previous_topic_name}"
+            footer.append(f"<a href=\"{previous_topic}\">Previous Topic</a><br>\n")
+        if topic_index < (len(self.topics)-1):
+            next_topic_name = self.topics[topic_index+1].name.replace(" ", "_").lower()
+            next_topic = f"{next_topic_name}"
+            footer.append(f"<a href=\"{next_topic}\">Next Topic</a><br>\n")
+        footer.append("</body>\n</html>")
+        return "".join(footer)
+
 
 #FIN

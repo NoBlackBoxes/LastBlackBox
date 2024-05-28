@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+  {% include 'pwa.html' %}
+</head>
+
+<html>
+  <body>
+    <h1>The Last Black Box</h1>
+    <h2>Account Recovery</h2>
+
+    <form action="/recovery" method="post">
+      <input type="text" name="user_email" placeholder="Enter the email address you used with your LBB account" required />
+      <input type="submit" value="Send Login Details" />
+    </form>
+    <h4>{{error}}</h4>
+    {% if error %}
+    <b>Did you <i>forget</i> which email you used?</b> <a href="mailto: info@voight-kampff.tech">Get in touch at info@voight-kampff.tech and we will sort it out.</a><br>
+    {% endif %}
+    <hr>
+    <b>Not registered?</b> <a href="https://www.noblackboxes.org/courses" target=”_blank”>Get your LastBlackBox user ID here.</a><br>
+ 
+  </body>
+</html>

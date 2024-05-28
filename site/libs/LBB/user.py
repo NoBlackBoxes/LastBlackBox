@@ -20,6 +20,7 @@ sys.path.append(libs_path)
 
 # Import libraries
 import pickle
+import glob
 from werkzeug.security import generate_password_hash, check_password_hash
 
 # Import modules
@@ -35,8 +36,8 @@ class User:
         self.admin = False          # Administrator boolean
         self.authenticated = False  # Authenticated boolean
         self.loaded = False         # Loaded boolean
-        if (_user_id != None):
-            self.load(user_id=_user_id)
+        if (_user_id != None):      # Load from User ID
+            self.load(_user_id)
         return
     
     def is_active(self):
@@ -71,7 +72,7 @@ class User:
         user_path = f"{user_folder}/user_data.pkl"
         # Does user (data file) exist?
         if not os.path.isfile(user_path):
-            return self
+            return False
         # Load user data
         with open(user_path, 'rb') as pickle_file:
             user_data = pickle.load(pickle_file)
@@ -82,7 +83,23 @@ class User:
         self.instructor = user_data['instructor']
         self.admin = user_data['admin']
         self.loaded = True
-        print(user_data)
-        return
+        return True
+
+    def find(self, user_email):
+        users_folder = f"{data_path}/users"
+        user_folders = glob.glob(users_folder+"/*/")
+        for user_folder in user_folders:
+            user_id = user_folder.split('/')[-2]
+            self.load(user_id)
+            if (self.email == user_email):
+                return True
+        self.loaded = False
+        return False
+
+    def authenticate(self, user_password):
+        if check_password_hash(self.password_hash, user_password):
+            self.authenticated = True
+            return True
+        return False
 
 # FIN

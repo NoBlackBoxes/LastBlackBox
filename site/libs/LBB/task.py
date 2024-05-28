@@ -6,7 +6,6 @@ LBB: Task Class
 """
 
 # Import libraries
-import os
 
 # Import modules
 import LBB.input as Input
@@ -57,9 +56,9 @@ class Task:
     def header(self, output):
         output.append(f"{{% if task_status['{self.name}'] == 1 %}}\n")
         output.append(f"<div id=\"task_box_complete\">\n")
-        output.append("\n{% else %}\n")
+        output.append("{% else %}\n")
         output.append(f"<div id=\"task_box\">\n")
-        output.append("\n{% endif %}\n")
+        output.append("{% endif %}\n")
         output.append(f"\t<h4 id=\"task_label\">TASK</h4>\n")
         output.append(f"\t<h3 id=\"task_name\">{self.name}</h3><br>\n")
         output.append(f"\t<form id=\"task_form\" method=post enctype=multipart/form-data>")

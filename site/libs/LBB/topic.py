@@ -6,7 +6,6 @@ LBB: Topic Class
 """
 
 # Import libraries
-import os
 
 # Import modules
 import LBB.lesson as Lesson

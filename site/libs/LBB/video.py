@@ -6,7 +6,6 @@ LBB: Video Class
 """
 
 # Import libraries
-import os
 
 # Import modules
 

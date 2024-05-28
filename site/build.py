@@ -20,8 +20,9 @@ sys.path.append(libs_path)
 # Import libraries
 import os
 import numpy as np
+import utilities as Utilities
 
-# Import local modules
+# Import modules
 import LBB.box as Box
 import LBB.topic as Topic
 import LBB.lesson as Lesson
@@ -30,10 +31,10 @@ import LBB.image as Image
 import LBB.video as Video
 import LBB.task as Task
 import LBB.input as Input
-import LBB.utilities as Utilities
 
-# Reload modules
+# Reload libraies and modules
 import importlib
+importlib.reload(Utilities)
 importlib.reload(Box)
 importlib.reload(Topic)
 importlib.reload(Lesson)
@@ -42,7 +43,6 @@ importlib.reload(Image)
 importlib.reload(Video)
 importlib.reload(Task)
 importlib.reload(Input)
-importlib.reload(Utilities)
 
 #----------------------------------------------------------
 

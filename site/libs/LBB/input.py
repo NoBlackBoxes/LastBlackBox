@@ -6,7 +6,6 @@ LBB: Input Class
 """
 
 # Import libraries
-import os
 
 # Import modules
 

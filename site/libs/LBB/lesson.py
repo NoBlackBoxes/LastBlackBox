@@ -6,7 +6,6 @@ LBB: Lesson Class
 """
 
 # Import libraries
-import os
 
 # Import modules
 import LBB.instruction as Instruction

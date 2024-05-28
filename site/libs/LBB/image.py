@@ -6,7 +6,6 @@ LBB: Image Class
 """
 
 # Import libraries
-import os
 
 # Import modules
 
@@ -23,6 +22,6 @@ class Image:
         return
 
     def render(self):
-        return "<p align=\"center\">\n" + self.html + "\n</p>"
+        return "<p align=\"center\">\n" + self.html + "\n</p>\n"
 
 #FIN
