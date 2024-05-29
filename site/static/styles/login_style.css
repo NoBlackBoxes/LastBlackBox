@@ -1,0 +1,35 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+#layout {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0,0,0,1.0);
+    filter: brightness(10%);
+}
+
+#content {
+    position: absolute; 
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    filter: brightness(100%);
+}
+
+#logo {
+    align-items: center;
+    height: 40%;
+    filter: brightness(100%);
+}
+
+#login {
+    display: flex;
+    flex-direction: column;
+}

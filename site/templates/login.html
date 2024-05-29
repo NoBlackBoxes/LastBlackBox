@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <head>
   {% include 'pwa.html' %}
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/login_style.css')}}"/>
 </head>
-
 <html>
   <body>
-    <h1>The Last Black Box</h1>
-
-    <form action="/login" method="post">
-      <input type="text" name="user_id" placeholder="Enter your LBB ID" required />
-      <input type="text" name="user_password" placeholder="Enter your password" required />
-      <input type="submit" value="Login" />
-    </form>
-    <h4>{{error}}</h4>
-    <b>Not registered?</b> <a href="https://www.noblackboxes.org/courses" target=”_blank”>Get your LastBlackBox user ID here.</a><br>
-    <b>Did you <i>forget</i> your LBB user ID or password?</b> <a href="recovery">Send your login details to your registered email.</a><br>
-
+    <div id="layout" style="background-image: url({{url_for('static', filename='images/layout/layout.png')}});"></div>
+    <div id="content">
+      <img id="logo" src="{{url_for('static', filename='images/logo/logo_LBB_white_text.svg')}}" alt="Last Black Box Logo">
+      <form id="login" action="/login" method="post">
+        <input type="text" name="user_id" placeholder="Enter your LBB ID" required />
+        <input type="text" name="user_password" placeholder="Enter your password" required />
+        <input type="submit" value="Login" />
+      </form>
+      <h4>{{error}}</h4>
+      <b>Not registered?</b> <a href="https://www.noblackboxes.org/courses" target=”_blank”>Get your LastBlackBox user ID here.</a><br>
+      <b>Did you <i>forget</i> your LBB user ID or password?</b> <a href="recovery">Send your login details to your registered email.</a><br>
+      </div>
   </body>
 </html>
