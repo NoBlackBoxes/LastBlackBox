@@ -106,8 +106,8 @@ box_stroke = 0.5
 box_style = "fill-opacity:1;stroke:#FFFFFF;stroke-width:{0};stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1".format(box_stroke)
 text = ''
 text_size = 9.0
-text_x = 9.0
-text_y = 86.5
+text_x = 8.5
+text_y = 87.5
 text_fill = 'FFFFFF'
 profile = False
 parameters.append(Parameters(width, height, viewbox, box_parameters_path, svg_path, box_size, box_style, text, text_size, text_x, text_y, text_fill, profile))
