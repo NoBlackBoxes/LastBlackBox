@@ -31,7 +31,7 @@ def draw_box(file, name, x, y, width, height, fill, arrow_state):
     text_fill = "FFFFFF"
     text_id = 'text_' + name
     text_fontsize = 1.75
-    text_style = "font-style:normal;font-weight:bold;font-size:{0};line-height:1.00;font-family:'Arial';white-space:pre;display:inline;fill:#{1};fill-opacity:1;stroke:none".format(text_fontsize, text_fill)
+    text_style = "font-style:normal;font-weight:bold;font-size:{0}px;line-height:1.00;font-family:'Arial';white-space:pre;display:inline;fill:#{1};fill-opacity:1;stroke:none".format(text_fontsize, text_fill)
     text_tag = "\t<text class= \"text\" id=\"{0}\" x=\"{1}\" y=\"{2}\" style=\"{3}\" alignment-baseline=\"middle\" text-anchor=\"middle\">{4}</text>\n".format(text_id, x+width/2.0, y+text_fontsize/3.0+height/2.0, text_style, name)
     box_fill = fill
     box_id = 'box_' + name

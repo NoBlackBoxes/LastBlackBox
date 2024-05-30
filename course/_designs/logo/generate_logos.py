@@ -55,7 +55,7 @@ def generate_logo(params):
         box_offset_y = -11.0
 
     # Text
-    text_style = "font-style:normal;font-weight:bold;font-size:{0};line-height:1.25;font-family:'Liberation Mono';white-space:pre;display:inline;fill:#{1};fill-opacity:1;stroke:none".format(params.text_size, params.text_fill)
+    text_style = "font-style:normal;font-weight:bold;font-size:{0}px;line-height:1.25;font-family:'Arial';white-space:pre;display:inline;fill:#{1};fill-opacity:1;stroke:none".format(params.text_size, params.text_fill)
     text_tag = "\t<text class= \"text\" id=\"nbb\" x=\"{0}\" y=\"{1}\" style=\"{2}\">{3}</text>\n".format(params.text_x, params.text_y, text_style, params.text)
 
     # Profile
@@ -102,11 +102,11 @@ viewbox = "0 0 100 100"
 box_parameters_path = logo_path + "/box_parameters_LBB.csv"
 svg_path = logo_path + "/svg/logo_LBB.svg"
 box_size = 13.0
-box_stroke = 1.0
+box_stroke = 0.5
 box_style = "fill-opacity:1;stroke:#FFFFFF;stroke-width:{0};stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1".format(box_stroke)
 text = ''
-text_size = 8.5
-text_x = 4.5
+text_size = 9.0
+text_x = 9.0
 text_y = 86.5
 text_fill = 'FFFFFF'
 profile = False
@@ -127,9 +127,9 @@ svg_path = logo_path + "/svg/logo_NBB.svg"
 text = ''
 text_size = 9.5
 box_size = 13.0
-box_stroke = 1.0
+box_stroke = 0.5
 box_style = "fill-opacity:1;stroke:#000000;stroke-width:{0};stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1".format(box_stroke)
-text_x = 10.5
+text_x = 14.0
 text_y = 86.5
 text_fill = 'FFFFFF'
 profile = False
@@ -155,7 +155,7 @@ text_size = 9.5
 box_size = 13.0
 box_stroke = 0.5
 box_style = "fill-opacity:1;stroke:#000000;stroke-width:{0};stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1".format(box_stroke)
-text_x = 10.5
+text_x = 14.0
 text_y = 86.5
 text_fill = 'FFFFFF'
 profile = True
