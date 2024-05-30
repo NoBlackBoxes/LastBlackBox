@@ -24,14 +24,50 @@ from werkzeug.security import generate_password_hash
 # Import modules
 import LBB.user as User
 
+# Boxe status dictonary
+boxes = {
+    'Atoms'         : '01',
+    'Electrons'     : '00',
+    'Magnets'       : '00',
+    'Light'         : '01',
+    'Sensors'       : '00',
+    'Motors'        : '00',
+    'Transistors'   : '10',
+    'Amplifiers'    : '00',
+    'Circuits'      : '00',
+    'Power'         : '00',
+    'Data'          : '11',
+    'Logic'         : '01',
+    'Memory'        : '01',
+    'FPGAs'         : '01',
+    'Computers'     : '00',
+    'Control'       : '00',
+    'Robotics'      : '00',
+    'Systems'       : '00',
+    'Linux'         : '01',
+    'Python'        : '10',
+    'Networks'      : '10',
+    'Websites'      : '00',
+    'Servers'       : '01',
+    'Security'      : '00',
+    'Audio'         : '00',
+    'Vision'        : '00',
+    'Learning'      : '00',
+    'Intelligence'  : '00'
+}
+
 # Define User
 user = User.User()
 user.id = "000011"
 user.password_hash = generate_password_hash("4321")
-user.name = "Adam Kampff-Student"
-user.email = "adam.kampff@gmail.com"
+user.name = "Jimmy Voight"
+user.email = "info@voight-kampff.tech"
 user.instructor = False
 user.admin = False
+user.boxes = boxes
+user.current_course = 'build_a_brain'
+user.current_box = 'electrons'
+user.current_topic = 'measuring_voltage'
 
 # Store User
 user.store()

@@ -36,6 +36,11 @@ class User:
         self.admin = False          # Administrator boolean
         self.authenticated = False  # Authenticated boolean
         self.loaded = False         # Loaded boolean
+        self.boxes = {}             # User box status dictionary
+        self.current_course = None  # Current course
+        self.current_box = None     # Current box
+        self.current_topic = None   # Current topic
+        self.progress = [0,0,0,0]   # Progress
         if (_user_id != None):      # Load from User ID
             self.load(_user_id)
         return
@@ -60,6 +65,10 @@ class User:
             "email" : self.email,
             "instructor" : self.instructor,
             "admin" : self.admin,
+            "boxes" : self.boxes,
+            "current_course" : self.current_course,
+            "current_box" : self.current_box,
+            "current_topic" : self.current_topic,
         }
         user_folder = f"{data_path}/users/{self.id}"
         user_path = f"{user_folder}/user_data.pkl"
@@ -82,6 +91,10 @@ class User:
         self.email = user_data['email']
         self.instructor = user_data['instructor']
         self.admin = user_data['admin']
+        self.boxes = user_data['boxes']
+        self.current_course = user_data['current_course']
+        self.current_box = user_data['current_box']
+        self.current_topic = user_data['current_topic']
         self.loaded = True
         return True
 
@@ -101,5 +114,21 @@ class User:
             self.authenticated = True
             return True
         return False
-
+    
+    def update_progress(self):
+        num_open = 0
+        num_01 = 0
+        num_10 = 0
+        num_11 = 0
+        for status in self.boxes.values():
+            if status != '00':
+                num_open += 1
+            if status == '01':
+                num_01 += 1
+            if status == '10':
+                num_10 += 1
+            if status == '11':
+                num_11 += 1
+        self.progress = [num_open, num_01, num_10, num_11]
+        return
 # FIN

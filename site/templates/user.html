@@ -9,8 +9,12 @@
   Hi {{user['name']}}!<br>
   Your user ID is {{user['id']}}<br>
   Your email is {{user['email']}}<br>
-
-  <a href="electrons/electric_fields">Start Course!</a>
+  <hr>
+  You are taking the course <b>{{user['current_course']|replace("_", " ")|title}}</b><br>
+  ...where you are working on the "{{user['current_box']|replace("_", " ")|title}}" box, "{{user['current_topic']|replace("_", " ")|title}}"<br>
+  <br>
+  You have opened <b>{{user['progress'][0]}} black boxes!</b> <i>({{user['progress'][1]}} to level 01, {{user['progress'][2]}} to level 10, and {{user['progress'][3]}} to level 11)</i><br>
+  <a href="{{user['current_box']}}/{{user['current_topic']}}">Continue Course!</a>
   <hr>
   <a href="logout">Logout</a>
 

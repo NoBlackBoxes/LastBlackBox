@@ -38,6 +38,10 @@ body, html {
     }
 }
 
+#error {
+    color: red;
+}
+
 #login {
     display: flex;
     flex-direction: column;

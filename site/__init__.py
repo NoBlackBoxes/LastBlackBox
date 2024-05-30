@@ -86,15 +86,15 @@ def login():
         user_id = request.form['user_id']
         user_password = request.form['user_password']
         if (len(user_id) != 6):
-            return render_template('login.html', error="Please enter a valid (six digit) LBB user ID.")
+            return render_template('login.html', error="Please enter a six digit LBB user ID")
         user = User.User(user_id)
         if not user.loaded:
-            return render_template('login.html', error="LBB user ID not found. Have you registered?")
+            return render_template('login.html', error="LBB user ID not found")
         if user.authenticate(user_password):
             login_user(user)
             return redirect('user')
         else:
-            return render_template('login.html', error="Incorrect password.")
+            return render_template('login.html', error="Incorrect password")
     return render_template('login.html')
 
 # Serve Logout
@@ -108,6 +108,7 @@ def logout():
 @app.route('/user')
 @login_required
 def user():
+    current_user.update_progress()
     return render_template('user.html', user=current_user)
 
 # Serve Recovery
