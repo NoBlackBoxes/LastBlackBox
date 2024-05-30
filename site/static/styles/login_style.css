@@ -1,6 +1,7 @@
 body, html {
     height: 100%;
     margin: 0;
+    background: black;
 }
 
 #layout {
@@ -9,6 +10,7 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgba(0,0,0,1.0);
+    background-attachment:fixed;
     filter: brightness(10%);
 }
 
@@ -26,12 +28,13 @@ body, html {
 
 #logo {
     align-items: center;
-    height: 35vw;
+    height: 30vw;
     filter: brightness(100%);
     margin-bottom: -10px;
 
     @media screen and (max-width: 768px) {
-        height: 50vw;
+        height: 60vw;
+        margin-bottom: 20px;
     }
 }
 
@@ -41,6 +44,7 @@ body, html {
 }
 
 #user_id, #user_password {
+    z-index: 1;
     width: 256px;
     height: 32px;
     margin-bottom: 15px;
@@ -58,17 +62,63 @@ body, html {
     border-radius: 11px;
     border-color: yellow;
     color: yellow;
-    width: 180px;
-    height: 56px;
-    margin-left: 38px;
+    width: 160px;
+    height: 48px;
+    margin-left: 48px;
     text-align: center;
     text-decoration: none;
-    font-size: 32px;
+    font-size: 30px;
     transition-duration: 0.4s;
     font-weight: bold;
+
+    @media screen and (max-width: 768px) {
+        margin-left: 68px;
+        width: 120px;
+        height: 40px;
+        font-size: 24px;
+    }
 }
 
 #button:hover {
     background-color: yellow;
     color: black;
+}
+
+#note_register {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+
+#register {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    color: rgb(192, 192, 192);
+    font-size: 16px;
+}
+
+#register_link {
+    margin: 0px;
+    color: yellow;
+}
+
+#note_forget {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#forget {
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    color: rgb(192, 192, 192);
+    font-size: 16px;
+}
+
+#forget_link {
+    margin: 0px;
+    color: yellow;
 }
