@@ -72,10 +72,10 @@ def serve_manifest():
 def serve_sw():
     return send_file('service_worker.js', mimetype='application/javascript')
 
-# Serve Home
+# Serve Root
 @app.route('/')
-def homepage():
-    return render_template('index.html')
+def root():
+    return redirect('login')
 
 # Serve Login
 @app.route('/login', methods=['GET', 'POST'])

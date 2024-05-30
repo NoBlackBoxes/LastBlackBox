@@ -20,16 +20,55 @@ body, html {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     filter: brightness(100%);
 }
 
 #logo {
     align-items: center;
-    height: 40%;
+    height: 35vw;
     filter: brightness(100%);
+    margin-bottom: -10px;
+
+    @media screen and (max-width: 768px) {
+        height: 50vw;
+    }
 }
 
 #login {
     display: flex;
     flex-direction: column;
+}
+
+#user_id, #user_password {
+    width: 256px;
+    height: 32px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-size:18px;
+    font-weight: bold;
+}
+
+#button {
+    margin-top: 15px;
+    background-color: black;
+    border: solid;
+    border-width: 2px;
+    border-radius: 11px;
+    border-color: yellow;
+    color: yellow;
+    width: 180px;
+    height: 56px;
+    margin-left: 38px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 32px;
+    transition-duration: 0.4s;
+    font-weight: bold;
+}
+
+#button:hover {
+    background-color: yellow;
+    color: black;
 }
