@@ -24,7 +24,7 @@ from flask_login import LoginManager, current_user, login_user, logout_user, log
 from flask_mail import Mail, Message
 from werkzeug.utils import secure_filename
 from werkzeug.security import generate_password_hash, check_password_hash
-import utilities as Utilities
+import LBB.utilities as Utilities
 
 # Import modules
 import LBB.user as User

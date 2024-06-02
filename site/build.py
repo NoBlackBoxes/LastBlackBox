@@ -20,7 +20,7 @@ sys.path.append(libs_path)
 # Import libraries
 import os
 import numpy as np
-import utilities as Utilities
+import LBB.utilities as Utilities
 
 # Import modules
 import LBB.box as Box

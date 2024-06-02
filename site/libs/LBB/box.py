@@ -7,7 +7,7 @@ LBB: Box Class
 
 # Import libraries
 import os
-import utilities as Utilities
+import LBB.utilities as Utilities
 
 # Import modules
 import LBB.topic as Topic
