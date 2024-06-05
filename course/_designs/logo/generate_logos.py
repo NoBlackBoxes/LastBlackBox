@@ -22,10 +22,12 @@ base_path = "/home/kampff/NoBlackBoxes/LastBlackBox/course/_designs"
 output_folder = f"{base_path}/logo"
 svg_folder = f"{output_folder}/svg"
 png_folder = f"{output_folder}/png"
+animated_folder = f"{output_folder}/animated"
 
 # Clear/create folders
 Utilities.clear_folder(svg_folder)
 Utilities.clear_folder(png_folder)
+Utilities.clear_folder(animated_folder)
 
 # ---
 # LBB
@@ -82,5 +84,14 @@ svg_path = f"{output_folder}/svg/{svg.name}.svg"
 svg.draw(box_parameters_path, svg_path)
 png_path = f"{output_folder}/png/{svg.name}.png"
 PNG.PNG(svg.name, width=1000, height=1250).convert(svg_path, png_path)
+
+# --------
+# Animated
+# --------
+box_parameters_path = f"{output_folder}/box_parameters_NBB.csv"
+animation_parameters_path = f"{output_folder}/animation_parameters_fill_stroke.csv"
+svg = SVG.SVG("logo_NBB_animated_test", None, 100, 100, "0 0 100 100", with_profile=False, with_title=False)
+svg_path = f"{output_folder}/animated/{svg.name}.svg"
+svg.animate(box_parameters_path, animation_parameters_path, svg_path)
 
 #FIN
