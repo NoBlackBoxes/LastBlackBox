@@ -86,34 +86,34 @@
 	<rect class="box" id="box_Intelligence" transform="scale(1,1) translate(0, 0)" x="37.787000" y="32.810000" width="13.0" height="13.0" style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
 <style>
-	#box_Atoms			 {animation: animate_Atoms 4.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#box_Electrons		 {animation: animate_Electrons 4.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#box_Magnets		 {animation: animate_Magnets 4.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#box_Light			 {animation: animate_Light 4.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#box_Sensors		 {animation: animate_Sensors 4.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#box_Motors			 {animation: animate_Motors 4.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#box_Transistors	 {animation: animate_Transistors 4.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#box_Amplifiers		 {animation: animate_Amplifiers 4.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#box_Circuits		 {animation: animate_Circuits 4.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#box_Power			 {animation: animate_Power 4.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#box_Data			 {animation: animate_Data 4.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#box_Logic			 {animation: animate_Logic 4.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#box_Memory			 {animation: animate_Memory 4.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#box_FPGAs			 {animation: animate_FPGAs 4.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#box_Computers		 {animation: animate_Computers 4.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#box_Control		 {animation: animate_Control 4.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#box_Robotics		 {animation: animate_Robotics 4.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#box_Systems		 {animation: animate_Systems 4.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#box_Linux			 {animation: animate_Linux 4.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#box_Python			 {animation: animate_Python 4.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#box_Networks		 {animation: animate_Networks 4.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#box_Websites		 {animation: animate_Websites 4.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#box_Servers		 {animation: animate_Servers 4.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#box_Security		 {animation: animate_Security 4.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#box_Audio			 {animation: animate_Audio 4.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#box_Vision			 {animation: animate_Vision 4.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#box_Learning		 {animation: animate_Learning 4.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#box_Intelligence	 {animation: animate_Intelligence 4.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
+	#box_Atoms			 {animation: animate_Atoms 4.00s linear infinite; animation-delay: 0.00s}
+	#box_Electrons		 {animation: animate_Electrons 4.00s linear infinite; animation-delay: 0.00s}
+	#box_Magnets		 {animation: animate_Magnets 4.00s linear infinite; animation-delay: 0.00s}
+	#box_Light			 {animation: animate_Light 4.00s linear infinite; animation-delay: 0.00s}
+	#box_Sensors		 {animation: animate_Sensors 4.00s linear infinite; animation-delay: 0.00s}
+	#box_Motors			 {animation: animate_Motors 4.00s linear infinite; animation-delay: 0.00s}
+	#box_Transistors	 {animation: animate_Transistors 4.00s linear infinite; animation-delay: 0.00s}
+	#box_Amplifiers		 {animation: animate_Amplifiers 4.00s linear infinite; animation-delay: 0.00s}
+	#box_Circuits		 {animation: animate_Circuits 4.00s linear infinite; animation-delay: 0.00s}
+	#box_Power			 {animation: animate_Power 4.00s linear infinite; animation-delay: 0.00s}
+	#box_Data			 {animation: animate_Data 4.00s linear infinite; animation-delay: 0.00s}
+	#box_Logic			 {animation: animate_Logic 4.00s linear infinite; animation-delay: 0.00s}
+	#box_Memory			 {animation: animate_Memory 4.00s linear infinite; animation-delay: 0.00s}
+	#box_FPGAs			 {animation: animate_FPGAs 4.00s linear infinite; animation-delay: 0.00s}
+	#box_Computers		 {animation: animate_Computers 4.00s linear infinite; animation-delay: 0.00s}
+	#box_Control		 {animation: animate_Control 4.00s linear infinite; animation-delay: 0.00s}
+	#box_Robotics		 {animation: animate_Robotics 4.00s linear infinite; animation-delay: 0.00s}
+	#box_Systems		 {animation: animate_Systems 4.00s linear infinite; animation-delay: 0.00s}
+	#box_Linux			 {animation: animate_Linux 4.00s linear infinite; animation-delay: 0.00s}
+	#box_Python			 {animation: animate_Python 4.00s linear infinite; animation-delay: 0.00s}
+	#box_Networks		 {animation: animate_Networks 4.00s linear infinite; animation-delay: 0.00s}
+	#box_Websites		 {animation: animate_Websites 4.00s linear infinite; animation-delay: 0.00s}
+	#box_Servers		 {animation: animate_Servers 4.00s linear infinite; animation-delay: 0.00s}
+	#box_Security		 {animation: animate_Security 4.00s linear infinite; animation-delay: 0.00s}
+	#box_Audio			 {animation: animate_Audio 4.00s linear infinite; animation-delay: 0.00s}
+	#box_Vision			 {animation: animate_Vision 4.00s linear infinite; animation-delay: 0.00s}
+	#box_Learning		 {animation: animate_Learning 4.00s linear infinite; animation-delay: 0.00s}
+	#box_Intelligence	 {animation: animate_Intelligence 4.00s linear infinite; animation-delay: 0.00s}
 
 	@keyframes animate_Atoms {
 		0%     {fill:#000000;stroke:#FFFFFF;}
