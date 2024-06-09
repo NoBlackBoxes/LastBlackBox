@@ -37,7 +37,6 @@ svg.draw(box_parameters_path, svg_path)
 png_path = f"{output_folder}/png/{svg.name}.png"
 PNG.PNG(svg.name, dpi=600).convert(svg_path, png_path)
 
-
 # --------
 # Bootcamp
 # --------

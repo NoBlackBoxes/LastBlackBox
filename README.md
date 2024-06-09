@@ -5,7 +5,7 @@
 > - Do you want to be ready for the coming era of AI?
 
 <p align="center">
-<img src="course/_designs/logo/animated/logo_LBB_profile_animated_repeat.svg" alt="LBB" width="300" height="600">
+<img src="course/_designs/logo/animated/logo_NBB_profile_animated_repeat.svg" alt="LBB" width="200" height="300">
 </p>
 
 ## Summary
