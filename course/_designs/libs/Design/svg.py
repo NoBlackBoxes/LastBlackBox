@@ -40,7 +40,7 @@ class SVG:
         return
 
     # Create animated SVG
-    def animate(self, box_parameters_path, animation_parameters_path, output_path):
+    def animate(self, box_parameters_path, animation_parameters_path, hover, repeat, output_path):
         svg_file = open(output_path, "w")
         self.write_headers(svg_file)
         self.write_profile(svg_file)
@@ -50,7 +50,7 @@ class SVG:
         self.write_title(svg_file)
         #Box,start_time,mid_time,end_time,start_delay,value#1,start_value#1,mid_value#1,end_value#1,value#2,start_value#2,mid_value#2,end_value#2,...
         animation_parameters = np.genfromtxt(animation_parameters_path, delimiter=",", dtype=str)
-        self.write_animation(animation_parameters, svg_file)
+        self.write_animation(animation_parameters, hover, repeat, svg_file)
         self.write_footer(svg_file)
         svg_file.close()
         return
@@ -116,25 +116,71 @@ class SVG:
         return
 
     # Write animation
-    def write_animation(self, animation_parameters, svg_file):
+    def write_animation(self, animation_parameters, hover, repeat, svg_file):
         svg_file.write("<style>\n")
         num_boxes = animation_parameters.shape[0]
         for i in range(num_boxes):
             name = animation_parameters[i,0]
-            svg_file.write(f"\t#box_{name}")
+            start_time = float(animation_parameters[i,1])
+            end_time = float(animation_parameters[i,3])
+            delay = float(animation_parameters[i,4])
+            duration = end_time - start_time
+            if hover:
+                svg_file.write(f"\t#{self.name}:hover #box_{name}")
+            else:
+                svg_file.write(f"\t#box_{name}")
             svg_file.write("\t")
             if len(name) < 7:
                 svg_file.write("\t")
             if len(name) < 11:
                 svg_file.write("\t")
-            svg_file.write(f" {{animation: animate_{name} 0.6s linear; animation-fill-mode: forwards; animation-delay: 1s}}\n")
+            if repeat:
+                svg_file.write(f" {{animation: animate_{name} {duration:.2f}s linear infinite; animation-delay: {delay:.2f}s}}\n")
+            else:
+                svg_file.write(f" {{animation: animate_{name} {duration:.2f}s linear; animation-fill-mode: forwards; animation-delay: {delay:.2f}s}}\n")
         for i in range(num_boxes):
             name = animation_parameters[i,0]
+            start_time = float(animation_parameters[i,1])
+            mid_time = float(animation_parameters[i,2])
+            end_time = float(animation_parameters[i,3])
+            delay = float(animation_parameters[i,4])
+            num_values = (len(animation_parameters[i])-5) // 4
+            duration = end_time - start_time
+            start_percent = 0
+            mid_percent = int(100.0 * (mid_time / end_time))
+            end_percent = 100
             svg_file.write(f"\n")
             svg_file.write(f"\t@keyframes animate_{name} {{\n")
-            svg_file.write(f"\t\t0%   {{fill:black;\tstroke:white}}\n")
-            svg_file.write(f"\t\t95%  {{fill:white;\tstroke:black}}\n")
-            svg_file.write(f"\t\t100% {{fill:white;\tstroke:black}}\n")
+            svg_file.write(f"\t\t{start_percent}%     {{")
+            for j in range(num_values):
+                offset = 5 + (j*4)
+                value_name = animation_parameters[i,offset]
+                start_value = animation_parameters[i,offset+1]
+                if (value_name == "fill") or (value_name == "stroke"):
+                    svg_file.write(f"{value_name}:#{start_value};")
+                else:
+                    svg_file.write(f"{value_name}:{start_value:.2f};")
+            svg_file.write(f"}}\n")
+            svg_file.write(f"\t\t{mid_percent}%    {{")
+            for j in range(num_values):
+                offset = 5 + (j*4)
+                value_name = animation_parameters[i,offset]
+                mid_value = animation_parameters[i,offset+2]
+                if (value_name == "fill") or (value_name == "stroke"):
+                    svg_file.write(f"{value_name}:#{mid_value};")
+                else:
+                    svg_file.write(f"{value_name}:{mid_value:.2f};")
+            svg_file.write(f"}}\n")
+            svg_file.write(f"\t\t{end_percent}%   {{")
+            for j in range(num_values):
+                offset = 5 + (j*4)
+                value_name = animation_parameters[i,offset]
+                end_value = animation_parameters[i,offset+3]
+                if (value_name == "fill") or (value_name == "stroke"):
+                    svg_file.write(f"{value_name}:#{end_value};")
+                else:
+                    svg_file.write(f"{value_name}:{end_value:.2f};")
+            svg_file.write(f"}}\n")
             svg_file.write(f"\t}}\n")
         svg_file.write("</style>\n")
         return
