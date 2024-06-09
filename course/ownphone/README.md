@@ -3,7 +3,7 @@
 > **LBB-102**: Smarter than your *smart*phone
 
 <p align="center">
-<img src="_designs/layout/ownphone_layout.png" alt="LBB ownphone layout" width="500" height="500">
+<img src="_designs/layout_ownphone.png" alt="LBB ownphone layout" width="500" height="500">
 </p>
 
 ----

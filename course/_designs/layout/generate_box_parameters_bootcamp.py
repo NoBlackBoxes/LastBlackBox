@@ -9,37 +9,27 @@ username = os.getlogin()
 repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
 boxes_path = repo_path + '/boxes'
 layout_path = repo_path + '/course/_designs/layout'
-box_parameters_path = layout_path + "/box_parameters.csv"
+box_parameters_path = layout_path + "/box_parameters_bootcamp.csv"
 
 # List all "boxes" in order of opening
 boxes = [
     'Atoms',
     'Electrons',
     'Magnets',
-    'Light',
     'Sensors',
     'Motors',
     'Transistors',
-    'Amplifiers',
-    'Circuits',
-    'Power',
-    'Data',
-    'Logic',
-    'Memory',
-    'FPGAs',
     'Computers',
-    'Control',
     'Robotics',
+    'Power',
     'Systems',
     'Linux',
     'Python',
     'Networks',
     'Websites',
     'Servers',
-    'Security',
     'Audio',
     'Vision',
-    'Learning',
     'Intelligence'
 ]
 num_boxes = len(boxes)
@@ -48,8 +38,8 @@ num_boxes = len(boxes)
 box_size = 13.0
 box_stroke = 0.125
 box_spacing = 1.25
-num_rows = 4
-num_cols = 7
+num_rows = 3
+num_cols = 6
 
 # Generate box parameters
 box_parameters = []

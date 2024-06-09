@@ -3,7 +3,7 @@
 > A ***Bootcamp Version*** of the Last Black Box course
 
 <p align="center">
-<img src="_designs/layout/bootcamp_layout.png" alt="LBB bootcamp layout" width="800" height="400">
+<img src="_designs/layout_bootcamp.png" alt="LBB bootcamp layout" width="800" height="400">
 </p>
 
 ----

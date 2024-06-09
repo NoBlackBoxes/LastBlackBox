@@ -3,7 +3,7 @@
 > **LBB-101**: Build a brain without using *any* black boxes
 
 <p align="center">
-<img src="_designs/schedule/buildabrain_schedule.png" alt="LBB buildabrain layout" width="582" height="826">
+<img src="_designs/schedule_buildabrain.png" alt="LBB buildabrain layout" width="582" height="826">
 </p>
 
 ----
