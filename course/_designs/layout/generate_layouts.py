@@ -71,13 +71,13 @@ png_path = f"{output_folder}/png/{svg.name}.png"
 PNG.PNG(svg.name, dpi=600).convert(svg_path, png_path)
 PNG.PNG(svg.name, dpi=600).convert(svg_path, f"/home/kampff/NoBlackBoxes/LastBlackBox/course/ownphone/_designs/{svg.name}.png")
 
-# --------
-# Animated
-# --------
+# ----------------
+# Animated (hover)
+# ----------------
 box_parameters_path = f"/home/kampff/NoBlackBoxes/LastBlackBox/course/_designs/logo/box_parameters_LBB.csv"
 animation_parameters_path = f"{output_folder}/animation_parameters_position_hover.csv"
-svg = SVG.SVG("layout_animated", None, 100, 100, "0 0 100 100", with_profile=False, with_title=False, with_labels=True)
+svg = SVG.SVG("layout_animated_hover", None, 100, 100, "0 0 100 100", with_profile=False, with_title=False, with_labels=True)
 svg_path = f"{output_folder}/animated/{svg.name}.svg"
-svg.animate(box_parameters_path, animation_parameters_path, False, False, False, svg_path)
+svg.animate(box_parameters_path, animation_parameters_path, True, False, True, svg_path)
 
 #FIN

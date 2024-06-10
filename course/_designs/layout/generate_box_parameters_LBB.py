@@ -69,7 +69,7 @@ for i in range(num_boxes):
 
     # Write box parameters
     name = boxes[i]
-    box_parameters.append([name, x + x_offset, y + y_offset, box_size, box_size, box_stroke, '000000', 'FFFFFF', arrow_state])
+    box_parameters.append([name, x + x_offset, y + y_offset, box_size, box_size, box_stroke, '#000000', '#FFFFFF', arrow_state, 1.75])
 
     # Set next X,Y (and steps)
     if (i % num_cols) == (num_cols - 1): # Last col

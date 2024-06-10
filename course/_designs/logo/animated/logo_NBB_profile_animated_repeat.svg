@@ -1,207 +1,207 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg id="logo_NBB_profile_animated_repeat" width="100mm" height="125mm" viewBox="0 0 100 125" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
 	<path class="profile" id="head" d="M 36.766274,124.56293 C 36.43594,122.21923 35.11219,102.19327 33.858365,100.59719 30.967333,98.039539 26.56689,98.31006 23.080291,99.23721 20.097634,99.082276 16.885914,99.642988 14.238413,97.877226 10.985701,94.274373 11.371495,89.316454 12.058688,84.783991 L 11.453474,83.424006 9.7584006,82.92969 C 8.9096572,81.766448 8.8734894,79.949036 9.2737493,78.606266 L 9.8789605,78.111949 8.6685371,77.617633 7.5786737,76.506036 C 7.95241,74.270546 9.1797114,71.811261 9.6378407,69.588067 6.9951628,68.481388 2.3994114,68.695347 1.1600537,65.75896 0.51626267,63.425099 12.574685,47.188897 13.150962,45.253439 9.6981207,21.388535 22.583584,4.1120555 46.213365,1.7757344 63.856132,0.65184101 84.621403,4.6358832 94.538679,21.169658 c 6.604281,12.325939 5.299826,27.300526 -0.605212,39.653516 -3.214133,6.049842 -8.007602,12.175921 -10.416393,18.65368 -3.460075,14.708985 3.373272,29.813916 6.662151,43.976936" style="fill-opacity:0;stroke:#FFFFFF;stroke-width:0.5"/>
-<g id="Atoms">
-	<rect class="box" id="box_Atoms" transform="scale(1,1) translate(0, 0)" x="36.111000" y="39.084000" width="13.0" height="13.0" style="fill:#FFFFFF;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+<g id="Atoms" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Atoms" x="36.111" y="39.084" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
-<g id="Electrons">
-	<rect class="box" id="box_Electrons" transform="scale(1,1) translate(0, 0)" x="49.056000" y="41.834000" width="13.0" height="13.0" style="fill:#FFFFFF;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+<g id="Electrons" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Electrons" x="49.056" y="41.834" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
-<g id="Magnets">
-	<rect class="box" id="box_Magnets" transform="scale(1,1) translate(0, 0)" x="50.787000" y="32.810000" width="13.0" height="13.0" style="fill:#FFFFFF;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+<g id="Magnets" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Magnets" x="50.787" y="32.810" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
-<g id="Light">
-	<rect class="box" id="box_Light" transform="scale(1,1) translate(0, 0)" x="62.432000" y="38.147000" width="13.0" height="13.0" style="fill:#FFFFFF;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+<g id="Light" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Light" x="62.432" y="38.147" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
-<g id="Sensors">
-	<rect class="box" id="box_Sensors" transform="scale(1,1) translate(0, 0)" x="57.633000" y="30.232000" width="13.0" height="13.0" style="fill:#FFFFFF;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+<g id="Sensors" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Sensors" x="57.633" y="30.232" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
-<g id="Motors">
-	<rect class="box" id="box_Motors" transform="scale(1,1) translate(0, 0)" x="66.730000" y="33.465000" width="13.0" height="13.0" style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+<g id="Motors" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Motors" x="66.730" y="33.465" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
-<g id="Transistors">
-	<rect class="box" id="box_Transistors" transform="scale(1,1) translate(0, 0)" x="74.113000" y="41.489000" width="13.0" height="13.0" style="fill:#FFFFFF;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+<g id="Transistors" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Transistors" x="74.113" y="41.489" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
-<g id="Amplifiers">
-	<rect class="box" id="box_Amplifiers" transform="scale(1,1) translate(0, 0)" x="77.266000" y="30.664000" width="13.0" height="13.0" style="fill:#FFFFFF;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+<g id="Amplifiers" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Amplifiers" x="77.266" y="30.664" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
-<g id="Circuits">
-	<rect class="box" id="box_Circuits" transform="scale(1,1) translate(0, 0)" x="73.657000" y="23.046000" width="13.0" height="13.0" style="fill:#FFFFFF;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+<g id="Circuits" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Circuits" x="73.657" y="23.046" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
-<g id="Power">
-	<rect class="box" id="box_Power" transform="scale(1,1) translate(0, 0)" x="68.446000" y="18.572000" width="13.0" height="13.0" style="fill:#FFFFFF;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+<g id="Power" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Power" x="68.446" y="18.572" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
-<g id="Data">
-	<rect class="box" id="box_Data" transform="scale(1,1) translate(0, 0)" x="63.531000" y="14.627000" width="13.0" height="13.0" style="fill:#FFFFFF;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+<g id="Data" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Data" x="63.531" y="14.627" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
-<g id="Logic">
-	<rect class="box" id="box_Logic" transform="scale(1,1) translate(0, 0)" x="54.949000" y="12.757000" width="13.0" height="13.0" style="fill:#FFFFFF;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+<g id="Logic" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Logic" x="54.949" y="12.757" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
-<g id="Memory">
-	<rect class="box" id="box_Memory" transform="scale(1,1) translate(0, 0)" x="60.655000" y="25.185000" width="13.0" height="13.0" style="fill:#FFFFFF;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+<g id="Memory" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Memory" x="60.655" y="25.185" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
-<g id="FPGAs">
-	<rect class="box" id="box_FPGAs" transform="scale(1,1) translate(0, 0)" x="50.271000" y="21.576000" width="13.0" height="13.0" style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+<g id="FPGAs" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_FPGAs" x="50.271" y="21.576" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
-<g id="Computers">
-	<rect class="box" id="box_Computers" transform="scale(1,1) translate(0, 0)" x="45.460000" y="11.821000" width="13.0" height="13.0" style="fill:#FFFFFF;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+<g id="Computers" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Computers" x="45.460" y="11.821" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
-<g id="Control">
-	<rect class="box" id="box_Control" transform="scale(1,1) translate(0, 0)" x="35.438000" y="13.826000" width="13.0" height="13.0" style="fill:#FFFFFF;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+<g id="Control" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Control" x="35.438" y="13.826" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
-<g id="Robotics">
-	<rect class="box" id="box_Robotics" transform="scale(1,1) translate(0, 0)" x="40.347000" y="23.227000" width="13.0" height="13.0" style="fill:#FFFFFF;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+<g id="Robotics" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Robotics" x="40.347" y="23.227" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
-<g id="Systems">
-	<rect class="box" id="box_Systems" transform="scale(1,1) translate(0, 0)" x="34.536000" y="27.456000" width="13.0" height="13.0" style="fill:#FFFFFF;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+<g id="Systems" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Systems" x="34.536" y="27.456" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
-<g id="Linux">
-	<rect class="box" id="box_Linux" transform="scale(1,1) translate(0, 0)" x="27.519000" y="16.498000" width="13.0" height="13.0" style="fill:#FFFFFF;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+<g id="Linux" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Linux" x="27.519" y="16.498" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
-<g id="Python">
-	<rect class="box" id="box_Python" transform="scale(1,1) translate(0, 0)" x="21.807000" y="21.443000" width="13.0" height="13.0" style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+<g id="Python" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Python" x="21.807" y="21.443" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
-<g id="Networks">
-	<rect class="box" id="box_Networks" transform="scale(1,1) translate(0, 0)" x="18.733000" y="26.922000" width="13.0" height="13.0" style="fill:#FFFFFF;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+<g id="Networks" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Networks" x="18.733" y="26.922" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
-<g id="Websites">
-	<rect class="box" id="box_Websites" transform="scale(1,1) translate(0, 0)" x="21.807000" y="33.470000" width="13.0" height="13.0" style="fill:#FFFFFF;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+<g id="Websites" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Websites" x="21.807" y="33.470" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
-<g id="Servers">
-	<rect class="box" id="box_Servers" transform="scale(1,1) translate(0, 0)" x="54.552000" y="48.843000" width="13.0" height="13.0" style="fill:#FFFFFF;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+<g id="Servers" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Servers" x="54.552" y="48.843" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
-<g id="Security">
-	<rect class="box" id="box_Security" transform="scale(1,1) translate(0, 0)" x="70.787000" y="46.432000" width="13.0" height="13.0" style="fill:#FFFFFF;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+<g id="Security" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Security" x="70.787" y="46.432" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
-<g id="Audio">
-	<rect class="box" id="box_Audio" transform="scale(1,1) translate(0, 0)" x="61.365000" y="51.345000" width="13.0" height="13.0" style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+<g id="Audio" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Audio" x="61.365" y="51.345" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
-<g id="Vision">
-	<rect class="box" id="box_Vision" transform="scale(1,1) translate(0, 0)" x="66.080000" y="57.178000" width="13.0" height="13.0" style="fill:#FFFFFF;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+<g id="Vision" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Vision" x="66.080" y="57.178" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
-<g id="Learning">
-	<rect class="box" id="box_Learning" transform="scale(1,1) translate(0, 0)" x="28.050000" y="36.314000" width="13.0" height="13.0" style="fill:#FFFFFF;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+<g id="Learning" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Learning" x="28.050" y="36.314" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
-<g id="Intelligence">
-	<rect class="box" id="box_Intelligence" transform="scale(1,1) translate(0, 0)" x="37.787000" y="32.810000" width="13.0" height="13.0" style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+<g id="Intelligence" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Intelligence" x="37.787" y="32.810" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
 <style>
-	#box_Atoms  {animation: animate_Atoms 4.00s linear infinite; animation-delay: 0.00s}
-	#box_Electrons  {animation: animate_Electrons 4.00s linear infinite; animation-delay: 0.00s}
-	#box_Magnets  {animation: animate_Magnets 4.00s linear infinite; animation-delay: 0.00s}
-	#box_Light  {animation: animate_Light 4.00s linear infinite; animation-delay: 0.00s}
-	#box_Sensors  {animation: animate_Sensors 4.00s linear infinite; animation-delay: 0.00s}
-	#box_Motors  {animation: animate_Motors 4.00s linear infinite; animation-delay: 0.00s}
-	#box_Transistors  {animation: animate_Transistors 4.00s linear infinite; animation-delay: 0.00s}
-	#box_Amplifiers  {animation: animate_Amplifiers 4.00s linear infinite; animation-delay: 0.00s}
-	#box_Circuits  {animation: animate_Circuits 4.00s linear infinite; animation-delay: 0.00s}
-	#box_Power  {animation: animate_Power 4.00s linear infinite; animation-delay: 0.00s}
-	#box_Data  {animation: animate_Data 4.00s linear infinite; animation-delay: 0.00s}
-	#box_Logic  {animation: animate_Logic 4.00s linear infinite; animation-delay: 0.00s}
-	#box_Memory  {animation: animate_Memory 4.00s linear infinite; animation-delay: 0.00s}
-	#box_FPGAs  {animation: animate_FPGAs 4.00s linear infinite; animation-delay: 0.00s}
-	#box_Computers  {animation: animate_Computers 4.00s linear infinite; animation-delay: 0.00s}
-	#box_Control  {animation: animate_Control 4.00s linear infinite; animation-delay: 0.00s}
-	#box_Robotics  {animation: animate_Robotics 4.00s linear infinite; animation-delay: 0.00s}
-	#box_Systems  {animation: animate_Systems 4.00s linear infinite; animation-delay: 0.00s}
-	#box_Linux  {animation: animate_Linux 4.00s linear infinite; animation-delay: 0.00s}
-	#box_Python  {animation: animate_Python 4.00s linear infinite; animation-delay: 0.00s}
-	#box_Networks  {animation: animate_Networks 4.00s linear infinite; animation-delay: 0.00s}
-	#box_Websites  {animation: animate_Websites 4.00s linear infinite; animation-delay: 0.00s}
-	#box_Servers  {animation: animate_Servers 4.00s linear infinite; animation-delay: 0.00s}
-	#box_Security  {animation: animate_Security 4.00s linear infinite; animation-delay: 0.00s}
-	#box_Audio  {animation: animate_Audio 4.00s linear infinite; animation-delay: 0.00s}
-	#box_Vision  {animation: animate_Vision 4.00s linear infinite; animation-delay: 0.00s}
-	#box_Learning  {animation: animate_Learning 4.00s linear infinite; animation-delay: 0.00s}
-	#box_Intelligence  {animation: animate_Intelligence 4.00s linear infinite; animation-delay: 0.00s}
+	#Atoms  {animation: animate_Atoms 4.20s linear infinite; animation-delay: 1s}
+	#Electrons  {animation: animate_Electrons 4.20s linear infinite; animation-delay: 1s}
+	#Magnets  {animation: animate_Magnets 4.20s linear infinite; animation-delay: 1s}
+	#Light  {animation: animate_Light 4.20s linear infinite; animation-delay: 1s}
+	#Sensors  {animation: animate_Sensors 4.20s linear infinite; animation-delay: 1s}
+	#Motors  {animation: animate_Motors 4.20s linear infinite; animation-delay: 1s}
+	#Transistors  {animation: animate_Transistors 4.20s linear infinite; animation-delay: 1s}
+	#Amplifiers  {animation: animate_Amplifiers 4.20s linear infinite; animation-delay: 1s}
+	#Circuits  {animation: animate_Circuits 4.20s linear infinite; animation-delay: 1s}
+	#Power  {animation: animate_Power 4.20s linear infinite; animation-delay: 1s}
+	#Data  {animation: animate_Data 4.20s linear infinite; animation-delay: 1s}
+	#Logic  {animation: animate_Logic 4.20s linear infinite; animation-delay: 1s}
+	#Memory  {animation: animate_Memory 4.20s linear infinite; animation-delay: 1s}
+	#FPGAs  {animation: animate_FPGAs 4.20s linear infinite; animation-delay: 1s}
+	#Computers  {animation: animate_Computers 4.20s linear infinite; animation-delay: 1s}
+	#Control  {animation: animate_Control 4.20s linear infinite; animation-delay: 1s}
+	#Robotics  {animation: animate_Robotics 4.20s linear infinite; animation-delay: 1s}
+	#Systems  {animation: animate_Systems 4.20s linear infinite; animation-delay: 1s}
+	#Linux  {animation: animate_Linux 4.20s linear infinite; animation-delay: 1s}
+	#Python  {animation: animate_Python 4.20s linear infinite; animation-delay: 1s}
+	#Networks  {animation: animate_Networks 4.20s linear infinite; animation-delay: 1s}
+	#Websites  {animation: animate_Websites 4.20s linear infinite; animation-delay: 1s}
+	#Servers  {animation: animate_Servers 4.20s linear infinite; animation-delay: 1s}
+	#Security  {animation: animate_Security 4.20s linear infinite; animation-delay: 1s}
+	#Audio  {animation: animate_Audio 4.20s linear infinite; animation-delay: 1s}
+	#Vision  {animation: animate_Vision 4.20s linear infinite; animation-delay: 1s}
+	#Learning  {animation: animate_Learning 4.20s linear infinite; animation-delay: 1s}
+	#Intelligence  {animation: animate_Intelligence 4.20s linear infinite; animation-delay: 1s}
 
 	@keyframes animate_Atoms {
 		0%     {fill:#000000;stroke:#FFFFFF;}
-		14%    {fill:#FFFFFF;stroke:#000000;}
+		13%    {fill:#FFFFFF;stroke:#000000;}
 		100%   {fill:#FFFFFF;stroke:#000000;}
 	}
 
 	@keyframes animate_Electrons {
 		0%     {fill:#000000;stroke:#FFFFFF;}
-		28%    {fill:#FFFFFF;stroke:#000000;}
+		27%    {fill:#FFFFFF;stroke:#000000;}
 		100%   {fill:#FFFFFF;stroke:#000000;}
 	}
 
 	@keyframes animate_Magnets {
 		0%     {fill:#000000;stroke:#FFFFFF;}
-		30%    {fill:#FFFFFF;stroke:#000000;}
+		29%    {fill:#FFFFFF;stroke:#000000;}
 		100%   {fill:#FFFFFF;stroke:#000000;}
 	}
 
 	@keyframes animate_Light {
 		0%     {fill:#000000;stroke:#FFFFFF;}
-		14%    {fill:#FFFFFF;stroke:#000000;}
+		13%    {fill:#FFFFFF;stroke:#000000;}
 		100%   {fill:#FFFFFF;stroke:#000000;}
 	}
 
 	@keyframes animate_Sensors {
 		0%     {fill:#000000;stroke:#FFFFFF;}
-		21%    {fill:#FFFFFF;stroke:#000000;}
+		20%    {fill:#FFFFFF;stroke:#000000;}
 		100%   {fill:#FFFFFF;stroke:#000000;}
 	}
 
 	@keyframes animate_Motors {
 		0%     {fill:#000000;stroke:#FFFFFF;}
-		73%    {fill:#000000;stroke:#FFFFFF;}
+		70%    {fill:#000000;stroke:#FFFFFF;}
 		100%   {fill:#FFFFFF;stroke:#000000;}
 	}
 
 	@keyframes animate_Transistors {
 		0%     {fill:#000000;stroke:#FFFFFF;}
-		7%    {fill:#FFFFFF;stroke:#000000;}
+		6%    {fill:#FFFFFF;stroke:#000000;}
 		100%   {fill:#FFFFFF;stroke:#000000;}
 	}
 
 	@keyframes animate_Amplifiers {
 		0%     {fill:#000000;stroke:#FFFFFF;}
-		23%    {fill:#FFFFFF;stroke:#000000;}
+		22%    {fill:#FFFFFF;stroke:#000000;}
 		100%   {fill:#FFFFFF;stroke:#000000;}
 	}
 
 	@keyframes animate_Circuits {
 		0%     {fill:#000000;stroke:#FFFFFF;}
-		28%    {fill:#FFFFFF;stroke:#000000;}
+		27%    {fill:#FFFFFF;stroke:#000000;}
 		100%   {fill:#FFFFFF;stroke:#000000;}
 	}
 
 	@keyframes animate_Power {
 		0%     {fill:#000000;stroke:#FFFFFF;}
-		14%    {fill:#FFFFFF;stroke:#000000;}
+		13%    {fill:#FFFFFF;stroke:#000000;}
 		100%   {fill:#FFFFFF;stroke:#000000;}
 	}
 
 	@keyframes animate_Data {
 		0%     {fill:#000000;stroke:#FFFFFF;}
-		16%    {fill:#FFFFFF;stroke:#000000;}
+		15%    {fill:#FFFFFF;stroke:#000000;}
 		100%   {fill:#FFFFFF;stroke:#000000;}
 	}
 
 	@keyframes animate_Logic {
 		0%     {fill:#000000;stroke:#FFFFFF;}
-		28%    {fill:#FFFFFF;stroke:#000000;}
+		27%    {fill:#FFFFFF;stroke:#000000;}
 		100%   {fill:#FFFFFF;stroke:#000000;}
 	}
 
 	@keyframes animate_Memory {
 		0%     {fill:#000000;stroke:#FFFFFF;}
-		16%    {fill:#FFFFFF;stroke:#000000;}
+		15%    {fill:#FFFFFF;stroke:#000000;}
 		100%   {fill:#FFFFFF;stroke:#000000;}
 	}
 
 	@keyframes animate_FPGAs {
 		0%     {fill:#000000;stroke:#FFFFFF;}
-		23%    {fill:#000000;stroke:#FFFFFF;}
+		22%    {fill:#000000;stroke:#FFFFFF;}
 		100%   {fill:#FFFFFF;stroke:#000000;}
 	}
 
 	@keyframes animate_Computers {
 		0%     {fill:#000000;stroke:#FFFFFF;}
-		16%    {fill:#FFFFFF;stroke:#000000;}
+		15%    {fill:#FFFFFF;stroke:#000000;}
 		100%   {fill:#FFFFFF;stroke:#000000;}
 	}
 
@@ -213,37 +213,37 @@
 
 	@keyframes animate_Robotics {
 		0%     {fill:#000000;stroke:#FFFFFF;}
-		16%    {fill:#FFFFFF;stroke:#000000;}
+		15%    {fill:#FFFFFF;stroke:#000000;}
 		100%   {fill:#FFFFFF;stroke:#000000;}
 	}
 
 	@keyframes animate_Systems {
 		0%     {fill:#000000;stroke:#FFFFFF;}
-		35%    {fill:#FFFFFF;stroke:#000000;}
+		33%    {fill:#FFFFFF;stroke:#000000;}
 		100%   {fill:#FFFFFF;stroke:#000000;}
 	}
 
 	@keyframes animate_Linux {
 		0%     {fill:#000000;stroke:#FFFFFF;}
-		23%    {fill:#FFFFFF;stroke:#000000;}
+		22%    {fill:#FFFFFF;stroke:#000000;}
 		100%   {fill:#FFFFFF;stroke:#000000;}
 	}
 
 	@keyframes animate_Python {
 		0%     {fill:#000000;stroke:#FFFFFF;}
-		68%    {fill:#000000;stroke:#FFFFFF;}
+		65%    {fill:#000000;stroke:#FFFFFF;}
 		100%   {fill:#FFFFFF;stroke:#000000;}
 	}
 
 	@keyframes animate_Networks {
 		0%     {fill:#000000;stroke:#FFFFFF;}
-		14%    {fill:#FFFFFF;stroke:#000000;}
+		13%    {fill:#FFFFFF;stroke:#000000;}
 		100%   {fill:#FFFFFF;stroke:#000000;}
 	}
 
 	@keyframes animate_Websites {
 		0%     {fill:#000000;stroke:#FFFFFF;}
-		33%    {fill:#FFFFFF;stroke:#000000;}
+		31%    {fill:#FFFFFF;stroke:#000000;}
 		100%   {fill:#FFFFFF;stroke:#000000;}
 	}
 
@@ -255,31 +255,31 @@
 
 	@keyframes animate_Security {
 		0%     {fill:#000000;stroke:#FFFFFF;}
-		21%    {fill:#FFFFFF;stroke:#000000;}
+		20%    {fill:#FFFFFF;stroke:#000000;}
 		100%   {fill:#FFFFFF;stroke:#000000;}
 	}
 
 	@keyframes animate_Audio {
 		0%     {fill:#000000;stroke:#FFFFFF;}
-		56%    {fill:#000000;stroke:#FFFFFF;}
+		54%    {fill:#000000;stroke:#FFFFFF;}
 		100%   {fill:#FFFFFF;stroke:#000000;}
 	}
 
 	@keyframes animate_Vision {
 		0%     {fill:#000000;stroke:#FFFFFF;}
-		14%    {fill:#FFFFFF;stroke:#000000;}
+		13%    {fill:#FFFFFF;stroke:#000000;}
 		100%   {fill:#FFFFFF;stroke:#000000;}
 	}
 
 	@keyframes animate_Learning {
 		0%     {fill:#000000;stroke:#FFFFFF;}
-		7%    {fill:#FFFFFF;stroke:#000000;}
+		6%    {fill:#FFFFFF;stroke:#000000;}
 		100%   {fill:#FFFFFF;stroke:#000000;}
 	}
 
 	@keyframes animate_Intelligence {
 		0%     {fill:#000000;stroke:#FFFFFF;}
-		92%    {fill:#000000;stroke:#FFFFFF;}
+		88%    {fill:#000000;stroke:#FFFFFF;}
 		100%   {fill:#FFFFFF;stroke:#000000;}
 	}
 </style>
