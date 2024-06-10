@@ -131,31 +131,31 @@ box_parameters_path = f"{output_folder}/box_parameters_NBB.csv"
 animation_parameters_path = f"{output_folder}/animation_parameters_fill_stroke_delay.csv"
 svg = SVG.SVG("logo_NBB_animated_delay", None, 100, 100, "0 0 100 100", with_profile=False, with_title=False)
 svg_path = f"{output_folder}/animated/{svg.name}.svg"
-svg.animate(box_parameters_path, animation_parameters_path, False, False, svg_path)
+svg.animate(box_parameters_path, animation_parameters_path, False, False, False, svg_path)
 # NBB (hover)
 animation_parameters_path = f"{output_folder}/animation_parameters_fill_stroke_hover.csv"
 svg = SVG.SVG("logo_NBB_animated_hover", None, 100, 100, "0 0 100 100", with_profile=False, with_title=False)
 svg_path = f"{output_folder}/animated/{svg.name}.svg"
-svg.animate(box_parameters_path, animation_parameters_path, True, False, svg_path)
+svg.animate(box_parameters_path, animation_parameters_path, True, False, False, svg_path)
 # NBB (repeat)
 animation_parameters_path = f"{output_folder}/animation_parameters_fill_stroke_repeat.csv"
 svg = SVG.SVG("logo_NBB_animated_repeat", None, 100, 100, "0 0 100 100", with_profile=False, with_title=False)
 svg_path = f"{output_folder}/animated/{svg.name}.svg"
-svg.animate(box_parameters_path, animation_parameters_path, False, True, svg_path)
+svg.animate(box_parameters_path, animation_parameters_path, False, True, False, svg_path)
 # Profile
 animation_parameters_path = f"{output_folder}/animation_parameters_fill_stroke_delay.csv"
 svg = SVG.SVG("logo_NBB_profile_animated_delay", None, 100, 125, "0 0 100 125", with_profile=True, with_title=False)
 svg_path = f"{output_folder}/animated/{svg.name}.svg"
-svg.animate(box_parameters_path, animation_parameters_path, False, False, svg_path)
+svg.animate(box_parameters_path, animation_parameters_path, False, False, False, svg_path)
 # Profile (hover)
 animation_parameters_path = f"{output_folder}/animation_parameters_fill_stroke_hover.csv"
 svg = SVG.SVG("logo_NBB_profile_animated_hover", None, 100, 125, "0 0 100 125", with_profile=True, with_title=False)
 svg_path = f"{output_folder}/animated/{svg.name}.svg"
-svg.animate(box_parameters_path, animation_parameters_path, True, False, svg_path)
+svg.animate(box_parameters_path, animation_parameters_path, True, False, False, svg_path)
 # Profile (repeat)
 animation_parameters_path = f"{output_folder}/animation_parameters_fill_stroke_repeat.csv"
 svg = SVG.SVG("logo_NBB_profile_animated_repeat", None, 100, 125, "0 0 100 125", with_profile=True, with_title=False)
 svg_path = f"{output_folder}/animated/{svg.name}.svg"
-svg.animate(box_parameters_path, animation_parameters_path, False, True, svg_path)
+svg.animate(box_parameters_path, animation_parameters_path, False, True, False, svg_path)
 
 #FIN

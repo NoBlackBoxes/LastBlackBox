@@ -85,34 +85,34 @@
 	<rect class="box" id="box_Intelligence" transform="scale(1,1) translate(0, 0)" x="32.787000" y="43.810000" width="13.0" height="13.0" style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
 <style>
-	#logo_NBB_animated_hover:hover #box_Atoms			 {animation: animate_Atoms 0.60s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#logo_NBB_animated_hover:hover #box_Electrons		 {animation: animate_Electrons 1.20s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#logo_NBB_animated_hover:hover #box_Magnets		 {animation: animate_Magnets 1.30s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#logo_NBB_animated_hover:hover #box_Light			 {animation: animate_Light 0.60s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#logo_NBB_animated_hover:hover #box_Sensors		 {animation: animate_Sensors 0.90s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#logo_NBB_animated_hover:hover #box_Motors			 {animation: animate_Motors 3.10s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#logo_NBB_animated_hover:hover #box_Transistors	 {animation: animate_Transistors 0.30s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#logo_NBB_animated_hover:hover #box_Amplifiers		 {animation: animate_Amplifiers 1.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#logo_NBB_animated_hover:hover #box_Circuits		 {animation: animate_Circuits 1.20s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#logo_NBB_animated_hover:hover #box_Power			 {animation: animate_Power 0.60s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#logo_NBB_animated_hover:hover #box_Data			 {animation: animate_Data 0.70s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#logo_NBB_animated_hover:hover #box_Logic			 {animation: animate_Logic 1.20s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#logo_NBB_animated_hover:hover #box_Memory			 {animation: animate_Memory 0.70s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#logo_NBB_animated_hover:hover #box_FPGAs			 {animation: animate_FPGAs 1.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#logo_NBB_animated_hover:hover #box_Computers		 {animation: animate_Computers 0.70s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#logo_NBB_animated_hover:hover #box_Control		 {animation: animate_Control 0.40s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#logo_NBB_animated_hover:hover #box_Robotics		 {animation: animate_Robotics 0.70s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#logo_NBB_animated_hover:hover #box_Systems		 {animation: animate_Systems 1.50s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#logo_NBB_animated_hover:hover #box_Linux			 {animation: animate_Linux 1.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#logo_NBB_animated_hover:hover #box_Python			 {animation: animate_Python 2.90s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#logo_NBB_animated_hover:hover #box_Networks		 {animation: animate_Networks 0.60s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#logo_NBB_animated_hover:hover #box_Websites		 {animation: animate_Websites 1.40s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#logo_NBB_animated_hover:hover #box_Servers		 {animation: animate_Servers 0.40s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#logo_NBB_animated_hover:hover #box_Security		 {animation: animate_Security 0.90s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#logo_NBB_animated_hover:hover #box_Audio			 {animation: animate_Audio 2.40s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#logo_NBB_animated_hover:hover #box_Vision			 {animation: animate_Vision 0.60s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#logo_NBB_animated_hover:hover #box_Learning		 {animation: animate_Learning 0.30s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
-	#logo_NBB_animated_hover:hover #box_Intelligence	 {animation: animate_Intelligence 3.90s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
+	#logo_NBB_animated_hover:hover #box_Atoms {animation: animate_Atoms 0.60s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
+	#logo_NBB_animated_hover:hover #box_Electrons {animation: animate_Electrons 1.20s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
+	#logo_NBB_animated_hover:hover #box_Magnets {animation: animate_Magnets 1.30s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
+	#logo_NBB_animated_hover:hover #box_Light {animation: animate_Light 0.60s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
+	#logo_NBB_animated_hover:hover #box_Sensors {animation: animate_Sensors 0.90s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
+	#logo_NBB_animated_hover:hover #box_Motors {animation: animate_Motors 3.10s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
+	#logo_NBB_animated_hover:hover #box_Transistors {animation: animate_Transistors 0.30s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
+	#logo_NBB_animated_hover:hover #box_Amplifiers {animation: animate_Amplifiers 1.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
+	#logo_NBB_animated_hover:hover #box_Circuits {animation: animate_Circuits 1.20s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
+	#logo_NBB_animated_hover:hover #box_Power {animation: animate_Power 0.60s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
+	#logo_NBB_animated_hover:hover #box_Data {animation: animate_Data 0.70s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
+	#logo_NBB_animated_hover:hover #box_Logic {animation: animate_Logic 1.20s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
+	#logo_NBB_animated_hover:hover #box_Memory {animation: animate_Memory 0.70s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
+	#logo_NBB_animated_hover:hover #box_FPGAs {animation: animate_FPGAs 1.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
+	#logo_NBB_animated_hover:hover #box_Computers {animation: animate_Computers 0.70s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
+	#logo_NBB_animated_hover:hover #box_Control {animation: animate_Control 0.40s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
+	#logo_NBB_animated_hover:hover #box_Robotics {animation: animate_Robotics 0.70s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
+	#logo_NBB_animated_hover:hover #box_Systems {animation: animate_Systems 1.50s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
+	#logo_NBB_animated_hover:hover #box_Linux {animation: animate_Linux 1.00s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
+	#logo_NBB_animated_hover:hover #box_Python {animation: animate_Python 2.90s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
+	#logo_NBB_animated_hover:hover #box_Networks {animation: animate_Networks 0.60s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
+	#logo_NBB_animated_hover:hover #box_Websites {animation: animate_Websites 1.40s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
+	#logo_NBB_animated_hover:hover #box_Servers {animation: animate_Servers 0.40s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
+	#logo_NBB_animated_hover:hover #box_Security {animation: animate_Security 0.90s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
+	#logo_NBB_animated_hover:hover #box_Audio {animation: animate_Audio 2.40s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
+	#logo_NBB_animated_hover:hover #box_Vision {animation: animate_Vision 0.60s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
+	#logo_NBB_animated_hover:hover #box_Learning {animation: animate_Learning 0.30s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
+	#logo_NBB_animated_hover:hover #box_Intelligence {animation: animate_Intelligence 3.90s linear; animation-fill-mode: forwards; animation-delay: 0.00s}
 
 	@keyframes animate_Atoms {
 		0%     {fill:#000000;stroke:#FFFFFF;}
