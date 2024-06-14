@@ -24,6 +24,7 @@ import glob
 from werkzeug.security import generate_password_hash, check_password_hash
 
 # Import modules
+import Design.svg as SVG
 
 # User Class
 class User:
@@ -131,4 +132,24 @@ class User:
                 num_11 += 1
         self.progress = [num_open, num_01, num_10, num_11]
         return
+
+    def generate_badge(self, static_folder):
+        user_folder = f"{data_path}/users/{self.id}"
+        resources_folder = f"{static_folder}/resources"
+        box_parameters_path = f"{resources_folder}/box_parameters_badge.csv"
+        animation_parameters_path = f"{resources_folder}/animation_parameters_badge.csv"
+        svg = SVG.SVG(f"brain_badge", None, 100, 100, "0 0 100 100", with_profile=False, with_title=False, with_labels=True)
+        svg_path = f"{user_folder}/badge_{self.id}.svg"
+        svg.animate(box_parameters_path, animation_parameters_path, True, False, True, svg_path)
+        with open(svg_path, 'r') as file:
+            next(file)
+            svg_string = file.read()
+        return svg_string
+
+    def download_badge(self, static_folder):
+        user_folder = f"{data_path}/users/{self.id}"
+        svg_path = f"{user_folder}/badge_{self.id}.svg"
+        # Convert to PDF? blah blah
+        return
+
 # FIN

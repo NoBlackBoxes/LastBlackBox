@@ -19,7 +19,7 @@
   <hr>
   Here is your brain badge:
   <div id="content">
-    <img id="logo" src="{{url_for('static', filename='images/logo/logo_LBB_white_text.svg')}}" alt="Last Black Box Logo">
+    {{badge | safe}}
   </div>
   </body>
 </html>

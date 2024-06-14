@@ -109,7 +109,8 @@ def logout():
 @login_required
 def user():
     current_user.update_progress()
-    return render_template('user.html', user=current_user)
+    badge = current_user.generate_badge(app.static_folder)
+    return render_template('user.html', user=current_user, badge=badge)
 
 # Serve Recovery
 @app.route('/recovery', methods=['GET', 'POST'])
