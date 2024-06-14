@@ -1,0 +1,59 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    background: black;
+    color: #FFFFFF;
+}
+
+#layout {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0,0,0,1.0);
+    background-attachment:fixed;
+    filter: brightness(10%);
+}
+
+#content {
+    position: absolute; 
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    filter: brightness(100%);
+}
+
+#logo {
+    align-items: center;
+    height: 30vw;
+    filter: brightness(100%);
+    margin-bottom: -10px;
+
+    @media screen and (max-width: 768px) {
+        height: 60vw;
+        margin-bottom: 20px;
+    }
+}
+
+#logout {
+    padding: 4px 8px;
+    border: 1px yellow;
+    border-style: solid;
+    border-radius: 3px;
+    color: yellow;
+    background-color: black;
+    text-decoration: none;
+}
+
+#logout:hover {
+    color: black;
+    background-color: yellow;
+}
+
+#error {
+    color: red;
+}

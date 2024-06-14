@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <head>
   {% include 'pwa.html' %}
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/user.css')}}"/>
 </head>
-
 <html>
   <body>
-
   Hi {{user['name']}}!<br>
   Your user ID is {{user['id']}}<br>
   Your email is {{user['email']}}<br>
@@ -16,7 +15,11 @@
   You have opened <b>{{user['progress'][0]}} black boxes!</b> <i>({{user['progress'][1]}} to level 01, {{user['progress'][2]}} to level 10, and {{user['progress'][3]}} to level 11)</i><br>
   <a href="{{user['current_box']}}/{{user['current_topic']}}">Continue Course!</a>
   <hr>
-  <a href="logout">Logout</a>
-
+  <a id="logout" href="logout">Logout</a>
+  <hr>
+  Here is your brain badge:
+  <div id="content">
+    <img id="logo" src="{{url_for('static', filename='images/logo/logo_LBB_white_text.svg')}}" alt="Last Black Box Logo">
+  </div>
   </body>
 </html>

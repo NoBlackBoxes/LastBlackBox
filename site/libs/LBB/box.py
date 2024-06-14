@@ -86,7 +86,7 @@ class Box:
         header.append("<!DOCTYPE html>\n")
         header.append("<head>\n")
         header.append("{% include 'pwa.html' %}\n")
-        header.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"{{url_for('static', filename='styles/topic_style.css')}}\"/>\n")
+        header.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"{{url_for('static', filename='styles/topic.css')}}\"/>\n")
         header.append("</head>\n\n")
         header.append("<html>\n<body>\n\n")
         header.append(f"<title>LBB : {self.name} : {self.topics[topic_index].name}</title>\n")
