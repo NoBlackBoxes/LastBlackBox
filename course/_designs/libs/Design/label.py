@@ -23,7 +23,7 @@ class Label:
         return
     
     def draw(self):
-        style = f"font-style:normal;font-weight:700;line-height:{self.height};font-family:'{self.family}';white-space:pre;display:inline;fill:#{self.fill};fill-opacity:1;stroke:none"
+        style = f"font-style:normal;font-weight:700;line-height:{self.height};font-family:'{self.family}';white-space:pre;display:inline;fill:{self.fill};fill-opacity:1;stroke:none"
         tag = f"\t<text class= \"text\" id=\"text_{self.name}\" x=\"{self.x:.3f}\" y=\"{self.y:.3f}\" style=\"{style}\" {self.anchor}>{self.text}</text>\n"
         return tag
 

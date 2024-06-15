@@ -35,7 +35,10 @@ class Box:
         tag.append(rect)
         if self.label != None:
             anchor =  "alignment-baseline=\"middle\" text-anchor=\"middle\""
-            label = Label.Label(self.name, self.label, self.x+self.width/2.0, self.y+1.75/3.0+self.height/2.0, 1.00, "FFFFFF", "Arial", anchor)
+            if (self.fill == "#000000"):
+                label = Label.Label(self.name, self.label, self.x+self.width/2.0, self.y+1.75/3.0+self.height/2.0, 1.00, "#FFFFFF", "Arial", anchor)
+            else:
+                label = Label.Label(self.name, self.label, self.x+self.width/2.0, self.y+1.75/3.0+self.height/2.0, 1.00, "#000000", "Arial", anchor)
             tag.append(label.draw())
         if self.state != 0:
             arrow = Arrow.Arrow(self, "DDDDDD", self.state)

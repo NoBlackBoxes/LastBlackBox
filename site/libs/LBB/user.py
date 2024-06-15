@@ -21,6 +21,8 @@ sys.path.append(libs_path)
 # Import libraries
 import pickle
 import glob
+import csv
+import numpy as np
 from werkzeug.security import generate_password_hash, check_password_hash
 
 # Import modules
@@ -133,11 +135,10 @@ class User:
         self.progress = [num_open, num_01, num_10, num_11]
         return
 
-    def generate_badge(self, static_folder):
+    def generate_badge(self):
         user_folder = f"{data_path}/users/{self.id}"
-        resources_folder = f"{static_folder}/resources"
-        box_parameters_path = f"{resources_folder}/box_parameters_badge.csv"
-        animation_parameters_path = f"{resources_folder}/animation_parameters_badge.csv"
+        box_parameters_path = f"{user_folder}/box_parameters_badge.csv"
+        animation_parameters_path = f"{user_folder}/animation_parameters_badge.csv"
         svg = SVG.SVG(f"brain_badge", None, 100, 100, "0 0 100 100", with_profile=False, with_title=False, with_labels=True)
         svg_path = f"{user_folder}/badge_{self.id}.svg"
         svg.animate(box_parameters_path, animation_parameters_path, True, False, True, svg_path)
@@ -145,6 +146,36 @@ class User:
             next(file)
             svg_string = file.read()
         return svg_string
+
+    def generate_badge_parameters(self, static_folder):
+        user_folder = f"{data_path}/users/{self.id}"
+        resources_folder = f"{static_folder}/resources"
+        box_parameters_template_path = f"{resources_folder}/box_parameters_badge.csv"
+        box_parameters_user_path = f"{user_folder}/box_parameters_badge.csv"
+        box_parameters = np.genfromtxt(box_parameters_template_path, delimiter=",", dtype=str, comments='##')
+        animation_parameters_template_path = f"{resources_folder}/animation_parameters_badge.csv"
+        animation_parameters_user_path = f"{user_folder}/animation_parameters_badge.csv"
+        animation_parameters = np.genfromtxt(animation_parameters_template_path, delimiter=",", dtype=str, comments='##')
+        for i, level in enumerate(self.boxes.values()):
+            if level == '00':
+                fill = "#000000"
+                stroke = "#FFFFFF"
+            elif level == '01':
+                fill = "#888888"
+                stroke = "#FFFFFF"
+            elif level == '10':
+                fill = "#FFFFFF"
+                stroke = "#AAAAAA"
+            elif level == '11':
+                fill = "#FFFF00"
+                stroke = "#FFFFFF"
+            box_parameters[i, 6] = fill
+            box_parameters[i, 7] = stroke
+        with open(box_parameters_user_path, 'w') as f:
+            csv.writer(f).writerows(box_parameters)
+        with open(animation_parameters_user_path, 'w') as f:
+            csv.writer(f).writerows(animation_parameters)
+        return
 
     def download_badge(self, static_folder):
         user_folder = f"{data_path}/users/{self.id}"
