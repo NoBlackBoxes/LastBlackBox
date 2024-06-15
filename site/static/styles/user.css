@@ -12,10 +12,15 @@ body, html {
     background-size: cover;
     background-color: rgba(0,0,0,1.0);
     background-attachment:fixed;
-    filter: brightness(10%);
+    filter: brightness(7%);
 }
 
 #content {
+    position: absolute; 
+    top: 5%;
+    left: 10%;
+    width:80%;
+    transform: translate(0%, 0%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,7 +28,106 @@ body, html {
     filter: brightness(100%);
 }
 
+#greeting {
+    font-size: 72px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#name {
+    color: yellow;
+}
+
+#status {
+    font-size: 32px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+#box_count {
+    font-size: 48px;
+    color: yellow;
+}
+
+#progress {
+    font-size: 16px;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+#level_01 {
+    font-size: 18px;
+    color: #999999;
+}
+
+#level_10 {
+    font-size: 16px;
+    color: white;
+}
+
+#level_11 {
+    font-size: 16px;
+    color: yellow;
+}
+
+#brain_badge {
+    width: 50%;
+    height: 50%;
+}
+
+#download {
+    margin-top: -10px;
+    margin-bottom: 0px;
+    color: gray;
+    text-decoration: none;
+    font-size: 1vw;
+}
+
+#download:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+#continue {
+    margin-top: 10px;
+    padding: 6px 18px;
+    border: 1px yellow;
+    border-style: solid;
+    border-radius: 11px;
+    color: black;
+    background-color: yellow;
+    text-decoration: none;
+    font-size: 2vw;
+}
+
+#continue:hover {
+    color: yellow;
+    background-color: black;
+}
+
+#current_course {
+    font-weight: 700;
+}
+
+#user_info {
+    width: 40%;
+    border-radius: 11px;
+    border-style: solid;
+    border-width: 7px;
+    border-color: #222222;
+    margin-top: 50px;
+    background-color: #444444;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #logout {
+    position: absolute;
+    right: 2%;
+    top: 2%;
     padding: 4px 8px;
     border: 1px yellow;
     border-style: solid;
@@ -40,9 +144,4 @@ body, html {
 
 #error {
     color: red;
-}
-
-#brain_badge {
-    width: 40%;
-    height: 40%;
 }

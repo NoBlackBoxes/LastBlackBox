@@ -139,7 +139,7 @@ class User:
         user_folder = f"{data_path}/users/{self.id}"
         box_parameters_path = f"{user_folder}/box_parameters_badge.csv"
         animation_parameters_path = f"{user_folder}/animation_parameters_badge.csv"
-        svg = SVG.SVG(f"brain_badge", None, 100, 100, "0 0 100 100", with_profile=False, with_title=False, with_labels=True)
+        svg = SVG.SVG(f"brain_badge", None, 100, 64, "0 0 100 64", with_profile=False, with_title=False, with_labels=True)
         svg_path = f"{user_folder}/badge_{self.id}.svg"
         svg.animate(box_parameters_path, animation_parameters_path, True, False, True, svg_path)
         with open(svg_path, 'r') as file:
@@ -161,7 +161,7 @@ class User:
                 fill = "#000000"
                 stroke = "#FFFFFF"
             elif level == '01':
-                fill = "#888888"
+                fill = "#999999"
                 stroke = "#FFFFFF"
             elif level == '10':
                 fill = "#FFFFFF"

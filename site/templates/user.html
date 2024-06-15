@@ -5,21 +5,19 @@
 </head>
 <html>
   <body>
-  Hi {{user['name']}}!<br>
-  Your user ID is {{user['id']}}<br>
-  Your email is {{user['email']}}<br>
-  <hr>
-  You are taking the course <b>{{user['current_course']|replace("_", " ")|title}}</b><br>
-  ...where you are working on the "{{user['current_box']|replace("_", " ")|title}}" box, "{{user['current_topic']|replace("_", " ")|title}}"<br>
-  <br>
-  You have opened <b>{{user['progress'][0]}} black boxes!</b> <i>({{user['progress'][1]}} to level 01, {{user['progress'][2]}} to level 10, and {{user['progress'][3]}} to level 11)</i><br>
-  <a href="{{user['current_box']}}/{{user['current_topic']}}">Continue Course!</a>
-  <hr>
-  <a id="logout" href="logout">Logout</a>
-  <hr>
-  Here is your brain badge:
-  <div id="content">
-    {{badge | safe}}
-  </div>
+    <div id="layout" style="background-image: url({{url_for('static', filename='images/layout/layout.svg')}});"></div>
+    <div id="content">
+      <h1 id="greeting">Hi <span id="name">{{user['name']}}</span>!</h1>
+      <h3 id="status">You have opened <span id="box_count">{{user['progress'][0]}}</span> black boxes!</h3>
+      <h4 id="progress"><i><span id="level_01">{{user['progress'][1]}} to Level 01</span> | <span id="level_10">{{user['progress'][2]}} to Level 10</span> | <span id="level_11">{{user['progress'][3]}} to Level 11</span></i></h4>
+      {{badge | safe}}
+      <a id="download" href="download">Download Brain Badge</a>
+      <a id="continue" href="{{user['current_box']}}/{{user['current_topic']}}">Continue <span id="current_course">"{{user['current_course']|replace("_", " ")|title}}"</span></a>
+      <div id="user_info">
+        <h2>Your user ID is {{user['id']}}<h2>
+        <h4>Your email is {{user['email']}}</h4>    
+      </div>
+    </div>
+    <a id="logout" href="logout">Logout</a>
   </body>
 </html>
