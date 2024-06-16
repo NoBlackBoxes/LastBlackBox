@@ -29,11 +29,11 @@ boxes = {
     'Atoms'         : '01',
     'Electrons'     : '00',
     'Magnets'       : '00',
-    'Light'         : '01',
+    'Light'         : '00',
     'Sensors'       : '00',
     'Motors'        : '00',
-    'Transistors'   : '10',
-    'Amplifiers'    : '00',
+    'Transistors'   : '00',
+    'Amplifiers'    : '01',
     'Circuits'      : '00',
     'Power'         : '00',
     'Data'          : '10',
@@ -61,6 +61,7 @@ user = User.User()
 user.id = "000011"
 user.password_hash = generate_password_hash("4321")
 user.name = "Jimmy Voight"
+user.nickname = "Jimmy"
 user.email = "info@voight-kampff.tech"
 user.instructor = False
 user.admin = False

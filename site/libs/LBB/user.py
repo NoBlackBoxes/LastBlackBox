@@ -34,6 +34,7 @@ class User:
         self.id = None              # ID
         self.password_hash = None   # Password hash
         self.name = None            # Name
+        self.nickname = None        # Nickname
         self.email = None           # Email
         self.instructor = False     # Instructor boolean
         self.admin = False          # Administrator boolean
@@ -65,6 +66,7 @@ class User:
             "id" : self.id,
             "password_hash" : self.password_hash,
             "name" : self.name,
+            "nickname" : self.nickname,
             "email" : self.email,
             "instructor" : self.instructor,
             "admin" : self.admin,
@@ -91,6 +93,7 @@ class User:
         self.id = user_data['id']
         self.password_hash = user_data['password_hash']
         self.name = user_data['name']
+        self.nickname = user_data['nickname']
         self.email = user_data['email']
         self.instructor = user_data['instructor']
         self.admin = user_data['admin']

@@ -12,7 +12,7 @@ body, html {
     background-size: cover;
     background-color: rgba(0,0,0,1.0);
     background-attachment:fixed;
-    filter: brightness(7%);
+    filter: brightness(11%);
 }
 
 #content {
@@ -32,9 +32,16 @@ body, html {
     font-size: 72px;
     margin-top: 10px;
     margin-bottom: 5px;
+
+    @media screen and (max-width: 768px) {
+        white-space: nowrap;
+        font-size: 10vw;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
 }
 
-#name {
+#nickname {
     color: yellow;
 }
 
@@ -42,46 +49,89 @@ body, html {
     font-size: 32px;
     margin-top: 5px;
     margin-bottom: 0px;
+
+    @media screen and (max-width: 768px) {
+        white-space: nowrap;
+        font-size: 5vw;
+        margin-top: 5px;
+        margin-bottom: 0px;
+    }
 }
 
 #box_count {
+    padding: 2px 6px;
+    border-width: 1 px;
+    border-style: solid;
+    border-color: #FFFFFF;
     font-size: 48px;
-    color: yellow;
+    color: #CCCCCC;
+
+    @media screen and (max-width: 768px) {
+        white-space: nowrap;
+        font-size: 7vw;
+    }
 }
 
 #progress {
     font-size: 16px;
     color: white;
-    margin-top: 5px;
+    margin-top: 15px;
     margin-bottom: 15px;
+
+    @media screen and (max-width: 768px) {
+        white-space: nowrap;
+        font-size: 4vw;
+    }
 }
 
 #level_01 {
     font-size: 18px;
     color: #999999;
+
+    @media screen and (max-width: 768px) {
+        font-size: 3vw;
+    }
 }
 
 #level_10 {
     font-size: 16px;
     color: white;
+
+    @media screen and (max-width: 768px) {
+        font-size: 3vw;
+    }
 }
 
 #level_11 {
     font-size: 16px;
     color: yellow;
+
+    @media screen and (max-width: 768px) {
+        font-size: 3vw;
+    }
 }
 
 #brain_badge {
     width: 50%;
     height: 50%;
+
+    @media screen and (max-width: 768px) {
+        width: 90%;
+        height: 90%;
+    }
 }
 
 #download {
-    margin-top: -10px;
+    margin-top: -5px;
     margin-bottom: 0px;
     color: gray;
     text-decoration: none;
     font-size: 1vw;
+
+    @media screen and (max-width: 768px) {
+        margin-top: 0px;
+        font-size: 3vw;
+    }
 }
 
 #download:hover {
@@ -99,6 +149,11 @@ body, html {
     background-color: yellow;
     text-decoration: none;
     font-size: 2vw;
+
+    @media screen and (max-width: 768px) {
+        margin-top: 10px;
+        font-size: 5vw;
+    }
 }
 
 #continue:hover {
@@ -122,6 +177,39 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 10px 10px;
+    font-size: 16px;
+
+    @media screen and (max-width: 768px) {
+        width: 80%;
+    }
+}
+
+#user_name {
+    font-size: 32px;
+    color: yellow;
+
+    @media screen and (max-width: 768px) {
+        font-size: 5vw;
+    }
+}
+
+#user_id {
+    font-size: 32px;
+    color: yellow;
+
+    @media screen and (max-width: 768px) {
+        font-size: 5vw;
+    }
+}
+
+#user_email {
+    font-size: 32px;
+    color: yellow;
+
+    @media screen and (max-width: 768px) {
+        font-size: 5vw;
+    }
 }
 
 #logout {
