@@ -24,7 +24,7 @@ from werkzeug.security import generate_password_hash
 # Import modules
 import LBB.user as User
 
-# Boxe status dictonary
+# Boxes status dictonary
 boxes = {
     'Atoms'         : '01',
     'Electrons'     : '00',

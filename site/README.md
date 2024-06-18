@@ -26,8 +26,7 @@ python -c 'import secrets; print(secrets.token_hex())'
 
 ## To Do
 Things to complete
-- User view (Brain badge, layout progress bar)
-  - Generate custom brain badge and layout!
+- Download badge (certificate?)
 - Send emails asynchronously
 - Standardized task submissions (with validation and feedback)
 - Student progress bars?

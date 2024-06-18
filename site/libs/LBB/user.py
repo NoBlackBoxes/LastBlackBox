@@ -19,7 +19,6 @@ sys.path.append(libs_path)
 #----------------------------------------------------------
 
 # Import libraries
-import pickle
 import glob
 import csv
 import numpy as np
@@ -62,45 +61,55 @@ class User:
         return False
 
     def store(self):
-        user_data = {
-            "id" : self.id,
-            "password_hash" : self.password_hash,
-            "name" : self.name,
-            "nickname" : self.nickname,
-            "email" : self.email,
-            "instructor" : self.instructor,
-            "admin" : self.admin,
-            "boxes" : self.boxes,
-            "current_course" : self.current_course,
-            "current_box" : self.current_box,
-            "current_topic" : self.current_topic,
-        }
         user_folder = f"{data_path}/users/{self.id}"
-        user_path = f"{user_folder}/user_data.pkl"
-        with open(user_path, 'wb') as fp:
-            pickle.dump(user_data, fp)
+        user_path = f"{user_folder}/user_data.csv"
+        # Store user data
+        with open(user_path, 'w') as file:
+            file.write(f"id,{self.id}\n")
+            file.write(f"password_hash,{self.password_hash}\n")
+            file.write(f"name,{self.name}\n")
+            file.write(f"nickname,{self.nickname}\n")
+            file.write(f"email,{self.email}\n")
+            file.write(f"instructor,{self.instructor}\n")
+            file.write(f"admin,{self.admin}\n")
+            file.write(f"current_course,{self.current_course}\n")
+            file.write(f"current_box,{self.current_box}\n")
+            file.write(f"current_topic,{self.current_topic}\n")                
+        # Store user progress
+        user_path = f"{user_folder}/user_progress.csv"
+        with open(user_path, 'w') as file:
+            for box in self.boxes.items():
+                file.write(f"{box[0]},{box[1]}\n")                
         return
 
     def load(self, user_id):
         user_folder = f"{data_path}/users/{user_id}"
-        user_path = f"{user_folder}/user_data.pkl"
+        user_path = f"{user_folder}/user_data.csv"
         # Does user (data file) exist?
         if not os.path.isfile(user_path):
             return False
         # Load user data
-        with open(user_path, 'rb') as pickle_file:
-            user_data = pickle.load(pickle_file)
-        self.id = user_data['id']
-        self.password_hash = user_data['password_hash']
-        self.name = user_data['name']
-        self.nickname = user_data['nickname']
-        self.email = user_data['email']
-        self.instructor = user_data['instructor']
-        self.admin = user_data['admin']
-        self.boxes = user_data['boxes']
-        self.current_course = user_data['current_course']
-        self.current_box = user_data['current_box']
-        self.current_topic = user_data['current_topic']
+        with open(user_path, 'r') as file:
+            line = file.readline(); self.id = line.split(',')[1][:-1]
+            line = file.readline(); self.password_hash = line.split(',')[1][:-1]
+            line = file.readline(); self.name = line.split(',')[1][:-1]
+            line = file.readline(); self.nickname = line.split(',')[1][:-1]
+            line = file.readline(); self.email = line.split(',')[1][:-1]
+            line = file.readline(); self.instructor = line.split(',')[1][:-1]
+            line = file.readline(); self.admin = line.split(',')[1][:-1]
+            line = file.readline(); self.current_course = line.split(',')[1][:-1]
+            line = file.readline(); self.current_box = line.split(',')[1][:-1]
+            line = file.readline(); self.current_topic = line.split(',')[1][:-1]
+        # Load user progress
+        user_path = f"{user_folder}/user_progress.csv"
+        boxes = {}
+        with open(user_path, 'r') as file:
+            lines = file.readlines()
+            for line in lines:
+                name = line.split(",")[0]
+                level = line.split(",")[1][:-1]
+                boxes.update({name:level})
+        self.boxes = boxes
         self.loaded = True
         return True
 
@@ -116,6 +125,9 @@ class User:
         return False
 
     def authenticate(self, user_password):
+        print(self.password_hash)
+        a = check_password_hash(self.password_hash, user_password)
+        print(a)
         if check_password_hash(self.password_hash, user_password):
             self.authenticated = True
             return True

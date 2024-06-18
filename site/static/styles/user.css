@@ -30,9 +30,9 @@ body, html {
 }
 
 #greeting {
-    font-size: 72px;
+    font-size: 60px;
     font-family: serif;
-    margin-top: 10px;
+    margin-top: 0px;
     margin-bottom: 5px;
 
     @media screen and (max-width: 768px) {
@@ -115,9 +115,9 @@ body, html {
 }
 
 #brain_badge {
-    width: 625px;
-    height: 400px;
-    margin-top: 25px;
+    width: 500px;
+    height: 320px;
+    margin-top: 20px;
 
     @media screen and (max-width: 768px) {
         width: 90%;
@@ -152,7 +152,7 @@ body, html {
 }
 
 #continue {
-    margin-top: 30px;
+    margin-top: 20px;
     padding: 6px 18px;
     border: 2px yellow;
     border-style: solid;
@@ -255,7 +255,7 @@ body, html {
 }
 
 #logout {
-    margin-top: 50px;
+    margin-top: 10px;
     padding: 4px 8px;
     border: 1px yellow;
     border-style: solid;
