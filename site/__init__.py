@@ -113,6 +113,15 @@ def user():
     badge = current_user.generate_badge()
     return render_template('user.html', user=current_user, badge=badge)
 
+# Serve Update
+@app.route('/update')
+@login_required
+def update():
+    current_user.update_progress()
+    current_user.generate_badge_parameters(app.static_folder)
+    badge = current_user.generate_badge()
+    return render_template('update.html', user=current_user, badge=badge)
+
 # Serve Recovery
 @app.route('/recovery', methods=['GET', 'POST'])
 def recovery():
