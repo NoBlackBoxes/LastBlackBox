@@ -12,13 +12,14 @@
       <h4 id="progress"><i><span id="level_01">{{user['progress'][1]}} to Level 01</span> | <span id="level_10">{{user['progress'][2]}} to Level 10</span> | <span id="level_11">{{user['progress'][3]}} to Level 11</span></i></h4>
       {{badge | safe}}
       <a id="download" href="download">Download Your Brain Badge</a>
-      <a id="continue" href="{{user['current_box']}}/{{user['current_topic']}}">Continue <span id="current_course">"{{user['current_course']|replace("_", " ")|title}}"</span></a>
+      <a id="continue" href="{{user['current_box']}}/{{user['current_topic']}}">Continue <span id="current_course">{{user['current_course']|replace("_", " ")|title}}</span></a>
       <div id="user_info">
-        Name: <span id="user_name">{{user['name']}}</span>
-        LBB ID: <span id="user_id">{{user['id']}}</span>
-        Email: <span id="user_email">{{user['email']}}</span>
+        Name<span id="user_name">{{user['name']}}</span>
+        LBB ID<span id="user_id">{{user['id']}}</span>
+        Email<span id="user_email">{{user['email']}}</span>
       </div>
+      <a id="update" href="update">Update your info</a>
+      <a id="logout" href="logout">Logout</a>
     </div>
-    <a id="logout" href="logout">Logout</a>
   </body>
 </html>

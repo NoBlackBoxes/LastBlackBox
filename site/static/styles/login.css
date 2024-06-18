@@ -2,6 +2,7 @@ body, html {
     height: 100%;
     margin: 0;
     background: black;
+    font-family: Arial;
 }
 
 #layout {
@@ -11,7 +12,7 @@ body, html {
     background-size: cover;
     background-color: rgba(0,0,0,1.0);
     background-attachment:fixed;
-    filter: brightness(11%);
+    filter: brightness(15%);
 }
 
 #content {
@@ -28,7 +29,8 @@ body, html {
 
 #logo {
     align-items: center;
-    height: 30vw;
+    width: 500px;
+    height: 500px;
     filter: brightness(100%);
     margin-bottom: -10px;
 
@@ -99,12 +101,15 @@ body, html {
     margin-bottom: 5px;
     margin-right: 5px;
     color: rgb(192, 192, 192);
-    font-size: 16px;
+    font-size: 14px;
+    font-family: serif;
 }
 
 #register_link {
     margin: 0px;
     color: yellow;
+    font-family: Arial;
+    font-size: 14px;
 }
 
 #note_forget {
@@ -119,10 +124,13 @@ body, html {
     margin-bottom: 5px;
     margin-right: 5px;
     color: rgb(192, 192, 192);
-    font-size: 16px;
+    font-size: 14px;
+    font-family: serif;
 }
 
 #forget_link {
     margin: 0px;
     color: yellow;
+    font-family: Arial;
+    font-size: 14px;
 }

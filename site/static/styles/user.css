@@ -3,6 +3,7 @@ body, html {
     margin: 0;
     background: black;
     color: #FFFFFF;
+    font-family: Arial;
 }
 
 #layout {
@@ -12,7 +13,7 @@ body, html {
     background-size: cover;
     background-color: rgba(0,0,0,1.0);
     background-attachment:fixed;
-    filter: brightness(11%);
+    filter: brightness(15%);
 }
 
 #content {
@@ -30,6 +31,7 @@ body, html {
 
 #greeting {
     font-size: 72px;
+    font-family: serif;
     margin-top: 10px;
     margin-bottom: 5px;
 
@@ -46,13 +48,14 @@ body, html {
 }
 
 #status {
-    font-size: 32px;
+    font-size: 24px;
     margin-top: 5px;
     margin-bottom: 0px;
+    color: #CCCCCC;
 
     @media screen and (max-width: 768px) {
         white-space: nowrap;
-        font-size: 5vw;
+        font-size: 4vw;
         margin-top: 5px;
         margin-bottom: 0px;
     }
@@ -63,12 +66,12 @@ body, html {
     border-width: 1 px;
     border-style: solid;
     border-color: #FFFFFF;
-    font-size: 48px;
+    font-size: 32px;
     color: #CCCCCC;
 
     @media screen and (max-width: 768px) {
         white-space: nowrap;
-        font-size: 7vw;
+        font-size: 5vw;
     }
 }
 
@@ -85,48 +88,56 @@ body, html {
 }
 
 #level_01 {
-    font-size: 18px;
+    font-size: 14px;
     color: #999999;
 
     @media screen and (max-width: 768px) {
-        font-size: 3vw;
+        font-size: 2.5vw;
     }
 }
 
 #level_10 {
-    font-size: 16px;
+    font-size: 14px;
     color: white;
 
     @media screen and (max-width: 768px) {
-        font-size: 3vw;
+        font-size: 2.5vw;
     }
 }
 
 #level_11 {
-    font-size: 16px;
+    font-size: 14px;
     color: yellow;
 
     @media screen and (max-width: 768px) {
-        font-size: 3vw;
+        font-size: 2.5vw;
     }
 }
 
 #brain_badge {
-    width: 50%;
-    height: 50%;
+    width: 625px;
+    height: 400px;
+    margin-top: 25px;
 
     @media screen and (max-width: 768px) {
         width: 90%;
         height: 90%;
+        margin-top: 5px;
     }
 }
 
 #download {
-    margin-top: -5px;
+    margin-top: 0px;
     margin-bottom: 0px;
-    color: gray;
+    color: #AAAAAA;
     text-decoration: none;
-    font-size: 1vw;
+    font-size: 16px;
+    padding: 2px 6px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    border-color: #000000;
+    transition-duration: 0.4s;
 
     @media screen and (max-width: 768px) {
         margin-top: 0px;
@@ -135,30 +146,32 @@ body, html {
 }
 
 #download:hover {
-    color: white;
-    text-decoration: underline;
+    color: #000000;
+    background-color: #DDDDDD;
+    border-color: #CCCCCC;
 }
 
 #continue {
-    margin-top: 10px;
+    margin-top: 30px;
     padding: 6px 18px;
-    border: 1px yellow;
+    border: 2px yellow;
     border-style: solid;
     border-radius: 11px;
-    color: black;
-    background-color: yellow;
+    color: yellow;
+    background-color: black;
     text-decoration: none;
-    font-size: 2vw;
+    font-size: 32px;
+    transition-duration: 0.4s;
 
     @media screen and (max-width: 768px) {
         margin-top: 10px;
-        font-size: 5vw;
+        font-size: 4vw;
     }
 }
 
 #continue:hover {
-    color: yellow;
-    background-color: black;
+    color: black;
+    background-color: yellow;
 }
 
 #current_course {
@@ -166,19 +179,20 @@ body, html {
 }
 
 #user_info {
-    width: 40%;
+    width: 400px;
     border-radius: 11px;
     border-style: solid;
-    border-width: 7px;
-    border-color: #222222;
-    margin-top: 50px;
-    background-color: #444444;
+    border-width: 2px;
+    border-color: #444444;
+    margin-top: 30px;
+    background-color: #222222;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 10px 10px;
-    font-size: 16px;
+    font-size: 14px;
+    font-family: serif;
 
     @media screen and (max-width: 768px) {
         width: 80%;
@@ -186,36 +200,62 @@ body, html {
 }
 
 #user_name {
-    font-size: 32px;
+    font-size: 20px;
+    font-family: Arial;
     color: yellow;
 
     @media screen and (max-width: 768px) {
-        font-size: 5vw;
+        font-size: 4vw;
     }
 }
 
 #user_id {
-    font-size: 32px;
+    font-size: 20px;
+    font-family: Arial;
     color: yellow;
 
     @media screen and (max-width: 768px) {
-        font-size: 5vw;
+        font-size: 4vw;
     }
 }
 
 #user_email {
-    font-size: 32px;
+    font-size: 20px;
+    font-family: Arial;
     color: yellow;
 
     @media screen and (max-width: 768px) {
-        font-size: 5vw;
+        font-size: 4vw;
     }
 }
 
+#update {
+    margin-top: 7px;
+    margin-bottom: 0px;
+    color: #AAAAAA;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 2px 6px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    border-color: #000000;
+    transition-duration: 0.4s;
+    
+    @media screen and (max-width: 768px) {
+        margin-top: 5px;
+        font-size: 3vw;
+    }
+}
+
+#update:hover {
+    color: #000000;
+    background-color: #DDDDDD;
+    border-color: #CCCCCC;
+}
+
 #logout {
-    position: absolute;
-    right: 2%;
-    top: 2%;
+    margin-top: 50px;
     padding: 4px 8px;
     border: 1px yellow;
     border-style: solid;
@@ -223,6 +263,11 @@ body, html {
     color: yellow;
     background-color: black;
     text-decoration: none;
+    transition-duration: 0.4s;
+
+    @media screen and (max-width: 768px) {
+        margin-top: 16px;
+    }
 }
 
 #logout:hover {

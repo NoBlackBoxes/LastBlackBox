@@ -13,7 +13,7 @@ You will need a .env file in the site root directory.
 ```bash
 FLASK_APP=app
 FLASK_ENV=development
-FLASK_SECRET_KEY='your-secret-key-here'
+FLASK_SECRET_KEY='a0ee1e54722175257d4aeb8d2b43ea5729f785450f69ac4b413652ef2e97ff36'
 LIBS_PATH="/home/kampff/NoBlackBoxes/LastBlackBox/site/libs"
 BASE_PATH="/home/kampff/NoBlackBoxes/LastBlackBox/site"
 ```
