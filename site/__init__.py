@@ -114,12 +114,31 @@ def user():
     return render_template('user.html', user=current_user, badge=badge)
 
 # Serve Update
-@app.route('/update')
+@app.route('/update', methods=['GET', 'POST'])
 @login_required
 def update():
     current_user.update_progress()
     current_user.generate_badge_parameters(app.static_folder)
     badge = current_user.generate_badge()
+    if request.method == 'POST':
+        user_name = request.form['user_name']
+        user_nickname = request.form['user_nickname']
+        user_email = request.form['user_email']
+        user_password = request.form['user_password']
+        user_password_confirmation = request.form['user_password_confirmation']
+        if user_name != '':
+            current_user.name = user_name
+        if user_nickname != '':
+            current_user.nickname = user_nickname
+        if user_email != '':
+            current_user.email = user_email
+        if user_password != '':
+            if user_password != user_password_confirmation:
+                return render_template('update.html', user=current_user, badge=badge, error="Password mismatch")
+            else:
+                current_user.password_hash = generate_password_hash(user_password)
+        current_user.store()
+        return redirect('user')
     return render_template('update.html', user=current_user, badge=badge)
 
 # Serve Recovery

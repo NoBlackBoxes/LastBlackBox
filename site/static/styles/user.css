@@ -193,6 +193,7 @@ body, html {
     padding: 10px 10px;
     font-size: 14px;
     font-family: serif;
+    color: yellow;
 
     @media screen and (max-width: 768px) {
         width: 80%;
@@ -202,7 +203,7 @@ body, html {
 #user_name {
     font-size: 20px;
     font-family: Arial;
-    color: yellow;
+    color: white;
 
     @media screen and (max-width: 768px) {
         font-size: 4vw;
@@ -212,7 +213,7 @@ body, html {
 #user_id {
     font-size: 20px;
     font-family: Arial;
-    color: yellow;
+    color: white;
 
     @media screen and (max-width: 768px) {
         font-size: 4vw;
@@ -222,7 +223,7 @@ body, html {
 #user_email {
     font-size: 20px;
     font-family: Arial;
-    color: yellow;
+    color: white;
 
     @media screen and (max-width: 768px) {
         font-size: 4vw;
