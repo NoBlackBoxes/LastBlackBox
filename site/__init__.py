@@ -151,9 +151,11 @@ def recovery():
         user = User.User()
         user_email_found = user.find(user_email)
         if user_email_found:
+            # Generate reandom password
+            # Hash password and store with user
             msg = Message('LBB Login Details', recipients=[user_email], body=f"Your LBB login recovery details:\n User ID: {user.id}\n Temporary Password: Dudes\n\nHave a nice day!\nLBB Team")
             mail.send(msg)
-            return render_template('recovery_sent.html', message=f"Recovery details sent to {user_email}. Redirecting to login page."), {"Refresh": "5; url=login"}
+            return render_template('sent.html', message=f"Recovery details sent to {user_email}. Redirecting to login page."), {"Refresh": "5; url=login"}
         else:
             return render_template('recovery.html', error="This email was not registered by any LBB users!")
     return render_template('recovery.html')
