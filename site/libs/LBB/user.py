@@ -120,9 +120,9 @@ class User:
             user_id = user_folder.split('/')[-2]
             self.load(user_id)
             if (self.email == user_email):
-                return True
+                return self
         self.loaded = False
-        return False
+        return None
 
     def authenticate(self, user_password):
         print(self.password_hash)

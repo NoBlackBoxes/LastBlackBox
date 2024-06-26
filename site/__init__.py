@@ -18,12 +18,12 @@ sys.path.append(libs_path)
 #----------------------------------------------------------
 
 # Import libraries
-import os
 from flask import Flask, render_template, send_file, request, redirect, session
 from flask_login import LoginManager, current_user, login_user, logout_user, login_required
 from flask_mail import Mail, Message
 from werkzeug.utils import secure_filename
 from werkzeug.security import generate_password_hash, check_password_hash
+import secrets
 import LBB.utilities as Utilities
 
 # Import modules
@@ -149,11 +149,12 @@ def recovery():
         if not Utilities.is_valid_email(user_email):
             return render_template('recovery.html', error="Please enter a valid email address.")
         user = User.User()
-        user_email_found = user.find(user_email)
-        if user_email_found:
-            # Generate reandom password
-            # Hash password and store with user
-            msg = Message('LBB Login Details', recipients=[user_email], body=f"Your LBB login recovery details:\n User ID: {user.id}\n Temporary Password: Dudes\n\nHave a nice day!\nLBB Team")
+        user = user.find(user_email)
+        if user != None:
+            user_password = secrets.token_urlsafe(11)
+            user.password_hash = generate_password_hash(user_password)
+            user.store()
+            msg = Message('LBB Login Details', recipients=[user_email], body=f"Your LBB login recovery details:\n User ID: {user.id}\n Temporary Password: {user_password}\n\nHave a nice day!\nLBB Team")
             mail.send(msg)
             return render_template('sent.html', message=f"Recovery details sent to {user_email}. Redirecting to login page."), {"Refresh": "5; url=login"}
         else:
