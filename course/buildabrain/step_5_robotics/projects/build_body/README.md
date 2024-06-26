@@ -245,4 +245,57 @@ void loop() {
 }
 ```
 
+### Step 10: Make it respond to light!
+
+1. Build a light sensor (or just use the existing one if it is still on your breadboard)
+
+<p align="center">
+<img src="../../resources/images/Light_Sensor_Arduino_build.png" alt="Light Sensor for Arduino (Build)" width="650" height="420">
+</p>
+
+***NOTE***: Make sure your light sensor output is connected to your Arduino's analog pin 0 (A0). Check the pin diagram here:
+
+<p align="center">
+<img src="../../resources/images/Arduino_Nano_33_IoT_pinout.png" alt="Arduino Nano 33 IoT Pins" width="450" height="520">
+</p>
+
+2. Upload the following Arduino code to your board using your USB cable.
+
+```c++
+#include <Servo.h>  // This includes the "servo" library
+
+Servo left, right;  // This creates to servo objects, one for each motor
+
+// Setup
+void setup() {
+  right.attach(9);  // Assign right servo to digital (PWM) pin 9 (change accorinding to your connection)
+  left.attach(10);  // Assign left servo to digital (PWM) pin 10 (change accorinding to your connection)
+  
+  // Start "serial communication" at 9600 bits per second:
+  Serial.begin(9600);
+}
+
+void loop() {
+
+  // Read voltage from analog pin 0
+  int sensor_value = analogRead(A0);
+
+  //Write the value to the serial port
+  Serial.println(sensor_value);
+
+  // Check if sensor (light) value is greater than some threshold
+  if (sensor_value > 400)
+  {
+    left.write(180);
+    right.write(180);
+  }
+  else
+  {
+    left.write(90);
+    right.write(90);
+  }
+  delay(15);
+}
+```
+
 ***Have Fun!***
