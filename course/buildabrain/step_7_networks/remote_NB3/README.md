@@ -410,3 +410,16 @@ The first step will be acquiring an image using Python (so we can then manipulat
 ### Stream images from your NB3 camera to the local network (so we can view the live stream on your laptop)
 
 - Run this [Example](resources/python/camera/capture_stream.py) code to continously acquire images and stream them to a website.
+
+## PROJECT
+
+Build a remote-controlled NB3 (that streams live video of what is sees!) 
+
+- This example of using the keyboard to send commands via SSH will be very helpful: [Drive](resources/python/drive/drive.py)
+
+    ```bash
+    # You must install the SSH keyboard Python library
+    pip install sshkeyboard
+    ```
+
+- This code should be uploaded to your Arduino for the above Python code to work: [Serial Controller](resources/arduino/serial_controller/serial_controller.ino)
