@@ -32,12 +32,12 @@
 - ***Task 2***: Copy a version of the Raspberry Pi OS (operating system) to your micro-SD card
   - We currently recommend using the [Raspberry Pi Imager Tool](https://www.raspberrypi.com/software/)
     - Please be **sure** to do the following before burning your image:
-      1. Choose the 64-bit Lite version of Raspberry Pi OS
+      1. Choose the 64-bit version of Raspberry Pi OS
       2. Set a hostname (for your NB3)
       3. Set a username (for you) and password (DO NOT FORGET IT!)
       4. Enable SSH
-      5. Set you WiFi network name and password
-      6. Set you country/locale
+      5. Set your WiFi network name and password
+      6. Set your country/locale
 
 ### Visual Studio Code
 We will be using VS code as our tool for writing programs. VS code is just a simple, but really powerful, text editor. It has extensions for all sorts of useful tools (Python, Git, etc.), and most importantly for today's tasks, connecting to a "remote" computer (our NB3's Raspberry Pi).
