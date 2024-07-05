@@ -2,7 +2,7 @@
 
 ## Project: Remote NB3
 
-Let's build a remote-controlled WiFi connected robot with a camera that you can use drive (and see) anywhere you have an internet connection!
+Let's build a remote-controlled WiFi connected robot with a camera. You can drive it (and see what it sees) anywhere you have an internet connection!
 
 ## Step 1 - Power
 
