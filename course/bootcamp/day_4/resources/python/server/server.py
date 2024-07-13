@@ -31,7 +31,8 @@ while True:
     #   - if you want to serve different files based on the request
 
     # Respond to target (send the bytes of your HTML file)
-    http_response = bytes(html, 'utf-8')
+    header = "HTTP/1.1 200 OK\n" 
+    http_response = bytes(header+html, 'utf-8')
     client_connection.sendall(http_response)
 
     # Close client connection
