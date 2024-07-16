@@ -77,7 +77,7 @@ Let's let your NB3 hear and soeak. Let's add some ears (digital MEMS microphones
 <img src="resources/images/NB3_mouth_mount.jpg" alt="NB3 Mouth mounting" width="800" height="400">
 </p>
 
-- Wire up the Raspberry Pi to the NB3 base.
+- Wire up the Raspberry Pi to the NB3 base. MOUST connect GPIO16 to EN...change this diagram!!
 
 <p align="center">
 <img src="resources/images/NB3_audio_wiring.png" alt="NB3 audio wiring" width="1200" height="400">
