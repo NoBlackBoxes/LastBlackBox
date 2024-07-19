@@ -39,7 +39,6 @@ def find_materials_section(readme):
         lc = lc + 1
     return start, stop
 
-
 # Convert materials.csv to markdown table
 def convert_materials(materials):
     contents = []
@@ -54,19 +53,21 @@ def convert_materials(materials):
         if (fields[0] == ''):
             continue
 
+        # Remove unlisted fields
+        fields = fields[:6]
+
         # Edit Data and Link fields into markdown links
-        if (fields[3] != ''):
-            fields[3] = "[-D-](" + fields[3] + ")"
-        else:
-            fields[3] = '-'
         if (fields[4] != ''):
-            fields[4] = "[-L-](" + fields[4] + ")"
+            fields[4] = "[-D-](" + fields[4] + ")"
         else:
             fields[4] = '-'
+        if (fields[5] != ''):
+            fields[5] = "[-L-](" + fields[5] + ")"
+        else:
+            fields[5] = '-'
         contents.append('|'.join(fields) + '\n')
 
     return contents
-
 
 # Insert materials table into README file
 def insert_materials(box):
@@ -96,8 +97,8 @@ def insert_materials(box):
 
     # Create "contents" header
     contents_header = [
-        "Contents|Description| # |Data|Link|\n",
-        ":-------|:----------|:-:|:--:|:--:|\n"
+        "Contents|Level|Description| # |Data|Link|\n",
+        ":-------|:---:|:----------|:-:|:--:|:--:|\n"
     ]
 
     # Convert materials.csv to markdown table
@@ -118,7 +119,6 @@ def insert_materials(box):
     f.close()
 
     return
-
 
 # Append materials contents to BOM
 def append_materials(BOM, box):
@@ -152,7 +152,6 @@ def append_materials(BOM, box):
     BOM = BOM + box_header + materials
 
     return BOM
-
 
 #
 # Script
