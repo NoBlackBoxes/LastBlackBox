@@ -25,7 +25,7 @@ This world is much closer than you realize, and we have developed this training 
 ----
 
 <p align="center" style="font-size:32px">
-<a href="course/README.md" style="color: #111111; background: #eeeeee"><b>Start the course!</b></a>
+<a href="course/README.md" style="color: #FFFF00; background: #000000; border-color: #FFFF00; border-style: solid; border-width: 2px; border-radius:6px; padding-left:12px; padding-right:12px;"><b>Start the course!</b></a>
 </p>
 
 ----
