@@ -60,3 +60,4 @@ _vk
 
 # VSCode Extensions
 node_modules/
+out/
