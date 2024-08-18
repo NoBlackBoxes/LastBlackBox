@@ -1,4 +1,4 @@
-# The Last Black Box: *Bootcamp*
+# The Last Black Box : *Bootcamp*
 
 > A ***Bootcamp Version*** of the Last Black Box course
 
@@ -20,30 +20,30 @@ You will be building a robot. The robot's physical layout mimics the basic anato
 
 ## Timeline
 
-### Day 1 - Electronics
+### Day 1 - [Electronics](day_1/README.md)
 
-- Morning: Atoms, Electrons, Magnets, Sensors, and Motors
-- Afternoon: Transistors
+- *Morning:* Atoms, Electrons, Magnets, Sensors, and Motors
+- *Afternoon:* Transistors
 
-### Day 2 - Computers
+### Day 2 - [Computers](day_2/README.md)
 
-- Morning: Computers
-- Afternoon: Robotics (i.e. programming)
+- *Morning:* Computers
+- *Afternoon:* Robotics
 
-### Day 3 - Systems and Networks
+### Day 3 - [Systems and Networks](day_3/README.md)
 
-- Morning: Power, Systems, Linux, Python
-- Afternoon: Networks, Websites, and Servers
+- *Morning:* Power, Systems, Linux, Python
+- *Afternoon:* Networks, Websites, and Servers
 
-### Day 4 - Signal Processing
+### Day 4 - [Signal Processing](day_4/README.md)
 
-- Morning: Audio (1-D data)
-- Afternoon: Digital signal processing
+- *Morning:* Audio (1-D data)
+- *Afternoon:* Digital signal processing
 
-### Day 5 - Computer Vision
+### Day 5 - [Computer Vision](day_5/README.md)
 
-- Morning: Vision (2-D data)
-- Afternoon: Image processing
+- *Morning:* Vision (2-D data)
+- *Afternoon:* Image processing
 
 ----
 

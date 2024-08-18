@@ -1,4 +1,4 @@
-# The Last Black Box Bootcamp: Day 4 - Networks, Linux, Python, Websites, Servers, and beyond
+# The Last Black Box : *Bootcamp* : Day 4 - Signal Processing
 
 ## Morning
 

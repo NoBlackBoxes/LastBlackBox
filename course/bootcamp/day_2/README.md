@@ -1,4 +1,4 @@
-# The Last Black Box Bootcamp: Day 2 - Computers
+# The Last Black Box : *Bootcamp* : Day 2 - Computers
 
 ## Morning
 

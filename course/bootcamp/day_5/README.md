@@ -1,4 +1,4 @@
-# The Last Black Box Bootcamp: Day 5 - Vision
+# The Last Black Box : *Bootcamp* : Day 5 - Computer Vision
 
 ## Morning
 
