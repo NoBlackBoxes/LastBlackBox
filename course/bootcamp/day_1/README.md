@@ -11,7 +11,7 @@
 
 > "Let's start at the very beginning, a very good place to start". - *R&H*
 
-- *Watch this video*: [Structure and the Periodic Table](https://vimeo.com/1000458082)
+- *Watch this video*: [Atoms: Structure and the Periodic Table](https://vimeo.com/1000458082)
   - When you need it (and you will), then you can find the periodic table [here](../../../boxes/atoms/card/periodic_table.png)
 
 #### Electrons

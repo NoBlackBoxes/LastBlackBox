@@ -5,7 +5,7 @@
 
 ### Recap
 
-*"Atoms, Conductors, Voltage, Resistors, Ohm's Law, Voltage Dividers, LDRs, Light sensors, Magnetism, Motors, Semiconductors, Diodes, Transistors, Motor Speed Control"*
+> *"Atoms, Conductors, Voltage, Resistors, Ohm's Law, Voltage Dividers, LDRs, Light sensors, Magnetism, Motors, Semiconductors, Diodes, Transistors, Amplification"*
 
 #### Computers (hardware)
 
