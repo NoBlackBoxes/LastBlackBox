@@ -17,16 +17,16 @@
 #### Electrons
 
 - *Watch this video*: [Voltage](https://vimeo.com/1000730032)
-- *Watch this video*: [Batteries](https://vimeo.com/XXXXXXXXX)
+- *Watch this video*: [Batteries - coming soon](https://vimeo.com/)
   - ***Task***: Measure the voltage of a AA battery
   - ***Task***: Measure the voltage of 4 AA batteries in series (end to end)
-  - If you a new to "multimeters", then watch this video for an introduction to measuring voltage: [Multimeters - Voltage](https://vimeo.com/XXXXXXXXX)
+  - If you a new to "multimeters", then watch this video for an introduction to measuring voltage: [Multimeters - Voltage - coming soon](https://vimeo.com/)
 
 - *Watch this video*: [Conductors](https://vimeo.com/1000740989)
 - *Watch this video*: [Current](https://vimeo.com/1000743561)
-- *Watch this video*: [Resistors](https://vimeo.com/XXXXXXXXX)
+- *Watch this video*: [Resistors](https://vimeo.com/1000755493)
   - ***Task***: Measure the resistance of some of your resistors
-    - If you are new to "multimeters", then watch this video for an introduction to measuring resistance: [Multimeters - Resistance](https://vimeo.com/XXXXXXXXX)
+    - If you are new to "multimeters", then watch this video for an introduction to measuring resistance: [Multimeters - Resistance - coming soon](https://vimeo.com/)
 
 With a voltage source (battery) and resistors, then we can start building "circuits" - complete paths of conduction that allow current to from a location with fewer electrons (+) to a location with more electrons (-).
 > ***Note***: This is *weird*. Electrons are the things moving. Shouldn't we say that current "flows" from the (-) area to the (+) area? Unfortunately, current (I) was described before anyone knew about electrons and we are stuck with the following awkward convention: **Current is defined to flow from (+) to (-)**...even though we now know that electrons are moving the opposite way.
@@ -37,26 +37,26 @@ To help you build electornic circuits, we will assemble a "prototyping platform"
   - ***Task***: Assemble the robot body (prototyping base board)
     - If you are curious how the *NB3 Body* printed circuit board (PCB) was designed, then you can find the KiCAD files here: [NB3 Body PCB](../../../boxes/electrons/NB3_body)
 
-- *Watch this video*: [Ohm's Law](https://vimeo.com/XXXXXXXXX)
+- *Watch this video*: [Ohm's Law](https://vimeo.com/1000768334)
   - ***Task***: Build the simple circuit below and measure the current flowing when you connect the battery pack. You know the voltage from the batteries (V) and the resistance of the resistor (R). Does Ohm's Law hold?
-    - ***Note***: Measuring current with a multimeter is tricky. If you are not ***super*** confident that you know what you are doing, then I encourage you to watch this video for an introduction to measuring current: [Multimeters - Current](https://vimeo.com/XXXXXXXXX)
+    - ***Note***: Measuring current with a multimeter is tricky. If you are not ***super*** confident that you know what you are doing, then I encourage you to watch this video for an introduction to measuring current: [Multimeters - Current - coming soon](https://vimeo.com/)
 
-- *Watch this video*: [Voltage Dividers](https://vimeo.com/XXXXXXXXX)
+- *Watch this video*: [Voltage Dividers](https://vimeo.com/1000782478)
   - ***Task***: Build a voltage divider using two resistors of the same value? Measure the intermediate voltage
   - ***Task***: Build a voltage divider using a variable resistor (potentiometer). Measure the intermediate voltage
-    - A guide to completing these tasks can be found here: [Building Voltage Dividers](https://vimeo.com/XXXXXXXXX)
+    - A guide to completing these tasks can be found here: [Building Voltage Dividers - coming soon](https://vimeo.com/)
 
 #### Sensors
 
-- *Watch this video*: [Light Sensors](https://vimeo.com/XXXXXXXXX)
+- *Watch this video*: [Light Sensors](https://vimeo.com/1000794164)
   - ***Task***: Build a light sensor
     - Build a voltage divider with one of the fixed resistors replaced with an LDR (light-dependent resistor). Does the "output" voltage vary with light level? What should the value of the fixed resistor be to maximize the sensitive range of the output voltage for varying light levels?
 
 #### Magnets
 
-- *Watch this video*: [Magnetism](https://vimeo.com/XXXXXXXXX)
+- *Watch this video*: [Electromagnetism](https://vimeo.com/1000810115)
   - ***Bonus (not required) Task***: Build a speaker
-    - If you have access to some thin wire (ideally "magnet" wire), a paper cup, tape, and an audio source (headphone jack on your phone/laptop), then it is relatively easy to build a speaker. If you are curious how this is done, then you can watch this video: [Build a Speaker](https://vimeo.com/XXXXXXXXX)
+    - If you have access to some thin wire (ideally "magnet" wire), a paper cup, tape, and an audio source (headphone jack on your phone/laptop), then it is relatively easy to build a speaker. If you are curious how this is done, then you can watch this video: [Build a Speaker - coming soon](https://vimeo.com/)
 
 #### Motors
 
@@ -70,15 +70,15 @@ We will use electromagnets to create the rotational force to move our NB3 robot.
 
 #### Transistors
 
-- *Watch this video*: [Semiconductors](https://vimeo.com/XXXXXXXXX)
+- *Watch this video*: [Semiconductors](https://vimeo.com/1000842810)
   - ***Task***: Identify alternative doping combinations
 
-- *Watch this video*: [Diodes](https://vimeo.com/XXXXXXXXX)
+- *Watch this video*: [Diodes](https://vimeo.com/1000861996)
   - ***Task***: Confirm that diodes only pass current in one direction
   - ***Task***: Measure the voltage drop across a diode (the forward threshold)
   - ***Task***: Illuminate a light-emitting diode (LED). *Remember the current limiting resistor*
 
-- *Watch this video*: [Transistors - MOSFETs](https://vimeo.com/XXXXXXXXX)
+- *Watch this video*: [Transistors - MOSFETs](https://vimeo.com/1000873279)
   - ***Task***: Measure the threshold voltage that opens your MOSFET gate. Compare it to the "expected" range listed in the datasheet
     - The datasheet for your MOSFET can be found here: [IRF510](../../../boxes/transistors/_data/datasheets/IRF510.pdf)
 
