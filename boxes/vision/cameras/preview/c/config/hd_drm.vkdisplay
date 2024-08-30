@@ -1,0 +1,23 @@
+vkstr type;                        ///< Display type
+    drm
+uint32_t x;                        ///< Display x position (pixels)
+    0
+uint32_t y;                        ///< Display y position (pixels)
+    0
+uint32_t width;                    ///< Display width (pixels)
+    1920
+uint32_t height;                   ///< Display height (pixels)
+    1080
+bool fullscreen;                   ///< Is display fullscreen?
+    true
+vkstr name;                        ///< Card (GPU) device filename (e.g. "/dev/dri/card0")
+    /dev/dri/card0
+uint32_t connector_id;             ///< Connector ID
+    54
+uint32_t encoder_id;               ///< Encoder ID
+    53
+uint32_t crtc_id;                  ///< CRTC ID
+    52
+uint32_t mode_id;                  ///< Mode ID
+    0
+#FIN

@@ -1,0 +1,5 @@
+core_freq_min=500
+uart_2ndstage=1
+
+[pi4]
+kernel=kernel8.img

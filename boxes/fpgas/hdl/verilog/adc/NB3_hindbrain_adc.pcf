@@ -1,0 +1,35 @@
+# Clock (12 MHz)
+set_io -nowarn clock 35
+
+# Global Buffer (LG)
+set_io -nowarn reset 44
+
+# GPIO pins, left side
+set_io -nowarn gpio[0] 12
+set_io -nowarn gpio[1] 11
+set_io -nowarn gpio[2] 10
+set_io -nowarn gpio[3] 9
+set_io -nowarn gpio[4] 6
+set_io -nowarn gpio[5] 4
+#set_io -nowarn gpio[6] 3
+#set_io -nowarn gpio[7] 2
+
+# GPIO pins, right side
+set_io -nowarn leds[0] 25
+set_io -nowarn leds[1] 26
+set_io -nowarn leds[2] 27
+set_io -nowarn leds[3] 28
+set_io -nowarn leds[4] 31
+set_io -nowarn leds[5] 32
+set_io -nowarn leds[6] 34
+set_io -nowarn leds[7] 36
+
+# ADC pins
+set_io -nowarn sample_clock 18
+set_io -nowarn D_out 19
+set_io -nowarn D_in 21
+set_io -nowarn CSn 23
+
+# UART port
+set_io -nowarn rx_pin 3 # L6
+set_io -nowarn tx_pin 2 # L7

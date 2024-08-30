@@ -1,0 +1,22 @@
+# Logic Pins
+set_io -nowarn a 12
+set_io -nowarn b 11
+set_io -nowarn y 10
+
+# GPIO pins
+#set_io -nowarn gpio[x] 12
+#set_io -nowarn gpio[x] 11
+#set_io -nowarn gpio[x] 10
+set_io -nowarn gpio[0] 9
+set_io -nowarn gpio[1] 6
+set_io -nowarn gpio[2] 4
+set_io -nowarn gpio[3] 3
+set_io -nowarn gpio[4] 2
+set_io -nowarn gpio[5] 25
+set_io -nowarn gpio[6] 26
+set_io -nowarn gpio[7] 27
+set_io -nowarn gpio[8] 28
+set_io -nowarn gpio[9] 31
+set_io -nowarn gpio[10] 32
+set_io -nowarn gpio[11] 34
+set_io -nowarn gpio[12] 36

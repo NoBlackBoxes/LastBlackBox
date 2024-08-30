@@ -1,0 +1,10 @@
+config BR2_PACKAGE_LBB_FIRMWARE
+	bool "LBB-firmware"
+	depends on BR2_aarch64
+	help
+	  LastBlackBox firmware for Raspberry Pi 4b
+
+	  Pre-compiled binaries of the current bootloader and GPU
+	  firmware
+
+	  https://github.com/raspberrypi/firmware

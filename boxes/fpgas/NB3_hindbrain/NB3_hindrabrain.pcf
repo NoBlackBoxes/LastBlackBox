@@ -1,0 +1,43 @@
+# The RGB LED pins are on dedicated pins and cannot be modified!
+# Note that they are negative logic (write a 0 to turn on).
+set_io -nowarn led_green 39
+set_io -nowarn led_red	41
+set_io -nowarn led_blue	40
+
+# FTDI chip interface
+set_io -nowarn serial_txd 14 # FPGA transmit to USB
+set_io -nowarn serial_rxd 15 # FPGA receive from USB
+set_io -nowarn spi_cs 16 # Connected to SPI flash, drive high unless using SPI flash!
+
+# If using the FTDI MPSSE engine, the following signals apply
+set_io -nowarn spi_sck 15  # Shared with the flash
+set_io -nowarn spi_ssn 16  # Connected to SPI flash, drive high unless using SPI flash!
+set_io -nowarn spi_mosi 17 # Shared with the flash
+set_io -nowarn spi_miso 14 # Shared with the flash
+
+# Clock (12 MHz)
+set_io -nowarn clock 35
+
+# Global buffer pins (use for external clocks, resets, or triggers)
+set_io -nowarn LG 44
+set_io -nowarn RG 20
+
+# GPIO pins, left side
+set_io -nowarn L0 12
+set_io -nowarn L1 11
+set_io -nowarn L2 10
+set_io -nowarn L3 9
+set_io -nowarn L4 6
+set_io -nowarn L5 4
+set_io -nowarn L6 3
+set_io -nowarn L7 2
+
+# GPIO pins, right side
+set_io -nowarn R0 25
+set_io -nowarn R1 26
+set_io -nowarn R2 27
+set_io -nowarn R3 28
+set_io -nowarn R4 31
+set_io -nowarn R5 32
+set_io -nowarn R6 34
+set_io -nowarn R7 36

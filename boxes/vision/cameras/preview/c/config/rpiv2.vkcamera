@@ -1,0 +1,40 @@
+vkstr type;               ///< Camera type                                                                                                                                                                    
+    v4l                                                                                                                                                                                                       
+rect sensor;              ///< Sensor rectangle (x,y,w,h)                                                                                                                                                     
+    0 0 1920 1080                                                                                                                                                                                             
+rect roi;                 ///< ROI (relative: x,y,w,h)                                                                                                                                                        
+    0 0 1920 1080                                                                                                                                                                                             
+int32_t binning;          ///< Binning (1, 2, or 4)                                                                                                                                                           
+    1                                                                                                                                                                                                         
+int32_t sampling;         ///< Sub-sampling (1, 2, or 4)                                                                                                                                                      
+    1                                                                                                                                                                                                         
+vkstr fourcc;             ///< Fourcc pixel format code                                                                                                                                                       
+    BGR4                                                                                                                                                                                                      
+float exposure;           ///< Exposure time (normalised)                                                                                                                                                     
+    -1.0                                                                                                                                                                                                      
+float gain;               ///< Gain (normalised)                                                                                                                                                              
+    -1.0                                                                                                                                                                                                      
+float rate;               ///< Frame rate (Hertz)                                                                                                                                                             
+    -1.0                                                                                                                                                                                                      
+vkstr name;               ///< Camera device name                                                                                                                                                             
+    /dev/video0                                                                                                                                                                                               
+int32_t memory_type;      ///< Memory buffer type (mmap or user-sapce pointer)                                                                                                                                
+    2                                                                                                                                                                                                         
+int32_t num_buffers;      ///< Number of frame buffers in acquisition ring                                                                                                                                    
+    2                                                                                                                                                                                                         
+vkstrs params;            ///< Control parameters                                                                                                                                                             
+    Brightness:64                                                                                                                                                                                             
+    Contrast:0                                                                                                                                                                                                
+    Saturation:64                                                                                                                                                                                             
+    Hue:0                                                                                                                                                                                                     
+    white_balance_temperature_auto:1                                                                                                                                                                          
+    Gamma:100                                                                                                                                                                                                 
+    Gain:8                                                                                                                                                                                                    
+    power_line_frequency:2                                                                                                                                                                                    
+    white_balance_temperature:4600                                                                                                                                                                            
+    sharpness:2                                                                                                                                                                                               
+    backlight_compensation:3                                                                                                                                                                                  
+    Exposure, Auto:1                                                                                                                                                                                          
+    Exposure (Absolute):750                                                                                                                                                                                   
+    Exposure, Auto Priority:0                                                                                                                                                                                 
+#FIN

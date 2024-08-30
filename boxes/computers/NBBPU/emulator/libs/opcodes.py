@@ -1,0 +1,19 @@
+# OpCode dictionary
+OpCodes = {
+    "0" : "ADD",
+    "1" : "SUB",
+    "2" : "AND",
+    "3" : "IOR",
+    "4" : "XOR",
+    "5" : "SHR",
+    "6" : "SHL",
+    "7" : "CMP",
+    "8" : "JMP",
+    "9" : "BRZ",
+    "A" : "BRN",
+    "B" : "RES",
+    "C" : "LOD",
+    "D" : "STR",
+    "E" : "SEL",
+    "F" : "SEU",
+}

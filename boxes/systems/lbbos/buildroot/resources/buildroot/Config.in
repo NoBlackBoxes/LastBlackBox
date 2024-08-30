@@ -1,0 +1,1 @@
+source "$BR2_EXTERNAL_LBB_PATH/package/LBB-firmware/Config.in"

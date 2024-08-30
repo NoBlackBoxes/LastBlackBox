@@ -1,0 +1,37 @@
+/* A Program to test the NBB lexer */
+int x;
+int g = 42;
+int neg_g = -42;
+
+void foo(int outer_loops, int inner_loops)
+{
+    int i;
+    int j;
+    for(i = 0; i < outer_loops; i++)
+    {
+        for(j = 0; j < inner_loops; j++)
+        {
+        }
+    }
+    return;
+}
+
+void main()
+{
+    int cycles = 11;            // Blink cycles
+    int period = 1000;          // Blink period
+    int i = 0;                  // Cycle index
+    int j = 0;                  // Period index
+
+    int state = 0;              // Initial state
+    for (i = 0; i < cycles; i++)
+    {
+        for (j = 0; j < period; j++)
+        {
+            foo(1);
+        }
+        state = !state;
+    }
+
+    return; 
+}

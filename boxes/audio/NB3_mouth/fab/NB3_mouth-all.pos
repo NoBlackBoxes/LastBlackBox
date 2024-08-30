@@ -1,0 +1,13 @@
+### Footprint positions - created on Fri Feb 23 15:31:06 2024 ###
+### Printed by KiCad version 7.0.10
+## Unit = mm, Angle = deg.
+## Side : All
+# Ref     Val                  Package                                   PosX       PosY       Rot  Side
+J3        Conn_01x02           PinHeader_1x02_P2.54mm_Horizontal      11.2750    11.8250   90.0000  bottom
+C1        10uF                 C_0805_2012Metric                       5.0000    15.4250   90.0000  top
+C2        0.1uF                C_0402_1005Metric                       6.8000    13.9800  -90.0000  top
+IC1       MAX98357AETE+T       I2S_DAC-AMP_MAX98357A                  10.0000    15.0250  -90.0000  top
+J1        Conn_02x03_Odd_Even  PinHeader_2x03_P2.54mm_Vertical_SMD     4.9200     6.5000   90.0000  top
+J2        Conn_02x03_Odd_Even  PinHeader_2x03_P2.54mm_Vertical_SMD    15.0800     6.5250   90.0000  top
+R1        634k                 R_0402_1005Metric                       6.8000    16.2500   90.0000  top
+## End

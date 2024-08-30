@@ -1,0 +1,25 @@
+# Clock (12 MHz)
+set_io -nowarn clock 35
+
+# Global Buffer
+set_io -nowarn reset 44
+
+# GPIO pins, left side
+set_io -nowarn left_leds[0] 12
+set_io -nowarn left_leds[1] 11
+set_io -nowarn left_leds[2] 10
+set_io -nowarn left_leds[3] 9
+set_io -nowarn left_leds[4] 6
+set_io -nowarn left_leds[5] 4
+set_io -nowarn left_leds[6] 3
+set_io -nowarn left_leds[7] 2
+
+# GPIO pins, right side
+set_io -nowarn right_leds[0] 25
+set_io -nowarn right_leds[1] 26
+set_io -nowarn right_leds[2] 27
+set_io -nowarn right_leds[3] 28
+set_io -nowarn right_leds[4] 31
+set_io -nowarn right_leds[5] 32
+set_io -nowarn right_leds[6] 34
+set_io -nowarn right_leds[7] 36

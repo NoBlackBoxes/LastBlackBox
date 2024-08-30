@@ -1,7 +1,4 @@
-# Site
-lastblackbox.training
-
-# Build Binaries
+# Build binaries
 bin/
 
 # Build outputs
@@ -17,21 +14,14 @@ _solutions/
 tmp/
 _tmp/
 
-# Environment Files
-.env*
-
-# Doxygen Builds
-documentation/html/
-documentation/latex/
-
 # Object Files
 *.o
 
 # Dependency Files
 *.d
 
-# Python Environments
-venv/
+# Environment Files
+.env*
 
 # Python Binary Files
 *.pyc
@@ -52,12 +42,10 @@ db.sqlite3
 .vscode/
 *.code-workspace
 
-# VK temporary files
-_vk
-
 # OSX bullshit
 .DS_Store
 
 # VSCode Extensions
 node_modules/
 out/
+

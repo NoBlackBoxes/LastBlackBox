@@ -1,0 +1,18 @@
+int main()
+{
+    int cycles = 11;            // Blink cycles
+    int period = 1000;          // Blink period
+    int i = 0;                  // Cycle index
+    int j = 0;                  // Period index
+
+    int state = 0;              // Initial state
+    for (i = 0; i < cycles; i++)
+    {
+        for (j = 0; j < period; j++)
+        {
+        }
+        state = !state;
+    }
+
+    return 0; 
+}
