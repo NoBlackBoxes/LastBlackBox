@@ -77,7 +77,7 @@ We can control a computer by loading a list of instructions ("operations") for t
 
 ### PROJECT
 - Extend your robot's behaviour (be creative!)
-- **Suggestion**: Try building a Braitenberg vehicle. The servo test code in today's [resources/arduino](resources/arduino/servo_test) folder will help you get your motors moving. Can you make there speed dependent on how bright it is on the left or right side of your NB33 (you will need *two* light sensors)
+  - **Suggestion**: Try building a Braitenberg vehicle. This [servo test](../../../boxes/computers/programming/arduino/servo_test/) example will help you get your motors moving. Can you make their speed dependent on how bright it is on the *left* or *right* side of your NB3? (you will need *two* light sensors)
 
 <p align="center">
 <img src="../../../boxes/robotics/_data/images/braitenberg_vehicle.png" alt="Braitenberg Vehicle" width="600" height="300">

@@ -6,17 +6,10 @@
 
 > *"Logic, Memory, CPU, Microcontroller, Arduino, Programming"*
 
-### Robotics (and programming) continued...
 
-- ***Project***: Extend your robot's behaviour (be creative!)
+#### Power
 
-----
-
-## Afternoon
-
-----
-
-### NB3 Build (power)
+### NB3 Power
 
 - *NOTE*: Your NB3_power board cable *might* have inverted colors (black to +5V, red to 0V) relative to that shown in the assembly video. This doesn't matter, as the plugs will only work in one orientation and the correct voltage is conveyed to the correct position on the body.
 
@@ -26,6 +19,9 @@
 
 - Watch this video: [NB3 Power](https://vimeo.com/626839902)
 - ***Task 1***: Add a (regulated) 5 volt power supply to your robot, which you can use while debugging to save your AA batteries and to provide enough power for the Raspberry Pi computer.
+
+
+#### Systems
 
 ### NB3 Build (midbrain)
 
