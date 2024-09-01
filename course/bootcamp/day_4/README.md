@@ -111,7 +111,7 @@ mkdir NoBlackBoxes  # Create a NoBlackBoxes directory
 cd NoBlackBoxes     # Change to the NoBlackBoxes directory
 
 # Clone LBB repo with all of its submodules
-git clone --depth 1 --recurse-submodules https://github.com/NoBlackBoxes/LastBlackBox
+git clone --depth 1 https://github.com/NoBlackBoxes/LastBlackBox
 ```
 
 You will now have a copy of the entire LastBlackBox course on your NB3.

@@ -40,7 +40,7 @@ The NB3 Ear and NB3 mouth boards need a special driver that is not included by d
 cd ~
 mkdir NoBlackBoxes
 cd NoBlackBoxes 
-git clone --depth 1 --recurse-submodules https://github.com/NoBlackBoxes/LastBlackBox
+git clone --depth 1 https://github.com/NoBlackBoxes/LastBlackBox
 
 # Navigate to the i2s/driver folder
 cd ~/NoBlackBoxes/LastBlackBox/boxes/audio/i2s/driver

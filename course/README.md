@@ -24,8 +24,8 @@ The course is a combination of this code repo (LBB) and a submodule repo called 
 mkdir NoBlackBoxes  # Create NoBlackBoxes directory
 cd NoBlackBoxes     # Change to NoBlackBoxes directory
 
-# Clone LBB repo with submodules
-git clone --recurse-submodules https://github.com/NoBlackBoxes/LastBlackBox
+# Clone LBB repo (only the most recent version)
+git clone --depth 1 https://github.com/NoBlackBoxes/LastBlackBox
 ```
 
 ## Versions
