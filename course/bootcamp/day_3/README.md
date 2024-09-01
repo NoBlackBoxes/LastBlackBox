@@ -2,6 +2,10 @@
 
 ## Morning
 
+### Recap
+
+> *"Logic, Memory, CPU, Microcontroller, Arduino, Programming"*
+
 ### Robotics (and programming) continued...
 
 - ***Project***: Extend your robot's behaviour (be creative!)

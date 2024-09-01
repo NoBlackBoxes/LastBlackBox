@@ -67,10 +67,8 @@ We will use electromagnets to create the rotational force to move our NB3 robot.
 #### Transistors
 
 - *Watch this video*: [Semiconductors](https://vimeo.com/1000842810)
-
 - *Watch this video*: [Diodes](https://vimeo.com/1000861996)
   - ***Task***: Illuminate a light-emitting diode (LED). *Remember the current limiting resistor*
-
 - *Watch this video*: [Transistors - MOSFETs](https://vimeo.com/1000873279)
   - ***Task***: Measure the threshold voltage that opens your MOSFET gate. Compare it to the "expected" range listed in the datasheet
     - The datasheet for your MOSFET can be found here: [IRF510](../../../boxes/transistors/_data/datasheets/IRF510.pdf)
