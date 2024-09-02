@@ -57,7 +57,7 @@ To help you build electronic circuits, we will assemble a "prototyping platform"
 
 We will use electromagnets to create the rotational force to move our NB3 robot. 
 
-- *Watch this video*: [DC Motors](https://vimeo.com/843634014)
+- *Watch this video*: [DC Motors](https://vimeo.com/1000824116)
 - *Watch this video*: [NB3 Muscles](https://vimeo.com/1005039796)
   - ***Task***: Play with your motor. Spin it forwards *and* backwards...
 
