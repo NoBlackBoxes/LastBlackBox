@@ -17,11 +17,11 @@ username = os.getlogin()
 repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
 
 # Specify Number of Kits
-num_kits = 16
+num_kits = 15
 
 # Specify Level Limit
-level_limt = '01'
-#level_limt = '10'
+#level_limt = '01'
+level_limt = '10'
 #level_limt = '11'
 
 # Load BOM
