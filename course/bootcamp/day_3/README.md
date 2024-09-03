@@ -38,6 +38,39 @@ When you have installed your NB3's operating system, then you can power it on an
 ------------
 ## Afternoon
 
-### PROJECT
-- Build a remote-control robot!!
+Now you can "clone" (copy) all of the code in the LastBlackBox GitHub repository directly to your NB3's midbrain. It will help with later exercises if we all put this example code at the same location on the Raspberry Pi (the "home" directory).
 
+```bash
+cd ~                # Navigate to "home" directory
+mkdir NoBlackBoxes  # Create NoBlackBoxes directory
+cd NoBlackBoxes     # Change to NoBlackBoxes directory
+
+# Clone LBB repo (only the most recent version)
+git clone --depth 1 https://github.com/NoBlackBoxes/LastBlackBox
+```
+
+#### Python
+
+We will next create a Python virtual environment on our NB3 that will isolate the specific software packages we require for the course from the Python packages used by Raspberry Pi's operating system.
+  - ***Task***: Create a "virtual environment" called LBB
+    - Follow the instructions here: [virtual environments](../../../boxes/python/virtual_environments/README.md)
+
+
+### PROJECT
+- *Build a remote-control robot!!* Your goal is to press a key on your "host" computer and have your NB3 respond. If you detect different keys, then you can have your NB3 respond with different behaviours/directions.
+
+This is a ***creative*** task with lots of different solutions. However, to get you started, I have created the example code described below.
+
+0. SSH connection from your "host" computer to your NB3.
+1. Code to detect keypresses with your NB3's Raspberry Pi (keypresses are sent via SSH whenver you type in the terminal window)
+   - Python example code for detecting keypresses: [python keyboard](../../../boxes/python/remote-NB3/python/keyboard/keyboard.py)
+2. Code to send "serial" commands from your NB3's midbrain (RPi) to hindbrain (Arduino)
+    - Python example code to send serial commands: [python serial](../../../boxes/python/remote-NB3/python/serial/serial_write.py)
+3. Code to run on your NB3's hindrbain (Arduino) that listens for serial commands and responds with behaviour
+    - Arduino example code to respond to a single serial command with LED: [arduino serial server](../../../boxes/python/remote-NB3/arduino/serial_server/)
+    - Arduino example code to respond to a multiple serial command with different servo movements: [arduino serial controller](../../../boxes/python/remote-NB3/arduino/serial_controller/)
+4. Code that combines detecting keypresses and sending serial commands
+   - Python example code that combines keypress detection and serial command writing: [python kerial](../../../boxes/python/remote-NB3/python/kerial/kerial.py)
+   - Python example code that combines keypress detection (using a more capable library, **sshkeyboard**, that also detects when a key is held down) and serial command writing: [python drive](../../../boxes/python/remote-NB3/python/drive/drive.py)
+
+----

@@ -5,7 +5,7 @@ Virtual environments are self-contained installations of Python. All of the pack
 ---
 ## Create a virtual environnmet
 
-- Make a sub-folder in the repository root called "_tmp"
+- Make a sub-folder in the **repository root** called "_tmp"
   - *Note*: Anything in the "_tmp" folder is ignored by Git and not synced to the main repository
 - Create a Python virtual environment (called "NBB") for working on NoBlackBoxes projects and courses
   - Include the "--system-site-packages" flag to use libraries (packages) already installed within your RPi (NB3's) OS.
