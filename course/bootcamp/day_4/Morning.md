@@ -64,7 +64,7 @@ After you changed the IP address, you can run the script on your raspberry pi by
     python3 raspberry_pi/receive_and_send_sensor_data.py
 
 
-Task 4: Receive the data to your host computer
+Task 4: Receive the data at your host computer
 -----------------------------------
 You need to have python3 installed on your host computer. If you do not have it installed, we recommend to use
 Anaconda to install python3. You can find the installation instructions here: https://www.anaconda.com/products/individual
@@ -96,19 +96,24 @@ this on your host computer:
 ![Realtime Plot](./media/sensor_data_real_time.png)
 
 # Audio Data
-
-Task 1: Record audio data
+Task 1: Follow the microphone installation instructions
 ---------------------------------
-Yesterday you used the MEMS microphones to record audio data. Today you will use the same setup to record audio data.
-Therefore, you need to connect the MEMS microphones to the Raspberry Pi. Use "arecord" to record roughly 5 seconds of speech. 
+To install the microphone, please follow the instructions provided in the following link: [Microphone Installation Instructions](https://github.com/NoBlackBoxes/LastBlackBox/tree/master/boxes/audio/i2s)
 
-
-Task 2: Load it on your host computer and plot it
+Task 2: Record audio data
 ---------------------------------
-Transfer the recorded file to your host computer and plot it using matplotlib. For file transfer, you can use the commands as introduced before, or any other tool, such as WinSCP or FileZilla (see also day 5 instructions). 
+Use "arecord" to record roughly 5 seconds of speech. 
+
+```bash
+arecord -D plughw:1 -c2 -r 48000 -f S32_LE -t wav -V stereo -v file_stereo.wav
+```
+
+Task 3: Load it on your host computer and plot it
+---------------------------------
+Transfer the recorded file to your host computer and plot it using matplotlib. For file transfer, you can use the commands as introduced before, or any other tool, such as WinSCP or FileZilla. 
 
 
-Task 3: Record a whistling sound do the same as in task 7
+Task 4: Record a whistling sound
 ---------------------------------
 Repeat Task 1 and 2 but this time record a whistling sound. You will need it in the afternoon session.
 
@@ -117,17 +122,24 @@ Repeat Task 1 and 2 but this time record a whistling sound. You will need it in 
 TROUBLESHOOTING
 ===============
 
+NOTE: This information may be outdated and only applicable to the NB3 kit from last year. Please disregard if using a different kit.
 
-If the driver for the hearing modules are missing:
+If you encounter missing drivers for the hearing modules, you can try the following solution:
 
-    make -C /lib/modules/5.10.103-v7l+/build M=/home/pi/LastBlackBox/boxes/hearing/i2s/driver modules
-    make[1]: *** /lib/modules/5.10.103-v7l+/build: No such file or directory.  Stop.
-    make: *** [Makefile:35: all] Error 2
+```bash
+make -C /lib/modules/5.10.103-v7l+/build M=/home/pi/LastBlackBox/boxes/hearing/i2s/driver modules
+make[1]: *** /lib/modules/5.10.103-v7l+/build: No such file or directory.  Stop.
+make: *** [Makefile:35: all] Error 2
+```
 
-Then try this solution:
+In this case, you can attempt to resolve the issue by running the following command:
 
-    sudo apt-get install linux-headers
+```bash
+sudo apt-get install linux-headers
+```
 
-If `pyaudio` is not working on the Raspberry Pi, use this solution:
+If you are experiencing issues with `pyaudio` on the Raspberry Pi, you can try the following solution:
 
-    sudo apt-get install portaudio19-dev
+```bash
+sudo apt-get install portaudio19-dev
+```
