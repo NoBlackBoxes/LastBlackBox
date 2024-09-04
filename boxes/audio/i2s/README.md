@@ -1,6 +1,6 @@
 # Audio : i2s
 
-i2s is a digital sound protocol used by many compute platofrms.
+i2s is a digital sound protocol used by many compute platforms.
 
 ## Installation
 
