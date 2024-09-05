@@ -10,7 +10,7 @@ You need
 
 - Light sensor
 
-- MEMS microphones
+- Microphone
 
 - WiFi/SSH access to Raspberry Pi
 
