@@ -109,6 +109,12 @@ work, and mp4 – that should work).
 Task 4: Live stream the camera feed
 -----------------------------------
 
+
+>Note: There is a version called cameraStream2.py - this is recommended for newer RaspPis and OS-versions!
+Ensure you have picamera2 installed (follow these instructions: https://github.com/raspberrypi/picamera2)
+
+*The following can be deprecated, try the cameraStream2.py first! However, the main idea, live streaming the camera per web-browser is the same!*
+
 I prepared a file called cameraStream.py – this is based on the basic
 streaming example of **picamera**
 (<https://picamera.readthedocs.io/en/release-1.13/recipes2.html#web-streaming>)
