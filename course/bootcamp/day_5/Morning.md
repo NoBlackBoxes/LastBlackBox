@@ -80,6 +80,8 @@ container.
 Task 3: Transfer them to your computer
 --------------------------------------
 
+**NOTE:** If you have already a connection with Visual Studio Code via SSH to your computer, you can use this to transfer the files or look at them. If you would like to have another convenient way to transfer files, you may would like to checkout FileZilla:
+
 You can use for example FileZilla
 ([www.filezilla-project.org](https://filezilla-project.org/download.php?show_all=1)) to transfer files
 easily.
