@@ -34,47 +34,47 @@ You will be building a phone...without using any "black boxes". We thus call thi
 
 ## Timeline
 
-### Step 1 - Electrons
+### Session 1 - Electrons
 
 - Build a circuit
   - Learn about atoms and electons
 
-### Step 2 - Magnets
+### Session 2 - Magnets
 
 - Build a speaker
   - Learn about magnets, motion, and sound
 
-### Step 3 - Light
+### Session 3 - Light
 
 - Build a radio
   - Learn about light, antennaes, transmitters, and receivers
 
-### Step 4 - Transistors
+### Session 4 - Transistors
 
 - The most important thing you don't understand
   - Learn about transistors, amplifiers, and integrated circuits
 
-### Step 5 - Data
+### Session 5 - Data
 
 - How can two numbers create *everything*?
   - Learn about logic and memory
 
-### Step 6 - Computers
+### Session 6 - Computers
 
 - To think is to compute
   - Learn about computers and FPGAs
 
-### Step 7 - Systems
+### Session 7 - Systems
 
 - Extend your phone with some human-engineered complexity
   - Learn about Linux and Python
 
-### Step 8 - Networks
+### Session 8 - Networks
 
 - Connect and communicate...like a machine
   - Learn about websites, servers, and networks
 
-### Step 9 - Security
+### Session 9 - Security
 
 - How to keep things private?
   - Learn about encryption and hacking

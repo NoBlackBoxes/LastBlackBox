@@ -20,45 +20,56 @@ You will be building a brain for your robot. The robot's physical layout mimics 
 
 ## Timeline
 
-### Step 1 - Sensors
+### Session 1 - Sensors
 
-- Build a light sensor
+- Add some sensory input
   - Learn about atoms, electons, sensors, and light
+    - **Project**: *Build a Light Sensor*
 
-### Step 2 - Motors
+### Session 2 - Motors
 
 - Make things move!
   - Learn about magnets and motors
+    - **Project**: *Build a Speaker*
 
-### Step 3 - Transistors
+### Session 3 - Transistors
 
 - The most important thing you don't understand
   - Learn about transistors, amplifiers, circuits, and power
+    - **Project**: *Build a Light-Sensitive Motor*
 
-### Step 4 - Computers
+### Session 4 - Computers
 
 - To think is to compute
   - Learn about data, logic, memory, computers, and FPGAs
+    - **Project**: *Program a Microcontroller*
 
-### Step 5 - Robotics
+### Session 5 - Robotics
 
 - Build your first brain + body, that can sense, move, and make decisions
   - Learn about control and robotics
+    - **Project**: *Build a Braitenberg Vehicle*
 
-### Step 6 - Systems
+### Session 6 - Systems
 
 - Extend your brain with some human-engineered complexity
   - Learn about Linux and Python
+    - **Project**: *Connect Wirelessly to your Robot*
 
-### Step 7 - Networks
+### Session 7 - Networks
 
 - Connect and communicate...like a machine
   - Learn about websites, servers, networks, and security
+    - **Project**: *Build a Remote Control Robot*
 
-### Step 8 - Intelligence
+### Session 8 - Intelligence
 
 - Make it smart....what is smart?
   - Learn about audio, vision, learning, and intlligence
+    - **Project**: *Add a Camera, Speaker, and Microphones*
+    - **Project**: *Create a Voice-Activated Robot*
+    - **Project**: *Run Neural Networks on a Hardware Accelerator*
+    - **Project**: *Teach your Robot to Recognize You (and only you)*
 
 ----
 
