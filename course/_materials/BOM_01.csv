@@ -17,6 +17,10 @@ Test Lead,01,Alligator clip to 0.64 mm pin (20 cm),2,,https://www.amazon.co.uk/g
 Rubber feet,01,Adhesive rubber standoffs (1421T6CL),4,_data/datasheets/rubber_feet.pdf,https://uk.farnell.com/hammond/1421t6cl/feet-stick-on-pk24/dp/1876522,Passive,20,20,4
 
 magnets,,,,,,,,
+Magnet Wire,01,Narrow gaurge epoxy insulated (1 m),1,,https://www.amazon.co.uk/Enameled-Magnet-Soldering-Winding-Enamelled/dp/B07N65LRVD,Passive,30,30,20
+Magnet,01,Neodymium disc (8 mm x 3 mm),2,,https://uk.farnell.com/duratool/d01766/magnets-rare-earth-8-x-3mm-pk10/dp/1888095,Magnets,20,20,5
+USB Sound Card,01,USB to 3.5 mm Audio out/in,1,,https://www.amazon.co.uk/UGREEN-Headphone-Microphone-Raspberry-Ultrabook/dp/B01N905VOY,Loose,150,90,15
+Stereo Plug Terminal,01,3.5 mm plug to screw terminal,2,,https://www.amazon.co.uk/dp/B07MNYBFL9,Loose,40,20,15
 
 light,,,,,,,,
 
@@ -26,10 +30,9 @@ Breadboards (170),01,170-tie solderless breadboard,4,_data/datasheets/breadboard
 
 motors,,,,,,,,
 DC Brushed Motor,01,6V Brushed DC motor,1,,https://www.amazon.co.uk/Gikfun-1V-6V-Hobby-Arduino-EK1894/dp/B07BHHP2BT,Loose,20,40,15
-DC Gearbox Motor,01,TT Gearbox DC Motor - 200RPM - 3 to 6VDC and wheel,2,,https://www.adafruit.com/product/3777#technical-details,Loose,130,70,30
-Motor Mount,01,Mount for TT Gearbox DC Motors - L-Bracket Type with hardware,2,,https://www.adafruit.com/product/3768,Mounts,25,25,25
 Servo Mount,01,Mount for servo motor,2,,VK,Mounts,30,15,5
-Servos,01,FS90R Micro Continuous Rotation Servo w/Wheel,2,,https://www.rapidonline.com/feetech-fs90r-servo-and-wheel-37-1336,Loose,100,70,15
+Servo Motor,01,FT90R Digital Micro Continuous Rotation Servo,2,,https://www.pololu.com/product/2817,Loose,100,70,15
+Servo Wheel,01,Wheels (70x8mm) for servos,2,,https://www.pololu.com/product/4925,Loose,100,70,15
 M2.5 bolt (6),01,6 mm long M2.5 bolt,8,,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2,Hardware,5,5,6
 M2.5 standoff (12/SS),01,12 mm long socket-to-socket M2.5 standoff,4,,https://uk.farnell.com/wurth-elektronik/970120151/standoff-hex-female-female-12mm/dp/2884528,Hardware,5,5,12
 
@@ -54,7 +57,7 @@ M2.5 nut,01,regular M2.5 nut,4,-,https://www.accu.co.uk/hexagon-nuts/456430-HPN-
 data,,,,,,,,
 LED (Red),01,5 mm/2 mA red LED,2,_data/datasheets/led_HLMP.pdf,https://uk.farnell.com/broadcom-limited/hlmp-4700/led-5mm-red-2-3mcd-626nm/dp/1003232,Active,50,5,3
 LED (Green),01,3 mm/2 mA green LED,2,_data/datasheets/led_HLMP.pdf,https://uk.farnell.com/broadcom-limited/hlmp-1790/led-3mm-green-2-3mcd-569nm/dp/1003209,Active,50,5,3
-Resistor (330),01,330 &Omega;/0.25 W,6,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-2k4/res-2k4-1-250mw-axial-metal-film/dp/9341595,Passive,50,5,3
+Resistor (330),01,330 &Omega;/0.25 W,4,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-2k4/res-2k4-1-250mw-axial-metal-film/dp/9341595,Passive,50,5,3
 
 logic,,,,,,,,
 
@@ -68,7 +71,6 @@ Piezo Buzzer,01,Piezoelectric speaker/transducer,1,_data/datasheets/piezo_buzzer
 Cable (MiniUSB-1m),01,Mini-USB to Type-A cable (1 m),1,,https://uk.farnell.com/molex/88732-8602/usb-cable-2-0-plug-plug-1m/dp/1221071,Loose,100,50,15
 
 control,,,,,,,,
-H-bridge,01,H-bridge motor driver (SN754410NE),2,_data/datasheets/sn754410.pdf,https://uk.farnell.com/texas-instruments/sn754410ne/ic-peripheral-driver-half-h-1a/dp/3118977,Active,8,25,6
 
 robotics,,,,,,,,
 Cable (Mini-USB/20cm),01,Short mini-USB to Type-A cable (20 cm),1,,https://www.amazon.co.uk/LINDY-0-2-Type-Mini-B-Cable/dp/B01IZ4VFCO,Loose,100,25,10
@@ -77,7 +79,7 @@ Battery Charger,01,NiMH battery charger (UK plug),1,,https://www.amazon.co.uk/dp
 Velcro Patch,01,Velcro adhesive,1,,,Loose,50,75,4
 
 systems,,,,,,,,
-Computer (RPi4),01,Raspberry Pi 4b with 4 GB RAM,1,_data/datasheets/rpi4b_4gb.pdf,https://uk.farnell.com/raspberry-pi/rpi4-modbp-4gb/raspberry-pi-4-model-b-4gb/dp/3051887,Loose,95,70,26
+Computer (RPi4),01,Raspberry Pi 4b with 2 GB RAM,1,_data/datasheets/rpi4b.pdf,https://uk.farnell.com/raspberry-pi/rpi4-modbp-2gb/raspberry-pi-4-model-b-2gb/dp/3051886,Loose,95,70,26
 Heatsinks,01,Heatsinks for RPi 4b chips,1,_data/datasheets/rpi4b_heatsinks.jpg,https://www.amazon.co.uk/gp/product/B07VRNT3HX,Loose,40,20,10
 SD Card,01,16 GB micro SD card,1,_data/datasheets/SanDisk-SDSQUAR-016G-GN6MA-datasheet.pdf,https://uk.farnell.com/sandisk/sdsquar-016g-gn6ma/memory-card-microsdhc-uhs-i-16gb/dp/2931924,Loose,100,50,3
 USB SD Card IO,01, SD card reader/writer,1,,https://www.amazon.co.uk/Beikell-High-speed-Adapter-Supports-MMC-Compatible-Windows/dp/B07L9VT8YY,Loose,70,40,15
@@ -109,7 +111,7 @@ M2.5 bolt (6),01,6 mm long M2.5 bolt,2,,https://www.accu.co.uk/pozi-pan-head-scr
 M2.5 nut,01,regular M2.5 nut,2,-,https://www.accu.co.uk/hexagon-nuts/456430-HPN-M2-5-C8-Z,Hardware,5,5,3
 
 vision,,,,,,,,
-Camera (RPi v3),01,RPi color camera with auto-focus (version 3),1,_data/datasheets/rpi_camera_v3.pdf,https://uk.farnell.com/raspberry-pi/rpi-noir-camera-board/raspberry-pi-noir-camera-board/dp/2510729,Loose,120,75,23
+Camera (RPi v3),01,RPi color camera with auto-focus (version 3),1,_data/datasheets/rpi_camera_v3.pdf,https://uk.farnell.com/raspberry-pi/sc0872/rpi-camera-mod-3-standard-lens/dp/4132318,Loose,120,75,23
 NB3 Camera Mount,01,Custom laser cut mount for RPi camera,1,NB3_camera_mount,VK,Mounts,40,30,5
 NB3 Cortex Mount,01,Custom laser cut holder for NPU,1,NB3_cortex_mount,VK,Mounts,75,65,5
 M2.5 bolt (6),01,6 mm long M2.5 bolt,4,,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2,Hardware,5,5,6

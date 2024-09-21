@@ -1,7 +1,8 @@
 DC Brushed Motor,01,6V Brushed DC motor,1,,https://www.amazon.co.uk/Gikfun-1V-6V-Hobby-Arduino-EK1894/dp/B07BHHP2BT,Loose,20,40,15
-DC Gearbox Motor,01,TT Gearbox DC Motor - 200RPM - 3 to 6VDC and wheel,2,,https://www.adafruit.com/product/3777#technical-details,Loose,130,70,30
-Motor Mount,01,Mount for TT Gearbox DC Motors - L-Bracket Type with hardware,2,,https://www.adafruit.com/product/3768,Mounts,25,25,25
 Servo Mount,01,Mount for servo motor,2,,VK,Mounts,30,15,5
-Servos,01,FS90R Micro Continuous Rotation Servo w/Wheel,2,,https://www.rapidonline.com/feetech-fs90r-servo-and-wheel-37-1336,Loose,100,70,15
+Servo Motor,01,FT90R Digital Micro Continuous Rotation Servo,2,,https://www.pololu.com/product/2817,Loose,100,70,15
+Servo Wheel,01,Wheels (70x8mm) for servos,2,,https://www.pololu.com/product/4925,Loose,100,70,15
 M2.5 bolt (6),01,6 mm long M2.5 bolt,8,,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2,Hardware,5,5,6
 M2.5 standoff (12/SS),01,12 mm long socket-to-socket M2.5 standoff,4,,https://uk.farnell.com/wurth-elektronik/970120151/standoff-hex-female-female-12mm/dp/2884528,Hardware,5,5,12
+DC Gearbox Motor,10,TT Gearbox DC Motor - 200RPM - 3 to 6VDC and wheel,2,,https://www.adafruit.com/product/3777#technical-details,Loose,130,70,30
+Motor Mount,10,Mount for TT Gearbox DC Motors - L-Bracket Type with hardware,2,,https://www.adafruit.com/product/3768,Mounts,25,25,25

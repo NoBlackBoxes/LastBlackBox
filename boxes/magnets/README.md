@@ -9,10 +9,10 @@ In this box, we will learn about magnetism...how to create it and how to **use**
 Contents|Level|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 Inductor|10|1 mH torroidal inductor|1|[-D-](_data/datasheets/inductor_torroidal.pdf)|[-L-](https://uk.farnell.com/bourns/2124-v-rc/inductor-1000uh-15-1-3a-toroid/dp/1929753)
-Magnet Wire|10|Narrow gaurge epoxy insulated (1 m)|1|-|[-L-](https://www.amazon.co.uk/Enameled-Magnet-Soldering-Winding-Enamelled/dp/B07N65LRVD)
-Magnet|10|Neodymium disc (8 mm x 3 mm)|2|-|[-L-](https://uk.farnell.com/duratool/d01766/magnets-rare-earth-8-x-3mm-pk10/dp/1888095)
-USB Sound Card|10|USB to 3.5 mm Audio out/in|1|-|[-L-](https://www.amazon.co.uk/UGREEN-Headphone-Microphone-Raspberry-Ultrabook/dp/B01N905VOY)
-Stereo Plug Terminal|10|3.5 mm plug to screw terminal|2|-|[-L-](https://www.amazon.co.uk/dp/B07MNYBFL9)
+Magnet Wire|01|Narrow gaurge epoxy insulated (1 m)|1|-|[-L-](https://www.amazon.co.uk/Enameled-Magnet-Soldering-Winding-Enamelled/dp/B07N65LRVD)
+Magnet|01|Neodymium disc (8 mm x 3 mm)|2|-|[-L-](https://uk.farnell.com/duratool/d01766/magnets-rare-earth-8-x-3mm-pk10/dp/1888095)
+USB Sound Card|01|USB to 3.5 mm Audio out/in|1|-|[-L-](https://www.amazon.co.uk/UGREEN-Headphone-Microphone-Raspberry-Ultrabook/dp/B01N905VOY)
+Stereo Plug Terminal|01|3.5 mm plug to screw terminal|2|-|[-L-](https://www.amazon.co.uk/dp/B07MNYBFL9)
 
 </p></details>
 

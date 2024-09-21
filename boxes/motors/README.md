@@ -9,12 +9,13 @@ Computers and brains work with voltages. In order for either to affect the envir
 Contents|Level|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 DC Brushed Motor|01|6V Brushed DC motor|1|-|[-L-](https://www.amazon.co.uk/Gikfun-1V-6V-Hobby-Arduino-EK1894/dp/B07BHHP2BT)
-DC Gearbox Motor|01|TT Gearbox DC Motor - 200RPM - 3 to 6VDC and wheel|2|-|[-L-](https://www.adafruit.com/product/3777#technical-details)
-Motor Mount|01|Mount for TT Gearbox DC Motors - L-Bracket Type with hardware|2|-|[-L-](https://www.adafruit.com/product/3768)
 Servo Mount|01|Mount for servo motor|2|-|[-L-](VK)
-Servos|01|FS90R Micro Continuous Rotation Servo w/Wheel|2|-|[-L-](https://www.rapidonline.com/feetech-fs90r-servo-and-wheel-37-1336)
+Servo Motor|01|FT90R Digital Micro Continuous Rotation Servo|2|-|[-L-](https://www.pololu.com/product/2817)
+Servo Wheel|01|Wheels (70x8mm) for servos|2|-|[-L-](https://www.pololu.com/product/4925)
 M2.5 bolt (6)|01|6 mm long M2.5 bolt|8|-|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2)
 M2.5 standoff (12/SS)|01|12 mm long socket-to-socket M2.5 standoff|4|-|[-L-](https://uk.farnell.com/wurth-elektronik/970120151/standoff-hex-female-female-12mm/dp/2884528)
+DC Gearbox Motor|10|TT Gearbox DC Motor - 200RPM - 3 to 6VDC and wheel|2|-|[-L-](https://www.adafruit.com/product/3777#technical-details)
+Motor Mount|10|Mount for TT Gearbox DC Motors - L-Bracket Type with hardware|2|-|[-L-](https://www.adafruit.com/product/3768)
 
 </p></details>
 

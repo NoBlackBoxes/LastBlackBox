@@ -8,7 +8,7 @@ Whoa...what happend.
 
 Contents|Level|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
-Computer (RPi4)|01|Raspberry Pi 4b with 4 GB RAM|1|[-D-](_data/datasheets/rpi4b_4gb.pdf)|[-L-](https://uk.farnell.com/raspberry-pi/rpi4-modbp-4gb/raspberry-pi-4-model-b-4gb/dp/3051887)
+Computer (RPi4)|01|Raspberry Pi 4b with 2 GB RAM|1|[-D-](_data/datasheets/rpi4b.pdf)|[-L-](https://uk.farnell.com/raspberry-pi/rpi4-modbp-2gb/raspberry-pi-4-model-b-2gb/dp/3051886)
 Heatsinks|01|Heatsinks for RPi 4b chips|1|[-D-](_data/datasheets/rpi4b_heatsinks.jpg)|[-L-](https://www.amazon.co.uk/gp/product/B07VRNT3HX)
 SD Card|01|16 GB micro SD card|1|[-D-](_data/datasheets/SanDisk-SDSQUAR-016G-GN6MA-datasheet.pdf)|[-L-](https://uk.farnell.com/sandisk/sdsquar-016g-gn6ma/memory-card-microsdhc-uhs-i-16gb/dp/2931924)
 USB SD Card IO|01| SD card reader/writer|1|-|[-L-](https://www.amazon.co.uk/Beikell-High-speed-Adapter-Supports-MMC-Compatible-Windows/dp/B07L9VT8YY)

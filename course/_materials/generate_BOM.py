@@ -15,9 +15,9 @@ repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
 boxes_path = repo_path + '/boxes'
 
 # Specify Level Limit
-level_limt = '01'
-#level_limt = '10'
-#level_limt = '11'
+level_limit = '01'
+#level_limit = '10'
+#level_limit = '11'
 
 #
 # Helper functions
@@ -135,10 +135,10 @@ def append_materials(BOM, box):
             break
         # Check level limit
         level = line.split(',')[1]
-        if level_limt == '01':
+        if level_limit == '01':
             if level != '01':
                 continue
-        if level_limt == '10':
+        if level_limit == '10':
             if level == '11':
                 continue
         # Add line to materials
