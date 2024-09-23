@@ -1,4 +1,4 @@
-# Simple HTTP server
+# Simple Socket HTTP Server
 import socket
 
 # Load your HTML page (index.html)
@@ -23,17 +23,17 @@ while True:
     client_connection, client_address = listen_socket.accept()
 
     # When a connection arrives, retrieve/decode HTTP request
-    request_data = client_connection.recv(1024)
-    request_text = request_data.decode('utf-8')
-    print(request_text)
+    request = client_connection.recv(1024)
+    request_text = request.decode('utf-8')
+    print(f"{len(request)} bytes received:\n{request_text}")
 
     # (Optional) parse request
     #   - if you want to serve different files based on the request
 
     # Respond to target (send the bytes of your HTML file)
     header = "HTTP/1.1 200 OK\n" 
-    http_response = bytes(header+html, 'utf-8')
-    client_connection.sendall(http_response)
+    response = bytes(header+html, 'utf-8')
+    client_connection.sendall(response)
 
     # Close client connection
     client_connection.close()
