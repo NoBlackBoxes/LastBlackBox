@@ -33,3 +33,7 @@ pyglet.app.run()
 
 Let's draw a shape and make it move in a random direction...until it hits the edge of the screen. [Random Ball](examples/01_random_ball.py)
 
+## GLSL shaders
+
+Hardware acceleration is pretty impressive
+
