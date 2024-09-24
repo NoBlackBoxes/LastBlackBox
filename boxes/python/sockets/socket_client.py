@@ -1,6 +1,8 @@
 import socket
 
-host = '127.0.0.1'
+#host = '127.0.0.1'
+#host = '192.168.138.226'
+host = '172.20.62.243'
 port = 1234
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
