@@ -15,6 +15,7 @@ class Speaker:
         self.buffer_size_samples = buffer_size_samples
         self.current_sample = 0
         self.max_samples = 0
+        self.volume = 0.25
         self.mutex = Lock()
 
         # Set format
@@ -107,7 +108,7 @@ class Speaker:
         num_samples = np.shape(sound)[0]
         max_samples = num_samples - (num_samples % self.buffer_size_samples)
         self.sound = np.zeros((max_samples, self.num_channels), dtype=np.float32)
-        self.sound = np.copy(sound[:max_samples,:])
+        self.sound = np.copy(sound[:max_samples,:]) * self.volume
         self.current_sample = 0
         self.max_samples = max_samples
         return
@@ -153,9 +154,9 @@ class Speaker:
         else:
             print("(NBB_sound) Unsupported WAV output sample format")
             exit(-1)
-        self.sound = np.copy(float_data)
+        self.sound = np.copy(float_data) * self.volume
 
-        # Start recording
+        # Start playing
         self.current_sample = 0
         self.max_samples = wav_num_samples
 
