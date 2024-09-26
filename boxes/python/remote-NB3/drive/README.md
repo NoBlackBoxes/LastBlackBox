@@ -5,5 +5,5 @@ Uses the "sshkeyboard" python library to monitor key presses (and when you *hold
 You just install the "sshkeyboard" library
 
 ```bash
-pip3 install sshkeyboard --break-system-packages
+pip3 install sshkeyboard
 ```

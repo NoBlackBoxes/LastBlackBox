@@ -1,4 +1,4 @@
-# Requires installing sshkeyboard: pip3 install sshkeyboard --break-system-packages
+# Requires installing sshkeyboard: pip3 install sshkeyboard
 import os
 import serial
 import time
