@@ -1,20 +1,18 @@
-# The Last Black Box : *Bootcamp* : Day 1 - Electronics
+# Build a Brain : Session 1 - Sensors
 
-----------
-## Morning
+Here we will learn how electricity can be used to create "sensors" (inputs for our brain) for anything we want to measure (light, temperature, pressure, sound, etc.).
 
-### Introduction
+We will open the following "black boxes" during this session:
+- atoms (01), electrons (01), sensors (01)
 
-- *Watch this video*: [The Last Black Box : Bootcamp : Introduction](https://vimeo.com/843482137)
-
-#### Atoms
+## Atoms
 
 > "Let's start at the very beginning, a very good place to start". - *R&H*
 
 - *Watch this video*: [Structure and the Periodic Table](https://vimeo.com/1000458082)
   - When you need it (and you will), then you can find the periodic table [here](../../../boxes/atoms/card/periodic_table.png)
 
-#### Electrons
+## Electrons
 
 - *Watch this video*: [Voltage](https://vimeo.com/1000730032)
   - ***Task***: Measure the voltage of a AA battery using your Multimeter (select voltage ("V") and touch your probes to either end of the battery)
@@ -42,44 +40,13 @@ To help you build electronic circuits, we will assemble a "prototyping platform"
   - ***Task***: Build a voltage divider using a variable resistor (potentiometer). Measure the intermediate voltage
     - A guide to completing these tasks can be found here: [Building Voltage Dividers](https://vimeo.com/1000789632)
 
-#### Sensors
+## Sensors
 
 - *Watch this video*: [Light Sensors](https://vimeo.com/1000794164)
-  - ***Task***: Build a light sensor
+
+---
+
+# Project
+  - Build a light sensor
     - Build a voltage divider with one of the fixed resistors replaced with an LDR (light-dependent resistor). Does the "output" voltage vary with light level? What should the value of the fixed resistor be to maximize the sensitive range of the output voltage for varying light levels?
     - A guide to completing this task (and all the morning circuit building tasks) can be found here: [Building Circuits](https://vimeo.com/1005054579)
-
-#### Magnets
-
-- *Watch this video*: [Electromagnetism](https://vimeo.com/1000810115)
-
-#### Motors
-
-We will use electromagnets to create the rotational force to move our NB3 robot. 
-
-- *Watch this video*: [DC Motors](https://vimeo.com/1000824116)
-- *Watch this video*: [NB3 Muscles](https://vimeo.com/1005039796)
-  - ***Task***: Play with your motor. Spin it forwards *and* backwards...
-
-------------
-## Afternoon
-
-#### Transistors
-
-- *Watch this video*: [Semiconductors](https://vimeo.com/1000842810)
-- *Watch this video*: [Diodes](https://vimeo.com/1000861996)
-  - ***Task***: Illuminate a light-emitting diode (LED). *Remember the current limiting resistor*
-- *Watch this video*: [Transistors - MOSFETs](https://vimeo.com/1000873279)
-  - ***Task***: Measure the threshold voltage that opens your MOSFET gate. Compare it to the "expected" range listed in the datasheet
-    - The datasheet for your MOSFET can be found here: [IRF510](../../../boxes/transistors/_data/datasheets/IRF510.pdf)
-
-### PROJECT
-- Build a light-sensitive motor (a motor that spins when the light is ON and stops when the light is OFF...or the other way around).
-  - Use the following circuit as a guide:
-<p align="center">
-<img src="../../../boxes/transistors/_data/images/MOSFET_motor_driver.png" alt="MOSEFT driver" width="400" height="300">
-</p>
-
-> Where do you connect your light sensor?
-
-----

@@ -11,7 +11,7 @@ LBB: Task Class
 import LBB.input as Input
 
 # TO DO!
-# - Add page footers (link to next topic...complete box...etc.)
+# - Add page footers (link to next topic...complete session...etc.)
 # - Add progress header (and course indicator...)
 
 # Task Class

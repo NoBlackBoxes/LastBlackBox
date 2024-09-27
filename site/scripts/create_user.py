@@ -53,13 +53,13 @@ boxes = {
     'Audio'         : '00',
     'Vision'        : '00',
     'Learning'      : '00',
-    'Intelligence'  : '00'
+    'Intelligence'  : '11'
 }
 
 # Define User
 user = User.User()
 user.id = "000011"
-user.password_hash = generate_password_hash("4321")
+user.password_hash = generate_password_hash("1234")
 user.name = "Jimmy Voight"
 user.nickname = "Jimmy"
 user.email = "info@voight-kampff.tech"
@@ -67,7 +67,7 @@ user.instructor = False
 user.admin = False
 user.boxes = boxes
 user.current_course = 'build_a_brain'
-user.current_box = 'electrons'
+user.current_session = '1'
 user.current_topic = 'measuring_voltage'
 
 # Store User

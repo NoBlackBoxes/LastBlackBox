@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-LBB: Box Class
+LBB: Session Class
 
 @author: kampff
 """
@@ -12,13 +12,13 @@ import LBB.utilities as Utilities
 # Import modules
 import LBB.topic as Topic
 
-# Box Class
-class Box:
+# Session Class
+class Session:
     def __init__(self, readme_path=None):
         self.name = None            # name
         self.description = None     # description
-        self.materials = None       # required materials
-        self.topics = None          # topics list
+        self.topics = None          # topics covered
+        self.boxes = {}             # boxes opened dictionary {name:depth}
         if readme_path:
             self.parse_readme(readme_path)
         return
@@ -39,18 +39,14 @@ class Box:
         self.description = []
         line_count = 1
         while readme[line_count][0] != '#':
-            if readme[line_count][0] != '\n':
+            if readme[line_count][0:2] == '- ':
+                # Extract boxes opened
+                boxes_opened_text = readme[line_count][2:-1]
+                self.boxes = self.parse_boxes_opened(boxes_opened_text)
+            elif readme[line_count][0] != '\n':
                 self.description.append(readme[line_count][:-1])
             line_count += 1
         self.description = "".join(self.description)
-
-        # Extract material lists for each depth (01,10,11)
-        self.materials = []
-        line_count += 1
-        while readme[line_count][0] != '#':
-            if readme[line_count][0] != '\n':
-                self.materials.append(readme[line_count][8:-1])
-            line_count += 1
 
         # Extract topics
         self.topics = []
@@ -67,16 +63,25 @@ class Box:
             topic = Topic.Topic(topic_text)
             self.topics.append(topic)
         return
+    
+    def parse_boxes_opened(self, boxes_opened_text):
+        boxes_strings = boxes_opened_text.split(',')
+        for box_string in boxes_strings:
+            if box_string[0] == ' ':
+                box_string = box_string[1:]
+            box_name, box_level = box_string.split(' ')
+            print(box_name, box_level)
+        return "stuff"
 
     def render_topics(self, output_path):
-        box_path = output_path + f'/{self.name.lower()}'
-        Utilities.clear_folder(box_path)
+        session_path = output_path + f'/{self.name.lower()}'
+        Utilities.clear_folder(session_path)
         for t, topic in enumerate(self.topics):
             header = self.render_header(t)
             footer = self.render_footer(t)
             body = topic.render()
             output = header + body + footer
-            topic_path = box_path + f'/{topic.name.replace(" ", "_").lower()}.html'
+            topic_path = session_path + f'/{topic.name.replace(" ", "_").lower()}.html'
             with open(topic_path, "w") as file:
                 file.write(output)
         return
@@ -90,7 +95,7 @@ class Box:
         header.append("</head>\n\n")
         header.append("<html>\n<body>\n\n")
         header.append(f"<title>LBB : {self.name} : {self.topics[topic_index].name}</title>\n")
-        header.append(f"<h2 id=\"box_name\">LBB : {self.name}</h2>\n")
+        header.append(f"<h2 id=\"session_name\">LBB : {self.name}</h2>\n")
         header.append(f"<h3 id=\"topic_name\">{self.topics[topic_index].name}</h3>\n")
         header.append(f"<h4 id=\"topic_description\">{self.topics[topic_index].description}</h4>\n")
         header.append(f"<hr>\n")

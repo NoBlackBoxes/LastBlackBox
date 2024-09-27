@@ -19,11 +19,11 @@ sys.path.append(libs_path)
 
 # Import libraries
 import os
-import numpy as np
 import LBB.utilities as Utilities
 
 # Import modules
-import LBB.box as Box
+import LBB.course as Course
+import LBB.session as Session
 import LBB.topic as Topic
 import LBB.lesson as Lesson
 import LBB.instruction as Instruction
@@ -35,7 +35,8 @@ import LBB.input as Input
 # Reload libraies and modules
 import importlib
 importlib.reload(Utilities)
-importlib.reload(Box)
+importlib.reload(Course)
+importlib.reload(Session)
 importlib.reload(Topic)
 importlib.reload(Lesson)
 importlib.reload(Instruction)
@@ -46,10 +47,23 @@ importlib.reload(Input)
 
 #----------------------------------------------------------
 
+# List all *available* courses
+repo_root = "/home/kampff/NoBlackBoxes/LastBlackBox"
+course_root = repo_root + "/course"
+#course_names = ["bootcamp", "buildabrain"]
+course_names = ["buildabrain"]
+
+# For each course...
+for course_name in course_names:
+    course_folder = course_root + "/" + course_name
+    course = Course.Course(course_folder)
+
+    # Find all sessions in the course
+
 # Copy media from Repo (to static)
 
 readme_path = "/home/kampff/NoBlackBoxes/LastBlackBox/boxes/electrons/README_new.md"
-box = Box.Box(readme_path)
+session = Session.Session(readme_path)
 
 # Create output folder
 output_path = '/home/kampff/NoBlackBoxes/LastBlackBox/site/templates'

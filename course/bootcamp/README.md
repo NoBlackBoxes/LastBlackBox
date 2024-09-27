@@ -20,27 +20,27 @@ You will be building a robot. The robot's physical layout mimics the basic anato
 
 ## Timeline
 
-### Day 1 - [Electronics](day_1/README.md)
+### Session 1 - [Electronics](session_1/README.md)
 
 - *Morning:* Atoms, Electrons, Magnets, Sensors, and Motors
 - *Afternoon:* Transistors
 
-### Day 2 - [Computers](day_2/README.md)
+### Session 2 - [Computers](session_2/README.md)
 
 - *Morning:* Computers
 - *Afternoon:* Robotics
 
-### Day 3 - [Systems and Networks](day_3/README.md)
+### Session 3 - [Systems and Networks](session_3/README.md)
 
 - *Morning:* Power, Systems, Linux, Python
 - *Afternoon:* Networks, Websites, and Servers
 
-### Day 4 - [Signal Processing](day_4/README.md)
+### Session 4 - [Signal Processing](session_4/README.md)
 
 - *Morning:* Audio (1-D data)
 - *Afternoon:* Digital signal processing
 
-### Day 5 - [Computer Vision](day_5/README.md)
+### Session 5 - [Computer Vision](session_5/README.md)
 
 - *Morning:* Vision (2-D data)
 - *Afternoon:* Image processing
