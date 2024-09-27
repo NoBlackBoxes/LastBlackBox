@@ -12,6 +12,7 @@ class Microphone:
         self.num_channels = num_channels
         self.format = format
         self.sample_rate = sample_rate
+        self.gain = 1.0
         self.buffer_size_samples = buffer_size_samples
         self.max_samples = max_samples
         self.valid_samples = 0
@@ -32,7 +33,7 @@ class Microphone:
             exit(-1)
 
         # Create buffers
-        self.output_data= np.zeros((0), dtype=np.float32)
+        self.output_data = np.zeros((0), dtype=np.float32)
         self.channel_data = np.zeros((self.buffer_size_samples, self.num_channels), dtype=self.dtype)
         self.float_data = np.zeros((self.buffer_size_samples, self.num_channels), dtype=np.float32)
         self.sound = np.zeros((self.max_samples, self.num_channels), dtype=np.float32)
@@ -53,9 +54,9 @@ class Microphone:
 
             # Convert to float
             if self.sample_width == 2:
-                self.float_data = np.float32(self.channel_data) * 3.0517578125e-05
+                self.float_data = np.float32(self.channel_data) * 3.0517578125e-05 * self.gain
             else:
-                self.float_data = np.float32(self.channel_data) * 4.656612873077393e-10
+                self.float_data = np.float32(self.channel_data) * 4.656612873077393e-10 * self.gain
 
             # Lock thread
             with self.mutex:

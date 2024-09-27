@@ -27,10 +27,14 @@ source _tmp/NBB/bin/activate
 ## Install useful packages
 
 ```bash
-pip install --upgrade pip
-pip install setuptools wheel
-sudo apt install python3-dev build-essential
+# Debian Linux (APT)
+sudo apt install python3-dev build-essential # might be required
 sudo apt install portaudio19-dev # required for 64-bit pyaudio build
+
+# Python (PIP)
+pip install --upgrade pip
+pip install numpy matplotlib
+pip install setuptools wheel
 pip install pyaudio wave
 ```
 
@@ -38,13 +42,13 @@ pip install pyaudio wave
 You can include custom Python libraries by adding a ".pth" file to the *site-packages* folder with the absolute path to your library.
 
 ```bash
-# From repo root, insert the path (first bit of text) into (>) a *.pth file
+# Insert the path (first bit of text) into (>) a *.pth file contained in your NBB virtual environment
 
 # On Host (current Python version 3.12.3)
-echo "/home/${USER}/NoBlackBoxes/LastBlackBox/boxes/audio/python/libs" > _tmp/NBB/lib/python3.12/site-packages/NBB_sound.pth
+echo "/home/${USER}/NoBlackBoxes/LastBlackBox/boxes/audio/python/libs" > /home/${USER}/NoBlackBoxes/LastBlackBox/_tmp/NBB/lib/python3.12/site-packages/NBB_sound.pth
 
 # On NB3 (current Python version 3.11.2)
-echo "/home/${USER}/NoBlackBoxes/LastBlackBox/boxes/audio/python/libs" > _tmp/NBB/lib/python3.11/site-packages/NBB_sound.pth
+echo "/home/${USER}/NoBlackBoxes/LastBlackBox/boxes/audio/python/libs" > /home/${USER}/NoBlackBoxes/LastBlackBox/_tmp/NBB/lib/python3.11/site-packages/NBB_sound.pth
 ```
 
 ---

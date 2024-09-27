@@ -1,6 +1,7 @@
 import os
 import time
 import numpy as np
+import matplotlib.pyplot as plt
 
 # Locals libs
 import NBB_sound.microphone as Microphone
@@ -16,8 +17,8 @@ username = os.getlogin()
 
 # Specify paths
 repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
-box_path = repo_path + '/boxes/audio'
-wav_path = repo_path + '/_tmp/test.wav'
+tmp_path = repo_path + '/_tmp/sounds'
+wav_path = tmp_path + '/test.wav'
 
 # Specify params
 input_device = 1
@@ -31,6 +32,7 @@ Utilities.list_devices()
 
 # Initialize microphone
 microphone = Microphone.Microphone(input_device, num_channels, 'int32', sample_rate, buffer_size, max_samples)
+microphone.gain = 10.0
 microphone.start()
 
 # Clear error ALSA/JACK messages from terminal
@@ -54,10 +56,19 @@ for i in range(100):
         print("{0:.2f}".format(volume))
     time.sleep(0.1)
 
+# Store recording
+recording = np.copy(microphone.sound)
+
 # Shutdown microphone
 microphone.stop()
 
 # Report
 print("Profiling:\n- Avg (Max) Callback Duration (us): {0:.2f} ({1:.2f})".format(microphone.callback_accum/microphone.callback_count*1000000.0, microphone.callback_max*1000000.0))
+
+# Save plot of recording
+plt.figure()
+plt.plot(recording)
+save_path = wav_path.replace("wav", "png")
+plt.savefig(f"{save_path}")
 
 # FIN
