@@ -17,8 +17,9 @@ class Session:
     def __init__(self, readme_path=None):
         self.name = None            # name
         self.description = None     # description
-        self.topics = None          # topics covered
         self.boxes = {}             # boxes opened dictionary {name:depth}
+        self.topics = None          # topics covered
+        self.project = None         # session project
         if readme_path:
             self.parse_readme(readme_path)
         return
@@ -32,10 +33,11 @@ class Session:
         line_count = 0
         max_count = len(readme)
 
-        # Extract name
-        self.name = readme[line_count][2:-1]
+        # Extract session name
+        title = readme[line_count][2:-1]
+        self.name = title.split('-')[1][1:]
 
-        # Extract description
+        # Extract session description
         self.description = []
         line_count = 1
         while readme[line_count][0] != '#':
@@ -48,11 +50,26 @@ class Session:
             line_count += 1
         self.description = "".join(self.description)
 
-        # Extract topics
+        # Extract session topics
         self.topics = []
-        while line_count < max_count:
+        while readme[line_count][0:3] != '---':
             topic_text = []
             topic_text.append(readme[line_count][3:-1])
+            line_count += 1
+            while readme[line_count][0] != '#':
+                if readme[line_count][0] != '\n':
+                    topic_text.append(readme[line_count][:-1])
+                line_count += 1
+            print(topic_text)
+            #topic = Topic.Topic(topic_text)
+            self.topics.append(topic)
+        line_count += 3
+    
+        # Extract session project
+        self.project = []
+        while line_count < max_count:
+            project_text = []
+            project_text.append(readme[line_count][3:-1])
             line_count += 1
             while readme[line_count][0] != '#':
                 if readme[line_count][0] != '\n':
@@ -63,15 +80,16 @@ class Session:
             topic = Topic.Topic(topic_text)
             self.topics.append(topic)
         return
-    
+
     def parse_boxes_opened(self, boxes_opened_text):
+        boxes = {}
         boxes_strings = boxes_opened_text.split(',')
         for box_string in boxes_strings:
             if box_string[0] == ' ':
                 box_string = box_string[1:]
-            box_name, box_level = box_string.split(' ')
-            print(box_name, box_level)
-        return "stuff"
+            name, level = box_string.split(' ')
+            boxes.update({name:level[1:-1]})
+        return boxes
 
     def render_topics(self, output_path):
         session_path = output_path + f'/{self.name.lower()}'

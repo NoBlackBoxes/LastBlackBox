@@ -1,9 +1,7 @@
 # Build a Brain : Session 1 - Sensors
 
-Here we will learn how electricity can be used to create "sensors" (inputs for our brain) for anything we want to measure (light, temperature, pressure, sound, etc.).
-
-We will open the following "black boxes" during this session:
-- atoms (01), electrons (01), sensors (01)
+Here we will learn how electricity can be used to create "sensors" (inputs for our brain) for anything we want to measure (light, temperature, pressure, sound, etc.). We will open the following "black boxes" during this session:
+- Atoms (01), Electrons (01), Sensors (01)
 
 ## Atoms
 
