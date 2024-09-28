@@ -10,16 +10,12 @@ LBB: Task Class
 # Import modules
 import LBB.input as Input
 
-# TO DO!
-# - Add page footers (link to next topic...complete session...etc.)
-# - Add progress header (and course indicator...)
-
 # Task Class
 class Task:
     def __init__(self, text=None):
-        self.name = None            # name
-        self.descriptions = None    # descriptions
-        self.inputs = None          # inputs
+        self.name = None            # task name
+        self.descriptions = None    # task descriptions
+        self.inputs = None          # task inputs
         if text:
             self.parse(text)
         return

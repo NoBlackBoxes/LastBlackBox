@@ -8,32 +8,45 @@ LBB: Project Class
 # Import libraries
 
 # Import modules
+import LBB.instruction as Instruction
+import LBB.image as Image
+import LBB.video as Video
 
 # Project Class
 class Project:
     def __init__(self, text=None):
-        self.name = None            # name
-        self.description = None     # description
+        self.name = None            # project name
+        self.steps = None           # project steps
         if text:
             self.parse(text)
         return
 
     def parse(self, text):
         # Line counter
-        line_count = 0
+        line_count = 1
         max_count = len(text)
 
          # Extract name
-        self.name = text[0]
+        self.name = text[1][4:-1]
 
-        # Extract description
-        self.description = []
+        # Extract steps
+        self.steps = []
         line_count = 1
-        while text[line_count][0] != '{':
+        max_count = len(text)
+        while line_count < max_count:
             if text[line_count][0] != '\n':
-                self.description.append(text[line_count])
+                # Classify step
+                if text[line_count][0:8] == '- *Watch':
+                    video = Video.Video(text[line_count])
+                    self.steps.append(video)
+                elif text[line_count][0:4] == '<img':
+                    image = Image.Image(text[line_count])
+                    self.steps.append(image)
+                else:
+                    instruction = Instruction.Instruction(text[line_count])
+                    self.steps.append(instruction)
             line_count += 1
-        self.description = "".join(self.description)
+        return
         
     def render(self):
         output = ''

@@ -8,14 +8,16 @@ LBB: Topic Class
 # Import libraries
 
 # Import modules
-import LBB.lesson as Lesson
+import LBB.instruction as Instruction
+import LBB.image as Image
+import LBB.video as Video
+import LBB.task as Task
 
 # Topic Class
 class Topic:
     def __init__(self, text=None):
         self.name = None            # topic name
-        self.description = None     # topic description
-        self.lessons = None         # topic lessons
+        self.steps = None           # topic steps
         if text:
             self.parse(text)
         return
@@ -27,37 +29,32 @@ class Topic:
 
          # Extract name
         self.name = text[0][:-1]
-        print(self.name)
-
-        # Extract description
-        self.description = []
+        
+        # Extract steps
+        self.steps = []
         line_count = 1
-        while text[line_count][0] != ' ':
-            if text[line_count][0] != '\n':
-                self.description.append(text[line_count])
-            line_count += 1
-        self.description = "".join(self.description)
-        line_count += 1
-        print(self.description)
-        
-        # Extract lessons
-        self.lessons = []
+        max_count = len(text)
         while line_count < max_count:
-            lesson_text = []
-            lesson_text.append(text[line_count])
+            if text[line_count][0] != '\n':
+                # Classify step
+                if text[line_count][0:8] == '- *Watch':
+                    video = Video.Video(text[line_count])
+                    self.steps.append(video)
+                elif text[line_count][0:10] == '  - **Task':
+                    task = Task.Task(text[line_count])
+                    self.steps.append(task)
+                elif text[line_count][0:4] == '<img':
+                    image = Image.Image(text[line_count])
+                    self.steps.append(image)
+                else:
+                    instruction = Instruction.Instruction(text[line_count])
+                    self.steps.append(instruction)
             line_count += 1
-            while text[line_count][0] != '{':
-                if text[line_count][0] != '\n':
-                    lesson_text.append(text[line_count])
-                line_count += 1
-                if line_count >= max_count:
-                    break
-            lesson = Lesson.Lesson(lesson_text)
-            self.lessons.append(lesson)
-        
+        return
+
     def render(self):
         output = ''
-        for lesson in self.lessons:
-            output = output + lesson.render()
+        for step in self.steps:
+            output = output + step.render()
         return output
 #FIN

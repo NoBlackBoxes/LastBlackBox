@@ -54,6 +54,10 @@ class Session:
         # Extract session topics
         self.topics = []
         while readme[line_count][0:3] != '---':
+            line_count += 1
+        topic_line_count = line_count
+        line_count = 1
+        while line_count < topic_line_count:
             topic_text = []
             topic_text.append(readme[line_count][3:-1])
             line_count += 1
@@ -61,15 +65,17 @@ class Session:
                 if readme[line_count][0] != '\n':
                     topic_text.append(readme[line_count][:-1])
                 line_count += 1
+                if line_count >= topic_line_count:
+                    break
             topic = Topic.Topic(topic_text)
             self.topics.append(topic)
-        line_count += 3
+        line_count += 2
     
         # Extract session project
         self.project = []
         while line_count < max_count:
             project_text = []
-            project_text.append(readme[line_count][3:-1])
+            project_text.append(readme[line_count][2:-1])
             line_count += 1
             while readme[line_count][0] != '#':
                 if readme[line_count][0] != '\n':
@@ -77,8 +83,8 @@ class Session:
                 line_count += 1
                 if line_count >= max_count:
                     break
-            project = Project.Project(project_text)
-            self.project.append(project)
+        project = Project.Project(project_text)
+        self.project.append(project)
         return
 
     def parse_boxes_opened(self, boxes_opened_text):

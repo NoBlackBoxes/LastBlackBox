@@ -34,11 +34,14 @@ class Course:
             print("Unavailable course selected!")
             exit(-1)
         # Load sessions
+        self.sessions = []
         session_folders = sorted(glob.glob(f"{folder}/session_*"))
         for session_folder in session_folders:
             session_readme = session_folder + "/README.md"
             session = Session.Session(session_readme)
             self.sessions.append(session)
-            # Combine session boxes with course boxes
-        
+        # Combine session boxes with course boxes
+        for session in self.sessions:
+            self.boxes.update(session.boxes)
+
 #FIN

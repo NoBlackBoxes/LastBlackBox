@@ -51,9 +51,9 @@ Things to complete
    - Depth 01: (LBB-101) - *Bootcamp, ENB, Build a Brain, Own Phone*
    - Depth 10: (LBB-201) - *SWC-GCNU PhD*
    - Depth 11: (LBB-301) - *The Last Black Box*
-- Each **session** opens a set of LBB "black boxes" by guiding student progress through a sequence of topics described in the sessio *README* file.
-- Each **topic** is composed of a sequence of **lessons** with **tasks** for the student to complete in order to progress to the next lesson.
-- Each *session* concludes with a *project*, the outcome of which the student must submit to certify completion.
+- Each **session** opens a set of LBB "black boxes" by guiding student progress through a sequence of **topics** described in the session *README* file.
+- Each **topic** presents a sequence of video and text instructions with **tasks** for the student to complete in order to progress to the next topic.
+- Each **session** concludes with a *project*, the outcome of which the student must submit to certify completion.
 
 ```markdown
 # Course Title : Session Number - Name
@@ -69,20 +69,20 @@ First lesson for topic. Consisting of written instructions, images, videos, and 
 
 - *Watch this video*: [Video Name](video url)
 - *Watch this video*: [Video Name](video url)
-  - **Task**: Task description.
+  - **Task**(task_name): Task description.[task_input]
 
 Second lesson for topic. Consisting of written instructions, images, videos, and tasks. Videos and tasks are defined in the following way.
 
 - *Watch this video*: [Video Name](video url)
-  - **Task**: Task description.
+  - **Task**(task_name): Task description.[task input]
 
 - *Watch this video*: [Video Name](video url)
-  - **Task**: Task description.
+  - **Task**(task_name): Task description.[task input]
 
 ---
 
 # Project
-#### Project Name
+### Project Name
 Session project description. Consisting of written instructions, images, videos, and tasks. Videos and tasks are defined in the following way.
 - Describe project goals, etc.
 - *Watch this video*: [Video Name](video url)

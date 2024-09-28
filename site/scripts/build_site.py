@@ -25,12 +25,12 @@ import LBB.utilities as Utilities
 import LBB.course as Course
 import LBB.session as Session
 import LBB.topic as Topic
-import LBB.lesson as Lesson
 import LBB.instruction as Instruction
 import LBB.image as Image
 import LBB.video as Video
 import LBB.task as Task
 import LBB.input as Input
+import LBB.project as Project
 
 # Reload libraies and modules
 import importlib
@@ -38,12 +38,12 @@ importlib.reload(Utilities)
 importlib.reload(Course)
 importlib.reload(Session)
 importlib.reload(Topic)
-importlib.reload(Lesson)
 importlib.reload(Instruction)
 importlib.reload(Image)
 importlib.reload(Video)
 importlib.reload(Task)
 importlib.reload(Input)
+importlib.reload(Project)
 
 #----------------------------------------------------------
 
@@ -55,7 +55,7 @@ course_root = repo_root + "/course"
 #course_names = ["bootcamp", "buildabrain"]
 course_names = ["buildabrain"]
 
-# Build each course
+# Build (and render) each course
 for course_name in course_names:
     course_folder = course_root + "/" + course_name
     course = Course.Course(course_folder)
