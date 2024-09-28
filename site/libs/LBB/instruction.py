@@ -6,6 +6,7 @@ LBB: Instruction Class
 """
 
 # Import libraries
+import re
 
 # Import modules
 
@@ -17,11 +18,22 @@ class Instruction:
             self.parse(text)
         return
     
+    def convert_emphasis_tags(self, text):
+        text = re.sub(r'\*\*\*(.*?)\*\*\*', r'<strong><em>\1</em></strong>', text)
+        text = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', text)
+        text = re.sub(r'\*(.*?)\*', r'<em>\1</em>', text)
+        return text
+
     def parse(self, text):
-        self.html = text
+        text = self.convert_emphasis_tags(text)
+        if text[0] == '>': # Block Quote
+            self.html = f"<blockquote id=\"quote\">{text[1:].strip()}</blockquote>"
+        else:
+            self.html = f"<h4 id=\"instruction\">{text}</h4>\n"
+
         # TO DO: convert emphasis tags
         return
 
     def render(self):
-        return f"<h4 id=\"instruction\">{self.html}</h4>\n"
+        return self.html
 #FIN

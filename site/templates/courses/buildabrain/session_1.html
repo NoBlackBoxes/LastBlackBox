@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 {% include 'pwa.html' %}
-<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/topic.css')}}"/>
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/session.css')}}"/>
 </head>
 
 <html>
@@ -10,12 +10,13 @@
 <title>LBB : Sensors</title>
 <h2 id="session_name">LBB : Sensors</h2>
 <hr>
-<h4 id="instruction">- Atoms (01), Electrons (01), Sensors (01)</h4>
-<h4 id="instruction">> "Let's start at the very beginning, a very good place to start". - *R&H*</h4>
-<p align="center">
+<blockquote id="quote">"Let's start at the very beginning, a very good place to start". - <em>R&H</em></blockquote><p align="center">
 <iframe id="video_player" src="https://player.vimeo.com/video/1000458082?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Structure and the Periodic Table"></iframe>
 </p>
-<h4 id="instruction">  - When you need it (and you will), then you can find the periodic table [here](../../../boxes/atoms/card/periodic_table.png)</h4>
+<p align="center">
+<img src="https://raw.githubusercontent.com/NoBlackBoxes/LastBlackBox/master/boxes/electrons/_data/images/dipole_field_template.png" alt="dipole field template" height="250" style="border: 2px solid #000000;"/>
+</p>
+<h4 id="instruction">- When you need it <strong>(and you will)</strong>, then you can find the periodic table [here](../../../boxes/atoms/card/periodic_table.png)</h4>
 <p align="center">
 <iframe id="video_player" src="https://player.vimeo.com/video/1000730032?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Voltage"></iframe>
 </p>
@@ -62,8 +63,7 @@
 	</form>
 </div>
 <h4 id="instruction">With a voltage source (battery) and resistors, then we can start building "circuits" - complete paths of conduction that allow current to flow from a location with fewer electrons (+) to a location with more electrons (-).</h4>
-<h4 id="instruction">> ***Note***: This is *weird*. Electrons are the things moving. Shouldn't we say that current "flows" from the (-) area to the (+) area? Unfortunately, current was described before anyone knew about electrons and we are stuck with the following awkward convention: **Current is defined to flow from (+) to (-)**...even though we now know that electrons are moving the opposite way.</h4>
-<h4 id="instruction">To help you build electronic circuits, we will assemble a "prototyping platform", which also happens to be the body of your robot (NB3).</h4>
+<blockquote id="quote"><strong><em>Note</em></strong>: This is <em>weird</em>. Electrons are the things moving. Shouldn't we say that current "flows" from the (-) area to the (+) area? Unfortunately, current was described before anyone knew about electrons and we are stuck with the following awkward convention: <strong>Current is defined to flow from (+) to (-)</strong>...even though we now know that electrons are moving the opposite way.</blockquote><h4 id="instruction">To help you build electronic circuits, we will assemble a "prototyping platform", which also happens to be the body of your robot (NB3).</h4>
 <p align="center">
 <iframe id="video_player" src="https://player.vimeo.com/video/1005036900?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="NB3 Body"></iframe>
 </p>
@@ -78,7 +78,7 @@
 		<input type="hidden" name="task_name" value="assmeble_NB3_body"/>
 	</form>
 </div>
-<h4 id="instruction">    - If you are curious how the *NB3 Body* printed circuit board (PCB) was designed, then you can find the KiCAD files here: [NB3 Body PCB](../../../boxes/electrons/NB3_body)</h4>
+<h4 id="instruction">- If you are curious how the <em>NB3 Body</em> printed circuit board (PCB) was designed, then you can find the KiCAD files here: [NB3 Body PCB](../../../boxes/electrons/NB3_body)</h4>
 <p align="center">
 <iframe id="video_player" src="https://player.vimeo.com/video/1000768334?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Ohm's Law"></iframe>
 </p>
@@ -93,7 +93,7 @@
 		<input type="hidden" name="task_name" value="measure_current"/>
 	</form>
 </div>
-<h4 id="instruction">    - ***Note***: Measuring current with a multimeter is ***tricky***. You can only get an accurate measurement if ***ALL*** of the current in the circuit is forced to flow through your multimeter. This means that when measuring current, your multimeter must be in *series* with the rest of the circuit. (As opposed to measuring voltage, when your multimeter is placed "parallel" to the circuit.)</h4>
+<h4 id="instruction">- <strong><em>Note</em></strong>: Measuring current with a multimeter is <strong><em>tricky</em></strong>. You can only get an accurate measurement if <strong><em>ALL</em></strong> of the current in the circuit is forced to flow through your multimeter. This means that when measuring current, your multimeter must be in <em>series</em> with the rest of the circuit. (As opposed to measuring voltage, when your multimeter is placed "parallel" to the circuit.)</h4>
 <p align="center">
 <iframe id="video_player" src="https://player.vimeo.com/video/1000782478?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Voltage Dividers"></iframe>
 </p>
@@ -119,7 +119,7 @@
 		<input type="hidden" name="task_name" value="build_a_variable_voltage_divider"/>
 	</form>
 </div>
-<h4 id="instruction">    - A video guide to completing these tasks can be found here: [Building Voltage Dividers](https://vimeo.com/1000789632)</h4>
+<h4 id="instruction">- A video guide to completing these tasks can be found here: [Building Voltage Dividers](https://vimeo.com/1000789632)</h4>
 <p align="center">
 <iframe id="video_player" src="https://player.vimeo.com/video/1000794164?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title="Light Sensors"></iframe>
 </p>

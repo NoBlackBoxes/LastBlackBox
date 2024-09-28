@@ -47,7 +47,7 @@ class Topic:
                     image = Image.Image(text[line_count])
                     self.steps.append(image)
                 else:
-                    instruction = Instruction.Instruction(text[line_count])
+                    instruction = Instruction.Instruction(text[line_count].strip())
                     self.steps.append(instruction)
             line_count += 1
         return

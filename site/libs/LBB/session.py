@@ -59,10 +59,9 @@ class Session:
 
         # Extract session topics
         self.topics = []
-        while readme[line_count][0:3] != '---':
-            line_count += 1
         topic_line_count = line_count
-        line_count = 1
+        while readme[topic_line_count][0:3] != '---':
+            topic_line_count += 1
         while line_count < topic_line_count:
             topic_text = []
             topic_text.append(readme[line_count][3:-1])
@@ -91,8 +90,7 @@ class Session:
         self.project = Project.Project(project_text)
         return
 
-    def render(self, output_folder, session_index):
-        session_path = output_folder + f'/{self.name.replace(" ", "_").lower()}.html'
+    def render(self, output_path, session_index):
         header = self.render_header(session_index)
         footer = self.render_footer(session_index)
         body = ''
@@ -100,7 +98,7 @@ class Session:
             body += topic.render()
         project = self.project.render()
         output = header + body + project + footer
-        with open(session_path, "w") as file:
+        with open(output_path, "w") as file:
             file.write(output)
         return
 
@@ -109,7 +107,7 @@ class Session:
         header.append("<!DOCTYPE html>\n")
         header.append("<head>\n")
         header.append("{% include 'pwa.html' %}\n")
-        header.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"{{url_for('static', filename='styles/topic.css')}}\"/>\n")
+        header.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"{{url_for('static', filename='styles/session.css')}}\"/>\n")
         header.append("</head>\n\n")
         header.append("<html>\n<body>\n\n")
         header.append(f"<title>LBB : {self.name}</title>\n")

@@ -66,9 +66,8 @@ user.email = "info@voight-kampff.tech"
 user.instructor = False
 user.admin = False
 user.boxes = boxes
-user.current_course = 'build_a_brain'
-user.current_session = '1'
-user.current_topic = 'measuring_voltage'
+user.current_course = 'buildabrain'
+user.current_session = 'session_1'
 
 # Store User
 user.store()

@@ -18,7 +18,7 @@ class Image:
         return
     
     def parse(self, text):
-        self.html = "<img src=\"/static/images/boxes" + text[12:]
+        self.html = "<img src=\"https://raw.githubusercontent.com/NoBlackBoxes/LastBlackBox/master" + text[18:]
         return
 
     def render(self):

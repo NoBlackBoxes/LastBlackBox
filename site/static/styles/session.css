@@ -26,6 +26,22 @@ body {
     margin-bottom: 0px;
 }
 
+#quote {
+    margin: auto;
+    width: 40%;
+    border-width: 3px;
+    border-color: rgb(156, 156, 156);
+    border-radius: 3px;
+    border-style: solid;
+    background-color: rgb(215, 215, 215);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(0, 0, 0);;
+    font-weight: 400;
+}
+
 #instruction {
     text-align: center;
     font-size: 25px;

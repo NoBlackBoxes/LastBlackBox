@@ -64,9 +64,8 @@ for course_name in course_names:
     course_template_folder = courses_templates_folder + "/" + course_name
     Utilities.clear_folder(course_template_folder)
     for s, session in enumerate(course.sessions):
-        session_template_folder = course_template_folder + f"/session_{s+1}"
-        Utilities.confirm_folder(session_template_folder)
-        session.render(session_template_folder, s)
+        session_template_path = course_template_folder + f"/session_{s+1}.html"
+        session.render(session_template_path, s)
 
 ## Copy media from Repo (to static)
 #

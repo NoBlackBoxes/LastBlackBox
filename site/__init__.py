@@ -167,28 +167,28 @@ def recovery():
 def instructor():
     return render_template('instructor.html')
 
-# Serve Topic
-@app.route('/<box>/<topic>', methods=['GET', 'POST'])
+# Serve Course Session
+@app.route('/<course>/<session>', methods=['GET', 'POST'])
 @login_required
-def topic(box, topic):
-    topic_folder_path = f"{app.config['UPLOAD_FOLDER']}/users/{current_user.id}/{box}/{topic}"
-    task_status = Utilities.retrieve_task_status(topic_folder_path)
+def session(course, session):
+    user_session_folder_path = f"{app.config['UPLOAD_FOLDER']}/users/{current_user.id}/{course}/{session}"
+    task_status = Utilities.retrieve_task_status(user_session_folder_path)
     if request.method == 'GET':
-        route_url = f"{box}/{topic}.html"
+        route_url = f"courses/{course}/{session}.html"
     elif request.method == 'POST':
         form = request.form
         task_name = request.form['task_name']
-        Utilities.archive_task_submission(topic_folder_path, task_name)
+        Utilities.archive_task_submission(user_session_folder_path, task_name)
 
         # Store new submission(s)
         for key in form.keys():
             for value in form.getlist(key):
                 print(key,":",value)
-        task_file_path = f"{topic_folder_path}/{task_name}.txt"
+        task_file_path = f"{user_session_folder_path}/{task_name}.txt"
         f = open(task_file_path, 'w')
         f.write("yay")
         f.close()
-        route_url = f"{box}/{topic}.html"
+        route_url = f"courses/{course}/{session}.html"
         task_status.update({task_name : 1})
         print(task_status)
         ## Validate form submission

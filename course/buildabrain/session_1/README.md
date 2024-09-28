@@ -6,7 +6,8 @@ In this session we will learn how electricity can be used to create "sensors" (i
 > "Let's start at the very beginning, a very good place to start". - *R&H*
 
 - *Watch this video*: [Structure and the Periodic Table](https://vimeo.com/1000458082)
-  - When you need it (and you will), then you can find the periodic table [here](../../../boxes/atoms/card/periodic_table.png)
+<img src="../../../boxes/electrons/_data/images/dipole_field_template.png" alt="dipole field template" height="250" style="border: 2px solid #000000;"/>
+  - When you need it **(and you will)**, then you can find the periodic table [here](../../../boxes/atoms/card/periodic_table.png)
 
 ## Electrons
 - *Watch this video*: [Voltage](https://vimeo.com/1000730032)

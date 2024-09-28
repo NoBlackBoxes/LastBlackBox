@@ -42,7 +42,6 @@ class User:
         self.boxes = {}             # User box status dictionary {name:depth}
         self.current_course = None  # Current course
         self.current_session = None # Current session
-        self.current_topic = None   # Current topic
         self.progress = [0,0,0,0]   # Progress
         if (_user_id != None):      # Load from User ID
             self.load(_user_id)
@@ -74,7 +73,6 @@ class User:
             file.write(f"admin,{self.admin}\n")
             file.write(f"current_course,{self.current_course}\n")
             file.write(f"current_session,{self.current_session}\n")
-            file.write(f"current_topic,{self.current_topic}\n")                
         # Store user progress
         user_path = f"{user_folder}/user_progress.csv"
         with open(user_path, 'w') as file:
@@ -99,7 +97,6 @@ class User:
             line = file.readline(); self.admin = line.split(',')[1][:-1]
             line = file.readline(); self.current_course = line.split(',')[1][:-1]
             line = file.readline(); self.current_session = line.split(',')[1][:-1]
-            line = file.readline(); self.current_topic = line.split(',')[1][:-1]
         # Load user progress
         user_path = f"{user_folder}/user_progress.csv"
         boxes = {}
