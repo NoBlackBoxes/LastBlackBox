@@ -16,7 +16,7 @@ import LBB.session as Session
 # Course Class
 class Course:
     def __init__(self, folder=None):
-        self.name = None            # name
+        self.name = None            # course name
         self.sessions = None        # sessions covered
         self.boxes = {}             # boxes opened dictionary {name:depth}
         if folder:

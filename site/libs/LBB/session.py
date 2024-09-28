@@ -11,12 +11,13 @@ import LBB.utilities as Utilities
 
 # Import modules
 import LBB.topic as Topic
+import LBB.project as Project
 
 # Session Class
 class Session:
     def __init__(self, readme_path=None):
-        self.name = None            # name
-        self.description = None     # description
+        self.name = None            # session name
+        self.description = None     # session description
         self.boxes = {}             # boxes opened dictionary {name:depth}
         self.topics = None          # topics covered
         self.project = None         # session project
@@ -60,8 +61,7 @@ class Session:
                 if readme[line_count][0] != '\n':
                     topic_text.append(readme[line_count][:-1])
                 line_count += 1
-            print(topic_text)
-            #topic = Topic.Topic(topic_text)
+            topic = Topic.Topic(topic_text)
             self.topics.append(topic)
         line_count += 3
     
@@ -73,12 +73,12 @@ class Session:
             line_count += 1
             while readme[line_count][0] != '#':
                 if readme[line_count][0] != '\n':
-                    topic_text.append(readme[line_count][:-1])
+                    project_text.append(readme[line_count][:-1])
                 line_count += 1
                 if line_count >= max_count:
                     break
-            topic = Topic.Topic(topic_text)
-            self.topics.append(topic)
+            project = Project.Project(project_text)
+            self.project.append(project)
         return
 
     def parse_boxes_opened(self, boxes_opened_text):
