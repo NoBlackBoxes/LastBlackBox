@@ -24,25 +24,9 @@ Cable (MiniUSB-1m)|01|Mini-USB to Type-A cable (1 m)|1|-|[-L-](https://uk.farnel
 
 ## Goals
 
-### Grey
-
 1. Setup your Arduino Nano and run a "blinky" example.
 2. Generate annoying sounds using PWM or audio outputs.
 3. Connect your LDR-based light sensor to the Analog input and build a light/sound controller.
-
-### White
-
-1. Develop a "blinky" example in AVR assembly language.
-
-
-----
-
-## NB3
-
-This box will contribute the following (red) components to your NB3
-
-<p align="center">
-<img src="_data/images/NB3_computers.png" alt="NB3 stage" width="400" height="400">
-<p>
+4. Develop a "blinky" example in AVR assembly language.
 
 ----

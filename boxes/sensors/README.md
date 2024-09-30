@@ -29,25 +29,9 @@ Breadboards (170)|01|170-tie solderless breadboard|4|[-D-](_data/datasheets/brea
 
 ## Goals
 
-### Grey
-
 1. Build a light sensor
 2. Build a heat sensor
 3. Detect pressure sensor using a piezo and your multimeter
-
-### White
-
-1. Build a "gain control circut" for your light/heat sensor
-
-
-----
-
-## NB3
-
-This box will contribute the following (red) components to your NB3
-
-<p align="center">
-<img src="_data/images/NB3_sensors.png" alt="NB3 stage" width="400" height="400">
-<p>
+4. Build a "gain control circut" for your light/heat sensor
 
 ----

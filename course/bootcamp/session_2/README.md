@@ -77,8 +77,10 @@ We can control a computer by loading a list of instructions ("operations") for t
 - *Watch this video*: [NB3 Drive](https://vimeo.com/1005154927)
 - ***Task***: Mount the robot servo motors, wheels, and caster (ball bearing)
 
-### PROJECT
-- Extend your robot's behaviour (be creative!)
+---
+
+# PROJECT
+### Extend your robot's behaviour (be creative!)
   - **Suggestion**: Try building a Braitenberg vehicle. This [servo test](../../../boxes/computers/programming/arduino/servo_test/) example will help you get your motors moving. Can you make their speed dependent on how bright it is on the *left* or *right* side of your NB3? (you will need *two* light sensors)
 
 <p align="center">

@@ -22,24 +22,8 @@ Secret Message|10|A SHA256 encrypted message (in HEX)|1|-|-
 
 ## Goals
 
-### Grey
-
 1. Generate Keys
 2. Send encrypted message
-
-### White
-
-1. Mine a bitcoin on your NB3
-
-
-----
-
-## NB3
-
-This box will contribute the following (red) components to your NB3
-
-<p align="center">
-<img src="_data/images/NB3_security.png" alt="NB3 stage" width="400" height="400">
-<p>
+3. Mine a bitcoin on your NB3
 
 ----

@@ -32,24 +32,8 @@ Resistor (330)|01|330 &Omega;/0.25 W|4|[-D-](_data/datsheets/resistor.pdf)|[-L-]
 
 ## Goals
 
-### Grey
-
 1. Build a comparator using the LM339N
 2. Build a multi-level comparison (A to D)
-
-### White
-
-1. Build a Schmitt-Trigger
-
-
-----
-
-## NB3
-
-This box will contribute the following (red) components to your NB3
-
-<p align="center">
-<img src="_images/NB3_data.png" alt="NB3 stage" width="400" height="400">
-<p>
+3. Build a Schmitt-Trigger
 
 ----

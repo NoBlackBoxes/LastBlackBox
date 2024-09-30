@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
  - Generate a bill of materials from the content (materials.csv) of all "boxes"
- - Speciy "level" limit (for specific courses)
+ - Specify "level" limit (for specific courses)
  - Insert contents table into each box's README.md
 """
 import os

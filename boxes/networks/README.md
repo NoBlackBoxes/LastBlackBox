@@ -12,7 +12,7 @@ In this box, we being to open up the world of the internet and start communicati
 
 Contents|Level|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
-Cable (Ethernet)|10|RJ45 cact5e ethernet patch cable (1 m)|1|[-D-](_data/datasheets/ethernet_cable_1m.pdf)|[-L-](https://uk.farnell.com/pro-signal/ps11074/lead-patch-cat-5e-1-00m-black/dp/1734943)
+Cable (Mini-USB/20cm)|01|Short mini-USB to Type-A cable (20 cm)|1|-|[-L-](https://www.amazon.co.uk/LINDY-0-2-Type-Mini-B-Cable/dp/B01IZ4VFCO)
 
 </p></details>
 
@@ -26,24 +26,7 @@ Cable (Ethernet)|10|RJ45 cact5e ethernet patch cable (1 m)|1|[-D-](_data/datashe
 
 ## Goals
 
-### Grey
-
 1. Communicate between your midbrain and hindbrain
 2. Develop a remote control
-
-### White
-
-1. Setup a webserver
-2. 
-
-----
-
-## NB3
-
-This box will contribute the following (red) components to your NB3
-
-<p align="center">
-<img src="_data/images/NB3_networks.png" alt="NB3 stage" width="400" height="400">
-<p>
 
 ----

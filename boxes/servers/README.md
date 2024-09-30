@@ -15,11 +15,8 @@ Contents|Level|Description| # |Data|Link|
 
 ## Goals
 
-### Grey
-
 1. Run a server
+2. Cloud website
+3. Port forwarding
 
-### White
-
-1. Cloud website
-2. Port forwarding
+----

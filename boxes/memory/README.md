@@ -32,20 +32,7 @@ Gate (NAND)|10|4xNAND gate|2|[-D-](_data/datasheets/NAND_gates.pdf)|[-L-](https:
 ### Grey
 
 1. Build a NAND SR latch. 
-
-### White
-
-1. Build a D-Flip-Flop.
-2. Build a shift register.
-
-----
-
-## NB3
-
-This box will contribute the following (red) components to your NB3
-
-<p align="center">
-<img src="_data/images/NB3_memory.png" alt="NB3 stage" width="400" height="400">
-<p>
+2. Build a D-Flip-Flop.
+3. Build a shift register.
 
 ----

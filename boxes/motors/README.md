@@ -32,23 +32,8 @@ Motor Mount|10|Mount for TT Gearbox DC Motors - L-Bracket Type with hardware|2|-
 
 ## Goals
 
-### Grey
-
 1. Spin a motor, forwards and backwards
 2. Regulate the motor's speed with a potentiometer and with a button (tactile switch)
-
-### White
-
-1. Light controlled motor...power?
-
-----
-
-## NB3
-
-This box will contribute the following (red) components to your NB3
-
-<p align="center">
-<img src="_data/images/NB3_motors.png" alt="NB3 stage" width="400" height="400">
-<p>
+3. Light controlled motor...power?
 
 ----

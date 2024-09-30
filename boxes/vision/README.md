@@ -35,21 +35,7 @@ M2 nut|01|regular M2 nut|4|-|[-L-](https://www.accu.co.uk/hexagon-nuts/456429-HP
 2. Setup your Camera
 3. Acquire images
 4. Detect color blobs in image
-
-### White
-
-1. Stream images via webserver
-2. Detect Face
-
-
-----
-
-## NB3
-
-This box will contribute the following (red) components to your NB3
-
-<p align="center">
-<img src="_data/images/NB3_vision.png" alt="NB3 stage" width="400" height="400">
-<p>
+5. Stream images via webserver
+6. Detect Face
 
 ----

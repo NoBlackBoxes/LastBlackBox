@@ -24,25 +24,10 @@ M3 nut (square)|10|square M3 nut 1.8 mm thick|4|-|[-L-](https://www.accu.co.uk/f
 
 ## Goals
 
-### Grey
-
 1. Setup your NPU.
 2. Run the demos.
-
-### White
-
-1. Train a new network to detect only your face.
-2. Run a keyword to detector to control your robot with voice commands.
-
-----
-
-## NB3
-
-This box will contribute the following (red) components to your NB3
-
-<p align="center">
-<img src="_data/images/NB3_intelligence.png" alt="NB3 stage" width="400" height="400">
-<p>
+3. Train a new network to detect only your face.
+4. Run a keyword to detector to control your robot with voice commands.
 
 ----
 
@@ -113,7 +98,6 @@ sudo python3 classify_image.py \
 --labels models/inat_bird_labels.txt \
 --input images/parrot.jpg
 ```
-
 
 ## Cortex
 

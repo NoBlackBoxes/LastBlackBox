@@ -29,24 +29,8 @@ Gate (XOR)|10|4xXOR gate|1|[-D-](_data/datasheets/XOR_gates.pdf)|[-L-](https://u
 
 ## Goals
 
-### Grey
-
 1. Test your AND, OR, XOR, and NOR gates using buttons and LEDs.
 2. Turn 4-lvel comparator chain into 2-bit ADC.
-
-### White
-
-1. Build a 2-bit digital adder.
-
-
-----
-
-## NB3
-
-This box will contribute the following (red) components to your NB3
-
-<p align="center">
-<img src="_data/images/NB3_logic.png" alt="NB3 stage" width="400" height="400">
-<p>
+3. Build a 2-bit digital adder.
 
 ----

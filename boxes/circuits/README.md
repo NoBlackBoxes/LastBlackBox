@@ -23,32 +23,17 @@ Spacer|01|NB3 spacer 3 mm spacer for mounting ball caster|5|[-D-](NB3_spacer)|[-
 
 ## Goals
 
-### Grey
+1. Build a Braitenberg vehicle the moves towards light
+2. Build a Braitenberg vehicle the avoids light
+3. Build a Braitenberg vehicle with active components
+4. Build a Braitenberg vehicle that responds to sound
 
-1. Build a Braitenberg verhicle the moves towards light
-2. Build a Braitenberg verhicle the avoids light
-
-### White
-
-1. Build a Braitenberg verhicle with active components
-2. Build a Braitenberg verhicle that responds to sound
-
+----
 
 #### NOTES
 
-- Careful mounting/aligning motors. If the encoder wheel is contacted, the wheels won't spin due to gear ratio.
 - Screws for bearings are imperial....don't lose nut
-- The cables have a funky long purple wire...by mistake
 - Could build comparator for alternating left-right follower-bot using Op-Amp with positve feedback?
 
 ----
 
-## NB3
-
-This box will contribute the following (red) components to your NB3
-
-<p align="center">
-<img src="_data/images/NB3_circuits.png" alt="NB3 stage" width="400" height="400">
-<p>
-
-----

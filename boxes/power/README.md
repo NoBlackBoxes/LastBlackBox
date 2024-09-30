@@ -31,43 +31,8 @@ M2.5 nut|01|regular M2.5 nut|4|[-D-](-)|[-L-](https://www.accu.co.uk/hexagon-nut
 
 ## Goals
 
-### Grey
-
 1. Attach power board and confirm voltages.
 2. Check out the board design in KiCAD.
-
-### White
-
-2. Add a NiMH battery charging circuit to the NB3_power PCB.
+3. Add a NiMH battery charging circuit to the NB3_power PCB.
 
 ----
-
-## NB3
-
-This box will contribute the following (red) components to your NB3
-
-<p align="center">
-<img src="_data/images/NB3_power.png" alt="NB3 stage" width="400" height="400">
-<p>
-
-----
-
-## Electromagnetic Wave
-
-When a material becomes very hot, it starts to "glow". Why?
-
-- Where does the energy go?
-- What is heat?
-- What is too much heat?
-- How does a lightbulb work?
-- (What is light?)
-
-### Exercise: Light a lightbulb
-
-### Exercise: Dim a lightbulb with a variable resistor
-
-----
-
-## Inductors
-
-- Needed?

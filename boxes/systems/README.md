@@ -15,6 +15,7 @@ USB SD Card IO|01| SD card reader/writer|1|-|[-L-](https://www.amazon.co.uk/Beik
 M2.5 bolt (6)|01|6 mm long M2.5 bolt|4|-|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2)
 M2.5 standoff (20/SS)|01|20 mm long socket-to-socket M2.5 standoff|4|-|[-L-](https://uk.farnell.com/wurth-elektronik/970200154/standoff-hex-female-female-20mm/dp/2987903)
 M2.5 standoff (20/PS)|01|20 mm long plug-to-socket M2.5 standoff|4|-|[-L-](https://uk.farnell.com/wurth-elektronik/971200151/standoff-hex-male-female-20mm/dp/2884418)
+Cable (Ethernet)|10|RJ45 cact5e ethernet patch cable (1 m)|1|[-D-](_data/datasheets/ethernet_cable_1m.pdf)|[-L-](https://uk.farnell.com/pro-signal/ps11074/lead-patch-cat-5e-1-00m-black/dp/1734943)
 
 </p></details>
 
@@ -28,24 +29,9 @@ M2.5 standoff (20/PS)|01|20 mm long plug-to-socket M2.5 standoff|4|-|[-L-](https
 
 ## Goals
 
-### Grey
-
 1. Setup your Raspberry Pi (clone SD card with LBBOS image).
 2. Connect to your Raspberry Pi via SSH.
-
-### White
-
-1. Programming...
-2. Build a minimal OS.
-
-----
-
-## NB3
-
-This box will contribute the following (red) components to your NB3
-
-<p align="center">
-<img src="_data/images/NB3_systems.png" alt="NB3 stage" width="400" height="400">
-<p>
+3. Programming...
+4. Build a minimal OS.
 
 ----

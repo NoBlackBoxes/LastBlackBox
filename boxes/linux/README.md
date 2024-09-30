@@ -21,12 +21,7 @@ Contents|Level|Description| # |Data|Link|
 
 ## Goals
 
-### Grey
-
 1. Use Linux
-
-### White
-
-1. Understand Linux
+2. Understand Linux
 
 ----

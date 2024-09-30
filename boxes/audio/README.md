@@ -30,24 +30,8 @@ M2.5 nut|01|regular M2.5 nut|2|[-D-](-)|[-L-](https://www.accu.co.uk/hexagon-nut
 
 ## Goals
 
-### Grey
-
 1. Setup your left/right MEMs microphones
 2. Analyze sound in Python/C
-
-### White
-
-1. Sound (clap) localizer
-
-
-----
-
-## NB3
-
-This box will contribute the following (red) components to your NB3
-
-<p align="center">
-<img src="_data/images/NB3_audio.png" alt="NB3 stage" width="400" height="400">
-<p>
+3. Sound (clap) localizer
 
 ----

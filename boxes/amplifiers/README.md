@@ -26,24 +26,8 @@ LM386N-4/NOPB|10|Audio-Amp|2|[-D-](_data/datasheets/IRF510.pdf)|[-L-](https://uk
 
 ## Goals
 
-### Grey
-
 1. Amplify photodiode signal
 2. (Sound) controlled motor
-
-### White
-
-1. "Wireless" sound transmission
-
-
-----
-
-## NB3
-
-This box will contribute the following (red) components to your NB3
-
-<p align="center">
-<img src="_data/images/NB3_amplifiers.png" alt="NB3 stage" width="400" height="400">
-<p>
+3. "Wireless" sound transmission
 
 ----

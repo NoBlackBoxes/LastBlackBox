@@ -8,8 +8,8 @@ username = os.getlogin()
 
 # Specify paths
 repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
-box_path = repo_path + '/boxes/python/_data'
-image_path = box_path + '/image.jpeg'
+images_path = repo_path + '/boxes/python/_data/images'
+image_path = images_path + '/image.jpeg'
 
 #
 # Test 1

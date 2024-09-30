@@ -27,11 +27,7 @@ Contents|Level|Description| # |Data|Link|
 2. Style a static website with CSS
 3. Javascript
 4. Cookies
-
-### White
-
-1. Host server
-2. Game
-
+5. Host server
+6. Game
 
 ----

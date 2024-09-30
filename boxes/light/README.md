@@ -37,49 +37,12 @@ Light hits stuff?
 - Two slits (interference)
 - Lenses (or curved mirrors)
 
-
 ----
 
 ## Goals
 
-### Grey
-
 1. Light a lightbulb, think about the jiggling electrons.
-
-### White
-
-1. Build two dipole antennas (transmitter and receiver)...a wireless telegraph.
-2. Use an inductor to build a "choke". Power a lightbulb (or LED) via an inductor in paralell. What happens? (decay times)
-
+2. Build two dipole antennas (transmitter and receiver)...a wireless telegraph.
+3. Use an inductor to build a "choke". Power a lightbulb (or LED) via an inductor in paralell. What happens? (decay times)
 
 ----
-
-## NB3
-
-This box will contribute the following (red) components to your NB3
-
-<p align="center">
-<img src="_data/images/NB3_light.png" alt="NB3 stage" width="400" height="400">
-<p>
-
-----
-
-## Electromagnetic Wave
-
-When a material becomes very hot, it starts to "glow". Why?
-
-- Where does the energy go?
-- What is heat?
-- What is too much heat?
-- How does a lightbulb work?
-- (What is light?)
-
-### Exercise: Light a lightbulb
-
-### Exercise: Dim a lightbulb with a variable resistor
-
-----
-
-## Inductors
-
-- Needed?

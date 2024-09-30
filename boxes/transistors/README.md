@@ -33,25 +33,10 @@ LED (IR)|10|Low power IR light emitting diode|2|-|[-L-](https://uk.farnell.com/v
 
 ## Goals
 
-### Grey
-
 1. Confirm diodes (IV curve)
 2. Light an LED (with current limiting resistor), blue and IR
-2. Measure the threshold voltage of a MOSFET (transistor)
-3. Build a a light sensitive motor (with protection diode)
-
-### White
-
-1. The world's worst audio amplifier?
-
-----
-
-## NB3
-
-This box will contribute the following (red) components to your NB3
-
-<p align="center">
-<img src="_data/images/NB3_transistors.png" alt="NB3 stage" width="400" height="400">
-<p>
+3. Measure the threshold voltage of a MOSFET (transistor)
+4. Build a a light sensitive motor (with protection diode)
+5. The world's worst audio amplifier?
 
 ----
