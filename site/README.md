@@ -47,24 +47,21 @@ Things to complete
 - Run on S3?
 
 ## Model
-- Each **course** is composed of multiple **sessions**, which cover the LBB material to a particular depth.
+- Each **course** is composed of multiple **sessions**, which cover the LBB material to a particular knowledge depth.
    - Depth 01: (LBB-101) - *Bootcamp, ENB, Build a Brain, Own Phone*
    - Depth 10: (LBB-201) - *SWC-GCNU PhD*
    - Depth 11: (LBB-301) - *The Last Black Box*
-- Each **session** opens a set of LBB "black boxes" by guiding student progress through a sequence of **topics** described in the session *README* file.
+- Each **session** opens a set of "black boxes" by guiding student progress through a sequence of **topics** described in the session's *README* file.
 - Each **topic** presents a sequence of video and text instructions with **tasks** for the student to complete in order to progress to the next topic.
-- Each **session** concludes with a *project*, the outcome of which the student must submit to certify completion.
+- Each **session** concludes with a **project**, the outcome of which the student must submit to certify completion.
 
 ```markdown
-# Course Title : Session Number - Name
-Session descrition.
+# Course Title : Session Number - Session Name
+Session description.
 Can be mutliple lines.
-- first box opened (depth), next box opened (depth), ...
+> first box opened (depth), next box opened (depth), ...
 
 ## Topic #1 Name
-Topic description.
-Just text.
-
 First lesson for topic. Consisting of written instructions, images, videos, and tasks. Videos and tasks are defined in the following way.
 
 - *Watch this video*: [Video Name](video url)
@@ -79,12 +76,27 @@ Second lesson for topic. Consisting of written instructions, images, videos, and
 - *Watch this video*: [Video Name](video url)
   - **Task**(task_name): Task description.[task input]
 
+## Topic #2 Name
+First lesson for topic. Consisting of written instructions, images, videos, links, and tasks. Videos and tasks are defined in the following way.
+
+- *Watch this video*: [Video Name](video url)
+  - **Task**(task_name): Task description.[task_input]
+  - **Task**(task_name): Task description.[task_input]
+- *Watch this video*: [Video Name](video url)
+  - **Task**(task_name): Task description.[task_input]
+
+Second lesson for topic. Consisting of written instructions, images, videos, links, and tasks. Videos and tasks are defined in the following way.
+
+- *Watch this video*: [Video Name](video url)
+- *Watch this video*: [Video Name](video url)
+  - **Task**(task_name): Task description.[task input]
+
 ---
 
 # Project
 ### Project Name
-Session project description. Consisting of written instructions, images, videos, and tasks. Videos and tasks are defined in the following way.
-- Describe project goals, etc.
+Session project description. Consisting of written instructions, images, videos, and links. Describe project goals, etc.
+
 - *Watch this video*: [Video Name](video url)
 
 Submission instructions (link to Discord #channel)

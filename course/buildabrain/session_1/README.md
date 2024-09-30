@@ -1,13 +1,15 @@
 # Build a Brain : Session 1 - Sensors
-In this session we will learn how electricity can be used to create "sensors" (inputs for our robot brain). Sesnors can measure anything we want we want our robot to know about the world (light, temperature, pressure, sound, etc.). We will open the following "black boxes" during this session:
-- Atoms (01), Electrons (01), Sensors (01)
+In this session we will learn how electricity can be used to create "sensors" (inputs for our robot brain). Sesnors can measure anything we want we want our robot to know about the world (light, temperature, pressure, sound, etc.).
+> Atoms (01), Electrons (01), Sensors (01)
 
 ## Atoms
-> "Let's start at the very beginning, a very good place to start". - *R&H*
+"Let's start at the very beginning, a very good place to start". - *R&H*
 
 - *Watch this video*: [Structure and the Periodic Table](https://vimeo.com/1000458082)
+
 <img src="../../../boxes/electrons/_data/images/dipole_field_template.png" alt="dipole field template" height="250" style="border: 2px solid #000000;"/>
-  - When you need it **(and you will)**, then you can find the periodic table [here](../../../boxes/atoms/card/periodic_table.png)
+
+When you need it **(and you will)**, then you can find the periodic table [here](../../../boxes/atoms/card/periodic_table.png)
 
 ## Electrons
 - *Watch this video*: [Voltage](https://vimeo.com/1000730032)
@@ -19,6 +21,7 @@ In this session we will learn how electricity can be used to create "sensors" (i
   - **Task**(measure_resistors): Measure the resistance of one of your resistors.[number]
 
 With a voltage source (battery) and resistors, then we can start building "circuits" - complete paths of conduction that allow current to flow from a location with fewer electrons (+) to a location with more electrons (-).
+
 > ***Note***: This is *weird*. Electrons are the things moving. Shouldn't we say that current "flows" from the (-) area to the (+) area? Unfortunately, current was described before anyone knew about electrons and we are stuck with the following awkward convention: **Current is defined to flow from (+) to (-)**...even though we now know that electrons are moving the opposite way.
 
 To help you build electronic circuits, we will assemble a "prototyping platform", which also happens to be the body of your robot (NB3).
@@ -44,4 +47,4 @@ To help you build electronic circuits, we will assemble a "prototyping platform"
 # Project
 ### Build a Light Sensor
 - Build a voltage divider with one of the fixed resistors replaced with an LDR (light-dependent resistor). Does the "output" voltage vary with light level? What should the value of the fixed resistor be to maximize the sensitive range of the output voltage for varying light levels?
-- A guide to completing this task (and all the morning circuit building tasks) can be found here: [Building Circuits](https://vimeo.com/1005054579)
+- A guide to completing this task (and all of the morning circuit building tasks) can be found here: [Building Circuits](https://vimeo.com/1005054579)

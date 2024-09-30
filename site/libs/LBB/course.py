@@ -17,7 +17,7 @@ import LBB.session as Session
 class Course:
     def __init__(self, folder=None):
         self.name = None            # course name
-        self.sessions = None        # sessions covered
+        self.sessions = None        # course sessions
         self.boxes = {}             # boxes opened dictionary {name:depth}
         if folder:
             self.load(folder)
@@ -44,4 +44,8 @@ class Course:
         for session in self.sessions:
             self.boxes.update(session.boxes)
 
+    def render(self):
+        # Render template page for course (list sessions/progress)
+        # Render template pages for each course session/topic
+        return
 #FIN
