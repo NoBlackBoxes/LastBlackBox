@@ -13,13 +13,15 @@
 	"activationEvents": [],
 	"main": "./out/extension.js",
 	"contributes": {
-		"commands": [
-			{
-				"command": "explainer-recorder",
-				"title": "Record code explaination",
-				"category": "NoBlackBoxes"
-			}
-		]
+		"views": {
+			"explorer": [
+				{
+					"type": "webview",
+					"id": "explainer-recorder",
+					"name": "Explainer Recorder"
+				}
+			]
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
