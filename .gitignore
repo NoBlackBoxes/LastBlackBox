@@ -1,3 +1,6 @@
+# Videos
+*.mkv
+
 # Build binaries
 bin/
 
