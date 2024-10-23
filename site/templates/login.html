@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+  {% include 'pwa.html' %}
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/login.css')}}"/>
+</head>
+<html>
+  <body>
+    <div id="layout" style="background-image: url({{url_for('static', filename='images/layout/layout.svg')}});"></div>
+    <div id="content">
+      <img id="logo" src="{{url_for('static', filename='images/logo/logo_LBB_white_text.svg')}}" alt="Last Black Box Logo">
+      <form id="login" action="/login" method="post">
+        <input id="user_id" type="text" name="user_id" placeholder="Enter your LBB ID" required />
+        <input id="user_password" type="text" name="user_password" placeholder="Enter your password" required />
+        <input id="button" type="submit" value="Login" />
+      </form>
+      <h4 id="error">{{error}}</h4>
+      <div id="note_register">
+        <h4 id="register">Not registered?</h4> <a id="register_link" href="https://www.noblackboxes.org/courses" target=”_blank”>Sign up here</a>
+      </div>
+      <div id="note_forget">
+        <h4 id="forget">Did you <i>forget</i> your ID or password?</h3> <a id="forget_link" href="recovery">Recover your login details</a><br>
+      </div>
+    </div>
+  </body>
+</html>

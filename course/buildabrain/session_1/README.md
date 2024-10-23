@@ -28,7 +28,7 @@ When there is more negative charge in one location vs. another, we say there is 
 > [Concepts and Connections]()
 
 ### Watch this video: [Conductors](https://vimeo.com/1000740989)
-Some materials have electrons, way out in their outer orbitals, that are happy to jump between neighboring nuclei (or the same element). We say that these electrons are "free" to move around the material. If we place such a material between two locations with a *potential difference* (voltage), then electrons will flow from the (-) location to the (+) location; the material will **conduct** electricity. 
+Some materials have electrons way out in their outer orbitals that are happy to jump between neighboring atomic nuclei (of the same element). We say that these electrons are "free" to move around the material. If we place such a material between two locations with a *potential difference* (voltage), then electrons will flow from the **(-)** location to the **(+)** location; the material will **conduct** electricity. 
 > [Concepts and Connections]()
 
 ### Watch this video: [Batteries](https://vimeo.com/??????)

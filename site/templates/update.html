@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+  {% include 'pwa.html' %}
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/update.css')}}"/>
+</head>
+<html>
+  <body>
+    <div id="layout" style="background-image: url({{url_for('static', filename='images/layout/layout.svg')}});"></div>
+    <div id="content">
+      <h1 id="greeting">Hi <span id="nickname">{{user['nickname']}}</span>.</h1>
+      <h3 id="status">You have opened <span id="box_count">{{user['progress'][0]}}</span> black boxes!</h3>
+      <h4 id="progress"><i><span id="level_01">{{user['progress'][1]}} to Level 01</span> | <span id="level_10">{{user['progress'][2]}} to Level 10</span> | <span id="level_11">{{user['progress'][3]}} to Level 11</span></i></h4>
+      {{badge | safe}}
+      <a id="download" href="download">Download Your Brain Badge</a>
+      <div id="user_info">
+        <form id="user_update" action="/update" method="post">
+          <div id="user_name_label"><input id="user_name" type="text" name="user_name" placeholder="{{user['name']}}"/> - Name</div>
+          <div id="user_nickname_label"><input id="user_nickname" type="text" name="user_nickname" placeholder="{{user['nickname']}}"/> - Nickname</div>
+          <div id="user_email_label"><input id="user_email" type="text" name="user_email" placeholder="{{user['email']}}"/> - Email</div>
+          <div id="user_password_label"><input id="user_password" type="text" name="user_password" placeholder="Update your password?"/> - Password</div>
+          <div id="user_password_confirmation_label"><input id="user_password_confirmation" type="text" name="user_password_confirmation" placeholder="Confirm new password"/> - Confirm</div>
+          <input id="update" type="submit" value="Update" />
+        </form>
+      </div>
+      <h4 id="error">{{error}}</h4>
+    </div>
+  </body>
+</html>

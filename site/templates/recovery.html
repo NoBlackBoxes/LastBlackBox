@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+  {% include 'pwa.html' %}
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/recovery.css')}}"/>
+</head>
+<html>
+  <body>
+    <div id="layout" style="background-image: url({{url_for('static', filename='images/layout/layout.svg')}});"></div>
+    <div id="content">
+      <img id="logo" src="{{url_for('static', filename='images/logo/logo_LBB_white_text.svg')}}" alt="Last Black Box Logo">
+      <form id="recovery" action="/recovery" method="post">
+        <input id="user_email" type="text" name="user_email" placeholder="Enter the email address you used with your LBB account" required />
+        <input id="button" type="submit" value="Send Login Details" />
+      </form>
+      <h4 id="error">{{error}}</h4>
+      {% if error %}
+      <b>Did you <i>forget</i> which email you used?</b> <a href="mailto: info@voight-kampff.tech">Get in touch at info@voight-kampff.tech and we will sort it out.</a><br>
+      {% endif %} 
+  </body>
+</html>

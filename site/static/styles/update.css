@@ -1,0 +1,305 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    background: black;
+    color: #FFFFFF;
+    font-family: Arial;
+}
+
+#layout {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0,0,0,1.0);
+    background-attachment:fixed;
+    filter: brightness(15%);
+}
+
+#content {
+    position: absolute; 
+    top: 5%;
+    left: 10%;
+    width:80%;
+    transform: translate(0%, 0%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    filter: brightness(100%);
+}
+
+#greeting {
+    font-size: 60px;
+    font-family: serif;
+    margin-top: 0px;
+    margin-bottom: 5px;
+
+    @media screen and (max-width: 768px) {
+        white-space: nowrap;
+        font-size: 10vw;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+}
+
+#nickname {
+    color: yellow;
+}
+
+#status {
+    font-size: 24px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    color: #CCCCCC;
+
+    @media screen and (max-width: 768px) {
+        white-space: nowrap;
+        font-size: 4vw;
+        margin-top: 5px;
+        margin-bottom: 0px;
+    }
+}
+
+#box_count {
+    padding: 2px 6px;
+    border-width: 1 px;
+    border-style: solid;
+    border-color: #FFFFFF;
+    font-size: 32px;
+    color: #CCCCCC;
+
+    @media screen and (max-width: 768px) {
+        white-space: nowrap;
+        font-size: 5vw;
+    }
+}
+
+#progress {
+    font-size: 16px;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    @media screen and (max-width: 768px) {
+        white-space: nowrap;
+        font-size: 4vw;
+    }
+}
+
+#level_01 {
+    font-size: 14px;
+    color: #999999;
+
+    @media screen and (max-width: 768px) {
+        font-size: 2.5vw;
+    }
+}
+
+#level_10 {
+    font-size: 14px;
+    color: white;
+
+    @media screen and (max-width: 768px) {
+        font-size: 2.5vw;
+    }
+}
+
+#level_11 {
+    font-size: 14px;
+    color: yellow;
+
+    @media screen and (max-width: 768px) {
+        font-size: 2.5vw;
+    }
+}
+
+#brain_badge {
+    width: 500px;
+    height: 320px;
+    margin-top: 20px;
+
+    @media screen and (max-width: 768px) {
+        width: 90%;
+        height: 90%;
+        margin-top: 5px;
+    }
+}
+
+#download {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #AAAAAA;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 2px 6px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    border-color: #000000;
+    transition-duration: 0.4s;
+
+    @media screen and (max-width: 768px) {
+        margin-top: 0px;
+        font-size: 3vw;
+    }
+}
+
+#download:hover {
+    color: #000000;
+    background-color: #DDDDDD;
+    border-color: #CCCCCC;
+}
+
+#user_info {
+    width: 400px;
+    border-radius: 11px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #444444;
+    margin-top: 30px;
+    background-color: #222222;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+    font-size: 14px;
+    font-family: serif;
+
+    @media screen and (max-width: 768px) {
+        width: 90%;
+        font-size: 2.25vw;
+    }
+}
+
+#user_update {
+    width: 90%;
+}
+
+#user_name {
+    font-size: 15px;
+    font-family: Arial;
+    color: black;
+    background-color: #FFFFDD;
+    width: 75%;
+    padding: 2px 4px;
+    border-radius: 5px;
+
+    @media screen and (max-width: 768px) {
+        font-size: 3vw;
+    }
+}
+
+#user_nickname {
+    font-size: 15px;
+    font-family: Arial;
+    color: black;
+    background-color: #FFFFDD;
+    width: 75%;
+    padding: 2px 4px;
+    border-radius: 5px;
+
+    @media screen and (max-width: 768px) {
+        font-size: 3vw;
+    }
+}
+
+#user_email {
+    font-size: 15px;
+    font-family: Arial;
+    color: black;
+    background-color: #FFFFDD;
+    width: 75%;
+    padding: 2px 4px;
+    border-radius: 5px;
+
+    @media screen and (max-width: 768px) {
+        font-size: 3vw;
+    }
+}
+
+#user_password {
+    font-size: 15px;
+    font-family: Arial;
+    color: black;
+    background-color: #FFFFDD;
+    width: 75%;
+    padding: 2px 4px;
+    border-radius: 5px;
+
+    @media screen and (max-width: 768px) {
+        font-size: 3vw;
+    }
+}
+
+#user_password_confirmation {
+    font-size: 15px;
+    font-family: Arial;
+    color: black;
+    background-color: #FFFFDD;
+    width: 75%;
+    padding: 2px 4px;
+    border-radius: 5px;
+
+    @media screen and (max-width: 768px) {
+        font-size: 3vw;
+    }
+}
+
+#update {
+    margin-top: 7px;
+    margin-left: 40%;
+    margin-right: 40%;
+    width: 20%;
+    margin-bottom: 0px;
+    color: black;
+    background-color: yellow;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 4px 8px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #000000;
+    transition-duration: 0.4s;
+    
+    @media screen and (max-width: 768px) {
+        margin-top: 7px;
+        font-size: 3vw;
+        margin-left: 35%;
+        margin-right: 35%;
+        width: 30%;
+    }
+}
+
+#update:hover {
+    color: yellow;
+    background-color: black;
+    border-color: yellow;
+}
+
+#logout {
+    margin-top: 10px;
+    padding: 4px 8px;
+    border: 1px yellow;
+    border-style: solid;
+    border-radius: 3px;
+    color: yellow;
+    background-color: black;
+    text-decoration: none;
+    transition-duration: 0.4s;
+
+    @media screen and (max-width: 768px) {
+        margin-top: 16px;
+    }
+}
+
+#logout:hover {
+    color: black;
+    background-color: yellow;
+}
+
+#error {
+    color: red;
+}

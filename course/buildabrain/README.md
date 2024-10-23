@@ -1,6 +1,6 @@
 # The Last Black Box: *Build a Brain*
 
-> **LBB-101**: Build a brain without using *any* black boxes
+> **LBB-101**: Build a brain without using *any* **black boxes**
 
 <p align="center">
 <img src="_designs/schedule_buildabrain.png" alt="LBB buildabrain layout" width="582" height="826">
