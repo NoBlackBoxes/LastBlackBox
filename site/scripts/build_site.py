@@ -25,6 +25,7 @@ import LBB.utilities as Utilities
 import LBB.course as Course
 import LBB.session as Session
 import LBB.topic as Topic
+import LBB.lesson as Lesson
 import LBB.instruction as Instruction
 import LBB.image as Image
 import LBB.video as Video
@@ -32,7 +33,7 @@ import LBB.task as Task
 import LBB.input as Input
 import LBB.project as Project
 
-# Reload libraies and modules
+# Reload libraries and modules
 import importlib
 importlib.reload(Utilities)
 importlib.reload(Course)
@@ -64,33 +65,13 @@ for course_name in course_names:
     course_template_folder = courses_templates_folder + "/" + course_name
     Utilities.clear_folder(course_template_folder)
     for s, session in enumerate(course.sessions):
-        session_template_path = course_template_folder + f"/session_{s+1}.html"
-        session.render(session_template_path, s)
+        session_template_folder = course_template_folder + f"/session_{s}"
+        Utilities.clear_folder(session_template_folder)
+        for topic in session.topics:
+            topic_template_folder = session_template_folder + f"/{topic.name.lower()}"
+            Utilities.clear_folder(topic_template_folder)
+        for lesson in topic.lessons:
+            lesson_template_path = topic_template_folder + f"/{lesson.name.lower()}"
+            topic.render(lesson_template_path)
 
-## Copy media from Repo (to static)
-#
-#
-#readme_path = "/home/kampff/NoBlackBoxes/LastBlackBox/boxes/electrons/README_new.md"
-#session = Session.Session(readme_path)
-#
-## Create output folder
-#output_path = '/home/kampff/NoBlackBoxes/LastBlackBox/site/templates'
-#
-## Render box
-#box.render_topics(output_path)
-#
-## Print Box
-#print(box.name)
-#print("-------------") 
-#print(box.description[0])
-#print("-------------")
-#for topic in box.topics:
-#    print("\t" + topic.name)
-#    print("\t:: " + topic.description[0])
-#    print("\t-------------")
-#    for lesson in topic.lessons:
-#        print("\t" + str(lesson.level))
-#        for step in lesson.steps:
-#            print(f"\t\t{step}")
-#print("-------------")
-#
+# FIN

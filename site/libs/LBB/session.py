@@ -42,7 +42,7 @@ class Session:
         self.description = []
         line_count = 1
         while readme[line_count][0] != '#':
-            if readme[line_count][0:2] == '- ':
+            if readme[line_count][0:2] == '> ':
                 # Extract boxes opened
                 self.boxes = {}
                 boxes_opened_text = readme[line_count][2:-1]
@@ -66,7 +66,7 @@ class Session:
             topic_text = []
             topic_text.append(readme[line_count][3:-1])
             line_count += 1
-            while readme[line_count][0] != '#':
+            while readme[line_count][0:3] != '## ':
                 if readme[line_count][0] != '\n':
                     topic_text.append(readme[line_count][:-1])
                 line_count += 1

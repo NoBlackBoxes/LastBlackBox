@@ -8,16 +8,13 @@ LBB: Topic Class
 # Import libraries
 
 # Import modules
-import LBB.instruction as Instruction
-import LBB.image as Image
-import LBB.video as Video
-import LBB.task as Task
+import LBB.lesson as Lesson
 
 # Topic Class
 class Topic:
     def __init__(self, text=None):
         self.name = None            # topic name
-        self.steps = None           # topic steps
+        self.lessons = None         # topic lessons
         if text:
             self.parse(text)
         return
@@ -30,31 +27,18 @@ class Topic:
          # Extract name
         self.name = text[0][:-1]
         
-        # Extract steps
-        self.steps = []
+        # Extract lessons
+        self.lessons = []
         line_count = 1
         max_count = len(text)
         while line_count < max_count:
             if text[line_count][0] != '\n':
-                # Classify step
-                if text[line_count][0:8] == '- *Watch':
-                    video = Video.Video(text[line_count])
-                    self.steps.append(video)
-                elif text[line_count][0:10] == '  - **Task':
-                    task = Task.Task(text[line_count])
-                    self.steps.append(task)
-                elif text[line_count][0:4] == '<img':
-                    image = Image.Image(text[line_count])
-                    self.steps.append(image)
-                else:
-                    instruction = Instruction.Instruction(text[line_count].strip())
-                    self.steps.append(instruction)
-            line_count += 1
+                line_count += 1
         return
 
     def render(self):
         output = ''
-        for step in self.steps:
-            output = output + step.render()
+        for lesson in self.lessons:
+            output = output + lesson.render()
         return output
 #FIN
