@@ -5,10 +5,10 @@
    height="1080"
    viewBox="0 0 508 285.75"
    version="1.1"
-   sodipodi:docname="NBB_title.svg"
+   sodipodi:docname="NB3_title.svg"
    inkscape:version="1.3.2 (091e20ef0f, 2023-11-25, custom)"
    xml:space="preserve"
-   inkscape:export-filename="NBB_title.png"
+   inkscape:export-filename="NB3_title.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -59,7 +59,9 @@
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:current-layer="logo_LBB_black_text"
-     inkscape:export-bgcolor="#ffffffff" /><g
+     inkscape:export-bgcolor="#ffffffff" />
+     <rect id="background" width="100%" height="100%" fill="#ffffff"/>
+     <g
      id="g8"
      transform="matrix(5.3105302,0,0,5.3105302,-8.2074286,-5.8198456)"
      inkscape:label="LBB Layout"
@@ -634,4 +636,4 @@
        inkscape:label="title"><tspan
          x="871.79388"
          y="808.06052"
-         id="tspan3">Topic of the Video</tspan></text></g></svg>
+         id="tspan3">Title of the Video</tspan></text></g></svg>
