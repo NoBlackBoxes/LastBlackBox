@@ -4,21 +4,22 @@
 
 ## Electrons
 - [ ] [Voltage](https://vimeo.com/1000730032)
-- [ ] [Batteries](https://vimeo.com/??????)
 - [ ] [Conductors](https://vimeo.com/1000740989)
+- [ ] [Batteries](https://vimeo.com/??????)
 - [ ] [Current](https://vimeo.com/1000743561)
 - [ ] [Resistors](https://vimeo.com/1000755493)
-- [ ] [NB3 Body](https://vimeo.com/1005036900)
 - [ ] [Ohm's Law](https://vimeo.com/1000768334)
 - [ ] [Voltage Dividers](https://vimeo.com/1000782478)
-- [ ] [Building Voltage Dividers](https://vimeo.com/1000789632)
-- [ ] [Building Circuits](https://vimeo.com/1005054579)
-- [ ] [PCB Design with KiCAD](https://vimeo.com/??????)
+- [ ] [NB3 : Measuring Voltage](https://vimeo.com/??????)
+- [ ] [NB3 : Body](https://vimeo.com/1005036900)
+- [ ] [NB3 : Designing PCBs with KiCAD](https://vimeo.com/??????)
+- [ ] [NB3 : Building Circuits](https://vimeo.com/??????)
+- [ ] [NB3 : Measuring Current](https://vimeo.com/??????)
+- [ ] [NB3 : Building Voltage Dividers](https://vimeo.com/1000789632)
 
 ## Sensors
 - [ ] [Light Sensors](https://vimeo.com/1000794164)
-- [ ] [Building a Light Sensor](https://vimeo.com/xxxxxx)
-
+- [ ] [NB3 : Building a Light Sensor](https://vimeo.com/xxxxxx)
 
 ## Magnets
 - [ ] [Electromagnetism](https://vimeo.com/1000810115)
