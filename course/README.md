@@ -1,9 +1,10 @@
 # The Last Black Box Course
 
-> A kit containing a collection of black boxes that you "open" in sequence.
+> A course consisting of 28 **black boxes** that you open in sequence using the materials contained in the "Last Black Box" kit
 
 <p align="center">
 <img src="_designs/layout/png/layout_LBB.png" alt="Course Layout" width="100%" height="100%">
+<h3 style="text-align:center;">Order your "<a href=https://www.noblackboxes.org/courses target="_blank">Last Black Box</a>" now!</h3>
 </p>
 
 ----
@@ -33,7 +34,7 @@ There are shorter versions of this course that cover a specific subset of the "b
 
 - [Bootcamp](bootcamp/README.md): A one-week intensive introduction to the essentials of modern technology and neuroscience.
 
-- [Build A Brain](buildabrain/README.md): Designed for secondary school age students (14+), this hands-on course shows you how recent advances in science and technology have made it possible for humans to create intelligent machines...by building you own. 
+- [Build a Brain](buildabrain/README.md): Designed for secondary school age students (14+), this hands-on course shows you how recent advances in science and technology have made it possible for humans to create intelligent machines...by building you own. 
 
 - [Own Phone](ownphone/README.md): ***-Under Development-*** Get your "smartphone license"! Demonstrate to your parents/friends that you can take control of your digital tools...before they take control you.
 

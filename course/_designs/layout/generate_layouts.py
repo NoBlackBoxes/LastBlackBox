@@ -50,7 +50,7 @@ png_path = f"{output_folder}/png/{svg.name}.png"
 PNG.PNG(svg.name, dpi=600).convert(svg_path, f"/home/kampff/NoBlackBoxes/LastBlackBox/course/bootcamp/_designs/{svg.name}.png")
 
 # -------------
-# Build A Brain
+# Build a Brain
 # -------------
 box_parameters_path = f"{output_folder}/box_parameters_buildabrain.csv"
 svg = SVG.SVG("layout_buildabrain", None, 98.75, 56.0, "0 0 98.75 56.0", with_profile=False, with_title=False, with_labels=True)

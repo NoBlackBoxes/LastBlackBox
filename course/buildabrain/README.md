@@ -4,6 +4,8 @@
 
 <p align="center">
 <img src="_designs/schedule_buildabrain.png" alt="LBB buildabrain layout" width="582" height="826">
+<br>
+<span>The <b>black boxes</b> you will open during Build a Brain</span>
 </p>
 
 ----

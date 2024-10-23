@@ -1,11 +1,11 @@
-# The Last Black Box : *Bootcamp*
+# The Last Black Box : *Experimental Neuroscience Bootcamp*
 
-> **LBB-102**: A one-week ***Bootcamp Version*** of the Last Black Box course
+> **NeuroKit**: A one-week ***Technology Bootcamp*** for neuroscience researchers
 
 <p align="center">
 <img src="_designs/layout_bootcamp.png" alt="LBB bootcamp layout" width="800" height="400">
 <br>
-<span>The <b>black boxes</b> you will open during Bootcamp</span>
+<span>The <b>black boxes</b> you will open during <b>ENB</b></span>
 </p>
 
 ----
@@ -37,18 +37,20 @@ You will be building a robot. The robot's physical layout mimics the basic anato
 - *Morning:* Power, Systems, Linux, Python
 - *Afternoon:* Networks, Websites, and Servers
 
-### Session 4 - [Signal Processing](session_4/README.md)
+### Session 4 - [Signal Processing](session_4)
 
-- *Morning:* Audio (1-D data)
-- *Afternoon:* Digital signal processing
+- *Morning:* [Audio (1-D data)](session_4/Morning.md)
+- *Afternoon:* [Digital signal processing](session_4/Afternoon.md)
 
-### Session 5 - [Computer Vision](session_5/README.md)
+### Session 5 - [Computer Vision](session_5)
 
-- *Morning:* Vision (2-D data)
-- *Afternoon:* Image processing
+- *Morning:* [Vision (2-D data)](session_5/Morning.md)
+- *Afternoon:* [Image processing](session_5/Afternoon.md)
 
-----
+---
 
 ## License
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />The entire LastBlackBox repository and website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+
+---

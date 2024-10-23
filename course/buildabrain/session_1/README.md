@@ -1,4 +1,5 @@
-# Build a Brain : Session 1 - Sensors
+# Build a Brain
+## Session 1 - Sensors
 In this session we will learn how electricity can be used to create "sensors"; the inputs for our robot brain. Sensors can measure anything we want our robot to know about the world (light, temperature, pressure, sound, etc.).
 > Atoms (01), Electrons (01), Sensors (01)
 
