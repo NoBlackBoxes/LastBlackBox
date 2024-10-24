@@ -58,28 +58,15 @@ courses_templates_folder = templates_folder + "/courses"
 #course_names = ["bootcamp", "buildabrain"]
 course_names = ["buildabrain"]
 
-# Build each course
+# Load and render each course
 for course_name in course_names:
+    # Load Course
     course_folder = course_root + "/" + course_name
     course = Course.Course(course_folder)
+
+    # Render Course
     course_template_folder = courses_templates_folder + "/" + course_name
     Utilities.clear_folder(course_template_folder)
-
-    # Load each session
-    for s, session in enumerate(course.sessions):
-        session_template_folder = course_template_folder + f"/session_{s}"
-        Utilities.clear_folder(session_template_folder)
-
-        # Load each box
-        for box in session.boxes:
-            box_template_folder = session_template_folder + f"/{box.name.lower()}"
-            Utilities.clear_folder(box_template_folder)
-
-            # Render each lesson
-            for lesson in box.lessons:
-                lesson_url = lesson.name.lower().replace(' ', '-').replace('\'', '') + ".html"
-                lesson_template_path = box_template_folder + f"/{lesson_url}"
-                lesson.render(lesson_template_path)
-                print(f"Rendered Template: {course_name}/session_{s}/{box.name.lower()}/{lesson_url}")
+    course.render(course_template_folder)
 
 # FIN

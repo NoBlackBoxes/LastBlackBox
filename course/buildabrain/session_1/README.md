@@ -4,13 +4,13 @@ In this session we will learn how electricity can be used to create "sensors"; t
 ## Atoms
 *"Let's start at the very beginning, a very good place to start"*. - *R&H*
 
-### Watch this video: [Atomic Structure](https://vimeo.com/??????)
+### Watch this video: [Atomic Structure](https://vimeo.com/1000458082)
 A brief introduction to the physics of atoms, their parts (protons, neutrons, and electrons), and their classical vs. quantum structure.
-> [Concepts and Connections](../../_videos/boxes/atoms/Atomic-Structure.md)
+> [Concepts and Connections](../../../course/_videos/boxes/atoms/Atomic-Structure.md)
 
-### Watch this video: [The Periodic Table](https://vimeo.com/unknown)
+### Watch this video: [The Periodic Table](https://vimeo.com/1000458082)
 The organization of elements into a table reveals a regular pattern, which is linked to the fundamental chemical properties of each material.
-> [Concepts and Connections](../../_videos/boxes/atoms/The-Periodic-Table.md)
+> [Concepts and Connections](../../../course/_videos/boxes/atoms/The-Periodic-Table.md)
 
 - When you need it *(and you will)*, then you can find a copy of the periodic table [here](../../../boxes/atoms/_data/images/periodic_table.png).
 - The electron configuration (assignments to specific orbitals) of each atomic element can be viewed [here](https://en.wikipedia.org/wiki/Electron_configurations_of_the_elements_(data_page)). 

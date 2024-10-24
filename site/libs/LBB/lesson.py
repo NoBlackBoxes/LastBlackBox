@@ -56,45 +56,12 @@ class Lesson:
             line_count += 1
         return
 
-    def render(self, output_path):
+    def render(self):
         output = []
         output.append(self.video.render())
         for step in self.steps:
             output.append(step.render())
         output = "".join(output)
-        with open(output_path, "w") as file:
-            file.write(output)
         return output
-
-    #def render(self, output_path, session_index):
-    #    header = self.render_header(session_index)
-    #    footer = self.render_footer(session_index)
-    #    body = ''
-    #    for box in self.boxes:
-    #        body += box.render()
-    #    project = self.project.render()
-    #    output = header + body + project + footer
-    #    with open(output_path, "w") as file:
-    #        file.write(output)
-    #    return
-#
-    #def render_header(self, session_index):
-    #    header = []
-    #    header.append("<!DOCTYPE html>\n")
-    #    header.append("<head>\n")
-    #    header.append("{% include 'pwa.html' %}\n")
-    #    header.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"{{url_for('static', filename='styles/session.css')}}\"/>\n")
-    #    header.append("</head>\n\n")
-    #    header.append("<html>\n<body>\n\n")
-    #    header.append(f"<title>LBB : {self.name}</title>\n")
-    #    header.append(f"<h2 id=\"session_name\">LBB : {self.name}</h2>\n")
-    #    header.append(f"<hr>\n")
-    #    return "".join(header)
-#
-    #def render_footer(self, session_index):
-    #    footer = []
-    #    footer.append("<hr>\n")
-    #    footer.append("</body>\n</html>")
-    #    return "".join(footer)
 
 #FIN

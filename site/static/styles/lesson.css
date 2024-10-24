@@ -7,15 +7,20 @@ body {
     color: rgb(255, 255, 255);
 }
 
-#box_name {
+#link {
     color: yellow;
-    font-size: 8px;
 }
 
-#topic_name {
+#course_heading {
+    color: yellow;
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 0px;
+}
+
+#lesson_name {
     color: white;
     text-align: center;
-    font-size: 50px;
     margin-bottom: 0px;
 }
 
@@ -33,7 +38,7 @@ body {
     border-color: rgb(156, 156, 156);
     border-radius: 3px;
     border-style: solid;
-    background-color: rgb(215, 215, 215);
+    background-color: rgb(55, 55, 55);
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: center;

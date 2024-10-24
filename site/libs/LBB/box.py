@@ -41,7 +41,7 @@ class Box:
         self.lessons = []
         while line_count < max_count:
             lesson_text = []
-            lesson_text.append(text[line_count][:-1])
+            lesson_text.append(text[line_count])
             line_count += 1
             while text[line_count][0:9] != '### Watch': # Next lesson
                 if text[line_count][0] != '\n':

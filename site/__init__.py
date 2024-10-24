@@ -168,13 +168,13 @@ def instructor():
     return render_template('instructor.html')
 
 # Serve Course Session
-@app.route('/<course>/<session>', methods=['GET', 'POST'])
+@app.route('/<course>/<session>/<box>/<lesson>', methods=['GET', 'POST'])
 @login_required
-def session(course, session):
+def session(course, session, box, lesson):
     user_session_folder_path = f"{app.config['UPLOAD_FOLDER']}/users/{current_user.id}/{course}/{session}"
     task_status = Utilities.retrieve_task_status(user_session_folder_path)
     if request.method == 'GET':
-        route_url = f"courses/{course}/{session}.html"
+        route_url = f"courses/{course}/{session}/{box}/{lesson}"
     elif request.method == 'POST':
         form = request.form
         task_name = request.form['task_name']
