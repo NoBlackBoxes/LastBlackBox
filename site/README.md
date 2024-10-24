@@ -42,7 +42,7 @@ Things to complete
 - Send emails asynchronously
 - Standardized task submissions (with validation and feedback)
 - Student progress bars?
-- Student topic/box completion state
+- Student box completion status
 - Discord integration?
 - Run on S3?
 
@@ -51,37 +51,36 @@ Things to complete
    - Depth 01: (LBB-10?) - *Build a Brain (101), Bootcamp (102), ENB (103), Own Phone (104)*
    - Depth 10: (LBB-20?) - *SWC-GCNU PhD* (201)
    - Depth 11: (LBB-30?) - *The Last Black Box* (301)
-- Each **session** opens a set of "black boxes" by guiding student progress through a sequence of **topics** described in the session's *README* file.
-- Each **topic** presents a sequence of **lessons** consisting of a named video tutorial and text instructions.
+- Each **session** opens a sequence of black **boxes** described in the session's *README* file.
+- Each **box** presents a sequence of **lessons** consisting of a named video tutorial and text instructions.
 - Each **lesson** might have one or more **tasks** for the student to complete in order to progress to the next **lesson**.
 - Each **session** concludes with a **project**, the outcome of which the student must submit to certify completion.
 
 ```markdown
 # Course Title : Session Number - Session Name
 Session description.
-Can be mutliple lines.
-> first box opened (depth), next box opened (depth), ...
+Can be multiple lines, but just text.
 
-## Topic #1 Name
-Topic description. Consisting of text, images, and quotes.
-
-### Watch this video: [Video Title](video url)
-Video content description (text).
+## Box #1 Name
+Can be multiple lines, but just text.
 
 ### Watch this video: [Video Title](video url)
-Video content description (text).
+Video content description (single line of text).
+
+### Watch this video: [Video Title](video url)
+Video content description (single line of text).
 - **Task**(task_name): Task description.[task_input]
 
-## Topic #2 Name
-Topic description. Consisting of text, images, and quotes.
-
-###  Watch this video: [Video Name](video url)
-Video content description (text).
-- **Task**(task_name): Task description.[task_input]
-- **Task**(task_name): Task description.[task_input]
+## Box #2 Name
+Can be multiple lines, but just text.
 
 ###  Watch this video: [Video Name](video url)
-Video content description (text).
+Video content description (single line of text).
+- **Task**(task_name): Task description.[task_input]
+- **Task**(task_name): Task description.[task_input]
+
+###  Watch this video: [Video Name](video url)
+Video content description (single line of text).
 - **Task**(task_name): Task description.[task_input]
 
 ---
@@ -91,5 +90,4 @@ Video content description (text).
 Session project description. Consisting of written instructions, images, videos, and links. Describe project goals, etc.
 
 Submission instructions (link to Discord #channel)
-
 ```

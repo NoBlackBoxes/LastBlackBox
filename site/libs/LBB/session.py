@@ -10,7 +10,7 @@ import os
 import LBB.utilities as Utilities
 
 # Import modules
-import LBB.topic as Topic
+import LBB.box as Box
 import LBB.project as Project
 
 # Session Class
@@ -18,62 +18,52 @@ class Session:
     def __init__(self, readme_path=None):
         self.name = None            # session name
         self.description = None     # session description
-        self.boxes = {}             # boxes opened dictionary {name:depth}
-        self.topics = None          # topics covered
+        self.boxes = None           # session boxes
         self.project = None         # session project
         if readme_path:
             self.parse_readme(readme_path)
         return
     
     def parse_readme(self, readme_path):
-        # Read README.md
         with open(readme_path, encoding='utf8') as f:
             readme = f.readlines()
 
-        # Line counter
+        # Set line counter
         line_count = 0
         max_count = len(readme)
 
-        # Extract session name
+        # Extract name
         title = readme[line_count][2:-1]
         self.name = title.split('-')[1][1:]
+        line_count += 1
 
-        # Extract session description
+        # Extract description
         self.description = []
-        line_count = 1
         while readme[line_count][0] != '#':
-            if readme[line_count][0:2] == '> ':
-                # Extract boxes opened
-                self.boxes = {}
-                boxes_opened_text = readme[line_count][2:-1]
-                boxes_strings = boxes_opened_text.split(',')
-                for box_string in boxes_strings:
-                    if box_string[0] == ' ':
-                        box_string = box_string[1:]
-                    name, level = box_string.split(' ')
-                    self.boxes.update({name:level[1:-1]})
-            elif readme[line_count][0] != '\n':
+            if readme[line_count][0] != '\n':
                 self.description.append(readme[line_count][:-1])
             line_count += 1
         self.description = "".join(self.description)
 
-        # Extract session topics
-        self.topics = []
-        topic_line_count = line_count
-        while readme[topic_line_count][0:3] != '---':
-            topic_line_count += 1
-        while line_count < topic_line_count:
-            topic_text = []
-            topic_text.append(readme[line_count][3:-1])
+        # Count boxes section lines
+        box_line_count = line_count
+        while readme[box_line_count][0:3] != '---': # End of boxes section
+            box_line_count += 1
+
+        # Extract session boxes
+        self.boxes = []
+        while line_count < box_line_count:
+            box_text = []
+            box_text.append(readme[line_count][:-1])
             line_count += 1
-            while readme[line_count][0:3] != '## ':
+            while readme[line_count][0:3] != '## ': # Next box
                 if readme[line_count][0] != '\n':
-                    topic_text.append(readme[line_count][:-1])
+                    box_text.append(readme[line_count][:-1])
                 line_count += 1
-                if line_count >= topic_line_count:
+                if line_count >= box_line_count:
                     break
-            topic = Topic.Topic(topic_text)
-            self.topics.append(topic)
+            box = Box.Box(box_text)
+            self.boxes.append(box)
         line_count += 2
     
         # Extract session project
@@ -81,45 +71,10 @@ class Session:
             project_text = []
             project_text.append(readme[line_count][2:-1])
             line_count += 1
-            while readme[line_count][0] != '#':
-                if readme[line_count][0] != '\n':
-                    project_text.append(readme[line_count][:-1])
-                line_count += 1
-                if line_count >= max_count:
-                    break
+            if readme[line_count][0] != '\n':
+                project_text.append(readme[line_count][:-1])
+            line_count += 1
         self.project = Project.Project(project_text)
         return
-
-    def render(self, output_path, session_index):
-        header = self.render_header(session_index)
-        footer = self.render_footer(session_index)
-        body = ''
-        for topic in self.topics:
-            body += topic.render()
-        project = self.project.render()
-        output = header + body + project + footer
-        with open(output_path, "w") as file:
-            file.write(output)
-        return
-
-    def render_header(self, session_index):
-        header = []
-        header.append("<!DOCTYPE html>\n")
-        header.append("<head>\n")
-        header.append("{% include 'pwa.html' %}\n")
-        header.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"{{url_for('static', filename='styles/session.css')}}\"/>\n")
-        header.append("</head>\n\n")
-        header.append("<html>\n<body>\n\n")
-        header.append(f"<title>LBB : {self.name}</title>\n")
-        header.append(f"<h2 id=\"session_name\">LBB : {self.name}</h2>\n")
-        header.append(f"<hr>\n")
-        return "".join(header)
-
-    def render_footer(self, session_index):
-        footer = []
-        footer.append("<hr>\n")
-        footer.append("</body>\n</html>")
-        return "".join(footer)
-
 
 #FIN

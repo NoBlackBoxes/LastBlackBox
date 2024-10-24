@@ -24,7 +24,7 @@ import LBB.utilities as Utilities
 # Import modules
 import LBB.course as Course
 import LBB.session as Session
-import LBB.topic as Topic
+import LBB.box as Box
 import LBB.lesson as Lesson
 import LBB.instruction as Instruction
 import LBB.image as Image
@@ -38,7 +38,7 @@ import importlib
 importlib.reload(Utilities)
 importlib.reload(Course)
 importlib.reload(Session)
-importlib.reload(Topic)
+importlib.reload(Box)
 importlib.reload(Instruction)
 importlib.reload(Image)
 importlib.reload(Video)
@@ -58,20 +58,29 @@ courses_templates_folder = templates_folder + "/courses"
 #course_names = ["bootcamp", "buildabrain"]
 course_names = ["buildabrain"]
 
-# Build (and render) each course
+# Build each course
 for course_name in course_names:
     course_folder = course_root + "/" + course_name
     course = Course.Course(course_folder)
     course_template_folder = courses_templates_folder + "/" + course_name
     Utilities.clear_folder(course_template_folder)
+
+    # Load each session
     for s, session in enumerate(course.sessions):
         session_template_folder = course_template_folder + f"/session_{s}"
         Utilities.clear_folder(session_template_folder)
-        for topic in session.topics:
-            topic_template_folder = session_template_folder + f"/{topic.name.lower()}"
-            Utilities.clear_folder(topic_template_folder)
-        for lesson in topic.lessons:
-            lesson_template_path = topic_template_folder + f"/{lesson.name.lower()}"
-            topic.render(lesson_template_path)
+
+        # Load each box
+        for box in session.boxes:
+            box_template_folder = session_template_folder + f"/{box.name.lower()}"
+            Utilities.clear_folder(box_template_folder)
+
+            # Render each lesson
+            for lesson in box.lessons:
+                lesson_url = lesson.name.lower().replace(' ', '-').replace('\'', '') + ".html"
+                lesson_template_path = box_template_folder + f"/{lesson_url}"
+                print(lesson_template_path)
+                lesson.render(lesson_template_path)
+                print(f"Rendered Template: {course_name}/session_{s}/{box.name.lower()}/{lesson_url}")
 
 # FIN

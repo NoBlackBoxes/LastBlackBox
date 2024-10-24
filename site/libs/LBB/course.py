@@ -18,7 +18,7 @@ class Course:
     def __init__(self, folder=None):
         self.name = None            # course name
         self.sessions = None        # course sessions
-        self.boxes = {}             # boxes opened dictionary {name:depth}
+        self.depth = None           # course depth
         if folder:
             self.load(folder)
         return
@@ -28,11 +28,14 @@ class Course:
         folder_name = os.path.basename(folder)
         if folder_name == "bootcamp":
             self.name = "Bootcamp"
+            self.depth = 1
         elif folder_name == "buildabrain":
             self.name = "Build a Brain"
+            self.depth = 1
         else:
             print("Unavailable course selected!")
             exit(-1)
+        
         # Load sessions
         self.sessions = []
         session_folders = sorted(glob.glob(f"{folder}/session_*"))
@@ -40,9 +43,7 @@ class Course:
             session_readme = session_folder + "/README.md"
             session = Session.Session(session_readme)
             self.sessions.append(session)
-        # Combine session boxes with course boxes
-        for session in self.sessions:
-            self.boxes.update(session.boxes)
+        return
 
     def render(self):
         # Render template page for course (list sessions/progress)

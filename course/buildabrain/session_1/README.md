@@ -1,6 +1,5 @@
 # Build a Brain : Session 1 - Sensors
 In this session we will learn how electricity can be used to create "sensors"; the inputs for our robot brain. Sensors can measure anything that we want our robot to know about the world (light, temperature, pressure, sound, etc.).
-> Atoms (01), Electrons (01), Sensors (01)
 
 ## Atoms
 *"Let's start at the very beginning, a very good place to start"*. - *R&H*
@@ -33,10 +32,11 @@ Some materials have electrons way out in their outer orbitals that are happy to 
 
 ### Watch this video: [Batteries](https://vimeo.com/??????)
 Generating a stable voltage requires a source of electrons to maintain the *potential difference*, even when electrons are able to move between two areas of different charge. We can accomplish this with a (redox) chemical reaction inside the wonderfully useful device we call a **battery**.
+
 > [Concepts and Connections]()
 - **TASK**: Measure the voltage of a AA battery using your multimeter.
   - *Hint*: Select the voltage ("V") setting and touch your probes to either end of the battery. Depending on your multimeter, you may also need to select an appropriate "range". For a single AA battery, you should expect to measure between 1 and 2 Volts.
-  - If you are new to measuring voltage with a multimeter, then I recommend you watch this video: [NB3 : Measuring Voltage](https://vimeo.com/??????)
+  - If you are new to measuring voltage with a multimeter, then I recommend you watch this video: [NB3-Measuring Voltage](https://vimeo.com/??????)
 - **TASK**: Measure the voltage of 4xAA batteries in series (end to end).
   - *Hint*: You can use your battery holder.
 
@@ -49,20 +49,20 @@ All materials are not equally good a letting their outer orbital electrons freel
 > [Concepts and Connections]()
 - **TASK**: Measure the resistance of one of your resistors.
 
-### Watch this video: [NB3 : Body](https://vimeo.com/1005036900)
+### Watch this video: [NB3-Body](https://vimeo.com/1005036900)
 To help you start measuring and manipulating electricity, we will first assemble a "prototyping platform", which also happens to be the **body** of your robot (NB3).
 > [Concepts and Connections]()
 - **TASK**: Assemble the robot body (prototyping base board).
-  - If you are curious how the *NB3 Body* printed circuit board (PCB) was designed, then you can find the KiCAD files here: [NB3 Body PCB](../../../boxes/electrons/NB3_body). You can also watch this short introduction to PCB design with KiCAD here: [NB3 : Designing PCBs with KiCAD](https://vimeo.com/??????).
+  - If you are curious how the *NB3 Body* printed circuit board (PCB) was designed, then you can find the KiCAD files here: [NB3 Body PCB](../../../boxes/electrons/NB3_body). You can also watch this short introduction to PCB design with KiCAD here: [NB3-Designing PCBs with KiCAD](https://vimeo.com/??????).
 
-### Watch this video: [NB3 : Building Circuits](https://vimeo.com/??????)
+### Watch this video: [NB3-Building Circuits](https://vimeo.com/??????)
 With a voltage source (battery) and resistors, then we can start building "circuits" - complete paths of conduction that allow current to flow from a location with *less* electrons **(+)** to a location with *more* electrons **(-)**.
 > [Concepts and Connections]()
 
 > ***Note***: This is *weird*. Electrons are the things moving. Shouldn't we say that current "flows" from the **(-)** area to the **(+)** area? Unfortunately, current was described before anyone knew about electrons and we are stuck with the following awkward convention: **Current is defined to flow from (+) to (-)**...even though we now know that electrons are moving the opposite direction.
 - **TASK**: Build the simple circuit below and measure the current flowing when you connect the battery pack.
 - ***Warning!***: Measuring current with a multimeter is ***tricky***. You can only get an accurate measurement if ***ALL*** of the current in the circuit is forced to flow through your multimeter. This means that when measuring current, your multimeter must be in *series* with the rest of the circuit. (As opposed to measuring voltage, when your multimeter is placed "parallel" to the circuit.)
-  - If you are new to measuring current with a multimeter, then I recommend you watch this video: [NB3 : Measuring Current](https://vimeo.com/??????).
+  - If you are new to measuring current with a multimeter, then I recommend you watch this video: [NB3-Measuring Current](https://vimeo.com/??????).
 
 ### Watch this video: [Ohm's Law](https://vimeo.com/1000768334)
 > [Concepts and Connections]()
@@ -72,7 +72,7 @@ With a voltage source (battery) and resistors, then we can start building "circu
 > [Concepts and Connections]()
 - **TASK**: Build a voltage divider using two resistors of the same value? Measure the intermediate voltage (between the resistors).
 - **TASK**: Build a voltage divider using a variable resistor (potentiometer). Measure the intermediate voltage. What happens when you change the position of the internal contact (by turning the screw)?
-  - A video guide to completing these tasks can be found here: [NB3 : Building Voltage Dividers](https://vimeo.com/1000789632)
+  - A video guide to completing these tasks can be found here: [NB3-Building Voltage Dividers](https://vimeo.com/1000789632)
 
 ## Sensors
  Our robot's brain uses computers, which can *only* measure electrical signals. Sensors are necessary to convert physical signals (light intensity, heat, air pressure, etc.) into electrical signals.
@@ -85,6 +85,4 @@ With a voltage source (battery) and resistors, then we can start building "circu
 # Project
 ### Build a Light Sensor
 - Build a voltage divider with one of the fixed resistors replaced with an LDR (light-dependent resistor). Does the "output" voltage vary with light level? What should the value of the fixed resistor be to maximize the sensitive range of the output voltage for varying light levels?
-- A guide to completing this task (and all of the morning circuit building tasks) can be found here: [NB3 : Building a Light Sensor](https://vimeo.com/??????)
-
----
+- A guide to completing this task (and all of the morning circuit building tasks) can be found here: [NB3-Building a Light Sensor](https://vimeo.com/??????)
