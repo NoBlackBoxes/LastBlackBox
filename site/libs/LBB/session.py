@@ -45,7 +45,7 @@ class Session:
             line_count += 1
         self.description = "".join(self.description)
 
-        # Count boxes section lines
+        # Count lines in the boxes section
         box_line_count = line_count
         while readme[box_line_count][0:3] != '---': # End of boxes section
             box_line_count += 1

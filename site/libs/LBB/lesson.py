@@ -47,7 +47,7 @@ class Lesson:
                 if text[line_count][0:8] == '- **Task':
                     task = Task.Task(text[line_count])
                     self.steps.append(task)
-                elif text[line_count][0:4] == '<img':
+                elif text[line_count][0:22] == '<p align="center"><img':
                     image = Image.Image(text[line_count])
                     self.steps.append(image)
                 else:
@@ -57,11 +57,13 @@ class Lesson:
         return
 
     def render(self, output_path):
-        output = ''
+        output = []
+        output.append(self.video.render())
         for step in self.steps:
-            output = output + step.render()
-        # join output
-        # save file
+            output.append(step.render())
+        output = "".join(output)
+        with open(output_path, "w") as file:
+            file.write(output)
         return output
 
     #def render(self, output_path, session_index):

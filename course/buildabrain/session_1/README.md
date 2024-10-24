@@ -8,16 +8,14 @@ In this session we will learn how electricity can be used to create "sensors"; t
 A brief introduction to the physics of atoms, their parts (protons, neutrons, and electrons), and their classical vs. quantum structure.
 > [Concepts and Connections](../../_videos/boxes/atoms/Atomic-Structure.md)
 
-### Watch this video: [The Periodic Table](https://vimeo.com/??????)
+### Watch this video: [The Periodic Table](https://vimeo.com/unknown)
 The organization of elements into a table reveals a regular pattern, which is linked to the fundamental chemical properties of each material.
 > [Concepts and Connections](../../_videos/boxes/atoms/The-Periodic-Table.md)
 
 - When you need it *(and you will)*, then you can find a copy of the periodic table [here](../../../boxes/atoms/_data/images/periodic_table.png).
 - The electron configuration (assignments to specific orbitals) of each atomic element can be viewed [here](https://en.wikipedia.org/wiki/Electron_configurations_of_the_elements_(data_page)). 
 
-<p align="center">
-<img src="../../../boxes/atoms/_data/images/periodic_table.png" alt="the periodic table" height="300" style="border: 2px solid #000000;"/>
-</p>
+<p align="center"><img src="../../../boxes/atoms/_data/images/periodic_table.png" alt="the periodic table" height="300" style="border: 2px solid #000000;"/></p>
 
 ## Electrons
 Electrons are the sub-atomic particles that underlie *electricity*. Controlling the movement of electrons (and the effects of their movement) will allow us to build many different kinds of electronic devices, from simple circuits to robots and computers.
@@ -75,9 +73,10 @@ With a voltage source (battery) and resistors, then we can start building "circu
   - A video guide to completing these tasks can be found here: [NB3-Building Voltage Dividers](https://vimeo.com/1000789632)
 
 ## Sensors
- Our robot's brain uses computers, which can *only* measure electrical signals. Sensors are necessary to convert physical signals (light intensity, heat, air pressure, etc.) into electrical signals.
+Our robot's brain uses computers, which can *only* measure electrical signals. Sensors are necessary to convert physical signals (light intensity, heat, air pressure, etc.) into electrical signals.
 
 ### Watch this video: [Light Sensors](https://vimeo.com/1000794164)
+A light sensor converts a change light intensity into a change in an electrical signal (voltage, current, or resistance).
 > [Concepts and Connections]()
 
 ---

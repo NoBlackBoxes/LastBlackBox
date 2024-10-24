@@ -79,7 +79,6 @@ for course_name in course_names:
             for lesson in box.lessons:
                 lesson_url = lesson.name.lower().replace(' ', '-').replace('\'', '') + ".html"
                 lesson_template_path = box_template_folder + f"/{lesson_url}"
-                print(lesson_template_path)
                 lesson.render(lesson_template_path)
                 print(f"Rendered Template: {course_name}/session_{s}/{box.name.lower()}/{lesson_url}")
 

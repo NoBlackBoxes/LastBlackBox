@@ -18,10 +18,10 @@ class Image:
         return
     
     def parse(self, text):
-        self.html = "<img src=\"https://raw.githubusercontent.com/NoBlackBoxes/LastBlackBox/master" + text[18:]
+        self.html = "<img src=\"https://raw.githubusercontent.com/NoBlackBoxes/LastBlackBox/master" + text[36:-4] + '\n'
         return
 
     def render(self):
-        return "<p align=\"center\">\n" + self.html + "\n</p>\n"
+        return "<p align=\"center\">\n" + self.html + "</p>\n"
 
 #FIN

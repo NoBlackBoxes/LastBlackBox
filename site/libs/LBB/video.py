@@ -24,6 +24,7 @@ class Video:
         self.name = split_string[0]
         self.path = split_string[1][1:-1]
         self.id = self.path.split('/')[-1]
+        print(split_string)
         return
 
     def render(self):
