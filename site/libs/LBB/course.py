@@ -49,7 +49,9 @@ class Course:
         return
 
     def render(self, template_folder):
-        # To Do: Render template page for course (list sessions/progress)
+        # Render schedule
+        schedule_template_path = template_folder + f"/schedule.html"
+        self.render_schedule(schedule_template_path)
         
         # Render each session
         for s, session in enumerate(self.sessions):
@@ -92,5 +94,28 @@ class Course:
         footer.append("<hr>\n")
         footer.append("</body>\n</html>")
         return "".join(footer)
+
+    def render_schedule(self, schedule_template_path):
+        header = []
+        header.append("<!DOCTYPE html>\n")
+        header.append("<head>\n")
+        header.append("{% include 'pwa.html' %}\n")
+        header.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"{{url_for('static', filename='styles/lesson.css')}}\"/>\n")
+        header.append("</head>\n\n")
+        header.append("<html>\n<body>\n\n")
+        header.append(f"<title>LBB : {self.name}</title>\n")
+        header.append(f"<h3 id=\"course_heading\">{self.name}</h3>\n")
+        header.append(f"<hr>\n")
+        header = "".join(header)
+        body = "<a href=\"/buildabrain/session_0/atoms/atomic-structure.html\">Lesson Example</a>\n"
+        footer = []
+        footer.append("<hr>\n")
+        footer.append("</body>\n</html>")
+        footer = "".join(footer)
+        output = header + body + footer
+        with open(schedule_template_path, "w") as file:
+            file.write(output)
+        print(f"Rendered Template: {self.slug}/schedule.html")
+        return
 
 #FIN

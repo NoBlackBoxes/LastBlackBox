@@ -167,7 +167,19 @@ def recovery():
 def instructor():
     return render_template('instructor.html')
 
-# Serve Course Session
+# Serve Course Schedule
+@app.route('/<course>/schedule.html', methods=['GET'])
+@login_required
+def schedule(course):
+    user_session_folder_path = f"{app.config['UPLOAD_FOLDER']}/users/{current_user.id}/{course}/{session}"
+    task_status = Utilities.retrieve_task_status(user_session_folder_path)
+    if request.method == 'GET':
+        route_url = f"courses/{course}/schedule.html"
+    else:
+        route_url = f"courses/{course}/schedule.html"
+    return render_template(route_url, task_status=task_status)
+
+# Serve Course Lesson
 @app.route('/<course>/<session>/<box>/<lesson>', methods=['GET', 'POST'])
 @login_required
 def session(course, session, box, lesson):
