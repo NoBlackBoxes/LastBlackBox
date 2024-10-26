@@ -29,7 +29,7 @@ class Microphone:
             self.dtype = np.int32
             self.sample_width = 4
         else:
-            print("(NBB_sound) Unsupported input sample format")
+            print("(NB3_sound) Unsupported input sample format")
             exit(-1)
 
         # Create buffers

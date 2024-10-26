@@ -3,17 +3,17 @@
 Virtual environments are self-contained installations of Python. All of the packages you install and changes you make only affect this *local* environment.
 
 ---
-## Create a virtual environnmet
+## Create a virtual environment
 
 - Make a sub-folder in the **repository root** called "_tmp"
   - *Note*: Anything in the "_tmp" folder is ignored by Git and not synced to the main repository
-- Create a Python virtual environment (called "NBB") for working on NoBlackBoxes projects and courses
-  - Include the "--system-site-packages" flag to use libraries (packages) already installed within your RPi (NB3's) OS.
+- Create a Python virtual environment (called "LBB") for working on *The Last Black Box* courses
+  - If working on your NB3, then include the "--system-site-packages" flag to use libraries (packages) already installed within your RPi (NB3's) OS.
 
 ```bash
 mkdir _tmp
 cd _tmp
-python -m venv NBB --system-site-packages
+python -m venv LBB --system-site-packages
 ```
 
 - Activate the virtual environment
@@ -21,7 +21,7 @@ python -m venv NBB --system-site-packages
 
 ```bash
 # From repo root
-source _tmp/NBB/bin/activate
+source _tmp/LBB/bin/activate
 ```
 
 ## Install useful packages
@@ -38,17 +38,17 @@ pip install setuptools wheel
 pip install pyaudio wave
 ```
 
-## Add local (NBB) libray paths
+## Add local (LBB) libray paths
 You can include custom Python libraries by adding a ".pth" file to the *site-packages* folder with the absolute path to your library.
 
 ```bash
-# Insert the path (first bit of text) into (>) a *.pth file contained in your NBB virtual environment
+# Insert the path (first bit of text) into (>) a *.pth file contained in your LBB virtual environment
 
 # On Host (current Python version 3.12.3)
-echo "/home/${USER}/NoBlackBoxes/LastBlackBox/boxes/audio/python/libs" > /home/${USER}/NoBlackBoxes/LastBlackBox/_tmp/NBB/lib/python3.12/site-packages/NBB_sound.pth
+echo "/home/${USER}/NoBlackBoxes/LastBlackBox/boxes/audio/python/libs" > /home/${USER}/NoBlackBoxes/LastBlackBox/_tmp/LBB/lib/python3.12/site-packages/NB3_sound.pth
 
 # On NB3 (current Python version 3.11.2)
-echo "/home/${USER}/NoBlackBoxes/LastBlackBox/boxes/audio/python/libs" > /home/${USER}/NoBlackBoxes/LastBlackBox/_tmp/NBB/lib/python3.11/site-packages/NBB_sound.pth
+echo "/home/${USER}/NoBlackBoxes/LastBlackBox/boxes/audio/python/libs" > /home/${USER}/NoBlackBoxes/LastBlackBox/_tmp/LBB/lib/python3.11/site-packages/NB3_sound.pth
 ```
 
 ---

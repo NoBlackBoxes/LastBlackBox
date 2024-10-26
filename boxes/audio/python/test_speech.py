@@ -3,8 +3,8 @@ import time
 import numpy as np
 
 # Locals libs
-import NBB_sound.microphone as Microphone
-import NBB_sound.utilities as Utilities
+import NB3_sound.microphone as Microphone
+import NB3_sound.utilities as Utilities
 
 # Reimport
 import importlib

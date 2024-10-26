@@ -26,4 +26,4 @@ aplay -D plughw:3 -c2 -r 48000 -f S32_LE -t wav -V stereo -v file_stereo.wav
 
 ## Usage
 
-The i2s hardware and software interfaces with Linux's ALSA (advanced linux sound architecture). Therefore, ALSA commands, and any programs that use ALSA, should "just work". We have also included a Python sound library (NBB_sound) that you can use the record from the microphones and output sound to the speaker. The library (and examples) can be found here: [Python Audio Examples](../python)
+The i2s hardware and software interfaces with Linux's ALSA (advanced linux sound architecture). Therefore, ALSA commands, and any programs that use ALSA, should "just work". We have also included a Python sound library (NB3_sound) that you can use the record from the microphones and output sound to the speaker. The library (and examples) can be found here: [Python Audio Examples](../python)

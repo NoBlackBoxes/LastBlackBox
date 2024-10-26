@@ -28,7 +28,7 @@ class Speaker:
             self.dtype = np.int32
             self.sample_width = 4
         else:
-            print("(NBB_sound) Unsupported output sample format")
+            print("(NB3_sound) Unsupported output sample format")
             exit(-1)
 
         # Create buffers
@@ -152,7 +152,7 @@ class Speaker:
             channel_data = np.reshape(np.frombuffer(wav_data, dtype=np.int32).transpose(), (-1,self.num_channels))
             float_data = np.float32(channel_data) * 4.656612873077393e-10
         else:
-            print("(NBB_sound) Unsupported WAV output sample format")
+            print("(NB3_sound) Unsupported WAV output sample format")
             exit(-1)
         self.sound = np.copy(float_data) * self.volume
 
