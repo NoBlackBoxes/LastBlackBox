@@ -85,6 +85,7 @@ class Course:
         header.append("</head>\n\n")
         header.append("<html>\n<body>\n\n")
         header.append(f"<title>LBB : {self.name}</title>\n")
+        header.append("<div id=\"content\">")
         header.append(f"<h3 id=\"course_heading\">{self.name} : {session.name} : {box.name} : <span id=\"lesson_name\">{lesson.name}</span></h3>\n")
         header.append(f"<hr>\n")
         return "".join(header)
@@ -92,6 +93,7 @@ class Course:
     def render_footer(self, session, box, lesson):
         footer = []
         footer.append("<hr>\n")
+        footer.append("</div>")
         footer.append("</body>\n</html>")
         return "".join(footer)
 

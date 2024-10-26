@@ -39,12 +39,12 @@ mkdir -p _tmp/users
 
 ## To Do
 Things to complete
-- *Course Model Revision*
+- *Course and Site Model Revision*
 - Download badge (certificate?)
 - Send emails asynchronously
 - Standardized task submissions (with validation and feedback)
 - Student progress bars?
-- Student box completion status
+- Student lesson completion status
 - Discord integration?
 - Run on S3?
 

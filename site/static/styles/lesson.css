@@ -1,10 +1,20 @@
-body {
-    background-color: rgb(0, 0, 0);
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
-    color: rgb(255, 255, 255);
+body, html {
+    height: 100%;
+    margin: 0;
+    background: black;
+    font-family: Arial;
+}
+
+#content {
+    position: absolute; 
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    filter: brightness(100%);
 }
 
 #link {
@@ -55,7 +65,8 @@ body {
 
 #video_player {
     border-width: 7px;
-    border-color: rgb(86, 86, 86);
+    border-style: solid;
+    border-color: rgb(141, 141, 141);
     border-radius: 7px;
 
     @media (max-width:768px){
