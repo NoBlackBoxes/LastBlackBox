@@ -18,8 +18,8 @@ class Course:
     def __init__(self, course_folder=None):
         self.name = None            # course name
         self.slug = None            # course slug (URL)
-        self.sessions = None        # course sessions
         self.depth = None           # course depth
+        self.sessions = None        # course sessions
         if course_folder:
             self.load(course_folder)
         return

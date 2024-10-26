@@ -42,6 +42,7 @@ class User:
         self.boxes = {}             # User box status dictionary {name:depth}
         self.current_course = None  # Current course
         self.current_session = None # Current session
+        self.current_lesson = None  # Current lesson
         self.progress = [0,0,0,0]   # Progress
         if (_user_id != None):      # Load from User ID
             self.load(_user_id)
