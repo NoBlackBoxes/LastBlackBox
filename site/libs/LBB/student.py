@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-LBB: User Class
+LBB: Student Class
 
 @author: kampff
 """
@@ -27,25 +27,20 @@ from werkzeug.security import generate_password_hash, check_password_hash
 # Import modules
 import Design.svg as SVG
 
-# User Class
-class User:
-    def __init__(self, _user_id=None):
+# Student Class
+class Student:
+    def __init__(self, _student_id=None):
         self.id = None              # ID
         self.password_hash = None   # Password hash
         self.name = None            # Name
         self.nickname = None        # Nickname
         self.email = None           # Email
-        self.instructor = False     # Instructor boolean
-        self.admin = False          # Administrator boolean
+        self.progress = {}          # Progress dictionary {box name:depth}
+        self.course = None          # Current course
         self.authenticated = False  # Authenticated boolean
         self.loaded = False         # Loaded boolean
-        self.boxes = {}             # User box status dictionary {name:depth}
-        self.current_course = None  # Current course
-        self.current_session = None # Current session
-        self.current_lesson = None  # Current lesson
-        self.progress = [0,0,0,0]   # Progress
-        if (_user_id != None):      # Load from User ID
-            self.load(_user_id)
+        if (_student_id != None):   # Load from Student ID
+            self.load(_student_id)
         return
     
     def is_active(self):
@@ -61,10 +56,11 @@ class User:
         return False
 
     def store(self):
-        user_folder = f"{data_path}/users/{self.id}"
-        user_path = f"{user_folder}/user_data.csv"
-        # Store user data
-        with open(user_path, 'w') as file:
+        student_folder = f"{data_path}/students/{self.id}"
+        student_path = f"{student_folder}/student_data.csv"
+
+        # Store student data
+        with open(student_path, 'w') as file:
             file.write(f"id,{self.id}\n")
             file.write(f"password_hash,{self.password_hash}\n")
             file.write(f"name,{self.name}\n")
@@ -74,21 +70,24 @@ class User:
             file.write(f"admin,{self.admin}\n")
             file.write(f"current_course,{self.current_course}\n")
             file.write(f"current_session,{self.current_session}\n")
-        # Store user progress
-        user_path = f"{user_folder}/user_progress.csv"
-        with open(user_path, 'w') as file:
-            for box in self.boxes.items():
+
+        # Store student progress
+        student_path = f"{student_folder}/student_progress.csv"
+        with open(student_path, 'w') as file:
+            for box in self.progress.items():
                 file.write(f"{box[0]},{box[1]}\n")                
         return
 
-    def load(self, user_id):
-        user_folder = f"{data_path}/users/{user_id}"
-        user_path = f"{user_folder}/user_data.csv"
-        # Does user (data file) exist?
-        if not os.path.isfile(user_path):
+    def load(self, student_id):
+        student_folder = f"{data_path}/students/{student_id}"
+        student_path = f"{student_folder}/student_data.csv"
+
+        # Does student (data file) exist?
+        if not os.path.isfile(student_path):
             return False
-        # Load user data
-        with open(user_path, 'r') as file:
+
+        # Load student data
+        with open(student_path, 'r') as file:
             line = file.readline(); self.id = line.split(',')[1][:-1]
             line = file.readline(); self.password_hash = line.split(',')[1][:-1]
             line = file.readline(); self.name = line.split(',')[1][:-1]
@@ -98,45 +97,46 @@ class User:
             line = file.readline(); self.admin = line.split(',')[1][:-1]
             line = file.readline(); self.current_course = line.split(',')[1][:-1]
             line = file.readline(); self.current_session = line.split(',')[1][:-1]
-        # Load user progress
-        user_path = f"{user_folder}/user_progress.csv"
-        boxes = {}
-        with open(user_path, 'r') as file:
+
+        # Load student progress
+        student_path = f"{student_folder}/student_progress.csv"
+        progress = {}
+        with open(student_path, 'r') as file:
             lines = file.readlines()
             for line in lines:
                 name = line.split(",")[0]
                 level = line.split(",")[1][:-1]
-                boxes.update({name:level})
-        self.boxes = boxes
+                progress.update({name:level})
+        self.progress = progress
         self.loaded = True
         return True
 
-    def find(self, user_email):
-        users_folder = f"{data_path}/users"
-        user_folders = glob.glob(users_folder+"/*/")
-        for user_folder in user_folders:
-            user_id = user_folder.split('/')[-2]
-            self.load(user_id)
-            if (self.email == user_email):
+    def find(self, student_email):
+        students_folder = f"{data_path}/students"
+        student_folders = glob.glob(students_folder+"/*/")
+        for student_folder in student_folders:
+            student_id = student_folder.split('/')[-2]
+            self.load(student_id)
+            if (self.email == student_email):
                 return self
         self.loaded = False
         return None
 
-    def authenticate(self, user_password):
+    def authenticate(self, student_password):
         print(self.password_hash)
-        a = check_password_hash(self.password_hash, user_password)
+        a = check_password_hash(self.password_hash, student_password)
         print(a)
-        if check_password_hash(self.password_hash, user_password):
+        if check_password_hash(self.password_hash, student_password):
             self.authenticated = True
             return True
         return False
     
-    def update_progress(self):
+    def summarize_progress(self):
         num_open = 0
         num_01 = 0
         num_10 = 0
         num_11 = 0
-        for status in self.boxes.values():
+        for status in self.progress.values():
             if status != '00':
                 num_open += 1
             if status == '01':
@@ -145,15 +145,14 @@ class User:
                 num_10 += 1
             if status == '11':
                 num_11 += 1
-        self.progress = [num_open, num_01, num_10, num_11]
-        return
+        return [num_open, num_01, num_10, num_11]
 
     def generate_badge(self):
-        user_folder = f"{data_path}/users/{self.id}"
-        box_parameters_path = f"{user_folder}/box_parameters_badge.csv"
-        animation_parameters_path = f"{user_folder}/animation_parameters_badge.csv"
+        student_folder = f"{data_path}/students/{self.id}"
+        box_parameters_path = f"{student_folder}/box_parameters_badge.csv"
+        animation_parameters_path = f"{student_folder}/animation_parameters_badge.csv"
         svg = SVG.SVG(f"brain_badge", None, 100, 64, "0 0 100 64", with_profile=False, with_title=False, with_labels=True)
-        svg_path = f"{user_folder}/badge_{self.id}.svg"
+        svg_path = f"{student_folder}/badge_{self.id}.svg"
         svg.animate(box_parameters_path, animation_parameters_path, True, False, True, svg_path)
         with open(svg_path, 'r') as file:
             next(file)
@@ -161,15 +160,15 @@ class User:
         return svg_string
 
     def generate_badge_parameters(self, static_folder):
-        user_folder = f"{data_path}/users/{self.id}"
+        student_folder = f"{data_path}/students/{self.id}"
         resources_folder = f"{static_folder}/resources"
         box_parameters_template_path = f"{resources_folder}/box_parameters_badge.csv"
-        box_parameters_user_path = f"{user_folder}/box_parameters_badge.csv"
+        box_parameters_student_path = f"{student_folder}/box_parameters_badge.csv"
         box_parameters = np.genfromtxt(box_parameters_template_path, delimiter=",", dtype=str, comments='##')
         animation_parameters_template_path = f"{resources_folder}/animation_parameters_badge.csv"
-        animation_parameters_user_path = f"{user_folder}/animation_parameters_badge.csv"
+        animation_parameters_student_path = f"{student_folder}/animation_parameters_badge.csv"
         animation_parameters = np.genfromtxt(animation_parameters_template_path, delimiter=",", dtype=str, comments='##')
-        for i, level in enumerate(self.boxes.values()):
+        for i, level in enumerate(self.progress.values()):
             if level == '00':
                 fill = "#000000"
                 stroke = "#FFFFFF"
@@ -184,15 +183,15 @@ class User:
                 stroke = "#FFFFFF"
             box_parameters[i, 6] = fill
             box_parameters[i, 7] = stroke
-        with open(box_parameters_user_path, 'w') as f:
+        with open(box_parameters_student_path, 'w') as f:
             csv.writer(f).writerows(box_parameters)
-        with open(animation_parameters_user_path, 'w') as f:
+        with open(animation_parameters_student_path, 'w') as f:
             csv.writer(f).writerows(animation_parameters)
         return
 
     def download_badge(self, static_folder):
-        user_folder = f"{data_path}/users/{self.id}"
-        svg_path = f"{user_folder}/badge_{self.id}.svg"
+        student_folder = f"{data_path}/students/{self.id}"
+        svg_path = f"{student_folder}/badge_{self.id}.svg"
         # Convert to PDF? blah blah
         return
 

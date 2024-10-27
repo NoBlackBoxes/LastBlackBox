@@ -13,9 +13,10 @@ You will need a .env file in the site root directory.
 ```bash
 FLASK_APP=app
 FLASK_ENV=development
-FLASK_SECRET_KEY='a0ee1e54722175257d4aeb8d2b43ea5729f785450f69ac4b413652ef2e97ff36'
-LIBS_PATH="/home/kampff/NoBlackBoxes/LastBlackBox/site/libs"
-BASE_PATH="/home/kampff/NoBlackBoxes/LastBlackBox/site"
+FLASK_SECRET_KEY=<secret key>
+REPO_ROOT="/home/kampff/NoBlackBoxes/LastBlackBox"
+PROTONMAIL_USERNAME=<username>
+PROTONMAIL_SMTP_TOKEN=<token>
 ```
 
 ### Secret Key

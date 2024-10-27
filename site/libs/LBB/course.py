@@ -6,118 +6,84 @@ LBB: Course Class
 """
 
 # Import libraries
-import os
 import glob
-import LBB.utilities as Utilities
+import json
 
 # Import modules
+import LBB.config as Config
 import LBB.session as Session
 
 # Course Class
 class Course:
-    def __init__(self, course_folder=None):
-        self.name = None            # course name
-        self.slug = None            # course slug (URL)
-        self.depth = None           # course depth
-        self.sessions = None        # course sessions
-        if course_folder:
-            self.load(course_folder)
+    def __init__(self, name=None, path=None):
+        self.name = None        # Course name
+        self.slug = None        # Course slug (URL)
+        self.depth = None       # Course depth
+        self.sessions = None    # Course sessions
+        if name:
+            self.build(name)    # Build course from session READMEs
+        elif path:
+            self.load(path)     # Load course from JSON file
         return
 
-    def load(self, folder):
-        # Extract course name and slug
-        folder_name = os.path.basename(folder)
-        if folder_name == "bootcamp":
-            self.name = "Bootcamp"
+    # Convert course object to dictionary
+    def to_dict(self):
+        dictionary = {
+            "name": self.name,
+            "slug": self.slug,
+            "depth": self.depth,
+            "sessions": [session.to_dict() for session in self.sessions]
+        }
+        return dictionary
+    
+    # Convert dictionary to course object
+    def from_dict(self, dictionary):
+        self.name = dictionary.get("name")
+        self.slug = dictionary.get("slug")
+        self.depth = dictionary.get("depth")
+        self.sessions = [Session.Session(dictionary=session_dictionary) for session_dictionary in dictionary.get("sessions", [])]
+        return
+    
+    # Build course object from session README files
+    def build(self, name):
+        # Set course name, slug, and depth
+        self.name = name
+        if self.name == "Bootcamp":
             self.slug = "bootcamp"
             self.depth = 1
-        elif folder_name == "buildabrain":
-            self.name = "Build a Brain"
+        elif self.name == "Build a Brain":
             self.slug = "buildabrain"
             self.depth = 1
         else:
-            print("Unavailable course selected!")
+            print("Unavailable course selected for build!")
             exit(-1)
+
+        # Set course folder
+        course_folder = f"{Config.course_root}/{self.slug}"
         
-        # Load sessions
+        # Load sessions from READMEs
         self.sessions = []
-        session_folders = sorted(glob.glob(f"{folder}/session_*"))
-        for session_folder in session_folders:
+        session_folders = sorted(glob.glob(f"{course_folder}/session_*"))
+        for session_index, session_folder in enumerate(session_folders):
             session_readme = session_folder + "/README.md"
-            session = Session.Session(session_readme)
+            with open(session_readme, encoding='utf8') as f:
+                text = f.readlines()
+            session = Session.Session()
+            session.parse(text)
+            session.index = session_index
             self.sessions.append(session)
         return
 
-    def render(self, template_folder):
-        # Render schedule
-        schedule_template_path = template_folder + f"/schedule.html"
-        self.render_schedule(schedule_template_path)
-        
-        # Render each session
-        for s, session in enumerate(self.sessions):
-            session_template_folder = template_folder + f"/session_{s}"
-            Utilities.clear_folder(session_template_folder)
-
-            # Render each box
-            for box in session.boxes:
-                box_template_folder = session_template_folder + f"/{box.name.lower()}"
-                Utilities.clear_folder(box_template_folder)
-
-                # Render each lesson
-                for lesson in box.lessons:
-                    lesson_url = lesson.name.lower().replace(' ', '-').replace('\'', '') + ".html"
-                    lesson_template_path = box_template_folder + f"/{lesson_url}"
-                    header = self.render_header(session, box, lesson)
-                    footer = self.render_footer(session, box, lesson)
-                    body = lesson.render()
-                    output = header + body + footer
-                    with open(lesson_template_path, "w") as file:
-                        file.write(output)
-                    print(f"Rendered Template: {self.slug}/session_{s}/{box.name.lower()}/{lesson_url}")
+    # Load course object from JSON
+    def load(self, path):
+        with open(path, "r") as file:
+            self.from_dict(json.load(file))
         return
 
-    def render_header(self, session, box, lesson):
-        header = []
-        header.append("<!DOCTYPE html>\n")
-        header.append("<head>\n")
-        header.append("{% include 'pwa.html' %}\n")
-        header.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"{{url_for('static', filename='styles/lesson.css')}}\"/>\n")
-        header.append("</head>\n\n")
-        header.append("<html>\n<body>\n\n")
-        header.append(f"<title>LBB : {self.name}</title>\n")
-        header.append("<div id=\"content\">")
-        header.append(f"<h3 id=\"course_heading\">{self.name} : {session.name} : {box.name} : <span id=\"lesson_name\">{lesson.name}</span></h3>\n")
-        header.append(f"<hr>\n")
-        return "".join(header)
-    
-    def render_footer(self, session, box, lesson):
-        footer = []
-        footer.append("<hr>\n")
-        footer.append("</div>")
-        footer.append("</body>\n</html>")
-        return "".join(footer)
-
-    def render_schedule(self, schedule_template_path):
-        header = []
-        header.append("<!DOCTYPE html>\n")
-        header.append("<head>\n")
-        header.append("{% include 'pwa.html' %}\n")
-        header.append("<link rel=\"stylesheet\" type=\"text/css\" href=\"{{url_for('static', filename='styles/lesson.css')}}\"/>\n")
-        header.append("</head>\n\n")
-        header.append("<html>\n<body>\n\n")
-        header.append(f"<title>LBB : {self.name}</title>\n")
-        header.append(f"<h3 id=\"course_heading\">{self.name}</h3>\n")
-        header.append(f"<hr>\n")
-        header = "".join(header)
-        body = "<a href=\"/buildabrain/session_0/atoms/atomic-structure.html\">Lesson Example</a>\n"
-        footer = []
-        footer.append("<hr>\n")
-        footer.append("</body>\n</html>")
-        footer = "".join(footer)
-        output = header + body + footer
-        with open(schedule_template_path, "w") as file:
-            file.write(output)
-        print(f"Rendered Template: {self.slug}/schedule.html")
+    # Store course object in JSON file
+    def store(self, path):
+        with open(path, "w") as file:
+            json.dump(self.to_dict(), file, indent=4)
         return
 
 #FIN

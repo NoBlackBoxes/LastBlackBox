@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Scripts: Create User
+Scripts: Create Student
 
 @author: kampff
 """
@@ -20,12 +20,14 @@ sys.path.append(libs_path)
 
 # Import libraries
 from werkzeug.security import generate_password_hash
+import LBB.utilities as Utilities
 
 # Import modules
-import LBB.user as User
+import LBB.course as Course
+import LBB.student as Student
 
-# Boxes status dictonary
-boxes = {
+# Progress dictionary
+progress = {
     'Atoms'         : '01',
     'Electrons'     : '00',
     'Magnets'       : '00',
@@ -53,23 +55,24 @@ boxes = {
     'Audio'         : '00',
     'Vision'        : '00',
     'Learning'      : '00',
-    'Intelligence'  : '11'
+    'Intelligence'  : '10'
 }
 
-# Define User
-user = User.User()
-user.id = "000011"
-user.password_hash = generate_password_hash("1234")
-user.name = "Jimmy Voight"
-user.nickname = "Jimmy"
-user.email = "info@voight-kampff.tech"
-user.instructor = False
-user.admin = False
-user.boxes = boxes
-user.current_course = 'buildabrain'
-user.current_session = 'session_1'
+# Define student
+student = Student.Student()
+student.id = "000011"
+student.password_hash = generate_password_hash("1234")
+student.name = "Jimmy Voight"
+student.nickname = "Jimmy"
+student.email = "info@voight-kampff.tech"
+student.progress = progress
+student.course = Course.Course(name="buildabrain")
 
-# Store User
-user.store()
+# Create student data folder
+student_folder = data_path + f"/students/{student.id}"
+Utilities.clear_folder(student_folder)
+
+# Store student
+student.store()
 
 #FIN

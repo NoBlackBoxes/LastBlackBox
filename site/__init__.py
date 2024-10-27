@@ -4,20 +4,9 @@ LBB Web Application
 
 @author: kampff
 """
-#----------------------------------------------------------
-# Load environment file and variables
-import os
-from dotenv import load_dotenv
-load_dotenv()
-libs_path = os.getenv('LIBS_PATH')
-base_path = os.getenv('BASE_PATH')
-
-# Set library paths
-import sys
-sys.path.append(libs_path)
-#----------------------------------------------------------
 
 # Import libraries
+import os
 from flask import Flask, render_template, send_file, request, redirect, session
 from flask_login import LoginManager, current_user, login_user, logout_user, login_required
 from flask_mail import Mail, Message
@@ -27,35 +16,36 @@ import secrets
 import LBB.utilities as Utilities
 
 # Import modules
-import LBB.user as User
+import LBB.config as Config
+import LBB.student as Student
 
 # Define constants
-UPLOAD_FOLDER = base_path + '/_tmp'
+UPLOAD_FOLDER = Config.site_root + '/_tmp'
 
 # Create application
 app = Flask(__name__)
 
 # Configure application
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-app.config['SECRET_KEY'] = os.getenv('FLASK_SECRET_KEY')
+app.config['SECRET_KEY'] = Config.flask_secret_key
 app.config['MAIL_SERVER'] = 'smtp.protonmail.ch'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
-app.config['MAIL_USERNAME'] = os.getenv('PROTONMAIL_USERNAME')
-app.config['MAIL_PASSWORD'] = os.getenv('PROTONMAIL_SMTP_TOKEN')
-app.config['MAIL_DEFAULT_SENDER'] = 'info@voight-kampff.tech'
+app.config['MAIL_USERNAME'] = Config.protonmail_username
+app.config['MAIL_PASSWORD'] = Config.protonmail_smtp_token
+app.config['MAIL_DEFAULT_SENDER'] = Config.protonmail_username
 
 # Create mail sender
 mail = Mail(app)
 
 # Create login manager
 login_manager = LoginManager(app)
-@login_manager.user_loader
-def load_user(user_id):
-    user = User.User(user_id)
-    if user.loaded:
-        return user
+@login_manager.student_loader
+def load_student(student_id):
+    student = Student.Student(student_id)
+    if student.loaded:
+        return student
     return None
 
 ###############################################################################
@@ -81,18 +71,18 @@ def root():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
-        return redirect('user')
+        return redirect('student')
     if request.method == 'POST':
-        user_id = request.form['user_id']
-        user_password = request.form['user_password']
-        if (len(user_id) != 6):
-            return render_template('login.html', error="Please enter a six digit LBB user ID")
-        user = User.User(user_id)
-        if not user.loaded:
-            return render_template('login.html', error="LBB user ID not found")
-        if user.authenticate(user_password):
-            login_user(user)
-            return redirect('user')
+        student_id = request.form['student_id']
+        student_password = request.form['student_password']
+        if (len(student_id) != 6):
+            return render_template('login.html', error="Please enter a six digit LBB student ID")
+        student = Student.Student(student_id)
+        if not student.loaded:
+            return render_template('login.html', error="LBB student ID not found")
+        if student.authenticate(student_password):
+            login_user(student)
+            return redirect('student')
         else:
             return render_template('login.html', error="Incorrect password")
     return render_template('login.html')
@@ -104,14 +94,14 @@ def logout():
     logout_user()
     return redirect('login')
 
-# Serve User
-@app.route('/user')
+# Serve Student
+@app.route('/student')
 @login_required
-def user():
+def student():
     current_user.update_progress()
     current_user.generate_badge_parameters(app.static_folder)
     badge = current_user.generate_badge()
-    return render_template('user.html', user=current_user, badge=badge)
+    return render_template('student.html', student=current_user, badge=badge)
 
 # Serve Update
 @app.route('/update', methods=['GET', 'POST'])
@@ -121,44 +111,44 @@ def update():
     current_user.generate_badge_parameters(app.static_folder)
     badge = current_user.generate_badge()
     if request.method == 'POST':
-        user_name = request.form['user_name']
-        user_nickname = request.form['user_nickname']
-        user_email = request.form['user_email']
-        user_password = request.form['user_password']
-        user_password_confirmation = request.form['user_password_confirmation']
-        if user_name != '':
-            current_user.name = user_name
-        if user_nickname != '':
-            current_user.nickname = user_nickname
-        if user_email != '':
-            current_user.email = user_email
-        if user_password != '':
-            if user_password != user_password_confirmation:
-                return render_template('update.html', user=current_user, badge=badge, error="Password mismatch")
+        student_name = request.form['student_name']
+        student_nickname = request.form['student_nickname']
+        student_email = request.form['student_email']
+        student_password = request.form['student_password']
+        student_password_confirmation = request.form['student_password_confirmation']
+        if student_name != '':
+            current_user.name = student_name
+        if student_nickname != '':
+            current_user.nickname = student_nickname
+        if student_email != '':
+            current_user.email = student_email
+        if student_password != '':
+            if student_password != student_password_confirmation:
+                return render_template('update.html', student=current_user, badge=badge, error="Password mismatch")
             else:
-                current_user.password_hash = generate_password_hash(user_password)
+                current_user.password_hash = generate_password_hash(student_password)
         current_user.store()
-        return redirect('user')
-    return render_template('update.html', user=current_user, badge=badge)
+        return redirect('student')
+    return render_template('update.html', student=current_user, badge=badge)
 
 # Serve Recovery
 @app.route('/recovery', methods=['GET', 'POST'])
 def recovery():
     if request.method == 'POST':
-        user_email = request.form['user_email']
-        if not Utilities.is_valid_email(user_email):
+        student_email = request.form['student_email']
+        if not Utilities.is_valid_email(student_email):
             return render_template('recovery.html', error="Please enter a valid email address.")
-        user = User.User()
-        user = user.find(user_email)
-        if user != None:
-            user_password = secrets.token_urlsafe(11)
-            user.password_hash = generate_password_hash(user_password)
-            user.store()
-            msg = Message('LBB Login Details', recipients=[user_email], body=f"Your LBB login recovery details:\n User ID: {user.id}\n Temporary Password: {user_password}\n\nHave a nice day!\nLBB Team")
+        student = Student.Student()
+        student = student.find(student_email)
+        if student != None:
+            student_password = secrets.token_urlsafe(11)
+            student.password_hash = generate_password_hash(student_password)
+            student.store()
+            msg = Message('LBB Login Details', recipients=[student_email], body=f"Your LBB login recovery details:\n Student ID: {student.id}\n Temporary Password: {student_password}\n\nHave a nice day!\nLBB Team")
             mail.send(msg)
-            return render_template('sent.html', message=f"Recovery details sent to {user_email}. Redirecting to login page."), {"Refresh": "5; url=login"}
+            return render_template('sent.html', message=f"Recovery details sent to {student_email}. Redirecting to login page."), {"Refresh": "5; url=login"}
         else:
-            return render_template('recovery.html', error="This email was not registered by any LBB users!")
+            return render_template('recovery.html', error="This email was not registered by any LBB students!")
     return render_template('recovery.html')
 
 # Serve Instructor
@@ -167,36 +157,36 @@ def recovery():
 def instructor():
     return render_template('instructor.html')
 
-# Serve Course Schedule
-@app.route('/<course>/schedule.html', methods=['GET'])
+# Serve Course
+@app.route('/<course>', methods=['GET'])
 @login_required
 def schedule(course):
-    user_session_folder_path = f"{app.config['UPLOAD_FOLDER']}/users/{current_user.id}/{course}/{session}"
-    task_status = Utilities.retrieve_task_status(user_session_folder_path)
+    student_session_folder_path = f"{app.config['UPLOAD_FOLDER']}/students/{current_user.id}/{course}/{session}"
+    task_status = Utilities.retrieve_task_status(student_session_folder_path)
     if request.method == 'GET':
-        route_url = f"courses/{course}/schedule.html"
+        route_url = f"courses/{course}/course.html"
     else:
-        route_url = f"courses/{course}/schedule.html"
+        route_url = f"courses/{course}/course.html"
     return render_template(route_url, task_status=task_status)
 
 # Serve Course Lesson
 @app.route('/<course>/<session>/<box>/<lesson>', methods=['GET', 'POST'])
 @login_required
 def session(course, session, box, lesson):
-    user_session_folder_path = f"{app.config['UPLOAD_FOLDER']}/users/{current_user.id}/{course}/{session}"
-    task_status = Utilities.retrieve_task_status(user_session_folder_path)
+    student_session_folder_path = f"{app.config['UPLOAD_FOLDER']}/students/{current_user.id}/{course}/{session}"
+    task_status = Utilities.retrieve_task_status(student_session_folder_path)
     if request.method == 'GET':
         route_url = f"courses/{course}/{session}/{box}/{lesson}"
     elif request.method == 'POST':
         form = request.form
         task_name = request.form['task_name']
-        Utilities.archive_task_submission(user_session_folder_path, task_name)
+        Utilities.archive_task_submission(student_session_folder_path, task_name)
 
         # Store new submission(s)
         for key in form.keys():
             for value in form.getlist(key):
                 print(key,":",value)
-        task_file_path = f"{user_session_folder_path}/{task_name}.txt"
+        task_file_path = f"{student_session_folder_path}/{task_name}.txt"
         f = open(task_file_path, 'w')
         f.write("yay")
         f.close()
@@ -211,7 +201,7 @@ def session(course, session, box, lesson):
         ## Is there a file to upload?
         #if 'file' not in request.files:
         #    file = request.files['file']
-        #    ## if user does not select file, browser also
+        #    ## if student does not select file, browser also
         #    ## submit an empty part without filename
         #    if file.filename == '':
         #        flash('No selected file')

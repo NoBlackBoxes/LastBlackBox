@@ -5,21 +5,40 @@ LBB: Task Class
 @author: kampff
 """
 
-# Import libraries
-
 # Import modules
 import LBB.input as Input
 
 # Task Class
 class Task:
-    def __init__(self, text=None):
-        self.name = None            # task name
-        self.descriptions = None    # task descriptions
-        self.inputs = None          # task inputs
+    def __init__(self, text=None, dictionary=None):
+        self.index = None               # Step index
+        self.type = "task"              # Step type
+        self.name = None                # Task name
+        self.descriptions = None        # Task descriptions
+        self.inputs = None              # Task inputs
         if text:
-            self.parse(text)
+            self.parse(text)            # Parse task from README text
+        elif dictionary:
+            self.from_dict(dictionary)  # Load task from dictionary
         return
     
+    # Convert task object to dictionary
+    def to_dict(self):
+        dictionary = {}
+        dictionary.update({"index": self.index})
+        dictionary.update({"type": self.type})
+        dictionary.update({"name": "TASK"})
+        #dictionary.update({"descriptions": self.descriptions})
+        return dictionary
+
+    # Convert dictionary to task object
+    def from_dict(self, dictionary):
+        self.index = dictionary.get("index")
+        self.type = dictionary.get("type")
+        self.html = dictionary.get("name")
+        return
+    
+    # Parse task string
     def parse(self, text):
         semicolon_split = text.split(':')
         self.name = semicolon_split[0].split('(')[-1][:-1]

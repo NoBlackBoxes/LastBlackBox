@@ -61,8 +61,7 @@ course_names = ["buildabrain"]
 # Load and render each course
 for course_name in course_names:
     # Load Course
-    course_folder = course_root + "/" + course_name
-    course = Course.Course(course_folder)
+    course = Course.Course(course_name)
 
     # Render Course
     course_template_folder = courses_templates_folder + "/" + course_name

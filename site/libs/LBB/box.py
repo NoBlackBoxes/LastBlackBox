@@ -5,21 +5,41 @@ LBB: Box Class
 @author: kampff
 """
 
-# Import libraries
-
 # Import modules
 import LBB.lesson as Lesson
 
 # Box Class
 class Box:
-    def __init__(self, text=None):
-        self.name = None            # box name
-        self.description = None     # box description
-        self.lessons = None         # box lessons
+    def __init__(self, text=None, dictionary=None):
+        self.index = None               # Box index
+        self.name = None                # Box name
+        self.description = None         # Box description
+        self.lessons = None             # Box lessons
         if text:
-            self.parse(text)
+            self.parse(text)            # Parse box from README text
+        elif dictionary:
+            self.from_dict(dictionary)  # Load box from dictionary
         return
 
+    # Convert box object to dictionary
+    def to_dict(self):
+        dictionary = {
+            "index": self.index,
+            "name": self.name,
+            "description": self.description,
+            "lessons": [lesson.to_dict() for lesson in self.lessons]
+        }
+        return dictionary
+
+    # Convert dictionary to box object
+    def from_dict(self, dictionary):
+        self.index = dictionary.get("index")
+        self.name = dictionary.get("name")
+        self.description = dictionary.get("description")
+        self.lessons = [Lesson.Lesson(dictionary=lesson_dictionary) for lesson_dictionary in dictionary.get("lessons", [])]
+        return
+    
+    # Parse box string
     def parse(self, text):
         # Set line counter
         line_count = 0
@@ -39,6 +59,7 @@ class Box:
 
         # Extract lessons
         self.lessons = []
+        lesson_count = 0
         while line_count < max_count:
             lesson_text = []
             lesson_text.append(text[line_count])
@@ -50,7 +71,10 @@ class Box:
                 if line_count >= max_count:
                     break
             lesson = Lesson.Lesson(lesson_text)
+            lesson.index = lesson_count
             self.lessons.append(lesson)
+            lesson_count += 1
+        return
 
     def render(self):
         output = ''

@@ -11,20 +11,37 @@ LBB: Video Class
 
 # Video Class
 class Video:
-    def __init__(self, text=None):
-        self.name = None        # name
-        self.path = None        # path/url
-        self.id = None          # id
+    def __init__(self, text=None, dictionary=None):
+        self.name = None                # Video name
+        self.url = None                 # Video url
+        self.id = None                  # Video id
         if text:
-            self.parse(text)
+            self.parse(text)            # Parse video from README text
+        elif dictionary:
+            self.from_dict(dictionary)  # Load lesson from dictionary
         return
     
+    # Convert video object to dictionary
+    def to_dict(self):
+        dictionary = {}
+        dictionary.update({"name": self.name})
+        dictionary.update({"url": self.url})
+        dictionary.update({"id": self.id})
+        return dictionary
+
+    # Convert dictionary to video object
+    def from_dict(self, dictionary):
+        self.name = dictionary.get("name")
+        self.url = dictionary.get("url")
+        self.id = dictionary.get("id")
+        return
+
+    # Parse video string
     def parse(self, text):
         split_string = text.split('[')[1].split(']')
         self.name = split_string[0]
-        self.path = split_string[1][1:-1]
-        self.id = self.path.split('/')[-1]
-        print(split_string)
+        self.url = split_string[1][1:-1]
+        self.id = self.url.split('/')[-1]
         return
 
     def render(self):
