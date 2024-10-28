@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<head>
+    {% include 'pwa.html' %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/lesson.css')}}" />
+</head>
+
+<html>
+
+<body>
+    <title>LBB : {{course.name}}</title>
+    <div id="layout" style="background-image: url({{url_for('static', filename='images/layout/layout.svg')}});"></div>
+    <div id="content">
+        <h3 id="course_heading">{{course.name}} : {{session.name}} : {{box.name}} : <span id="lesson_name">{{lesson.name}}</span></h3>
+        <hr>
+        <span>Watch this video</span>
+        <p align="center">
+            <iframe id="video_player" src="https://player.vimeo.com/video/{{lesson.video.id}}?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title={{lesson.video.name}}></iframe>
+        </p>
+        {% for step in lesson.steps %}
+            {{ step.html | safe }}
+        {% endfor %}
+
+    </div>
+</body>
+
+</html>

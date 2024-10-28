@@ -16,6 +16,7 @@ class Session:
     def __init__(self, text=None, dictionary=None):
         self.index = None               # Session index
         self.name = None                # Session name
+        self.slug = None                # Session slug (URL)
         self.description = None         # Session description
         self.boxes = None               # Session boxes
         self.project = None             # Session project
@@ -30,6 +31,7 @@ class Session:
         dictionary = {
             "index": self.index,
             "name": self.name,
+            "slug": self.slug,
             "description": self.description,
             "boxes": [box.to_dict() for box in self.boxes],
             "project": self.project.to_dict()
@@ -40,6 +42,7 @@ class Session:
     def from_dict(self, dictionary):
         self.index = dictionary.get("index")
         self.name = dictionary.get("name")
+        self.slug = dictionary.get("slug")
         self.description = dictionary.get("description")
         self.boxes = [Box.Box(dictionary=box_dictionary) for box_dictionary in dictionary.get("boxes", [])]
         self.project = Project.Project(dictionary=dictionary.get("project"))
@@ -51,9 +54,10 @@ class Session:
         line_count = 0
         max_count = len(text)
 
-        # Extract name
+        # Extract name  and slug
         title = text[line_count][2:-1]
         self.name = title.split('-')[1][1:]
+        self.slug = self.name.lower().replace(' ', '-')
         line_count += 1
 
         # Extract description

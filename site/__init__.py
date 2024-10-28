@@ -147,68 +147,65 @@ def recovery():
             return render_template('recovery.html', error="This email was not registered by any LBB students!")
     return render_template('recovery.html')
 
-# Serve Instructor
-@app.route('/instructor')
+# Serve Course Schedule
+@app.route('/<course_slug>', methods=['GET'])
 @login_required
-def instructor():
-    return render_template('instructor.html')
-
-# Serve Course
-@app.route('/<course>', methods=['GET'])
-@login_required
-def schedule(course):
-    student_session_folder_path = f"{app.config['UPLOAD_FOLDER']}/students/{current_user.id}/{course}/{session}"
-    task_status = Utilities.retrieve_task_status(student_session_folder_path)
+def schedule(course_slug):
+    #student_session_folder_path = f"{app.config['UPLOAD_FOLDER']}/students/{current_user.id}/{course}/{session}"
     if request.method == 'GET':
-        route_url = f"courses/{course}/course.html"
+        route_url = "course.html"
     else:
-        route_url = f"courses/{course}/course.html"
-    return render_template(route_url, task_status=task_status)
+        route_url = "course.html"
+    return render_template(route_url, student=current_user, course=current_user.course)
 
 # Serve Course Lesson
-@app.route('/<course>/<session>/<box>/<lesson>', methods=['GET', 'POST'])
+@app.route('/<course_slug>/<session_slug>/<box_slug>/<lesson_slug>', methods=['GET', 'POST'])
 @login_required
-def session(course, session, box, lesson):
-    student_session_folder_path = f"{app.config['UPLOAD_FOLDER']}/students/{current_user.id}/{course}/{session}"
-    task_status = Utilities.retrieve_task_status(student_session_folder_path)
+def session(course_slug, session_slug, box_slug, lesson_slug):
+    #student_session_folder_path = f"{app.config['UPLOAD_FOLDER']}/students/{current_user.id}/{course}/{session}"
+    #task_status = Utilities.retrieve_task_status(student_session_folder_path)
+    course = current_user.course
+    session = next((session for session in course.sessions if session.slug == session_slug), None)
+    box = next((box for box in session.boxes if box.slug == box_slug), None)
+    lesson = next((lesson for lesson in box.lessons if lesson.slug == lesson_slug), None)
     if request.method == 'GET':
-        route_url = f"courses/{course}/{session}/{box}/{lesson}"
-    elif request.method == 'POST':
-        form = request.form
-        task_name = request.form['task_name']
-        Utilities.archive_task_submission(student_session_folder_path, task_name)
-
-        # Store new submission(s)
-        for key in form.keys():
-            for value in form.getlist(key):
-                print(key,":",value)
-        task_file_path = f"{student_session_folder_path}/{task_name}.txt"
-        f = open(task_file_path, 'w')
-        f.write("yay")
-        f.close()
-        route_url = f"courses/{course}/{session}.html"
-        task_status.update({task_name : 1})
-        print(task_status)
-        ## Validate form submission
-        #print(form.keys())
-        #for key in form.keys():
-        #    for value in form.getlist(key):
-        #        print(key,":",value)
-        ## Is there a file to upload?
-        #if 'file' not in request.files:
-        #    file = request.files['file']
-        #    ## if student does not select file, browser also
-        #    ## submit an empty part without filename
-        #    if file.filename == '':
-        #        flash('No selected file')
-        #        return redirect(request.url)
-        #    if file and is_allowed_file(file.filename):
-        #        filename = secure_filename(file.filename)
-        #        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-        #        route_url = f"{box}/{topic}.html"
+        route_url = "lesson.html"
+#    elif request.method == 'POST':
+#        form = request.form
+#        task_name = request.form['task_name']
+#        Utilities.archive_task_submission(student_session_folder_path, task_name)
+#
+#        # Store new submission(s)
+#        for key in form.keys():
+#            for value in form.getlist(key):
+#                print(key,":",value)
+#        task_file_path = f"{student_session_folder_path}/{task_name}.txt"
+#        f = open(task_file_path, 'w')
+#        f.write("yay")
+#        f.close()
+#        route_url = "lesson.html"
+#        #task_status.update({task_name : 1})
+#        #print(task_status)
+#        ## Validate form submission
+#        #print(form.keys())
+#        #for key in form.keys():
+#        #    for value in form.getlist(key):
+#        #        print(key,":",value)
+#        ## Is there a file to upload?
+#        #if 'file' not in request.files:
+#        #    file = request.files['file']
+#        #    ## if student does not select file, browser also
+#        #    ## submit an empty part without filename
+#        #    if file.filename == '':
+#        #        flash('No selected file')
+#        #        return redirect(request.url)
+#        #    if file and is_allowed_file(file.filename):
+#        #        filename = secure_filename(file.filename)
+#        #        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+#        #        route_url = f"{box}/{topic}.html"
     else:
-        route_url = f"{box}/{topic}.html"
-    return render_template(route_url, task_status=task_status)
+        route_url = "lesson.html"
+    return render_template(route_url, student=current_user, course=course, session=session, box=box, lesson=lesson)
 
 ###############################################################################
 # Run Application

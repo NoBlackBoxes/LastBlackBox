@@ -16,6 +16,7 @@ class Lesson:
     def __init__(self, text=None, dictionary=None):
         self.index = None               # Lesson index
         self.name = None                # Lesson name
+        self.slug = None                # Lesson slug
         self.description = None         # Lesson description
         self.video = None               # Lesson video
         self.steps = None               # Lesson steps
@@ -30,6 +31,7 @@ class Lesson:
         dictionary = {
             "index": self.index,
             "name": self.name,
+            "slug": self.slug,
             "description": self.description,
             "video": self.video.to_dict(),
             "steps": [step.to_dict() for step in self.steps]
@@ -40,6 +42,7 @@ class Lesson:
     def from_dict(self, dictionary):
         self.index = dictionary.get("index")
         self.name = dictionary.get("name")
+        self.slug = dictionary.get("slug")
         self.description = dictionary.get("description")
         self.video = Video.Video(dictionary=dictionary.get("video"))
         self.steps = []
@@ -64,6 +67,7 @@ class Lesson:
 
          # Extract name
         self.name = text[line_count].split('[')[1].split(']')[0]
+        self.slug = self.name.lower().replace(' ', '-')
 
         # Extract video
         self.video = Video.Video(text[line_count])

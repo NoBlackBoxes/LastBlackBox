@@ -5,16 +5,33 @@ body, html {
     font-family: Arial;
 }
 
+#layout {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0,0,0,1.0);
+    background-attachment:fixed;
+    filter: brightness(10%);
+}
+
 #content {
     position: absolute; 
     top: 20%;
     left: 50%;
-    transform: translate(-50%, -20%);
+    width: 60%;
+    transform: translate(-50%, -10%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     filter: brightness(100%);
+    background-color: rgba(0,0,0,1.0);
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
 }
 
 #link {
@@ -31,6 +48,27 @@ body, html {
 #lesson_name {
     color: white;
     text-align: center;
+    font-size: 42px;
+    margin-bottom: 0px;
+}
+
+#session_heading {
+    color: rgb(255, 255, 255);
+    text-align: left;
+    font-size: 32px;
+    margin-bottom: 0px;
+}
+
+#box_heading {
+    color: rgb(165, 165, 165);
+    text-align: left;
+    font-size: 22px;
+    margin-bottom: 0px;
+}
+
+#lesson_heading {
+    color: rgb(255, 255, 0);
+    text-align: left;
     margin-bottom: 0px;
 }
 
@@ -64,7 +102,7 @@ body, html {
 }
 
 #video_player {
-    border-width: 7px;
+    border-width: 3px;
     border-style: solid;
     border-color: rgb(141, 141, 141);
     border-radius: 7px;

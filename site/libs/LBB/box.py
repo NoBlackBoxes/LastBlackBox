@@ -13,6 +13,7 @@ class Box:
     def __init__(self, text=None, dictionary=None):
         self.index = None               # Box index
         self.name = None                # Box name
+        self.slug = None                # Box slug (URL)
         self.description = None         # Box description
         self.lessons = None             # Box lessons
         if text:
@@ -26,6 +27,7 @@ class Box:
         dictionary = {
             "index": self.index,
             "name": self.name,
+            "slug": self.slug,
             "description": self.description,
             "lessons": [lesson.to_dict() for lesson in self.lessons]
         }
@@ -35,6 +37,7 @@ class Box:
     def from_dict(self, dictionary):
         self.index = dictionary.get("index")
         self.name = dictionary.get("name")
+        self.slug = dictionary.get("slug")
         self.description = dictionary.get("description")
         self.lessons = [Lesson.Lesson(dictionary=lesson_dictionary) for lesson_dictionary in dictionary.get("lessons", [])]
         return
@@ -47,6 +50,7 @@ class Box:
 
          # Extract name
         self.name = text[0][3:]
+        self.slug = self.name.lower().replace(' ', '-')
         line_count += 1
 
         # Extract description

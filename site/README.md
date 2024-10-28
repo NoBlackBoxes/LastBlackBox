@@ -41,7 +41,7 @@ mkdir -p _tmp/users
 Things to complete
 - *Course and Site Model Revision*
   - Switch to template use from Python/JSON object
-  - Task inputs? SHould use WTF (forms)
+  - Task inputs? Should use WTF (forms)
 - Download badge (certificate?)
 - Send emails asynchronously
 - Standardized task submissions (with validation and feedback)
