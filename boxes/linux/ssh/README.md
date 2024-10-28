@@ -64,8 +64,8 @@ To make this persistent (to reconnect the NB3 to the VPS server's tunnel if it e
 # Install autossh (NB3)
 sudo apt-get install autossh
 
-# Run autossh (-f option runs autossh in background)
-autossh -f -M 0 -o ServerAliveInterval=30 -o ServerAliveCountMax=3 -nNTv -R 0.0.0.0:1122:localhost:22 <your VPS IP address>
+# Run autossh (-f option runs autossh in background), include unused monitoring port
+autossh -f -M 33344 -o ServerAliveInterval=30 -o ServerAliveCountMax=3 -nNTv -R 0.0.0.0:1122:localhost:22 <your VPS IP address>
 ```
 
 > Note: you can add more tunnel ports with additional -R options(e.g. -R 0.0.0.0:1234:localhost:80)
@@ -90,7 +90,7 @@ Type=simple
 Restart=on-failure
 RestartSec=3
 Environment="AUTOSSH_GATETIME=0"
-ExecStart=/usr/bin/autossh -M 0 -o ServerAliveInterval=30 -o ServerAliveCountMax=3 -nNTv -R 0.0.0.0:1122:localhost:22 -R 0.0.0.0:1234:localhost:1234 18.135.57.163
+ExecStart=/usr/bin/autossh -M 33344 -o ServerAliveInterval=30 -o ServerAliveCountMax=3 -nNTv -R 0.0.0.0:1122:localhost:22 -R 0.0.0.0:1234:localhost:1234 <your-VPS-IP or Domain>
 
 [Install]
 WantedBy=multi-user.target
