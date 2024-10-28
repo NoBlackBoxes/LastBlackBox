@@ -75,8 +75,8 @@ Video content description (single line of text).
 ### Watch this video: [Video Title](video url)
 Video content description (single line of text).
 - [ ] **Task**: Task description.
-  > **Expected result**: The expected results of completing the task are listed here. You can use images and links.
-  - Other task help: hints, warnings, etc.
+> **Expected result**: The expected results of completing the task are listed here. You can use images and links.
+- Other task help: hints, warnings, etc.
 
 ## Box #2 Name
 Can be multiple lines, but just text.
@@ -84,18 +84,18 @@ Can be multiple lines, but just text.
 ###  Watch this video: [Video Name](video url)
 Video content description (single line of text).
 - **Task**: Task description.
-  > **Expected result**: The expected results of completing the task are listed here. You can use images and links.
-  - Other task help: hints, warnings, etc.
+> **Expected result**: The expected results of completing the task are listed here. You can use images and links.
+- Other task help: hints, warnings, etc.
 
 - **Task**: Task description.
-  > **Expected result**: The expected results of completing the task are listed here. You can use images and links.
-  - Other task help: hints, warnings, etc.
+> **Expected result**: The expected results of completing the task are listed here. You can use images and links.
+- Other task help: hints, warnings, etc.
 
 ###  Watch this video: [Video Name](video url)
 Video content description (single line of text).
 - **Task**: Task description.
-  > **Expected result**: The expected results of completing the task are listed here. You can use images and links.
-  - Other task help: hints, warnings, etc.
+> **Expected result**: The expected results of completing the task are listed here. You can use images and links.
+- Other task help: hints, warnings, etc.
 
 ---
 

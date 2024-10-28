@@ -51,8 +51,8 @@ All materials are not equally good a letting their outer orbital electrons freel
 To help you start measuring and manipulating electricity, we will first assemble a "prototyping platform", which also happens to be the **body** of your robot (NB3).
 > [Concepts and Connections]()
 - [ ] **TASK**: Assemble the robot body (prototyping base board).
-  > **Expected Result**: Your NB3 you now look like this: <p align="center"><img src="../../_designs/NB3/NB3_render.png" alt="NB3 Render" width="300" height="300"></p> Of course, your breadboards will be different colors...and you should have some rubber feet on the back.
-  - If you are curious how the *NB3 Body* printed circuit board (PCB) was designed, then you can find the KiCAD files here: [NB3 Body PCB](../../../boxes/electrons/NB3_body). You can also watch this short introduction to PCB design with KiCAD here: [NB3-Designing PCBs with KiCAD](https://vimeo.com/??????).
+> **Expected Result**: Your NB3 you now look like this: <p align="center"><img src="../../_designs/NB3/NB3_render.png" alt="NB3 Render" width="300" height="300"></p> Of course, your breadboards will be different colors...and you should have some rubber feet on the back.
+- If you are curious how the *NB3 Body* printed circuit board (PCB) was designed, then you can find the KiCAD files here: [NB3 Body PCB](../../../boxes/electrons/NB3_body). You can also watch this short introduction to PCB design with KiCAD here: [NB3-Designing PCBs with KiCAD](https://vimeo.com/??????).
 
 ### Watch this video: [NB3-Building Circuits](https://vimeo.com/??????)
 With a voltage source (battery) and resistors, then we can start building "circuits" - complete paths of conduction that allow current to flow from a location with *less* electrons **(+)** to a location with *more* electrons **(-)**.
@@ -61,22 +61,22 @@ With a voltage source (battery) and resistors, then we can start building "circu
 > ***Note***: This is *weird*. Electrons are the things moving. Shouldn't we say that current "flows" from the **(-)** area to the **(+)** area? Unfortunately, current was described before anyone knew about electrons and we are stuck with the following awkward convention: **Current is defined to flow from (+) to (-)**...even though we now know that electrons are moving the opposite direction.
 
 - [ ] **TASK**: Build the simple circuit below and measure the current flowing when you connect the battery pack.
-  > **Expected Result**: Not too much current...and do not break your meter.
-  - ***Warning!***: Measuring current with a multimeter is ***tricky***. You can only get an accurate measurement if ***ALL*** of the current in the circuit is forced to flow through your multimeter. This means that when measuring current, your multimeter must be in *series* with the rest of the circuit. (As opposed to measuring voltage, when your multimeter is placed "parallel" to the circuit.)
-  - If you are new to measuring current with a multimeter, then I recommend you watch this video: [NB3-Measuring Current](https://vimeo.com/??????).
+> **Expected Result**: Not too much current...and do not break your meter.
+- ***Warning!***: Measuring current with a multimeter is ***tricky***. You can only get an accurate measurement if ***ALL*** of the current in the circuit is forced to flow through your multimeter. This means that when measuring current, your multimeter must be in *series* with the rest of the circuit. (As opposed to measuring voltage, when your multimeter is placed "parallel" to the circuit.)
+- If you are new to measuring current with a multimeter, then I recommend you watch this video: [NB3-Measuring Current](https://vimeo.com/??????).
 
 ### Watch this video: [Ohm's Law](https://vimeo.com/1000768334)
 > [Concepts and Connections]()
 - [ ] **TASK**: Look at your simple circuit that you built in the previous task. You know the voltage from the batteries (V) and the resistance of the resistor (R). You have measured the current flowing (I). Does Ohm's Law hold? What if you use a different resistor?
-  > **Expected Result**: A linear relationship.
+> **Expected Result**: A linear relationship.
 
 ### Watch this video: [Voltage Dividers](https://vimeo.com/1000782478)
 > [Concepts and Connections]()
 - [ ] **TASK**: Build a voltage divider using two resistors of the same value? Measure the intermediate voltage (between the resistors).
-  > **Expected Result**: With equal size resistors, the intermediate voltage should be half of the supply voltage.
+> **Expected Result**: With equal size resistors, the intermediate voltage should be half of the supply voltage.
 - [ ] **TASK**: Build a voltage divider using a variable resistor (potentiometer). Measure the intermediate voltage. What happens when you change the position of the internal contact (by turning the screw)?
-  > **Expected Result**: The intermediate voltage should continuously vary as you adjust the potentiometer.
-  - A video guide to completing these tasks can be found here: [NB3-Building Voltage Dividers](https://vimeo.com/1000789632)
+> **Expected Result**: The intermediate voltage should continuously vary as you adjust the potentiometer.
+- A video guide to completing these tasks can be found here: [NB3-Building Voltage Dividers](https://vimeo.com/1000789632)
 
 ## Sensors
 Our robot's brain uses computers, which can *only* measure electrical signals. Sensors are necessary to convert physical signals (light intensity, heat, air pressure, etc.) into electrical signals.
