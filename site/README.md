@@ -66,6 +66,7 @@ Session description.
 Can be multiple lines, but just text.
 
 ## Box #1 Name
+Box description.
 Can be multiple lines, but just text.
 
 ### Watch this video: [Video Title](video url)
@@ -73,19 +74,27 @@ Video content description (single line of text).
 
 ### Watch this video: [Video Title](video url)
 Video content description (single line of text).
-- **Task**(task_name): Task description.[task_input]
+- [ ] **Task**: Task description.
+> Expected results of completing the task are described here. You can use images and [links](../_designs/schedule_buildabrain.png). For example: ![image](../course/_designs/logo/icons/icon_LBB_64.png)
 
 ## Box #2 Name
 Can be multiple lines, but just text.
 
 ###  Watch this video: [Video Name](video url)
 Video content description (single line of text).
-- **Task**(task_name): Task description.[task_input]
-- **Task**(task_name): Task description.[task_input]
+- **Task**: Task description.
+
+- **Task**: Task description.
+<details><summary><em>Solution</em></summary><blockquote>
+Expected results of completing the task are listed here. You can use images and links.
+</blockquote></details><br>
 
 ###  Watch this video: [Video Name](video url)
 Video content description (single line of text).
-- **Task**(task_name): Task description.[task_input]
+- **Task**: Task description.
+<details><summary><em>Solution</em></summary><blockquote>
+Expected results of completing the task listed here. You can use images and links.
+</blockquote></details><br>
 
 ---
 
