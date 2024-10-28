@@ -13,7 +13,6 @@ The organization of elements into a table reveals a regular pattern, which is li
 > [Concepts and Connections](../../../course/_videos/boxes/atoms/The-Periodic-Table.md)
 - When you need it *(and you will)*, then you can find a copy of the periodic table [here](../../../boxes/atoms/_data/images/periodic_table.png).
 - The electron configuration (assignments to specific orbitals) of each atomic element can be viewed [here](https://en.wikipedia.org/wiki/Electron_configurations_of_the_elements_(data_page)). 
-- ![Periodic Table](../../../boxes/atoms/_data/images/periodic_table.png)
 
 ## Electrons
 Electrons are the sub-atomic particles that underlie *electricity*. Controlling the movement of electrons (and the effects of their movement) will allow us to build many different kinds of electronic devices, from simple circuits to robots and computers.
@@ -30,12 +29,13 @@ Some materials have electrons way out in their outer orbitals that are happy to 
 Generating a stable voltage requires a source of electrons to maintain the *potential difference*, even when electrons are able to move between two areas of different charge. We can accomplish this with a (redox) chemical reaction inside the wonderfully useful device we call a **battery**.
 > [Concepts and Connections]()
 - [ ] **TASK**: Measure the voltage of a AA battery using your multimeter.
-  - *Hint*: Select the voltage ("V") setting and touch your probes to either end of the battery. Depending on your multimeter, you may also need to select an appropriate "range". For a single AA battery, you should expect to measure between 1 and 2 Volts.
-  - If you are new to measuring voltage with a multimeter, then I recommend you watch this video: [NB3-Measuring Voltage](https://vimeo.com/??????)
-> **Expected Result**: A single AA battery, fully charged, should have a voltage of ~1.6 Volts. If it is less than 1.5, then the battery is nearly dead.
+> **Expected Result**: A single AA battery, fully charged, should have a voltage of ~1.6 Volts. If it is less than 1.5 Volts, then the battery is nearly *dead*.
+- *Hint*: Select the voltage ("V") setting and touch your probes to either end of the battery. Depending on your multimeter, you may also need to select an appropriate "range". For a single AA battery, you should expect to measure between 1 and 2 Volts.
+- If you are new to measuring voltage with a multimeter, then I recommend you watch this video: [NB3-Measuring Voltage](https://vimeo.com/??????)
+
 - [ ] **TASK**: Measure the voltage of 4xAA batteries in series (end to end).
-  - *Hint*: You can use your battery holder.
 > **Expected Result**: Batteries connected in series will sum their voltages. You should measure four times the voltage of a single AA battery, about 6.4 Volts, from the batteries in your 4xAA holder.
+- *Hint*: You can use your battery holder.
 
 ### Watch this video: [Current](https://vimeo.com/1000743561)
 The rate with which electrons flow, measured in #charges/second, we call **current** and we use the units *Amperes* or the more common term *Amps* (A).
@@ -51,33 +51,31 @@ All materials are not equally good a letting their outer orbital electrons freel
 To help you start measuring and manipulating electricity, we will first assemble a "prototyping platform", which also happens to be the **body** of your robot (NB3).
 > [Concepts and Connections]()
 - [ ] **TASK**: Assemble the robot body (prototyping base board).
+  > **Expected Result**: Your NB3 you now look like this: <p align="center"><img src="../../_designs/NB3/NB3_render.png" alt="NB3 Render" width="300" height="300"></p> Of course, your breadboards will be different colors...and you should have some rubber feet on the back.
   - If you are curious how the *NB3 Body* printed circuit board (PCB) was designed, then you can find the KiCAD files here: [NB3 Body PCB](../../../boxes/electrons/NB3_body). You can also watch this short introduction to PCB design with KiCAD here: [NB3-Designing PCBs with KiCAD](https://vimeo.com/??????).
-> **Expected Result**: Your NB3 you now look like this: <p align="center"><img src="../../_designs/NB3/NB3_render.png" alt="NB3 Render" width="300" height="300"></p> Of course, your breadboards will be different colors...and you should have some rubber feet on the back.
-
-> **Expected Result**: Your NB3 you now look like this: ![NB3 Prototyping Board](../../_designs/NB3/NB3_render.png)
-
-<details><summary><em>Expected Result</em></summary><blockquote>
-Your NB3 you now look like this: <p align="center"><img src="../../_designs/NB3/NB3_render.png" alt="NB3 Render" width="300" height="300"></p> Of course, your breadboards will be different colors...and you should have some rubber feet on the back.
-</blockquote></details><br>
 
 ### Watch this video: [NB3-Building Circuits](https://vimeo.com/??????)
 With a voltage source (battery) and resistors, then we can start building "circuits" - complete paths of conduction that allow current to flow from a location with *less* electrons **(+)** to a location with *more* electrons **(-)**.
 > [Concepts and Connections]()
 
 > ***Note***: This is *weird*. Electrons are the things moving. Shouldn't we say that current "flows" from the **(-)** area to the **(+)** area? Unfortunately, current was described before anyone knew about electrons and we are stuck with the following awkward convention: **Current is defined to flow from (+) to (-)**...even though we now know that electrons are moving the opposite direction.
+
 - [ ] **TASK**: Build the simple circuit below and measure the current flowing when you connect the battery pack.
-- ***Warning!***: Measuring current with a multimeter is ***tricky***. You can only get an accurate measurement if ***ALL*** of the current in the circuit is forced to flow through your multimeter. This means that when measuring current, your multimeter must be in *series* with the rest of the circuit. (As opposed to measuring voltage, when your multimeter is placed "parallel" to the circuit.)
-- If you are new to measuring current with a multimeter, then I recommend you watch this video: [NB3-Measuring Current](https://vimeo.com/??????).
-> Batteries connected in series will sum their voltages. You should measure four times the voltage of a single AA battery, about 6.4 Volts, from the batteries in your 4xAA holder.
+  > **Expected Result**: Not too much current...and do not break your meter.
+  - ***Warning!***: Measuring current with a multimeter is ***tricky***. You can only get an accurate measurement if ***ALL*** of the current in the circuit is forced to flow through your multimeter. This means that when measuring current, your multimeter must be in *series* with the rest of the circuit. (As opposed to measuring voltage, when your multimeter is placed "parallel" to the circuit.)
+  - If you are new to measuring current with a multimeter, then I recommend you watch this video: [NB3-Measuring Current](https://vimeo.com/??????).
 
 ### Watch this video: [Ohm's Law](https://vimeo.com/1000768334)
 > [Concepts and Connections]()
 - [ ] **TASK**: Look at your simple circuit that you built in the previous task. You know the voltage from the batteries (V) and the resistance of the resistor (R). You have measured the current flowing (I). Does Ohm's Law hold? What if you use a different resistor?
+  > **Expected Result**: A linear relationship.
 
 ### Watch this video: [Voltage Dividers](https://vimeo.com/1000782478)
 > [Concepts and Connections]()
 - [ ] **TASK**: Build a voltage divider using two resistors of the same value? Measure the intermediate voltage (between the resistors).
+  > **Expected Result**: With equal size resistors, the intermediate voltage should be half of the supply voltage.
 - [ ] **TASK**: Build a voltage divider using a variable resistor (potentiometer). Measure the intermediate voltage. What happens when you change the position of the internal contact (by turning the screw)?
+  > **Expected Result**: The intermediate voltage should continuously vary as you adjust the potentiometer.
   - A video guide to completing these tasks can be found here: [NB3-Building Voltage Dividers](https://vimeo.com/1000789632)
 
 ## Sensors
