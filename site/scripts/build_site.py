@@ -4,18 +4,6 @@ Build the LBB site
 
 @author: kampff
 """
-#----------------------------------------------------------
-# Load environment file and variables
-import os
-from dotenv import load_dotenv
-load_dotenv()
-libs_path = os.getenv('LIBS_PATH')
-base_path = os.getenv('BASE_PATH')
-
-# Set library paths
-import sys
-sys.path.append(libs_path)
-#----------------------------------------------------------
 
 # Import libraries
 import os

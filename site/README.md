@@ -29,7 +29,6 @@ python -c 'import secrets; print(secrets.token_hex())'
 # On Host (current Python version 3.12.3, assuming LBB virtual environment)
 echo "/home/${USER}/NoBlackBoxes/LastBlackBox/site/libs" > /home/${USER}/NoBlackBoxes/LastBlackBox/_tmp/LBB/lib/python3.12/site-packages/LBB_site.pth
 echo "/home/${USER}/NoBlackBoxes/LastBlackBox/course/_designs/libs" > /home/${USER}/NoBlackBoxes/LastBlackBox/_tmp/LBB/lib/python3.12/site-packages/LBB_design.pth
-
 ```
 
 ### Create "database" file system structure
@@ -41,6 +40,8 @@ mkdir -p _tmp/users
 ## To Do
 Things to complete
 - *Course and Site Model Revision*
+  - Switch to template use from Python/JSON object
+  - Task inputs? SHould use WTF (forms)
 - Download badge (certificate?)
 - Send emails asynchronously
 - Standardized task submissions (with validation and feedback)

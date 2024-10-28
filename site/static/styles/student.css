@@ -178,7 +178,7 @@ body, html {
     font-weight: 700;
 }
 
-#user_info {
+#student_info {
     width: 400px;
     border-radius: 11px;
     border-style: solid;
@@ -200,7 +200,7 @@ body, html {
     }
 }
 
-#user_name {
+#student_name {
     font-size: 20px;
     font-family: Arial;
     color: white;
@@ -210,7 +210,7 @@ body, html {
     }
 }
 
-#user_id {
+#student_id {
     font-size: 20px;
     font-family: Arial;
     color: white;
@@ -220,7 +220,7 @@ body, html {
     }
 }
 
-#user_email {
+#student_email {
     font-size: 20px;
     font-family: Arial;
     color: white;

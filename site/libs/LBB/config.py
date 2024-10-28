@@ -24,5 +24,6 @@ repo_root = os.getenv('REPO_ROOT')
 course_root = repo_root + "/course"
 site_root = repo_root + "/site"
 data_root = site_root + "/_tmp"
+static_root = site_root + "/static"
 
 #FIN

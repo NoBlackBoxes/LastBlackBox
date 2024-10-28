@@ -4,25 +4,13 @@ Scripts: Create Student
 
 @author: kampff
 """
-#----------------------------------------------------------
-# Load environment file and variables
-import os
-from dotenv import load_dotenv
-load_dotenv()
-libs_path = os.getenv('LIBS_PATH')
-base_path = os.getenv('BASE_PATH')
-data_path = base_path + '/_tmp'
-
-# Set library paths
-import sys
-sys.path.append(libs_path)
-#----------------------------------------------------------
 
 # Import libraries
 from werkzeug.security import generate_password_hash
 import LBB.utilities as Utilities
 
 # Import modules
+import LBB.config as Config
 import LBB.course as Course
 import LBB.student as Student
 
@@ -66,13 +54,25 @@ student.name = "Jimmy Voight"
 student.nickname = "Jimmy"
 student.email = "info@voight-kampff.tech"
 student.progress = progress
-student.course = Course.Course(name="buildabrain")
+student.current_course = "Build a Brain"
+student.course = Course.Course(name="Build a Brain")
 
 # Create student data folder
-student_folder = data_path + f"/students/{student.id}"
+student_folder = Config.data_root + f"/students/{student.id}"
 Utilities.clear_folder(student_folder)
 
 # Store student
 student.store()
+
+# Store course
+student_courses_folder = Config.data_root + f"/students/{student.id}/courses"
+course_path = student_courses_folder + f"/{student.course.slug}.json"
+Utilities.clear_folder(student_courses_folder)
+student.course.store(course_path)
+
+# Generate and store student badge
+student_badge_folder = Config.data_root + f"/students/{student.id}/badge"
+Utilities.clear_folder(student_badge_folder)
+student.generate_badge()
 
 #FIN

@@ -9,8 +9,8 @@
     <div id="content">
       <img id="logo" src="{{url_for('static', filename='images/logo/logo_LBB_white_text.svg')}}" alt="Last Black Box Logo">
       <form id="login" action="/login" method="post">
-        <input id="user_id" type="text" name="user_id" placeholder="Enter your LBB ID" required />
-        <input id="user_password" type="text" name="user_password" placeholder="Enter your password" required />
+        <input id="student_id" type="text" name="student_id" placeholder="Enter your LBB ID" required />
+        <input id="student_password" type="text" name="student_password" placeholder="Enter your password" required />
         <input id="button" type="submit" value="Login" />
       </form>
       <h4 id="error">{{error}}</h4>

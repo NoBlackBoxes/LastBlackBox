@@ -151,7 +151,7 @@ body, html {
     border-color: #CCCCCC;
 }
 
-#user_info {
+#student_info {
     width: 400px;
     border-radius: 11px;
     border-style: solid;
@@ -173,11 +173,11 @@ body, html {
     }
 }
 
-#user_update {
+#student_update {
     width: 90%;
 }
 
-#user_name {
+#student_name {
     font-size: 15px;
     font-family: Arial;
     color: black;
@@ -191,7 +191,7 @@ body, html {
     }
 }
 
-#user_nickname {
+#student_nickname {
     font-size: 15px;
     font-family: Arial;
     color: black;
@@ -205,7 +205,7 @@ body, html {
     }
 }
 
-#user_email {
+#student_email {
     font-size: 15px;
     font-family: Arial;
     color: black;
@@ -219,7 +219,7 @@ body, html {
     }
 }
 
-#user_password {
+#student_password {
     font-size: 15px;
     font-family: Arial;
     color: black;
@@ -233,7 +233,7 @@ body, html {
     }
 }
 
-#user_password_confirmation {
+#student_password_confirmation {
     font-size: 15px;
     font-family: Arial;
     color: black;

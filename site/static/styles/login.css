@@ -49,7 +49,7 @@ body, html {
     flex-direction: column;
 }
 
-#user_id, #user_password {
+#student_id, #student_password {
     z-index: 1;
     width: 256px;
     height: 32px;

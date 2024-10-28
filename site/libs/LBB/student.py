@@ -4,43 +4,35 @@ LBB: Student Class
 
 @author: kampff
 """
-#----------------------------------------------------------
-# Load environment file and variables
-import os
-from dotenv import load_dotenv
-load_dotenv()
-libs_path = os.getenv('LIBS_PATH')
-base_path = os.getenv('BASE_PATH')
-data_path = base_path + '/_tmp'
-
-# Set library paths
-import sys
-sys.path.append(libs_path)
-#----------------------------------------------------------
 
 # Import libraries
+import os
 import glob
+import json
 import csv
 import numpy as np
 from werkzeug.security import generate_password_hash, check_password_hash
 
 # Import modules
 import Design.svg as SVG
+import LBB.config as Config
+import LBB.course as Course
 
 # Student Class
 class Student:
-    def __init__(self, _student_id=None):
-        self.id = None              # ID
-        self.password_hash = None   # Password hash
-        self.name = None            # Name
-        self.nickname = None        # Nickname
-        self.email = None           # Email
-        self.progress = {}          # Progress dictionary {box name:depth}
-        self.course = None          # Current course
-        self.authenticated = False  # Authenticated boolean
-        self.loaded = False         # Loaded boolean
-        if (_student_id != None):   # Load from Student ID
-            self.load(_student_id)
+    def __init__(self, student_id=None):
+        self.id = None                  # Student ID
+        self.password_hash = None       # Student password hash
+        self.name = None                # Student name
+        self.nickname = None            # Student nickname
+        self.email = None               # Student email
+        self.progress = {}              # Student progress dictionary {box name:depth}
+        self.current_course = None      # Student current course name
+        self.course = None              # Student course
+        self.authenticated = False      # Student authenticated boolean
+        self.loaded = False             # Student loaded boolean
+        if (student_id != None):
+            self.load(student_id)       # Load from student ID
         return
     
     def is_active(self):
@@ -55,32 +47,10 @@ class Student:
     def is_anonymous(self):
         return False
 
-    def store(self):
-        student_folder = f"{data_path}/students/{self.id}"
-        student_path = f"{student_folder}/student_data.csv"
-
-        # Store student data
-        with open(student_path, 'w') as file:
-            file.write(f"id,{self.id}\n")
-            file.write(f"password_hash,{self.password_hash}\n")
-            file.write(f"name,{self.name}\n")
-            file.write(f"nickname,{self.nickname}\n")
-            file.write(f"email,{self.email}\n")
-            file.write(f"instructor,{self.instructor}\n")
-            file.write(f"admin,{self.admin}\n")
-            file.write(f"current_course,{self.current_course}\n")
-            file.write(f"current_session,{self.current_session}\n")
-
-        # Store student progress
-        student_path = f"{student_folder}/student_progress.csv"
-        with open(student_path, 'w') as file:
-            for box in self.progress.items():
-                file.write(f"{box[0]},{box[1]}\n")                
-        return
-
+    # Load student object from JSON
     def load(self, student_id):
-        student_folder = f"{data_path}/students/{student_id}"
-        student_path = f"{student_folder}/student_data.csv"
+        student_folder = f"{Config.data_root}/students/{student_id}"
+        student_path = f"{student_folder}/data.json"
 
         # Does student (data file) exist?
         if not os.path.isfile(student_path):
@@ -88,31 +58,39 @@ class Student:
 
         # Load student data
         with open(student_path, 'r') as file:
-            line = file.readline(); self.id = line.split(',')[1][:-1]
-            line = file.readline(); self.password_hash = line.split(',')[1][:-1]
-            line = file.readline(); self.name = line.split(',')[1][:-1]
-            line = file.readline(); self.nickname = line.split(',')[1][:-1]
-            line = file.readline(); self.email = line.split(',')[1][:-1]
-            line = file.readline(); self.instructor = line.split(',')[1][:-1]
-            line = file.readline(); self.admin = line.split(',')[1][:-1]
-            line = file.readline(); self.current_course = line.split(',')[1][:-1]
-            line = file.readline(); self.current_session = line.split(',')[1][:-1]
-
-        # Load student progress
-        student_path = f"{student_folder}/student_progress.csv"
-        progress = {}
-        with open(student_path, 'r') as file:
-            lines = file.readlines()
-            for line in lines:
-                name = line.split(",")[0]
-                level = line.split(",")[1][:-1]
-                progress.update({name:level})
-        self.progress = progress
+            dictionary = json.load(file)
+            self.id = dictionary.get("id")
+            self.password_hash = dictionary.get("password_hash")
+            self.name = dictionary.get("name")
+            self.nickname = dictionary.get("nickname")
+            self.email = dictionary.get("email")
+            self.progress = dictionary.get("progress")
+            self.current_course = dictionary.get("current_course")
+        if self.current_course:
+            self.course = Course.Course(name=self.current_course)
         self.loaded = True
         return True
 
+    # Store student object in JSON file
+    def store(self):
+        student_folder = f"{Config.data_root}/students/{self.id}"
+        student_path = f"{student_folder}/data.json"
+        dictionary = {
+            "id": self.id,
+            "password_hash": self.password_hash,
+            "name": self.name,
+            "nickname": self.nickname,
+            "email": self.email,
+            "progress": self.progress,
+            "current_course": self.current_course
+        }
+        with open(student_path, "w") as file:
+            json.dump(dictionary, file, indent=4)
+        return
+
+    # Find student from email
     def find(self, student_email):
-        students_folder = f"{data_path}/students"
+        students_folder = f"{Config.data_root}/students"
         student_folders = glob.glob(students_folder+"/*/")
         for student_folder in student_folders:
             student_id = student_folder.split('/')[-2]
@@ -122,15 +100,15 @@ class Student:
         self.loaded = False
         return None
 
+    # Authenticate student
     def authenticate(self, student_password):
-        print(self.password_hash)
         a = check_password_hash(self.password_hash, student_password)
-        print(a)
         if check_password_hash(self.password_hash, student_password):
             self.authenticated = True
             return True
         return False
-    
+
+    # Summarize student progress    
     def summarize_progress(self):
         num_open = 0
         num_01 = 0
@@ -147,26 +125,25 @@ class Student:
                 num_11 += 1
         return [num_open, num_01, num_10, num_11]
 
+    # Generate student badge (SVG)
     def generate_badge(self):
-        student_folder = f"{data_path}/students/{self.id}"
-        box_parameters_path = f"{student_folder}/box_parameters_badge.csv"
-        animation_parameters_path = f"{student_folder}/animation_parameters_badge.csv"
+        self.generate_badge_parameters()
+        student_badge_folder = f"{Config.data_root}/students/{self.id}/badge"
+        box_parameters_path = f"{student_badge_folder}/box_parameters_badge.csv"
+        animation_parameters_path = f"{student_badge_folder}/animation_parameters_badge.csv"
         svg = SVG.SVG(f"brain_badge", None, 100, 64, "0 0 100 64", with_profile=False, with_title=False, with_labels=True)
-        svg_path = f"{student_folder}/badge_{self.id}.svg"
+        svg_path = f"{student_badge_folder}/{self.id}_badge.svg"
         svg.animate(box_parameters_path, animation_parameters_path, True, False, True, svg_path)
-        with open(svg_path, 'r') as file:
-            next(file)
-            svg_string = file.read()
-        return svg_string
+        return
 
-    def generate_badge_parameters(self, static_folder):
-        student_folder = f"{data_path}/students/{self.id}"
-        resources_folder = f"{static_folder}/resources"
-        box_parameters_template_path = f"{resources_folder}/box_parameters_badge.csv"
-        box_parameters_student_path = f"{student_folder}/box_parameters_badge.csv"
+    # Generate student badge parameters
+    def generate_badge_parameters(self):
+        student_badge_folder = Config.data_root + f"/students/{self.id}/badge"
+        box_parameters_template_path = f"{Config.static_root}/resources/box_parameters_badge.csv"
+        box_parameters_student_path = f"{student_badge_folder}/box_parameters_badge.csv"
         box_parameters = np.genfromtxt(box_parameters_template_path, delimiter=",", dtype=str, comments='##')
-        animation_parameters_template_path = f"{resources_folder}/animation_parameters_badge.csv"
-        animation_parameters_student_path = f"{student_folder}/animation_parameters_badge.csv"
+        animation_parameters_template_path = f"{Config.static_root}/resources/animation_parameters_badge.csv"
+        animation_parameters_student_path = f"{student_badge_folder}/animation_parameters_badge.csv"
         animation_parameters = np.genfromtxt(animation_parameters_template_path, delimiter=",", dtype=str, comments='##')
         for i, level in enumerate(self.progress.values()):
             if level == '00':
@@ -189,9 +166,19 @@ class Student:
             csv.writer(f).writerows(animation_parameters)
         return
 
-    def download_badge(self, static_folder):
-        student_folder = f"{data_path}/students/{self.id}"
-        svg_path = f"{student_folder}/badge_{self.id}.svg"
+    # Load student badge
+    def load_badge(self):
+        student_badge_folder = f"{Config.data_root}/students/{self.id}/badge"
+        student_badge_path = student_badge_folder + f"/{self.id}_badge.svg"
+        with open(student_badge_path, 'r') as file:
+            next(file)  # Skip first line
+            svg_string = file.read()
+        return svg_string
+
+    # Download student badge
+    def download_badge(self, folder):
+        student_folder = f"{Config.data_root}/students/{self.id}"
+        svg_path = f"{folder}/badge_{self.id}.svg"
         # Convert to PDF? blah blah
         return
 

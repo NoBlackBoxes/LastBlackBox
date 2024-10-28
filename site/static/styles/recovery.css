@@ -49,7 +49,7 @@ body, html {
     flex-direction: column;
 }
 
-#user_email {
+#student_email {
     z-index: 1;
     width: 450px;
     height: 32px;

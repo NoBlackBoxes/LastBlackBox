@@ -43,7 +43,7 @@ On your local client, create a new security key for your user and copy it to you
 
 ```bash
 ssh-keygen -t ed25519 -C <your usenamer>        # Generate Key
-cat /home/<your usenamer>/.ssh/id_ed25519.pub    # Print key       
+cat /home/<your usenamer>/.ssh/id_ed25519.pub   # Print key       
 # Copy to server's ~/.ssh/authorized_keys file
 ```
 

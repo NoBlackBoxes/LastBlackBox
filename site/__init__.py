@@ -41,7 +41,7 @@ mail = Mail(app)
 
 # Create login manager
 login_manager = LoginManager(app)
-@login_manager.student_loader
+@login_manager.user_loader
 def load_student(student_id):
     student = Student.Student(student_id)
     if student.loaded:
@@ -98,18 +98,14 @@ def logout():
 @app.route('/student')
 @login_required
 def student():
-    current_user.update_progress()
-    current_user.generate_badge_parameters(app.static_folder)
-    badge = current_user.generate_badge()
-    return render_template('student.html', student=current_user, badge=badge)
+    progress_summary = current_user.summarize_progress()
+    badge = current_user.load_badge()
+    return render_template('student.html', student=current_user, badge=badge, progress_summary=progress_summary)
 
 # Serve Update
 @app.route('/update', methods=['GET', 'POST'])
 @login_required
 def update():
-    current_user.update_progress()
-    current_user.generate_badge_parameters(app.static_folder)
-    badge = current_user.generate_badge()
     if request.method == 'POST':
         student_name = request.form['student_name']
         student_nickname = request.form['student_nickname']
