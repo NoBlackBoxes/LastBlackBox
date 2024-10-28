@@ -52,7 +52,13 @@ To help you start measuring and manipulating electricity, we will first assemble
 > [Concepts and Connections]()
 - [ ] **TASK**: Assemble the robot body (prototyping base board).
   - If you are curious how the *NB3 Body* printed circuit board (PCB) was designed, then you can find the KiCAD files here: [NB3 Body PCB](../../../boxes/electrons/NB3_body). You can also watch this short introduction to PCB design with KiCAD here: [NB3-Designing PCBs with KiCAD](https://vimeo.com/??????).
+> **Expected Result**: Your NB3 you now look like this: <p align="center"><img src="../../_designs/NB3/NB3_render.png" alt="NB3 Render" width="300" height="300"></p> Of course, your breadboards will be different colors...and you should have some rubber feet on the back.
+
 > **Expected Result**: Your NB3 you now look like this: ![NB3 Prototyping Board](../../_designs/NB3/NB3_render.png)
+
+<details><summary><em>Expected Result</em></summary><blockquote>
+Your NB3 you now look like this: <p align="center"><img src="../../_designs/NB3/NB3_render.png" alt="NB3 Render" width="300" height="300"></p> Of course, your breadboards will be different colors...and you should have some rubber feet on the back.
+</blockquote></details><br>
 
 ### Watch this video: [NB3-Building Circuits](https://vimeo.com/??????)
 With a voltage source (battery) and resistors, then we can start building "circuits" - complete paths of conduction that allow current to flow from a location with *less* electrons **(+)** to a location with *more* electrons **(-)**.
