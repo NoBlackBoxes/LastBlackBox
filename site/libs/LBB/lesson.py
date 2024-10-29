@@ -83,10 +83,13 @@ class Lesson:
         while line_count < max_count:
             if text[line_count][0] != '\n':
                 # Classify step
-                if text[line_count][0:8] == '- **TASK':
-                    task = Task.Task(text[line_count])
-                    task.index = step_count
-                    self.steps.append(task)
+                if text[line_count][0:12] == '- [ ] **TASK':
+                    # Confirm expected result description
+                    if text[line_count + 1][:5] == "> **E":
+                        task = Task.Task(text[line_count:(line_count+2)])
+                        task.index = step_count
+                        self.steps.append(task)
+                        line_count += 1
                 elif text[line_count][0:22] == '<p align="center"><img':
                     image = Image.Image(text[line_count])
                     image.index = step_count

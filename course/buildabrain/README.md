@@ -25,7 +25,7 @@ You will be building a brain for your robot. The robot's physical layout mimics 
 ### Session 1 - Sensors
 
 - Add some sensory input
-  - Learn about atoms, electons, sensors, and light
+  - Learn about atoms, electrons, sensors, and light
     - **Project**: *Build a Light Sensor*
 
 ### Session 2 - Motors
@@ -67,7 +67,7 @@ You will be building a brain for your robot. The robot's physical layout mimics 
 ### Session 8 - Intelligence
 
 - Make it smart....what is smart?
-  - Learn about audio, vision, learning, and intlligence
+  - Learn about audio, vision, learning, and intelligence
     - **Project**: *Add a Camera, Speaker, and Microphones*
     - **Project**: *Create a Voice-Activated Robot*
     - **Project**: *Run Neural Networks on a Hardware Accelerator*

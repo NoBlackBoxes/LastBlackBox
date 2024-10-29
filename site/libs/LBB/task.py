@@ -13,9 +13,8 @@ class Task:
     def __init__(self, text=None, dictionary=None):
         self.index = None               # Step index
         self.type = "task"              # Step type
-        self.name = None                # Task name
-        self.descriptions = None        # Task descriptions
-        self.inputs = None              # Task inputs
+        self.description = None         # Task description
+        self.result= None               # Task result
         if text:
             self.parse(text)            # Parse task from README text
         elif dictionary:
@@ -27,38 +26,24 @@ class Task:
         dictionary = {}
         dictionary.update({"index": self.index})
         dictionary.update({"type": self.type})
-        dictionary.update({"name": "TASK"})
-        #dictionary.update({"descriptions": self.descriptions})
+        dictionary.update({"description": self.description})
+        dictionary.update({"result": self.result})
         return dictionary
 
     # Convert dictionary to task object
     def from_dict(self, dictionary):
         self.index = dictionary.get("index")
         self.type = dictionary.get("type")
-        self.html = dictionary.get("name")
+        self.description = dictionary.get("description")
+        self.result = dictionary.get("result")
         return
     
     # Parse task string
     def parse(self, text):
-        semicolon_split = text.split(':')
-        self.name = semicolon_split[0].split('(')[-1][:-1]
-        right_bracket_split = semicolon_split[1][1:].split(']')
-        self.descriptions = []
-        self.inputs = []
-        for chunk in right_bracket_split:
-            left_bracket_split = chunk.split('[')
-            if len(left_bracket_split) > 1:
-                self.descriptions.append(left_bracket_split[0])
-                input_descriptor = left_bracket_split[1].split('.')
-                input_type = input_descriptor[0]
-                if len(input_descriptor) > 1:
-                    input_name = input_descriptor[1]
-                    self.inputs.append(Input.Input(input_type, input_name))
-                else:
-                    self.inputs.append(Input.Input(input_type, input_type))
-            else:
-                self.descriptions.append(left_bracket_split[0])
-                self.inputs.append(Input.Input("none", "none"))
+        description_string = text[0]
+        result_string = text[1]
+        self.description = description_string[16:]
+        self.result = result_string[2:]
         return
     
     def render(self):

@@ -16,7 +16,7 @@
         <ul>
             {% for session in course.sessions %}
             <li>
-                <span id="session_heading">{{ session.name }}</span>
+                <span id="session_heading">{{session.index+1}}: {{ session.name }}</span>
             </li>
             <ul>
                 {% for box in session.boxes %}

@@ -18,7 +18,12 @@
             <iframe id="video_player" src="https://player.vimeo.com/video/{{lesson.video.id}}?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title={{lesson.video.name}}></iframe>
         </p>
         {% for step in lesson.steps %}
-            {{ step.html | safe }}
+            {% if step.type == "task" %}
+                <h5>{{ step.description }}</h5>
+                <details><summary><em>Expected Result</em></summary>{{ step.description }}</details>
+            {% else %}
+                {{ step.html | safe }}
+            {% endif %}
         {% endfor %}
 
     </div>
