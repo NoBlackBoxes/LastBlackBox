@@ -42,9 +42,42 @@ body, html {
     align-items: left;
 }
 
+.task_div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-width: 7px;
+    border-color: rgb(56, 56, 56);
+    border-radius: 7px;
+    border-style: solid;
+    background-color: rgb(36, 36, 36);
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    @media (max-width:768px){
+        width: 90%;
+    }
+}
+
+.task_complete_div {
+    margin: auto;
+    width: 40%;
+    border-width: 7px;
+    border-color: rgb(251, 255, 0);
+    border-radius: 7px;
+    border-style: solid;
+    background-color: rgb(169, 184, 135);
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    @media (max-width:768px){
+        width: 90%;
+    }
+}
+
 #course_heading {
     position: absolute; 
-    top: 25px;
+    top: 15px;
     left: 50%;
     width: 80%;
     transform: translate(-50%, 0%);
@@ -94,26 +127,31 @@ body, html {
     text-align: left;
     font-size: 18px;
     font-weight: 400;
+    margin: 5px;
 }
 
-#task_description {
+.task_description {
     text-align: left;
     font-size: 20px;
     font-weight: 400;
     margin-top: 15px;
 }
 
-#task_result {
-    font-size: 14px;
+.task_result {
+    width: 90%;
+    transform: translate(+5%, 0%);
+    font-size: 16px;
     font-weight: 300;
     margin-top: 5px;
 }
 
-#task_result_summary {
+.task_result_summary {
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     font-style: italic;
+    color: yellow;
+    margin-bottom: 5px;
 }
 
 #video_player {
@@ -121,38 +159,6 @@ body, html {
     border-style: solid;
     border-color: rgb(141, 141, 141);
     border-radius: 7px;
-
-    @media (max-width:768px){
-        width: 90%;
-    }
-}
-
-#task_box {
-    margin: auto;
-    width: 40%;
-    border-width: 7px;
-    border-color: rgb(56, 56, 56);
-    border-radius: 7px;
-    border-style: solid;
-    background-color: rgb(36, 36, 36);
-    padding-top: 10px;
-    padding-bottom: 10px;
-
-    @media (max-width:768px){
-        width: 90%;
-    }
-}
-
-#task_box_complete {
-    margin: auto;
-    width: 40%;
-    border-width: 7px;
-    border-color: rgb(251, 255, 0);
-    border-radius: 7px;
-    border-style: solid;
-    background-color: rgb(169, 184, 135);
-    padding-top: 10px;
-    padding-bottom: 10px;
 
     @media (max-width:768px){
         width: 90%;
@@ -186,11 +192,7 @@ body, html {
     border-color: grey;
 }
 
-.task_input_text {
-    width: 50px;
-}
-
-#logout {
+#logout_button {
     position: absolute;
     top: 20px;
     right: 30px;
@@ -209,7 +211,31 @@ body, html {
     }
 }
 
-#logout:hover {
+#logout_button:hover {
     color: black;
     background-color: yellow;
+}
+
+#complete_button {
+    margin-top: 12px;
+    padding: 8px 12px;
+    border: 1px yellow;
+    border-style: solid;
+    border-radius: 7px;
+    color: black;
+    background-color: yellow;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    font-size: 20px;
+    font-weight: 800;
+    display: none;
+
+    @media screen and (max-width: 768px) {
+        margin-top: 16px;
+    }
+}
+
+#complete_button:hover {
+    color: yellow;
+    background-color: black;
 }

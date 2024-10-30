@@ -45,7 +45,7 @@ class Instruction:
         if text[0] == '>': # Block Quote
             self.html = f"<blockquote id=\"quote\">{text[1:].strip()}</blockquote>\n"
         else:
-            self.html = f"<h4 id=\"instruction\">{text}</h4>\n"
+            self.html = f"<span id=\"instruction\">{text}</span>\n"
         return
 
 #FIN

@@ -28,6 +28,7 @@ Some materials have electrons way out in their outer orbitals that are happy to 
 ### Watch this video: [Batteries](https://vimeo.com/??????)
 Generating a stable voltage requires a source of electrons to maintain the *potential difference*, even when electrons are able to move between two areas of different charge. We can accomplish this with a (redox) chemical reaction inside the wonderfully useful device we call a **battery**.
 > [Concepts and Connections]()
+
 - [ ] **TASK**: Measure the voltage of a AA battery using your multimeter.
 > **Expected Result**: A single AA battery, fully charged, should have a voltage of ~1.6 Volts. If it is less than 1.5 Volts, then the battery is nearly *dead*.
 - *Hint*: Select the voltage ("V") setting and touch your probes to either end of the battery. Depending on your multimeter, you may also need to select an appropriate "range". For a single AA battery, you should expect to measure between 1 and 2 Volts.
@@ -44,12 +45,14 @@ The rate with which electrons flow, measured in #charges/second, we call **curre
 ### Watch this video: [Resistors](https://vimeo.com/1000755493)
 All materials are not equally good a letting their outer orbital electrons freely move around. Some materials "hold on" to their electrons a bit tighter, "resisting" their movement. We can create mixtures of these "resisting" materials and better "conducting" materials, often in the form of ceramics, to create **resistors** with a range of different *resistance* values, which we measure in Ohms (&Omega;).
 > [Concepts and Connections]()
+
 - [ ] **TASK**: Measure the resistance of one of your resistors.
 > **Expected Result**: Your kit contains 470 &Omega;, 1 k&Omega;, and 10 k&Omega; resistors. You should measure one of these values.
 
 ### Watch this video: [NB3-Body](https://vimeo.com/1005036900)
 To help you start measuring and manipulating electricity, we will first assemble a "prototyping platform", which also happens to be the **body** of your robot (NB3).
 > [Concepts and Connections]()
+
 - [ ] **TASK**: Assemble the robot body (prototyping base board).
 > **Expected Result**: Your NB3 should now look like [this](../../../boxes/electrons/NB3_body/NB3_body_front.png). Your breadboards will be different colors...and you should have some rubber feet on the back.
 - If you are curious how the *NB3 Body* printed circuit board (PCB) was designed, then you can find the KiCAD files here: [NB3 Body PCB](../../../boxes/electrons/NB3_body). You can also watch this short introduction to PCB design with KiCAD here: [NB3-Designing PCBs with KiCAD](https://vimeo.com/??????).
@@ -72,8 +75,10 @@ With a voltage source (battery) and resistors, then we can start building "circu
 
 ### Watch this video: [Voltage Dividers](https://vimeo.com/1000782478)
 > [Concepts and Connections]()
+
 - [ ] **TASK**: Build a voltage divider using two resistors of the same value? Measure the intermediate voltage (between the resistors).
 > **Expected Result**: With equal size resistors, the intermediate voltage should be half of the supply voltage.
+
 - [ ] **TASK**: Build a voltage divider using a variable resistor (potentiometer). Measure the intermediate voltage. What happens when you change the position of the internal contact (by turning the screw)?
 > **Expected Result**: The intermediate voltage should continuously vary as you adjust the potentiometer.
 - A video guide to completing these tasks can be found here: [NB3-Building Voltage Dividers](https://vimeo.com/1000789632)

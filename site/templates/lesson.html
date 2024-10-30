@@ -10,7 +10,7 @@
 <body>
     <title>LBB : {{course.name}}</title>
     <div id="layout_div" style="background-image: url({{url_for('static', filename='images/layout/layout.svg')}});"></div>
-    <a id="logout" href="/logout">Logout</a>
+    <a id="logout_button" href="/logout">Logout</a>
     <h3 id="course_heading">{{course.name}} : {{session.name}} : {{box.name}} : <span id="lesson_name">{{lesson.name}}</span></h3>
     <div id="content_div">
         <span id="watch_video_label">Watch this video</span>
@@ -20,8 +20,14 @@
         <div id="steps_div">
             {% for step in lesson.steps %}
                 {% if step.type == "task" %}
-                    <span id="task_description"><strong>TASK:</strong> {{ step.description | safe}}</span>
-                    <details id="task_result"><summary id="task_result_summary">Expected Result</summary>{{ step.result | safe }}</details>
+                    <div class="task_div">
+                        <input type="checkbox" class="task_checkbox" id="checkbox-{{loop.index}}" data-result-id="task_result-{{loop.index}}">
+                        <label for="checkbox-{{loop.index}}" id="task_description"><strong>TASK:</strong> {{ step.description | safe }}</label>
+                        <details id="task_result-{{loop.index}}" class="task_result">
+                            <summary class="task_result_summary">Expected Result</summary>
+                            {{ step.result | safe }}
+                        </details>
+                    </div>
                 {% elif step.type == "image" %}
                     <p align="center">
                         {{ step.html | safe }}
@@ -30,8 +36,39 @@
                     {{ step.html | safe }}
                 {% endif %}
             {% endfor %}
-       </div>
+        </div>
+        <form>
+            <button type="button" id="complete_button">Complete Lesson</button>
+        </form>
     </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Select all checkboxes with class "task-checkbox"
+            const checkboxes = document.querySelectorAll(".task_checkbox");
+            const completeButton = document.getElementById("complete_button");
+            const errorMessage = document.getElementById("error_message");
+
+            function updateButtonVisibility() {
+                const allChecked = Array.from(checkboxes).every(cb => cb.checked);
+                completeButton.style.display = allChecked ? "block" : "none";
+                errorMessage.style.display = "none"; // Hide error message if previously shown
+            }
+
+            checkboxes.forEach(function(checkbox) {
+                checkbox.addEventListener("change", function() {
+                    const detailsId = this.getAttribute("data-result-id");
+                    const detailsElement = document.getElementById(detailsId);
+                    if (detailsElement) {
+                        detailsElement.open = this.checked;
+                    }
+                    updateButtonVisibility();
+                });
+            });
+
+            updateButtonVisibility(); // Initial check on page load
+        });
+    </script>
 </body>
 
 </html>
