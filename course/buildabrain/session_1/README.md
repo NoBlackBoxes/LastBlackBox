@@ -5,10 +5,10 @@ In this session we will learn how electricity can be used to create "sensors"; t
 *"Let's start at the very beginning, a very good place to start"*. - *R&H*
 
 #### Watch this video: [Atomic Structure](https://vimeo.com/1000458082)
-A brief introduction to the physics of atoms, their parts (protons, neutrons, and electrons), and their classical vs. quantum structure.
+> A brief introduction to the physics of atoms, their parts (protons, neutrons, and electrons), and their classical vs. quantum structure.
 
 #### Watch this video: [The Periodic Table](https://vimeo.com/1000458082)
-The organization of elements into a table reveals a regular pattern, which is linked to the fundamental chemical properties of each material.
+> The organization of elements into a table reveals a regular pattern, which is linked to the fundamental chemical properties of each material.
 
 - When you need it *(and you will)*, then you can find a copy of the periodic table [here](../../../boxes/atoms/_data/images/periodic_table.png).
 - The electron configuration (assignments to specific orbitals) of each atomic element can be viewed [here](https://en.wikipedia.org/wiki/Electron_configurations_of_the_elements_(data_page)). 
@@ -17,34 +17,37 @@ The organization of elements into a table reveals a regular pattern, which is li
 Electrons are the sub-atomic particles that underlie *electricity*. Controlling the movement of electrons (and the effects of their movement) will allow us to build many different kinds of electronic devices, from simple circuits to robots and computers.
 
 #### Watch this video: [Voltage](https://vimeo.com/1000730032)
-When there is more negative charge in one location vs. another, we say there is a *potential difference* between these locations. This *potential difference* is called a **voltage** and it creates a force pushing electrons from the location with more negative charge to the location with less.
+> When there is more negative charge in one location vs. another, we say there is a *potential difference* between these locations. This *potential difference* is called a **voltage** and it creates a force pushing electrons from the location with more negative charge to the location with less.
 
 #### Watch this video: [Conductors](https://vimeo.com/1000740989)
-Some materials have electrons way out in their outer orbitals that are happy to jump between neighboring atomic nuclei (of the same element). We say that these electrons are "free" to move around the material. If we place such a material between two locations with a *potential difference* (voltage), then electrons will flow from the **(-)** location to the **(+)** location; the material will **conduct** electricity. 
+> Some materials have electrons way out in their outer orbitals that are happy to jump between neighboring atomic nuclei (of the same element). We say that these electrons are "free" to move around the material. If we place such a material between two locations with a *potential difference* (voltage), then electrons will flow from the **(-)** location to the **(+)** location; the material will **conduct** electricity. 
 
 #### Watch this video: [Batteries](https://vimeo.com/??????)
-Generating a stable voltage requires a source of electrons to maintain the *potential difference*, even when electrons are able to move between two areas of different charge. We can accomplish this with a (redox) chemical reaction inside the wonderfully useful device we call a **battery**.
+>Generating a stable voltage requires a source of electrons to maintain the *potential difference*, even when electrons are able to move between two areas of different charge. We can accomplish this with a (redox) chemical reaction inside the wonderfully useful device we call a **battery**.
 
 - [ ] **TASK**: Measure the voltage of a AA battery using your multimeter.
-> **Expected Result**: A single AA battery, fully charged, should have a voltage of ~1.6 Volts. If it is less than 1.5 Volts, then the battery is nearly *dead*.
 - *Hint*: Select the voltage ("V") setting and touch your probes to either end of the battery. Depending on your multimeter, you may also need to select an appropriate "range". For a single AA battery, you should expect to measure between 1 and 2 Volts.
 - If you are new to measuring voltage with a multimeter, then I recommend you watch this video: [NB3-Measuring Voltage](https://vimeo.com/??????)
+<details><summary><strong>Expected Result</strong></summary>
+A single AA battery, fully charged, should have a voltage of ~1.6 Volts. If it is less than 1.5 Volts, then the battery is nearly *dead*.</details><br>
 
 - [ ] **TASK**: Measure the voltage of 4xAA batteries in series (end to end).
-> **Expected Result**: Batteries connected in series will sum their voltages. You should measure four times the voltage of a single AA battery, about 6.4 Volts, from the batteries in your 4xAA holder.
 - *Hint*: You can use your battery holder.
+<details><summary><strong>Expected Result</strong></summary>
+Batteries connected in series will sum their voltages. You should measure four times the voltage of a single AA battery, about 6.4 Volts, from the batteries in your 4xAA holder.
+</details>
 
 #### Watch this video: [Current](https://vimeo.com/1000743561)
-The rate with which electrons flow, measured in #charges/second, we call **current** and we use the units *Amperes* or the more common term *Amps* (A).
+> The rate at which electrons flow, measured in #charges / second, is called **current**. We use the unit *Amps* (A).
 
 #### Watch this video: [Resistors](https://vimeo.com/1000755493)
-All materials are not equally good a letting their outer orbital electrons freely move around. Some materials "hold on" to their electrons a bit tighter, "resisting" their movement. We can create mixtures of these "resisting" materials and better "conducting" materials, often in the form of ceramics, to create **resistors** with a range of different *resistance* values, which we measure in Ohms (&Omega;).
+> Not all materials are good a letting their outer orbital electrons freely move around. Some materials hold onto their electrons and resist their movement. We can create mixtures of these "resisting" materials and better "conducting" materials, often in the form of ceramics, to create **resistors** with a range of different *resistance* values, which we measure in Ohms (&Omega;).
 
 - [ ] **TASK**: Measure the resistance of one of your resistors.
 > **Expected Result**: Your kit contains 470 &Omega;, 1 k&Omega;, and 10 k&Omega; resistors. You should measure one of these values.
 
 #### Watch this video: [NB3-Body](https://vimeo.com/1005036900)
-To help you start measuring and manipulating electricity, we will first assemble a "prototyping platform", which also happens to be the **body** of your robot (NB3).
+> To help you start measuring and manipulating electricity, we will first assemble a "prototyping platform", which also happens to be the **body** of your robot (NB3).
 
 - [ ] **TASK**: Assemble the robot body (prototyping base board).
 > **Expected Result**: Your NB3 should now look like [this](../../../boxes/electrons/NB3_body/NB3_body_front.png). Your breadboards will be different colors...and you should have some rubber feet on the back.
