@@ -74,6 +74,7 @@ With a voltage source (battery) and resistors, then we can start building "circu
 > **Expected Result**: A linear relationship.
 
 ### Watch this video: [Voltage Dividers](https://vimeo.com/1000782478)
+Here I say some things about voltage dividers.
 > [Concepts and Connections]()
 
 - [ ] **TASK**: Build a voltage divider using two resistors of the same value? Measure the intermediate voltage (between the resistors).

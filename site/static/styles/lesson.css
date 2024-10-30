@@ -3,7 +3,6 @@ html {
     height: 100%;
     margin: 0;
     background: black;
-    font-family: Arial;
 }
 
 #layout_div {
@@ -18,30 +17,32 @@ html {
 
 #content_div {
     position: absolute;
-    top: 20%;
+    top: 10%;
     left: 50%;
     width: 90%;
     max-width: 800px;
-    transform: translate(-50%, -10%);
+    transform: translate(-50%, 0%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     filter: brightness(100%);
-    background-color: rgba(0, 0, 0, 1.0);
+    background-color: rgba(22, 22, 22, 1.0);
     border-width: 2px;
     border-style: solid;
     border-radius: 15px;
     border-color: rgb(55, 55, 55);
-    color: rgb(255, 255, 255);
+    color: rgb(205, 205, 205);
+    font-family: "Poppins", sans-serif;
 
     @media (max-width:768px) {
+        top: 5%;
         width: 90%;
     }
 }
 
 #steps_div {
-    width: 60%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -56,61 +57,43 @@ html {
     margin-top: 20px;
     margin-bottom: 20px;
     width: 100%;
-    border-width: 7px;
+    border-width: 3px;
     border-color: rgb(56, 56, 56);
     border-radius: 7px;
     border-style: solid;
     background-color: rgb(36, 36, 36);
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px;
 
     @media (max-width:768px) {
         width: 90%;
     }
 }
 
-.task_complete_div {
-    margin: auto;
-    width: 40%;
-    border-width: 7px;
-    border-color: rgb(251, 255, 0);
-    border-radius: 7px;
-    border-style: solid;
-    background-color: rgb(169, 184, 135);
-    padding-top: 10px;
-    padding-bottom: 10px;
+#heading_div {
+    font-family: Arial;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
 
     @media (max-width:768px) {
-        width: 90%;
+        width: 80%;
     }
 }
-
 #course_heading {
-    position: absolute;
-    top: 15px;
-    left: 50%;
-    width: 80%;
-    transform: translate(-50%, 0%);
-    width: 80%;
     color: rgb(141, 141, 0);
-    text-align: center;
     font-size: 22px;
-    margin-bottom: 0px;
+    margin-bottom: 4px;
+
+    @media (max-width:768px) {
+        font-size: 16px;
+    }
 }
 
-#lesson_name {
-    color: rgb(141, 141, 141);
-    text-align: center;
+#lesson_heading {
+    color: rgb(241, 241, 241);
     font-size: 32px;
     margin-bottom: 0px;
-}
-
-#watch_video_label {
-    color: rgb(241, 241, 241);
-    text-align: center;
-    font-style: oblique;
-    font-size: 24px;
-    margin-top: 10px;
 }
 
 #link {
@@ -144,7 +127,15 @@ html {
     text-align: left;
     font-size: 20px;
     font-weight: 400;
-    margin-top: 15px;
+    margin: 15px;
+}
+
+.task_result_div {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 5px;
+    background-color: rgb(70, 70, 70);
 }
 
 .task_result {
@@ -155,13 +146,33 @@ html {
     margin-top: 5px;
 }
 
-.task_result_summary {
+.task_result_label {
     text-align: center;
     font-size: 14px;
     font-weight: 400;
     font-style: italic;
     color: yellow;
     margin-bottom: 5px;
+}
+
+#lesson_description {
+    text-align: justify;
+    width: 80%;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 15px;
+
+    @media (max-width:768px) {
+        font-size: 16px;
+    }
+}
+
+#watch_video_label {
+    color: rgb(241, 241, 0);
+    text-align: center;
+    font-style: italic;
+    font-size: 16px;
+    margin-top: 10px;
 }
 
 #video_player {
@@ -178,38 +189,9 @@ html {
     }
 }
 
-#task_label {
-    text-align: center;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-size: 36px;
-}
-
-#task_submit {
-    margin-top: 20px;
-    border-color: white;
-    border-radius: 11px;
-    border-style: solid;
-    background-color: yellow;
-    font-weight: 600;
-    font-size: 18px;
-    font-family: 'Poppins';
-    color: black;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-#task_submit:hover {
-    border-color: grey;
-}
-
 #logout_button {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     padding: 4px 8px;
     border: 1px yellow;
     border-style: solid;
@@ -218,11 +200,6 @@ html {
     background-color: black;
     text-decoration: none;
     transition-duration: 0.4s;
-
-    @media screen and (max-width: 768px) {
-        position: absolute;
-        top: 95%;
-    }
 }
 
 #logout_button:hover {
@@ -230,7 +207,7 @@ html {
     background-color: yellow;
 }
 
-#complete_button {
+#next_button {
     margin-top: 12px;
     padding: 8px 12px;
     border: 1px yellow;
@@ -242,14 +219,13 @@ html {
     transition-duration: 0.4s;
     font-size: 20px;
     font-weight: 800;
-    display: none;
 
     @media screen and (max-width: 768px) {
         margin-top: 16px;
     }
 }
 
-#complete_button:hover {
+#next_button:hover {
     color: yellow;
     background-color: black;
 }

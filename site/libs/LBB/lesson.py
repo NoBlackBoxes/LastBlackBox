@@ -6,6 +6,7 @@ LBB: Lesson Class
 """
 
 # Import modules
+import LBB.utilities as Utilities
 import LBB.instruction as Instruction
 import LBB.image as Image
 import LBB.video as Video
@@ -74,7 +75,7 @@ class Lesson:
         line_count += 1
 
         # Extract description
-        self.description = text[line_count][:-1]
+        self.description = Utilities.convert_emphasis_tags(text[line_count][:-1])
         line_count += 1
 
         # Extract steps
