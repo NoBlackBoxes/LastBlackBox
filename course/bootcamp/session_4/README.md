@@ -4,13 +4,13 @@
 
 ----
 
-### Networks
+## Networks
 
 ***Everyone must have their NB3 connected to the WiFi network and a "Remote - SSH" connection from VS Code***
 
 - Lecture: "Communication, protocols, and the internet"
 
-### Linux
+## Linux
 
 Now that we have a connection to our NB3 Linux computer (Raspberry Pi), we can *finally* start learning about Linux.
 
@@ -91,7 +91,7 @@ python test.py
 
 There is obviously quite a bit more you can do with Linux. Google and ChatGPT are your friends...just make sure you ask for "command line examples".
 
-### Git
+## Git
 
 Git is a piece of software that keeps track of any changes you make to the files within a folder (repository) filled with code. This is used to manage different versions of the code and to allow many different people to contribute their own changes in an orderly manner. GitHub, the website we have been using throughout this course, is an online service for "hosting" Git repositories.
 
@@ -163,7 +163,7 @@ void loop() {
 
 This code tells your Arduino to listen to the serial port. If it recives the letter 'o', turn on the built-in LED. If it receives the letter 'x', turn it off.
 
-### Python
+## Python
 
 We will write some simple Python code to talk to our Arduino (hindbrain) from our Raspberry Pi (midbrain) via the serial port. This means ***we must connect our Raspberry Pi to our Arduino with a USB cable***. You can simply unplug the USB cable from your laptop and plug it into the Raspberry Pi.
 
@@ -253,7 +253,7 @@ If you ***understand*** this code (and the code running on your Arduino), then y
 ----
 
 
-### Websites
+## Websites
 
 This is a website. Just a text file written in the hyper-text markup language (HTML) that your "web browser" knows how to display in a nicely formatted way.
 
@@ -270,7 +270,7 @@ This is a <b>website</b>
 
 - ***Task 1***: Make your own website (an HTML file). Open it in your web browser.
 
-### Servers
+## Servers
 
 A server is just a computer that you can connect to and ask it to send (serve) you a file (e.g. an HTML file).
 

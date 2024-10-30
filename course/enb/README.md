@@ -1,9 +1,9 @@
 # The Last Black Box : *Experimental Neuroscience Bootcamp*
 
-> **NeuroKit**: A one-week ***Technology Bootcamp*** for neuroscience researchers
+> **NeuroKit** (LBB-103): A one-week ***Technology Bootcamp*** for neuroscience researchers
 
 <p align="center">
-<img src="_designs/layout_bootcamp.png" alt="LBB bootcamp layout" width="800" height="400">
+<img src="_designs/layout_bootcamp.png" alt="LBB bootcamp layout" width="800">
 <br>
 <span>The <b>black boxes</b> you will open during <b>ENB</b></span>
 </p>

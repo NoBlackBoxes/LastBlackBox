@@ -1,13 +1,8 @@
 # Bootcamp : Session 1 - Electronics
 Here we will learn where electricity comes from, how we can measure it, and some cool things we can do with it.
 
-## Introduction
-
-- *Watch this video*: [The Last Black Box : Bootcamp : Introduction](https://vimeo.com/843482137)
-
 ## Atoms
-
-> "Let's start at the very beginning, a very good place to start". - *R&H*
+*"Let's start at the very beginning, a very good place to start"*. - *R&H*
 
 - *Watch this video*: [Structure and the Periodic Table](https://vimeo.com/1000458082)
   - When you need it (and you will), then you can find the periodic table [here](../../../boxes/atoms/card/periodic_table.png)

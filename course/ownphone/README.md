@@ -1,6 +1,6 @@
 # The Last Black Box: *Own Phone*
 
-> **LBB-102**: Smarter than your *smart*phone
+> **LBB-1024**: Smarter than your *smart*phone
 
 <p align="center">
 <img src="_designs/layout_ownphone.png" alt="LBB ownphone layout" width="500" height="500">
