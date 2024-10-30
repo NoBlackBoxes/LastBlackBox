@@ -6,7 +6,7 @@ LBB: Task Class
 """
 
 # Import modules
-import LBB.input as Input
+import LBB.utilities as Utilities
 
 # Task Class
 class Task:
@@ -40,44 +40,12 @@ class Task:
     
     # Parse task string
     def parse(self, text):
-        description_string = text[0]
-        result_string = text[1]
-        self.description = description_string[16:]
-        self.result = result_string[2:]
+        self.description = text[0][16:]
+        self.description = Utilities.convert_emphasis_tags(self.description)
+        self.description = Utilities.convert_markdown_links(self.description)
+        self.result = text[1].split("> **Expected Result**: ")[1]
+        self.result = Utilities.convert_emphasis_tags(self.result)
+        self.result = Utilities.convert_markdown_links(self.result)
         return
-    
-    def render(self):
-        output = []
-        self.header(output)
-        self.body(output)
-        self.footer(output)
-        return "".join(output)
-    
-    def header(self, output):
-        output.append(f"{{% if task_status['{self.name}'] == 1 %}}\n")
-        output.append(f"<div id=\"task_box_complete\">\n")
-        output.append("{% else %}\n")
-        output.append(f"<div id=\"task_box\">\n")
-        output.append("{% endif %}\n")
-        output.append(f"\t<h4 id=\"task_label\">TASK</h4>\n")
-        output.append(f"\t<h3 id=\"task_name\">{self.name}</h3><br>\n")
-        output.append(f"\t<form id=\"task_form\" method=post enctype=multipart/form-data>")
-        return output
-
-    def body(self, output):
-        num_subtasks = len(self.descriptions)
-        for i in range(num_subtasks):
-            output.append(f"{self.descriptions[i]}")
-            if self.inputs[i].type == "photo":
-                output.append("<br><br>")
-            output.append(self.inputs[i].render())
-        return output
-
-    def footer(self, output):
-        output.append(f"\t<br><input id=\"task_submit\" type=\"submit\" value=\"Submit\">\n")
-        output.append(f"\t\t<input type=\"hidden\" name=\"task_name\" value=\"{self.name}\"/>\n")        
-        output.append(f"\t</form>\n")
-        output.append(f"</div>\n")
-        return output
 
 #FIN

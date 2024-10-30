@@ -62,7 +62,7 @@ class Project:
         while line_count < max_count:
             if text[line_count][0] != '\n':
                 # Classify step
-                if text[line_count][0:22] == '<p align="center"><img':
+                if text[line_count].startswith('<p align="center"><img'):
                     image = Image.Image(text[line_count])
                     image.index = step_count
                     self.steps.append(image)

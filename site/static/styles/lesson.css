@@ -5,7 +5,7 @@ body, html {
     font-family: Arial;
 }
 
-#layout {
+#layout_div {
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -15,7 +15,7 @@ body, html {
     filter: brightness(10%);
 }
 
-#content {
+#content_div {
     position: absolute; 
     top: 20%;
     left: 50%;
@@ -30,58 +30,53 @@ body, html {
     border-width: 2px;
     border-style: solid;
     border-radius: 15px;
-    border-color: rgb(255, 255, 255);
+    border-color: rgb(55, 55, 55);
     color: rgb(255, 255, 255);
 }
 
-#link {
-    color: yellow;
+#steps_div {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
 }
 
 #course_heading {
-    color: yellow;
+    position: absolute; 
+    top: 25px;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, 0%);
+    width: 80%;
+    color: rgb(141, 141, 0);
     text-align: center;
     font-size: 22px;
     margin-bottom: 0px;
 }
 
 #lesson_name {
-    color: white;
+    color: rgb(141, 141, 141);
     text-align: center;
-    font-size: 42px;
-    margin-bottom: 0px;
-}
-
-#session_heading {
-    color: rgb(255, 255, 255);
-    text-align: left;
     font-size: 32px;
     margin-bottom: 0px;
 }
 
-#box_heading {
-    color: rgb(165, 165, 165);
-    text-align: left;
-    font-size: 22px;
-    margin-bottom: 0px;
-}
-
-#lesson_heading {
-    color: rgb(255, 255, 0);
-    text-align: left;
-    margin-bottom: 0px;
-}
-
-#topic_description {
-    color: yellow;
+#watch_video_label {
+    color: rgb(241, 241, 241);
     text-align: center;
-    font-size: 12px;
-    margin-bottom: 0px;
+    font-style: oblique;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+#link {
+    color: yellow;
 }
 
 #quote {
     margin: auto;
-    width: 40%;
+    width: 80%;
     border-width: 3px;
     border-color: rgb(156, 156, 156);
     border-radius: 3px;
@@ -90,15 +85,35 @@ body, html {
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: center;
-    font-size: 20px;
+    font-size: 16px;
     color: rgb(0, 0, 0);;
     font-weight: 400;
 }
 
 #instruction {
-    text-align: center;
-    font-size: 25px;
+    text-align: left;
+    font-size: 18px;
     font-weight: 400;
+}
+
+#task_description {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+#task_result {
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 5px;
+}
+
+#task_result_summary {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
 }
 
 #video_player {
@@ -151,19 +166,6 @@ body, html {
     font-size: 36px;
 }
 
-#task_name {
-    text-align: center;
-    margin-top: 0px;
-    font-size: 10px;
-    color: yellow;
-}
-
-#task_form {
-    text-align: center;
-    font-size: 16px;
-    color: white;
-}
-
 #task_submit {
     margin-top: 20px;
     border-color: white;
@@ -186,4 +188,28 @@ body, html {
 
 .task_input_text {
     width: 50px;
+}
+
+#logout {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    margin-top: 10px;
+    padding: 4px 8px;
+    border: 1px yellow;
+    border-style: solid;
+    border-radius: 3px;
+    color: yellow;
+    background-color: black;
+    text-decoration: none;
+    transition-duration: 0.4s;
+
+    @media screen and (max-width: 768px) {
+        margin-top: 16px;
+    }
+}
+
+#logout:hover {
+    color: black;
+    background-color: yellow;
 }

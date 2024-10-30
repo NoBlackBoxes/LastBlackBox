@@ -59,20 +59,23 @@ def archive_task_submission(topic_folder_path, task_name):
             shutil.move(submission, destination)
     return
 
+# Find and convert all markdown emphasis tags
 def convert_emphasis_tags(text):
     text = re.sub(r'\*\*\*(.*?)\*\*\*', r'<strong><em>\1</em></strong>', text)
     text = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', text)
     text = re.sub(r'\*(.*?)\*', r'<em>\1</em>', text)
     return text
 
+# Find and convert all markdown links in the format [text](url)
 def convert_markdown_links(text):
-    # Find and convert all markdown links in the format [text](url)
-    links = re.findall(r'\[(.*?)\]\((.*?)\)', text)
-    for link_text, link_url in links:
-        if link_url[0:4] != "http":
-            link_url = re.sub(r'^(?:\.\./)+', '', link_url)
-            link_url = f"https://raw.githubusercontent.com/NoBlackBoxes/LastBlackBox/master/{link_url}"
-        text = re.sub(r'\[(.*?)\]\((.*?)\)', f"<a id=\"link\" href=\"{link_url}\" target=\"_blank\">{link_text}</a>", text)
-    return text
+    return re.sub(r'\[(.*?)\]\((.*?)\)', replace_link, text)
+
+# Replace matched links (and convert internal repo links)
+def replace_link(match):
+    link_text, link_url = match.groups()
+    if not link_url.startswith("http"):
+        link_url = re.sub(r'^(?:\.\./)+', '', link_url)
+        link_url = f"https://github.com/NoBlackBoxes/LastBlackBox/tree/master/{link_url}"
+    return f'<a id="link" href="{link_url}" target="_blank">{link_text}</a>'
 
 #FIN

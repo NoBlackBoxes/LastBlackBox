@@ -36,9 +36,12 @@ class Image:
         self.html = dictionary.get("html")
         return
     
-    # Parse instruction string
+    # Parse image string
     def parse(self, text):
-        self.html = "<img src=\"https://raw.githubusercontent.com/NoBlackBoxes/LastBlackBox/master" + text[36:-4] + '\n'
+        if not text.split("src=")[1].startswith("http"):
+            self.html = text.replace("../../..", "https://raw.githubusercontent.com/NoBlackBoxes/LastBlackBox/master")
+        else:
+            self.html = text
         return
 
 #FIN
