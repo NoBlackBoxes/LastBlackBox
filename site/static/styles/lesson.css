@@ -41,6 +41,68 @@ html {
     }
 }
 
+#heading_div {
+    font-family: Arial;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+
+    @media (max-width:768px) {
+        width: 80%;
+    }
+}
+
+#course_heading {
+    color: rgb(141, 141, 0);
+    font-size: 22px;
+    margin-bottom: 4px;
+
+    @media (max-width:768px) {
+        font-size: 16px;
+    }
+}
+
+#lesson_heading {
+    color: rgb(241, 241, 241);
+    font-size: 32px;
+    margin-bottom: 0px;
+}
+
+#lesson_description {
+    text-align: justify;
+    width: 80%;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 15px;
+
+    @media (max-width:768px) {
+        font-size: 16px;
+    }
+}
+
+#watch_video_heading {
+    color: rgb(241, 241, 0);
+    text-align: center;
+    font-style: italic;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#video_player {
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    border-radius: 7px;
+    width: 640px;
+    height: 360px;
+
+    @media (max-width:768px) {
+        width: 320px;
+        height: 180px;
+    }
+}
+
 #steps_div {
     width: 80%;
     display: flex;
@@ -69,31 +131,32 @@ html {
     }
 }
 
-#heading_div {
-    font-family: Arial;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 15px;
-
-    @media (max-width:768px) {
-        width: 80%;
-    }
-}
-#course_heading {
-    color: rgb(141, 141, 0);
-    font-size: 22px;
-    margin-bottom: 4px;
-
-    @media (max-width:768px) {
-        font-size: 16px;
-    }
+.task_checkbox {
+    width: 30px;
 }
 
-#lesson_heading {
-    color: rgb(241, 241, 241);
-    font-size: 32px;
-    margin-bottom: 0px;
+.task_description {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 15px;
+}
+
+.task_result {
+    width: 90%;
+    transform: translate(+5%, 0%);
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 5px;
+}
+
+.task_result_summary {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: italic;
+    color: yellow;
+    margin-bottom: 5px;
 }
 
 #link {
@@ -123,102 +186,18 @@ html {
     margin: 5px;
 }
 
-.task_description {
-    text-align: left;
-    font-size: 20px;
-    font-weight: 400;
-    margin: 15px;
-}
-
-.task_result_div {
-    width: 100%;
-    font-size: 16px;
-    font-weight: 300;
-    margin-top: 5px;
-    background-color: rgb(70, 70, 70);
-}
-
-.task_result {
-    width: 90%;
-    transform: translate(+5%, 0%);
-    font-size: 16px;
-    font-weight: 300;
-    margin-top: 5px;
-}
-
-.task_result_label {
-    text-align: center;
-    font-size: 14px;
-    font-weight: 400;
-    font-style: italic;
-    color: yellow;
-    margin-bottom: 5px;
-}
-
-#lesson_description {
-    text-align: justify;
-    width: 80%;
-    font-size: 20px;
-    font-weight: 300;
-    margin-top: 15px;
-
-    @media (max-width:768px) {
-        font-size: 16px;
-    }
-}
-
-#watch_video_label {
-    color: rgb(241, 241, 0);
-    text-align: center;
-    font-style: italic;
-    font-size: 16px;
-    margin-top: 10px;
-}
-
-#video_player {
-    border-width: 3px;
-    border-style: solid;
-    border-color: rgb(141, 141, 141);
-    border-radius: 7px;
-    width: 640px;
-    height: 360px;
-
-    @media (max-width:768px) {
-        width: 320px;
-        height: 180px;
-    }
-}
-
-#logout_button {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 4px 8px;
-    border: 1px yellow;
-    border-style: solid;
-    border-radius: 3px;
-    color: yellow;
-    background-color: black;
-    text-decoration: none;
-    transition-duration: 0.4s;
-}
-
-#logout_button:hover {
-    color: black;
-    background-color: yellow;
-}
-
 #next_button {
     margin-top: 12px;
     padding: 8px 12px;
     border: 1px yellow;
     border-style: solid;
     border-radius: 7px;
-    color: black;
-    background-color: yellow;
     text-decoration: none;
     transition-duration: 0.4s;
     font-size: 20px;
     font-weight: 800;
+    color: yellow;
+    background-color: black;
 
     @media screen and (max-width: 768px) {
         margin-top: 16px;
@@ -226,6 +205,25 @@ html {
 }
 
 #next_button:hover {
-    color: yellow;
+    color: black;
+    background-color: yellow;
+}
+
+#logout_button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 4px 8px;
+    border: 1px rgb(155, 155, 155);
+    border-style: solid;
+    border-radius: 3px;
+    color: rgb(148, 148, 148);
     background-color: black;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    font-size: 12px;
+}
+
+#logout_button:hover {
+    color: black;
+    background-color: yellow;
 }

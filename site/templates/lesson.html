@@ -17,7 +17,7 @@
             <span id="lesson_heading">{{lesson.name}}</span>
         </div>
         <span id="lesson_description">{{ lesson.description | safe }}</span>
-        <span id="watch_video_label">Watch this video</span>
+        <span id="watch_video_heading">Watch this video</span>
         <iframe id="video_player" src="https://player.vimeo.com/video/{{lesson.video.id}}?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title={{lesson.video.name}}></iframe>
         <div id="steps_div">
             {% for step in lesson.steps %}
@@ -25,7 +25,7 @@
             <div class="task_div">
                 <input type="checkbox" class="task_checkbox" id="checkbox-{{loop.index}}" data-result-id="task_result-{{loop.index}}">
                 <label for="checkbox-{{loop.index}}" id="task_description"><strong>TASK:</strong> {{ step.description | safe }}</label>
-                <details id="task_result-{{loop.index}}" class="task_result">
+                <details class="task_result" id="task_result-{{loop.index}}">
                     <summary class="task_result_summary">Expected Result</summary>
                     {{ step.result | safe }}
                 </details>
@@ -42,19 +42,27 @@
         <form>
             <button type="button" id="next_button">Next Lesson</button>
         </form>
+        <span id"error_message"">You must complete (check) all tasks before proceeding to the next lesson.</span>
         <a id="logout_button" href="/logout">Logout</a>
     </div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+            // Set background to max scroll height*1.2
+            const content_div =  document.getElementById("content_div");
+            const layout_div = document.getElementById("layout_div");
+            layout_div.style.height = (content_div.scrollHeight*1.2).toString()+"px";
+
             // Select all checkboxes with class "task-checkbox"
             const checkboxes = document.querySelectorAll(".task_checkbox");
-            const completeButton = document.getElementById("complete_button");
             const errorMessage = document.getElementById("error_message");
 
             function updateButtonVisibility() {
+                // Set background to max scroll height*1.2
+                const content_div =  document.getElementById("content_div");
+                const layout_div = document.getElementById("layout_div");
+                layout_div.style.height = (content_div.scrollHeight*1.2).toString()+"px";
                 const allChecked = Array.from(checkboxes).every(cb => cb.checked);
-                completeButton.style.display = allChecked ? "block" : "none";
                 errorMessage.style.display = "none"; // Hide error message if previously shown
             }
 
@@ -69,7 +77,7 @@
                 });
             });
 
-            updateButtonVisibility(); // Initial check on page load
+            updateButtonVisibility();
         });
     </script>
 </body>
