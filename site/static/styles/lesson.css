@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
     height: 100%;
     margin: 0;
     background: black;
@@ -10,36 +11,45 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: rgba(0,0,0,1.0);
-    background-attachment:fixed;
+    background-color: rgba(0, 0, 0, 1.0);
+    background-attachment: fixed;
     filter: brightness(10%);
 }
 
 #content_div {
-    position: absolute; 
+    position: absolute;
     top: 20%;
     left: 50%;
-    width: 60%;
+    width: 90%;
+    max-width: 800px;
     transform: translate(-50%, -10%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     filter: brightness(100%);
-    background-color: rgba(0,0,0,1.0);
+    background-color: rgba(0, 0, 0, 1.0);
     border-width: 2px;
     border-style: solid;
     border-radius: 15px;
     border-color: rgb(55, 55, 55);
     color: rgb(255, 255, 255);
+
+    @media (max-width:768px) {
+        width: 90%;
+    }
 }
 
 #steps_div {
-    width: 600px;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: left;
     align-items: left;
+
+    @media (max-width:768px) {
+        width: 80%;
+    }
 }
 
 .task_div {
@@ -54,7 +64,7 @@ body, html {
     padding-top: 10px;
     padding-bottom: 10px;
 
-    @media (max-width:768px){
+    @media (max-width:768px) {
         width: 90%;
     }
 }
@@ -70,13 +80,13 @@ body, html {
     padding-top: 10px;
     padding-bottom: 10px;
 
-    @media (max-width:768px){
+    @media (max-width:768px) {
         width: 90%;
     }
 }
 
 #course_heading {
-    position: absolute; 
+    position: absolute;
     top: 15px;
     left: 50%;
     width: 80%;
@@ -108,7 +118,6 @@ body, html {
 }
 
 #quote {
-    margin: auto;
     width: 80%;
     border-width: 3px;
     border-color: rgb(156, 156, 156);
@@ -119,7 +128,8 @@ body, html {
     padding-bottom: 10px;
     text-align: center;
     font-size: 16px;
-    color: rgb(0, 0, 0);;
+    color: rgb(0, 0, 0);
+    ;
     font-weight: 400;
 }
 
@@ -159,9 +169,12 @@ body, html {
     border-style: solid;
     border-color: rgb(141, 141, 141);
     border-radius: 7px;
+    width: 640px;
+    height: 360px;
 
-    @media (max-width:768px){
-        width: 90%;
+    @media (max-width:768px) {
+        width: 320px;
+        height: 180px;
     }
 }
 
@@ -180,7 +193,7 @@ body, html {
     background-color: yellow;
     font-weight: 600;
     font-size: 18px;
-    font-family:'Poppins';
+    font-family: 'Poppins';
     color: black;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -207,7 +220,8 @@ body, html {
     transition-duration: 0.4s;
 
     @media screen and (max-width: 768px) {
-        margin-top: 16px;
+        position: absolute;
+        top: 95%;
     }
 }
 
