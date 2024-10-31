@@ -69,39 +69,49 @@ Can be multiple lines, but just text.
 Box description.
 Can be multiple lines, but just text.
 
-### Watch this video: [Video Title](video url)
-Video content description (single line of text).
+#### Watch this video: [Video Title](video url)
+> Video content description (single line of text).
 
-### Watch this video: [Video Title](video url)
-Video content description (single line of text).
+#### Watch this video: [Video Title](video url)
+> Video content description (single line of text).
+
 - [ ] **Task**: Task description.
-> **Expected result**: The expected results of completing the task are listed here. You can use images and links.
-- Other task help: hints, warnings, etc.
+- Other task instructions: hints, help, warnings, challenges, etc.
+<details><summary><strong>Target</strong></summary>
+The expected results of completing the task are listed here. You can use images and links.
+</details><hr>
 
 ## Box #2 Name
 Can be multiple lines, but just text.
 
-###  Watch this video: [Video Name](video url)
-Video content description (single line of text).
-- **Task**: Task description.
-> **Expected result**: The expected results of completing the task are listed here. You can use images and links.
-- Other task help: hints, warnings, etc.
+####  Watch this video: [Video Name](video url)
+> Video content description (single line of text).
 
 - **Task**: Task description.
-> **Expected result**: The expected results of completing the task are listed here. You can use images and links.
-- Other task help: hints, warnings, etc.
+- Other task instructions: hints, help, warnings, challenges, etc.<details><summary><strong>Target</strong></summary>
+The expected results of completing the task are listed here. You can use images and links.
+</details><hr>
 
-###  Watch this video: [Video Name](video url)
-Video content description (single line of text).
 - **Task**: Task description.
-> **Expected result**: The expected results of completing the task are listed here. You can use images and links.
-- Other task help: hints, warnings, etc.
+- Other task instructions: hints, help, warnings, challenges, etc.<details><summary><strong>Target</strong></summary>
+The expected results of completing the task are listed here. You can use images and links.
+</details><hr>
+
+####  Watch this video: [Video Name](video url)
+> Video content description (single line of text).
+- **Task**: Task description.
+- Other task instructions: hints, help, warnings, challenges, etc.
+<details><summary><strong>Target</strong></summary>
+The expected results of completing the task are listed here. You can use images and links.
+</details><hr>
 
 ---
 
 # Project
 ### Project Name
 Session project description. Consisting of written instructions, images, videos, and links. Describe project goals, etc.
+- Other project instructions: hints, help, warnings, challenges, etc.
+- Other project instructions: hints, help, warnings, challenges, etc.
 
 Submission instructions (link to Discord #channel)
 ```

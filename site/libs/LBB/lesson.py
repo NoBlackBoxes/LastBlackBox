@@ -85,12 +85,17 @@ class Lesson:
             if text[line_count][0] != '\n':
                 # Classify step
                 if text[line_count].startswith('- [ ] **TASK'):
-                    # Confirm expected result description
-                    if text[line_count + 1].startswith("> **E"):
-                        task = Task.Task(text[line_count:(line_count+2)])
-                        task.index = step_count
-                        self.steps.append(task)
+                    task_text = []
+                    task_text.append(text[line_count])
+                    line_count += 1
+                    # Extract task steps
+                    while not text[line_count].startswith("</details>"):
+                        task_text.append(text[line_count])
                         line_count += 1
+                    task_text.append(text[line_count])
+                    task = Task.Task(task_text)
+                    task.index = step_count
+                    self.steps.append(task)
                 elif text[line_count].startswith('<p align="center">'):
                     image = Image.Image(text[line_count+1])
                     image.index = step_count

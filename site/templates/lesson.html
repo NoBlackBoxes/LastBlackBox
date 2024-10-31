@@ -21,22 +21,31 @@
         <iframe id="video_player" src="https://player.vimeo.com/video/{{lesson.video.id}}?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" title={{lesson.video.name}}></iframe>
         <div id="steps_div">
             {% for step in lesson.steps %}
-            {% if step.type == "task" %}
-            <div class="task_div">
-                <input type="checkbox" class="task_checkbox" id="checkbox-{{loop.index}}" data-result-id="task_result-{{loop.index}}">
-                <label for="checkbox-{{loop.index}}" id="task_description"><strong>TASK:</strong> {{ step.description | safe }}</label>
-                <details class="task_result" id="task_result-{{loop.index}}">
-                    <summary class="task_result_summary">Expected Result</summary>
-                    {{ step.result | safe }}
-                </details>
-            </div>
-            {% elif step.type == "image" %}
-            <p align="center">
-                {{ step.html | safe }}
-            </p>
-            {% else %}
-            {{ step.html | safe }}
-            {% endif %}
+                {% if step.type == "task" %}
+                    <div class="task_div">
+                        <input type="checkbox" class="task_checkbox" id="checkbox-{{loop.index}}" data-result-id="task_result-{{loop.index}}">
+                        <label for="checkbox-{{loop.index}}" id="task_description"><strong>TASK:</strong> {{ step.description | safe }}</label>
+                        {% for task_step in step.steps %}
+                            {% if task_step.type == "image" %}                                
+                                <p align="center">
+                                    {{ task_step.html | safe }}
+                                </p>
+                            {% else %}
+                                {{ task_step.html | safe }}
+                            {% endif %}
+                        {% endfor %}
+                        <details class="task_result" id="task_result-{{loop.index}}">
+                            <summary class="task_result_summary">Target</summary>
+                            {{ step.target | safe }}
+                        </details>
+                    </div>
+                {% elif step.type == "image" %}
+                    <p align="center">
+                        {{ step.html | safe }}
+                    </p>
+                {% else %}
+                    {{ step.html | safe }}
+                {% endif %}
             {% endfor %}
         </div>
         <form>

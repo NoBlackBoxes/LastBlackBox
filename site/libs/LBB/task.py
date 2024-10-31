@@ -7,6 +7,8 @@ LBB: Task Class
 
 # Import modules
 import LBB.utilities as Utilities
+import LBB.instruction as Instruction
+import LBB.image as Image
 
 # Task Class
 class Task:
@@ -14,7 +16,8 @@ class Task:
         self.index = None               # Step index
         self.type = "task"              # Step type
         self.description = None         # Task description
-        self.result= None               # Task result
+        self.steps = None               # Task steps
+        self.target = None              # Task target
         if text:
             self.parse(text)            # Parse task from README text
         elif dictionary:
@@ -23,11 +26,13 @@ class Task:
     
     # Convert task object to dictionary
     def to_dict(self):
-        dictionary = {}
-        dictionary.update({"index": self.index})
-        dictionary.update({"type": self.type})
-        dictionary.update({"description": self.description})
-        dictionary.update({"result": self.result})
+        dictionary = {
+            "index": self.index,
+            "type": self.type,
+            "description": self.description,
+            "steps": [step.to_dict() for step in self.steps],
+            "target": self.target
+        }
         return dictionary
 
     # Convert dictionary to task object
@@ -35,17 +40,52 @@ class Task:
         self.index = dictionary.get("index")
         self.type = dictionary.get("type")
         self.description = dictionary.get("description")
-        self.result = dictionary.get("result")
+        self.steps = []
+        for step_dictionary in dictionary.get("steps"):
+            if step_dictionary.get("type") == "instruction":
+                step = Instruction.Instruction(dictionary=step_dictionary)
+            elif step_dictionary.get("type") == "image":
+                step = Image.Image(dictionary=step_dictionary)
+            else:
+                print(f"Unknown step type in task: {self.description}")
+                exit(-1)
+            self.steps.append(step)
+        self.target = dictionary.get("target")
         return
     
     # Parse task string
     def parse(self, text):
+        # Set line counter
+        line_count = 0
+
+        # Extract description
         self.description = text[0][16:]
         self.description = Utilities.convert_emphasis_tags(self.description)
         self.description = Utilities.convert_markdown_links(self.description)
-        self.result = text[1].split("> **Expected Result**: ")[1]
-        self.result = Utilities.convert_emphasis_tags(self.result)
-        self.result = Utilities.convert_markdown_links(self.result)
+        line_count += 1
+
+        # Extract steps
+        self.steps = []
+        step_count = 0
+        while not text[line_count].startswith("<details>"):
+            # Classify step
+            if text[line_count].startswith('<p align="center">'):
+                image = Image.Image(text[line_count+1])
+                image.index = step_count
+                self.steps.append(image)
+                line_count += 2
+            else:
+                instruction = Instruction.Instruction(text[line_count].strip())
+                instruction.index = step_count
+                self.steps.append(instruction)
+            step_count += 1
+            line_count += 1
+        line_count += 1
+
+        # Extract target
+        self.target = text[line_count]
+        self.target = Utilities.convert_emphasis_tags(self.target)
+        self.target = Utilities.convert_markdown_links(self.target)
         return
 
 #FIN

@@ -68,7 +68,7 @@ class Box:
             lesson_text = []
             lesson_text.append(text[line_count])
             line_count += 1
-            while text[line_count][0:9] != '### Watch': # Next lesson
+            while not text[line_count].startswith('#### Watch'): # Next lesson
                 if text[line_count][0] != '\n':
                     lesson_text.append(text[line_count])
                 line_count += 1
