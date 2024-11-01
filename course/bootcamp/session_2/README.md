@@ -1,5 +1,5 @@
-# Bootcamp : Session 2 - Computers
-It's time to learn how transistors can perform logic, store information, and work together to create a circuit that can perform *computations*.
+# Bootcamp : Session 2 - Digital Computers
+It's time to learn how transistors can perform logic, store information, and work together to create a circuit that *computes*.
 
 ---
 # Morning

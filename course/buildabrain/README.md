@@ -12,7 +12,7 @@
 
 ## NB3
 
-You will be building a brain for your robot. The robot's physical layout mimics the basic anatomy of a (vertebrate) brain. As you progress through the course, your robot will *evolve* into an increasingly sophisticated machine. The goal is to create an "intelligent" machine without using any "black boxes". We thus call this robot the No-Black-Box-Brain or NBBB or ***NB3***.
+You will be building a brain for your robot. The robot's physical layout mimics the basic anatomy of a (vertebrate) brain. As you progress through the course, your robot will *evolve* into an increasingly sophisticated machine. The goal is to create an "intelligent" machine without using any **black boxes**. We thus call this robot the No-Black-Box-Brain or NBBB or ***NB3***.
 
 <p align="center">
 <img src="../_designs/NB3/NB3_render.png" alt="NB3 outline" width="300">
@@ -20,51 +20,51 @@ You will be building a brain for your robot. The robot's physical layout mimics 
 
 ----
 
-## Timeline
+## Schedule
 
-### Session 1 - Sensing the world
+### Session 1 - [Sensing the World](session_1/README.md)
 
 - Add some sensory input
   - Learn about atoms, electrons, sensors, and light
     - **Project**: *Build a Light Sensor*
 
-### Session 2 - Making things move
+### Session 2 - [Making Things Move](session_2/README.md)
 
-- Make things move!
+- Create and control motion
   - Learn about magnets and motors
     - **Project**: *Build a Speaker*
 
-### Session 3 - Digital decisions
+### Session 3 - [Digital Decisions](session_3/README.md)
 
 - The most important thing you don't understand
   - Learn about transistors, amplifiers, circuits, and power
     - **Project**: *Build a Light-Sensitive Motor*
 
-### Session 4 - How computers work
+### Session 4 - [How Computers Work](session_4/README.md)
 
 - To think is to compute
   - Learn about data, logic, memory, computers, and FPGAs
     - **Project**: *Program a Microcontroller*
 
-### Session 5 - Programming behaviour
+### Session 5 - [Programming Behaviour](session_5/README.md)
 
 - Build your first brain + body, that can sense, move, and make decisions
   - Learn about control and robotics
     - **Project**: *Build a Braitenberg Vehicle*
 
-### Session 6 - Operating systems
+### Session 6 - [Operating Systems](session_6/README.md)
 
 - Extend your brain with some human-engineered complexity
   - Learn about Linux and Python
     - **Project**: *Connect Wirelessly to your Robot*
 
-### Session 7 - Network connections
+### Session 7 - [Network Connections](session_7/README.md)
 
 - Connect and communicate...like a machine
   - Learn about websites, servers, networks, and security
     - **Project**: *Build a Remote Control Robot*
 
-### Session 8 - Artificial Intelligence
+### Session 8 - [Artificial Intelligence](session_8/README.md)
 
 - Make it smart....what is smart?
   - Learn about audio, vision, learning, and intelligence

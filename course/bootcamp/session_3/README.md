@@ -1,4 +1,4 @@
-# Bootcamp : Session 3 - Systems and Networks
+# Bootcamp : Session 3 - The Software Stack
 
 ---
 # Morning

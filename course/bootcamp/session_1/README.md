@@ -1,4 +1,4 @@
-# Bootcamp : Session 1 - Electronics
+# Bootcamp : Session 1 - Analog Electronics
 Here we will learn where electricity comes from, how we can measure it, and some cool things we can do with it.
 
 ## Atoms

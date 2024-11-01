@@ -20,19 +20,19 @@ You will be building a robot. The robot's physical layout mimics the basic anato
 
 ----
 
-## Timeline
+## Schedule
 
-### Session 1 - [Electronics](session_1/README.md)
+### Session 1 - [Analog Electronics](session_1/README.md)
 
-- *Morning:* Atoms, Electrons, Magnets, Sensors, and Motors
-- *Afternoon:* Transistors
+- [*Morning:*](session_1/#atoms) Atoms, Electrons, and Sensors
+- [*Afternoon:*](session_1/#magnets) Magnets, Motors, and Transistors
 
-### Session 2 - [Binary Computers](session_2/README.md)
+### Session 2 - [Digital Computers](session_2/README.md)
 
 - *Morning:* Computers
 - *Afternoon:* Robotics
 
-### Session 3 - [Systems and Networks](session_3/README.md)
+### Session 3 - [The Software Stack](session_3/README.md)
 
 - *Morning:* Power, Systems, Linux, Python
 - *Afternoon:* Networks, Websites, and Servers
