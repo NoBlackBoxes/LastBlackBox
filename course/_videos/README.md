@@ -11,6 +11,7 @@
 - [ ] [Ohm's Law](https://vimeo.com/1000768334)
 - [ ] [Voltage Dividers](https://vimeo.com/1000782478)
 - [ ] [NB3 : Measuring Voltage](https://vimeo.com/??????)
+- [ ] [NB3 : Measuring Resistance](https://vimeo.com/??????)
 - [ ] [NB3 : Body](https://vimeo.com/1005036900)
 - [ ] [NB3 : Designing PCBs with KiCAD](https://vimeo.com/??????)
 - [ ] [NB3 : Building Circuits](https://vimeo.com/??????)
@@ -33,6 +34,7 @@
 - [ ] [Semiconductors](https://vimeo.com/1000842810)
 - [ ] [Diodes](https://vimeo.com/1000861996)
 - [ ] [MOSFETs](https://vimeo.com/1000873279)
+- [ ] [NB3-Building a Light-Sensitive Motor](https://vimeo.com/??????)
 
 ## Computers
 - [ ] [Logic](https://vimeo.com/1005128209)

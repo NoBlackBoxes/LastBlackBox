@@ -27,7 +27,7 @@ You will be building a robot. The robot's physical layout mimics the basic anato
 - *Morning:* Atoms, Electrons, Magnets, Sensors, and Motors
 - *Afternoon:* Transistors
 
-### Session 2 - [Computers](session_2/README.md)
+### Session 2 - [Binary Computers](session_2/README.md)
 
 - *Morning:* Computers
 - *Afternoon:* Robotics

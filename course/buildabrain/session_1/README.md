@@ -1,5 +1,5 @@
-# Build a Brain : Session 1 - Sensors
-We will start by learning how electricity is used to create "sensors", which will be the inputs for your robot brain. Sensors can measure anything that we want our robot to know about the world (light intensity, temperature, pressure, sound, etc.).
+# Build a Brain : Session 1 - Sensing the world
+We will start by learning how electricity is used to create "sensors", which will be the inputs for your robot brain. Sensors will measure anything you want your robot to know about the world (light intensity, temperature, pressure, sound, etc.).
 
 ## Atoms
 *"Let's start at the very beginning, a very good place to start"*. - R&H
@@ -45,6 +45,7 @@ Batteries connected in series will sum their voltages. You should measure four t
 > Not all materials are good a letting their outer orbital electrons freely move around. Some materials hold onto their electrons and resist their movement. We can create mixtures of these "resisting" materials and better "conducting" materials, often in the form of ceramics, to create **resistors** with a range of different *resistance* values, which we measure in Ohms (&Omega;).
 
 - [ ] **TASK**: Measure the resistance of one of your resistors.
+- *Help*: If you are new to measuring resistance with a multimeter, then I recommend you watch this video: [NB3-Measuring Resistance](https://vimeo.com/??????)
 <details><summary><strong>Target</strong></summary>
 Your kit contains 470 &Omega;, 1 k&Omega;, and 10 k&Omega; resistors. You should measure one of these values.
 </details><hr>
@@ -93,7 +94,7 @@ The intermediate voltage should continuously vary as you adjust the potentiomete
 </details><hr>
 
 ## Sensors
-Our robot's brain uses computers, which can *only* measure electrical signals. Sensors are necessary to convert physical signals (light intensity, heat, air pressure, etc.) into electrical signals.
+Your robot's brain is based on digital computers, which can *only* measure electrical signals. Sensors are necessary to convert (transduce) physical signals (light intensity, heat, air pressure, etc.) into electrical signals.
 
 #### Watch this video: [Light Sensors](https://vimeo.com/1000794164)
 > A light sensor converts a change light intensity into a change in an electrical signal (voltage, current, or resistance).
