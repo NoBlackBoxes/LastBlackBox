@@ -23,9 +23,11 @@
             {% for step in lesson.steps %}
                 {% if step.type == "task" %}
                     <div class="task_div">
-                        <input type="checkbox" class="task_checkbox" id="checkbox-{{loop.index}}" data-result-id="task_result-{{loop.index}}">
-                        <label for="checkbox-{{loop.index}}" id="task_description"><strong>TASK:</strong> {{ step.description | safe }}</label>
-                        {% for task_step in step.steps %}
+                        <div class="task_description_div">
+                            <input type="checkbox" class="task_checkbox" id="checkbox-{{loop.index}}" data-result-id="task_result-{{loop.index}}">
+                            <label for="checkbox-{{loop.index}}" id="task_description"><strong>TASK:</strong> {{ step.description | safe }}</label>
+                        </div>
+                            {% for task_step in step.steps %}
                             {% if task_step.type == "image" %}                                
                                 <p align="center">
                                     {{ task_step.html | safe }}

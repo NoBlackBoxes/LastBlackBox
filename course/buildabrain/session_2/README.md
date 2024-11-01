@@ -13,7 +13,7 @@ Clever arrangements of electromagnets and their control circuits can be used to 
 #### Watch this video: [DC Motors](https://vimeo.com/1000824116)
 > Clever arrangements of electromagnets and their control circuits can be used to produce a rotational force.
 
-- [ ] **Task**: Play with your brushed DC motor. Spin it forwards *and* backwards...
+- [ ] **TASK**: Play with your brushed DC motor. Spin it forwards *and* backwards...
 - *Challenge*: What are some ways you could change the *speed* that your motor spins?
 <details><summary><strong>Target</strong></summary>
 Switching the direction that current flows through your motor will change the direction it spins.

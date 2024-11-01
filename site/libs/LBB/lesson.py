@@ -75,7 +75,7 @@ class Lesson:
         line_count += 1
 
         # Extract description
-        self.description = Utilities.convert_emphasis_tags(text[line_count][:-1])
+        self.description = Utilities.convert_emphasis_tags(text[line_count])
         line_count += 1
 
         # Extract steps

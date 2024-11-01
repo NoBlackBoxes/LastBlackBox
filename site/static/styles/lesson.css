@@ -72,7 +72,7 @@ html {
 #lesson_description {
     text-align: justify;
     width: 80%;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 300;
     margin-top: 15px;
 
@@ -133,6 +133,11 @@ html {
     }
 }
 
+.task_description_div {
+    font-size: 18px;
+    font-weight: 800;
+}
+
 .task_checkbox {
     width: 30px;
 }
@@ -183,7 +188,7 @@ html {
 
 #instruction {
     text-align: left;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 400;
     margin: 5px;
 }

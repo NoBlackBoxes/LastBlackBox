@@ -54,8 +54,8 @@ class Session:
         line_count = 0
         max_count = len(text)
 
-        # Extract name  and slug
-        title = text[line_count][2:-1]
+        # Extract name and slug
+        title = text[line_count][2:]
         self.name = title.split('-')[1][1:]
         self.slug = self.name.lower().replace(' ', '-')
         line_count += 1
@@ -64,7 +64,7 @@ class Session:
         self.description = []
         while text[line_count][0] != '#':
             if text[line_count][0] != '\n':
-                self.description.append(text[line_count][:-1])
+                self.description.append(text[line_count])
             line_count += 1
         self.description = "".join(self.description)
 
@@ -78,11 +78,11 @@ class Session:
         box_count = 0
         while line_count < boxes_line_count:
             box_text = []
-            box_text.append(text[line_count][:-1])
+            box_text.append(text[line_count])
             line_count += 1
             while text[line_count][0:3] != '## ': # Next box
                 if text[line_count][0] != '\n':
-                    box_text.append(text[line_count][:-1])
+                    box_text.append(text[line_count])
                 line_count += 1
                 if line_count >= boxes_line_count:
                     break

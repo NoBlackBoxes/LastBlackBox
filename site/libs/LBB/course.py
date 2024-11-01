@@ -67,9 +67,12 @@ class Course:
         for session_index, session_folder in enumerate(session_folders):
             session_readme = session_folder + "/README.md"
             with open(session_readme, encoding='utf8') as f:
-                text = f.readlines()
-            session = Session.Session()
-            session.parse(text)
+                lines = f.readlines()
+            text = []
+            for line in lines:
+                if line.strip():                # Remove empty lines
+                    text.append(line.rstrip())  # Remove trailing whitespace (including /n)
+            session = Session.Session(text=text)
             session.index = session_index
             self.sessions.append(session)
         return

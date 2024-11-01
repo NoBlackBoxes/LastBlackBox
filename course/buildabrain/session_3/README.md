@@ -9,11 +9,14 @@ The most important invention of the past 100 years. We have made more transistor
 
 #### Watch this video: [Diodes](https://vimeo.com/1000861996)
 >
-- [ ] **Task**: Illuminate a light-emitting diode (LED). *Remember the current limiting resistor*
+- [ ] **TASK**: Illuminate a light-emitting diode (LED). *Remember the current limiting resistor*
+<details><summary><strong>Target</strong></summary>
+Uhh? 
+</details><hr>
 
 #### Watch this video: [Transistors - MOSFETs](https://vimeo.com/1000873279)
 >
-- [ ] **Task**: Measure the threshold voltage that opens your MOSFET gate. Compare it to the "expected" range listed in the 
+- [ ] **TASK**: Measure the threshold voltage that opens your MOSFET gate. Compare it to the "expected" range listed in the 
 - The datasheet for your MOSFET can be found here: [IRF510](../../../boxes/transistors/_data/datasheets/IRF510.pdf)
 <details><summary><strong>Target</strong></summary>
 The threshold for when current starts to flow through your MOSFET ("Gate-Source Threshold Voltage") should be between 2 to 4 Volts. However, the amount of current it allows will rise rapidly up to (and beyond) 10 Volts. Check the datasheet (Figure 3). 
