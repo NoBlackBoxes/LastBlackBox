@@ -27,15 +27,15 @@ We can control a computer by loading a list of instructions ("operations") for t
 - If you are *new to programming* microcontrollers (or programming in general), then watch this video before starting the programming tasks: [Programming Arduino](https://vimeo.com/1005131993)
 
 - [ ] **Task**: Blink an (external) LED 
-- Connect the LED to a digital output pin (D13 in the example below), but don't forget your current limiting resistor!
+- *Hint*: Connect the LED to a digital output pin (D13 in the example below), but don't forget your current limiting resistor!
 <p align="center">
 <img src="../../../boxes/computers/_data/images/LED_driver_circuit.png" alt="LED driver" width="400">
 </p>
 
 - [ ] **Task**: Measure an analog signal from your LDR light sensor circuit
-- Send the output voltage of your light sensor (the "middle" of the divider) to an analog input pin.
-- Check out the example in (*File->Examples->Basic->AnalogReadSerial*) to see how to use the "Serial Monitor" to report the analog voltage signal measured from your light sensor back to your host computer.
-- Write a program that will turn on your LED when the light signal is above (or below) some threshold.
+- *Hint*: Send the output voltage of your light sensor (the "middle" of the divider) to an analog input pin.
+- *Help*: Check out the example in (*File->Examples->Basic->AnalogReadSerial*) to see how to use the "Serial Monitor" to report the analog voltage signal measured from your light sensor back to your host computer.
+- *CHallenge*: Write a program that will turn on your LED when the light signal is above (or below) some threshold.
 
 - [ ] **Task**: Generate a *pulsing* signal for your piezo buzzer
 - The piezo buzzer will expand (5V) and contract (0V) as you switch the voltage applied accross it. This expansion/contraction forces air into/out of the plastic case. If you switch it ON/OFF fast enough, then you can *hear it*!
@@ -48,9 +48,10 @@ We can control a computer by loading a list of instructions ("operations") for t
 </p>
  
 - [ ] **Task**: Build a Theremin
-- What if you used the analog voltage signal measured from your light sensor to change the frequency of the "tone" playing on your buzzer? Hmm...
-- [ ] **Task**: ***Have fun!***
-- This diagram of the Arduino "pins" will defintely be useful:
+- *Hint*: What if you used the analog voltage signal measured from your light sensor to change the frequency of the "tone" playing on your buzzer? Hmm...
+
+- [ ] **Task**: ***Have fun!*** (Make something cool)
+- This diagram of the Arduino "pins" will definitely be useful:
 <p align="center">
 <img src="../../../boxes/computers/_data/images/pinout_arduino_nano.png" alt="arduino pinout" width="650">
 </p>
@@ -59,13 +60,18 @@ We can control a computer by loading a list of instructions ("operations") for t
 # Afternoon
 
 ## Control
+> Getting a motor to move how you want (direction and speed) is very important for controlling the behaviour of your robot. A number of very clever strategies have been developed to each of this.
 
 #### Watch this video: [Servos](https://vimeo.com/1005150863)
+> A servo loop connects feedback from a sensor to the control signals sent to a motor.
 
 ## Robotics
-#### Watch this video: [NB3 Drive](https://vimeo.com/1005154927)
+Combining sensors, motors, and a "brain" in between.
 
-- [ ] **Task**: Mount the robot servo motors, wheels, and caster (ball bearing)
+#### Watch this video: [NB3-Muscles (servos)](https://vimeo.com/1005154927)
+> Let's build your robot's movement system.
+
+- [ ] **Task**: Mount the servo motors, wheels, and caster (ball bearing) to your NB3.
 
 ---
 

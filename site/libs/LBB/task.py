@@ -83,6 +83,7 @@ class Task:
         line_count += 1
 
         # Extract target
+        # TO DO: Make it possible to include images in Target
         self.target = text[line_count]
         self.target = Utilities.convert_emphasis_tags(self.target)
         self.target = Utilities.convert_markdown_links(self.target)

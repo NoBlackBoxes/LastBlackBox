@@ -26,52 +26,52 @@ You will be building a brain for your robot. The robot's physical layout mimics 
 
 - Add some sensory input
   - Learn about atoms, electrons, sensors, and light
-    - **Project**: *Build a Light Sensor*
+  - **Project**: *Build a Light Sensor*
 
 ### Session 2 - [Making Things Move](session_2/README.md)
 
 - Create and control motion
   - Learn about magnets and motors
-    - **Project**: *Build a Speaker*
+  - **Project**: *Build a Speaker*
 
 ### Session 3 - [Digital Decisions](session_3/README.md)
 
-- The most important thing you don't understand
+- The most important thing you were never taught
   - Learn about transistors, amplifiers, circuits, and power
-    - **Project**: *Build a Light-Sensitive Motor*
+  - **Project**: *Build a Light-Sensitive Motor*
 
 ### Session 4 - [How Computers Work](session_4/README.md)
 
 - To think is to compute
   - Learn about data, logic, memory, computers, and FPGAs
-    - **Project**: *Program a Microcontroller*
+  - **Project**: *Program a Microcontroller*
 
-### Session 5 - [Programming Behaviour](session_5/README.md)
+### Session 5 - [Build a Robot](session_5/README.md)
 
-- Build your first brain + body, that can sense, move, and make decisions
+- Build your first brain + body that can sense, move, and make decisions
   - Learn about control and robotics
-    - **Project**: *Build a Braitenberg Vehicle*
+  - **Project**: *Build a Braitenberg Vehicle*
 
-### Session 6 - [Operating Systems](session_6/README.md)
+### Session 6 - [Software Skills](session_6/README.md)
 
 - Extend your brain with some human-engineered complexity
   - Learn about Linux and Python
-    - **Project**: *Connect Wirelessly to your Robot*
+  - **Project**: *Connect Wirelessly to your Robot*
 
-### Session 7 - [Network Connections](session_7/README.md)
+### Session 7 - [How Networks Work](session_7/README.md)
 
 - Connect and communicate...like a machine
   - Learn about websites, servers, networks, and security
-    - **Project**: *Build a Remote Control Robot*
+  - **Project**: *Build a Remote Control Robot*
 
 ### Session 8 - [Artificial Intelligence](session_8/README.md)
 
-- Make it smart....what is smart?
+- Make it smart....what is *smart*?
   - Learn about audio, vision, learning, and intelligence
-    - **Project**: *Add a Camera, Speaker, and Microphones*
-    - **Project**: *Create a Voice-Activated Robot*
-    - **Project**: *Run Neural Networks on a Hardware Accelerator*
-    - **Project**: *Teach your Robot to Recognize You (and only you)*
+  - **Project**: *Add a Camera, Speaker, and Microphones*
+  - **Project**: *Create a Voice-Activated Robot*
+  - **Project**: *Run Neural Networks on a Hardware Accelerator*
+  - **Project**: *Teach your Robot to Recognize You (and only you)*
 
 ----
 

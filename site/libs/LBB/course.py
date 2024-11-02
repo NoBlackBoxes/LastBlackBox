@@ -13,7 +13,7 @@ import json
 import LBB.config as Config
 import LBB.session as Session
 
-# Course Class
+# Course Class 
 class Course:
     def __init__(self, name=None, path=None):
         self.name = None        # Course name
@@ -46,19 +46,11 @@ class Course:
     
     # Build course object from session README files
     def build(self, name):
-        # Set course name, slug, and depth
-        self.name = name
-        if self.name == "Bootcamp":
-            self.slug = "bootcamp"
-            self.depth = 1
-        elif self.name == "Build a Brain":
-            self.slug = "buildabrain"
-            self.depth = 1
-        else:
-            print("Unavailable course selected for build!")
-            exit(-1)
 
-        # Set course folder
+        # Set course parameters
+        self.name = name
+        self.slug = get_slug_from_name(name)
+        self.depth = get_depth_from_name(name)
         course_folder = f"{Config.course_root}/{self.slug}"
         
         # Load sessions from READMEs
@@ -88,5 +80,29 @@ class Course:
         with open(path, "w") as file:
             json.dump(self.to_dict(), file, indent=4)
         return
+
+# Course Library
+
+# Get course slug from name
+def get_slug_from_name(name):
+    if name == "Bootcamp":
+        slug = "bootcamp"
+    elif name == "Build a Brain":
+        slug = "buildabrain"
+    else:
+        print("Unavailable course name selected!")
+        exit(-1)
+    return slug
+
+# Get course depth from name
+def get_depth_from_name(name):
+    if name == "Bootcamp":
+        depth = 1
+    elif name == "Build a Brain":
+        depth = 1
+    else:
+        print("Unavailable course name selected!")
+        exit(-1)
+    return depth
 
 #FIN

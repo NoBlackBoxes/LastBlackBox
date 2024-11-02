@@ -4,13 +4,17 @@
 # Morning
 
 ## Power
+Running more capable software requires a faster computer, which requires more power. We will first explore how a power supply works and then install one on your NB3.
 
-#### Watch this video: [NB3 Power](https://vimeo.com/1005162740)
+#### Watch this video: [NB3-Power](https://vimeo.com/1005162740)
+> 
 
 - [ ] **Task**: Add a (regulated) 5 volt power supply to your robot, which you can use while debugging to save your AA batteries and to provide enough power for the Raspberry Pi computer.
-> **Expected Result**: Your NB3 should now look like this: <p align="center">
+<details><summary><strong>Target</strong></summary>
+Your NB3 should now look like this: <p align="center">
 <img src="../../../boxes/power/_data/images/NB3_power_wiring.png" alt="NB3 power wiring" width="400" height="300">
 </p>
+</details><hr>
 
 - *NOTE*: Your NB3_power board cable *might* have inverted colors (black to +5V, red to 0V) relative to that shown in the assembly video. This doesn't matter, as the plugs will only work in one orientation and the correct voltage is conveyed to the correct position on the body.
 

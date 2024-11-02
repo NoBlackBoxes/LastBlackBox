@@ -3,7 +3,7 @@
 > A course consisting of 28 **black boxes** that you open in sequence using the materials contained in the "Last Black Box" kit
 
 <p align="center">
-<img src="_designs/layout/png/layout_LBB.png" alt="Course Layout" width="100%" height="100%">
+<img src="_designs/layout/png/layout_LBB.png" alt="Course Layout" width="100%">
 <h3 style="text-align:center;">Order your "<a href=https://www.noblackboxes.org/courses target="_blank">Last Black Box</a>" now!</h3>
 </p>
 
@@ -11,21 +11,21 @@
 
 ## NB3
 
-You will be building a robot. The robot's physical layout mimics the basic anatomy of a (vertebrate) brain. As you progress through the "boxes", your robot will *evolve* into an increasingly sophisticated machine. The goal of this course is to create an "intelligent" machine without using any "black boxes". We thus call this robot the No-Black-Box-Brain or NBBB or ***NB3***.
+You will be building a brain for your robot. The robot's physical layout mimics the basic anatomy of a (vertebrate) brain. As you progress through the course, your robot will *evolve* into an increasingly sophisticated machine. The goal is to create an "intelligent" machine without using any **black boxes**. We thus call this robot the No-Black-Box-Brain or NBBB or ***NB3***.
 
 <p align="center">
-<img src="_designs/NB3/NB3_render.png" alt="NB3 outline" width="300" height="300">
+<img src="_designs/NB3/NB3_render.png" alt="NB3 outline" width="300">
 </p>
 
 ## Repository
-The course is a combination of this code repo (LBB) and a submodule repo called "BlackBoxes". Many of the course exercises assume that you have "cloned" both repos to your Host computer. In much of the example code, there is an additional assumption that the LBB repo is in a folder called "NoBlackBoxes" in your home/user directory. You can setup everything (on Linux...and your NB3) with the following commands.
+The course is based on the documentation and code in this repo (LBB). Many of the course exercises assume that you have "cloned" this repo to your Host computer. In much of the example code, there is an additional assumption that the LBB repo is in a folder called "NoBlackBoxes" in your home/user directory. You can setup everything (on Linux...and your NB3) with the following commands.
 
 ```bash
 # ...from your "home" directory
 mkdir NoBlackBoxes  # Create NoBlackBoxes directory
 cd NoBlackBoxes     # Change to NoBlackBoxes directory
 
-# Clone LBB repo (only the most recent version)
+# Clone LBB repo (only the most recent commit)
 git clone --depth 1 https://github.com/NoBlackBoxes/LastBlackBox
 ```
 
@@ -34,7 +34,7 @@ There are shorter versions of this course that cover a specific subset of the "b
 
 - [Bootcamp](bootcamp/README.md): A one-week intensive introduction to the essentials of modern technology and neuroscience.
 
-- [Build a Brain](buildabrain/README.md): Designed for secondary school age students (14+), this hands-on course shows you how recent advances in science and technology have made it possible for humans to create intelligent machines...by building you own. 
+- [Build a Brain](buildabrain/README.md): Designed for secondary school age students, this hands-on course shows you how recent advances in science and technology have made it possible for humans to create intelligent machines...by building you own. 
 
 - [Own Phone](ownphone/README.md): ***-Under Development-*** Get your "smartphone license"! Demonstrate to your parents/friends that you can take control of your digital tools...before they take control you.
 
@@ -43,7 +43,7 @@ There are shorter versions of this course that cover a specific subset of the "b
 1. **Atoms**
     - *Technology*: Introduction to atoms, sub-atomic particles, and forces.
     - *Neuroscience*: From physics to chemistry to biology to brains.
-    > *Tasks*: Draw your favourite atoms and molecules.
+    > *Tasks*: Draw your favorite atoms and molecules.
 
 2. **Electrons**
     - *Technology*: Intro to basic electronics: voltage, current, resistance, batteries, Ohm's Law, voltage dividers, and power (dissipation).

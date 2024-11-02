@@ -1,9 +1,5 @@
 # Bootcamp : Session 4 - Signal Processing
 
-## Morning
-
-----
-
 ## Networks
 
 ***Everyone must have their NB3 connected to the WiFi network and a "Remote - SSH" connection from VS Code***
@@ -11,7 +7,6 @@
 - Lecture: "Communication, protocols, and the internet"
 
 ## Linux
-
 Now that we have a connection to our NB3 Linux computer (Raspberry Pi), we can *finally* start learning about Linux.
 
 Linux is an open-source Operating System, which means you can look at ***all*** of the code that makes it work.

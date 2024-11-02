@@ -1,9 +1,5 @@
 # Bootcamp : Session 5 - Computer Vision
 
-## Morning
-
-----
-
 ## Cameras
 
 Let's add a camera (eyes) to your NB3!

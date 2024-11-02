@@ -65,9 +65,11 @@ class Student:
             self.nickname = dictionary.get("nickname")
             self.email = dictionary.get("email")
             self.progress = dictionary.get("progress")
-            self.current_course = dictionary.get("current_course")
+            self.current_course = dictionary.get("current_course")        
         if self.current_course:
-            self.course = Course.Course(name=self.current_course)
+            student_course_slug = Course.get_slug_from_name(self.current_course)
+            student_course_path = f"{student_folder}/courses/{student_course_slug}.json"
+            self.course = Course.Course(path=student_course_path)
         self.loaded = True
         return True
 
