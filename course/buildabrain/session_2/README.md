@@ -1,4 +1,4 @@
-# Build a Brain : Session 2 - Making things move
+# Build a Brain : Session 2 - Making Things Move
 Something about motors and magnets
 
 ## Magnets

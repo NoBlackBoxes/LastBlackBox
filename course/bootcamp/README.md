@@ -29,7 +29,7 @@ You will be building a brain for your robot. The robot's physical layout mimics 
 
 ### Session 2 - [Digital Computers](session_2/README.md)
 
-- [Morning](session_2/#morning): Logic, Memory, and Computers
+- [Morning](session_2/#morning): Data, Logic, Memory, and Computers
 - [Afternoon](session_2/#afternoon): Control and Robotics
 
 ### Session 3 - [The Software Stack](session_3/README.md)
@@ -39,13 +39,13 @@ You will be building a brain for your robot. The robot's physical layout mimics 
 
 ### Session 4 - [Signal Processing](session_4/README.md)
 
-- [Morning](session_4/#morning): Audio (1-D data)
-- [Afternoon](session_4/#afternoon): Digital signal processing
+- [Morning](session_4/#morning): Audio
+- [Afternoon](session_4/#afternoon): Digital signal processing (1-D data)
 
 ### Session 5 - [Computer Vision](session_5/README.md)
 
-- [Morning](session_5/#morning): Vision (2-D data)
-- [Afternoon](session_5/#afternoon): Image processing
+- [Morning](session_5/#morning): Vision
+- [Afternoon](session_5/#afternoon): Image processing (2-D data)
 
 ---
 

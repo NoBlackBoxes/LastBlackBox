@@ -19,7 +19,11 @@ boxes = [
     'Sensors',
     'Motors',
     'Transistors',
+    'Data',
+    'Logic',
+    'Memory',
     'Computers',
+    'Control',
     'Robotics',
     'Power',
     'Systems',
@@ -29,17 +33,17 @@ boxes = [
     'Websites',
     'Servers',
     'Audio',
-    'Vision',
-    'Intelligence'
+    'Vision'
 ]
 num_boxes = len(boxes)
+print(num_boxes)
 
 # Defaults
 box_size = 13.0
 box_stroke = 0.125
 box_spacing = 1.25
 num_rows = 3
-num_cols = 6
+num_cols = 7
 
 # Generate box parameters
 box_parameters = []

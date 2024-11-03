@@ -1,4 +1,4 @@
-# Build a Brain : Session 3 - Digital decisions
+# Build a Brain : Session 3 - Digital Decisions
 The building blocks of our digital world.
 
 ## Transistors

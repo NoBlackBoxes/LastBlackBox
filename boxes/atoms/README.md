@@ -20,12 +20,12 @@ Periodic Table|01|Periodic Table business card|1|[-D-](card)|[-L-](VK)
 Atom's matter. They *are* matter.
 
 Watch this video.
-- *Video*: [Atomic Structure](https://vimeo.com/XXX)
+- *Video*: [Atomic Structure](https://vimeo.com/??????)
   - **Task**: Carbon is pretty important atom for us (and all living things that we know of). Draw a Carbon atom (C12, 6 protons and 6 neutrons) using the "old-school" Bohr style.
 
 ## Charge
 
-Electrons are negative. Protons are postive. Like repels like. Opposites attract.
+Electrons are negative. Protons are positive. Like repels like. Opposites attract.
 
 Watch this video.
 - *Video*: [Electric Charge](https://vimeo.com/XXX)

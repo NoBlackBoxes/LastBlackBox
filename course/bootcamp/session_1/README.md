@@ -36,9 +36,9 @@ A single AA battery, fully charged, should have a voltage of ~1.6 Volts. If it i
 </details><hr>
 
 - [ ] **TASK**: Measure the voltage of 4xAA batteries in series (end to end).
-- *Hint*: Use your battery holder.
+- *Hint*: You can use your battery holder.
 <details><summary><strong>Target</strong></summary>
-Batteries connected in series will sum their voltages. You should measure four times the voltage of a single AA battery, about 6.4 Volts, from the batteries in your 4xAA holder.
+Batteries connected in series will sum their voltages. You should measure four times the voltage of a single AA battery, ~6.4 Volts, from the batteries in your 4xAA holder.
 </details><hr>
 
 #### Watch this video: [Current](https://vimeo.com/1000743561)

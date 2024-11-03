@@ -22,7 +22,6 @@ boxes = [
     'Transistors',
     'Amplifiers',
     'Circuits',
-    'Power',
     'Data',
     'Logic',
     'Memory',
@@ -30,6 +29,7 @@ boxes = [
     'Computers',
     'Control',
     'Robotics',
+    'Power',
     'Systems',
     'Linux',
     'Python',
@@ -43,6 +43,7 @@ boxes = [
     'Intelligence'
 ]
 num_boxes = len(boxes)
+print(num_boxes)
 
 # Defaults
 box_size = 13.0
