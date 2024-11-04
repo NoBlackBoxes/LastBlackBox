@@ -7,65 +7,33 @@
 echo "/home/${USER}/NoBlackBoxes/LastBlackBox/course/_engine/libs" >> /home/${USER}/NoBlackBoxes/LastBlackBox/_tmp/LBB/lib/python3.12/site-packages/LBB.pth
 ```
 
-## Box Model
-- Each **course** is composed of multiple **sessions**, which cover the LBB material to a particular knowledge depth (01, 10, or 11).
-- Each **session** opens a sequence of black **boxes** described in the session's *README* file.
-- Each **box** presents a sequence of **lessons** consisting of a named video tutorial and text instructions.
-- Each **lesson** might have one or more **tasks** for the student to complete in order to progress to the next **lesson**.
-- Each **session** concludes with a **project**, the outcome of which the student must submit to certify completion.
+## Box Lesson Model
+- Each **box** has multiple **lessons**, which are described in the "lessons.md" file
+- Each **lesson** may have a corresponding **video** tutorial
+- Each **lesson** has multiple **instructions** and **tasks**
+- Each **instruction** and **task** specifies a particular depth (difficulty) level (-, +, *)
+- Each **instruction** can consist of plain text, an image, or *special* formats (notes, hints, help, challenges, etc.)
+- Each **task** consists of a description, an optional set of **instructions**, and a **target**
+- Each **target** consists of a description and an optional set of **instructions**
 
 ```markdown
-# Course Title : Session Number - Session Name
-Session description.
-Can be multiple lines, but just text.
+# Box Name
+Box description. Single line of text.
 
-## Box #1 Name
-Box description.
-Can be multiple lines, but just text.
+## [Lesson Name](<video-url>)
+> Lesson description. Single line of text
 
-#### Watch this video: [Video Title](video url)
-> Video content description (single line of text).
+- Level 1 instruction text
 
-#### Watch this video: [Video Title](video url)
-> Video content description (single line of text).
+- **TASK**Task: Level 2 description
+  - Task text
+> Task Target
 
-- [ ] **Task**: Task description.
-- Other task instructions: hints, help, warnings, challenges, etc.
-<details><summary><strong>Target</strong></summary>
-The expected results of completing the task are listed here. You can use images and links.
-</details><hr>
++ Level 2 instruction
 
-## Box #2 Name
-Can be multiple lines, but just text.
-
-####  Watch this video: [Video Name](video url)
-> Video content description (single line of text).
-
-- **Task**: Task description.
-- Other task instructions: hints, help, warnings, challenges, etc.<details><summary><strong>Target</strong></summary>
-The expected results of completing the task are listed here. You can use images and links.
-</details><hr>
-
-- **Task**: Task description.
-- Other task instructions: hints, help, warnings, challenges, etc.<details><summary><strong>Target</strong></summary>
-The expected results of completing the task are listed here. You can use images and links.
-</details><hr>
-
-####  Watch this video: [Video Name](video url)
-> Video content description (single line of text).
-- **Task**: Task description.
-- Other task instructions: hints, help, warnings, challenges, etc.
-<details><summary><strong>Target</strong></summary>
-The expected results of completing the task are listed here. You can use images and links.
-</details><hr>
-
----
-
-# Project
-### Project Name
-Session project description. Consisting of written instructions, images, videos, and links. Describe project goals, etc.
-- Other project instructions: hints, help, warnings, challenges, etc.
-- Other project instructions: hints, help, warnings, challenges, etc.
-
-Submission instructions (link to Discord #channel)
++ **TASK**Task: Level 2 Task description
+  - Task text
+> Task Target
 ```
+
+
