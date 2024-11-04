@@ -13,11 +13,11 @@ from flask_mail import Mail, Message
 from werkzeug.utils import secure_filename
 from werkzeug.security import generate_password_hash, check_password_hash
 import secrets
-import LBB.utilities as Utilities
+import Site.utilities as Utilities
 
 # Import modules
-import LBB.config as Config
-import LBB.student as Student
+import Site.config as Config
+import Site.student as Student
 
 # Define constants
 UPLOAD_FOLDER = Config.site_root + '/_tmp'

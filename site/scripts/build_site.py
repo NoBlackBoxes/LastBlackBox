@@ -7,19 +7,19 @@ Build the LBB site
 
 # Import libraries
 import os
-import LBB.utilities as Utilities
+import Site.utilities as Utilities
 
 # Import modules
-import LBB.course as Course
-import LBB.session as Session
-import LBB.box as Box
-import LBB.lesson as Lesson
-import LBB.instruction as Instruction
-import LBB.image as Image
-import LBB.video as Video
-import LBB.task as Task
-import LBB.input as Input
-import LBB.project as Project
+import Site.course as Course
+import Site.session as Session
+import Site.box as Box
+import Site.lesson as Lesson
+import Site.instruction as Instruction
+import Site.image as Image
+import Site.video as Video
+import Site.task as Task
+import Site.input as Input
+import Site.project as Project
 
 # Reload libraries and modules
 import importlib

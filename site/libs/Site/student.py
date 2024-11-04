@@ -15,8 +15,8 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 # Import modules
 import Design.svg as SVG
-import LBB.config as Config
-import LBB.course as Course
+import Site.config as Config
+import Site.course as Course
 
 # Student Class
 class Student:

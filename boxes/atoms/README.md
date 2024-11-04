@@ -28,34 +28,34 @@ Watch this video.
 Electrons are negative. Protons are positive. Like repels like. Opposites attract.
 
 Watch this video.
-- *Video*: [Electric Charge](https://vimeo.com/XXX)
+- *Video*: [Electric Charge](https://vimeo.com/??????)
 
 ## Orbitals
 
 Only a specific number of electrons can *fit* at each level (orbit) around the Nucleus. 2 can fit nearby. 8 can fit in the next ring. 18 in the next. Those closest to the Nucleus are the most strongly attached. Also, any atoms with in *incomplete* ring are "unhappy"...they'd prefer to have a full load.
 
 Watch this video.
-- *Video*: [LBB:Electrons:Orbitals](https://vimeo.com/XXX)
+- *Video*: [LBB:Electrons:Orbitals](https://vimeo.com/??????)
 
 ## Chemistry
 
 Atoms with incomplete outer (valence) orbitals will try to complete their set of electrons by sharing, donating, or stealing electrons from other Atoms. This is called chemistry.
 
 Watch this video.
-- *Video*: [LBB:Electrons:Chemistry](https://vimeo.com/XXX)
+- *Video*: [LBB:Electrons:Chemistry](https://vimeo.com/??????)
 
 ## Nuclear Forces
 
 Wait. What's up with Hydrogen? Why no Neutrons? Oh...what about Helium? Why don't those Protons, with their positve charges, just fly apart?
 
 Watch this video.
-- *Video*: [LBB:Electrons:Nuclear Forces](https://vimeo.com/XXX)
+- *Video*: [LBB:Electrons:Nuclear Forces](https://vimeo.com/??????)
 
 ## Fission and Fusion
 
 Not all Nuclei are stable, sometimes they can fall apart (fission). What if two atoms go *sooooo* close to one another that their Nuclei connected (fused)? Lots of energy.
 
 Watch this video.
-- *Video*: [LBB:Electrons:Fission and Fusion](https://vimeo.com/XXX)
+- *Video*: [LBB:Electrons:Fission and Fusion](https://vimeo.com/??????)
 
 ----

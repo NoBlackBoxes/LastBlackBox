@@ -7,12 +7,12 @@ Scripts: Create Student
 
 # Import libraries
 from werkzeug.security import generate_password_hash
-import LBB.utilities as Utilities
+import Site.utilities as Utilities
 
 # Import modules
-import LBB.config as Config
-import LBB.course as Course
-import LBB.student as Student
+import Site.config as Config
+import Site.course as Course
+import Site.student as Student
 
 # Progress dictionary
 progress = {

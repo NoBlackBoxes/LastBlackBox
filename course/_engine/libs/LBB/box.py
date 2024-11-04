@@ -17,7 +17,7 @@ class Box:
         self.description = None         # Box description
         self.lessons = None             # Box lessons
         if text:
-            self.parse(text)            # Parse box from README text
+            self.parse(text)            # Parse box from "lessons.md" text
         elif dictionary:
             self.from_dict(dictionary)  # Load box from dictionary
         return
@@ -49,15 +49,14 @@ class Box:
         max_count = len(text)
 
          # Extract name
-        self.name = text[0][3:]
+        self.name = text[0][2:]
         self.slug = self.name.lower().replace(' ', '-')
         line_count += 1
 
         # Extract description
         self.description = []
         while text[line_count][0] != '#':
-            if text[line_count][0] != '\n':
-                self.description.append(text[line_count])
+            self.description.append(text[line_count])
             line_count += 1
         self.description = "".join(self.description)
 
@@ -68,9 +67,8 @@ class Box:
             lesson_text = []
             lesson_text.append(text[line_count])
             line_count += 1
-            while not text[line_count].startswith('#### Watch'): # Next lesson
-                if text[line_count][0] != '\n':
-                    lesson_text.append(text[line_count])
+            while not text[line_count].startswith('##'): # Next lesson
+                lesson_text.append(text[line_count])
                 line_count += 1
                 if line_count >= max_count:
                     break
@@ -82,7 +80,5 @@ class Box:
 
     def render(self):
         output = ''
-        #for lesson in self.lessons:
-        #    output = output + lesson.render()
         return output
 #FIN

@@ -9,8 +9,8 @@ Build the LBB site
 import os
 
 # Import modules
-import LBB.config as Config
-import LBB.course as Course
+import Site.config as Config
+import Site.course as Course
 
 # Reload libraries and modules
 import importlib

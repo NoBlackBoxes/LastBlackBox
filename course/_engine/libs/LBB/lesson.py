@@ -66,46 +66,50 @@ class Lesson:
         line_count = 0
         max_count = len(text)
 
-         # Extract name
-        self.name = text[line_count].split('[')[1].split(']')[0]
+        # Extract name
+        self.name = text[line_count][3:]
         self.slug = self.name.lower().replace(' ', '-')
+        line_count += 1
 
         # Extract video
-        self.video = Video.Video(text[line_count])
+        video_url = text[line_count].split('=')[1]
+        if video_url != '':
+            self.video = Video.Video(text[line_count])
         line_count += 1
 
         # Extract description
-        self.description = Utilities.convert_emphasis_tags(text[line_count])
+        self.description = text[line_count]
         line_count += 1
 
         # Extract steps
         self.steps = []
         step_count = 0
         while line_count < max_count:
-            if text[line_count][0] != '\n':
-                # Classify step
-                if text[line_count].startswith('- [ ] **TASK'):
-                    task_text = []
+            step_depth = text[line_count].split('}')[0][-2:]
+            step_text = text[line_count].split('}')[1]
+            # Classify step
+            if step_text.startswith("**TASK**"):
+                task_text = []
+                task_text.append(step_text)
+                line_count += 1
+                # Extract task steps
+                while not text[line_count].startswith("</details>"):
                     task_text.append(text[line_count])
                     line_count += 1
-                    # Extract task steps
-                    while not text[line_count].startswith("</details>"):
-                        task_text.append(text[line_count])
-                        line_count += 1
-                    task_text.append(text[line_count])
-                    task = Task.Task(task_text)
-                    task.index = step_count
-                    self.steps.append(task)
-                elif text[line_count].startswith('<p align="center">'):
-                    image = Image.Image(text[line_count+1])
-                    image.index = step_count
-                    self.steps.append(image)
-                    line_count += 2
-                else:
-                    instruction = Instruction.Instruction(text[line_count].strip())
-                    instruction.index = step_count
-                    self.steps.append(instruction)
-                step_count += 1
+                task_text.append(text[line_count])
+                task = Task.Task(task_text)
+                task.index = step_count
+                self.steps.append(task)
+            elif step_text.startswith('<p align="center">'):
+                image = Image.Image(text[line_count+1])
+                image.index = step_count
+                self.steps.append(image)
+                line_count += 2
+            else:
+                instruction = Instruction.Instruction(text[line_count].strip())
+                instruction.index = step_count
+                self.steps.append(instruction)
+            step_count += 1
             line_count += 1
         return
 
