@@ -5,6 +5,9 @@ LBB: Box Class
 @author: kampff
 """
 
+# Import libraries
+import json
+
 # Import modules
 import LBB.lesson as Lesson
 
@@ -54,18 +57,15 @@ class Box:
         line_count += 1
 
         # Extract description
-        self.description = []
-        while text[line_count][0] != '#':
-            self.description.append(text[line_count])
-            line_count += 1
-        self.description = "".join(self.description)
+        self.description = text[line_count]
+        line_count += 1
 
         # Extract lessons
         self.lessons = []
         lesson_count = 0
         while line_count < max_count:
             lesson_text = []
-            lesson_text.append(text[line_count])
+            lesson_text.append(text[line_count])         # Append lesson heading
             line_count += 1
             while not text[line_count].startswith('##'): # Next lesson
                 lesson_text.append(text[line_count])
@@ -81,4 +81,16 @@ class Box:
     def render(self):
         output = ''
         return output
+
+    # Load box object from JSON
+    def load(self, path):
+        with open(path, "r") as file:
+            self.from_dict(json.load(file))
+        return
+
+    # Store box object in JSON file
+    def store(self, path):
+        with open(path, "w") as file:
+            json.dump(self.to_dict(), file, indent=4)
+        return
 #FIN

@@ -33,7 +33,7 @@ Box description. Single line of text.
 - **TASK**Task: Level 1 task description
   - Task instruction text
   - ![Task instruction image](<image path or url>)
-> Task Target
+> Task Target. Single line of text.
 
 + Level 2 instruction text
 + ![Level 2 instruction image:width](<image path or url>)
@@ -41,7 +41,7 @@ Box description. Single line of text.
 + **TASK**Task: Level 2 task description
   - Task text
   - ![Task instruction image](<image path or url>)
-> Task Target
+> Task Target. Single line of text.
 
 * Level 3 instruction text
 * ![Level 3 instruction image:width](<image path or url>)
@@ -49,7 +49,7 @@ Box description. Single line of text.
 * **TASK**Task: Level 3 task description
   - Task text
   - ![Task instruction image](<image path or url>)
-> Task Target
+> Task Target. Single line of text.
 
 ## [Lesson Name](<video-url>)
 > Lesson description. Single line of text
@@ -62,7 +62,7 @@ Box description. Single line of text.
 - **TASK**Task: Level 1 task description
   - Task instruction text
   - ![Task instruction image](<image path or url>)
-> Task Target
+> Task Target. Single line of text.
 
 + Level 2 instruction text
 + ![Level 2 instruction image:width](<image path or url>)
@@ -70,7 +70,7 @@ Box description. Single line of text.
 + **TASK**Task: Level 2 task description
   - Task text
   - ![Task instruction image](<image path or url>)
-> Task Target
+> Task Target. Single line of text.
 
 * Level 3 instruction text
 * ![Level 3 instruction image:width](<image path or url>)
@@ -78,7 +78,7 @@ Box description. Single line of text.
 * **TASK**Task: Level 3 task description
   - Task text
   - ![Task instruction image](<image path or url>)
-> Task Target
+> Task Target. Single line of text.
 ```
 
 

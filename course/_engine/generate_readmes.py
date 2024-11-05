@@ -23,7 +23,7 @@ importlib.reload(Box)
 box_names = Config.box_names
 
 ## DEBUG
-box_names = ['electrons']
+box_names = ['electrons','atoms']
 
 # Load each box's lessons
 for box_count, box_name in enumerate(box_names):
@@ -37,7 +37,13 @@ for box_count, box_name in enumerate(box_names):
     for line in lines:
         if line.strip():                # Remove empty lines
             text.append(line.rstrip())  # Remove trailing whitespace (including '/n')
+
+    # Build box
     box = Box.Box(text=text)
     box.index = box_count
+
+    # Store box
+    box_data_path = f"{box_folder}/lessons.json"
+    box.store(box_data_path)
 
 # FIN

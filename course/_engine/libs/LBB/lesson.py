@@ -67,47 +67,48 @@ class Lesson:
         max_count = len(text)
 
         # Extract name
-        self.name = text[line_count][3:]
+        self.name = text[line_count][4:].split(']')[0]
         self.slug = self.name.lower().replace(' ', '-')
-        line_count += 1
 
         # Extract video
-        video_url = text[line_count].split('=')[1]
+        video_url = text[line_count].split('(')[1][:-1]
         if video_url != '':
             self.video = Video.Video(text[line_count])
         line_count += 1
 
         # Extract description
-        self.description = text[line_count]
+        self.description = text[line_count][2:]
         line_count += 1
 
         # Extract steps
         self.steps = []
         step_count = 0
         while line_count < max_count:
-            step_depth = text[line_count].split('}')[0][-2:]
-            step_text = text[line_count].split('}')[1]
+            step_depth = Utilities.get_depth_from_symbol(text[line_count][0])
+            step_text = text[line_count][2:]
             # Classify step
             if step_text.startswith("**TASK**"):
                 task_text = []
                 task_text.append(step_text)
                 line_count += 1
                 # Extract task steps
-                while not text[line_count].startswith("</details>"):
+                while not text[line_count].startswith(">"):
                     task_text.append(text[line_count])
                     line_count += 1
                 task_text.append(text[line_count])
                 task = Task.Task(task_text)
                 task.index = step_count
+                task.depth = step_depth
                 self.steps.append(task)
-            elif step_text.startswith('<p align="center">'):
-                image = Image.Image(text[line_count+1])
+            elif step_text.startswith('!['):
+                image = Image.Image(step_text)
                 image.index = step_count
+                image.depth = step_depth
                 self.steps.append(image)
-                line_count += 2
             else:
-                instruction = Instruction.Instruction(text[line_count].strip())
+                instruction = Instruction.Instruction(step_text)
                 instruction.index = step_count
+                instruction.depth = step_depth
                 self.steps.append(instruction)
             step_count += 1
             line_count += 1

@@ -16,6 +16,7 @@ class Instruction:
     def __init__(self, text=None, dictionary=None):
         self.index = None               # Step index
         self.type = "instruction"       # Step type
+        self.depth = None               # Step depth
         self.html = None                # Instruction html
         if text:
             self.parse(text)            # Parse instruction from README text
@@ -25,10 +26,12 @@ class Instruction:
         
     # Convert instruction object to dictionary
     def to_dict(self):
-        dictionary = {}
-        dictionary.update({"index": self.index})
-        dictionary.update({"type": self.type})
-        dictionary.update({"html": self.html})
+        dictionary = {
+            "index": self.index,
+            "type": self.type,
+            "depth": self.depth,
+            "html": self.html
+        }
         return dictionary
 
     # Convert dictionary to instruction object

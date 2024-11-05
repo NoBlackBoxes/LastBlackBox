@@ -33,6 +33,19 @@ def list_subfolder_names(folder_path):
             subfolder_names.append(name)
     return subfolder_names
 
+# Get depth from symbol
+def get_depth_from_symbol(symbol):
+    if symbol == '-':
+        depth = 1
+    elif symbol == '+':
+        depth = 2
+    elif symbol == '*':
+        depth = 3
+    else:
+        print(f"Unrecognized depth symbol ({symbol}) in lesson text.")
+        exit(-1)
+    return depth
+
 # Find and convert all markdown emphasis tags
 def convert_emphasis_tags(text):
     text = re.sub(r'\*\*\*(.*?)\*\*\*', r'<strong><em>\1</em></strong>', text)

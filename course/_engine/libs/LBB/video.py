@@ -12,6 +12,7 @@ LBB: Video Class
 # Video Class
 class Video:
     def __init__(self, text=None, dictionary=None):
+        self.name = None                # Video name
         self.url = None                 # Video url
         self.id = None                  # Video id
         if text:
@@ -22,20 +23,24 @@ class Video:
     
     # Convert video object to dictionary
     def to_dict(self):
-        dictionary = {}
-        dictionary.update({"url": self.url})
-        dictionary.update({"id": self.id})
+        dictionary = {
+            "name": self.name,
+            "url": self.url,
+            "id": self.id
+        }
         return dictionary
 
     # Convert dictionary to video object
     def from_dict(self, dictionary):
+        self.name = dictionary.get("name")
         self.url = dictionary.get("url")
         self.id = dictionary.get("id")
         return
 
     # Parse video string
     def parse(self, text):
-        self.url = text
+        self.name = text.split(']')[0][4:]
+        self.url = text.split('(')[1][:-1]
         self.id = self.url.split('/')[-1]
         return
 

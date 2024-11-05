@@ -1,0 +1,101 @@
+{
+    "index": 1,
+    "name": "Atoms",
+    "slug": "atoms",
+    "description": "*\"Let's start at the very beginning, a very good place to start\"*. - R&H",
+    "lessons": [
+        {
+            "index": 0,
+            "name": "Atomic Structure",
+            "slug": "atomic-structure",
+            "description": "A brief introduction to the physics of atoms, their parts (protons, neutrons, and electrons), and their classical vs. quantum structure.",
+            "video": {
+                "name": "Atomic Structure",
+                "url": "https://vimeo.com/1000458082",
+                "id": "1000458082"
+            },
+            "steps": []
+        },
+        {
+            "index": 1,
+            "name": "Orbitals",
+            "slug": "orbitals",
+            "description": "Only a specific number of electrons can *fit* into each level (orbit) around the Nucleus. 2 can fit nearby. 8 can fit in the next ring. 18 in the next. Those closest to the Nucleus are the most strongly attached. Also, any atoms with in *incomplete* ring are \"unhappy\"...they'd prefer to have a full set.",
+            "video": {
+                "name": "Orbitals",
+                "url": "https://vimeo.com/??????",
+                "id": "??????"
+            },
+            "steps": []
+        },
+        {
+            "index": 2,
+            "name": "Chemistry",
+            "slug": "chemistry",
+            "description": "Atoms with incomplete outer (valence) orbitals will try to complete their set of electrons by sharing, donating, or stealing electrons from other Atoms. This is called chemistry.",
+            "video": {
+                "name": "Chemistry",
+                "url": "https://vimeo.com/??????",
+                "id": "??????"
+            },
+            "steps": []
+        },
+        {
+            "index": 3,
+            "name": "The Periodic Table",
+            "slug": "the-periodic-table",
+            "description": "The organization of elements into a table reveals a regular pattern, which is linked to the fundamental chemical properties of each material.",
+            "video": {
+                "name": "The Periodic Table",
+                "url": "https://vimeo.com/1000458082",
+                "id": "1000458082"
+            },
+            "steps": [
+                {
+                    "index": 0,
+                    "type": "instruction",
+                    "depth": 1,
+                    "html": "<span id=\"instruction\">When you need it <em>(and you will)</em>, then you can find a copy of the periodic table <a id=\"link\" href=\"https://github.com/NoBlackBoxes/LastBlackBox/tree/master/_data/images/periodic_table.png\" target=\"_blank\">here</a>.</span>\n"
+                },
+                {
+                    "index": 1,
+                    "type": "instruction",
+                    "depth": 2,
+                    "html": "<span id=\"instruction\">The electron configuration (assignments to specific orbitals) of each atomic element can be viewed <a id=\"link\" href=\"https://en.wikipedia.org/wiki/Electron_configurations_of_the_elements_(data_page\" target=\"_blank\">here</a>).</span>\n"
+                },
+                {
+                    "index": 2,
+                    "type": "image",
+                    "depth": 3,
+                    "name": "The Periodic Table",
+                    "width": "600",
+                    "url": "https://raw.githubusercontent.com/NoBlackBoxes/LastBlackBox/master/boxes/atoms/_data/images/periodic_table.png"
+                }
+            ]
+        },
+        {
+            "index": 4,
+            "name": "Nuclear Forces",
+            "slug": "nuclear-forces",
+            "description": "Wait. What's up with Hydrogen? Why no Neutrons? Oh...what about Helium? Why don't those Protons, with their positve charges, just fly apart?",
+            "video": {
+                "name": "Nuclear Forces",
+                "url": "https://vimeo.com/??????",
+                "id": "??????"
+            },
+            "steps": []
+        },
+        {
+            "index": 5,
+            "name": "Fission and Fusion",
+            "slug": "fission-and-fusion",
+            "description": "Not all Nuclei are stable, sometimes they can fall apart (fission). What if two atoms goet*sooooo* close to one another that their Nuclei connect (fuse)? Lots of energy.",
+            "video": {
+                "name": "Fission and Fusion",
+                "url": "https://vimeo.com/??????",
+                "id": "??????"
+            },
+            "steps": []
+        }
+    ]
+}
