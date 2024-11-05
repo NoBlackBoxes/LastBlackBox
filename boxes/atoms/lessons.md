@@ -5,7 +5,7 @@
 > A brief introduction to the physics of atoms, their parts (protons, neutrons, and electrons), and their classical vs. quantum structure.
 
 ## [Orbitals](https://vimeo.com/??????)
-> Only a specific number of electrons can *fit* at each level (orbit) around the Nucleus. 2 can fit nearby. 8 can fit in the next ring. 18 in the next. Those closest to the Nucleus are the most strongly attached. Also, any atoms with in *incomplete* ring are "unhappy"...they'd prefer to have a full load.
+> Only a specific number of electrons can *fit* into each level (orbit) around the Nucleus. 2 can fit nearby. 8 can fit in the next ring. 18 in the next. Those closest to the Nucleus are the most strongly attached. Also, any atoms with in *incomplete* ring are "unhappy"...they'd prefer to have a full set.
 
 ## [Chemistry](https://vimeo.com/??????)
 > Atoms with incomplete outer (valence) orbitals will try to complete their set of electrons by sharing, donating, or stealing electrons from other Atoms. This is called chemistry.
