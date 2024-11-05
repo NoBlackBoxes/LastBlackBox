@@ -13,7 +13,7 @@
 ## [The Periodic Table](https://vimeo.com/1000458082)
 > The organization of elements into a table reveals a regular pattern, which is linked to the fundamental chemical properties of each material.
 - When you need it *(and you will)*, then you can find a copy of the periodic table [here](_data/images/periodic_table.png).
-+ The electron configuration (assignments to specific orbitals) of each atomic element can be viewed [here](https://en.wikipedia.org/wiki/Electron_configurations_of_the_elements_(data_page)). 
++ The electron configuration (assignments to specific orbitals) of each atomic element can be viewed [here](https://en.wikipedia.org/wiki/Electron_configurations_of_the_elements_(data_page)).
 * ![The Periodic Table:600](_data/images/periodic_table.png)
 
 ## [Nuclear Forces](https://vimeo.com/??????)
