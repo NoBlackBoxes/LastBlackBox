@@ -1,0 +1,15 @@
+# Electrons: NB3: Measuring Voltage
+
+## [Video](https://vimeo.com/??????)
+
+## Concepts
+- Measure difference between two points (the potential difference)
+- Measure batteries (AA charged, AA dead, 9V...dead?)
+- Voltage measurements should not influence the circuit being measured (measure in parallel)
+- Reference electrode normally at ground
+- Example circuit (3 resistor voltage divider)
+- More complex example (PCB)
+
+## Connections
+
+## Lesson

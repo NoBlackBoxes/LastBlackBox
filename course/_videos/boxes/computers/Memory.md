@@ -1,5 +1,0 @@
-# Computers: Memory
-
-## Concepts
-
-## Connections

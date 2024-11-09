@@ -1,5 +1,0 @@
-# Transistors: MOSFETs
-
-## Concepts
-
-## Connections

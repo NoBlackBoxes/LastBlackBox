@@ -1,0 +1,17 @@
+# Electrons: NB3: Multimeter Basics
+An overview of digital multimeters for beginners. What can it measure? What features do you need to complete the course?
+
+## [Video](https://vimeo.com/??????)
+
+## Concepts
+- What is a multimeter? (electrical measurements)
+- What types of multimeters? (cheap vs. expensive, analog vs. digital)
+- Types of measurements (voltage, resistance, current, and more)
+- Probes
+- Fuses
+- Auto-ranging vs. manual range
+- Other features (light, hold)
+
+## Connections
+
+## Lesson

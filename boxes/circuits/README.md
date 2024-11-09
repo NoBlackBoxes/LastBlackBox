@@ -1,6 +1,5 @@
 # Circuits
-
-Simple sensory-motor loops can accomplish quite a bit.
+Analog circuits can do some amazing things.
 
 ----
 

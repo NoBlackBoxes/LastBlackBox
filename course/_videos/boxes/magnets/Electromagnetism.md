@@ -1,5 +1,0 @@
-# Magnets: Electromagnetism
-
-## Concepts
-
-## Connections

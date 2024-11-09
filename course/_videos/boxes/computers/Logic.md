@@ -1,5 +1,0 @@
-# Computers: Logic
-
-## Concepts
-
-## Connections

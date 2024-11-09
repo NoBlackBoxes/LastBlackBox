@@ -1,5 +1,0 @@
-# Electrons: Current
-
-## Concepts
-
-## Connections

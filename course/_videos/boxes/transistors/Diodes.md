@@ -1,5 +1,0 @@
-# Transistors: Diodes
-
-## Concepts
-
-## Connections

@@ -1,5 +1,0 @@
-# Linux: Git
-
-## Concepts
-
-## Connections

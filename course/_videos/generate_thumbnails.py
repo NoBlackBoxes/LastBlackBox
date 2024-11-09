@@ -1,12 +1,5 @@
 # Generate Video Thumbnails
 
-#----------------------------------------------------------
-# Set library paths
-import sys
-libs_path = "/home/kampff/NoBlackBoxes/LastBlackBox/course/_designs/libs"
-sys.path.append(libs_path)
-#----------------------------------------------------------
-
 # Import Libraries
 import os
 import glob
@@ -15,14 +8,15 @@ import glob
 import Design.png as PNG
 
 # Specify paths
-root_path = "/home/kampff/NoBlackBoxes/LastBlackBox/course/_videos"
-boxes_path = root_path + "/boxes"
+repo_path = "/home/kampff/NoBlackBoxes/LastBlackBox"
+boxes_path = repo_path + "/boxes"
+videos_path = repo_path + "/course/_videos"
 
 # Read templates
-LBB_template_path = root_path + "/_templates/LBB_title.svg"
+LBB_template_path = videos_path + "/_templates/LBB_title.svg"
 with open(LBB_template_path, 'r') as file:
     LBB_template_text = file.read()
-NB3_template_path = root_path + "/_templates/NB3_title.svg"
+NB3_template_path = videos_path + "/_templates/NB3_title.svg"
 with open(NB3_template_path, 'r') as file:
     NB3_template_text = file.read()
 

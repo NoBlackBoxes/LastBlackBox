@@ -1,6 +1,5 @@
 # Electrons
-
-Electrons are sub-atomic particles with a negative electric charge. Their negative charge produces a *force* that attracts positive charges and repels negative charges.
+Electrons are the sub-atomic particles that underlie *electricity*. Controlling the movement of electrons (and the effects of their movement) will allow us to build many different kinds of electronic devices, from simple circuits to robots and computers.
 
 In this box, we will learn about electricity...how to measure it and how to **control** it.
 

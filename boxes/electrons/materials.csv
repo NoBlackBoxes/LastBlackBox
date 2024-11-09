@@ -8,6 +8,7 @@ Capacitor (large),10,100 uF aluminum electrolytic capacitor,1,_data/datsheets/ca
 Button,10,Tactile switch,2,_data/datasheets/button.pdf,https://uk.farnell.com/omron/b3f-1000/switch-spno-0-05a-24v-tht-0-98n/dp/176432,Passive,5,5,3
 Potentiometer,01,2.2 k&Omega; variable resistor,2,_data/datasheets/pot_2k2.pdf,https://uk.farnell.com/bourns/3362p-1-222lf/trimmer-pot-2-2kohm-10-1turn-th/dp/2328599,Passive,5,5,3
 Breadboard (400),01,400-tie solderless breadboard,1,_data/datasheets/breadboard_400.pdf,https://www.amazon.co.uk/gp/product/B0739XRX8F,Loose,85,60,10
+Breadboards (170),01,170-tie solderless breadboard,4,_data/datasheets/breadboard_170.pdf,https://www.amazon.co.uk/ELEGOO-tie-points-Breadboard-Breadboards-Electronic/dp/B01N0YWIR7,Loose,35,50,10
 Batteries (AA),01,AA 1.5 V alkaline battery,4,,,Loose,60,15,15
 Battery holder,01,4xAA battery holder with ON-OFF switch,1,,https://www.amazon.co.uk/gp/product/B0814ZH68F,Loose,65,70,20
 Jumper Kit,01,Kit of multi-length 22 AWG breadboard jumpers,1,_data/datasheets/jumper_kit.pdf,https://uk.farnell.com/multicomp/mc001810/hard-jumper-wire-22awg-140pc/dp/2770338,Loose,170,55,15

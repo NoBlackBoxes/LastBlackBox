@@ -22,7 +22,7 @@ Electrons are the sub-atomic particles that underlie *electricity*. Controlling 
 #### Watch this video: [Conductors](https://vimeo.com/1000740989)
 > Some materials have electrons way out in their outer orbitals that are happy to jump between neighboring atomic nuclei (of the same element). We say that these electrons are "free" to move around the material. If we place such a material between two locations with a *potential difference* (voltage), then electrons will flow from the **(-)** location to the **(+)** location; the material will **conduct** electricity. 
 
-#### Watch this video: [Batteries](https://vimeo.com/??????)
+#### Watch this video: [Batteries](https://vimeo.com/1027764019)
 > Generating a stable voltage requires a source of electrons to maintain the *potential difference*, even when electrons are able to move between two areas of different charge. We can accomplish this with a (redox) chemical reaction inside the wonderfully useful device we call a **battery**.
 
 - [ ] **TASK**: Measure the voltage of a AA battery using your multimeter.

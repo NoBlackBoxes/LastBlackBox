@@ -1,0 +1,12 @@
+# Electrons: NB3: Measuring Resistance
+
+## [Video](https://vimeo.com/??????)
+
+## Concepts
+- Resistance between two points
+- Must pass current from the multimeter through the resistor being measured
+- Normally necessary to remove the resistor from the circuit (but there are some exceptions, e.g. an un-powered simple circuit).
+
+## Connections
+
+## Lesson

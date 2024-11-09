@@ -1,5 +1,0 @@
-# Electrons: Batteries
-
-## Concepts
-
-## Connections

@@ -14,7 +14,7 @@ The essential elements of computation: NOT, AND, OR, XOR, etc.
 There are many ways to store information.
 
 #### Watch this video: [Flash Memory](https://vimeo.com/??????)
-> ALl of your data requires quantum mechanics
+> Most of your data requires quantum mechanics
 
 ## Computers
 It may not yet seem believable, but you can build a **computer** by combining transistors in a clever way. **Let's learn how!**

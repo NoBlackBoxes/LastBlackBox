@@ -1,3 +1,4 @@
-Battery,01,NiMH 9.6V 8-cell 2000 mAh battery,1,,https://www.amazon.co.uk/BAKTH-Capacity-Rechargeable-Discharge-Customized/dp/B08VRC8KL7,Loose,100,60,15
-Battery Charger,01,NiMH battery charger (UK plug),1,,https://www.amazon.co.uk/dp/B089VRXKWY?psc=1&smid=AOVA4BIXU2O7J&ref_=chk_typ_imgToDp,Loose,90,90,70
-Velcro Patch,01,Velcro adhesive,1,,,Loose,50,75,4
+Servo Mount,01,Mount for servo motor,2,,VK,Mounts,30,15,5
+M2.5 bolt (6),01,6 mm long M2.5 bolt,8,,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2,Hardware,5,5,6
+M2.5 standoff (12/SS),01,12 mm long socket-to-socket M2.5 standoff,4,,https://uk.farnell.com/wurth-elektronik/970120151/standoff-hex-female-female-12mm/dp/2884528,Hardware,5,5,12
+Motor Mount,10,Mount for TT Gearbox DC Motors - L-Bracket Type with hardware,2,,https://www.adafruit.com/product/3768,Mounts,25,25,25

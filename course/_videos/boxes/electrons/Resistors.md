@@ -1,5 +1,0 @@
-# Electrons: Resistors
-
-## Concepts
-
-## Connections

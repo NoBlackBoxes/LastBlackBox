@@ -1,5 +1,0 @@
-# Control: Servos
-
-## Concepts
-
-## Connections

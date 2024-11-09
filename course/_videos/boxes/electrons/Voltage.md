@@ -1,5 +1,0 @@
-# Electrons: Voltage
-
-## Concepts
-
-## Connections

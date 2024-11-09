@@ -1,5 +1,0 @@
-# Computers: Architecture
-
-## Concepts
-
-## Connections
