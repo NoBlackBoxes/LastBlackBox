@@ -5,6 +5,7 @@ import os
 import glob
 
 # Import Modules
+import LBB.utilities as Utilities
 import Design.png as PNG
 
 # Specify paths
@@ -29,10 +30,18 @@ for box_folder in box_folders:
     box_name = os.path.basename(box_folder)
     box_name = box_name[0].upper() + box_name[1:]
 
-    # Find all *.md files in each box
-    md_files = glob.glob(box_folder + '/*.md')
+    # Specify lessons folder
+    lessons_folder = box_folder + "/_lessons"
+
+    # Create/Clear thumbnails folder
+    thumbnails_folder = lessons_folder + "/thumbnails"
+    Utilities.clear_folder(thumbnails_folder)
+
+    # Find all *.md files in each box's lessons folder
+    md_files = glob.glob(lessons_folder + '/*.md')
     for md_file in md_files:
         md_basename = os.path.basename(md_file)
+
         # Is an NB3 video?
         if md_basename[:4] == "NB3_":
             is_NB3 = True
@@ -45,7 +54,7 @@ for box_folder in box_folders:
         # Alter SVG template
         svg_text = svg_text.replace(">Box<", f">{box_name}<")
         svg_text = svg_text.replace(">Title of the Video<", f">{video_name}<")
-        svg_path = md_file[:-3] + ".svg"
+        svg_path = f"{thumbnails_folder}/{md_basename[:-3]}.svg"
         png_path = svg_path[:-4] + ".png"
         with open(svg_path, 'w') as file:
                     num_bytes = file.write(svg_text)
