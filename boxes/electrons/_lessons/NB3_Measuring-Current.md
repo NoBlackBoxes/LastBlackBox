@@ -1,6 +1,7 @@
 # Electrons: NB3: Measuring Current
+How to measure current with a digital multimeter.
 
-## [Video](https://vimeo.com/??????)
+## [Video](https://vimeo.com/1027761453)
 
 ## Concepts
 - Current is the trickiest of the basic electronic values to measure
