@@ -6,7 +6,7 @@ Generating a stable voltage requires a renewable source of electrons to maintain
 ## Concepts
 - Maintaining potential differences was key to understanding electricity and building electronic devices
 - Chemical reactions (redox) can create potential differences
-- Zinc (reduced) vs Copper (oxidized) demo
+- Zinc (oxidized) vs Copper (reduced): Zn dissolves into solution, leaving behind 2 negative...become negative
 - AA batteries
 - Other battery chemistries
 - Demonstrate a voltaic pile
