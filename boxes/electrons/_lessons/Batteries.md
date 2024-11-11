@@ -4,9 +4,16 @@ Generating a stable voltage requires a renewable source of electrons to maintain
 ## [Video](https://vimeo.com/??????)
 
 ## Concepts
-- Maintaining potential differences was key to understanding electricity and building electronic devices
+- Maintaining a stable potential differences was key to understanding electricity and building electronic devices
+- Metals in solution lose electrons
 - Chemical reactions (redox) can create potential differences
-- Zinc (oxidized) vs Copper (reduced): Zn dissolves into solution, leaving behind 2 negative...become negative
+- O.I.L.R.I.G.
+- Zn is oxidized an Zn2+ dissolves into the solution, loses electrons. The Zn then becomes more and more negative. Eventually no more Zn can dissolve...unless we remove the electrons by connecting it to another material...that is less likely to lose electrons (in this case copper). The electrons flow from the Zn to the copper via a conductor...and then the reaction can continue until the Zn electrode is dissolved enough.
+
+- In 1780s Galvani discovered that a frog leg would twitch when contacted by wires connected to a stack of two different metals
+- Volta soon discovered that the frog was not necessary. The stack of different metals would itself generate a electromotive force
+- Zinc at the surface is oxidized and dissolves into the solution, leaving behind 2 negative electrons: Zn → Zn2+ + 2e-, the Zn becomes negative (loses the electron to the surface electrode)
+- Cupper receives/accepts 2 hydrogen ions from the solution
 - AA batteries
 - Other battery chemistries
 - Demonstrate a voltaic pile
