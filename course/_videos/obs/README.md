@@ -2,10 +2,26 @@
 
 This folder contains profile and scene standards for the recording of LBB and NB3 videos.
 
-## Titles
-- The LBB videos use this course logo: [LBB title](titles/LBB_obs_title.png)
-- The NB3 videos use this robot outline: [NB3 title](titles/NB3_obs_title.png)
-
-### Fonts
+## Fonts
 
 The title font is "FreeMono Oblique" size 72
+
+---
+
+## Blender Video Render Settings
+
+Resolution: 1920x1080
+- FFmpeg Video
+  - H.264
+  - High Quality
+  - Encoding Speed: Good
+  - Keyframe Interval: 18
+- Audio
+  - AAC
+  - Stereo
+  - Sample Rate: 48000 Hz
+  - Bitrate: 320
+  - Volume: 1.0
+
+Audio Clip Volume:
+- 1.20
