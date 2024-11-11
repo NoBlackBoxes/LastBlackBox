@@ -1,7 +1,7 @@
 # Atoms: The Periodic Table
-The organization of elements into a table reveals a regular pattern, which is linked to the fundamental chemical properties of each material.
+Organizing the elements into a table reveals a regular pattern, which is linked to the fundamental chemical properties of each material.
 
-## [Video](https://vimeo.com/1000458082)
+## [Video](https://vimeo.com/1028399080)
 
 ## Concepts
 -Review orbitals of atoms

@@ -1,7 +1,7 @@
 # Electrons: NB3: Measuring Voltage
 How to measure voltage with a digital multimeter.
 
-## [Video](https://vimeo.com/??????)
+## [Video](https://vimeo.com/1027762531)
 
 ## Concepts
 - Measure difference between two points (the potential difference)

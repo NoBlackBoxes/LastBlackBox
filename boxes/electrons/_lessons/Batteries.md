@@ -1,9 +1,15 @@
 # Electrons: Batteries
-Generating a stable voltage requires a source of electrons to maintain the *potential difference*, even when electrons are able to move between two areas of different charge. We can accomplish this with a (redox) chemical reaction inside the wonderfully useful device we call a **battery**.
+Generating a stable voltage requires a renewable source of electrons to maintain a *potential difference*. We can accomplish this with a (redox) chemical reaction inside the wonderfully useful device we call a **battery**.
 
 ## [Video](https://vimeo.com/??????)
 
 ## Concepts
+- Maintaining potential differences was key to understanding electricity and building electronic devices
+- Chemical reactions (redox) can create potential differences
+- Zinc (reduced) vs Copper (oxidized) demo
+- AA batteries
+- Other battery chemistries
+- Demonstrate a voltaic pile
 
 ## Connections
 

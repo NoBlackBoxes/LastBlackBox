@@ -1,7 +1,7 @@
 # Electrons: NB3: Measuring Resistance
 How to measure resistance with a digital multimeter.
 
-## [Video](https://vimeo.com/??????)
+## [Video](https://vimeo.com/1027761453)
 
 ## Concepts
 - Resistance between two points
