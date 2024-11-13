@@ -1,5 +1,5 @@
 # Electrons: Current
-The rate at which electrons flow, measured as *#charges / second*, is called **current**. We use the unit *Amps* (A).
+The rate at which electrons flow, measured as *#charges / second*, is called **current**. We use the unit *Amps* (A) and the circuit symbol **I**.
 
 ## [Video](https://vimeo.com/1000743561)
 

@@ -4,8 +4,8 @@
 
 ## Electrons
 - [x] [Voltage](https://vimeo.com/1000730032)
-- [ ] [Conductors](https://vimeo.com/1000740989)
-- [ ] [Current](https://vimeo.com/1000743561)
+- [x] [Conductors](https://vimeo.com/1000740989)
+- [x] [Current](https://vimeo.com/1000743561)
 - [x] [Batteries](https://vimeo.com/??????)
 - [ ] [Resistors](https://vimeo.com/1000755493)
 - [ ] [Ohm's Law](https://vimeo.com/1000768334)
