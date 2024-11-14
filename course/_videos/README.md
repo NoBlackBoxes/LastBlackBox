@@ -1,6 +1,7 @@
 ## Atoms
 - [x] [Atomic Structure](https://vimeo.com/??????)
 - [x] [The Periodic Table](https://vimeo.com/??????)
+- [ ] [Heat]()
 
 ## Electrons
 - [x] [Voltage](https://vimeo.com/1000730032)
@@ -8,6 +9,7 @@
 - [x] [Current](https://vimeo.com/1000743561)
 - [x] [Batteries](https://vimeo.com/??????)
 - [ ] [Resistors](https://vimeo.com/1000755493)
+- [ ] [Power]()
 - [ ] [Ohm's Law](https://vimeo.com/1000768334)
 - [ ] [Voltage Dividers](https://vimeo.com/1000782478)
 - [x] [NB3 : Multimeter Basics](https://vimeo.com/1027764019)
@@ -19,7 +21,7 @@
 - [ ] [NB3 : Body](https://vimeo.com/1005036900)
 - [ ] [NB3 : Designing PCBs with KiCAD]()
 - [ ] [NB3 : Building Circuits]()
-- [ ] [NB3 : Building Voltage Dividers](https://vimeo.com/1000789632)
+- [ ] [NB3 : Building Voltage Dividers]()
 
 ## Sensors
 - [ ] [Light Sensors](https://vimeo.com/1000794164)

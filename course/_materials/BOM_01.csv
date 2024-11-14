@@ -5,10 +5,12 @@ Periodic Table,01,Periodic Table business card,1,card,VK,Loose,40,60,0.5
 
 electrons,,,,,,,,
 NB3 Body,01,NB3 robot base PCB,1,NB3_body,VK,Loose,200,200,15
-Resistor (470),01,470 &Omega;/0.25 W,1,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943,Passive,50,5,3
+Resistor (470),01,470 &Omega;/0.25 W,2,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943,Passive,50,5,3
+Resistor (1k),01,1 k&Omega;/0.25 W,2,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-1k/res-1k-1-250mw-axial-metal-film/dp/9341102,Passive,50,5,3
 Resistor (10k),01,10 k&Omega;/0.25 W,2,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-10k/res-10k-1-250mw-axial-metal-film/dp/9341110,Passive,50,5,3
 Potentiometer,01,2.2 k&Omega; variable resistor,2,_data/datasheets/pot_2k2.pdf,https://uk.farnell.com/bourns/3362p-1-222lf/trimmer-pot-2-2kohm-10-1turn-th/dp/2328599,Passive,5,5,3
 Breadboard (400),01,400-tie solderless breadboard,1,_data/datasheets/breadboard_400.pdf,https://www.amazon.co.uk/gp/product/B0739XRX8F,Loose,85,60,10
+Breadboards (170),01,170-tie solderless breadboard,4,_data/datasheets/breadboard_170.pdf,https://www.amazon.co.uk/ELEGOO-tie-points-Breadboard-Breadboards-Electronic/dp/B01N0YWIR7,Loose,35,50,10
 Batteries (AA),01,AA 1.5 V alkaline battery,4,,,Loose,60,15,15
 Battery holder,01,4xAA battery holder with ON-OFF switch,1,,https://www.amazon.co.uk/gp/product/B0814ZH68F,Loose,65,70,20
 Jumper Kit,01,Kit of multi-length 22 AWG breadboard jumpers,1,_data/datasheets/jumper_kit.pdf,https://uk.farnell.com/multicomp/mc001810/hard-jumper-wire-22awg-140pc/dp/2770338,Loose,170,55,15
@@ -26,19 +28,15 @@ light,,,,,,,,
 
 sensors,,,,,,,,
 Photoresistor (LDR),01,Light-dependent resistor (GL5516 and GL5528),8,,https://www.amazon.co.uk/Resistor-Dependent-Photoresistor-Sensitive-Sensors/dp/B08SC1M7V7,Passive,50,10,3
-Breadboards (170),01,170-tie solderless breadboard,4,_data/datasheets/breadboard_170.pdf,https://www.amazon.co.uk/ELEGOO-tie-points-Breadboard-Breadboards-Electronic/dp/B01N0YWIR7,Loose,35,50,10
 
 motors,,,,,,,,
 DC Brushed Motor,01,6V Brushed DC motor,1,,https://www.amazon.co.uk/Gikfun-1V-6V-Hobby-Arduino-EK1894/dp/B07BHHP2BT,Loose,20,40,15
-Servo Mount,01,Mount for servo motor,2,,VK,Mounts,30,15,5
-Servo Motor,01,FT90R Digital Micro Continuous Rotation Servo,2,,https://www.pololu.com/product/2817,Loose,100,70,15
-Servo Wheel,01,Wheels (70x8mm) for servos,2,,https://www.pololu.com/product/4925,Loose,100,70,15
-M2.5 bolt (6),01,6 mm long M2.5 bolt,8,,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2,Hardware,5,5,6
-M2.5 standoff (12/SS),01,12 mm long socket-to-socket M2.5 standoff,4,,https://uk.farnell.com/wurth-elektronik/970120151/standoff-hex-female-female-12mm/dp/2884528,Hardware,5,5,12
 
 transistors,,,,,,,,
 MOSFET,01,Power MOSFET/N-channel (IRF510),2,_data/datasheets/IRF510.pdf,https://uk.farnell.com/vishay/irf510pbf/mosfet-n-100v-5-6a-to-220ab/dp/1653658,Active,40,15,4
 Diode,01,IN4001,2,_data/datasheets/IN4001.pdf,https://uk.farnell.com/on-semiconductor/1n4001g/diode-standard-1a-do-41/dp/1458986,Active,40,5,3
+LED (Red),01,5 mm/2 mA red LED,2,_data/datasheets/led_HLMP.pdf,https://uk.farnell.com/broadcom-limited/hlmp-4700/led-5mm-red-2-3mcd-626nm/dp/1003232,Active,50,5,3
+LED (Green),01,3 mm/2 mA green LED,2,_data/datasheets/led_HLMP.pdf,https://uk.farnell.com/broadcom-limited/hlmp-1790/led-3mm-green-2-3mcd-569nm/dp/1003209,Active,50,5,3
 
 amplifiers,,,,,,,,
 
@@ -53,11 +51,11 @@ M2.5 standoff (7/PS),01,7 mm long plug-to-socket M2.5 standoff,4,,https://uk.far
 M2.5 bolt (6),01,6 mm long M2.5 bolt,4,,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2,Hardware,5,5,6
 M2.5 nut,01,regular M2.5 nut,4,-,https://www.accu.co.uk/hexagon-nuts/456430-HPN-M2-5-C8-Z,Hardware,5,5,3
 12V DC Power Supply,01,12 V AC-DC transformer (UK/EU/USA plugs),1,,https://www.amazon.co.uk/gp/product/B09QG4R1R4,Loose,100,100,80
+Battery,01,NiMH 9.6V 8-cell 2000 mAh battery,1,,https://www.amazon.co.uk/BAKTH-Capacity-Rechargeable-Discharge-Customized/dp/B08VRC8KL7,Loose,100,60,15
+Battery Charger,01,NiMH battery charger (UK plug),1,,https://www.amazon.co.uk/dp/B089VRXKWY?psc=1&smid=AOVA4BIXU2O7J&ref_=chk_typ_imgToDp,Loose,90,90,70
+Velcro Patch,01,Velcro adhesive,1,,,Loose,50,75,4
 
 data,,,,,,,,
-LED (Red),01,5 mm/2 mA red LED,2,_data/datasheets/led_HLMP.pdf,https://uk.farnell.com/broadcom-limited/hlmp-4700/led-5mm-red-2-3mcd-626nm/dp/1003232,Active,50,5,3
-LED (Green),01,3 mm/2 mA green LED,2,_data/datasheets/led_HLMP.pdf,https://uk.farnell.com/broadcom-limited/hlmp-1790/led-3mm-green-2-3mcd-569nm/dp/1003209,Active,50,5,3
-Resistor (330),01,330 &Omega;/0.25 W,4,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-2k4/res-2k4-1-250mw-axial-metal-film/dp/9341595,Passive,50,5,3
 
 logic,,,,,,,,
 
@@ -71,12 +69,13 @@ Piezo Buzzer,01,Piezoelectric speaker/transducer,1,_data/datasheets/piezo_buzzer
 Cable (MiniUSB-1m),01,Mini-USB to Type-A cable (1 m),1,,https://uk.farnell.com/molex/88732-8602/usb-cable-2-0-plug-plug-1m/dp/1221071,Loose,100,50,15
 
 control,,,,,,,,
+Servo Motor,01,FT90R Digital Micro Continuous Rotation Servo,2,,https://www.pololu.com/product/2817,Loose,100,70,15
+Servo Wheel,01,Wheels (70x8mm) for servos,2,,https://www.pololu.com/product/4925,Loose,100,70,15
 
 robotics,,,,,,,,
-Cable (Mini-USB/20cm),01,Short mini-USB to Type-A cable (20 cm),1,,https://www.amazon.co.uk/LINDY-0-2-Type-Mini-B-Cable/dp/B01IZ4VFCO,Loose,100,25,10
-Battery,01,NiMH 9.6V 8-cell 2000 mAh battery,1,,https://www.amazon.co.uk/BAKTH-Capacity-Rechargeable-Discharge-Customized/dp/B08VRC8KL7,Loose,100,60,15
-Battery Charger,01,NiMH battery charger (UK plug),1,,https://www.amazon.co.uk/dp/B089VRXKWY?psc=1&smid=AOVA4BIXU2O7J&ref_=chk_typ_imgToDp,Loose,90,90,70
-Velcro Patch,01,Velcro adhesive,1,,,Loose,50,75,4
+Servo Mount,01,Mount for servo motor,2,,VK,Mounts,30,15,5
+M2.5 bolt (6),01,6 mm long M2.5 bolt,8,,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2,Hardware,5,5,6
+M2.5 standoff (12/SS),01,12 mm long socket-to-socket M2.5 standoff,4,,https://uk.farnell.com/wurth-elektronik/970120151/standoff-hex-female-female-12mm/dp/2884528,Hardware,5,5,12
 
 systems,,,,,,,,
 Computer (RPi4),01,Raspberry Pi 4b with 2 GB RAM,1,_data/datasheets/rpi4b.pdf,https://uk.farnell.com/raspberry-pi/rpi4-modbp-2gb/raspberry-pi-4-model-b-2gb/dp/3051886,Loose,95,70,26
@@ -92,6 +91,7 @@ linux,,,,,,,,
 python,,,,,,,,
 
 networks,,,,,,,,
+Cable (Mini-USB/20cm),01,Short mini-USB to Type-A cable (20 cm),1,,https://www.amazon.co.uk/LINDY-0-2-Type-Mini-B-Cable/dp/B01IZ4VFCO,Loose,100,25,10
 
 websites,,,,,,,,
 

@@ -4,6 +4,19 @@ Many materials hold onto their outer electrons and resist their movement. We can
 ## [Video](https://vimeo.com/1000755493)
 
 ## Concepts
+- Conductors are special, given the ease with which their outermost electrons can move between atoms.
+- Most materials hold on to their electrons, to different degrees, and resist their movement.
+- A material that strongly holds onto their electrons, we call an insulator. Silicon, Wood. Plastics.
+- Materials that are "in between" can be used to create a range of resistance values.
+- We call these materials resistors.
+- A common such material is a mixture of Nickel and Chromium. Longer paths of NiCr (Nichrome) have more resistance than shorter paths.
+- This is how the "metal film" resistors in your kit are made.
+- We use Ohms as our unit of resistance.
+- The symbol for a resistor.
+- When we connect resistors in series, the total resistance is the the sum.
+- When we connect resistors in parallel, the net resistance decreases. 1/R = 1/(R1 + 1/R2) or R = (1/R1 + 1/R2)^-1. For example, if both R1 and R2 are 100 Ohms, then we get R = (2/100)^-1 or 50 Ohms through both.
+- Resistor color codes
+- Power ratings (1/4 Watt)
 
 ## Connections
 

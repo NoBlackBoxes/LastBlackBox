@@ -14,10 +14,8 @@ username = os.getlogin()
 repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
 boxes_path = repo_path + '/boxes'
 
-# Specify Level Limit
-level_limit = '01'
-#level_limit = '10'
-#level_limit = '11'
+# Specify Level Limits
+level_limits = ['01', '10', '11']
 
 #
 # Helper functions
@@ -189,19 +187,21 @@ boxes = [
     'intelligence'
 ]
 
-# Insert materials table into README
-for box in boxes:
-    insert_materials(box)
+# For each level
+for level_limit in level_limits:
+    # Insert materials table into README
+    for box in boxes:
+        insert_materials(box)
 
-# Generate BOM.csv by appending individual materials.csv
-BOM = ['Part,Level,Description,Quantity,Datasheet,Supplier,Package,x(mm),y(mm),z(mm)\n', ',,,,,,,,\n']
-for box in boxes:
-    BOM = append_materials(BOM, box)
+    # Generate BOM.csv by appending individual materials.csv
+    BOM = ['Part,Level,Description,Quantity,Datasheet,Supplier,Package,x(mm),y(mm),z(mm)\n', ',,,,,,,,\n']
+    for box in boxes:
+        BOM = append_materials(BOM, box)
 
-# Store BOM
-bom_path = repo_path + "/course/_materials/BOM.csv"
-f = open(bom_path, 'w', encoding='utf8')
-f.writelines(BOM)
-f.close()
+    # Store BOM
+    bom_path = repo_path + f"/course/_materials/BOM_{level_limit}.csv"
+    f = open(bom_path, 'w', encoding='utf8')
+    f.writelines(BOM)
+    f.close()
 
 #FIN

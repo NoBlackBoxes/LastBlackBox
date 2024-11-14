@@ -11,9 +11,9 @@ Analog-to-Digital...
 Contents|Level|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 Comparator|10|LM339 (DIP-14)|2|[-D-](_data/datasheets/lm2901.pdf)|[-L-](https://uk.farnell.com/texas-instruments/lm2901n/ic-comparator-quad-2901-dip14/dp/3118410)
-LED (Red)|01|5 mm/2 mA red LED|2|[-D-](_data/datasheets/led_HLMP.pdf)|[-L-](https://uk.farnell.com/broadcom-limited/hlmp-4700/led-5mm-red-2-3mcd-626nm/dp/1003232)
-LED (Green)|01|3 mm/2 mA green LED|2|[-D-](_data/datasheets/led_HLMP.pdf)|[-L-](https://uk.farnell.com/broadcom-limited/hlmp-1790/led-3mm-green-2-3mcd-569nm/dp/1003209)
-Resistor (330)|01|330 &Omega;/0.25 W|4|[-D-](_data/datsheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-2k4/res-2k4-1-250mw-axial-metal-film/dp/9341595)
+LED (Red)|10|5 mm/2 mA red LED|2|[-D-](_data/datasheets/led_HLMP.pdf)|[-L-](https://uk.farnell.com/broadcom-limited/hlmp-4700/led-5mm-red-2-3mcd-626nm/dp/1003232)
+LED (Green)|10|3 mm/2 mA green LED|2|[-D-](_data/datasheets/led_HLMP.pdf)|[-L-](https://uk.farnell.com/broadcom-limited/hlmp-1790/led-3mm-green-2-3mcd-569nm/dp/1003209)
+Resistor (330)|10|330 &Omega;/0.25 W|4|[-D-](_data/datsheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-2k4/res-2k4-1-250mw-axial-metal-film/dp/9341595)
 
 </p></details>
 

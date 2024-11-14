@@ -14,6 +14,9 @@ M2.5 standoff (7/PS)|01|7 mm long plug-to-socket M2.5 standoff|4|-|[-L-](https:/
 M2.5 bolt (6)|01|6 mm long M2.5 bolt|4|-|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2)
 M2.5 nut|01|regular M2.5 nut|4|[-D-](-)|[-L-](https://www.accu.co.uk/hexagon-nuts/456430-HPN-M2-5-C8-Z)
 12V DC Power Supply|01|12 V AC-DC transformer (UK/EU/USA plugs)|1|-|[-L-](https://www.amazon.co.uk/gp/product/B09QG4R1R4)
+Battery|01|NiMH 9.6V 8-cell 2000 mAh battery|1|-|[-L-](https://www.amazon.co.uk/BAKTH-Capacity-Rechargeable-Discharge-Customized/dp/B08VRC8KL7)
+Battery Charger|01|NiMH battery charger (UK plug)|1|-|[-L-](https://www.amazon.co.uk/dp/B089VRXKWY?psc=1&smid=AOVA4BIXU2O7J&ref_=chk_typ_imgToDp)
+Velcro Patch|01|Velcro adhesive|1|-|-
 
 </p></details>
 

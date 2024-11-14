@@ -52,8 +52,8 @@ Servo Mount,Mount for servo motor,2.0,Mounts,15,30,0,0,0,VK,30.0,15.0,5.0
 NB3 Camera Mount,Custom laser cut mount for RPi camera,1.0,Mounts,15,15,0,0,0,VK,40.0,30.0,5.0
 NB3 Cortex Mount,Custom laser cut holder for NPU,1.0,Mounts,15,15,0,0,0,VK,75.0,65.0,5.0
 Rubber feet,Adhesive rubber standoffs (1421T6CL),4.0,Passive,15,60,0,0,0,https://uk.farnell.com/hammond/1421t6cl/feet-stick-on-pk24/dp/1876522,20.0,20.0,4.0
-Resistor (470),470 &Omega;/0.25 W,1.0,Passive,15,15,0,0,0,https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943,50.0,5.0,3.0
-Resistor (330),330 &Omega;/0.25 W,4.0,Passive,15,60,0,0,0,https://uk.farnell.com/multicomp/mf25-2k4/res-2k4-1-250mw-axial-metal-film/dp/9341595,50.0,5.0,3.0
+Resistor (470),470 &Omega;/0.25 W,2.0,Passive,15,30,0,0,0,https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943,50.0,5.0,3.0
+Resistor (1k),1 k&Omega;/0.25 W,2.0,Passive,15,30,0,0,0,https://uk.farnell.com/multicomp/mf25-1k/res-1k-1-250mw-axial-metal-film/dp/9341102,50.0,5.0,3.0
 Resistor (10k),10 k&Omega;/0.25 W,2.0,Passive,15,30,0,0,0,https://uk.farnell.com/multicomp/mf25-10k/res-10k-1-250mw-axial-metal-film/dp/9341110,50.0,5.0,3.0
 Potentiometer,2.2 k&Omega; variable resistor,2.0,Passive,15,30,0,0,0,https://uk.farnell.com/bourns/3362p-1-222lf/trimmer-pot-2-2kohm-10-1turn-th/dp/2328599,5.0,5.0,3.0
 Magnet Wire,Narrow gaurge epoxy insulated (1 m),1.0,Passive,15,15,0,0,0,https://www.amazon.co.uk/Enameled-Magnet-Soldering-Winding-Enamelled/dp/B07N65LRVD,30.0,30.0,20.0

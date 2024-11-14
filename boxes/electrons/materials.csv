@@ -1,7 +1,7 @@
 NB3 Body,01,NB3 robot base PCB,1,NB3_body,VK,Loose,200,200,15
 Resistor (330),10,330 &Omega;/0.25 W,2,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-330r/res-330r-1-250mw-axial-metal-film/dp/9341730,Passive,50,5,3
-Resistor (470),01,470 &Omega;/0.25 W,1,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943,Passive,50,5,3
-Resistor (1k),10,1 k&Omega;/0.25 W,1,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-1k/res-1k-1-250mw-axial-metal-film/dp/9341102,Passive,50,5,3
+Resistor (470),01,470 &Omega;/0.25 W,2,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943,Passive,50,5,3
+Resistor (1k),01,1 k&Omega;/0.25 W,2,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-1k/res-1k-1-250mw-axial-metal-film/dp/9341102,Passive,50,5,3
 Resistor (10k),01,10 k&Omega;/0.25 W,2,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-10k/res-10k-1-250mw-axial-metal-film/dp/9341110,Passive,50,5,3
 Capacitor (small),10,0.1 uF ceramic capacitor,1,_data/datasheets/capacitor_ceramic.pdf,https://uk.farnell.com/kemet/c322c104k1r5ta/cap-0-1-f-100v-10-x7r/dp/1457685,Passive,50,5,3
 Capacitor (large),10,100 uF aluminum electrolytic capacitor,1,_data/datsheets/capacitor_electrolytic.pdf,https://uk.farnell.com/rubycon/16zlh100mefc5x11/cap-100-f-16v-20/dp/8126283,Passive,50,5,3

@@ -11,7 +11,6 @@ Contents|Level|Description| # |Data|Link|
 Thermistor|10|Temperature sensitive resistor|2|[-D-](_data/datasheets/thermistor.pdf)|[-L-](https://uk.farnell.com/epcos/b57891m0103k000/thermistor-ntc-radial-leaded/dp/2285471)
 Photoresistor (LDR)|01|Light-dependent resistor (GL5516 and GL5528)|8|-|[-L-](https://www.amazon.co.uk/Resistor-Dependent-Photoresistor-Sensitive-Sensors/dp/B08SC1M7V7)
 Piezo|10|Piezo element|1|[-D-](_data/datasheets/piezo.pdf)|[-L-](https://uk.farnell.com/multicomp/mcabt-455-rc/audio-element-piezo-2-8khz-35mm/dp/2433035)
-Breadboards (170)|01|170-tie solderless breadboard|4|[-D-](_data/datasheets/breadboard_170.pdf)|[-L-](https://www.amazon.co.uk/ELEGOO-tie-points-Breadboard-Breadboards-Electronic/dp/B01N0YWIR7)
 
 </p></details>
 

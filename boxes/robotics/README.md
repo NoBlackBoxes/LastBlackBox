@@ -8,9 +8,10 @@ Mid-brain does most of it.
 
 Contents|Level|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
-Battery|01|NiMH 9.6V 8-cell 2000 mAh battery|1|-|[-L-](https://www.amazon.co.uk/BAKTH-Capacity-Rechargeable-Discharge-Customized/dp/B08VRC8KL7)
-Battery Charger|01|NiMH battery charger (UK plug)|1|-|[-L-](https://www.amazon.co.uk/dp/B089VRXKWY?psc=1&smid=AOVA4BIXU2O7J&ref_=chk_typ_imgToDp)
-Velcro Patch|01|Velcro adhesive|1|-|-
+Servo Mount|01|Mount for servo motor|2|-|[-L-](VK)
+M2.5 bolt (6)|01|6 mm long M2.5 bolt|8|-|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2)
+M2.5 standoff (12/SS)|01|12 mm long socket-to-socket M2.5 standoff|4|-|[-L-](https://uk.farnell.com/wurth-elektronik/970120151/standoff-hex-female-female-12mm/dp/2884528)
+Motor Mount|10|Mount for TT Gearbox DC Motors - L-Bracket Type with hardware|2|-|[-L-](https://www.adafruit.com/product/3768)
 
 </p></details>
 

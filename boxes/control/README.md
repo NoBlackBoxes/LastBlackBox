@@ -8,7 +8,10 @@ Negative-feedback and servo loops.
 
 Contents|Level|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
+Servo Motor|01|FT90R Digital Micro Continuous Rotation Servo|2|-|[-L-](https://www.pololu.com/product/2817)
+Servo Wheel|01|Wheels (70x8mm) for servos|2|-|[-L-](https://www.pololu.com/product/4925)
 H-bridge|10|H-bridge motor driver (SN754410NE)|2|[-D-](_data/datasheets/sn754410.pdf)|[-L-](https://uk.farnell.com/texas-instruments/sn754410ne/ic-peripheral-driver-half-h-1a/dp/3118977)
+DC Gearbox Motor|10|TT Gearbox DC Motor - 200RPM - 3 to 6VDC and wheel|2|-|[-L-](https://www.adafruit.com/product/3777#technical-details)
 
 </p></details>
 
