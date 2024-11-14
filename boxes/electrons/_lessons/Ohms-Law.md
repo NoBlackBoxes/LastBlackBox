@@ -4,6 +4,11 @@ Ohm's Law describes the relationship between Voltage, Current, and Resistance. I
 ## [Video](https://vimeo.com/1000768334)
 
 ## Concepts
+- Ohm's Law describes the relationship between V, I, and R.
+- It is fairly intuitive. The harder you push, the more current will flow. The more you resist, the less.
+- V = IR
+- This is a linear relationship...if every device behaves appropriately.
+- Draw an IV curve. Current on Y, voltage on X.
 
 ## Connections
 

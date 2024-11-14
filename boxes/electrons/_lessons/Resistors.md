@@ -6,10 +6,10 @@ Many materials hold onto their outer electrons and resist their movement. We can
 ## Concepts
 - Conductors are special, given the ease with which their outermost electrons can move between atoms.
 - Most materials hold on to their electrons, to different degrees, and resist their movement.
-- A material that strongly holds onto their electrons, we call an insulator. Silicon, Wood. Plastics.
-- Materials that are "in between" can be used to create a range of resistance values.
-- We call these materials resistors.
-- A common such material is a mixture of Nickel and Chromium. Longer paths of NiCr (Nichrome) have more resistance than shorter paths.
+- A material that *strongly* holds onto their electrons, we call an insulator. Silicon, Wood. Plastics.
+- We can mix conductors with materials that offer resistance to create a range of **resistance** values.
+- We call these devices resistors. They are often made of cermets (ceramic + metals).
+- Another common such material is a mixture of Nickel and Chromium. Longer paths of NiCr (Nichrome) have more resistance than shorter paths. This is how your resistors in the kit are made. We call them Metal-Film resistors.
 - This is how the "metal film" resistors in your kit are made.
 - We use Ohms as our unit of resistance.
 - The symbol for a resistor.

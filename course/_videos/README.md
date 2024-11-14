@@ -1,16 +1,16 @@
 ## Atoms
 - [x] [Atomic Structure](https://vimeo.com/??????)
 - [x] [The Periodic Table](https://vimeo.com/??????)
-- [ ] [Heat]()
+- [x] [Heat]()
 
 ## Electrons
 - [x] [Voltage](https://vimeo.com/1000730032)
 - [x] [Conductors](https://vimeo.com/1000740989)
 - [x] [Current](https://vimeo.com/1000743561)
 - [x] [Batteries](https://vimeo.com/??????)
-- [ ] [Resistors](https://vimeo.com/1000755493)
-- [ ] [Power]()
-- [ ] [Ohm's Law](https://vimeo.com/1000768334)
+- [x] [Resistors](https://vimeo.com/1000755493)
+- [x] [Ohm's Law](https://vimeo.com/1000768334)
+- [x] [Power]()
 - [ ] [Voltage Dividers](https://vimeo.com/1000782478)
 - [x] [NB3 : Multimeter Basics](https://vimeo.com/1027764019)
 - [x] [NB3 : Measuring Voltage](https://vimeo.com/??????)
