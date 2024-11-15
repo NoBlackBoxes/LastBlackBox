@@ -58,7 +58,10 @@ for box_name in Config.box_names:
             if line.startswith("## [Video]"):
                 video_URL = line.split('(')[1].split(')')[0]
                 if video_URL:
-                    video_list_file.write(f"- [x] [{lesson_name}]({video_URL})\n")
+                    if is_NB3:
+                        video_list_file.write(f"- [x] [NB3 : {lesson_name}]({video_URL})\n")
+                    else:
+                        video_list_file.write(f"- [x] [{lesson_name}]({video_URL})\n")
                 else:
                     video_list_file.write(f"- [ ] [{lesson_name}]()\n")
                 line_count = max_count

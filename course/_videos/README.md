@@ -8,7 +8,7 @@
 
 ## Electrons
 - [x] [Power](https://vimeo.com/1029693122)
-- [x] [Building a Battery](https://vimeo.com/1029280971)
+- [x] [NB3 : Building a Battery](https://vimeo.com/1029280971)
 - [ ] [Voltage Dividers]()
 - [x] [Batteries](https://vimeo.com/1029278169)
 - [x] [Conductors](https://vimeo.com/1029337222)
@@ -16,13 +16,13 @@
 - [x] [Current](https://vimeo.com/1029334167)
 - [x] [Ohm's Law](https://vimeo.com/1029695302)
 - [ ] [Building Circuits]()
-- [x] [Multimeter Basics](https://vimeo.com/1027764019)
+- [x] [NB3 : Multimeter Basics](https://vimeo.com/1027764019)
 - [ ] [Designing PCBs With KiCAD]()
 - [x] [Resistors](https://vimeo.com/1029696806)
 - [ ] [Building Voltage Dividers]()
-- [x] [Measuring Current](https://vimeo.com/1027757287)
-- [x] [Measuring Voltage](https://vimeo.com/1027762531)
-- [x] [Measuring Resistance](https://vimeo.com/1027761453)
+- [x] [NB3 : Measuring Current](https://vimeo.com/1027757287)
+- [x] [NB3 : Measuring Voltage](https://vimeo.com/1027762531)
+- [x] [NB3 : Measuring Resistance](https://vimeo.com/1027761453)
 - [ ] [Body]()
 - [ ] [How Do Multimeters Work]()
 
