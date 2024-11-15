@@ -1,7 +1,7 @@
 # Sensors: Light Sensors
 A light sensor converts light intensity into an electrical signal (voltage, current, or resistance).
 
-## [Video](https://vimeo.com/??????)
+## [Video]()
 
 ## Concepts
 

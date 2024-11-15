@@ -1,7 +1,7 @@
-# Control: NB3 : Servo Muscles
+# Control: NB3: Servo Motors
 Let's build your robot's movement system.
 
-## [Video](https://vimeo.com/1005154927)
+## [Video]()
 
 ## Concepts
 

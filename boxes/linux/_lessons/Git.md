@@ -1,7 +1,7 @@
 # Linux: Git
 Git is a program that keeps track of changes to your files. It is very useful when developing code. This entire course is stores as a git "repository".
 
-## [Video](https://vimeo.com/??????)
+## [Video]()
 
 ## Concepts
 

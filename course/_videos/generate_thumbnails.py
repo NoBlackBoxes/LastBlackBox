@@ -5,6 +5,7 @@ import os
 import glob
 
 # Import Modules
+import LBB.config as Config
 import LBB.utilities as Utilities
 import Design.png as PNG
 
@@ -25,10 +26,10 @@ with open(NB3_template_path, 'r') as file:
 box_folders = [f for f in glob.glob(boxes_path + '/*') if os.path.isdir(f)]
 
 # Process each video's *.md file 
-for box_folder in box_folders:
-    # Extract (and capitalize) box name
-    box_name = os.path.basename(box_folder)
-    box_name = box_name[0].upper() + box_name[1:]
+for box_name in Config.box_names:
+
+    # Determine box folder
+    box_folder = f"{boxes_path}/{box_name.lower()}"
 
     # Specify lessons folder
     lessons_folder = box_folder + "/_lessons"
@@ -42,23 +43,27 @@ for box_folder in box_folders:
     for md_file in md_files:
         md_basename = os.path.basename(md_file)
 
-        # Is an NB3 video?
-        if md_basename[:4] == "NB3_":
+        # Extract lesson type and name
+        with open(md_file) as f:
+            first_line = f.readline()
+        lesson_header = first_line.split(':')
+        if lesson_header[1].strip() == 'NB3':
             is_NB3 = True
-            video_name = md_basename[4:-3].replace('-', ' ')
+            lesson_name = lesson_header[2].strip()
             svg_text = NB3_template_text
         else:
             is_NB3 = False
-            video_name = md_basename[:-3].replace('-', ' ')
+            lesson_name = lesson_header[1].strip()
             svg_text = LBB_template_text
+
         # Alter SVG template
         svg_text = svg_text.replace(">Box<", f">{box_name}<")
-        svg_text = svg_text.replace(">Title of the Video<", f">{video_name}<")
+        svg_text = svg_text.replace(">Title of the Video<", f">{lesson_name}<")
         svg_path = f"{thumbnails_folder}/{md_basename[:-3]}.svg"
         png_path = svg_path[:-4] + ".png"
         with open(svg_path, 'w') as file:
                     num_bytes = file.write(svg_text)
-        PNG.PNG(video_name, dpi=96, page=True).convert(svg_path, png_path)
-        print(f"Created SVG and PNG for {box_name}:{video_name}")
+        PNG.PNG(lesson_name, dpi=96, page=True).convert(svg_path, png_path)
+        print(f"Created SVG and PNG for {box_name}:{lesson_name}")
 
 #FIN

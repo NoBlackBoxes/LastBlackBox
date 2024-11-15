@@ -1,7 +1,7 @@
 # Transistors: MOSFETs
 Gate.
 
-## [Video](https://vimeo.com/1000873279)
+## [Video]()
 
 ## Concepts
 

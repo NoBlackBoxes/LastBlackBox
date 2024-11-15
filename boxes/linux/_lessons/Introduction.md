@@ -1,7 +1,7 @@
-# Linux: Introduction to Linux
+# Linux: Introduction
 An overview of a free and open source operating system.
 
-## [Video](https://vimeo.com/1005196173)
+## [Video]()
 
 ## Concepts
 

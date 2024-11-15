@@ -1,7 +1,7 @@
 # Transistors: Diodes
 The PN junction.
 
-## [Video](https://vimeo.com/1000861996)
+## [Video]()
 
 ## Concepts
 

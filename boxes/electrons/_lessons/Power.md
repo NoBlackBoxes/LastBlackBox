@@ -1,7 +1,7 @@
 # Electrons: Power
 When electrons move through a circuit, they deliver power (some amount of energy in some amount of time). This power can be used to do useful things: make a motor move, light a lamp, or generate heat. If we deliver too little power, then our electronic device may not work as designed. If we deliver too much, then it may never work again. We measure power in Watts.
 
-## [Video](https://vimeo.com/1000755493)
+## [Video](https://vimeo.com/1029693122)
 
 ## Concepts
 - When electrons move through a circuit, they deliver power (some amount of energy in some amount of time).

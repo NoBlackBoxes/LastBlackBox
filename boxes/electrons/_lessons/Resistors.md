@@ -1,7 +1,7 @@
 # Electrons: Resistors
 Many materials hold onto their outer electrons and resist their movement. We can create mixtures of these "resisting" materials and better "conducting" materials, often in the form of ceramics, to create **resistors** with a range of different *resistance* values, which we measure in Ohms (&Omega;).
 
-## [Video](https://vimeo.com/1000755493)
+## [Video](https://vimeo.com/1029696806)
 
 ## Concepts
 - Conductors are special, given the ease with which their outermost electrons can move between atoms.

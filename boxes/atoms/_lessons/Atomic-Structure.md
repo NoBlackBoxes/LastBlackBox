@@ -21,5 +21,4 @@ A brief introduction to the physics of atoms, their parts (protons, neutrons, an
 - Happy Atoms (Noble Gases)
 
 ## Lesson
-
 - Draw your favorite atom in the "classical" style

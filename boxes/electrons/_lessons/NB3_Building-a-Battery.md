@@ -1,7 +1,7 @@
 # Electrons: NB3 : Building a Battery
 Let's build a version of the *first* battery, and use it to power an LED.
 
-## [Video](https://vimeo.com/??????)
+## [Video](https://vimeo.com/1029280971)
 
 ## Concepts
 - The "Voltaic Pile", first discovered in the 1780s by Galvani and then extended by Volta, used a combination of Zinc and Copper.
@@ -23,5 +23,5 @@ Let's build a version of the *first* battery, and use it to power an LED.
 ## Lesson
 
 - **TASK**: Build a simple battery
-  - Combine two different metals, one that oxidizes well and one that does not, and connect them together with a layer of electrolyte between (salt water soaked paper works fine).
-> You should see a voltage if you choose your two metals well. Zinc and copper should produce ~0.76 Volts. If you stack multiple cells in series, then the resulting voltage should sum.
+  - Combine two different metals, one that oxidizes well and one that does not, and connect them together with a layer of electrolyte between (salt water soaked paper works fine, so does a piece of fruit).
+> You should see a voltage if you choose your two metals wisely. Zinc and Copper should produce ~0.76 Volts. If you stack multiple cells in series, then the resulting voltage should sum.

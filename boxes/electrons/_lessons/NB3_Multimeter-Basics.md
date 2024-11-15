@@ -8,7 +8,7 @@ An overview of digital multimeters for beginners. What can it measure? What feat
 - What types of multimeters? (cheap vs. expensive, analog vs. digital)
 - Types of measurements (voltage, resistance, current, and more)
 - Probes
-- Fuses
+- Fuses (over current protection)
 - Auto-ranging vs. manual range
 - Other features (light, hold)
 

@@ -13,7 +13,7 @@ Organizing the elements into a table reveals a regular pattern, which is linked 
 - Filling Order: 1s, 2s, 2p, 3s, 3p, 4s, 3d, 4p, 5s, 4d, 5p, 6s, 4f, 5d, 6p, 7s, 5f, 6d, 7p
 - Chemical properties determined by column
 - Material properties also apparent in table position (metals = shiny = free electrons)
-- Unstable/Radioactive Nuclei are the larger ones
+- Unstable/radioactive Nuclei are the larger ones
 
 ## Connections
 - Iron is (by Mass) the most common element on Earth

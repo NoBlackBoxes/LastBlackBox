@@ -1,4 +1,4 @@
-# Learning: Clicker Training
+# Learning: NB3: Clicker Training
 If a *click* is reinforcing, then training complex behaviour becomes far simpler.
 
 ## [Video]()
