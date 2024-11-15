@@ -1,4 +1,9 @@
 # Generate Video List
+"""
+Generate list of all LBB videos
+
+@author: kampff
+"""
 
 # Import Libraries
 import os
@@ -8,10 +13,7 @@ import glob
 import LBB.config as Config
 
 # Specify paths
-repo_path = "/home/kampff/NoBlackBoxes/LastBlackBox"
-boxes_path = repo_path + "/boxes"
-videos_path = repo_path + "/course/_videos"
-video_list_path = videos_path + "/README.md"
+video_list_path = Config.course_root + "/_videos/README.md"
 
 # Open video list file
 video_list_file = open(video_list_path, 'w')
@@ -20,7 +22,7 @@ video_list_file = open(video_list_path, 'w')
 for box_name in Config.box_names:
 
     # Determine box folder
-    box_folder = f"{boxes_path}/{box_name.lower()}"
+    box_folder = f"{Config.boxes_root}/{box_name.lower()}"
 
     # Write box header to video list
     video_list_file.write(f"## {box_name}\n")

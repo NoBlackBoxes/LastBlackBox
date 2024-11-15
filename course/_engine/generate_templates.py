@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Generate LBB "README.md" files
+Generate LBB (draft) template files
 
 @author: kampff
 """
@@ -28,7 +28,15 @@ for box_count, box_name in enumerate(box_names):
     # Determine box folder
     box_folder = f"{Config.boxes_root}/{box_name.lower()}"
 
-    # Load "lessons.md"
+    # Open template file
+    template_file = open(f"{box_folder}/template.md", 'w')
+
+    # Write box header to template
+    template_file.write(f"## {box_name}\n")
+
+    # WORK IN PROGRESS
+
+    # Load lessons "*.md"
     lessons_path = box_folder + "/lessons.md"
     with open(lessons_path, encoding='utf8') as f:
         lines = f.readlines()

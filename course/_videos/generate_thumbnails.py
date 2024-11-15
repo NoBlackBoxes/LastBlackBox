@@ -10,26 +10,24 @@ import LBB.utilities as Utilities
 import Design.png as PNG
 
 # Specify paths
-repo_path = "/home/kampff/NoBlackBoxes/LastBlackBox"
-boxes_path = repo_path + "/boxes"
-videos_path = repo_path + "/course/_videos"
+videos_folder = Config.course_root + "/_videos"
 
 # Read templates
-LBB_template_path = videos_path + "/_templates/LBB_title.svg"
+LBB_template_path = videos_folder + "/_templates/LBB_title.svg"
 with open(LBB_template_path, 'r') as file:
     LBB_template_text = file.read()
-NB3_template_path = videos_path + "/_templates/NB3_title.svg"
+NB3_template_path = videos_folder + "/_templates/NB3_title.svg"
 with open(NB3_template_path, 'r') as file:
     NB3_template_text = file.read()
 
 # Find all boxes at "boxes_path"
-box_folders = [f for f in glob.glob(boxes_path + '/*') if os.path.isdir(f)]
+box_folders = [f for f in glob.glob(Config.boxes_root + '/*') if os.path.isdir(f)]
 
 # Process each video's *.md file 
 for box_name in Config.box_names:
 
     # Determine box folder
-    box_folder = f"{boxes_path}/{box_name.lower()}"
+    box_folder = f"{Config.boxes_root}/{box_name.lower()}"
 
     # Specify lessons folder
     lessons_folder = box_folder + "/_lessons"
