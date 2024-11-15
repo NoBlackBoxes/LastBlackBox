@@ -35,7 +35,7 @@ for box_name in Config.box_names:
     for lesson_path in lesson_paths:
 
         # Extract lesson slug
-        lesson_slug = os.path.basename(lesson_path)[-3]
+        lesson_slug = os.path.basename(lesson_path)[:-3]
 
         # Read lesson text
         with open(lesson_path, encoding='utf8') as f:
