@@ -8,7 +8,7 @@ These instructions describe setting up a new Arch Linux installation on your "Ho
 
 1. Download latest ISO: [Arch Downloads](https://archlinux.org/download/)
 2. Write to USB flash drive: Use [Etcher](https://www.balena.io/etcher/)
-3. Boot the USB drive: Boots to root user command line
+3. Boot the USB drive: Boots to root user command line (may need to disable Secure Boot)
 4. Change keyboard layout if necessary (default: US)
 
     ```bash
@@ -23,6 +23,9 @@ These instructions describe setting up a new Arch Linux installation on your "Ho
 5. Connect to the internet
 
     ```bash
+    # Set regulatory domain
+    iw reg set GB
+
     # For WiFi
     iwctl --passphrase passphrase station device connect SSID
     # iwctl --passphrase <password> station wlan0 connect <WiFi name>
@@ -47,9 +50,9 @@ These instructions describe setting up a new Arch Linux installation on your "Ho
     ```
 
     - *(From within fdisk command prompt)*
-    - Delete all exisiting partitions with command "d"
-    - Create ESP parition (for UEFI systems)
-      - Create new partion with command "n"
+    - Delete all existing partitions with command "d"
+    - Create ESP partition (for UEFI systems)
+      - Create new partition with command "n" (select primary "p")
       - Partition number: 1 (default)
       - First sector: 2048 (default)
       - Last sector: +512M
@@ -57,15 +60,15 @@ These instructions describe setting up a new Arch Linux installation on your "Ho
     - Change partition type to 'EFI System'
       - Change type with command "t"
       - (Selects partition 1)
-      - Partition type or alias: 1
+      - Partition type or alias: uefi (or ef)
     - Create swap partition
-      - Create new partion with command "n"
+      - Create new partition with command "n"
       - Partition number: 2 (default)
       - First sector: ?? (choose default)
       - Last sector: +4096M
       - (Remove signature, if requested)
     - Create root partition
-      - Create new partion with command "n"
+      - Create new partition with command "n"
       - Partition number: 3 (default)
       - First sector: ?? (choose default)
       - Last sector: ?? (choose default)
@@ -137,7 +140,7 @@ These instructions describe setting up a new Arch Linux installation on your "Ho
 
     # Create vconsole.conf
     vim /etc/vconsole.conf
-    # - add KEYMAP=gb    
+    # - add KEYMAP=uk
 
     # Create the hostname file
     vim /etc/hostname
@@ -172,7 +175,7 @@ These instructions describe setting up a new Arch Linux installation on your "Ho
 
     # Add user to /etc/sudoers
     vim /etc/sudoers
-    # - add <USER> ALL=(ALL) ALL
+    # - add <USER> ALL=(ALL:ALL) ALL
 
     # Install Xorg
     pacman -S xorg
@@ -203,13 +206,10 @@ These instructions describe setting up a new Arch Linux installation on your "Ho
     pacman -S dtc
     pacman -S mtools
 
-    # Install chromium
-    pacman -S chromium
-
     # Install utilities
     pacman -S git
     pacman -S usbutils
-    # pacman -S code - need Mirosoft extensions...use their binary version
+    pacman -S gnome-keyring
     
     # Enable display and network manager
     systemctl enable sddm.service
