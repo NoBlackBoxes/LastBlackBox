@@ -4,6 +4,15 @@ With a voltage source (battery) and resistors, then we can start building "circu
 ## [Video]()
 
 ## Concepts
+- A circuit is a compete route of electrical connection. A path for electrons to flow from an area of excess electrons to an area with fewer.
+- We will start by drawing a schematic of a circuit. Then spend most of our time explaining how to build a real version of ths schematic.
+- This will entail learning about "solderless breadboards", our prototyping circuit boards. How to use them. How they are connected internally...and a few other tricks.
+- Here is the simplest possible circuit. One voltage source, some wires, and a single resistor.
+- We could make this circuit by just touching the contacts together in the correct order. However, this does not scale to more complex circuits.
+- We will build this circuit on our NB3's large hindbrain breadboard. This makes our life easier.
+- Solderless breadboards are prototyping devices that make building circuits much easier.
+- They consist of many small holes where you can insert rigid pins, such as the ends of resistor or jumper cable.
+- Hint, sometimes it is hard to insert the pins. Using the jumper cable pins, which are more rigid than some of the other devices we will be connecting, can open the hole and make it easier to insert a flimsy resistor lead.
 
 ## Connections
 
