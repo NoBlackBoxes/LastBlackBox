@@ -1,34 +1,35 @@
 ## Atoms
-- [x] [Heat](https://vimeo.com/1029691491)
-- [ ] [Fission and Fusion]()
 - [x] [Atomic Structure](https://vimeo.com/1000458082)
-- [ ] [Chemistry]()
-- [x] [The Periodic Table](https://vimeo.com/1028399080)
 - [ ] [Nuclear Forces]()
+- [ ] [Chemistry]()
+- [ ] [Fission and Fusion]()
+- [x] [The Periodic Table](https://vimeo.com/1028399080)
+- [x] [Heat](https://vimeo.com/1029691491)
 
 ## Electrons
-- [x] [Power](https://vimeo.com/1029693122)
-- [x] [NB3 : Building a Battery](https://vimeo.com/1029280971)
-- [ ] [Voltage Dividers]()
-- [x] [Batteries](https://vimeo.com/1029278169)
-- [x] [Conductors](https://vimeo.com/1029337222)
 - [x] [Voltage](https://vimeo.com/1000730032)
-- [x] [Current](https://vimeo.com/1029334167)
-- [x] [Ohm's Law](https://vimeo.com/1029695302)
-- [ ] [Building Circuits]()
-- [x] [NB3 : Multimeter Basics](https://vimeo.com/1027764019)
-- [ ] [Designing PCBs With KiCAD]()
+- [x] [Conductors](https://vimeo.com/1029337222)
+- [ ] [Voltage Dividers]()
 - [x] [Resistors](https://vimeo.com/1029696806)
-- [ ] [Building Voltage Dividers]()
-- [x] [NB3 : Measuring Current](https://vimeo.com/1027757287)
-- [x] [NB3 : Measuring Voltage](https://vimeo.com/1027762531)
-- [x] [NB3 : Measuring Resistance](https://vimeo.com/1027761453)
-- [ ] [Body]()
+- [ ] [Building Circuits]()
 - [ ] [How Do Multimeters Work]()
+- [x] [Ohm's Law](https://vimeo.com/1029695302)
+- [x] [NB3 : Measuring Voltage](https://vimeo.com/1027762531)
+- [x] [NB3 : Building a Battery](https://vimeo.com/1029280971)
+- [x] [Batteries](https://vimeo.com/1029278169)
+- [ ] [Designing PCBs With KiCAD]()
+- [x] [Current](https://vimeo.com/1029334167)
+- [x] [Power](https://vimeo.com/1029693122)
+- [x] [NB3 : Measuring Resistance](https://vimeo.com/1027761453)
+- [x] [NB3 : Measuring Current](https://vimeo.com/1027757287)
+- [ ] [Body]()
+- [ ] [Building Voltage Dividers]()
+- [x] [NB3 : Multimeter Basics](https://vimeo.com/1027764019)
 
 ## Magnets
-- [ ] [Building a Speaker]()
 - [ ] [Electromagnetism]()
+- [ ] [Magnetism]()
+- [ ] [Building a Speaker]()
 
 ## Light
 - [ ] [The EM Spectrum]()
@@ -42,10 +43,10 @@
 - [ ] [DC Motors]()
 
 ## Transistors
+- [ ] [Building a Light-Sensitive Motor]()
 - [ ] [Diodes]()
 - [ ] [MOSFETs]()
 - [ ] [Semiconductors]()
-- [ ] [Building a Light-Sensitive Motor]()
 
 ## Amplifiers
 - [ ] [Op Amps]()
