@@ -36,7 +36,7 @@
 
 ## Sensors
 - [ ] [Building a Light Sensor]()
-- [ ] [Light Sensors]()
+- [ ] [Transducers]()
 
 ## Motors
 - [ ] [Brushed DC Gear Motors]()
