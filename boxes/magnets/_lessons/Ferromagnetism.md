@@ -1,12 +1,12 @@
-# Magnets: Magnetism
-A mysterious force found in certain types of "magical" materials, magnetism was known about and used for thousands of years, but it was only understood quite recently.
+# Magnets: Ferromagnetism
+A mysterious force found in certain types of "magical" materials, ferromagnetism was known about and used for thousands of years, but it was only understood quite recently.
 
 ## [Video]()
 
 ## Concepts
-- Magnetic rocks ("lodestone in particular") occurs naturally and has been studied for thousands of years.
-- It proved useful in the construction of a very important device for navigation, the compass, which aligns with the Earth's own magnetic field.
-- However, the origin of magnetism, and the atomic basis of ferromagnetism, was only understood with the development of quantum mechanics about 100 years ago.
+- Magnetic rocks ("lodestone in particular") occur naturally and have been studied for thousands of years.
+- They proved useful in the construction of a very important device for navigation, the compass, which aligns with the Earth's own magnetic field.
+- However, the origin of this magnetism, and the atomic basis of ferromagnetism, was only understood with the development of quantum mechanics about 100 years ago.
 - The atomic picture involves looking in more detail at the properties of atoms, and in particular, electrons.
 - Electrons have both an electric charge, which holds them to their nucleus, but also a magnetic "spin".
 - This spin can be either up or down, and only up or down, and QM dictates that electrons will form pairs of up/down electrons in each orbital.

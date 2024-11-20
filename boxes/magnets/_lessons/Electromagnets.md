@@ -1,4 +1,4 @@
-# Magnets: Electromagnetism
+# Magnets: Electromagnets
 When electrons move they create a (weak) magnetic field. With clever geometry we can make this field much, much stronger.
 
 ## [Video]()

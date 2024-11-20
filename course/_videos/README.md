@@ -27,9 +27,10 @@
 - [x] [NB3 : Multimeter Basics](https://vimeo.com/1027764019)
 
 ## Magnets
-- [ ] [Electromagnetism]()
-- [ ] [Magnetism]()
+- [ ] [Ferromagnetism]()
 - [ ] [Building a Speaker]()
+- [ ] [Electromagnets]()
+- [ ] [Induction]()
 
 ## Light
 - [ ] [The EM Spectrum]()
