@@ -1,7 +1,7 @@
 # Electrons: Voltage Dividers
 Controlling the level of voltage at different places in a circuit is critical to designing electronic devices.
 
-## [Video]()
+## [Video](https://vimeo.com/1030787469)
 
 ## Concepts
 - What happens to the voltage and current in different parts of your circuit?

@@ -1,53 +1,58 @@
 ## Atoms
-- [x] [Atomic Structure](https://vimeo.com/1000458082)
-- [ ] [Nuclear Forces]()
-- [ ] [Chemistry]()
-- [ ] [Fission and Fusion]()
 - [x] [The Periodic Table](https://vimeo.com/1028399080)
+- [ ] [Chemistry]()
+- [ ] [Nuclear Forces]()
 - [x] [Heat](https://vimeo.com/1029691491)
+- [x] [Atomic Structure](https://vimeo.com/1000458082)
+- [ ] [Fission and Fusion]()
 
 ## Electrons
-- [x] [Voltage](https://vimeo.com/1000730032)
-- [x] [Conductors](https://vimeo.com/1029337222)
-- [ ] [Voltage Dividers]()
-- [x] [Resistors](https://vimeo.com/1029696806)
-- [ ] [Building Circuits]()
-- [ ] [How Do Multimeters Work]()
-- [x] [Ohm's Law](https://vimeo.com/1029695302)
-- [x] [NB3 : Measuring Voltage](https://vimeo.com/1027762531)
-- [x] [NB3 : Building a Battery](https://vimeo.com/1029280971)
-- [x] [Batteries](https://vimeo.com/1029278169)
-- [ ] [Designing PCBs With KiCAD]()
-- [x] [Current](https://vimeo.com/1029334167)
-- [x] [Power](https://vimeo.com/1029693122)
-- [x] [NB3 : Measuring Resistance](https://vimeo.com/1027761453)
-- [x] [NB3 : Measuring Current](https://vimeo.com/1027757287)
-- [ ] [Body]()
-- [ ] [Building Voltage Dividers]()
 - [x] [NB3 : Multimeter Basics](https://vimeo.com/1027764019)
+- [x] [Voltage Dividers](https://vimeo.com/1030787469)
+- [x] [NB3 : Body](https://vimeo.com/1030776673)
+- [ ] [Designing PCBs With KiCAD]()
+- [x] [NB3 : Measuring Resistance](https://vimeo.com/1027761453)
+- [x] [NB3 : Building Circuits](https://vimeo.com/1030783826)
+- [x] [NB3 : Building Voltage Dividers](https://vimeo.com/1030790826)
+- [x] [Electric Fields](https://vimeo.com/1032441712)
+- [x] [Resistors](https://vimeo.com/1029696806)
+- [x] [NB3 : Measuring Current](https://vimeo.com/1027757287)
+- [x] [Current](https://vimeo.com/1029334167)
+- [x] [Ohm's Law](https://vimeo.com/1029695302)
+- [ ] [How Do Multimeters Work]()
+- [x] [Power](https://vimeo.com/1029693122)
+- [x] [NB3 : Measuring Voltage](https://vimeo.com/1027762531)
+- [x] [Batteries](https://vimeo.com/1029278169)
+- [x] [NB3 : Building a Battery](https://vimeo.com/1029280971)
+- [x] [Conductors](https://vimeo.com/1029337222)
+- [x] [Voltage](https://vimeo.com/1000730032)
 
 ## Magnets
-- [ ] [Ferromagnetism]()
-- [ ] [Building a Speaker]()
-- [ ] [Electromagnets]()
-- [ ] [Induction]()
+- [x] [NB3 : Building a Speaker](https://vimeo.com/videos/1031277112)
+- [x] [Ferromagnetism](https://vimeo.com/1031272573)
+- [x] [Electromagnets](https://vimeo.com/1031275874)
+- [x] [Induction](https://vimeo.com/1031538232)
 
 ## Light
 - [ ] [The EM Spectrum]()
+- [ ] [Optics]()
+- [ ] [Maxwell's Equations]()
+- [x] [Electromagnetic Radiation](https://vimeo.com/1032447600)
 
 ## Sensors
-- [ ] [Building a Light Sensor]()
-- [ ] [Transducers]()
+- [x] [Transducers](https://vimeo.com/1031477896)
+- [x] [NB3 : Building a Light Sensor](https://vimeo.com/1031479533)
 
 ## Motors
+- [x] [DC Motors](https://vimeo.com/1031627739)
 - [ ] [Brushed DC Gear Motors]()
-- [ ] [DC Motors]()
 
 ## Transistors
-- [ ] [Building a Light-Sensitive Motor]()
-- [ ] [Diodes]()
-- [ ] [MOSFETs]()
-- [ ] [Semiconductors]()
+- [x] [Diodes](https://vimeo.com/1032443724)
+- [x] [Semiconductors](https://vimeo.com/1032460818)
+- [x] [NB3 : Building a Light-Sensitive Motor](https://vimeo.com/1032454998)
+- [x] [NB3 : Testing Diodes](https://vimeo.com/1032458879)
+- [x] [MOSFETs](https://vimeo.com/1032452466)
 
 ## Amplifiers
 - [ ] [Op Amps]()
@@ -68,13 +73,13 @@
 - [ ] [Hardware Description Languages]()
 
 ## Computers
-- [ ] [Hindbrain]()
 - [ ] [Architecture]()
+- [ ] [Hindbrain]()
 - [ ] [Programming Arduino]()
 
 ## Control
-- [ ] [Servo Motors]()
 - [ ] [Servo Loops]()
+- [ ] [Servo Motors]()
 
 ## Robotics
 - [ ] [Driving]()

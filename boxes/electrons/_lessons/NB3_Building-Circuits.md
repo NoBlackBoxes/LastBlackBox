@@ -1,7 +1,7 @@
 # Electrons: NB3: Building Circuits
 With a voltage source (battery) and resistors, then we can start building "circuits" - complete paths of conduction that allow current to flow from a location with *less* electrons **(+)** to a location with *more* electrons **(-)**.
 
-## [Video]()
+## [Video](https://vimeo.com/1030783826)
 
 ## Concepts
 - A circuit is a compete route of electrical connection. A path for electrons to flow from an area of excess electrons to an area with fewer.

@@ -1,7 +1,7 @@
 # Motors: DC Motors
 An electric motor converts current into rotation using electromagnets that are turned on and off in a coordinated pattern. Different types of motors (stepper, brushed, or brushless) use different strategies (circuits) for this coordination.
 
-## [Video]()
+## [Video](https://vimeo.com/1031627739)
 
 ## Concepts
 - We know we can generate a magnetic force using an electromagnet. How do we turn that push-pull force into a rotational force...spin?

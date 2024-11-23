@@ -1,7 +1,7 @@
 # Magnets: Electromagnets
 When electrons move they create a (weak) magnetic field. With clever geometry we can make this field much, much stronger.
 
-## [Video]()
+## [Video](https://vimeo.com/1031275874)
 
 ## Concepts
 - For millennia, magnetism and electricity were considered interesting, but entirely unrelated phenomena.

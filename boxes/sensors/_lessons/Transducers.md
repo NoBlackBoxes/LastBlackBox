@@ -1,7 +1,7 @@
 # Sensors: Transducers
 A sensor converts (transduces) a physical quantity (light, heat, pressure, etc.) into an electrical signal (voltage, current, or resistance).
 
-## [Video]()
+## [Video](https://vimeo.com/1031477896)
 
 ## Concepts
 - A transducer converts a physical quantity we care about (light, heat, pressure, etc.) into an electrical signal that we can measure. We will use them as our robot's input sensors.

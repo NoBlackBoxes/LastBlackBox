@@ -1,7 +1,7 @@
 # Transistors: Semiconductors
 We can modify a pure crystal of certain elements (e.g. silicon) to change how well they conduct electricity.
 
-## [Video]()
+## [Video](https://vimeo.com/1032460818)
 
 ## Concepts
 - Silicon is an average atom. It has four valence electrons and therefore would like to share four electrons to complete its outer orbital. (Similar to Carbon)

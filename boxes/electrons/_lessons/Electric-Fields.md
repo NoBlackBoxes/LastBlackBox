@@ -1,7 +1,7 @@
 # Electrons: Electric Fields
 A very useful, and quite simple, depiction of the lines of force surrounding charged particles.
 
-## [Video]()
+## [Video](https://vimeo.com/1032441712)
 
 ## Concepts
 - We will encounter the idea of electric (and other) fields throughout the course. 

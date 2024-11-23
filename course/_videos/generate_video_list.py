@@ -19,6 +19,8 @@ video_list_path = Config.course_root + "/_videos/README.md"
 video_list_file = open(video_list_path, 'w')
 
 # Find all videos in each box's lessons
+completed = 0
+todo = 0
 for box_name in Config.box_names:
 
     # Determine box folder
@@ -62,8 +64,10 @@ for box_name in Config.box_names:
                         video_list_file.write(f"- [x] [NB3 : {lesson_name}]({video_URL})\n")
                     else:
                         video_list_file.write(f"- [x] [{lesson_name}]({video_URL})\n")
+                    completed += 1
                 else:
                     video_list_file.write(f"- [ ] [{lesson_name}]()\n")
+                    todo += 1
                 line_count = max_count
             line_count += 1
 
@@ -72,5 +76,8 @@ for box_name in Config.box_names:
 
 # Close video list file
 video_list_file.close()
+
+# Report
+print(f"{completed} videos completed!\n{todo} videos to do.")
 
 #FIN

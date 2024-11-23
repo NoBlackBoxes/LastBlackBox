@@ -1,7 +1,7 @@
 # Transistors: Diodes
-The PN junction.
+The chemical and electrical equilibrium between charge carriers creates a potential across the PN junction. This junction potential only permits current flow in one direction, which gives **diodes** there delightfully non-linear behavior.
 
-## [Video]()
+## [Video](https://vimeo.com/1032443724)
 
 ## Concepts
 

@@ -1,7 +1,7 @@
 # Magnets: Ferromagnetism
 A mysterious force found in certain types of "magical" materials, ferromagnetism was known about and used for thousands of years, but it was only understood quite recently.
 
-## [Video]()
+## [Video](https://vimeo.com/1031272573)
 
 ## Concepts
 - Magnetic rocks ("lodestone in particular") occur naturally and have been studied for thousands of years.

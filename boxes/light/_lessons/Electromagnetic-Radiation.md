@@ -1,7 +1,7 @@
 # Light: Electromagnetic Radiation
 When an electric charge is accelerated something surprising happens. This acceleration creates a ripple in the electric field (which induces a magnetic field). This ripple propagates away from the accelerated charge at the speed of light. It is light.
 
-## [Video]()
+## [Video](https://vimeo.com/1032447600)
 
 ## Concepts
 - An electron at rest is surrounded by an electric field

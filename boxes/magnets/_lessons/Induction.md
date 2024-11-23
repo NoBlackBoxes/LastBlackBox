@@ -1,7 +1,7 @@
 # Magnets: Induction
 A *changing* magnetic field **induces** an electromotive force on charged particles (and current in a complete conducting circuit). This electromagnetic induction is key to building time-dependent electronic circuits (such as filters) and generating the electricity we use in our homes.
 
-## [Video]()
+## [Video](https://vimeo.com/1031538232)
 
 ## Concepts
 - When a magnet (magnetic field) moves past a conductor it can induce a current.
