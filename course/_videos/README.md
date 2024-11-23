@@ -50,17 +50,20 @@
 ## Transistors
 - [x] [Diodes](https://vimeo.com/1032443724)
 - [x] [Semiconductors](https://vimeo.com/1032460818)
+- [ ] [BJTs]()
 - [x] [NB3 : Building a Light-Sensitive Motor](https://vimeo.com/1032454998)
 - [x] [NB3 : Testing Diodes](https://vimeo.com/1032458879)
 - [x] [MOSFETs](https://vimeo.com/1032452466)
 
 ## Amplifiers
+- [ ] [Differential Amplifier]()
 - [ ] [Op Amps]()
 
 ## Circuits
 - [ ] [Radios]()
 
 ## Data
+- [ ] [Analog to Digital Converters]()
 - [ ] [Binary Numbers]()
 
 ## Logic
@@ -68,6 +71,8 @@
 
 ## Memory
 - [ ] [Flash Memory]()
+- [ ] [Flip Flop]()
+- [ ] [SR Latch]()
 
 ## FPGAs
 - [ ] [Hardware Description Languages]()

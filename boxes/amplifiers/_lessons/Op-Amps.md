@@ -13,3 +13,4 @@ Combine *high gain differential amplification* with *negative feedback* to build
 - Negative feedback is everywhere...especially when require stability.
 
 ## Lesson
+- Use an OpAmp to make your speaker louder!
