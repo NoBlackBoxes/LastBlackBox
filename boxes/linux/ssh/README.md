@@ -31,7 +31,7 @@ mkdir ~/.ssh
 chmod 700 ~/.ssh
 ```
 
-On your NB3, create a new security key for your user and copy it to your VPS
+On your NB3, create a new security key for **your user** and copy it to your VPS
 
 ```bash
 ssh-keygen -t ed25519 -C <your usenamer>        # Generate Key
