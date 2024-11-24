@@ -10,7 +10,7 @@
 - [x] [NB3 : Multimeter Basics](https://vimeo.com/1027764019)
 - [x] [Voltage Dividers](https://vimeo.com/1030787469)
 - [x] [NB3 : Body](https://vimeo.com/1030776673)
-- [ ] [Designing PCBs With KiCAD]()
+- [ ] [NB3 : Designing PCBs With KiCAD]()
 - [x] [NB3 : Measuring Resistance](https://vimeo.com/1027761453)
 - [x] [NB3 : Building Circuits](https://vimeo.com/1030783826)
 - [x] [NB3 : Building Voltage Dividers](https://vimeo.com/1030790826)
@@ -19,7 +19,7 @@
 - [x] [NB3 : Measuring Current](https://vimeo.com/1027757287)
 - [x] [Current](https://vimeo.com/1029334167)
 - [x] [Ohm's Law](https://vimeo.com/1029695302)
-- [ ] [How Do Multimeters Work]()
+- [ ] [NB3 : How Do Multimeters Work]()
 - [x] [Power](https://vimeo.com/1029693122)
 - [x] [NB3 : Measuring Voltage](https://vimeo.com/1027762531)
 - [x] [Batteries](https://vimeo.com/1029278169)
@@ -45,7 +45,7 @@
 
 ## Motors
 - [x] [DC Motors](https://vimeo.com/1031627739)
-- [ ] [Brushed DC Gear Motors]()
+- [ ] [NB3 : Brushed DC Gear Motors]()
 
 ## Transistors
 - [x] [Diodes](https://vimeo.com/1032443724)
@@ -79,23 +79,23 @@
 
 ## Computers
 - [ ] [Architecture]()
-- [ ] [Hindbrain]()
-- [ ] [Programming Arduino]()
+- [ ] [NB3 : Hindbrain]()
+- [ ] [NB3 : Programming Arduino]()
 
 ## Control
 - [ ] [Servo Loops]()
-- [ ] [Servo Motors]()
+- [ ] [NB3 : Servo Motors]()
 
 ## Robotics
-- [ ] [Driving]()
+- [ ] [NB3 : Driving]()
 
 ## Power
-- [ ] [Power Supplies]()
+- [ ] [NB3 : Power Supplies]()
 
 ## Systems
-- [ ] [Connecting to RPi]()
-- [ ] [Midbrain]()
-- [ ] [RPiOS]()
+- [ ] [NB3 : Connecting to RPi]()
+- [ ] [NB3 : Midbrain]()
+- [ ] [NB3 : RPiOS]()
 
 ## Linux
 - [ ] [Git]()
@@ -123,7 +123,7 @@
 - [ ] [Cameras]()
 
 ## Learning
-- [ ] [Clicker Training]()
+- [ ] [NB3 : Clicker Training]()
 
 ## Intelligence
 - [ ] [Large Language Models]()

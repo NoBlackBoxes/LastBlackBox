@@ -66,7 +66,10 @@ for box_name in Config.box_names:
                         video_list_file.write(f"- [x] [{lesson_name}]({video_URL})\n")
                     completed += 1
                 else:
-                    video_list_file.write(f"- [ ] [{lesson_name}]()\n")
+                    if is_NB3:
+                        video_list_file.write(f"- [ ] [NB3 : {lesson_name}]()\n")
+                    else:
+                        video_list_file.write(f"- [ ] [{lesson_name}]()\n")
                     todo += 1
                 line_count = max_count
             line_count += 1
