@@ -4,6 +4,12 @@ The essential elements of computation (NOT, AND, OR, XOR, etc.) can be built fro
 ## [Video]()
 
 ## Concepts
+- MOSFETs make it easy.
+- Inverter
+- NAND (and AND)
+- NOR
+- Addition
+- XOR?
 
 ## Connections
 
