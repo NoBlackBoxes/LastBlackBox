@@ -1,35 +1,35 @@
 ## Atoms
-- [x] [The Periodic Table](https://vimeo.com/1028399080)
-- [ ] [Chemistry]()
-- [ ] [Nuclear Forces]()
-- [x] [Heat](https://vimeo.com/1029691491)
 - [x] [Atomic Structure](https://vimeo.com/1000458082)
+- [ ] [Nuclear Forces]()
+- [ ] [Chemistry]()
 - [ ] [Fission and Fusion]()
+- [x] [The Periodic Table](https://vimeo.com/1028399080)
+- [x] [Heat](https://vimeo.com/1029691491)
 
 ## Electrons
-- [x] [NB3 : Multimeter Basics](https://vimeo.com/1027764019)
-- [x] [Voltage Dividers](https://vimeo.com/1030787469)
-- [x] [NB3 : Body](https://vimeo.com/1030776673)
-- [ ] [NB3 : Designing PCBs With KiCAD]()
-- [x] [NB3 : Measuring Resistance](https://vimeo.com/1027761453)
-- [x] [NB3 : Building Circuits](https://vimeo.com/1030783826)
-- [x] [NB3 : Building Voltage Dividers](https://vimeo.com/1030790826)
-- [x] [Electric Fields](https://vimeo.com/1032441712)
-- [x] [Resistors](https://vimeo.com/1029696806)
-- [x] [NB3 : Measuring Current](https://vimeo.com/1027757287)
-- [x] [Current](https://vimeo.com/1029334167)
-- [x] [Ohm's Law](https://vimeo.com/1029695302)
-- [ ] [NB3 : How Do Multimeters Work]()
-- [x] [Power](https://vimeo.com/1029693122)
-- [x] [NB3 : Measuring Voltage](https://vimeo.com/1027762531)
-- [x] [Batteries](https://vimeo.com/1029278169)
-- [x] [NB3 : Building a Battery](https://vimeo.com/1029280971)
-- [x] [Conductors](https://vimeo.com/1029337222)
 - [x] [Voltage](https://vimeo.com/1000730032)
+- [x] [Conductors](https://vimeo.com/1029337222)
+- [x] [Electric Fields](https://vimeo.com/1032441712)
+- [x] [Voltage Dividers](https://vimeo.com/1030787469)
+- [x] [Resistors](https://vimeo.com/1029696806)
+- [x] [NB3 : Building Circuits](https://vimeo.com/1030783826)
+- [ ] [NB3 : How Do Multimeters Work]()
+- [x] [Ohm's Law](https://vimeo.com/1029695302)
+- [x] [NB3 : Measuring Voltage](https://vimeo.com/1027762531)
+- [x] [NB3 : Building a Battery](https://vimeo.com/1029280971)
+- [x] [Batteries](https://vimeo.com/1029278169)
+- [ ] [NB3 : Designing PCBs With KiCAD]()
+- [x] [Current](https://vimeo.com/1029334167)
+- [x] [Power](https://vimeo.com/1029693122)
+- [x] [NB3 : Measuring Resistance](https://vimeo.com/1027761453)
+- [x] [NB3 : Measuring Current](https://vimeo.com/1027757287)
+- [x] [NB3 : Body](https://vimeo.com/1030776673)
+- [x] [NB3 : Building Voltage Dividers](https://vimeo.com/1030790826)
+- [x] [NB3 : Multimeter Basics](https://vimeo.com/1027764019)
 
 ## Magnets
-- [x] [NB3 : Building a Speaker](https://vimeo.com/videos/1031277112)
 - [x] [Ferromagnetism](https://vimeo.com/1031272573)
+- [x] [NB3 : Building a Speaker](https://vimeo.com/videos/1031277112)
 - [x] [Electromagnets](https://vimeo.com/1031275874)
 - [x] [Induction](https://vimeo.com/1031538232)
 
@@ -40,24 +40,23 @@
 - [x] [Electromagnetic Radiation](https://vimeo.com/1032447600)
 
 ## Sensors
-- [x] [Transducers](https://vimeo.com/1031477896)
 - [x] [NB3 : Building a Light Sensor](https://vimeo.com/1031479533)
+- [x] [Transducers](https://vimeo.com/1031477896)
 
 ## Motors
 - [x] [DC Motors](https://vimeo.com/1031627739)
-- [ ] [NB3 : Brushed DC Gear Motors]()
 
 ## Transistors
-- [x] [Diodes](https://vimeo.com/1032443724)
-- [x] [Semiconductors](https://vimeo.com/1032460818)
-- [ ] [BJTs]()
 - [x] [NB3 : Building a Light-Sensitive Motor](https://vimeo.com/1032454998)
-- [x] [NB3 : Testing Diodes](https://vimeo.com/1032458879)
+- [ ] [BJTs]()
+- [x] [Diodes](https://vimeo.com/1032443724)
 - [x] [MOSFETs](https://vimeo.com/1032452466)
+- [x] [NB3 : Testing Diodes](https://vimeo.com/1032458879)
+- [x] [Semiconductors](https://vimeo.com/1032460818)
 
 ## Amplifiers
-- [ ] [Differential Amplifier]()
 - [ ] [Op Amps]()
+- [ ] [Differential Amplifier]()
 
 ## Circuits
 - [ ] [Radios]()
@@ -70,25 +69,28 @@
 - [x] [Logic Gates](https://vimeo.com/1033231995)
 
 ## Memory
+- [x] [SR Latch](https://vimeo.com/1033238234)
+- [ ] [Flip Flop]()
 - [x] [Flash Memory](https://vimeo.com/1033230293)
 - [x] [NB3 : Building an SR Latch](https://vimeo.com/1033234541)
-- [ ] [Flip Flop]()
-- [x] [SR Latch](https://vimeo.com/1033238234)
 
 ## FPGAs
 - [ ] [Hardware Description Languages]()
 
 ## Computers
-- [ ] [Architecture]()
 - [ ] [NB3 : Hindbrain]()
+- [ ] [NB3 : Building a Theremin]()
+- [ ] [Architecture]()
 - [ ] [NB3 : Programming Arduino]()
 
 ## Control
 - [ ] [Servo Loops]()
-- [ ] [NB3 : Servo Motors]()
+- [ ] [H-Bridges]()
 
 ## Robotics
-- [ ] [NB3 : Driving]()
+- [ ] [NB3 : Muscles (Brushed DC Gear Motors)]()
+- [ ] [NB3 : Muscles (Servos)]()
+- [ ] [NB3 : Build a Braitenberg Vehicle]()
 
 ## Power
 - [ ] [NB3 : Power Supplies]()
