@@ -1,4 +1,5 @@
 # Generate Video Thumbnails
+# - NOTE: Requires that Arial and Verdana "Windows Fonts" installed for use by Inkscape
 
 # Import Libraries
 import os

@@ -63,16 +63,17 @@
 - [ ] [Radios]()
 
 ## Data
-- [ ] [Analog to Digital Converters]()
-- [ ] [Binary Numbers]()
+- [x] [Analog to Digital Converters](https://vimeo.com/1033223967)
+- [x] [Binary Numbers](https://vimeo.com/1033226788)
 
 ## Logic
-- [ ] [Logic Gates]()
+- [x] [Logic Gates](https://vimeo.com/1033231995)
 
 ## Memory
-- [ ] [Flash Memory]()
+- [x] [Flash Memory](https://vimeo.com/1033230293)
+- [x] [NB3 : Building an SR Latch](https://vimeo.com/1033234541)
 - [ ] [Flip Flop]()
-- [ ] [SR Latch]()
+- [x] [SR Latch](https://vimeo.com/1033238234)
 
 ## FPGAs
 - [ ] [Hardware Description Languages]()

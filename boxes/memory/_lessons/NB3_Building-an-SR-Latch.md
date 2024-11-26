@@ -1,7 +1,7 @@
 # Memory: NB3: Building an SR Latch
-Let's build an SR latch from NAND gates.
+Let's build and test an SR latch from NAND gates.
 
-## [Video]()
+## [Video](https://vimeo.com/1033234541)
 
 ## Concepts
 - 

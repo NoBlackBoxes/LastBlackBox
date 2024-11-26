@@ -1,7 +1,7 @@
 # Memory: Flash Memory
-Most of your data requires quantum mechanics.
+Storing most of your data requires quantum mechanics.
 
-## [Video]()
+## [Video](https://vimeo.com/1033230293)
 
 ## Concepts
 - NPN with floating gate

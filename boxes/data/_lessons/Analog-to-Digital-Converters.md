@@ -1,7 +1,7 @@
 # Data: Analog to Digital Converters
 Moving signals from the analog world to the digital world requires converting a continuous voltage into discrete binary values. We can accomplish this with an analog to digital converter, or **ADC**, and here we learn how they work.
 
-## [Video]()
+## [Video](https://vimeo.com/1033223967)
 
 ## Concepts
 - Resistor ladder to produce discrete voltage values.
