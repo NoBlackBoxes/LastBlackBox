@@ -11,6 +11,13 @@ The basic building blocks of a computer (memory, ALU, clock, bus, and IO) have a
 - Multiplexers (select OP result)
 - Bus to tie it all together
 - From abstraction to implementation (Die image of Atmel Mega 328P)
+- To Fix:
+  - Explain Flash as long term (uses floating gates)
+  - Explain RAM as SRAM and Registers (uses latches)
+  - Explain DRAM (another video?)
+  - Explain IO
+  - Interrupts?
+  - Better drawings...or cut models...
 
 ## Connections
 
