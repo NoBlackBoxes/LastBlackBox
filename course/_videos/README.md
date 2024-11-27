@@ -79,17 +79,19 @@
 
 ## Computers
 - [ ] [NB3 : Hindbrain]()
-- [ ] [NB3 : Building a Theremin]()
 - [ ] [Architecture]()
 - [ ] [NB3 : Programming Arduino]()
+- [ ] [NB3 : Building a Theremin]()
 
 ## Control
+- [ ] [Building a PWM Speed Controller]()
+- [ ] [PWM]()
 - [ ] [Servo Loops]()
 - [ ] [H-Bridges]()
 
 ## Robotics
-- [ ] [NB3 : Muscles (Brushed DC Gear Motors)]()
 - [ ] [NB3 : Muscles (Servos)]()
+- [ ] [NB3 : Muscles (DC Gear Motors)]()
 - [ ] [NB3 : Build a Braitenberg Vehicle]()
 
 ## Power

@@ -1,5 +1,5 @@
 /*
-  Controller
+  Muscles Test (H-Bridge)
 */
 
 // Globals

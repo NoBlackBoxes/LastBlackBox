@@ -1,5 +1,5 @@
 /*
-  Servo Test
+  Muscles Test (Servos)
 
   Servos are "easier" to control with a computer, but they hide what is going on.
 

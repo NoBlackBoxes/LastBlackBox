@@ -1,4 +1,4 @@
-# Robotics: NB3: Muscles (Brushed DC Gear Motors)
+# Robotics: NB3: Muscles (DC Gear Motors)
 Let's build your robot's movement system (using brushed DC gear motors).
 
 ## [Video]()
