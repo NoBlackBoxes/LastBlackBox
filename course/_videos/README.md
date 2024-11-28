@@ -90,12 +90,14 @@
 - [ ] [H-Bridges]()
 
 ## Robotics
+- [ ] [NB3 : Ball Caster]()
 - [ ] [NB3 : Muscles (Servos)]()
 - [ ] [NB3 : Muscles (DC Gear Motors)]()
 - [ ] [NB3 : Build a Braitenberg Vehicle]()
 
 ## Power
-- [ ] [NB3 : Power Supplies]()
+- [ ] [NB3 : Power Supply]()
+- [ ] [DC-DC Converters]()
 
 ## Systems
 - [ ] [NB3 : Connecting to RPi]()

@@ -22,12 +22,12 @@
 
 Servo left, right;  // This creates to servo objects, one for each motor
 
-int speed = 0;      // This creates a variable called "speed" that is intially set to 0
+int speed = 0;      // This creates a variable called "speed" that is initially set to 0
 
 // Setup
 void setup() {
-  right.attach(9);  // Assign right servo to digital (PWM) pin 9 (change accorinding to your connection)
-  left.attach(10);  // Assign left servo to digital (PWM) pin 10 (change accorinding to your connection)
+  right.attach(9);  // Assign right servo to digital (PWM) pin 9 (change according to your connection)
+  left.attach(10);  // Assign left servo to digital (PWM) pin 10 (change according to your connection)
 }
 
 void loop() {

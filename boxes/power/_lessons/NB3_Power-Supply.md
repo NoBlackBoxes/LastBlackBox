@@ -1,5 +1,5 @@
-# Power: NB3: Power Supplies
-We install a DC-DC power supply on our NB3.
+# Power: NB3: Power Supply
+Let's install a DC-DC power supply on our NB3.
 
 ## [Video]()
 
