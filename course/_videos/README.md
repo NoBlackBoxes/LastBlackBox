@@ -13,6 +13,7 @@
 - [x] [Voltage Dividers](https://vimeo.com/1030787469)
 - [x] [Resistors](https://vimeo.com/1029696806)
 - [x] [NB3 : Building Circuits](https://vimeo.com/1030783826)
+- [ ] [Capacitors]()
 - [ ] [NB3 : How Do Multimeters Work]()
 - [x] [Ohm's Law](https://vimeo.com/1029695302)
 - [x] [NB3 : Measuring Voltage](https://vimeo.com/1027762531)
@@ -62,10 +63,12 @@
 - [ ] [Radios]()
 
 ## Data
+- [ ] [NB3 : Build an ADC (input)]()
 - [x] [Analog to Digital Converters](https://vimeo.com/1033223967)
 - [x] [Binary Numbers](https://vimeo.com/1033226788)
 
 ## Logic
+- [ ] [NB3 : Build an ADC (output)]()
 - [x] [Logic Gates](https://vimeo.com/1033231995)
 
 ## Memory
