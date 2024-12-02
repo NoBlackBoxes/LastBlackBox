@@ -1,7 +1,7 @@
 # Power: NB3: Power Supply
 Let's install a DC-DC power supply on our NB3.
 
-## [Video]()
+## [Video](https://vimeo.com/1035306761)
 
 ## Concepts
 - Add NB3 power supply

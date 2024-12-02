@@ -1,7 +1,7 @@
 # Computers: Architecture
 The basic building blocks of a computer (memory, ALU, clock, bus, and IO) have a standard arrangement (architecture) in modern systems.
 
-## [Video]()
+## [Video](https://vimeo.com/1033601146)
 
 ## Concepts
 - Building blocks for abstraction

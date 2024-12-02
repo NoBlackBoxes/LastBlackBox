@@ -1,7 +1,7 @@
 # Robotics: NB3: Ball Caster
 Let's add a front wheel (ball caster) to keep your NB3 from dragging its face on the ground.
 
-## [Video]()
+## [Video](https://vimeo.com/1034797327)
 
 ## Concepts
 - Add ball caster

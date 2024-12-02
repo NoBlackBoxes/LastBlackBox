@@ -1,7 +1,7 @@
 # Data: NB3 : Build an ADC (input)
 Use a comparator to convert analog values into discrete levels.
 
-## [Video]()
+## [Video](https://vimeo.com/1034767170)
 
 ## Concepts
 - Build a resistor ladder
