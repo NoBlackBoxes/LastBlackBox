@@ -4,6 +4,8 @@ Let's install a DC-DC power supply on our NB3.
 ## [Video]()
 
 ## Concepts
+- Add NB3 power supply
+- Test
 
 ## Connections
 
