@@ -4,7 +4,7 @@
 */
 
 #include <Servo.h>    // This includes the "servo" library
-Servo left, right;    // This creates to servo objects, one for each motor
+Servo left, right;    // This creates two servo objects, one for each motor
 
 void setup() {
   // Initialize serial port

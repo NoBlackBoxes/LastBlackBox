@@ -82,9 +82,8 @@ Computer (RPi4),01,Raspberry Pi 4b with 2 GB RAM,1,_data/datasheets/rpi4b.pdf,ht
 Heatsinks,01,Heatsinks for RPi 4b chips,1,_data/datasheets/rpi4b_heatsinks.jpg,https://www.amazon.co.uk/gp/product/B07VRNT3HX,Loose,40,20,10
 SD Card,01,16 GB micro SD card,1,_data/datasheets/SanDisk-SDSQUAR-016G-GN6MA-datasheet.pdf,https://uk.farnell.com/sandisk/sdsquar-016g-gn6ma/memory-card-microsdhc-uhs-i-16gb/dp/2931924,Loose,100,50,3
 USB SD Card IO,01, SD card reader/writer,1,,https://www.amazon.co.uk/Beikell-High-speed-Adapter-Supports-MMC-Compatible-Windows/dp/B07L9VT8YY,Loose,70,40,15
-M2.5 bolt (6),01,6 mm long M2.5 bolt,4,,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2,Hardware,5,5,6
+M2.5 bolt (6),01,6 mm long M2.5 bolt,8,,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2,Hardware,5,5,6
 M2.5 standoff (20/SS),01,20 mm long socket-to-socket M2.5 standoff,4,,https://uk.farnell.com/wurth-elektronik/970200154/standoff-hex-female-female-20mm/dp/2987903,Hardware,5,5,20
-M2.5 standoff (20/PS),01,20 mm long plug-to-socket M2.5 standoff,4,,https://uk.farnell.com/wurth-elektronik/971200151/standoff-hex-male-female-20mm/dp/2884418,Hardware,5,5,20
 
 linux,,,,,,,,
 
@@ -115,6 +114,7 @@ Camera (RPi v3),01,RPi color camera with auto-focus (version 3),1,_data/datashee
 NB3 Camera Mount,01,Custom laser cut mount for RPi camera,1,NB3_camera_mount,VK,Mounts,40,30,5
 NB3 Cortex Mount,01,Custom laser cut holder for NPU,1,NB3_cortex_mount,VK,Mounts,75,65,5
 M2.5 bolt (6),01,6 mm long M2.5 bolt,4,,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2,Hardware,5,5,6
+M2.5 standoff (20/PS),01,20 mm long plug-to-socket M2.5 standoff,4,,https://uk.farnell.com/wurth-elektronik/971200151/standoff-hex-male-female-20mm/dp/2884418,Hardware,5,5,20
 M3 nut (square),01,square M3 nut 1.8 mm thick,1,,https://www.accu.co.uk/flat-square-nuts/21326-HFSN-M3-A2,Hardware,5,5,3
 M3 bolt (12),01,12 mm long M3 bolt,1,,https://www.accu.co.uk/pozi-pan-head-screws/500116-SPP-M3-12-ST-BZP,Hardware,5,5,12
 M2 bolt (8),01,8 mm long M2 bolt,4,,https://www.accu.co.uk/pozi-pan-head-screws/500101-SPP-M2-8-ST-BZP,Hardware,5,5,8

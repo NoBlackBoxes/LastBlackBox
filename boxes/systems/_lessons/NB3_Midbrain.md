@@ -4,6 +4,10 @@ Add a more powerful midbrain computer (Raspberry Pi) to your NB3.
 ## [Video]()
 
 ## Concepts
+- Overview of Pi SoC
+- Overview of Pi board layout
+- Mount Midbrain
+- Attach heatsinks
 
 ## Connections
 

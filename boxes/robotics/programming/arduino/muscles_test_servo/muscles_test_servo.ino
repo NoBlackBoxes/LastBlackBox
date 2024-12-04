@@ -20,7 +20,7 @@
 
 #include <Servo.h>  // This includes the "servo" library
 
-Servo left, right;  // This creates to servo objects, one for each motor
+Servo left, right;  // This creates two servo objects, one for each motor
 
 int speed = 0;      // This creates a variable called "speed" that is initially set to 0
 

@@ -4,6 +4,9 @@ After mounting and wiring your NB3's midbrain computer, you must now give it som
 ## [Video]()
 
 ## Concepts
+- RPi Imager
+- Settings
+- Testing
 
 ## Connections
 
