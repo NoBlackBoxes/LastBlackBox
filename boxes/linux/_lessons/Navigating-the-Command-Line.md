@@ -1,4 +1,4 @@
-# Linux: Introduction
+# Linux: Navigating the Command Line
 An overview of a free and open source operating system.
 
 ## [Video]()
