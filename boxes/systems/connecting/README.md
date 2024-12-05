@@ -1,51 +1,43 @@
 # Systems : Connecting
 
-Strategies for connecting to a (remote) system.
+Strategies for connecting to a (remote) system. For additional details, please consult the official documentation: [Raspberry Pi Remote Access](https://www.raspberrypi.com/documentation/computers/remote-access.html)
 
 ## General Approach
 
-In order to talk to another computer, we must be able to find it on our network. The following requirements must be met:
+In order to talk to another computer, we must be able to find it on your network. The following requirements must be met:
 
 1. The *remote* computer (e.g. your NB3's Raspberry Pi) must be connected to your local area network (LAN)
-2. Your *host* computer (your development laptop/desktop) must be connected to the same network
+2. Your *host* computer (your development laptop/desktop) must be connected to the **same network**
 3. The remote computer must **ALLOW** external connections (e.g. enable an SSH server)
 4. You must know the remote computer's **IP address** (or, in some cases, just the "hostname")
 
-We will address each of these required steps below.
+### The Setup
+The following assumes you have used the [RPi Imager](https://www.raspberrypi.com/software/) to create an SD card containing the Raspberry Pi Operating System (RPiOS) ***AND*** configured a hostname, user account (with password), WiFi network name+passkey+country (if available), and **enabled SSH** to use password login. If you have not done so, then please follow the instructions [here](../rpios/README.md)!
 
-### NB3: Raspberry Pi
-
-The following assumes you have used the [RPi Imager](https://www.raspberrypi.com/software/) to create an SD card containing the Raspbery Pi Operating System (RPiOS) ***AND*** configured a hostname, user account (with password), WiFi network name+passkey+country (if available), and **enabled SSH** to use password login. If you have not done so, then please follow the instructions [here](../rpios/README.md)!
-
-#### 1. Connecting the NB3 to your LAN
-
+## 1. Connecting the NB3 to your LAN
 If you have correctly entered the WiFi name (SSID) and passkey while creating the SD card, then your NB3 *should* connect automatically. The following are some ideas for "debugging" if this connection is not made.
 
 - **Wired Connection**: If you have access to your router and an ethernet cable, then simply connect the cable between your router's spare jacks and the NB3's jack. A new device will automatically appear on your network with an assigned IP address (use the tools in Step 4 below to determine this IP address).
 
 - **Monitor, Keyboard, and Mouse**: If you have a micro-HDMI (small port on RPi) to HDMI cable, the you can directly connect your NB3 to a monitor/TV. Along with a USB keyboard and mouse, you can then use your NB3 as a full-fledged "desktop" computer. Upon boot, you will see a normal-ish looking graphical desktop with options for connecting to an available WiFi network.
 
-- **Switching WiFi networks**: If you previously connected your NB3 to a WiFi network, then you can try to connect to a *new* network by creating a "mobile hotspot" with the same WiFi name (SSID) and passkey as the *previous* network. Your NB3 should connect and be assigned an IP address that you can use in the subsequent steps. *Make sure that your Host is also connected to the same hotspot.*
+- **Switching WiFi Networks**: If you previously connected your NB3 to a WiFi network, then you can try to connect to a *new* network by creating a "mobile hotspot" with the same WiFi name (SSID) and passkey as the *previous* network. Your NB3 should connect and be assigned an IP address that you can use in the subsequent steps. *Make sure that your Host is also connected to the same hotspot.*
 
-- **Multiple WiFi networks**: If you want to add additional known WiFi networks for your NB3 to connect to, then you can use the "raspi-config" tool when logged into your NB3. This tool is a "text-based" interface, but it is reasonably intuitive. WiFi seetings are under "System Options".
+- **UART Console**: Your RPi has the ability to communicate via an old-school serial console. We can use the USB-to-Serial converter on your microcontroller (hindbrain) to talk directly to the RPi via a terminal emulator (minicom, PuTTY, etc.). This trick requires enabling the serial console on your RPi and connecting some jumper cables between your microcontroller and RPi's GPIO pins. You can find details of this *last resot* (but very reliably) connection strategy here: [Connecting via UART](uart/README.md)
 
-<p align="center">
-<img src="resources/images/raspi_config_main_menu.png" alt="Raspberry Pi Config Main Menu" width="800" height="600">
-</p>
-
-#### 2. Connecting your Host to your LAN
+### 2. Connecting your Host to your LAN
 
 - Connect your Host to the same WiFi network as the NB3 using whatever strategy you normally use to connect to a WiFi network.
 
-#### 3. Enable SSH on the NB3
+### 3. Enable SSH on the NB3
 
-- This is usually done during the preparation of the SD card image (see above). However, if you have a monitor, keyboard, and mouse connected to your NB3, then you can use the command line tool "rpi-config" to enable SSH under the "Interface Options" menu.
+- This is usually done during the preparation of the SD card image (see above). However, if you have a monitor, keyboard, and mouse connected to your NB3, then you can use the command line tool "raspi-config" to enable SSH under the "Interface Options" menu.
 
 <p align="center">
 <img src="resources/images/raspi_config_interface_menu.png" alt="Raspberry Pi Config Interface Menu" width="800" height="600">
 </p>
 
-#### 4. Determining your NB3's IP address
+### 4. Determining your NB3's IP address
 
 There are many different software programmes designed to map local networks. I recommend [NMAP](https://nmap.org/download.html), which you can download and install on Linuix, MacOS, and Windows. Please following the install instructions for your Host's OS.
 
@@ -82,7 +74,6 @@ There are many different software programmes designed to map local networks. I r
     ```bash
     arp -a
     ```
-
 
 ### Connecting
 
