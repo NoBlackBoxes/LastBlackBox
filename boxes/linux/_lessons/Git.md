@@ -8,6 +8,7 @@ Git is a program that keeps track of changes to your files. It is very useful wh
 - cloning
 - repository
 - working with local files
+- sync a live change during video
 - forking(?)
 - git config and logging in
 
