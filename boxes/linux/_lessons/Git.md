@@ -4,6 +4,12 @@ Git is a program that keeps track of changes to your files. It is very useful wh
 ## [Video]()
 
 ## Concepts
+- version control
+- cloning
+- repository
+- working with local files
+- forking(?)
+- git config and logging in
 
 ## Connections
 
