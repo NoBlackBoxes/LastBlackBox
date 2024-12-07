@@ -1,7 +1,7 @@
 # Systems: Visual Studio Code
-We will be using Visual Studio Code (VS Code) as our tool for writing programs. VS Code is just a simple, *but really powerful*, text editor. It has extensions for all sorts of useful tools (Python, Git, etc.), and for connecting to a "remote" computer (our NB3's Raspberry Pi).
+We will be using Visual Studio Code (VS Code) as our tool for writing programs. VS Code is just a simple, *but really powerful*, text editor. It has extensions for all sorts of useful tools (Python, Git, etc.), and for connecting to a "remote" computer (our NB3's midbrain).
 
-## [Video]()
+## [Video](https://vimeo.com/1036716612)
 
 ## Concepts
 - Managing complex, powerful systems requires more complex, powerful tools

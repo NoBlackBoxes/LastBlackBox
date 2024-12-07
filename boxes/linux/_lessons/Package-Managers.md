@@ -1,7 +1,7 @@
 # Linux: Package Managers
-Installing and "managing" Linux software.
+Installing and "managing" software can get complicated. Programs that help coordinate this process are called **package managers**.
 
-## [Video]()
+## [Video](https://vimeo.com/1036834036)
 
 ## Concepts
 - Why do we need them?

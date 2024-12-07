@@ -1,7 +1,7 @@
 # Linux: Navigating the Command Line
-An overview of a free and open source operating system.
+The original user interfaces were entirely based on text. You typed commands as a line of text into your terminal console and received the result as a string of characters on the screen. Navigating this **command line** remains a useful skill, and a necessary one when working with remote machines.
 
-## [Video]()
+## [Video](https://vimeo.com/1036829527)
 
 ## Concepts
 - Where are you? (pwd)

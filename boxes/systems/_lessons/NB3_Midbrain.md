@@ -1,7 +1,7 @@
 # Systems: NB3: Midbrain
-Add a more powerful midbrain computer (Raspberry Pi) to your NB3.
+Now we will add a more powerful computer (Raspberry Pi) to your NB3's midbrain.
 
-## [Video]()
+## [Video](https://vimeo.com/1036089510)
 
 ## Concepts
 - Overview of Pi SoC

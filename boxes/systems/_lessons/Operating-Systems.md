@@ -1,7 +1,7 @@
 # Systems: Operating Systems
-As computer hardware became more complex, software was developed to manage this complexity and power. This programs took responsibility for managing access to the computer's resources: processing, memory, and devices. These days, when we *operate* a computer, we rarely interact directly with the hardware. Instead, we talk to this control software, which we call an **operating system**.
+As computer hardware became much more capable, software was developed to manage this complexity and power. This software took responsibility for managing access to the computer's resources: processing, memory, and devices. These days, when we *operate* a computer, we rarely interact directly with the hardware. Instead, we talk to this control software, which we call an **operating system**.
 
-## [Video]()
+## [Video](https://vimeo.com/1036096746)
 
 ## Concepts
 - The problem(s): Multi-task (and multi-user), memory management (and file systems), device drivers.
