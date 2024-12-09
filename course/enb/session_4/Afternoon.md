@@ -31,7 +31,7 @@ given signal. You can get the dominant, i.e. whistling, frequency by finding the
 and take that corresponding frequency.
 
 ```
-python host_pc/determine_whistling_frequency.py recorded_data/whistling.wav
+python host_pc/determine_whistling_frequency.py recorded_resources/whistling.wav
 
 output (example):
 The dominant frequency is 500 Hz
@@ -42,7 +42,7 @@ sliding over the signal and the Fourier transform is computed for each window. T
 representation of the signal. The STFT is a very powerful tool to analyze audio data. You can create the STFT by using
 the script "plot_spectrogram.py" the following way:
 
-    python host_pc/plot_spectrogram.py recorded_data/whistling.wav
+    python host_pc/plot_spectrogram.py recorded_resources/whistling.wav
 
 In the folder "recorded_data" you can then find the spectrogram of the whistling audio data. You can see that the
 whistling frequency is around 1000 Hz.

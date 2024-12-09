@@ -8,7 +8,7 @@ Look at everyone.
 
 Contents|Level|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
-Camera (RPi v3)|01|RPi color camera with auto-focus (version 3)|1|[-D-](_data/datasheets/rpi_camera_v3.pdf)|[-L-](https://uk.farnell.com/raspberry-pi/sc0872/rpi-camera-mod-3-standard-lens/dp/4132318)
+Camera (RPi v3)|01|RPi color camera with auto-focus (version 3)|1|[-D-](_resources/datasheets/rpi_camera_v3.pdf)|[-L-](https://uk.farnell.com/raspberry-pi/sc0872/rpi-camera-mod-3-standard-lens/dp/4132318)
 NB3 Camera Mount|01|Custom laser cut mount for RPi camera|1|[-D-](NB3_camera_mount)|[-L-](VK)
 NB3 Cortex Mount|01|Custom laser cut holder for NPU|1|[-D-](NB3_cortex_mount)|[-L-](VK)
 M2.5 bolt (6)|01|6 mm long M2.5 bolt|4|-|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2)

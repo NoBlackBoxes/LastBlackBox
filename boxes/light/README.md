@@ -8,7 +8,7 @@ In this box, we will learn about light...how to measure it and how to **create**
 
 Contents|Level|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
-Lightbulb|10|Mini incandescent bulb (6 V)|1|[-D-](_data/datasheets/lamp_6V.pdf)|[-L-](https://uk.farnell.com/cml-innovative-technologies/3820al/lamp-w-e-axial-t3-8-6v-0-6w/dp/1139454)
+Lightbulb|10|Mini incandescent bulb (6 V)|1|[-D-](_resources/datasheets/lamp_6V.pdf)|[-L-](https://uk.farnell.com/cml-innovative-technologies/3820al/lamp-w-e-axial-t3-8-6v-0-6w/dp/1139454)
 
 </p></details>
 

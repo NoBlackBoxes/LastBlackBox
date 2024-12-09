@@ -8,7 +8,7 @@ username = os.getlogin()
 # Specify paths
 repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
 box_path = repo_path + '/boxes/learning'
-data_path = box_path + '/supervised/_data/simple.csv'
+data_path = box_path + '/supervised/_resources/simple.csv'
 
 # Load data
 data = np.genfromtxt(data_path, delimiter=',')

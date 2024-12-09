@@ -13,7 +13,7 @@ Running more capable software requires a faster computer, which requires more po
 - *NOTE*: Your NB3_power board cable *might* have inverted colors (black to +5V, red to 0V) relative to that shown in the assembly video. This doesn't matter, as the plugs will only work in one orientation and the correct voltage is conveyed to the correct position on the body.
 <details><summary><strong>Target</strong></summary>
 Your NB3 should now look like this: <p align="center">
-<img src="../../../boxes/power/_data/images/NB3_power_wiring.png" alt="NB3 power wiring" width="400">
+<img src="../../../boxes/power/_resources/images/NB3_power_wiring.png" alt="NB3 power wiring" width="400">
 </p>
 </details><hr>
 
@@ -24,7 +24,7 @@ Modern computers combine a huge number of different technologies into a function
 > Add a more powerful midbrain computer (Raspberry Pi) to your NB3.
 
 - [ ] **Task**: Mount a Raspberry Pi on your robot (and connect its power inputs using your *shortest* jumper cables, 2x5V and 2x0V from the NB3, to the correct GPIO pins on the RPi...please *double-check* the pin numbers)
-- This pinout of the Raspberry Pi GPIO might be useful: [Raspberry Pi GPIO](../../../boxes/systems/_data/images/rpi_GPIO_pinout.png)
+- This pinout of the Raspberry Pi GPIO might be useful: [Raspberry Pi GPIO](../../../boxes/systems/_resources/images/rpi_GPIO_pinout.png)
 
 #### Watch this video: [RPiOS](https://vimeo.com/??????)
 > After mounting and wiring your NB3's midbrain computer, you must now give it some core software to run...an operating system.

@@ -13,7 +13,7 @@ Here we will learn where electricity comes from, how we can measure it, and what
 #### Watch this video: [The Periodic Table](https://vimeo.com/1000458082)
 > The organization of elements into a table reveals a regular pattern, which is linked to the fundamental chemical properties of each material.
 
-- When you need it *(and you will)*, then you can find a copy of the periodic table [here](../../../boxes/atoms/_data/images/periodic_table.png).
+- When you need it *(and you will)*, then you can find a copy of the periodic table [here](../../../boxes/atoms/_resources/images/periodic_table.png).
 - The electron configuration (assignments to specific orbitals) of each atomic element can be viewed [here](https://en.wikipedia.org/wiki/Electron_configurations_of_the_elements_(data_page)). 
 
 ## Electrons
@@ -150,7 +150,7 @@ The LED should only illuminate when installed in one orientation. If you flip it
 > Gate
 
 - [ ] **Task**: Measure the threshold voltage that opens your MOSFET gate. Compare it to the "expected" range listed in the 
-- The datasheet for your MOSFET can be found here: [IRF510](../../../boxes/transistors/_data/datasheets/IRF510.pdf)
+- The datasheet for your MOSFET can be found here: [IRF510](../../../boxes/transistors/_resources/datasheets/IRF510.pdf)
 <details><summary><strong>Target</strong></summary>
 The threshold for when current starts to flow through your MOSFET ("Gate-Source Threshold Voltage") should be between 2 to 4 Volts. However, the amount of current it allows will rise rapidly up to (and beyond) 10 Volts. Check the datasheet (Figure 3). 
 </details><hr>
@@ -162,5 +162,5 @@ Use a MOSFET transistor to control how much current is flowing through your moto
 - *Help*: A guide to completing this task can be found here: [NB3-Building a Light-Sensitive Motor](https://vimeo.com/??????)
 - *Hint*: Use the following circuit as a guide:
 <p align="center">
-<img src="../../../boxes/transistors/_data/images/MOSFET_motor_driver.png" alt="MOSEFT driver" width="400" height="300">
+<img src="../../../boxes/transistors/_resources/images/MOSFET_motor_driver.png" alt="MOSEFT driver" width="400" height="300">
 </p>

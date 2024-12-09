@@ -43,7 +43,7 @@ You should be able to successfully compile and upload the "Blink" example (with 
 - [ ] **Task**: Blink an (external) LED 
 - *Hint*: Connect the LED to a digital output pin (D13 in the example below), but don't forget your current limiting resistor!
 <p align="center">
-<img src="../../../boxes/computers/_data/images/LED_driver_circuit.png" alt="LED driver" width="400">
+<img src="../../../boxes/computers/_resources/images/LED_driver_circuit.png" alt="LED driver" width="400">
 </p>
 <details><summary><strong>Target</strong></summary>
 Your external LED should now be blinking at the same time as the built-in LED (both are connected to pin 13).
@@ -61,7 +61,7 @@ Your external LED should now be blinking at the same time as the built-in LED (b
 - Now investigate Arduino's "tone" Library. Some examples can be found in the *File->Examples-Digital* folder. You can use this library to make some (slightly) more pleasant sounds.
 - This is a piezo buzzer:
 <p align="center">
-<img src="../../../boxes/computers/_data/images/piezo_buzzer.png" alt="Piezo Buzzer" width="300">
+<img src="../../../boxes/computers/_resources/images/piezo_buzzer.png" alt="Piezo Buzzer" width="300">
 </p>
  
 - [ ] **Task**: Build a Theremin
@@ -70,7 +70,7 @@ Your external LED should now be blinking at the same time as the built-in LED (b
 - [ ] **Task**: ***Have fun!*** (Make something cool)
 - This diagram of the Arduino "pins" will definitely be useful:
 <p align="center">
-<img src="../../../boxes/computers/_data/images/pinout_arduino_nano.png" alt="arduino pinout" width="650">
+<img src="../../../boxes/computers/_resources/images/pinout_arduino_nano.png" alt="arduino pinout" width="650">
 </p>
 
 ---
@@ -96,5 +96,5 @@ Combining sensors, motors, and a "brain" in between.
 ### Extend your robot's behaviour (be creative!)
 - **Suggestion**: Try building a Braitenberg vehicle. This [servo test](../../../boxes/computers/programming/arduino/servo_test/) example will help you get your motors moving. Can you make their speed dependent on how bright it is on the *left* or *right* side of your NB3? (you will need *two* light sensors)
 <p align="center">
-<img src="../../../boxes/robotics/_data/images/braitenberg_vehicle.png" alt="Braitenberg Vehicle" width="600">
+<img src="../../../boxes/robotics/_resources/images/braitenberg_vehicle.png" alt="Braitenberg Vehicle" width="600">
 </p>

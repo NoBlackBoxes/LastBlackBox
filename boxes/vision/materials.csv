@@ -1,4 +1,4 @@
-Camera (RPi v3),01,RPi color camera with auto-focus (version 3),1,_data/datasheets/rpi_camera_v3.pdf,https://uk.farnell.com/raspberry-pi/sc0872/rpi-camera-mod-3-standard-lens/dp/4132318,Loose,120,75,23
+Camera (RPi v3),01,RPi color camera with auto-focus (version 3),1,_resources/datasheets/rpi_camera_v3.pdf,https://uk.farnell.com/raspberry-pi/sc0872/rpi-camera-mod-3-standard-lens/dp/4132318,Loose,120,75,23
 NB3 Camera Mount,01,Custom laser cut mount for RPi camera,1,NB3_camera_mount,VK,Mounts,40,30,5
 NB3 Cortex Mount,01,Custom laser cut holder for NPU,1,NB3_cortex_mount,VK,Mounts,75,65,5
 M2.5 bolt (6),01,6 mm long M2.5 bolt,4,,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2,Hardware,5,5,6

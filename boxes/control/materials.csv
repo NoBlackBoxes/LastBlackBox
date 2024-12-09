@@ -1,4 +1,4 @@
 Servo Motor,01,FT90R Digital Micro Continuous Rotation Servo,2,,https://www.pololu.com/product/2817,Loose,100,70,15
 Servo Wheel,01,Wheels (70x8mm) for servos,2,,https://www.pololu.com/product/4925,Loose,100,70,15
-H-bridge,10,H-bridge motor driver (SN754410NE),2,_data/datasheets/sn754410.pdf,https://uk.farnell.com/texas-instruments/sn754410ne/ic-peripheral-driver-half-h-1a/dp/3118977,Active,8,25,6
+H-bridge,10,H-bridge motor driver (SN754410NE),2,_resources/datasheets/sn754410.pdf,https://uk.farnell.com/texas-instruments/sn754410ne/ic-peripheral-driver-half-h-1a/dp/3118977,Active,8,25,6
 DC Gearbox Motor,10,TT Gearbox DC Motor - 200RPM - 3 to 6VDC and wheel,2,,https://www.adafruit.com/product/3777#technical-details,Loose,130,70,30

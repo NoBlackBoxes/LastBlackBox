@@ -5,7 +5,7 @@ Modern computers combine a huge number of different technologies into a function
 > Add a more powerful midbrain computer (Raspberry Pi) to your NB3.
 
 - **TASK**: Mount a Raspberry Pi on your robot (and connect its power inputs using your *shortest* jumper cables, 2x5V and 2x0V from the NB3, to the correct GPIO pins on the RPi...please *double-check* the pin numbers)
-  - This pinout of the Raspberry Pi GPIO might be useful: [Raspberry Pi GPIO](_data/images/rpi_GPIO_pinout.png)
+  - This pinout of the Raspberry Pi GPIO might be useful: [Raspberry Pi GPIO](_resources/images/rpi_GPIO_pinout.png)
 > You should now be able to power on your Raspberry Pi (via your NB3) and observe some blinking LEDs.
 
 ## [RPiOS](https://vimeo.com/??????)

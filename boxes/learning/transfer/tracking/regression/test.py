@@ -81,7 +81,7 @@ preprocess = transforms.Compose([
 
 # Test on movie snaps
 import cv2
-video_path = repo_path + '/boxes/ai/tracking/_data/nose.mp4'
+video_path = repo_path + '/boxes/ai/tracking/_resources/nose.mp4'
 cap = cv2.VideoCapture(video_path)
 num_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
 

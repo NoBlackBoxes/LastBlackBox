@@ -9,7 +9,7 @@ username = os.getlogin()
 
 # Specify paths
 repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
-image_path = repo_path + '/boxes/intelligence/transformers/vision/_data/zoom_lesson.jpg'
+image_path = repo_path + '/boxes/intelligence/transformers/vision/_resources/zoom_lesson.jpg'
 image = Image.open(image_path)
 
 # Display test image

@@ -9,4 +9,4 @@ Diodes allow current to flow in only one direction, if you overcome the internal
 
 ## Lesson
 
-- *Hint*: Use the following circuit as a guide: ![MOSEFT driver:400](../../../boxes/transistors/_data/images/MOSFET_motor_driver.png)
+- *Hint*: Use the following circuit as a guide: ![MOSEFT driver:400](../../../boxes/transistors/_resources/images/MOSFET_motor_driver.png)

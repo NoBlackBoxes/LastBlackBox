@@ -5,18 +5,18 @@ Periodic Table,01,Periodic Table business card,1,card,VK,Loose,40,60,0.5
 
 electrons,,,,,,,,
 NB3 Body,01,NB3 robot base PCB,1,NB3_body,VK,Loose,200,200,15
-Resistor (470),01,470 &Omega;/0.25 W,2,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943,Passive,50,5,3
-Resistor (1k),01,1 k&Omega;/0.25 W,2,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-1k/res-1k-1-250mw-axial-metal-film/dp/9341102,Passive,50,5,3
-Resistor (10k),01,10 k&Omega;/0.25 W,2,_data/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-10k/res-10k-1-250mw-axial-metal-film/dp/9341110,Passive,50,5,3
-Potentiometer,01,2.2 k&Omega; variable resistor,2,_data/datasheets/pot_2k2.pdf,https://uk.farnell.com/bourns/3362p-1-222lf/trimmer-pot-2-2kohm-10-1turn-th/dp/2328599,Passive,5,5,3
-Breadboard (400),01,400-tie solderless breadboard,1,_data/datasheets/breadboard_400.pdf,https://www.amazon.co.uk/gp/product/B0739XRX8F,Loose,85,60,10
-Breadboards (170),01,170-tie solderless breadboard,4,_data/datasheets/breadboard_170.pdf,https://www.amazon.co.uk/ELEGOO-tie-points-Breadboard-Breadboards-Electronic/dp/B01N0YWIR7,Loose,35,50,10
+Resistor (470),01,470 &Omega;/0.25 W,2,_resources/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943,Passive,50,5,3
+Resistor (1k),01,1 k&Omega;/0.25 W,2,_resources/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-1k/res-1k-1-250mw-axial-metal-film/dp/9341102,Passive,50,5,3
+Resistor (10k),01,10 k&Omega;/0.25 W,2,_resources/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-10k/res-10k-1-250mw-axial-metal-film/dp/9341110,Passive,50,5,3
+Potentiometer,01,2.2 k&Omega; variable resistor,2,_resources/datasheets/pot_2k2.pdf,https://uk.farnell.com/bourns/3362p-1-222lf/trimmer-pot-2-2kohm-10-1turn-th/dp/2328599,Passive,5,5,3
+Breadboard (400),01,400-tie solderless breadboard,1,_resources/datasheets/breadboard_400.pdf,https://www.amazon.co.uk/gp/product/B0739XRX8F,Loose,85,60,10
+Breadboards (170),01,170-tie solderless breadboard,4,_resources/datasheets/breadboard_170.pdf,https://www.amazon.co.uk/ELEGOO-tie-points-Breadboard-Breadboards-Electronic/dp/B01N0YWIR7,Loose,35,50,10
 Batteries (AA),01,AA 1.5 V alkaline battery,4,,,Loose,60,15,15
 Battery holder,01,4xAA battery holder with ON-OFF switch,1,,https://www.amazon.co.uk/gp/product/B0814ZH68F,Loose,65,70,20
-Jumper Kit,01,Kit of multi-length 22 AWG breadboard jumpers,1,_data/datasheets/jumper_kit.pdf,https://uk.farnell.com/multicomp/mc001810/hard-jumper-wire-22awg-140pc/dp/2770338,Loose,170,55,15
-Jumper Wires,01,Assorted 22 AWG jumper wire leads (male/female),1,_data/datasheets/jumper_wires.pdf,https://www.amazon.co.uk/240pcs-Solderless-Breadboard-Arduino-Project/dp/B08PJSTS3C,Loose,200,40,10
+Jumper Kit,01,Kit of multi-length 22 AWG breadboard jumpers,1,_resources/datasheets/jumper_kit.pdf,https://uk.farnell.com/multicomp/mc001810/hard-jumper-wire-22awg-140pc/dp/2770338,Loose,170,55,15
+Jumper Wires,01,Assorted 22 AWG jumper wire leads (male/female),1,_resources/datasheets/jumper_wires.pdf,https://www.amazon.co.uk/240pcs-Solderless-Breadboard-Arduino-Project/dp/B08PJSTS3C,Loose,200,40,10
 Test Lead,01,Alligator clip to 0.64 mm pin (20 cm),2,,https://www.amazon.co.uk/gp/product/B096JR15JW,Loose,220,20,10
-Rubber feet,01,Adhesive rubber standoffs (1421T6CL),4,_data/datasheets/rubber_feet.pdf,https://uk.farnell.com/hammond/1421t6cl/feet-stick-on-pk24/dp/1876522,Passive,20,20,4
+Rubber feet,01,Adhesive rubber standoffs (1421T6CL),4,_resources/datasheets/rubber_feet.pdf,https://uk.farnell.com/hammond/1421t6cl/feet-stick-on-pk24/dp/1876522,Passive,20,20,4
 
 magnets,,,,,,,,
 Magnet Wire,01,Narrow gaurge epoxy insulated (1 m),1,,https://www.amazon.co.uk/Enameled-Magnet-Soldering-Winding-Enamelled/dp/B07N65LRVD,Passive,30,30,20
@@ -33,10 +33,10 @@ motors,,,,,,,,
 DC Brushed Motor,01,6V Brushed DC motor,1,,https://www.amazon.co.uk/Gikfun-1V-6V-Hobby-Arduino-EK1894/dp/B07BHHP2BT,Loose,20,40,15
 
 transistors,,,,,,,,
-MOSFET,01,Power MOSFET/N-channel (IRF510),2,_data/datasheets/IRF510.pdf,https://uk.farnell.com/vishay/irf510pbf/mosfet-n-100v-5-6a-to-220ab/dp/1653658,Active,40,15,4
-Diode,01,IN4001,2,_data/datasheets/IN4001.pdf,https://uk.farnell.com/on-semiconductor/1n4001g/diode-standard-1a-do-41/dp/1458986,Active,40,5,3
-LED (Red),01,5 mm/2 mA red LED,2,_data/datasheets/led_HLMP.pdf,https://uk.farnell.com/broadcom-limited/hlmp-4700/led-5mm-red-2-3mcd-626nm/dp/1003232,Active,50,5,3
-LED (Green),01,3 mm/2 mA green LED,2,_data/datasheets/led_HLMP.pdf,https://uk.farnell.com/broadcom-limited/hlmp-1790/led-3mm-green-2-3mcd-569nm/dp/1003209,Active,50,5,3
+MOSFET,01,Power MOSFET/N-channel (IRF510),2,_resources/datasheets/IRF510.pdf,https://uk.farnell.com/vishay/irf510pbf/mosfet-n-100v-5-6a-to-220ab/dp/1653658,Active,40,15,4
+Diode,01,IN4001,2,_resources/datasheets/IN4001.pdf,https://uk.farnell.com/on-semiconductor/1n4001g/diode-standard-1a-do-41/dp/1458986,Active,40,5,3
+LED (Red),01,5 mm/2 mA red LED,2,_resources/datasheets/led_HLMP.pdf,https://uk.farnell.com/broadcom-limited/hlmp-4700/led-5mm-red-2-3mcd-626nm/dp/1003232,Active,50,5,3
+LED (Green),01,3 mm/2 mA green LED,2,_resources/datasheets/led_HLMP.pdf,https://uk.farnell.com/broadcom-limited/hlmp-1790/led-3mm-green-2-3mcd-569nm/dp/1003209,Active,50,5,3
 
 amplifiers,,,,,,,,
 
@@ -64,8 +64,8 @@ memory,,,,,,,,
 fpgas,,,,,,,,
 
 computers,,,,,,,,
-Microcontroller,01,Arduino Nano (rev.3),1,_data/datasheets/arduino_nano_rev3.pdf,https://uk.farnell.com/arduino/a000005/arduino-nano-evaluation-board/dp/1848691,Loose,82,60,25
-Piezo Buzzer,01,Piezoelectric speaker/transducer,1,_data/datasheets/piezo_buzzer.pdf,https://uk.farnell.com/tdk/ps1240p02bt/piezoelectric-buzzer-4khz-70dba/dp/3267212,Passive,30,30,1
+Microcontroller,01,Arduino Nano (rev.3),1,_resources/datasheets/arduino_nano_rev3.pdf,https://uk.farnell.com/arduino/a000005/arduino-nano-evaluation-board/dp/1848691,Loose,82,60,25
+Piezo Buzzer,01,Piezoelectric speaker/transducer,1,_resources/datasheets/piezo_buzzer.pdf,https://uk.farnell.com/tdk/ps1240p02bt/piezoelectric-buzzer-4khz-70dba/dp/3267212,Passive,30,30,1
 Cable (MiniUSB-1m),01,Mini-USB to Type-A cable (1 m),1,,https://uk.farnell.com/molex/88732-8602/usb-cable-2-0-plug-plug-1m/dp/1221071,Loose,100,50,15
 
 control,,,,,,,,
@@ -78,9 +78,9 @@ M2.5 bolt (6),01,6 mm long M2.5 bolt,8,,https://www.accu.co.uk/pozi-pan-head-scr
 M2.5 standoff (12/SS),01,12 mm long socket-to-socket M2.5 standoff,4,,https://uk.farnell.com/wurth-elektronik/970120151/standoff-hex-female-female-12mm/dp/2884528,Hardware,5,5,12
 
 systems,,,,,,,,
-Computer (RPi4),01,Raspberry Pi 4b with 2 GB RAM,1,_data/datasheets/rpi4b.pdf,https://uk.farnell.com/raspberry-pi/rpi4-modbp-2gb/raspberry-pi-4-model-b-2gb/dp/3051886,Loose,95,70,26
-Heatsinks,01,Heatsinks for RPi 4b chips,1,_data/datasheets/rpi4b_heatsinks.jpg,https://www.amazon.co.uk/gp/product/B07VRNT3HX,Loose,40,20,10
-SD Card,01,16 GB micro SD card,1,_data/datasheets/SanDisk-SDSQUAR-016G-GN6MA-datasheet.pdf,https://uk.farnell.com/sandisk/sdsquar-016g-gn6ma/memory-card-microsdhc-uhs-i-16gb/dp/2931924,Loose,100,50,3
+Computer (RPi4),01,Raspberry Pi 4b with 2 GB RAM,1,_resources/datasheets/rpi4b.pdf,https://uk.farnell.com/raspberry-pi/rpi4-modbp-2gb/raspberry-pi-4-model-b-2gb/dp/3051886,Loose,95,70,26
+Heatsinks,01,Heatsinks for RPi 4b chips,1,_resources/datasheets/rpi4b_heatsinks.jpg,https://www.amazon.co.uk/gp/product/B07VRNT3HX,Loose,40,20,10
+SD Card,01,16 GB micro SD card,1,_resources/datasheets/SanDisk-SDSQUAR-016G-GN6MA-datasheet.pdf,https://uk.farnell.com/sandisk/sdsquar-016g-gn6ma/memory-card-microsdhc-uhs-i-16gb/dp/2931924,Loose,100,50,3
 USB SD Card IO,01, SD card reader/writer,1,,https://www.amazon.co.uk/Beikell-High-speed-Adapter-Supports-MMC-Compatible-Windows/dp/B07L9VT8YY,Loose,70,40,15
 M2.5 bolt (6),01,6 mm long M2.5 bolt,8,,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2,Hardware,5,5,6
 M2.5 standoff (20/SS),01,20 mm long socket-to-socket M2.5 standoff,4,,https://uk.farnell.com/wurth-elektronik/970200154/standoff-hex-female-female-20mm/dp/2987903,Hardware,5,5,20
@@ -101,7 +101,7 @@ security,,,,,,,,
 audio,,,,,,,,
 NB3 Ear,01,I2S mems microphone breakout board,2,NB3_ear,VK,Audio,20,20,20
 NB3 Mouth,01,I2S DAC-AMP breakout board,1,NB3_mouth,VK,Audio,20,20,20
-Speaker,01,3 Watt 4 Ohm with Dupont 2.54 mm socket,1,_data/datasheets/CQR0508.jpg,https://www.amazon.co.uk/dp/B09JJ28D6R,Loose,0,30,15
+Speaker,01,3 Watt 4 Ohm with Dupont 2.54 mm socket,1,_resources/datasheets/CQR0508.jpg,https://www.amazon.co.uk/dp/B09JJ28D6R,Loose,0,30,15
 Speaker Mount,01,Custom laser cut mount for speaker,1,-,VK,Mounts,75,20,5
 M3 standoff (15/PS),01,15 mm long plug-to-socket M3 standoff,2,-,https://uk.farnell.com/ettinger/05-13-151/spacer-m3x15-vzk/dp/1466726,Hardware,5,5,15
 M3 nut (square),01,square M3 nut 1.8 mm thick,2,-,https://www.accu.co.uk/flat-square-nuts/21326-HFSN-M3-A2,Hardware,5,5,3
@@ -110,7 +110,7 @@ M2.5 bolt (6),01,6 mm long M2.5 bolt,2,,https://www.accu.co.uk/pozi-pan-head-scr
 M2.5 nut,01,regular M2.5 nut,2,-,https://www.accu.co.uk/hexagon-nuts/456430-HPN-M2-5-C8-Z,Hardware,5,5,3
 
 vision,,,,,,,,
-Camera (RPi v3),01,RPi color camera with auto-focus (version 3),1,_data/datasheets/rpi_camera_v3.pdf,https://uk.farnell.com/raspberry-pi/sc0872/rpi-camera-mod-3-standard-lens/dp/4132318,Loose,120,75,23
+Camera (RPi v3),01,RPi color camera with auto-focus (version 3),1,_resources/datasheets/rpi_camera_v3.pdf,https://uk.farnell.com/raspberry-pi/sc0872/rpi-camera-mod-3-standard-lens/dp/4132318,Loose,120,75,23
 NB3 Camera Mount,01,Custom laser cut mount for RPi camera,1,NB3_camera_mount,VK,Mounts,40,30,5
 NB3 Cortex Mount,01,Custom laser cut holder for NPU,1,NB3_cortex_mount,VK,Mounts,75,65,5
 M2.5 bolt (6),01,6 mm long M2.5 bolt,4,,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2,Hardware,5,5,6

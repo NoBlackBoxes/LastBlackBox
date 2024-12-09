@@ -12,8 +12,8 @@ username = os.getlogin()
 # Specify paths
 repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
 box_path = repo_path + '/boxes/learning'
-image_path = box_path + '/transfer/backbone/_data/dog.jpg'
-labels_path = box_path + '/transfer/backbone/_data/imagenet_labels.txt'
+image_path = box_path + '/transfer/backbone/_resources/dog.jpg'
+labels_path = box_path + '/transfer/backbone/_resources/imagenet_labels.txt'
 
 # Load ImageNet class labels
 class_labels = np.array(open(labels_path).read().splitlines())

@@ -8,7 +8,7 @@
 
 Contents|Level|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
-NPU|10|Coral EdgeTPU USB Type-C|1|[-D-](_data/datasheets/Coral-USB-Accelerator-datasheet.pdf)|[-L-](https://coral.ai/products/accelerator/)
+NPU|10|Coral EdgeTPU USB Type-C|1|[-D-](_resources/datasheets/Coral-USB-Accelerator-datasheet.pdf)|[-L-](https://coral.ai/products/accelerator/)
 M3 screw (16)|10|16 mm long M3 screw with phillips socket|4|-|-
 M3 nut (square)|10|square M3 nut 1.8 mm thick|4|-|[-L-](https://www.accu.co.uk/flat-square-nuts/21326-HFSN-M3-A2)
 

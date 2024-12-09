@@ -8,9 +8,9 @@ Computers and brains work with voltages. In order for either to understand signa
 
 Contents|Level|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
-Thermistor|10|Temperature sensitive resistor|2|[-D-](_data/datasheets/thermistor.pdf)|[-L-](https://uk.farnell.com/epcos/b57891m0103k000/thermistor-ntc-radial-leaded/dp/2285471)
+Thermistor|10|Temperature sensitive resistor|2|[-D-](_resources/datasheets/thermistor.pdf)|[-L-](https://uk.farnell.com/epcos/b57891m0103k000/thermistor-ntc-radial-leaded/dp/2285471)
 Photoresistor (LDR)|01|Light-dependent resistor (GL5516 and GL5528)|8|-|[-L-](https://www.amazon.co.uk/Resistor-Dependent-Photoresistor-Sensitive-Sensors/dp/B08SC1M7V7)
-Piezo|10|Piezo element|1|[-D-](_data/datasheets/piezo.pdf)|[-L-](https://uk.farnell.com/multicomp/mcabt-455-rc/audio-element-piezo-2-8khz-35mm/dp/2433035)
+Piezo|10|Piezo element|1|[-D-](_resources/datasheets/piezo.pdf)|[-L-](https://uk.farnell.com/multicomp/mcabt-455-rc/audio-element-piezo-2-8khz-35mm/dp/2433035)
 
 </p></details>
 

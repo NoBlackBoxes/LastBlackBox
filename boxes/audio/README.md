@@ -10,7 +10,7 @@ Contents|Level|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 NB3 Ear|01|I2S mems microphone breakout board|2|[-D-](NB3_ear)|[-L-](VK)
 NB3 Mouth|01|I2S DAC-AMP breakout board|1|[-D-](NB3_mouth)|[-L-](VK)
-Speaker|01|3 Watt 4 Ohm with Dupont 2.54 mm socket|1|[-D-](_data/datasheets/CQR0508.jpg)|[-L-](https://www.amazon.co.uk/dp/B09JJ28D6R)
+Speaker|01|3 Watt 4 Ohm with Dupont 2.54 mm socket|1|[-D-](_resources/datasheets/CQR0508.jpg)|[-L-](https://www.amazon.co.uk/dp/B09JJ28D6R)
 Speaker Mount|01|Custom laser cut mount for speaker|1|[-D-](-)|[-L-](VK)
 M3 standoff (15/PS)|01|15 mm long plug-to-socket M3 standoff|2|[-D-](-)|[-L-](https://uk.farnell.com/ettinger/05-13-151/spacer-m3x15-vzk/dp/1466726)
 M3 nut (square)|01|square M3 nut 1.8 mm thick|2|[-D-](-)|[-L-](https://www.accu.co.uk/flat-square-nuts/21326-HFSN-M3-A2)

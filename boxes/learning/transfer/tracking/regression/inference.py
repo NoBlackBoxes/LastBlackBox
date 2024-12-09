@@ -20,7 +20,7 @@ username = os.getlogin()
 repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
 box_path = repo_path + '/boxes/learning/transfer/tracking/regression'
 model_path = box_path + '/_tmp/custom.pt'
-video_path = repo_path + '/boxes/learning/transfer/tracking/_data/nose.mp4'
+video_path = repo_path + '/boxes/learning/transfer/tracking/_resources/nose.mp4'
 
 # Load model
 custom_model = model.custom()

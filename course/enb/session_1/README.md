@@ -67,7 +67,7 @@ We will use electromagnets to create the rotational force to move our NB3 robot.
   - ***Task***: Illuminate a light-emitting diode (LED). *Remember the current limiting resistor*
 - *Watch this video*: [Transistors - MOSFETs](https://vimeo.com/1000873279)
   - ***Task***: Measure the threshold voltage that opens your MOSFET gate. Compare it to the "expected" range listed in the datasheet
-    - The datasheet for your MOSFET can be found here: [IRF510](../../../boxes/transistors/_data/datasheets/IRF510.pdf)
+    - The datasheet for your MOSFET can be found here: [IRF510](../../../boxes/transistors/_resources/datasheets/IRF510.pdf)
 
 ---
 
@@ -75,7 +75,7 @@ We will use electromagnets to create the rotational force to move our NB3 robot.
 - Build a light-sensitive motor (a motor that spins when the light is ON and stops when the light is OFF...or the other way around).
   - Use the following circuit as a guide:
 <p align="center">
-<img src="../../../boxes/transistors/_data/images/MOSFET_motor_driver.png" alt="MOSEFT driver" width="400" height="300">
+<img src="../../../boxes/transistors/_resources/images/MOSFET_motor_driver.png" alt="MOSEFT driver" width="400" height="300">
 </p>
 
 > Where do you connect your light sensor?

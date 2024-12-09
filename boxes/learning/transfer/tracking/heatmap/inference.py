@@ -21,7 +21,7 @@ username = os.getlogin()
 repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
 box_path = repo_path + '/boxes/learning/transfer/tracking/heatmap'
 model_path = box_path + '/_tmp/previous.pt'
-video_path = repo_path + '/boxes/ai/tracking/_data/nose.mp4'
+video_path = repo_path + '/boxes/ai/tracking/_resources/nose.mp4'
 
 # Load model
 custom_model = model.custom()

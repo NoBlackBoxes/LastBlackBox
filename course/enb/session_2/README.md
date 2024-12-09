@@ -38,7 +38,7 @@ We can control a computer by loading a list of instructions ("operations") for t
     - Connect the LED to a digital output pin (D13 in the example below), but don't forget your current limiting resistor!
 
 <p align="center">
-<img src="../../../boxes/computers/_data/images/LED_driver_circuit.png" alt="LED driver" width="400" height="300">
+<img src="../../../boxes/computers/_resources/images/LED_driver_circuit.png" alt="LED driver" width="400" height="300">
 </p>
 
   - ***Task***: Measure an analog signal from your LDR light sensor circuit
@@ -54,7 +54,7 @@ We can control a computer by loading a list of instructions ("operations") for t
       - This is a piezo buzzer:
 
 <p align="center">
-<img src="../../../boxes/computers/_data/images/piezo_buzzer.png" alt="Piezo Buzzer" width="300" height="300">
+<img src="../../../boxes/computers/_resources/images/piezo_buzzer.png" alt="Piezo Buzzer" width="300" height="300">
 </p>
  
   - ***Task***: Build a Theremin
@@ -63,7 +63,7 @@ We can control a computer by loading a list of instructions ("operations") for t
     - This diagram of the Arduino "pins" will defintely be useful:
 
 <p align="center">
-<img src="../../../boxes/computers/_data/images/pinout_arduino_nano.png" alt="arduino pinout" width="650" height="700">
+<img src="../../../boxes/computers/_resources/images/pinout_arduino_nano.png" alt="arduino pinout" width="650" height="700">
 </p>
 
 ------------
@@ -83,7 +83,7 @@ We can control a computer by loading a list of instructions ("operations") for t
   - **Suggestion**: Try building a Braitenberg vehicle. This [servo test](../../../boxes/computers/programming/arduino/servo_test/) example will help you get your motors moving. Can you make their speed dependent on how bright it is on the *left* or *right* side of your NB3? (you will need *two* light sensors)
 
 <p align="center">
-<img src="../../../boxes/robotics/_data/images/braitenberg_vehicle.png" alt="Braitenberg Vehicle" width="600" height="300">
+<img src="../../../boxes/robotics/_resources/images/braitenberg_vehicle.png" alt="Braitenberg Vehicle" width="600" height="300">
 </p>
 
 ----
