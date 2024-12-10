@@ -1,4 +1,4 @@
-# Systems: NB3: Midbrain
+# Systems : NB3 : Midbrain
 Now we will add a more powerful computer (Raspberry Pi) to your NB3's midbrain.
 
 ## [Video](https://vimeo.com/1036089510)

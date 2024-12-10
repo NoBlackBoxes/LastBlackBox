@@ -1,4 +1,4 @@
-# Vision: Cameras
+# Vision : Cameras
 From CCDs to CMOS.
 
 ## [Video]()

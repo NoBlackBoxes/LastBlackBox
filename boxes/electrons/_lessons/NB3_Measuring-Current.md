@@ -1,4 +1,4 @@
-# Electrons: NB3: Measuring Current
+# Electrons : NB3 : Measuring Current
 How to measure current with a digital multimeter.
 
 ## [Video](https://vimeo.com/1027757287)

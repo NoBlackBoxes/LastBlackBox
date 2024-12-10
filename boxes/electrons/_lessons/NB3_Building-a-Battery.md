@@ -1,4 +1,4 @@
-# Electrons: NB3 : Building a Battery
+# Electrons : NB3 : Building a Battery
 Let's build a version of the *first* battery, and use it to power an LED.
 
 ## [Video](https://vimeo.com/1029280971)

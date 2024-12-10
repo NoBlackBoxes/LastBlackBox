@@ -1,4 +1,4 @@
-# Power: DC-DC Converters
+# Power : DC-DC Converters
 How does efficient DC to DC conversion work? Buck and Boost.
 
 ## [Video](https://vimeo.com/1035304311)

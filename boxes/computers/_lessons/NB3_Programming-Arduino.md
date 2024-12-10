@@ -1,4 +1,4 @@
-# Computers: NB3: Programming Arduino
+# Computers : NB3: Programming Arduino
 An introduction to programming an Arduino microcontroller.
 
 ## [Video](https://vimeo.com/1033810807)

@@ -5,7 +5,7 @@
 > - Do you want to be ready for the coming era of AI?
 
 <p align="center">
-<img src="course/_designs/logo/animated/logo_NBB_profile_animated_repeat.svg" alt="LBB" width="200" height="300">
+<img src="course/_resources/designs/logo/animated/logo_NBB_profile_animated_repeat.svg" alt="LBB" width="200">
 </p>
 
 ## Summary
@@ -19,7 +19,7 @@ This world is much closer than you realize, and we have developed this training 
 ## Principles
 
 <p align="center">
-<img src="course/_designs/logo/png/logo_NBB_white_text.png" alt="NBB" width="200" height="200" style="background-color:black; border-radius: 15%">
+<img src="course/_resources/designs/logo/png/logo_NBB_white_text.png" alt="NBB" width="200" height="200" style="background-color:black; border-radius: 15%">
 </p>
 
 ----

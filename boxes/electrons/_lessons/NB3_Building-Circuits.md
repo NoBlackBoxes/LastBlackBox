@@ -1,4 +1,4 @@
-# Electrons: NB3: Building Circuits
+# Electrons : NB3 : Building Circuits
 With a voltage source (battery) and resistors, then we can start building "circuits" - complete paths of conduction that allow current to flow from a location with *less* electrons **(+)** to a location with *more* electrons **(-)**.
 
 ## [Video](https://vimeo.com/1030783826)

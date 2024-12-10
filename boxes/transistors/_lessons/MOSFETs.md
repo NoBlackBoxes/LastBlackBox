@@ -1,4 +1,4 @@
-# Transistors: MOSFETs
+# Transistors : MOSFETs
 MOSFETs are the thing that humans have built more of than anything else. They must be useful! Let's discuss what they are and how they work.
 
 ## [Video](https://vimeo.com/1032452466)

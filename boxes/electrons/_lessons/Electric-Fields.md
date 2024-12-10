@@ -1,4 +1,4 @@
-# Electrons: Electric Fields
+# Electrons : Electric Fields
 A very useful, and quite simple, depiction of the lines of force surrounding charged particles.
 
 ## [Video](https://vimeo.com/1032441712)

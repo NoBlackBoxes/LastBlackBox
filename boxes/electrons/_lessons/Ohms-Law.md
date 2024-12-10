@@ -1,4 +1,4 @@
-# Electrons: Ohm's Law
+# Electrons : Ohm's Law
 Ohm's Law describes the relationship between Voltage, Current, and Resistance. It is not complicated, but it is very useful.
 
 ## [Video](https://vimeo.com/1029695302)

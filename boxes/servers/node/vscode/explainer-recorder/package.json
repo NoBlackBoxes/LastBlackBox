@@ -1,6 +1,6 @@
 {
 	"name": "explainer-recorder",
-	"displayName": "Record code explaination",
+	"displayName": "Record code explanation",
 	"description": "Record synchronized audio and code highlighting",
 	"version": "0.0.1",
 	"publisher": "NoBlackBoxes",

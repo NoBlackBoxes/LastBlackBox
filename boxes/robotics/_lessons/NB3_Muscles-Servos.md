@@ -1,4 +1,4 @@
-# Robotics: NB3: Muscles (Servos)
+# Robotics : NB3 : Muscles (Servos)
 Let's build your robot's movement system (using servo motors).
 
 ## [Video](https://vimeo.com/1034800702)

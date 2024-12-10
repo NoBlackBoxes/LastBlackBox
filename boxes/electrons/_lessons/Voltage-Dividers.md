@@ -1,4 +1,4 @@
-# Electrons: Voltage Dividers
+# Electrons : Voltage Dividers
 Controlling the level of voltage at different places in a circuit is critical to designing electronic devices.
 
 ## [Video](https://vimeo.com/1030787469)

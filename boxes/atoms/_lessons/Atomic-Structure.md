@@ -1,4 +1,4 @@
-# Atoms: Atomic Structure
+# Atoms : Atomic Structure
 A brief introduction to the physics of atoms, their parts (protons, neutrons, and electrons), and their classical vs. quantum structure.
 
 ## [Video](https://vimeo.com/1000458082)

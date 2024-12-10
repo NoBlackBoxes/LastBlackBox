@@ -1,4 +1,4 @@
-# Electrons: NB3: Measuring Resistance
+# Electrons : NB3 : Measuring Resistance
 How to measure resistance with a digital multimeter.
 
 ## [Video](https://vimeo.com/1027761453)

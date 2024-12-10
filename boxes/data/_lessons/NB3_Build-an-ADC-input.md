@@ -1,4 +1,4 @@
-# Data: NB3 : Build an ADC (input)
+# Data : NB3 : Build an ADC (input)
 Use a comparator to convert analog values into discrete levels.
 
 ## [Video](https://vimeo.com/1034767170)

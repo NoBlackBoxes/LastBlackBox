@@ -1,4 +1,4 @@
-# Atoms: The Periodic Table
+# Atoms : The Periodic Table
 Organizing the elements into a table reveals a regular pattern, which is linked to the fundamental chemical properties of each material.
 
 ## [Video](https://vimeo.com/1028399080)

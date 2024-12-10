@@ -1,4 +1,4 @@
-# Logic: NB3 : Build an ADC (output)
+# Logic : NB3 : Build an ADC (output)
 Use a comparator to convert analog values into discrete levels.
 
 ## [Video]()

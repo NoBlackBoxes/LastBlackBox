@@ -1,4 +1,4 @@
-# Systems: Multi-Tasking
+# Systems : Multi-Tasking
 Back when computers were very expensive mainframes, some clever software engineers developed strategies to share the computer's resources between multiple users, running multiple different tasks, at the same time. These "scheduling" programs still form the basis of our modern **multi-tasking** operating systems.
 
 ## [Video](https://vimeo.com/1036086160)

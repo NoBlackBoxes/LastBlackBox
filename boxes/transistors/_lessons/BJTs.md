@@ -1,4 +1,4 @@
-# Transistors: BJTs
+# Transistors : BJTs
 Bipolar junction transistors inject charge carriers to amplify the external *current* flowing. They are current controlled devices.
 
 ## [Video]()

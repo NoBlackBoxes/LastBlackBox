@@ -1,4 +1,4 @@
-# Electrons: NB3: Designing PCBs With KiCAD
+# Electrons : NB3 : Designing PCBs With KiCAD
 
 ## [Video]()
 

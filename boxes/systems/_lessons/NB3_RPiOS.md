@@ -1,4 +1,4 @@
-# Systems: NB3: RPiOS
+# Systems : NB3 : RPiOS
 After mounting and wiring your NB3's midbrain computer, you must now give it some core software to run...an operating system.
 
 ## [Video](https://vimeo.com/1036095710)

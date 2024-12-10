@@ -1,4 +1,4 @@
-# Electrons: NB3: Measuring Voltage
+# Electrons : NB3 : Measuring Voltage
 How to measure voltage with a digital multimeter.
 
 ## [Video](https://vimeo.com/1027762531)

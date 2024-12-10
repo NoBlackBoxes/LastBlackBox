@@ -1,4 +1,4 @@
-# Linux: Navigating the Command Line
+# Linux : Navigating the Command Line
 The original user interfaces were entirely based on text. You typed commands as a line of text into your terminal console and received the result as a string of characters on the screen. Navigating this **command line** remains a useful skill, and a necessary one when working with remote machines.
 
 ## [Video](https://vimeo.com/1036829527)

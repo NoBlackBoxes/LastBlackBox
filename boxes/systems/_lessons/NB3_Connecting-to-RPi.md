@@ -1,4 +1,4 @@
-# Systems: NB3: Connecting to RPi
+# Systems : NB3 : Connecting to RPi
 When you have installed your NB3's operating system, then you can power it on and try to connect to it from your Host computer over WiFi or UART.
 
 ## [Video](https://vimeo.com/1036391512)

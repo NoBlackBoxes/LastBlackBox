@@ -1,4 +1,4 @@
-# Control: Servo Loops
+# Control : Servo Loops
 A servo loop connects feedback from a sensor to the control signals sent to a motor.
 
 ## [Video](https://vimeo.com/1033963709)

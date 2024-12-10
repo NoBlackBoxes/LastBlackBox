@@ -3,7 +3,7 @@
 > A course consisting of 28 **black boxes** that you open in sequence using the materials contained in the "Last Black Box" kit
 
 <p align="center">
-<img src="_designs/layout/png/layout_LBB.png" alt="Course Layout" width="100%">
+<img src="_resources/designs/layout/png/layout_LBB.png" alt="Course Layout" width="100%">
 <h3 style="text-align:center;">Order your "<a href=https://www.noblackboxes.org/courses target="_blank">Last Black Box</a>" now!</h3>
 </p>
 
@@ -14,7 +14,7 @@
 You will be building a brain for your robot. The robot's physical layout mimics the basic anatomy of a (vertebrate) brain. As you progress through the course, your robot will *evolve* into an increasingly sophisticated machine. The goal is to create an "intelligent" machine without using any **black boxes**. We thus call this robot the No-Black-Box-Brain or NBBB or ***NB3***.
 
 <p align="center">
-<img src="_designs/NB3/NB3_render.png" alt="NB3 outline" width="300">
+<img src="_resources/designs/NB3/NB3_render.png" alt="NB3 outline" width="300">
 </p>
 
 ## Repository
@@ -32,11 +32,11 @@ git clone --depth 1 https://github.com/NoBlackBoxes/LastBlackBox
 ## Versions
 There are shorter versions of this course that cover a specific subset of the "black boxes" and focus on specific themes.
 
-- [Bootcamp](bootcamp/README.md): A one-week intensive introduction to the essentials of modern technology and neuroscience.
+- [Bootcamp](versions/bootcamp/README.md): A one-week intensive introduction to the essentials of modern technology and neuroscience.
 
-- [Build a Brain](buildabrain/README.md): Designed for secondary school age students, this hands-on course shows you how recent advances in science and technology have made it possible for humans to create intelligent machines...by building you own. 
+- [Build a Brain](versions/buildabrain/README.md): Designed for secondary school age students, this hands-on course shows you how recent advances in science and technology have made it possible for humans to create intelligent machines...by building you own. 
 
-- [Own Phone](ownphone/README.md): ***-Under Development-*** Get your "smartphone license"! Demonstrate to your parents/friends that you can take control of your digital tools...before they take control you.
+- [Own Phone](versions/ownphone/README.md): ***-Under Development-*** Get your "smartphone license"! Demonstrate to your parents/friends that you can take control of your digital tools...before they take control you.
 
 ## Black Boxes
 

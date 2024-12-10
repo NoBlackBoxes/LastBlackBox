@@ -1,4 +1,4 @@
-# Atoms: Heat
+# Atoms : Heat
 Atoms in every material are always moving. This motion of atoms (their average kinetic energy) is heat.
 
 ## [Video](https://vimeo.com/1029691491)

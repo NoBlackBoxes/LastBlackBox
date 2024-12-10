@@ -1,4 +1,4 @@
-# Computers: NB3: Building a Theremin
+# Computers : NB3 : Building a Theremin
 Building a light-to-sound feedback loop musical instrument (theremin) using an Arduino, an LDR, and a Piezo buzzer.
 
 ## [Video](https://vimeo.com/1033896646)

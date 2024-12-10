@@ -1,4 +1,4 @@
-# Electrons: NB3: Body
+# Electrons : NB3 : Body
 We will now start measuring and manipulating electricity, and first we will assemble a "prototyping platform" that also happens to be the **body** of your robot (NB3).
 
 ## [Video](https://vimeo.com/1030776673)

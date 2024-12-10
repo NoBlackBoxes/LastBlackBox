@@ -1,4 +1,4 @@
-# Data: Binary Numbers
+# Data : Binary Numbers
 All you need is 0 and 1. Here we will learn how to represent *anything* in binary.
 
 ## [Video](https://vimeo.com/1033226788)

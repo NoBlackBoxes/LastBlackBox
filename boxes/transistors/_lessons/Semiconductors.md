@@ -1,4 +1,4 @@
-# Transistors: Semiconductors
+# Transistors : Semiconductors
 We can modify a pure crystal of certain elements (e.g. silicon) to change how well they conduct electricity.
 
 ## [Video](https://vimeo.com/1032460818)
