@@ -1,12 +1,16 @@
-# Atoms
-{box-description}
+# The Last Black Box : Atoms
 
-## Lessons
-{Heat.md}
-{Fission-and-Fusion.md}
+## Atoms(11)
+Atoms are everything.
+
 {Atomic-Structure.md}
-{Chemistry.md}
 {The-Periodic-Table.md}
+{Heat.md}
+{Chemistry.md}
 {Nuclear-Forces.md}
+{Fission-and-Fusion.md}
+
+---
 
 ## Projects
+{project.md}

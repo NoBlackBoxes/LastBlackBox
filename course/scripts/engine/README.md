@@ -1,8 +1,12 @@
 # course : scripts : engine
-The LBB template engine generates the course/box READMEs from the template.md and the associated lessons.
+The LBB template engine generates the session READMEs from a "template.md" file and the associated lessons and projects.
 
-## Box Lesson Model
-- Each **box** has multiple **lessons**, which are described in the "lessons.md" file
+## Course Model
+- Each **course** consists of multiple **sessions**
+
+
+- Each **session** opens one or more black **boxes**course
+- Each **box** has multiple **lessons**, which are located in the box's "_lessons" folder
 - Each **lesson** *may* have a corresponding **video** tutorial
 - Each **lesson** *may* have multiple **instructions** and **tasks**
 - Each **instruction** and **task** must specify a depth (difficulty) level (-, +, *)
@@ -10,6 +14,34 @@ The LBB template engine generates the course/box READMEs from the template.md an
 - Each **task** consists of a description, an optional set of **instructions**, and a **target**
 - Each **target** consists of a single-line text description (can contain links)
 
+## Session Template
+```markdown
+# Title - Session Name
+Session description. Single line of text.
+
+## Box Name
+Linkage text
+{lesson1}
+Linkage text
+{lesson2}
+...
+
+## Box Name
+Linkage text
+{lesson1}
+Linkage text
+{lesson2}
+...
+
+# Project
+Linkage text
+{project1}
+Linkage text
+{lesson2}
+...
+```
+
+## Lesson Template
 ```markdown
 # Box Name
 Box description. Single line of text.

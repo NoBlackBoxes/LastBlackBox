@@ -21,7 +21,7 @@ class Session:
         self.boxes = None               # Session boxes
         self.project = None             # Session project
         if text:
-            self.parse(text)            # Parse session from README text
+            self.parse(text)            # Parse session from template text
         elif dictionary:
             self.from_dict(dictionary)  # Load session from dictionary
         return
@@ -55,8 +55,8 @@ class Session:
         max_count = len(text)
 
         # Extract name and slug
-        title = text[line_count][2:]
-        self.name = title.split('-')[1][1:]
+        title = text[line_count].strip()
+        self.name = title.split(':')[1].strip()
         self.slug = self.name.lower().replace(' ', '-')
         line_count += 1
 

@@ -13,15 +13,14 @@ import json
 import LBB.config as Config
 import LBB.session as Session
 
-# Course Class 
+# Course Class
 class Course:
     def __init__(self, name=None, path=None):
         self.name = None        # Course name
         self.slug = None        # Course slug (URL)
-        self.depth = None       # Course depth
         self.sessions = None    # Course sessions
         if name:
-            self.build(name)    # Build course from session READMEs
+            self.build(name)    # Build course from session templates
         elif path:
             self.load(path)     # Load course from JSON file
         return
@@ -31,7 +30,6 @@ class Course:
         dictionary = {
             "name": self.name,
             "slug": self.slug,
-            "depth": self.depth,
             "sessions": [session.to_dict() for session in self.sessions]
         }
         return dictionary
@@ -40,25 +38,31 @@ class Course:
     def from_dict(self, dictionary):
         self.name = dictionary.get("name")
         self.slug = dictionary.get("slug")
-        self.depth = dictionary.get("depth")
         self.sessions = [Session.Session(dictionary=session_dictionary) for session_dictionary in dictionary.get("sessions", [])]
         return
     
-    # Build course object from session README files
+    # Build course object from session templates
     def build(self, name):
 
         # Set course parameters
         self.name = name
         self.slug = get_slug_from_name(name)
-        self.depth = get_depth_from_name(name)
         course_folder = f"{Config.course_root}/{self.slug}"
         
-        # Load sessions from READMEs
+        # List session folders
+        if self.slug == "course": # Full course
+            session_folders = []
+            for box_name in Config.box_names:
+                session_folder = f"{Config.boxes_root}/{box_name.lower()}"
+                session_folders.append(session_folder)
+        else:
+            session_folders = sorted(glob.glob(f"{course_folder}/session_*"))
+
+        # Load sessions from templates
         self.sessions = []
-        session_folders = sorted(glob.glob(f"{course_folder}/session_*"))
         for session_index, session_folder in enumerate(session_folders):
-            session_readme = session_folder + "/README.md"
-            with open(session_readme, encoding='utf8') as f:
+            session_template = f"{session_folder}/template.md"
+            with open(session_template, encoding='utf8') as f:
                 lines = f.readlines()
             text = []
             for line in lines:
@@ -85,7 +89,9 @@ class Course:
 
 # Get course slug from name
 def get_slug_from_name(name):
-    if name == "Bootcamp":
+    if name == "The Last Black Box":
+        slug = "course"
+    elif name == "Bootcamp":
         slug = "bootcamp"
     elif name == "Build a Brain":
         slug = "buildabrain"
@@ -93,16 +99,5 @@ def get_slug_from_name(name):
         print("Unavailable course name selected!")
         exit(-1)
     return slug
-
-# Get course depth from name
-def get_depth_from_name(name):
-    if name == "Bootcamp":
-        depth = 1
-    elif name == "Build a Brain":
-        depth = 1
-    else:
-        print("Unavailable course name selected!")
-        exit(-1)
-    return depth
 
 #FIN
