@@ -2,43 +2,61 @@
 The LBB template engine generates the session READMEs from a "template.md" file and the associated lessons and projects.
 
 ## Course Model
-- Each **course** consists of multiple **sessions**
-
-
-- Each **session** opens one or more black **boxes**course
-- Each **box** has multiple **lessons**, which are located in the box's "_lessons" folder
+- Each **course** consists of multiple **sessions**, utilizing the resources in multiple **boxes**
+- Each **box** contains the **materials**, **lessons**, and **projects** required to open the box
+- Each **session** outlines the sequence of **boxes**/**lessons**
+  - **Sessions** are defined in a *template.md* file
 - Each **lesson** *may* have a corresponding **video** tutorial
 - Each **lesson** *may* have multiple **instructions** and **tasks**
+  - **Lessons** are defined in a *lessons.md* file
 - Each **instruction** and **task** must specify a depth (difficulty) level (-, +, *)
 - Each **instruction** consists of text, images, code, or *special* formats (notes, hints, help, challenges, etc.)
 - Each **task** consists of a description, an optional set of **instructions**, and a **target**
-- Each **target** consists of a single-line text description (can contain links)
+- Each **target** consists of a single-line text description (can contain links) of the expected task outcome
 
-## Session Template
+## Course Hierarchy
+- Course
+  - Boxes
+    - Materials (*materials.csv*)
+    - Lessons (*lessons.md*)
+    - Projects (*projects.md*)
+  - Sessions (*template.md*)
+    - Box #1
+      - Lesson #1
+      - Lesson #2
+      - Lesson #3
+      - ...
+    - Box #2
+      - Lesson #1
+      - Lesson #2
+      - ...
+    - ...
+    - Project
+
+## Session Template (template.md)
 ```markdown
-# Title - Session Name
+# Course Title - Session Name
 Session description. Single line of text.
 
-## Box Name
+# Example Main Heading
+---
+## Example Sub-Heading (Box Name)
+{materials:box:depth}
 Linkage text
-{lesson1}
+{lesson:box:name:depth}
 Linkage text
-{lesson2}
-...
+{lesson:box:name:depth}
 
-## Box Name
+## Example Sub-Heading (Box Name)
+{materials:box:depth}
 Linkage text
-{lesson1}
+{lesson:box:name:depth}
 Linkage text
-{lesson2}
-...
+{lesson:box:name:depth}
 
 # Project
 Linkage text
-{project1}
-Linkage text
-{lesson2}
-...
+{project:box:name:depth}
 ```
 
 ## Lesson Template
