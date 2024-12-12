@@ -3,8 +3,8 @@ import time
 import numpy as np
 
 # Locals libs
-import NB3_sound.speaker as Speaker
-import NB3_sound.utilities as Utilities
+import NB3.Sound.speaker as Speaker
+import NB3.Sound.utilities as Utilities
 
 # Reimport
 import importlib

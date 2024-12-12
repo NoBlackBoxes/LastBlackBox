@@ -8,7 +8,7 @@ import numpy as np
 import curses
 
 # Locals libs
-import libs.NB3_sound as sound
+import NB3.Sound as sound
 
 # Reimport
 import importlib

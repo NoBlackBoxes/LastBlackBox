@@ -4,8 +4,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Locals libs
-import NB3_sound.microphone as Microphone
-import NB3_sound.utilities as Utilities
+import NB3.Sound.microphone as Microphone
+import NB3.Sound.utilities as Utilities
 
 # Reimport
 import importlib
