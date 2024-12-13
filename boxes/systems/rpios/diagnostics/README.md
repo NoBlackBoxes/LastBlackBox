@@ -14,6 +14,19 @@ sudo apt install hdparm sysbench speedtest-cli
 Raspberry Pi Diagnostics
 ------------------------
 
+System Information:
+-------------------
+Uptime     : 0 days, 3 hours, 40 minutes
+Processor  : Cortex-A72
+CPU cores  : 4 @ 1800.0000 MHz
+RAM        : 1.8 GiB
+Swap       : 512.0 MiB
+Disk       : 14.4 GiB
+Distro     : Debian GNU/Linux 12 (bookworm)
+Kernel     : 6.6.51+rpt-rpi-v8
+VM Type    : NONE
+IPv4/IPv6  : ✔ Online / ❌ Offline
+
 temp=38.4'C
 arm_freq=1800
 core_freq=500

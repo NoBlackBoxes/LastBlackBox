@@ -55,6 +55,15 @@ function format_size {
 	echo $RESULT
 }
 
+# Test if the RPi has IPv4/IPv6 connectivity
+[[ ! -z $LOCAL_CURL ]] && IP_CHECK_CMD="curl -s -m 4" || IP_CHECK_CMD="wget -qO- -T 4"
+IPV4_CHECK=$( (ping -4 -c 1 -W 4 ipv4.google.com >/dev/null 2>&1 && echo true) || $IP_CHECK_CMD -4 icanhazip.com 2> /dev/null)
+IPV6_CHECK=$( (ping -6 -c 1 -W 4 ipv6.google.com >/dev/null 2>&1 && echo true) || $IP_CHECK_CMD -6 icanhazip.com 2> /dev/null)
+if [[ -z "$IPV4_CHECK" && -z "$IPV6_CHECK" ]]; then
+	echo -e
+	echo -e "Warning: Both IPv4 AND IPv6 connectivity were not detected. Check for DNS issues..."
+fi
+
 # Report system information
 echo -e 
 echo -e "${GREEN}"System Information:"${CLEAR}"
@@ -63,28 +72,13 @@ UPTIME=$(uptime | awk -F'( |,|:)+' '{d=h=m=0; if ($7=="min") m=$6; else {if ($7~
 echo -e "Uptime     : $UPTIME"
 # check for local lscpu installs
 command -v lscpu >/dev/null 2>&1 && LOCAL_LSCPU=true || unset LOCAL_LSCPU
-if [[ $ARCH = *aarch64* || $ARCH = *arm* ]] && [[ ! -z $LOCAL_LSCPU ]]; then
-	CPU_PROC=$(lscpu | grep "Model name" | sed 's/Model name: *//g')
-else
-	CPU_PROC=$(awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo | sed 's/^[ \t]*//;s/[ \t]*$//')
-fi
+CPU_PROC=$(lscpu | grep "Model name" | sed 's/Model name: *//g')
 echo -e "Processor  : $CPU_PROC"
-if [[ $ARCH = *aarch64* || $ARCH = *arm* ]] && [[ ! -z $LOCAL_LSCPU ]]; then
-	CPU_CORES=$(lscpu | grep "^[[:blank:]]*CPU(s):" | sed 's/CPU(s): *//g')
-	CPU_FREQ=$(lscpu | grep "CPU max MHz" | sed 's/CPU max MHz: *//g')
-	[[ -z "$CPU_FREQ" ]] && CPU_FREQ="???"
-	CPU_FREQ="${CPU_FREQ} MHz"
-else
-	CPU_CORES=$(awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo)
-	CPU_FREQ=$(awk -F: ' /cpu MHz/ {freq=$2} END {print freq " MHz"}' /proc/cpuinfo | sed 's/^[ \t]*//;s/[ \t]*$//')
-fi
+CPU_CORES=$(lscpu | grep "^[[:blank:]]*CPU(s):" | sed 's/CPU(s): *//g')
+CPU_FREQ=$(lscpu | grep "CPU max MHz" | sed 's/CPU max MHz: *//g')
+[[ -z "$CPU_FREQ" ]] && CPU_FREQ="???"
+CPU_FREQ="${CPU_FREQ} MHz"
 echo -e "CPU cores  : $CPU_CORES @ $CPU_FREQ"
-CPU_AES=$(cat /proc/cpuinfo | grep aes)
-[[ -z "$CPU_AES" ]] && CPU_AES="\xE2\x9D\x8C Disabled" || CPU_AES="\xE2\x9C\x94 Enabled"
-echo -e "AES-NI     : $CPU_AES"
-CPU_VIRT=$(cat /proc/cpuinfo | grep 'vmx\|svm')
-[[ -z "$CPU_VIRT" ]] && CPU_VIRT="\xE2\x9D\x8C Disabled" || CPU_VIRT="\xE2\x9C\x94 Enabled"
-echo -e "VM-x/AMD-V : $CPU_VIRT"
 TOTAL_RAM_RAW=$(free | awk 'NR==2 {print $2}')
 TOTAL_RAM=$(format_size $TOTAL_RAM_RAW)
 echo -e "RAM        : $TOTAL_RAM"
