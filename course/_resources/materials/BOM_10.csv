@@ -34,14 +34,15 @@ Lightbulb,10,Mini incandescent bulb (6 V),1,_resources/datasheets/lamp_6V.pdf,ht
 
 sensors,,,,,,,,
 Thermistor,10,Temperature sensitive resistor,2,_resources/datasheets/thermistor.pdf,https://uk.farnell.com/epcos/b57891m0103k000/thermistor-ntc-radial-leaded/dp/2285471,Passive,50,10,3
-Photoresistor (LDR),01,Light-dependent resistor (GL5516 and GL5528),8,,https://www.amazon.co.uk/Resistor-Dependent-Photoresistor-Sensitive-Sensors/dp/B08SC1M7V7,Passive,50,10,3
+Photoresistor (LDR),01,Light-dependent resistor (GL5516 and GL5528),4,,https://www.amazon.co.uk/Resistor-Dependent-Photoresistor-Sensitive-Sensors/dp/B08SC1M7V7,Passive,50,10,3
 Piezo,10,Piezo element,1,_resources/datasheets/piezo.pdf,https://uk.farnell.com/multicomp/mcabt-455-rc/audio-element-piezo-2-8khz-35mm/dp/2433035,Passive,50,50,3
 
 motors,,,,,,,,
 DC Brushed Motor,01,6V Brushed DC motor,1,,https://www.amazon.co.uk/Gikfun-1V-6V-Hobby-Arduino-EK1894/dp/B07BHHP2BT,Loose,20,40,15
 
 transistors,,,,,,,,
-MOSFET,01,Power MOSFET/N-channel (IRF510),2,_resources/datasheets/IRF510.pdf,https://uk.farnell.com/vishay/irf510pbf/mosfet-n-100v-5-6a-to-220ab/dp/1653658,Active,40,15,4
+MOSFET (10V),01,Power MOSFET/N-channel (IRF510),1,_resources/datasheets/IRF510.pdf,https://uk.farnell.com/vishay/irf510pbf/mosfet-n-100v-5-6a-to-220ab/dp/1653658,Active,40,15,4
+MOSFET (5V),01,Power MOSFET/N-channel (IRL510),1,_resources/datasheets/IRL510.pdf,https://uk.farnell.com/vishay/irl510pbf/mosfet-n-logic-to-220/dp/9102779,Active,40,15,4
 Diode,01,IN4001,2,_resources/datasheets/IN4001.pdf,https://uk.farnell.com/on-semiconductor/1n4001g/diode-standard-1a-do-41/dp/1458986,Active,40,5,3
 Photodiode (Visible),10,Visible (broadband) photodiode,2,,https://uk.farnell.com/vishay/tefd4300/photodiode-950nm-3mm/dp/2251271,Active,40,5,3
 Photodiode (IR),10,IR sensitive photodiode,2,,https://uk.farnell.com/osram-opto-semiconductors/sfh203-fa/photodiode-ir-filtered/dp/1212743,Active,40,5,3
@@ -55,7 +56,7 @@ LM741,10,OpAmp,1,_resources/datasheets/IRF510.pdf,https://uk.farnell.com/vishay/
 LM386N-4/NOPB,10,Audio-Amp,2,_resources/datasheets/IRF510.pdf,https://uk.farnell.com/vishay/irf510pbf/mosfet-n-100v-5-6a-to-220ab/dp/1653658,Active,5,5,3
 
 circuits,,,,,,,,
-Caster,01,¾” metal ball caster,1,https://www.pololu.com/product/955,https://www.hobbytronics.co.uk/ball-caster-metal?keyword=caster,Loose,70,50,20
+Caster,01,¾” metal ball caster,1,https://www.pololu.com/product/955,https://www.pololu.com/product/955,Loose,70,50,20
 Spacer,01,NB3 spacer 3 mm spacer for mounting ball caster,5,NB3_spacer,VK,Mounts,25,25,5
 
 power,,,,,,,,
@@ -66,12 +67,13 @@ M2.5 bolt (6),01,6 mm long M2.5 bolt,4,,https://www.accu.co.uk/pozi-pan-head-scr
 M2.5 nut,01,regular M2.5 nut,4,-,https://www.accu.co.uk/hexagon-nuts/456430-HPN-M2-5-C8-Z,Hardware,5,5,3
 12V DC Power Supply,01,12 V AC-DC transformer (UK/EU/USA plugs),1,,https://www.amazon.co.uk/gp/product/B09QG4R1R4,Loose,100,100,80
 Battery,01,NiMH 9.6V 8-cell 2000 mAh battery,1,,https://www.amazon.co.uk/BAKTH-Capacity-Rechargeable-Discharge-Customized/dp/B08VRC8KL7,Loose,100,60,15
+Battery Cable,01,Barrel Jack to Tamiya Plug,1,,VK,Loose,100,15,15
 Battery Charger,01,NiMH battery charger (UK plug),1,,https://www.amazon.co.uk/dp/B089VRXKWY?psc=1&smid=AOVA4BIXU2O7J&ref_=chk_typ_imgToDp,Loose,90,90,70
 Velcro Patch,01,Velcro adhesive,1,,,Loose,50,75,4
 
 data,,,,,,,,
 Comparator,10,LM339 (DIP-14),2,_resources/datasheets/lm2901.pdf,https://uk.farnell.com/texas-instruments/lm2901n/ic-comparator-quad-2901-dip14/dp/3118410,Active,7,6,5
-LED (Red),10,5 mm/2 mA red LED,2,_resources/datasheets/led_HLMP.pdf,https://uk.farnell.com/broadcom-limited/hlmp-4700/led-5mm-red-2-3mcd-626nm/dp/1003232,Active,50,5,3
+LED (Red),10,3 mm/2 mA red LED,2,_resources/datasheets/led_HLMP.pdf,https://uk.farnell.com/broadcom-limited/hlmp-1700/led-3mm-red-2-1mcd-626nm/dp/1003207,Active,50,5,3
 LED (Green),10,3 mm/2 mA green LED,2,_resources/datasheets/led_HLMP.pdf,https://uk.farnell.com/broadcom-limited/hlmp-1790/led-3mm-green-2-3mcd-569nm/dp/1003209,Active,50,5,3
 Resistor (330),10,330 &Omega;/0.25 W,4,_resources/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-2k4/res-2k4-1-250mw-axial-metal-film/dp/9341595,Passive,50,5,3
 
