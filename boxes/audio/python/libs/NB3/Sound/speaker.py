@@ -144,7 +144,7 @@ class Speaker:
         wav_data = wav_file.readframes(wav_num_samples)
         wav_file.close()
 
-        # Seperate channel data and convert to float
+        # Separate channel data and convert to float
         if wav_sample_width == 2:
             channel_data = np.reshape(np.frombuffer(wav_data, dtype=np.int16).transpose(), (-1,self.num_channels))
             float_data = np.float32(channel_data) * 3.0517578125e-05
