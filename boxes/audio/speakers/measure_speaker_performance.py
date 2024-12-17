@@ -32,10 +32,12 @@ if not os.path.exists(output_folder):
 Utilities.list_devices()
 
 # Get output device
-output_device = Utilities.get_output_device_by_name("default")
+#output_device = Utilities.get_output_device_by_name("HD-Audio Generic: ALC295 Analog")
+output_device = Utilities.get_output_device_by_name("MAX")
 
 # Get input device
-input_device = Utilities.get_input_device_by_name("Blue Snowball")
+#input_device = Utilities.get_input_device_by_name("HD-Audio Generic: ALC295 Analog")
+input_device = Utilities.get_input_device_by_name("MAX")
 
 # Specify speaker params
 speaker_num_channels = 2
@@ -69,10 +71,10 @@ speaker.write(sweep)
 
 # Wait for output to finish
 while speaker.is_playing():
-    time.sleep(0.1)
-sweep_recording = microphone.latest(microphone.valid_samples)
+    time.sleep(0.01)
 
 # Store recording
+sweep_recording = microphone.latest(microphone.valid_samples)
 microphone.save_wav(f"{output_folder}/sweep_recording.wav", microphone.valid_samples)
 
 # Generate pure tones
@@ -89,22 +91,28 @@ speaker.write(tone)
 
 # Wait for output to finish
 while speaker.is_playing():
-    time.sleep(0.1)
+    time.sleep(0.01)
+
+# Store recording
 tone_recording = microphone.latest(microphone.valid_samples)
+microphone.save_wav(f"{output_folder}/tone_recording.wav", microphone.valid_samples)
 
 # Shutdown
 speaker.stop()
 microphone.stop()
 
-recording = tone_recording
-
-# Process Recording
-normalized = (recording / np.max(np.abs(recording)))[:,0]
+# -------------
+# Process Sweep
+normalized = (sweep_recording / np.max(np.abs(sweep_recording)))[:,0]
 frequencies, times, Sxx = signal.spectrogram(normalized, fs=speaker_sample_rate, nperseg=1024, nfft=2048)
-#frequencies, times, Sxx = signal.spectrogram(sweep[:,0], fs=speaker_sample_rate, nperseg=1024, nfft=2048)
+ideal_frequencies, ideal_times, ideal_Sxx = signal.spectrogram(sweep[:,0], fs=speaker_sample_rate, nperseg=1024, nfft=2048)
 
 # Convert power spectrogram to dB scale
 Sxx_dB = 10 * np.log10(Sxx + 1e-10)  # Small epsilon to avoid log(0)
+ideal_Sxx_dB = 10 * np.log10(ideal_Sxx + 1e-10)  # Small epsilon to avoid log(0)
+
+# Filter
+#spectrogram = Sxx_dB * ideal_Sxx_dB
 
 # Plot the spectrogram
 plt.figure(figsize=(10, 6))
@@ -134,5 +142,47 @@ plt.xlim(20, speaker_sample_rate / 2)  # Limit x-axis to relevant range
 plt.tight_layout()
 plt.legend()
 plt.savefig(f"{output_folder}/sweep_response.png", dpi=300, bbox_inches="tight")
+
+# ------------
+# Process Tone
+normalized = (tone_recording / np.max(np.abs(tone_recording)))[:,0]
+frequencies, times, Sxx = signal.spectrogram(normalized, fs=speaker_sample_rate, nperseg=1024, nfft=2048)
+ideal_frequencies, ideal_times, ideal_Sxx = signal.spectrogram(sweep[:,0], fs=speaker_sample_rate, nperseg=1024, nfft=2048)
+
+# Convert power spectrogram to dB scale
+Sxx_dB = 10 * np.log10(Sxx + 1e-10)  # Small epsilon to avoid log(0)
+ideal_Sxx_dB = 10 * np.log10(ideal_Sxx + 1e-10)  # Small epsilon to avoid log(0)
+
+# Filter
+#spectrogram = Sxx_dB * ideal_Sxx_dB
+
+# Plot the spectrogram
+plt.figure(figsize=(10, 6))
+plt.pcolormesh(times, frequencies, Sxx_dB, shading='gouraud')
+plt.colorbar(label="Power (dB)")
+plt.title("Spectrogram of Pure Tone")
+plt.xlabel("Time [s]")
+plt.ylabel("Frequency [Hz]")
+plt.ylim(0, speaker_sample_rate / 2)  # Limit y-axis to Nyquist frequency
+plt.tight_layout()
+plt.savefig(f"{output_folder}/tone_spectrogram.png", dpi=300, bbox_inches="tight")
+
+# Average power spectral density across time
+average_power = np.mean(Sxx, axis=1)  # Collapse time axis to get average at each frequency
+
+# Convert to dB scale
+average_power_dB = 10 * np.log10(average_power + 1e-10)  # Avoid log(0)
+
+# Plot frequency response curve
+plt.figure(figsize=(10, 6))
+plt.semilogx(frequencies, average_power_dB, label="Frequency Response Curve", color="b", linewidth=2)
+plt.title("Frequency Response Curve (Log Scale)")
+plt.xlabel("Frequency [Hz] (Log Scale)")
+plt.ylabel("Power (dB)")
+plt.grid(which="both", linestyle="--", linewidth=0.5)  # Grid for both major/minor ticks
+plt.xlim(20, speaker_sample_rate / 2)  # Limit x-axis to relevant range
+plt.tight_layout()
+plt.legend()
+plt.savefig(f"{output_folder}/tone_response.png", dpi=300, bbox_inches="tight")
 
 # FIN
