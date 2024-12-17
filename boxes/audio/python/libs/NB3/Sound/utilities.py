@@ -41,7 +41,7 @@ def get_input_device_by_name(name):
         if (p.get_device_info_by_host_api_device_index(0, i).get('maxInputChannels')) > 0:
             device_name = p.get_device_info_by_host_api_device_index(0, i).get('name')
             if device_name.startswith(name):
-                device_id = p.get_device_info_by_host_api_device_index(0, i).get('id')
+                device_id = i
     p.terminate()
     if device_id == -1:
         print(f"Device starting with \"{name}\" not found. Select a different audio input device.")
@@ -61,7 +61,7 @@ def get_output_device_by_name(name):
         if (p.get_device_info_by_host_api_device_index(0, i).get('maxOutputChannels')) > 0:
             device_name = p.get_device_info_by_host_api_device_index(0, i).get('name')
             if device_name.startswith(name):
-                device_id = p.get_device_info_by_host_api_device_index(0, i).get('id')
+                device_id = i
     p.terminate()
     if device_id == -1:
         print(f"Device starting with \"{name}\" not found. Select a different audio output device.")

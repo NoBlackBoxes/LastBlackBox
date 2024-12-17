@@ -32,7 +32,7 @@ if not os.path.exists(output_folder):
 Utilities.list_devices()
 
 # Get output device
-output_device = Utilities.get_output_device_by_name("HD-Audio Generic")
+output_device = Utilities.get_output_device_by_name("default")
 
 # Get input device
 input_device = Utilities.get_input_device_by_name("Blue Snowball")
@@ -70,15 +70,33 @@ speaker.write(sweep)
 # Wait for output to finish
 while speaker.is_playing():
     time.sleep(0.1)
-
-recording = microphone.latest(microphone.valid_samples)
+sweep_recording = microphone.latest(microphone.valid_samples)
 
 # Store recording
 microphone.save_wav(f"{output_folder}/sweep_recording.wav", microphone.valid_samples)
 
+# Generate pure tones
+duration = 3.0
+sample_rate = 48000
+frequency = 440.0
+tone = Utilities.generate_pure_tone(duration, frequency, speaker_sample_rate, speaker_num_channels)
+
+# Reset recording
+microphone.reset()
+
+# Send sound speaker
+speaker.write(tone)
+
+# Wait for output to finish
+while speaker.is_playing():
+    time.sleep(0.1)
+tone_recording = microphone.latest(microphone.valid_samples)
+
 # Shutdown
 speaker.stop()
 microphone.stop()
+
+recording = tone_recording
 
 # Process Recording
 normalized = (recording / np.max(np.abs(recording)))[:,0]
