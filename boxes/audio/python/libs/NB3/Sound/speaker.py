@@ -88,6 +88,7 @@ class Speaker:
 
         # Get pyaudio object
         self.pya = pyaudio.PyAudio()
+        print("\n\n\n")
 
         # Open audio output stream (from default device)
         self.stream = self.pya.open(output_device_index=device, format=self.format, channels=num_channels, rate=sample_rate, input=False, output=True, frames_per_buffer=buffer_size_samples, start=False, stream_callback=callback)
