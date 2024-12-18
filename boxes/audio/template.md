@@ -1,7 +1,11 @@
-# Audio
-{box-description}
+# The Last Black Box : Audio
 
-## Lessons
+## Audio{11}
+
 {I2S.md}
 
-## Projects
+---
+
+# Project
+#### Name of the project
+Project tasks listed here

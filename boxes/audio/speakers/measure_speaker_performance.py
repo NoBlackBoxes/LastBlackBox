@@ -16,9 +16,9 @@ import NB3.Sound.speaker as Speaker
 import NB3.Sound.microphone as Microphone
 
 # Reload modules
-result = importlib.reload(Microphone)
-result = importlib.reload(Speaker)
-result = importlib.reload(Utilities)
+importlib.reload(Microphone)
+importlib.reload(Speaker)
+importlib.reload(Utilities)
 
 # Get user name
 username = os.getlogin()

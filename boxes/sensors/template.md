@@ -1,8 +1,12 @@
-# Sensors
-{box-description}
+# The Last Black Box : Sensors
 
-## Lessons
+## Sensors{11}
+
 {NB3_Building-a-Light-Sensor.md}
-{Light-Sensors.md}
+{Transducers.md}
 
-## Projects
+---
+
+# Project
+#### Name of the project
+Project tasks listed here

@@ -1,7 +1,11 @@
-# Learning
-{box-description}
+# The Last Black Box : Learning
 
-## Lessons
+## Learning{11}
+
 {NB3_Clicker-Training.md}
 
-## Projects
+---
+
+# Project
+#### Name of the project
+Project tasks listed here

@@ -1,24 +1,30 @@
-# Electrons
-{box-description}
+# The Last Black Box : Electrons
 
-## Lessons
-{Power.md}
-{NB3_Building-a-Battery.md}
-{Voltage-Dividers.md}
-{Batteries.md}
-{Conductors.md}
+## Electrons{11}
+
 {Voltage.md}
-{Current.md}
-{Ohms-Law.md}
-{NB3_Building-Circuits.md}
-{NB3_Multimeter-Basics.md}
-{NB3_Designing-PCBs-With-KiCAD.md}
+{Conductors.md}
+{Electric-Fields.md}
+{Voltage-Dividers.md}
 {Resistors.md}
-{NB3_Building-Voltage-Dividers.md}
-{NB3_Measuring-Current.md}
-{NB3_Measuring-Voltage.md}
-{NB3_Measuring-Resistance.md}
-{NB3_Body.md}
+{NB3_Building-Circuits.md}
+{Capacitors.md}
 {NB3_How-Do-Multimeters-Work.md}
+{Ohms-Law.md}
+{NB3_Measuring-Voltage.md}
+{NB3_Building-a-Battery.md}
+{Batteries.md}
+{NB3_Designing-PCBs-With-KiCAD.md}
+{Current.md}
+{Power.md}
+{NB3_Measuring-Resistance.md}
+{NB3_Measuring-Current.md}
+{NB3_Body.md}
+{NB3_Building-Voltage-Dividers.md}
+{NB3_Multimeter-Basics.md}
 
-## Projects
+---
+
+# Project
+#### Name of the project
+Project tasks listed here

@@ -1,8 +1,14 @@
-# Control
-{box-description}
+# The Last Black Box : Control
 
-## Lessons
-{NB3_Servo-Muscles.md}
+## Control{11}
+
+{NB3_Building-a-PWM-Speed-Controller.md}
+{PWM.md}
 {Servo-Loops.md}
+{H-Bridges.md}
 
-## Projects
+---
+
+# Project
+#### Name of the project
+Project tasks listed here

@@ -6,11 +6,11 @@ LBB: Lesson Class
 """
 
 # Import modules
-import LBB.utilities as Utilities
-import LBB.instruction as Instruction
-import LBB.image as Image
-import LBB.video as Video
-import LBB.task as Task
+import LBB.Engine.utilities as Utilities
+import LBB.Engine.instruction as Instruction
+import LBB.Engine.image as Image
+import LBB.Engine.video as Video
+import LBB.Engine.task as Task
 
 # Lesson Class
 class Lesson:

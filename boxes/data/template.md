@@ -1,7 +1,13 @@
-# Data
-{box-description}
+# The Last Black Box : Data
 
-## Lessons
+## Data{11}
+
+{NB3_Build-an-ADC-input.md}
+{Analog-to-Digital-Converters.md}
 {Binary-Numbers.md}
 
-## Projects
+---
+
+# Project
+#### Name of the project
+Project tasks listed here

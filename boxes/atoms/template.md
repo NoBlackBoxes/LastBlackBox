@@ -1,16 +1,16 @@
 # The Last Black Box : Atoms
 
-## Atoms(11)
-Atoms are everything.
+## Atoms{11}
 
 {Atomic-Structure.md}
+{Nuclear-Forces.md}
+{Chemistry.md}
+{Fission-and-Fusion.md}
 {The-Periodic-Table.md}
 {Heat.md}
-{Chemistry.md}
-{Nuclear-Forces.md}
-{Fission-and-Fusion.md}
 
 ---
 
-## Projects
-{project.md}
+# Project
+#### Name of the project
+Project tasks listed here

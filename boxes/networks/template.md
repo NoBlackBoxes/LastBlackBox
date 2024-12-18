@@ -1,7 +1,11 @@
-# Networks
-{box-description}
+# The Last Black Box : Networks
 
-## Lessons
+## Networks{11}
+
 {Sockets.md}
 
-## Projects
+---
+
+# Project
+#### Name of the project
+Project tasks listed here

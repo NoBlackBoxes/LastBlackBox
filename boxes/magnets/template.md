@@ -1,8 +1,14 @@
-# Magnets
-{box-description}
+# The Last Black Box : Magnets
 
-## Lessons
+## Magnets{11}
+
+{Ferromagnetism.md}
 {NB3_Building-a-Speaker.md}
-{Electromagnetism.md}
+{Electromagnets.md}
+{Induction.md}
 
-## Projects
+---
+
+# Project
+#### Name of the project
+Project tasks listed here

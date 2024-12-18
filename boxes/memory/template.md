@@ -1,7 +1,14 @@
-# Memory
-{box-description}
+# The Last Black Box : Memory
 
-## Lessons
+## Memory{11}
+
+{SR-Latch.md}
+{Flip-Flop.md}
 {Flash-Memory.md}
+{NB3_Building-an-SR-Latch.md}
 
-## Projects
+---
+
+# Project
+#### Name of the project
+Project tasks listed here

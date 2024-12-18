@@ -1,7 +1,12 @@
-# Logic
-{box-description}
+# The Last Black Box : Logic
 
-## Lessons
+## Logic{11}
+
+{NB3_Build-an-ADC-output.md}
 {Logic-Gates.md}
 
-## Projects
+---
+
+# Project
+#### Name of the project
+Project tasks listed here

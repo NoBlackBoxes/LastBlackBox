@@ -8,11 +8,11 @@ Generate LBB Courses
 # Import Libraries
 import os
 import glob
-import LBB.utilities as Utilities
 
 # Import modules
-import LBB.config as Config
-import LBB.course as Course
+import LBB.Engine.utilities as Utilities
+import LBB.Engine.config as Config
+import LBB.Engine.course as Course
 
 # Reload libraries and modules
 import importlib
@@ -29,5 +29,9 @@ course = Course.Course(name)
 # Report
 for session in course.sessions:
     print(session.name)
+    for box in session.boxes:
+        print(f"- {box.name} : {box.depth}")
+        for material in box.materials:
+            print(f"  - {material.part}")
 
 # FIN

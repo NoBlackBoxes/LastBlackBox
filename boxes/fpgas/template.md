@@ -1,7 +1,11 @@
-# FPGAs
-{box-description}
+# The Last Black Box : FPGAs
 
-## Lessons
+## FPGAs{11}
+
 {Hardware-Description-Languages.md}
 
-## Projects
+---
+
+# Project
+#### Name of the project
+Project tasks listed here

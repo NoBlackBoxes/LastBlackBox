@@ -1,7 +1,11 @@
-# Security
-{box-description}
+# The Last Black Box : Security
 
-## Lessons
+## Security{11}
+
 {One-Way-Functions.md}
 
-## Projects
+---
+
+# Project
+#### Name of the project
+Project tasks listed here

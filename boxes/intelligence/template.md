@@ -1,7 +1,11 @@
-# Intelligence
-{box-description}
+# The Last Black Box : Intelligence
 
-## Lessons
+## Intelligence{11}
+
 {Large-Language-Models.md}
 
-## Projects
+---
+
+# Project
+#### Name of the project
+Project tasks listed here

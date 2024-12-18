@@ -8,11 +8,16 @@ LBB: Project Class
 # Import libraries
 
 # Import modules
-import LBB.instruction as Instruction
-import LBB.image as Image
+import LBB.Engine.instruction as Instruction
+import LBB.Engine.image as Image
 
 # Project Class
 class Project:
+    """
+    LBB Project Class
+
+    Steps to complete a session project
+    """
     def __init__(self, text=None, dictionary=None):
         self.name = None                # Project name
         self.steps = None               # Project steps

@@ -6,9 +6,9 @@ LBB: Task Class
 """
 
 # Import modules
-import LBB.utilities as Utilities
-import LBB.instruction as Instruction
-import LBB.image as Image
+import LBB.Engine.utilities as Utilities
+import LBB.Engine.instruction as Instruction
+import LBB.Engine.image as Image
 
 # Task Class
 class Task:

@@ -9,12 +9,18 @@ LBB: Box Class
 import json
 
 # Import modules
-import LBB.config as Config
-import LBB.lesson as Lesson
-import LBB.material as Material
+import LBB.Engine.config as Config
+import LBB.Engine.lesson as Lesson
+import LBB.Engine.material as Material
 
 # Box Class
 class Box:
+    """
+    LBB Box Class
+
+    Stores a list of lessons and materials required to open this black box
+    - Each box has "depth level" (01, 10, 11) indicating the degree of difficulty
+    """
     def __init__(self, text=None, dictionary=None):
         self.index = None               # Box index
         self.name = None                # Box name
@@ -58,12 +64,12 @@ class Box:
         # Set line counter
         line_count = 0
         max_count = len(text)
-
+        
         # Extract name and depth
         title = text[0][2:].strip()
-        self.name = title.split("(")[0]
+        self.name = title.split("{")[0]
         self.slug = self.name.lower()
-        self.depth = title.split("(")[1][:2]
+        self.depth = title.split("{")[1][:2]
         line_count += 1
 
         # Extract description
@@ -92,7 +98,7 @@ class Box:
             if material_depth in depths:
                 material = Material.Material(material_text)
                 materials.append(material)
-        print(materials)
+        self.materials = materials
 
         ## Extract lessons
         #self.lessons = []

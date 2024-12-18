@@ -1,8 +1,11 @@
-# Motors
-{box-description}
+# The Last Black Box : Motors
 
-## Lessons
-{NB3_Brushed-DC-Gear-Motors.md}
+## Motors{11}
+
 {DC-Motors.md}
 
-## Projects
+---
+
+# Project
+#### Name of the project
+Project tasks listed here

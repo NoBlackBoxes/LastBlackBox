@@ -1,7 +1,11 @@
-# Python
-{box-description}
+# The Last Black Box : Python
 
-## Lessons
+## Python{11}
+
 {Virtual-Environments.md}
 
-## Projects
+---
+
+# Project
+#### Name of the project
+Project tasks listed here

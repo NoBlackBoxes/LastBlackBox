@@ -10,17 +10,22 @@ import glob
 import json
 
 # Import modules
-import LBB.config as Config
-import LBB.session as Session
+import LBB.Engine.config as Config
+import LBB.Engine.session as Session
 
 # Course Class
 class Course:
+    """
+    LBB Course Class
+
+    Stores a list course sessions and boxes
+    """
     def __init__(self, name=None, path=None):
         self.name = None        # Course name
         self.slug = None        # Course slug (URL)
         self.sessions = None    # Course sessions
         if name:
-            self.build(name)    # Build course from session templates
+            self.build(name)    # Build course from repository
         elif path:
             self.load(path)     # Load course from JSON file
         return
@@ -41,13 +46,14 @@ class Course:
         self.sessions = [Session.Session(dictionary=session_dictionary) for session_dictionary in dictionary.get("sessions", [])]
         return
     
-    # Build course object from session templates
+    # Build course object from repository
     def build(self, name):
-
+        """
+        Build a version of the LBB course from the repository resources
+        """
         # Set course parameters
         self.name = name
         self.slug = get_slug_from_name(name)
-        course_folder = f"{Config.course_root}/{self.slug}"
         
         # List session folders
         if self.slug == "course": # Full course
@@ -56,9 +62,10 @@ class Course:
                 session_folder = f"{Config.boxes_root}/{box_name.lower()}"
                 session_folders.append(session_folder)
         else:
+            course_folder = f"{Config.course_root}/{self.slug}"
             session_folders = sorted(glob.glob(f"{course_folder}/session_*"))
 
-        # Load sessions from templates
+        # Build sessions from templates
         self.sessions = []
         for session_index, session_folder in enumerate(session_folders):
             session_template = f"{session_folder}/template.md"
@@ -85,7 +92,9 @@ class Course:
             json.dump(self.to_dict(), file, indent=4)
         return
 
+# --------------
 # Course Library
+# --------------
 
 # Get course slug from name
 def get_slug_from_name(name):

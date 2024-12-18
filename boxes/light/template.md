@@ -1,7 +1,14 @@
-# Light
-{box-description}
+# The Last Black Box : Light
 
-## Lessons
+## Light{11}
+
 {The-EM-Spectrum.md}
+{Optics.md}
+{Maxwells-Equations.md}
+{Electromagnetic-Radiation.md}
 
-## Projects
+---
+
+# Project
+#### Name of the project
+Project tasks listed here

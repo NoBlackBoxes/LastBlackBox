@@ -2,10 +2,11 @@
 The LBB template engine generates the session READMEs from a "template.md" file and the associated lessons and projects.
 
 ## Course Model
-- Each **course** consists of multiple **sessions**, utilizing the resources in multiple **boxes**
-- Each **box** contains the **materials**, **lessons**, and **projects** required to open the box
-- Each **session** outlines the sequence of **boxes**/**lessons**
+- Each **course** consists of multiple **sessions**
+- Each **session** outlines a sequence of black **boxes** to open and a **project**
+- Each **box** contains the **materials** and **lessons** required to open the box
   - **Sessions** are defined in a *template.md* file
+- Each **project** describes the **tasks** to complete the session
 - Each **lesson** *may* have a corresponding **video** tutorial
 - Each **lesson** *may* have multiple **instructions** and **tasks**
   - **Lessons** are defined in a *lessons.md* file
@@ -16,20 +17,13 @@ The LBB template engine generates the session READMEs from a "template.md" file 
 
 ## Course Hierarchy
 - Course
-  - Boxes
-    - Materials (*materials.csv*)
-    - Lessons (*lessons.md*)
-    - Projects (*projects.md*)
   - Sessions (*template.md*)
     - Box #1
-      - Lesson #1
-      - Lesson #2
-      - Lesson #3
-      - ...
+      - Materials (*materials.csv*)
+      - Lessons (*lessons.md*)
     - Box #2
-      - Lesson #1
-      - Lesson #2
-      - ...
+      - Materials (*materials.csv*)
+      - Lessons (*lessons.md*)
     - ...
     - Project
 

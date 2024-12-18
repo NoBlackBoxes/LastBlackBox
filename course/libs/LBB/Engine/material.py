@@ -9,86 +9,83 @@ LBB: Material Class
 import json
 
 # Import modules
-import LBB.lesson as Lesson
 
 # Material Class
 class Material:
+    """
+    LBB Material Class
+
+    Describes a hardware material used to open a box in LBB
+    """
     def __init__(self, text=None, dictionary=None):
-        self.index = None               # Box index
-        self.name = None                # Box name
-        self.slug = None                # Box slug (URL)
-        self.description = None         # Box description
-        self.lessons = None             # Box lessons
+        self.part = None                # Material part (name)
+        self.level = None               # Material level (depth required)
+        self.description = None         # Material description
+        self.quantity = None            # Material quantity
+        self.datasheet = None           # Material datasheet (link)
+        self.supplier = None            # Material supplier (link)
+        self.package = None             # Material package name
+        self.x = None                   # Material x dimension (mm)
+        self.y = None                   # Material y dimension (mm)
+        self.z = None                   # Material z dimension (mm)
         if text:
-            self.parse(text)            # Parse box from "lessons.md" text
+            self.parse(text)            # Parse material from "materials.csv" text
         elif dictionary:
-            self.from_dict(dictionary)  # Load box from dictionary
+            self.from_dict(dictionary)  # Load material from dictionary
         return
 
-    # Convert box object to dictionary
+    # Convert material object to dictionary
     def to_dict(self):
         dictionary = {
-            "index": self.index,
-            "name": self.name,
-            "slug": self.slug,
+            "part": self.part,
+            "level": self.level,
             "description": self.description,
-            "lessons": [lesson.to_dict() for lesson in self.lessons]
+            "quantity": self.quantity,
+            "datasheet": self.datasheet,
+            "supplier": self.supplier,
+            "package": self.package,
+            "x": self.x,
+            "y": self.y,
+            "z": self.z
         }
         return dictionary
 
-    # Convert dictionary to box object
+    # Convert dictionary to material object
     def from_dict(self, dictionary):
-        self.index = dictionary.get("index")
-        self.name = dictionary.get("name")
-        self.slug = dictionary.get("slug")
+        self.part = dictionary.get("part")
+        self.level = dictionary.get("level")
         self.description = dictionary.get("description")
-        self.lessons = [Lesson.Lesson(dictionary=lesson_dictionary) for lesson_dictionary in dictionary.get("lessons", [])]
+        self.quantity = dictionary.get("quantity")
+        self.datasheet = dictionary.get("datasheet")
+        self.supplier = dictionary.get("supplier")
+        self.package = dictionary.get("package")
+        self.x = dictionary.get("x")
+        self.y = dictionary.get("y")
+        self.z = dictionary.get("z")
         return
     
-    # Parse box string
+    # Parse material string
     def parse(self, text):
-        # Set line counter
-        line_count = 0
-        max_count = len(text)
-
-         # Extract name
-        self.name = text[0][2:]
-        self.slug = self.name.lower().replace(' ', '-')
-        line_count += 1
-
-        # Extract description
-        self.description = text[line_count]
-        line_count += 1
-
-        # Extract lessons
-        self.lessons = []
-        lesson_count = 0
-        while line_count < max_count:
-            lesson_text = []
-            lesson_text.append(text[line_count])         # Append lesson heading
-            line_count += 1
-            while not text[line_count].startswith('##'): # Next lesson
-                lesson_text.append(text[line_count])
-                line_count += 1
-                if line_count >= max_count:
-                    break
-            lesson = Lesson.Lesson(lesson_text)
-            lesson.index = lesson_count
-            self.lessons.append(lesson)
-            lesson_count += 1
+        fields = text.split(",")
+        self.part = fields[0].strip()
+        self.level = fields[1].strip()
+        self.description = fields[2].strip()
+        self.quantity = int(fields[3].strip())
+        self.datasheet = fields[4].strip()
+        self.supplier = fields[5].strip()
+        self.package = fields[6].strip()
+        self.x = int(fields[7].strip())
+        self.y = int(fields[8].strip())
+        self.z = int(fields[9].strip())
         return
 
-    def render(self):
-        output = ''
-        return output
-
-    # Load box object from JSON
+    # Load material object from JSON
     def load(self, path):
         with open(path, "r") as file:
             self.from_dict(json.load(file))
         return
 
-    # Store box object in JSON file
+    # Store material object in JSON file
     def store(self, path):
         with open(path, "w") as file:
             json.dump(self.to_dict(), file, indent=4)

@@ -1,7 +1,11 @@
-# Vision
-{box-description}
+# The Last Black Box : Vision
 
-## Lessons
+## Vision{11}
+
 {Cameras.md}
 
-## Projects
+---
+
+# Project
+#### Name of the project
+Project tasks listed here

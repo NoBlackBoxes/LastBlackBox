@@ -1,7 +1,11 @@
-# Circuits
-{box-description}
+# The Last Black Box : Circuits
 
-## Lessons
+## Circuits{11}
+
 {Radios.md}
 
-## Projects
+---
+
+# Project
+#### Name of the project
+Project tasks listed here

@@ -1,7 +1,12 @@
-# Amplifiers
-{box-description}
+# The Last Black Box : Amplifiers
 
-## Lessons
+## Amplifiers{11}
+
 {Op-Amps.md}
+{Differential-Amplifier.md}
 
-## Projects
+---
+
+# Project
+#### Name of the project
+Project tasks listed here

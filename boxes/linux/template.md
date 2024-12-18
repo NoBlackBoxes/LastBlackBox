@@ -1,8 +1,13 @@
-# Linux
-{box-description}
+# The Last Black Box : Linux
 
-## Lessons
+## Linux{11}
+
+{Package-Managers.md}
+{Navigating-the-Command-Line.md}
 {Git.md}
-{Introduction.md}
 
-## Projects
+---
+
+# Project
+#### Name of the project
+Project tasks listed here

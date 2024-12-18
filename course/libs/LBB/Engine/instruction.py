@@ -9,7 +9,7 @@ LBB: Instruction Class
 import re
 
 # Import modules
-import LBB.utilities as Utilities
+import LBB.Engine.utilities as Utilities
 
 # Instruction Class
 class Instruction:

@@ -1,10 +1,16 @@
-# Transistors
-{box-description}
+# The Last Black Box : Transistors
 
-## Lessons
+## Transistors{11}
+
+{NB3_Building-a-Light-Sensitive-Motor.md}
+{BJTs.md}
 {Diodes.md}
 {MOSFETs.md}
+{NB3_Testing-Diodes.md}
 {Semiconductors.md}
-{NB3_Building-a-Light-Sensitive-Motor.md}
 
-## Projects
+---
+
+# Project
+#### Name of the project
+Project tasks listed here

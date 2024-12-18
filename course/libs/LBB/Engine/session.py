@@ -8,11 +8,16 @@ LBB: Session Class
 # Import libraries
 
 # Import modules
-import LBB.box as Box
-import LBB.project as Project
+import LBB.Engine.box as Box
+import LBB.Engine.project as Project
 
 # Session Class
 class Session:
+    """
+    LBB Session Class
+
+    Stores a list of boxes opened during this session and the session project
+    """
     def __init__(self, text=None, dictionary=None):
         self.index = None               # Session index
         self.name = None                # Session name
@@ -48,7 +53,7 @@ class Session:
         self.project = Project.Project(dictionary=dictionary.get("project"))
         return
 
-    # Parse session string
+    # Parse session template
     def parse(self, text):
         # Set line counter
         line_count = 0
