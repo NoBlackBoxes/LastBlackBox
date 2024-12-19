@@ -1,6 +1,8 @@
 # The Last Black Box : Electrons
+Session description
 
 ## Electrons{11}
+Box description
 
 {Voltage.md}
 {Conductors.md}

@@ -14,6 +14,11 @@ import LBB.Engine.task as Task
 
 # Lesson Class
 class Lesson:
+    """
+    LBB Lesson Class
+
+    Stores a link to a video tutorial (optional) and a list of steps to complete the lesson
+    """ 
     def __init__(self, text=None, dictionary=None):
         self.index = None               # Lesson index
         self.name = None                # Lesson name
@@ -67,17 +72,18 @@ class Lesson:
         max_count = len(text)
 
         # Extract name
-        self.name = text[line_count][4:].split(']')[0]
+        self.name = text[line_count].split(':')[1].strip()
         self.slug = self.name.lower().replace(' ', '-')
+        line_count += 1
+
+        # Extract description
+        self.description = text[line_count]
+        line_count += 1
 
         # Extract video
         video_url = text[line_count].split('(')[1][:-1]
         if video_url != '':
-            self.video = Video.Video(text[line_count])
-        line_count += 1
-
-        # Extract description
-        self.description = text[line_count][2:]
+            self.video = Video.Video(f"[{self.name}]({video_url})")
         line_count += 1
 
         # Extract steps

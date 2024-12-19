@@ -1,6 +1,8 @@
 # The Last Black Box : FPGAs
+Session description
 
 ## FPGAs{11}
+Box description
 
 {Hardware-Description-Languages.md}
 

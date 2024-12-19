@@ -9,6 +9,7 @@ LBB: Box Class
 import json
 
 # Import modules
+import LBB.Engine.utilities as Utilities
 import LBB.Engine.config as Config
 import LBB.Engine.lesson as Lesson
 import LBB.Engine.material as Material
@@ -27,8 +28,8 @@ class Box:
         self.slug = None                # Box slug (URL)
         self.depth = None               # Box depth
         self.description = None         # Box description
-        self.lessons = None             # Box lessons
         self.materials = None           # Box materials
+        self.lessons = None             # Box lessons
         if text:
             self.parse(text)            # Parse box from template text
         elif dictionary:
@@ -43,8 +44,8 @@ class Box:
             "slug": self.slug,
             "depth": self.depth,
             "description": self.description,
-            "lessons": [lesson.to_dict() for lesson in self.lessons],
-            "materials": [material.to_dict() for material in self.materials]
+            "materials": [material.to_dict() for material in self.materials],
+            "lessons": [lesson.to_dict() for lesson in self.lessons]
         }
         return dictionary
 
@@ -55,8 +56,8 @@ class Box:
         self.slug = dictionary.get("slug")
         self.depth = dictionary.get("depth")
         self.description = dictionary.get("description")
-        self.lessons = [Lesson.Lesson(dictionary=lesson_dictionary) for lesson_dictionary in dictionary.get("lessons", [])]
         self.materials = [Material.Material(dictionary=material_dictionary) for material_dictionary in dictionary.get("materials", [])]
+        self.lessons = [Lesson.Lesson(dictionary=lesson_dictionary) for lesson_dictionary in dictionary.get("lessons", [])]
         return
     
     # Parse box string
@@ -87,11 +88,13 @@ class Box:
             depths.append("01")
             depths.append("10")
             depths.append("11")
+        else:
+            print(f"Invalid Depth Level: {self.depth}")
+            exit(-1)
 
         # Load materials
         materials_path = f"{Config.boxes_root}/{self.slug}/materials.csv"
-        with open(materials_path, encoding='utf8') as f:
-            materials_text = f.readlines()
+        materials_text = Utilities.read_clean_text(materials_path)
         materials = []
         for material_text in materials_text:
             material_depth = material_text.split(",")[1]
@@ -100,24 +103,23 @@ class Box:
                 materials.append(material)
         self.materials = materials
 
-        ## Extract lessons
-        #self.lessons = []
-        #lesson_count = 0
-        #while line_count < max_count:
-        #    lesson_text = []
-        #    lesson_text.append(text[line_count])         # Append lesson heading
-        #    line_count += 1
-        #    while not text[line_count].startswith('##'): # Next lesson
-        #        lesson_text.append(text[line_count])
-        #        line_count += 1
-        #        if line_count >= max_count:
-        #            break
-        #    lesson = Lesson.Lesson(lesson_text)
-        #    lesson.index = lesson_count
-        #    self.lessons.append(lesson)
-        #    lesson_count += 1
+        # Load lessons
+        self.lessons = []
+        lesson_count = 0
+        while line_count < max_count:
+            if not text[line_count].startswith("{"):
+                print(f"Invalid Lesson Tag: {text[line_count]}")
+                exit(-1)
+            lesson_basename = text[line_count].split("{")[1][:-1]
+            lesson_path = f"{Config.boxes_root}/{self.slug}/_lessons/{lesson_basename}"
+            lesson_text = Utilities.read_clean_text(lesson_path)
+            lesson = Lesson.Lesson(lesson_text)
+            lesson.index = lesson_count
+            self.lessons.append(lesson)
+            lesson_count += 1
         return
 
+    # Render box object as Markdown or HTML
     def render(self):
         output = ''
         return output

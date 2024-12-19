@@ -1,6 +1,8 @@
 # The Last Black Box : Light
+Session description
 
 ## Light{11}
+Box description
 
 {The-EM-Spectrum.md}
 {Optics.md}

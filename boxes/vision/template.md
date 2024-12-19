@@ -1,6 +1,8 @@
 # The Last Black Box : Vision
+Session description
 
 ## Vision{11}
+Box description
 
 {Cameras.md}
 

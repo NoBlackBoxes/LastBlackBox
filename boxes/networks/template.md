@@ -1,6 +1,8 @@
 # The Last Black Box : Networks
+Session description
 
 ## Networks{11}
+Box description
 
 {Sockets.md}
 

@@ -1,6 +1,8 @@
 # The Last Black Box : Systems
+Session description
 
 ## Systems{11}
+Box description
 
 {Visual-Studio-Code.md}
 {NB3_Connecting-to-RPi.md}

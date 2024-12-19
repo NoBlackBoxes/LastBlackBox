@@ -10,6 +10,7 @@ import glob
 import json
 
 # Import modules
+import LBB.Engine.utilities as Utilities
 import LBB.Engine.config as Config
 import LBB.Engine.session as Session
 
@@ -68,14 +69,9 @@ class Course:
         # Build sessions from templates
         self.sessions = []
         for session_index, session_folder in enumerate(session_folders):
-            session_template = f"{session_folder}/template.md"
-            with open(session_template, encoding='utf8') as f:
-                lines = f.readlines()
-            text = []
-            for line in lines:
-                if line.strip():                # Remove empty lines
-                    text.append(line.rstrip())  # Remove trailing whitespace (including /n)
-            session = Session.Session(text=text)
+            session_path = f"{session_folder}/template.md"
+            session_text = Utilities.read_clean_text(session_path)
+            session = Session.Session(text=session_text)
             session.index = session_index
             self.sessions.append(session)
         return

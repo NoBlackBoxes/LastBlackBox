@@ -46,6 +46,16 @@ def get_depth_from_symbol(symbol):
         exit(-1)
     return depth
 
+# Read text file, strip whitespace (including newline), and remove empty lines
+def read_clean_text(path):
+    with open(path, encoding='utf8') as f:
+        lines = f.readlines()
+    text = []
+    for line in lines:
+        if line.strip():                # Remove empty lines
+            text.append(line.rstrip())  # Remove trailing whitespace (including /n)
+    return text
+
 # Find and convert all markdown emphasis tags
 def convert_emphasis_tags(text):
     text = re.sub(r'\*\*\*(.*?)\*\*\*', r'<strong><em>\1</em></strong>', text)

@@ -1,6 +1,8 @@
 # The Last Black Box : Linux
+Session description
 
 ## Linux{11}
+Box description
 
 {Package-Managers.md}
 {Navigating-the-Command-Line.md}

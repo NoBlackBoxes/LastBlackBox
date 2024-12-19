@@ -23,8 +23,10 @@ for box_name in Config.box_names:
     template_path = f"{Config.boxes_root}/{box_name.lower()}/template.md"
     with open(template_path, "w") as file:
         file.write(f"# The Last Black Box : {box_name}\n")
+        file.write(f"Session description\n")
         file.write(f"\n")
         file.write(f"## {box_name}{{11}}\n")
+        file.write(f"Box description\n")
         file.write(f"\n")
         for lesson_path in lesson_paths:
             file.write(f"{{{os.path.basename(lesson_path)}}}\n")

@@ -11,6 +11,11 @@ LBB: Video Class
 
 # Video Class
 class Video:
+    """
+    LBB Video Class
+
+    Stores a link to a video tutorial
+    """ 
     def __init__(self, text=None, dictionary=None):
         self.name = None                # Video name
         self.url = None                 # Video url
@@ -39,11 +44,12 @@ class Video:
 
     # Parse video string
     def parse(self, text):
-        self.name = text.split(']')[0][4:]
+        self.name = text.split(']')[0][1:]
         self.url = text.split('(')[1][:-1]
         self.id = self.url.split('/')[-1]
         return
 
+    # Render video in Markdown or HTML
     def render(self):
         embed_string = f"<iframe id=\"video_player\" src=\"https://player.vimeo.com/video/{self.id}?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\" width=\"640\" height=\"360\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write\" title=\"{self.name}\"></iframe>"
         return "<p align=\"center\">\n" + embed_string + "\n</p>\n"

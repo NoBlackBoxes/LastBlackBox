@@ -4,8 +4,8 @@ The LBB template engine generates the session READMEs from a "template.md" file 
 ## Course Model
 - Each **course** consists of multiple **sessions**
 - Each **session** outlines a sequence of black **boxes** to open and a **project**
-- Each **box** contains the **materials** and **lessons** required to open the box
   - **Sessions** are defined in a *template.md* file
+- Each **box** contains the **materials** and **lessons** required to open the box
 - Each **project** describes the **tasks** to complete the session
 - Each **lesson** *may* have a corresponding **video** tutorial
 - Each **lesson** *may* have multiple **instructions** and **tasks**

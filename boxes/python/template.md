@@ -1,6 +1,8 @@
 # The Last Black Box : Python
+Session description
 
 ## Python{11}
+Box description
 
 {Virtual-Environments.md}
 

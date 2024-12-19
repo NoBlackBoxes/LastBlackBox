@@ -66,12 +66,8 @@ class Session:
         line_count += 1
 
         # Extract description
-        self.description = []
-        while text[line_count][0] != '#':
-            if text[line_count][0] != '\n':
-                self.description.append(text[line_count])
-            line_count += 1
-        self.description = "".join(self.description)
+        self.description = text[line_count]
+        line_count += 1
 
         # Count lines in the boxes section
         boxes_line_count = line_count

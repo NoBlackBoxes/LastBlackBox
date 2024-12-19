@@ -1,6 +1,8 @@
 # The Last Black Box : Atoms
+Session description
 
 ## Atoms{11}
+Box description
 
 {Atomic-Structure.md}
 {Nuclear-Forces.md}

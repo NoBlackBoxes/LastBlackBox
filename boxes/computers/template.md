@@ -1,6 +1,8 @@
 # The Last Black Box : Computers
+Session description
 
 ## Computers{11}
+Box description
 
 {NB3_Hindbrain.md}
 {Architecture.md}

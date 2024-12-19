@@ -1,6 +1,8 @@
 # The Last Black Box : Robotics
+Session description
 
 ## Robotics{11}
+Box description
 
 {NB3_Ball-Caster.md}
 {NB3_Muscles-Servos.md}

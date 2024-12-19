@@ -1,6 +1,8 @@
 # The Last Black Box : Intelligence
+Session description
 
 ## Intelligence{11}
+Box description
 
 {Large-Language-Models.md}
 
