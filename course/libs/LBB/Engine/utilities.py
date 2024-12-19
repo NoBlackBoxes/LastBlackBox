@@ -56,6 +56,15 @@ def read_clean_text(path):
             text.append(line.rstrip())  # Remove trailing whitespace (including /n)
     return text
 
+# Find line
+def find_line(text, pattern):
+    count = 0
+    for line in text:
+        if line.startswith(pattern):
+            break
+        count += 1
+    return count
+
 # Find and convert all markdown emphasis tags
 def convert_emphasis_tags(text):
     text = re.sub(r'\*\*\*(.*?)\*\*\*', r'<strong><em>\1</em></strong>', text)

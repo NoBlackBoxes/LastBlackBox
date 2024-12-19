@@ -86,6 +86,10 @@ class Lesson:
             self.video = Video.Video(f"[{self.name}]({video_url})")
         line_count += 1
 
+        # Find lesson section
+        line_count = Utilities.find_line(text, "## Lesson")
+        line_count += 1
+
         # Extract steps
         self.steps = []
         step_count = 0
@@ -118,6 +122,7 @@ class Lesson:
                 self.steps.append(instruction)
             step_count += 1
             line_count += 1
+        print("Done")
         return
 
 #FIN
