@@ -8,6 +8,7 @@ LBB: Session Class
 # Import libraries
 
 # Import modules
+import LBB.Engine.utilities as Utilities
 import LBB.Engine.box as Box
 import LBB.Engine.project as Project
 
@@ -69,12 +70,10 @@ class Session:
         self.description = text[line_count]
         line_count += 1
 
-        # Count lines in the boxes section
-        boxes_line_count = line_count
-        while text[boxes_line_count][0:3] != '---': # End of boxes section
-            boxes_line_count += 1
+        # Find and of boxes section
+        boxes_line_count = Utilities.find_line(text, "---")
 
-        # Extract session boxes
+        # Load boxes
         self.boxes = []
         box_count = 0
         while line_count < boxes_line_count:
@@ -82,8 +81,7 @@ class Session:
             box_text.append(text[line_count])
             line_count += 1
             while text[line_count][0:3] != '## ': # Next box
-                if text[line_count][0] != '\n':
-                    box_text.append(text[line_count])
+                box_text.append(text[line_count])
                 line_count += 1
                 if line_count >= boxes_line_count:
                     break
@@ -93,7 +91,7 @@ class Session:
             box_count += 1
         line_count += 2
     
-        # Extract session project
+        # Load project
         project_text = []
         while line_count < max_count:
             if text[line_count][0] != '\n':

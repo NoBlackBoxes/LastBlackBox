@@ -102,7 +102,7 @@ Your robot's brain is based on a digital computer that can *only* measure electr
 #### Watch this video: [Light Sensors](https://vimeo.com/1000794164)
 > A light sensor converts light intensity into an electrical signal (voltage, current, or resistance).
 
-- [ ] **Task**: Build a light sensor
+- **TASK**: Build a light sensor
 - *Hint*: Build a voltage divider with one of the fixed resistors replaced with an LDR (light-dependent resistor). Does the "output" voltage vary with light level? 
 - *Help*: A guide to completing this task can be found here: [NB3-Building a Light Sensor](https://vimeo.com/??????)
 - *Challenge*: What should the value of the fixed resistor be to maximize the sensitive range of the output voltage for varying light levels?
@@ -125,7 +125,7 @@ Clever arrangements of electromagnets and their control circuits can be used to 
 #### Watch this video: [DC Motors](https://vimeo.com/1000824116)
 > An electric motor converts current into rotation using electromagnets that are turned on and off in a coordinated pattern. DIfferent types of motors (stepper, brushed, or brushless) use different strategies (circuits) for this coordination.
 
-- [ ] **Task**: Play with your brushed DC motor. Spin it forwards *and* backwards...
+- **TASK**: Play with your brushed DC motor. Spin it forwards *and* backwards...
 - *Challenge*: What are some ways you could change the *speed* with which your motor spins?
 <details><summary><strong>Target</strong></summary>
 Switching the direction that current flows through your motor will change the direction it spins.
@@ -141,7 +141,7 @@ Switching the direction that current flows through your motor will change the di
 #### Watch this video: [Diodes](https://vimeo.com/1000861996)
 > The PN junction
 
-- [ ] **Task**: Illuminate a light-emitting diode (LED). *Remember the current limiting resistor!*
+- **TASK**: Illuminate a light-emitting diode (LED). *Remember the current limiting resistor!*
 <details><summary><strong>Target</strong></summary>
 The LED should only illuminate when installed in one orientation. If you flip it around, then the "diode" of the LED will prevent current flowing through the circuit.
 </details><hr>
@@ -149,7 +149,7 @@ The LED should only illuminate when installed in one orientation. If you flip it
 #### Watch this video: [Transistors - MOSFETs](https://vimeo.com/1000873279)
 > Gate
 
-- [ ] **Task**: Measure the threshold voltage that opens your MOSFET gate. Compare it to the "expected" range listed in the 
+- **TASK**: Measure the threshold voltage that opens your MOSFET gate. Compare it to the "expected" range listed in the 
 - The datasheet for your MOSFET can be found here: [IRF510](../../../boxes/transistors/_resources/datasheets/IRF510.pdf)
 <details><summary><strong>Target</strong></summary>
 The threshold for when current starts to flow through your MOSFET ("Gate-Source Threshold Voltage") should be between 2 to 4 Volts. However, the amount of current it allows will rise rapidly up to (and beyond) 10 Volts. Check the datasheet (Figure 3). 

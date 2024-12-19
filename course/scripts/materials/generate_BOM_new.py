@@ -10,38 +10,33 @@ import os
 import glob
 
 # Import modules
-import LBB.config as Config
-import LBB.utilities as Utilities
-import LBB.box as Box
+import LBB.Engine.config as Config
+import LBB.Engine.utilities as Utilities
+import LBB.Engine.course as Course
+import LBB.Engine.box as Box
 
 # Reload libraries and modules
 import importlib
 importlib.reload(Config)
 importlib.reload(Utilities)
+importlib.reload(Course)
 importlib.reload(Box)
 
-# List all boxes
-box_names = Config.box_names
+# Build courses
+course_names = ["The Last Black Box"]
+for course_name in course_names:
+    course = Course.Course(course_name)
 
-## DEBUG
-box_names = ['Atoms']
-
-# Load each box
-for box_count, box_name in enumerate(box_names):
-
-    # Determine box folder
-    box_folder = f"{Config.boxes_root}/{box_name.lower()}"
-
-    # Specify lessons folder
-    lessons_folder = box_folder + "/_lessons"
-
-    # Find all lessons (*.md files) in each box's lessons folder
-    lesson_paths = glob.glob(lessons_folder + '/*.md')
-    print(f"{box_name}")
-    for lesson_path in lesson_paths:
-
-        # Extract lesson slug
-        lesson_slug = os.path.basename(lesson_path)
-        print(f"- {lesson_slug}")
+    # Generate BOM
+    BOM_path = f"{Config.course_root}/_resources/materials/{course.slug}_BOM.csv"
+    with open(BOM_path, 'w') as file:
+        file.write("Part,Level,Description,Quantity,Datasheet,Supplier,Package,x(mm),y(mm),z(mm)\n")
+        file.write(",,,,,,,,\n")
+        for session in course.sessions:
+            for box in session.boxes:
+                file.write(f"{box.name},,,,,,,\n")
+                for m in box.materials:
+                    file.write(f"{m.part},{m.level},{m.description},{m.quantity},{m.datasheet},{m.supplier},{m.package},{m.x},{m.y},{m.z}\n")
+                file.write(",,,,,,,,\n")
 
 # FIN

@@ -17,6 +17,6 @@ As computer hardware became much more capable, software was developed to manage 
 
 ## Lesson
 
-- **Task**: Install the Linux-based Raspberry Pi OS on your NB3
+- **TASK**: Install the Linux-based Raspberry Pi OS on your NB3
     - Follow these [RPiOS installation instructions](../../../boxes/systems/rpios/README.md)
 > Booted!

@@ -1,10 +1,10 @@
 NB3 Body,01,NB3 robot base PCB,1,NB3_body,VK,Loose,200,200,15
-Resistor (330),10,330 &Omega;/0.25 W,2,_resources/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-330r/res-330r-1-250mw-axial-metal-film/dp/9341730,Passive,50,5,3
-Resistor (470),01,470 &Omega;/0.25 W,2,_resources/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943,Passive,50,5,3
-Resistor (1k),01,1 k&Omega;/0.25 W,2,_resources/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-1k/res-1k-1-250mw-axial-metal-film/dp/9341102,Passive,50,5,3
-Resistor (10k),01,10 k&Omega;/0.25 W,2,_resources/datsheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-10k/res-10k-1-250mw-axial-metal-film/dp/9341110,Passive,50,5,3
+Resistor (330),10,330 &Omega;/0.25 W,2,_resources/datasheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-330r/res-330r-1-250mw-axial-metal-film/dp/9341730,Passive,50,5,3
+Resistor (470),01,470 &Omega;/0.25 W,2,_resources/datasheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943,Passive,50,5,3
+Resistor (1k),01,1 k&Omega;/0.25 W,2,_resources/datasheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-1k/res-1k-1-250mw-axial-metal-film/dp/9341102,Passive,50,5,3
+Resistor (10k),01,10 k&Omega;/0.25 W,2,_resources/datasheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-10k/res-10k-1-250mw-axial-metal-film/dp/9341110,Passive,50,5,3
 Capacitor (small),10,0.1 uF ceramic capacitor,1,_resources/datasheets/capacitor_ceramic.pdf,https://uk.farnell.com/kemet/c322c104k1r5ta/cap-0-1-f-100v-10-x7r/dp/1457685,Passive,50,5,3
-Capacitor (large),10,100 uF aluminum electrolytic capacitor,1,_resources/datsheets/capacitor_electrolytic.pdf,https://uk.farnell.com/rubycon/16zlh100mefc5x11/cap-100-f-16v-20/dp/8126283,Passive,50,5,3
+Capacitor (large),10,100 uF aluminum electrolytic capacitor,1,_resources/datasheets/capacitor_electrolytic.pdf,https://uk.farnell.com/rubycon/16zlh100mefc5x11/cap-100-f-16v-20/dp/8126283,Passive,50,5,3
 Button,10,Tactile switch,2,_resources/datasheets/button.pdf,https://uk.farnell.com/omron/b3f-1000/switch-spno-0-05a-24v-tht-0-98n/dp/176432,Passive,5,5,3
 Potentiometer,01,2.2 k&Omega; variable resistor,2,_resources/datasheets/pot_2k2.pdf,https://uk.farnell.com/bourns/3362p-1-222lf/trimmer-pot-2-2kohm-10-1turn-th/dp/2328599,Passive,5,5,3
 Breadboard (400),01,400-tie solderless breadboard,1,_resources/datasheets/breadboard_400.pdf,https://www.amazon.co.uk/gp/product/B0739XRX8F,Loose,85,60,10

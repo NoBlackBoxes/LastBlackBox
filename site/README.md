@@ -74,7 +74,7 @@ Can be multiple lines, but just text.
 #### Watch this video: [Video Title](video url)
 > Video content description (single line of text).
 
-- [ ] **Task**: Task description.
+- **TASK**: Task description.
 - Other task instructions: hints, help, warnings, challenges, etc.
 <details><summary><strong>Target</strong></summary>
 The expected results of completing the task are listed here. You can use images and links.
@@ -86,19 +86,19 @@ Can be multiple lines, but just text.
 ####  Watch this video: [Video Name](video url)
 > Video content description (single line of text).
 
-- **Task**: Task description.
+- **TASK**: Task description.
 - Other task instructions: hints, help, warnings, challenges, etc.<details><summary><strong>Target</strong></summary>
 The expected results of completing the task are listed here. You can use images and links.
 </details><hr>
 
-- **Task**: Task description.
+- **TASK**: Task description.
 - Other task instructions: hints, help, warnings, challenges, etc.<details><summary><strong>Target</strong></summary>
 The expected results of completing the task are listed here. You can use images and links.
 </details><hr>
 
 ####  Watch this video: [Video Name](video url)
 > Video content description (single line of text).
-- **Task**: Task description.
+- **TASK**: Task description.
 - Other task instructions: hints, help, warnings, challenges, etc.
 <details><summary><strong>Target</strong></summary>
 The expected results of completing the task are listed here. You can use images and links.

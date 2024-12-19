@@ -71,7 +71,7 @@ class Lesson:
         line_count = 0
         max_count = len(text)
 
-        # Extract name
+        # Extract name and slug
         self.name = text[line_count].split(':')[1].strip()
         self.slug = self.name.lower().replace(' ', '-')
         line_count += 1
@@ -90,10 +90,11 @@ class Lesson:
         line_count = Utilities.find_line(text, "## Lesson")
         line_count += 1
 
-        # Extract steps
+        # Load steps
         self.steps = []
         step_count = 0
         while line_count < max_count:
+            print(text[line_count])
             step_depth = Utilities.get_depth_from_symbol(text[line_count][0])
             step_text = text[line_count][2:]
             # Classify step
@@ -122,7 +123,6 @@ class Lesson:
                 self.steps.append(instruction)
             step_count += 1
             line_count += 1
-        print("Done")
         return
 
 #FIN

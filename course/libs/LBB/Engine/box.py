@@ -111,8 +111,10 @@ class Box:
                 print(f"Invalid Lesson Tag: {text[line_count]}")
                 exit(-1)
             lesson_basename = text[line_count].split("{")[1][:-1]
-            print(lesson_basename)
             lesson_path = f"{Config.boxes_root}/{self.slug}/_lessons/{lesson_basename}"
+
+            print(lesson_path)
+
             lesson_text = Utilities.read_clean_text(lesson_path)
             lesson = Lesson.Lesson(lesson_text)
             lesson.index = lesson_count

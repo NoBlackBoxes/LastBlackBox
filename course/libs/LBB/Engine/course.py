@@ -66,7 +66,7 @@ class Course:
             course_folder = f"{Config.course_root}/{self.slug}"
             session_folders = sorted(glob.glob(f"{course_folder}/session_*"))
 
-        # Build sessions from templates
+        # Load sessions from templates
         self.sessions = []
         for session_index, session_folder in enumerate(session_folders):
             session_path = f"{session_folder}/template.md"

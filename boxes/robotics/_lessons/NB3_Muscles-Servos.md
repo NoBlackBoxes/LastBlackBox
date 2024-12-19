@@ -11,4 +11,5 @@ Let's build your robot's movement system (using servo motors).
 
 ## Lesson
 
-- [ ] **Task**: Mount the servo motors and wheels to your NB3.
+- **TASK**: Mount the servo motors and wheels to your NB3.
+> The mounted servo motors should look like this.

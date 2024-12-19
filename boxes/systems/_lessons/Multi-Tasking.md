@@ -15,4 +15,5 @@ Back when computers were very expensive mainframes, some clever software enginee
 
 ## Lesson
 
-- **Task**: Develop a multi-tasking "scheduling" program for your microcontroller.
+- **TASK**: Develop a multi-tasking "scheduling" program for your microcontroller.
+> Changing the timescale of one task should not affect the other.

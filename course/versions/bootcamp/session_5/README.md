@@ -8,7 +8,7 @@
 ### Watch this video: [NB3 Forebrain](https://vimeo.com/628545232)
 > Let's add a camera (eyes) to your NB3!
 
-- [] **Task**: Check whether your camera works by running the following command from the Linux terminal.
+- [] **TASK**: Check whether your camera works by running the following command from the Linux terminal.
 ```bash
 libcamera-still -o test.png
 ```

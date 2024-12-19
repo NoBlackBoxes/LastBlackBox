@@ -18,6 +18,6 @@ Modern computers combine a huge number of different technologies into a function
 ## [Connecting to RPi](https://vimeo.com/??????)
 > When you have installed your NB3's operating system, then you can power it on and try to connect to it from your Host computer over WiFi.
 
-- ***Task***: Connect to your NB3 via WiFi
+- ***TASK***: Connect to your NB3 via WiFi
   - Follow these instruction [Connecting to RPi](../../../boxes/systems/connecting/README.md)
 > You should now be able to login to your NB3 from your host computer via SSH.

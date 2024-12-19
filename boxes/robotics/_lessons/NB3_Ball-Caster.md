@@ -11,4 +11,5 @@ Let's add a front wheel (ball caster) to keep your NB3 from dragging its face on
 
 ## Lesson
 
-- [ ] **Task**: Mount caster (ball bearing) to the front of your NB3.
+- **TASK**: Mount caster (ball bearing) to the front of your NB3.
+> The ball caster mount should look like this.
