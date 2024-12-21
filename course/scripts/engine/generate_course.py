@@ -21,8 +21,8 @@ importlib.reload(Config)
 importlib.reload(Course)
 
 # Build course
-name = "The Last Black Box"
-# name = "Build a Brain"
+#name = "The Last Black Box"
+name = "Build a Brain"
 # name = "Bootcamp"
 course = Course.Course(name)
 

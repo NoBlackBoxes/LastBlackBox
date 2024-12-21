@@ -31,7 +31,7 @@ for box_name in Config.box_names:
     box_folder = f"{Config.boxes_root}/{box_name.lower()}"
 
     # Specify lessons folder
-    lessons_folder = box_folder + "/_lessons"
+    lessons_folder = box_folder + "/_resources/lessons"
 
     # Create/Clear thumbnails folder
     thumbnails_folder = lessons_folder + "/thumbnails"

@@ -37,7 +37,7 @@ for box_count, box_name in enumerate(box_names):
     box_folder = f"{Config.boxes_root}/{box_name.lower()}"
 
     # Specify lessons folder
-    lessons_folder = box_folder + "/_lessons"
+    lessons_folder = box_folder + "/_resources/lessons"
 
     # Find all lessons (*.md files) in each box's lessons folder
     lesson_paths = glob.glob(lessons_folder + '/*.md')

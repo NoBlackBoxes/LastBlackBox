@@ -30,7 +30,7 @@ for box_name in Config.box_names:
     video_list_file.write(f"## {box_name}\n")
 
     # Specify lessons folder
-    lessons_folder = box_folder + "/_lessons"
+    lessons_folder = box_folder + "/_resources/lessons"
 
     # Find all lessons (*.md files) in each box's lessons folder
     lesson_paths = glob.glob(lessons_folder + '/*.md')

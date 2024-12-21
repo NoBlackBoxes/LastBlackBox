@@ -71,7 +71,7 @@ def convert_materials(materials):
 def insert_materials(box):
     # Store paths
     box_path = boxes_path + "/" + box
-    materials_path = box_path + "/materials.csv"
+    materials_path = box_path + "/_resources/materials.csv"
     readme_path = box_path + "/README.md"
     print(readme_path)
 
@@ -122,7 +122,7 @@ def insert_materials(box):
 def append_materials(BOM, box):
     # Store paths
     box_path = boxes_path + "/" + box
-    materials_path = box_path + "/materials.csv"
+    materials_path = box_path + "/_resources/materials.csv"
 
     # Read materials.csv
     materials = []

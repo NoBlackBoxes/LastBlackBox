@@ -81,10 +81,10 @@ class Box:
         depths = []
         if self.depth == "01":
             depths.append("01")
-        if self.depth == "10":
+        elif self.depth == "10":
             depths.append("01")
             depths.append("10")
-        if self.depth == "11":
+        elif self.depth == "11":
             depths.append("01")
             depths.append("10")
             depths.append("11")
@@ -93,7 +93,7 @@ class Box:
             exit(-1)
 
         # Load materials
-        materials_path = f"{Config.boxes_root}/{self.slug}/materials.csv"
+        materials_path = f"{Config.boxes_root}/{self.slug}/_resources/materials.csv"
         materials_text = Utilities.read_clean_text(materials_path)
         materials = []
         for material_text in materials_text:
@@ -111,7 +111,7 @@ class Box:
                 print(f"Invalid Lesson Tag: {text[line_count]}")
                 exit(-1)
             lesson_basename = text[line_count].split("{")[1][:-1]
-            lesson_path = f"{Config.boxes_root}/{self.slug}/_lessons/{lesson_basename}"
+            lesson_path = f"{Config.boxes_root}/{self.slug}/_resources/lessons/{lesson_basename}"
 
             print(lesson_path)
 

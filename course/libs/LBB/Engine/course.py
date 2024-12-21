@@ -63,13 +63,13 @@ class Course:
                 session_folder = f"{Config.boxes_root}/{box_name.lower()}"
                 session_folders.append(session_folder)
         else:
-            course_folder = f"{Config.course_root}/{self.slug}"
+            course_folder = f"{Config.course_root}/versions/{self.slug}"
             session_folders = sorted(glob.glob(f"{course_folder}/session_*"))
 
         # Load sessions from templates
         self.sessions = []
         for session_index, session_folder in enumerate(session_folders):
-            session_path = f"{session_folder}/template.md"
+            session_path = f"{session_folder}/_resources/template.md"
             session_text = Utilities.read_clean_text(session_path)
             session = Session.Session(text=session_text)
             session.index = session_index
