@@ -2,11 +2,7 @@
 In this box, you will learn about python...
 
 ## Python{11}
-{Info:Description}
+{Virtual-Environments}
 
-{Lesson:Virtual-Environments}
-
----
-
-# Projects
-{Project:Some-Project}
+# Projects{11}
+{Some-Project}

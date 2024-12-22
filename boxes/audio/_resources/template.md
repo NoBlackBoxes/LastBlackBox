@@ -2,11 +2,7 @@
 In this box, you will learn about audio...
 
 ## Audio{11}
-{Info:Description}
+{I2S}
 
-{Lesson:I2S}
-
----
-
-# Projects
-{Project:Some-Project}
+# Projects{11}
+{Some-Project}

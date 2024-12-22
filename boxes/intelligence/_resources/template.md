@@ -2,11 +2,7 @@
 In this box, you will learn about intelligence...
 
 ## Intelligence{11}
-{Info:Description}
+{Large-Language-Models}
 
-{Lesson:Large-Language-Models}
-
----
-
-# Projects
-{Project:Some-Project}
+# Projects{11}
+{Some-Project}

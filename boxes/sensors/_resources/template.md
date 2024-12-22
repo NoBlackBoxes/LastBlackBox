@@ -2,12 +2,8 @@
 In this box, you will learn about sensors...
 
 ## Sensors{11}
-{Info:Description}
+{Transducers}
+{NB3_Building-a-Light-Sensor}
 
-{Lesson:Transducers}
-{Lesson:NB3_Building-a-Light-Sensor}
-
----
-
-# Projects
-{Project:Some-Project}
+# Projects{11}
+{Some-Project}

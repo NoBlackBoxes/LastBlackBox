@@ -2,14 +2,10 @@
 In this box, you will learn about light...
 
 ## Light{11}
-{Info:Description}
+{The-EM-Spectrum}
+{Optics}
+{Maxwells-Equations}
+{Electromagnetic-Radiation}
 
-{Lesson:The-EM-Spectrum}
-{Lesson:Optics}
-{Lesson:Maxwells-Equations}
-{Lesson:Electromagnetic-Radiation}
-
----
-
-# Projects
-{Project:Some-Project}
+# Projects{11}
+{Some-Project}

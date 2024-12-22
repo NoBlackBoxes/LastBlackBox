@@ -2,11 +2,7 @@
 In this box, you will learn about security...
 
 ## Security{11}
-{Info:Description}
+{One-Way-Functions}
 
-{Lesson:One-Way-Functions}
-
----
-
-# Projects
-{Project:Some-Project}
+# Projects{11}
+{Some-Project}

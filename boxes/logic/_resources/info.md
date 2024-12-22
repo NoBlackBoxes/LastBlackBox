@@ -1,2 +1,2 @@
 ## Description
-Boole was cool.
+Boole was coole.

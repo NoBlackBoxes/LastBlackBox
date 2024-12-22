@@ -22,27 +22,27 @@ You will be building a robot. The robot's physical layout mimics the basic anato
 
 ## Schedule
 
-### Session 1 - [Analog Electronics](session_1/README.md)
+### Day 1 - [Analog Electronics](session_1/README.md)
 
 - *Morning:* Atoms, Electrons, Magnets, Sensors, and Motors
 - *Afternoon:* Transistors
 
-### Session 2 - [Digital Computers](session_2/README.md)
+### Day 2 - [Digital Computers](session_2/README.md)
 
 - *Morning:* Computers
 - *Afternoon:* Robotics
 
-### Session 3 - [The Software Stack](session_3/README.md)
+### Day 3 - [The Software Stack](session_3/README.md)
 
 - *Morning:* Power, Systems, Linux, Python
 - *Afternoon:* Networks, Websites, and Servers
 
-### Session 4 - [Signal Processing](session_4)
+### Day 4 - [Signal Processing](session_4)
 
 - *Morning:* [Audio (1-D data)](session_4/Morning.md)
 - *Afternoon:* [Digital signal processing](session_4/Afternoon.md)
 
-### Session 5 - [Computer Vision](session_5)
+### Day 5 - [Computer Vision](session_5)
 
 - *Morning:* [Vision (2-D data)](session_5/Morning.md)
 - *Afternoon:* [Image processing](session_5/Afternoon.md)

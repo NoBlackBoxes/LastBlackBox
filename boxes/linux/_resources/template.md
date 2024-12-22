@@ -2,13 +2,9 @@
 In this box, you will learn about linux...
 
 ## Linux{11}
-{Info:Description}
+{Package-Managers}
+{Navigating-the-Command-Line}
+{Git}
 
-{Lesson:Package-Managers}
-{Lesson:Navigating-the-Command-Line}
-{Lesson:Git}
-
----
-
-# Projects
-{Project:Some-Project}
+# Projects{11}
+{Some-Project}

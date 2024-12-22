@@ -26,14 +26,10 @@ for box_name in Config.box_names:
         file.write(f"In this box, you will learn about {box_name.lower()}...\n")
         file.write(f"\n")
         file.write(f"## {box_name}{{11}}\n")
-        file.write(f"{{Info:Description}}\n")
-        file.write(f"\n")
         for lesson_path in lesson_paths:
-            file.write(f"{{Lesson:{os.path.basename(lesson_path)[:-3]}}}\n")
+            file.write(f"{{{os.path.basename(lesson_path)[:-3]}}}\n")
         file.write(f"\n")
-        file.write(f"---\n")
-        file.write(f"\n")
-        file.write(f"# Projects\n")
-        file.write(f"{{Project:Some-Project}}\n")
+        file.write(f"# Projects{{11}}\n")
+        file.write(f"{{Some-Project}}\n")
 
 # FIN

@@ -2,14 +2,11 @@
 In this box, you will learn about computers...
 
 ## Computers{11}
-{Info:Description}
+{Architecture}
+{NB3_Hindbrain}
+{Low-Level-Programming}
+{NB3_Building-a-Theremin}
+{NB3_Programming-Arduino}
 
-{Lesson:Architecture}
-{Lesson:NB3_Hindbrain}
-{Lesson:NB3_Building-a-Theremin}
-{Lesson:NB3_Programming-Arduino}
-
----
-
-# Projects
-{Project:Some-Project}
+# Projects{11}
+{Some-Project}

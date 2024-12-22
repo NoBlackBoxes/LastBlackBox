@@ -2,13 +2,9 @@
 In this box, you will learn about data...
 
 ## Data{11}
-{Info:Description}
+{Analog-to-Digital-Converters}
+{Binary-Numbers}
+{NB3_Build-an-ADC-input}
 
-{Lesson:Analog-to-Digital-Converters}
-{Lesson:Binary-Numbers}
-{Lesson:NB3_Build-an-ADC-input}
-
----
-
-# Projects
-{Project:Some-Project}
+# Projects{11}
+{Some-Project}

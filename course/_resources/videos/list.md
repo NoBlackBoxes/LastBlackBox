@@ -83,6 +83,7 @@
 ## Computers
 - [x] [Architecture](https://vimeo.com/1033601146)
 - [x] [NB3 : Hindbrain](https://vimeo.com/1033609727)
+- [ ] [Low-Level Programming]()
 - [x] [NB3 : Building a Theremin](https://vimeo.com/1033896646)
 - [x] [NB3 : Programming Arduino](https://vimeo.com/1033810807)
 

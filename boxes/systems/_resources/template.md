@@ -2,17 +2,13 @@
 In this box, you will learn about systems...
 
 ## Systems{11}
-{Info:Description}
+{NB3_Programming-Concurrency-Arduino}
+{Operating-Systems}
+{NB3_Connecting-to-RPi}
+{NB3_Midbrain}
+{Visual-Studio-Code}
+{Multi-Tasking}
+{NB3_RPiOS}
 
-{Lesson:NB3_Programming-Concurrency-Arduino}
-{Lesson:Operating-Systems}
-{Lesson:NB3_Connecting-to-RPi}
-{Lesson:NB3_Midbrain}
-{Lesson:Visual-Studio-Code}
-{Lesson:Multi-Tasking}
-{Lesson:NB3_RPiOS}
-
----
-
-# Projects
-{Project:Some-Project}
+# Projects{11}
+{Some-Project}

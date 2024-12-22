@@ -2,11 +2,7 @@
 In this box, you will learn about circuits...
 
 ## Circuits{11}
-{Info:Description}
+{Radios}
 
-{Lesson:Radios}
-
----
-
-# Projects
-{Project:Some-Project}
+# Projects{11}
+{Some-Project}

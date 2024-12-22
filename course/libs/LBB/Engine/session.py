@@ -26,7 +26,6 @@ class Session:
         self.description = None         # Session description
         self.boxes = None               # Session boxes
         self.project = None             # Session project
-        self.template = None            # Session template
         if text:
             self.parse(text)            # Parse session from template text
         elif dictionary:
@@ -71,26 +70,27 @@ class Session:
         self.description = text[line_count]
         line_count += 1
 
-        # Find and of boxes section
-        boxes_line_count = Utilities.find_line(text, "---")
+        # Find boxes section
+        line_count = Utilities.find_line(text, "## ")
+        boxes_max_count = Utilities.find_line(text, "# Project") - 1
 
         # Load boxes
         self.boxes = []
         box_count = 0
-        while line_count < boxes_line_count:
+        while line_count < boxes_max_count:
             box_text = []
             box_text.append(text[line_count])
             line_count += 1
             while text[line_count][0:3] != '## ': # Next box
                 box_text.append(text[line_count])
                 line_count += 1
-                if line_count >= boxes_line_count:
+                if line_count >= boxes_max_count:
                     break
             box = Box.Box(box_text)
             box.index = box_count
             self.boxes.append(box)
             box_count += 1
-        line_count += 2
+        line_count += 1
     
         # Load project
         project_text = []
@@ -99,9 +99,6 @@ class Session:
                 project_text.append(text[line_count])
             line_count += 1
         self.project = Project.Project(project_text)
-
-        # Store template
-        self.template = text
 
         return
 

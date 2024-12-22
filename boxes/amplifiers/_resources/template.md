@@ -2,12 +2,8 @@
 In this box, you will learn about amplifiers...
 
 ## Amplifiers{11}
-{Info:Description}
+{Differential-Amplifier}
+{Op-Amps}
 
-{Lesson:Differential-Amplifier}
-{Lesson:Op-Amps}
-
----
-
-# Projects
-{Project:Some-Project}
+# Projects{11}
+{Some-Project}

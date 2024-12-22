@@ -2,11 +2,7 @@
 In this box, you will learn about learning...
 
 ## Learning{11}
-{Info:Description}
+{NB3_Clicker-Training}
 
-{Lesson:NB3_Clicker-Training}
-
----
-
-# Projects
-{Project:Some-Project}
+# Projects{11}
+{Some-Project}

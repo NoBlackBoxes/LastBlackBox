@@ -2,11 +2,7 @@
 In this box, you will learn about servers...
 
 ## Servers{11}
-{Info:Description}
+{Flask}
 
-{Lesson:Flask}
-
----
-
-# Projects
-{Project:Some-Project}
+# Projects{11}
+{Some-Project}

@@ -10,7 +10,7 @@ import os
 import glob
 
 # Import Modules
-import LBB.config as Config
+import LBB.Engine.config as Config
 
 # Specify paths
 video_list_path = Config.course_root + "/_resources/videos/list.md"

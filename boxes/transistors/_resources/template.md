@@ -2,16 +2,12 @@
 In this box, you will learn about transistors...
 
 ## Transistors{11}
-{Info:Description}
+{Diodes}
+{Semiconductors}
+{BJTs}
+{NB3_Building-a-Light-Sensitive-Motor}
+{NB3_Testing-Diodes}
+{MOSFETs}
 
-{Lesson:Diodes}
-{Lesson:Semiconductors}
-{Lesson:BJTs}
-{Lesson:NB3_Building-a-Light-Sensitive-Motor}
-{Lesson:NB3_Testing-Diodes}
-{Lesson:MOSFETs}
-
----
-
-# Projects
-{Project:Some-Project}
+# Projects{11}
+{Some-Project}

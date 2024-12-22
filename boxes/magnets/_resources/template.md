@@ -2,14 +2,10 @@
 In this box, you will learn about magnets...
 
 ## Magnets{11}
-{Info:Description}
+{NB3_Building-a-Speaker}
+{Ferromagnetism}
+{Electromagnets}
+{Induction}
 
-{Lesson:NB3_Building-a-Speaker}
-{Lesson:Ferromagnetism}
-{Lesson:Electromagnets}
-{Lesson:Induction}
-
----
-
-# Projects
-{Project:Some-Project}
+# Projects{11}
+{Some-Project}

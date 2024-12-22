@@ -1,100 +1,166 @@
-# Bootcamp : Session 2 - Digital Computers
-It's time to learn how transistors can perform logic, store information, and work together in a circuit that *computes*.
+# Bootcamp : Session 1 - Analog Electronics
+Here we will learn where electricity comes from, how we can measure it, and what we can do with it.
 
 ---
 # Morning
 
-## Logic
-The essential elements of computation: NOT, AND, OR, XOR, etc.
+## Atoms
+*"Let's start at the very beginning, a very good place to start"*. - R&H
 
-#### Watch this video: [Logic Gates](https://vimeo.com//??????)
-> Let's use MOSFETs to do logic
+#### Watch this video: [Atomic Structure](https://vimeo.com/1000458082)
+> A brief introduction to the physics of atoms, their parts (protons, neutrons, and electrons), and their classical vs. quantum structure.
 
-## Memory
-There are many ways to store information.
+#### Watch this video: [The Periodic Table](https://vimeo.com/1000458082)
+> The organization of elements into a table reveals a regular pattern, which is linked to the fundamental chemical properties of each material.
 
-#### Watch this video: [Flash Memory](https://vimeo.com/??????)
-> Most of your data requires quantum mechanics
+- When you need it *(and you will)*, then you can find a copy of the periodic table [here](../../../boxes/atoms/_resources/images/periodic_table.png).
+- The electron configuration (assignments to specific orbitals) of each atomic element can be viewed [here](https://en.wikipedia.org/wiki/Electron_configurations_of_the_elements_(data_page)). 
 
-## Computers
-It may not yet seem believable, but you can build a **computer** by combining transistors in a clever way. **Let's learn how!**
+## Electrons
+Electrons are the sub-atomic particles that underlie *electricity*. Controlling the movement of electrons (and the effects of their movement) will allow us to build many different kinds of electronic devices, from simple circuits to robots and computers.
 
-#### Watch this video: [Architecture](https://vimeo.com/1005138634)
-> The basic structure of a *programmable* computer
+#### Watch this video: [Voltage](https://vimeo.com/1000730032)
+> When there is more negative charge in one location vs. another, we say there is a *potential difference* between these locations. This *potential difference* is called a **voltage** and it creates a force pushing electrons from the location with more negative charge to the location with less.
 
-#### Watch this video: [NB3 Hindbrain](https://vimeo.com/1005064175)
-> We will now add a *computer* to our robot. We will begin by adding a simple microcontroller as our NB3's hindbrain. It will be responsible for controlling the "muscles" (motors) in response to commands from another (larger) computer that we will add later to the NB3 midbrain.
+#### Watch this video: [Conductors](https://vimeo.com/1000740989)
+> Some materials have electrons way out in their outer orbitals that are happy to jump between neighboring atomic nuclei (of the same element). We say that these electrons are "free" to move around the material. If we place such a material between two locations with a *potential difference* (voltage), then electrons will flow from the **(-)** location to the **(+)** location; the material will **conduct** electricity. 
 
-- **TASK**: Mount and power your Arduino-based hindbrain (connect the mini-USB cable)
+#### Watch this video: [Batteries](https://vimeo.com/??????)
+> Generating a stable voltage requires a source of electrons to maintain the *potential difference*, even when electrons are able to move between two areas of different charge. We can accomplish this with a (redox) chemical reaction inside the wonderfully useful device we call a **battery**.
+
+- [ ] **TASK**: Measure the voltage of a AA battery using your multimeter.
+- *Hint*: Select the voltage ("V") setting and touch your probes to either end of the battery. Depending on your multimeter, you may also need to select an appropriate "range". For a single AA battery, you should expect to measure between 1 and 2 Volts.
+- *Help*: If you are new to measuring voltage with a multimeter, then I recommend you watch this video: [NB3-Measuring Voltage](https://vimeo.com/??????)
 <details><summary><strong>Target</strong></summary>
-The built-in LED on the board should be blinking at 1 Hz.
+A single AA battery, fully charged, should have a voltage of ~1.6 Volts. If it is less than 1.5 Volts, then the battery is nearly *dead*.
 </details><hr>
 
-#### Watch this video: [Low-Level Programming](https://vimeo.com/??????)
-We can control a computer by loading a list of instructions ("operations") into its memory. This is called *programming*. We can now start writing *programs* for our NB3 Hindbrain (Arduino) microcontroller. First, however, we need some helpful tools to make translating our program and loading it into memory much easier. **Let's write some programs for our NB3 hindbrain!**
-
-- **TASK**: Download and install the Arduino IDE (integrated development environment). Follow the instructions for your "host" computer's operating system here: [Arduino IDE](https://www.arduino.cc/en/software)
-- ***IMPORTANT***: If you have trouble connecting to your Arduino from your Laptop, then it may be necessary to install the "latest" driver from FTDI for the chip that communicates over the USB cable. This is not always necessary, so please try the normal installation first. However, if you are stuck, then please checkout these [FTDI driver installation instructions](https://support.arduino.cc/hc/en-us/articles/4411305694610-Install-or-update-FTDI-drivers).
-- *Help*: If you are *new to programming* microcontrollers (or programming in general), then watch this video before starting the programming tasks: [Programming Arduino](https://vimeo.com/1005131993)
+- [ ] **TASK**: Measure the voltage of 4xAA batteries in series (end to end).
+- *Hint*: You can use your battery holder.
 <details><summary><strong>Target</strong></summary>
-You should be able to successfully compile and upload the "Blink" example (with no errors).
+Batteries connected in series will sum their voltages. You should measure four times the voltage of a single AA battery, ~6.4 Volts, from the batteries in your 4xAA holder.
 </details><hr>
 
-- **TASK**: Blink an (external) LED 
-- *Hint*: Connect the LED to a digital output pin (D13 in the example below), but don't forget your current limiting resistor!
-<p align="center">
-<img src="../../../boxes/computers/_resources/images/LED_driver_circuit.png" alt="LED driver" width="400">
-</p>
+#### Watch this video: [Current](https://vimeo.com/1000743561)
+> The rate at which electrons flow, measured as *#charges / second*, is called **current**. We use the unit *Amps* (A).
+
+#### Watch this video: [Resistors](https://vimeo.com/1000755493)
+> Many materials hold onto their outer electrons and resist their movement. We can create mixtures of these "resisting" materials and better "conducting" materials, often in the form of ceramics, to create **resistors** with a range of different *resistance* values, which we measure in Ohms (&Omega;).
+
+- [ ] **TASK**: Measure the resistance of your resistors.
+- *Help*: If you are new to measuring resistance with a multimeter, then I recommend you watch this video: [NB3-Measuring Resistance](https://vimeo.com/??????)
 <details><summary><strong>Target</strong></summary>
-Your external LED should now be blinking at the same time as the built-in LED (both are connected to pin 13).
+Your kit contains 470 &Omega;, 1 k&Omega;, and 10 k&Omega; resistors. You should measure these values.
 </details><hr>
 
-- **TASK**: Measure an analog signal from your LDR light sensor circuit
-- *Hint*: Send the output voltage of your light sensor (the "middle" of the divider) to an analog input pin.
-- *Help*: Check out the example in (*File->Examples->Basic->AnalogReadSerial*) to see how to use the "Serial Monitor" to report the analog voltage signal measured from your light sensor back to your host computer.
-- *Challenge*: Write a program that will turn on your LED when the light signal is above (or below) some threshold.
+#### Watch this video: [NB3-Body](https://vimeo.com/1005036900)
+> To help you start measuring and manipulating electricity, we will first assemble a "prototyping platform", which also happens to be the **body** of your robot (NB3).
 
-- **TASK**: Generate a *pulsing* signal for your piezo buzzer
-- The piezo buzzer will expand (5V) and contract (0V) as you switch the voltage applied accross it. This expansion/contraction forces air into/out of the plastic case. If you switch it ON/OFF fast enough, then you can *hear it*!
-- Use the "Blink" example...but with a much shorter delay between the ON/OFF "blinks". How short until you can hear something?
-- *Note*: make sure the tiny wire ends of the buzzer cables are firmly connected your digital output pin (red) and ground (black). You can also use your aligator clips if it is too difficult to connect them to the breadboard.
-- Now investigate Arduino's "tone" Library. Some examples can be found in the *File->Examples-Digital* folder. You can use this library to make some (slightly) more pleasant sounds.
-- This is a piezo buzzer:
-<p align="center">
-<img src="../../../boxes/computers/_resources/images/piezo_buzzer.png" alt="Piezo Buzzer" width="300">
-</p>
- 
-- **TASK**: Build a Theremin
-- *Hint*: What if you used the analog voltage signal measured from your light sensor to change the frequency of the "tone" playing on your buzzer? Hmm...
+- [ ] **TASK**: Assemble the robot body (prototyping base board).
+- *Challenge*: If you are curious how the *NB3 Body* printed circuit board (PCB) was designed, then you can find the KiCAD files here: [NB3 Body PCB](../../../boxes/electrons/NB3_body). You can also watch this short introduction to PCB design with KiCAD here: [NB3-Designing PCBs with KiCAD](https://vimeo.com/??????).
+<details><summary><strong>Target</strong></summary>
+Your NB3 should now look like [this](../../../boxes/electrons/NB3_body/NB3_body_front.png). Your breadboards will be different colors...and you should have some rubber feet on the back.
+</details><hr>
 
-- **TASK**: ***Have fun!*** (Make something cool)
-- This diagram of the Arduino "pins" will definitely be useful:
-<p align="center">
-<img src="../../../boxes/computers/_resources/images/pinout_arduino_nano.png" alt="arduino pinout" width="650">
-</p>
+#### Watch this video: [NB3-Building Circuits](https://vimeo.com/??????)
+> With a voltage source (battery) and resistors, then we can start building "circuits" - complete paths of conduction that allow current to flow from a location with *less* electrons **(+)** to a location with *more* electrons **(-)**.
+
+> ***Note***: This is *weird*. Electrons are the things moving. Shouldn't we say that current "flows" from the **(-)** area to the **(+)** area? Unfortunately, current was described before anyone knew about electrons and we are stuck with the following awkward convention: **Current is defined to flow from (+) to (-)**...even though we now know that electrons are moving the opposite direction.
+
+- [ ] **TASK**: Build the simple circuit below and measure the current flowing when you connect the battery pack.
+- ***Warning!***: Measuring current with a multimeter is ***tricky***. You can only get an accurate measurement if ***ALL*** of the current in the circuit is forced to flow through your multimeter. This means that when measuring current, your multimeter must be in *series* with the rest of the circuit. (As opposed to measuring voltage, when your multimeter is placed "parallel" to the circuit.)
+- If you are new to measuring current with a multimeter, then I recommend you watch this video: [NB3-Measuring Current](https://vimeo.com/??????).
+<details><summary><strong>Target</strong></summary>
+Not too much current...and do not break your meter.
+</details><hr>
+
+#### Watch this video: [Ohm's Law](https://vimeo.com/1000768334)
+> Ohm's Law describes the relationship between Voltage, Current, and Resistance. It is not complicated, but it is very useful.
+
+- [ ] **TASK**: Does Ohm's Law hold? You know the voltage of the batteries (V) and the resistance of the resistor (R). Measure the current flowing (I) for different resistors and confirm that V = I*R.
+<details><summary><strong>Target</strong></summary>
+For the resistors in your kit, then Ohm's Law should determine the current you measure.
+</details><hr>
+
+#### Watch this video: [Voltage Dividers](https://vimeo.com/1000782478)
+> Controlling the level of voltage at different places in a circuit is critical to designing electronic devices.
+
+- [ ] **TASK**: Build a voltage divider using two resistors of the same value. Measure the intermediate voltage (between the resistors).
+<details><summary><strong>Target</strong></summary>
+With equal size resistors, the intermediate voltage you measure should be half of the supply voltage.
+</details><hr>
+
+- [ ] **TASK**: Build a voltage divider using a variable resistor (potentiometer). Measure the intermediate voltage. What happens when you change the position of the internal contact of the variable resistor (by turning the screw)?
+- *Help*: A video guide to completing these tasks can be found here: [NB3-Building Voltage Dividers](https://vimeo.com/1000789632)
+<details><summary><strong>Target</strong></summary>
+The intermediate voltage should vary continuously as you adjust the potentiometer.
+</details><hr>
+
+## Sensors
+Your robot's brain is based on a digital computer that can *only* measure electrical signals. Sensors are needed to convert (transduce) physical signals (light intensity, heat, air pressure, etc.) into electrical signals.
+
+#### Watch this video: [Light Sensors](https://vimeo.com/1000794164)
+> A light sensor converts light intensity into an electrical signal (voltage, current, or resistance).
+
+- **TASK**: Build a light sensor
+- *Hint*: Build a voltage divider with one of the fixed resistors replaced with an LDR (light-dependent resistor). Does the "output" voltage vary with light level? 
+- *Help*: A guide to completing this task can be found here: [NB3-Building a Light Sensor](https://vimeo.com/??????)
+- *Challenge*: What should the value of the fixed resistor be to maximize the sensitive range of the output voltage for varying light levels?
+<details><summary><strong>Target</strong></summary>
+Your multimeter should measure a change in voltage as you cover your LDR or shine light on it. The voltage will either increase with more light or decrease, depending on whether your LDR is the first or second resistor in the voltage divider circuit.
+</details><hr>
 
 ---
 # Afternoon
 
-## Control
-> Getting a motor to move how you want (direction and speed) is very important for controlling the behaviour of your robot. A number of very clever strategies have been developed to each of this.
+## Magnets
+Magnets were known about (and useful) long before we understood electricity. However, the connection between electricity and magnetism is one of the most important discoveries of science. It has major implications for your everyday life (and your NB3).
 
-#### Watch this video: [Servo Loops](https://vimeo.com/??????)
-> A servo loop connects feedback from a sensor to the control signals sent to a motor.
+#### Watch this video: [Electromagnetism](https://vimeo.com/1000810115)
+> When electrons move they create a (weak) magnetic field. 
 
-## Robotics
-Combining sensors, motors, and a "brain" in between.
+## Motors
+Clever arrangements of electromagnets and their control circuits can be used to produce a rotational force. You will use these devices to make your NB3 move!
 
-#### Watch this video: [NB3-Muscles (servos)](https://vimeo.com/1005154927)
-> Let's build your robot's movement system.
+#### Watch this video: [DC Motors](https://vimeo.com/1000824116)
+> An electric motor converts current into rotation using electromagnets that are turned on and off in a coordinated pattern. DIfferent types of motors (stepper, brushed, or brushless) use different strategies (circuits) for this coordination.
 
-- **TASK**: Mount the servo motors, wheels, and caster (ball bearing) to your NB3.
+- **TASK**: Play with your brushed DC motor. Spin it forwards *and* backwards...
+- *Challenge*: What are some ways you could change the *speed* with which your motor spins?
+<details><summary><strong>Target</strong></summary>
+Switching the direction that current flows through your motor will change the direction it spins.
+</details><hr>
+
+## Transistors
+**The most important invention of the past 100 years.** We have made more transistors than any other object. Understanding how transistors work will provide you a foundation for understanding all of the amazing devices that we have built with them.
+
+#### Watch this video: [Semiconductors](https://vimeo.com/1000842810)
+> We can modify a pure crystal of certain elements (e.g. silicon) to change how well it conducts electricity. 
+
+
+#### Watch this video: [Diodes](https://vimeo.com/1000861996)
+> The PN junction
+
+- **TASK**: Illuminate a light-emitting diode (LED). *Remember the current limiting resistor!*
+<details><summary><strong>Target</strong></summary>
+The LED should only illuminate when installed in one orientation. If you flip it around, then the "diode" of the LED will prevent current flowing through the circuit.
+</details><hr>
+
+#### Watch this video: [Transistors - MOSFETs](https://vimeo.com/1000873279)
+> Gate
+
+- **TASK**: Measure the threshold voltage that opens your MOSFET gate. Compare it to the "expected" range listed in the 
+- The datasheet for your MOSFET can be found here: [IRF510](../../../boxes/transistors/_resources/datasheets/IRF510.pdf)
+<details><summary><strong>Target</strong></summary>
+The threshold for when current starts to flow through your MOSFET ("Gate-Source Threshold Voltage") should be between 2 to 4 Volts. However, the amount of current it allows will rise rapidly up to (and beyond) 10 Volts. Check the datasheet (Figure 3). 
+</details><hr>
 
 ---
-
-# PROJECT
-### Extend your robot's behaviour (be creative!)
-- **Suggestion**: Try building a Braitenberg vehicle. This [servo test](../../../boxes/computers/programming/arduino/servo_test/) example will help you get your motors moving. Can you make their speed dependent on how bright it is on the *left* or *right* side of your NB3? (you will need *two* light sensors)
+# Project
+### Build a Light-Sensitive Motor
+Use a MOSFET transistor to control how much current is flowing through your motor. Gate the MOSFET with the output voltage of your light sensor...creating a motor that spins when the light is **ON** and stops when the light is **OFF**, or the other way around.
+- *Help*: A guide to completing this task can be found here: [NB3-Building a Light-Sensitive Motor](https://vimeo.com/??????)
+- *Hint*: Use the following circuit as a guide:
 <p align="center">
-<img src="../../../boxes/robotics/_resources/images/braitenberg_vehicle.png" alt="Braitenberg Vehicle" width="600">
+<img src="../../../boxes/transistors/_resources/images/MOSFET_motor_driver.png" alt="MOSEFT driver" width="400" height="300">
 </p>

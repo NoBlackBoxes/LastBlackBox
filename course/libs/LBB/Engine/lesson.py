@@ -94,7 +94,6 @@ class Lesson:
         self.steps = []
         step_count = 0
         while line_count < max_count:
-            print(text[line_count])
             step_depth = Utilities.get_depth_from_symbol(text[line_count][0])
             step_text = text[line_count][2:]
             # Classify step

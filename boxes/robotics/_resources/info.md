@@ -1,2 +1,2 @@
 ## Description
-Mid-brain does most of it.
+Combining sensors, motors, and a "brain" in between.

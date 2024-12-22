@@ -2,12 +2,8 @@
 In this box, you will learn about power...
 
 ## Power{11}
-{Info:Description}
+{NB3_Power-Supply}
+{DC-DC-Converters}
 
-{Lesson:NB3_Power-Supply}
-{Lesson:DC-DC-Converters}
-
----
-
-# Projects
-{Project:Some-Project}
+# Projects{11}
+{Some-Project}

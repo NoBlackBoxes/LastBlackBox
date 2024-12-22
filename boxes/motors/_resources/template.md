@@ -2,11 +2,7 @@
 In this box, you will learn about motors...
 
 ## Motors{11}
-{Info:Description}
+{DC-Motors}
 
-{Lesson:DC-Motors}
-
----
-
-# Projects
-{Project:Some-Project}
+# Projects{11}
+{Some-Project}

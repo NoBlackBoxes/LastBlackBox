@@ -2,11 +2,7 @@
 In this box, you will learn about websites...
 
 ## Websites{11}
-{Info:Description}
+{HTML}
 
-{Lesson:HTML}
-
----
-
-# Projects
-{Project:Some-Project}
+# Projects{11}
+{Some-Project}

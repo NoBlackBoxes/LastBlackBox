@@ -2,12 +2,8 @@
 In this box, you will learn about logic...
 
 ## Logic{11}
-{Info:Description}
+{Logic-Gates}
+{NB3_Build-an-ADC-output}
 
-{Lesson:Logic-Gates}
-{Lesson:NB3_Build-an-ADC-output}
-
----
-
-# Projects
-{Project:Some-Project}
+# Projects{11}
+{Some-Project}

@@ -2,16 +2,12 @@
 In this box, you will learn about atoms...
 
 ## Atoms{11}
-{Info:Description}
+{The-Periodic-Table}
+{Chemistry}
+{Nuclear-Forces}
+{Heat}
+{Atomic-Structure}
+{Fission-and-Fusion}
 
-{Lesson:Atomic-Structure}
-{Lesson:The-Periodic-Table}
-{Lesson:Chemistry}
-{Lesson:Heat}
-{Lesson:Nuclear-Forces}
-{Lesson:Fission-and-Fusion}
-
----
-
-# Projects
-{Project:Some-Project}
+# Projects{11}
+{Some-Project}

@@ -22,30 +22,30 @@ You will be building a brain for your robot. The robot's physical layout mimics 
 
 ## Schedule
 
-### Session 1 - [Analog Electronics](session_1/README.md)
+### Day 1 - Analog Electronics
 
-- [Morning](session_1/#morning): Atoms, Electrons, and Sensors
-- [Afternoon](session_1/#afternoon): Magnets, Motors, and Transistors
+- [Morning](session_1/): Atoms, Electrons, and Sensors
+- [Afternoon](session_2/): Magnets, Motors, and Transistors
 
-### Session 2 - [Digital Computers](session_2/README.md)
+### Day 2 - Digital Computers
 
-- [Morning](session_2/#morning): Data, Logic, Memory, and Computers
-- [Afternoon](session_2/#afternoon): Control and Robotics
+- [Morning](session_3/): Data, Logic, Memory, and Computers
+- [Afternoon](session_4/): Control and Robotics
 
-### Session 3 - [The Software Stack](session_3/README.md)
+### Day 3 - The Software Stack
 
-- [Morning](session_3/#morning): Power, Systems, Linux, and Python
-- [Afternoon](session_3/#afternoon): Networks, Websites, and Servers
+- [Morning](session_5/): Power, Systems, Linux, and Python
+- [Afternoon](session_6/): Networks, Websites, and Servers
 
-### Session 4 - [Signal Processing](session_4/README.md)
+### Day 4 - Signal Processing
 
-- [Morning](session_4/#morning): Audio
-- [Afternoon](session_4/#afternoon): Digital signal processing (1-D data)
+- [Morning](session_7/): Audio
+- [Afternoon](session_8/): Digital signal processing (1-D data)
 
-### Session 5 - [Computer Vision](session_5/README.md)
+### Day 5 - Computer Vision
 
-- [Morning](session_5/#morning): Vision
-- [Afternoon](session_5/#afternoon): Image processing (2-D data)
+- [Morning](session_9/): Vision
+- [Afternoon](session_10/): Image processing (2-D data)
 
 ---
 
