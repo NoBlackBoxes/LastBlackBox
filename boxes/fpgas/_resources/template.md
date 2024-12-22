@@ -1,12 +1,12 @@
 # The Last Black Box : FPGAs
-In this box, we will learn about fpgas...
+In this box, you will learn about fpgas...
 
 ## FPGAs{11}
-{descriptions.md}
+{Info:Description}
 
-{Hardware-Description-Languages.md}
+{Lesson:Hardware-Description-Languages}
 
 ---
 
 # Projects
-{projects.md}
+{Project:Some-Project}

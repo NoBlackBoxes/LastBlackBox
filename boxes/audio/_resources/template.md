@@ -1,12 +1,12 @@
 # The Last Black Box : Audio
-In this box, we will learn about audio...
+In this box, you will learn about audio...
 
 ## Audio{11}
-{descriptions.md}
+{Info:Description}
 
-{I2S.md}
+{Lesson:I2S}
 
 ---
 
 # Projects
-{projects.md}
+{Project:Some-Project}

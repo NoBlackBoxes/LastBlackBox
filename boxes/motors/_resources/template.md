@@ -1,12 +1,12 @@
 # The Last Black Box : Motors
-In this box, we will learn about motors...
+In this box, you will learn about motors...
 
 ## Motors{11}
-{descriptions.md}
+{Info:Description}
 
-{DC-Motors.md}
+{Lesson:DC-Motors}
 
 ---
 
 # Projects
-{projects.md}
+{Project:Some-Project}

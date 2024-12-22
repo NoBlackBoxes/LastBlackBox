@@ -1,12 +1,12 @@
 # The Last Black Box : Security
-In this box, we will learn about security...
+In this box, you will learn about security...
 
 ## Security{11}
-{descriptions.md}
+{Info:Description}
 
-{One-Way-Functions.md}
+{Lesson:One-Way-Functions}
 
 ---
 
 # Projects
-{projects.md}
+{Project:Some-Project}

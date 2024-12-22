@@ -66,7 +66,7 @@ class Box:
         line_count = 0
         max_count = len(text)
         
-        # Extract name and depth
+        # Extract name, slug, and depth
         title = text[0][2:].strip()
         self.name = title.split("{")[0]
         self.slug = self.name.lower()
@@ -74,7 +74,14 @@ class Box:
         line_count += 1
 
         # Extract description
-        self.description = text[line_count]
+        if text[line_count].startswith("{Info:"):
+            info_path = f"{Config.boxes_root}/{self.slug}/_resources/info.md"
+            info_text = Utilities.read_clean_text(info_path)
+            description_line = Utilities.find_line(info_text, "## Description") + 1
+            print(info_text)
+            self.description = info_text[description_line]
+        else:
+            self.description = text[line_count]
         line_count += 1
 
         # List box depths
@@ -107,11 +114,11 @@ class Box:
         self.lessons = []
         lesson_count = 0
         while line_count < max_count:
-            if not text[line_count].startswith("{"):
+            if not text[line_count].startswith("{Lesson:"):
                 print(f"Invalid Lesson Tag: {text[line_count]}")
                 exit(-1)
-            lesson_basename = text[line_count].split("{")[1][:-1]
-            lesson_path = f"{Config.boxes_root}/{self.slug}/_resources/lessons/{lesson_basename}"
+            lesson_basename = text[line_count].split(":")[1][:-1]
+            lesson_path = f"{Config.boxes_root}/{self.slug}/_resources/lessons/{lesson_basename}.md"
 
             print(lesson_path)
 
@@ -125,7 +132,11 @@ class Box:
 
     # Render box object as Markdown or HTML
     def render(self):
-        output = ''
+        output = []
+        output.append(f"## {self.name}\n")
+        output.append(f"{self.description}\n")
+        for lesson in self.lessons:
+            output.append(lesson.render())
         return output
 
     # Load box object from JSON

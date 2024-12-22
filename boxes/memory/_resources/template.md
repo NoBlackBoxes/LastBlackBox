@@ -1,15 +1,15 @@
 # The Last Black Box : Memory
-In this box, we will learn about memory...
+In this box, you will learn about memory...
 
 ## Memory{11}
-{descriptions.md}
+{Info:Description}
 
-{Flash-Memory.md}
-{NB3_Building-an-SR-Latch.md}
-{Flip-Flop.md}
-{SR-Latch.md}
+{Lesson:Flash-Memory}
+{Lesson:NB3_Building-an-SR-Latch}
+{Lesson:Flip-Flop}
+{Lesson:SR-Latch}
 
 ---
 
 # Projects
-{projects.md}
+{Project:Some-Project}

@@ -1,12 +1,12 @@
 # The Last Black Box : Intelligence
-In this box, we will learn about intelligence...
+In this box, you will learn about intelligence...
 
 ## Intelligence{11}
-{descriptions.md}
+{Info:Description}
 
-{Large-Language-Models.md}
+{Lesson:Large-Language-Models}
 
 ---
 
 # Projects
-{projects.md}
+{Project:Some-Project}

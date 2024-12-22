@@ -1,13 +1,13 @@
 # The Last Black Box : Power
-In this box, we will learn about power...
+In this box, you will learn about power...
 
 ## Power{11}
-{descriptions.md}
+{Info:Description}
 
-{NB3_Power-Supply.md}
-{DC-DC-Converters.md}
+{Lesson:NB3_Power-Supply}
+{Lesson:DC-DC-Converters}
 
 ---
 
 # Projects
-{projects.md}
+{Project:Some-Project}

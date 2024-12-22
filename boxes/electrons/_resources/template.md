@@ -1,31 +1,31 @@
 # The Last Black Box : Electrons
-In this box, we will learn about electrons...how to measure them and how to manipulate them.
+In this box, you will learn about electrons...
 
 ## Electrons{11}
-{descriptions.md}
+{Info:Description}
 
-{NB3_Multimeter-Basics.md}
-{Voltage-Dividers.md}
-{NB3_Body.md}
-{NB3_Designing-PCBs-With-KiCAD.md}
-{NB3_Measuring-Resistance.md}
-{NB3_Building-Circuits.md}
-{NB3_Building-Voltage-Dividers.md}
-{Electric-Fields.md}
-{Capacitors.md}
-{Resistors.md}
-{NB3_Measuring-Current.md}
-{Current.md}
-{Ohms-Law.md}
-{NB3_How-Do-Multimeters-Work.md}
-{Power.md}
-{NB3_Measuring-Voltage.md}
-{Batteries.md}
-{NB3_Building-a-Battery.md}
-{Conductors.md}
-{Voltage.md}
+{Lesson:NB3_Multimeter-Basics}
+{Lesson:Voltage-Dividers}
+{Lesson:NB3_Body}
+{Lesson:NB3_Designing-PCBs-With-KiCAD}
+{Lesson:NB3_Measuring-Resistance}
+{Lesson:NB3_Building-Circuits}
+{Lesson:NB3_Building-Voltage-Dividers}
+{Lesson:Electric-Fields}
+{Lesson:Capacitors}
+{Lesson:Resistors}
+{Lesson:NB3_Measuring-Current}
+{Lesson:Current}
+{Lesson:Ohms-Law}
+{Lesson:NB3_How-Do-Multimeters-Work}
+{Lesson:Power}
+{Lesson:NB3_Measuring-Voltage}
+{Lesson:Batteries}
+{Lesson:NB3_Building-a-Battery}
+{Lesson:Conductors}
+{Lesson:Voltage}
 
 ---
 
 # Projects
-{projects.md}
+{Project:Some-Project}

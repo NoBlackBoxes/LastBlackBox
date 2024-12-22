@@ -1,17 +1,17 @@
 # The Last Black Box : Atoms
-In this box, we will learn about atoms...what they are made of and how they interact to create molecules.
+In this box, you will learn about atoms...
 
 ## Atoms{11}
-{descriptions.md}
+{Info:Description}
 
-{Atomic-Structure.md}
-{The-Periodic-Table.md}
-{Chemistry.md}
-{Nuclear-Forces.md}
-{Fission-and-Fusion.md}
-{Heat.md}
+{Lesson:Atomic-Structure}
+{Lesson:The-Periodic-Table}
+{Lesson:Chemistry}
+{Lesson:Heat}
+{Lesson:Nuclear-Forces}
+{Lesson:Fission-and-Fusion}
 
 ---
 
 # Projects
-{projects.md}
+{Project:Some-Project}

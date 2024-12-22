@@ -1,15 +1,15 @@
 # The Last Black Box : Light
-In this box, we will learn about light...
+In this box, you will learn about light...
 
 ## Light{11}
-{descriptions.md}
+{Info:Description}
 
-{The-EM-Spectrum.md}
-{Optics.md}
-{Maxwells-Equations.md}
-{Electromagnetic-Radiation.md}
+{Lesson:The-EM-Spectrum}
+{Lesson:Optics}
+{Lesson:Maxwells-Equations}
+{Lesson:Electromagnetic-Radiation}
 
 ---
 
 # Projects
-{projects.md}
+{Project:Some-Project}

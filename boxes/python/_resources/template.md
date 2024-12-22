@@ -1,12 +1,12 @@
 # The Last Black Box : Python
-In this box, we will learn about python...
+In this box, you will learn about python...
 
 ## Python{11}
-{descriptions.md}
+{Info:Description}
 
-{Virtual-Environments.md}
+{Lesson:Virtual-Environments}
 
 ---
 
 # Projects
-{projects.md}
+{Project:Some-Project}

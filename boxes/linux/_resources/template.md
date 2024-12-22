@@ -1,14 +1,14 @@
 # The Last Black Box : Linux
-In this box, we will learn about linux...
+In this box, you will learn about linux...
 
 ## Linux{11}
-{descriptions.md}
+{Info:Description}
 
-{Package-Managers.md}
-{Navigating-the-Command-Line.md}
-{Git.md}
+{Lesson:Package-Managers}
+{Lesson:Navigating-the-Command-Line}
+{Lesson:Git}
 
 ---
 
 # Projects
-{projects.md}
+{Project:Some-Project}

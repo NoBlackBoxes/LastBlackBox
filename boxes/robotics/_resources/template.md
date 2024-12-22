@@ -1,15 +1,15 @@
 # The Last Black Box : Robotics
-In this box, we will learn about robotics...
+In this box, you will learn about robotics...
 
 ## Robotics{11}
-{descriptions.md}
+{Info:Description}
 
-{NB3_Muscles-DC-Gear-Motors.md}
-{NB3_Muscles-Servos.md}
-{NB3_Build-a-Braitenberg-Vehicle.md}
-{NB3_Ball-Caster.md}
+{Lesson:NB3_Muscles-DC-Gear-Motors}
+{Lesson:NB3_Muscles-Servos}
+{Lesson:NB3_Build-a-Braitenberg-Vehicle}
+{Lesson:NB3_Ball-Caster}
 
 ---
 
 # Projects
-{projects.md}
+{Project:Some-Project}

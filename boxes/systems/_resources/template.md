@@ -1,18 +1,18 @@
 # The Last Black Box : Systems
-In this box, we will learn about systems...
+In this box, you will learn about systems...
 
 ## Systems{11}
-{descriptions.md}
+{Info:Description}
 
-{NB3_Programming-Concurrency-Arduino.md}
-{Operating-Systems.md}
-{NB3_Connecting-to-RPi.md}
-{NB3_Midbrain.md}
-{Visual-Studio-Code.md}
-{Multi-Tasking.md}
-{NB3_RPiOS.md}
+{Lesson:NB3_Programming-Concurrency-Arduino}
+{Lesson:Operating-Systems}
+{Lesson:NB3_Connecting-to-RPi}
+{Lesson:NB3_Midbrain}
+{Lesson:Visual-Studio-Code}
+{Lesson:Multi-Tasking}
+{Lesson:NB3_RPiOS}
 
 ---
 
 # Projects
-{projects.md}
+{Project:Some-Project}

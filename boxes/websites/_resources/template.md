@@ -1,12 +1,12 @@
 # The Last Black Box : Websites
-In this box, we will learn about websites...
+In this box, you will learn about websites...
 
 ## Websites{11}
-{descriptions.md}
+{Info:Description}
 
-{HTML.md}
+{Lesson:HTML}
 
 ---
 
 # Projects
-{projects.md}
+{Project:Some-Project}

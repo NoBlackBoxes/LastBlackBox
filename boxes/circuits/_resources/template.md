@@ -1,12 +1,12 @@
 # The Last Black Box : Circuits
-In this box, we will learn about circuits...
+In this box, you will learn about circuits...
 
 ## Circuits{11}
-{descriptions.md}
+{Info:Description}
 
-{Radios.md}
+{Lesson:Radios}
 
 ---
 
 # Projects
-{projects.md}
+{Project:Some-Project}

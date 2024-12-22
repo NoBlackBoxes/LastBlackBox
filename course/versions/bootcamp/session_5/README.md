@@ -47,7 +47,3 @@ The first step will be acquiring an image using Python (so we can then manipulat
 Project Work
 
 ----
-
-
-
-  ----

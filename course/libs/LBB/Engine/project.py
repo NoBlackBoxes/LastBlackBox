@@ -52,31 +52,31 @@ class Project:
 
     # Parse project string
     def parse(self, text):
-        # Set Line counter
-        line_count = 0
-        max_count = len(text)
-
-         # Extract name
-        line_count += 1
-        self.name = text[1][4:-1]
-        line_count += 1
-
-        # Extract steps
-        self.steps = []
-        step_count = 0
-        while line_count < max_count:
-            if text[line_count][0] != '\n':
-                # Classify step
-                if text[line_count].startswith('<p align="center"><img'):
-                    image = Image.Image(text[line_count])
-                    image.index = step_count
-                    self.steps.append(image)
-                else:
-                    instruction = Instruction.Instruction(text[line_count].strip())
-                    instruction.index = step_count
-                    self.steps.append(instruction)
-                step_count += 1
-            line_count += 1
+        ## Set Line counter
+        #line_count = 0
+        #max_count = len(text)
+        #
+        # # Extract name
+        #line_count += 1
+        #self.name = text[1][4:-1]
+        #line_count += 1
+        #
+        ## Extract steps
+        #self.steps = []
+        #step_count = 0
+        #while line_count < max_count:
+        #    if text[line_count][0] != '\n':
+        #        # Classify step
+        #        if text[line_count].startswith('<p align="center"><img'):
+        #            image = Image.Image(text[line_count])
+        #            image.index = step_count
+        #            self.steps.append(image)
+        #        else:
+        #            instruction = Instruction.Instruction(text[line_count].strip())
+        #            instruction.index = step_count
+        #            self.steps.append(instruction)
+        #        step_count += 1
+        #    line_count += 1
         return
         
 #FIN

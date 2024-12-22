@@ -1,12 +1,12 @@
 # The Last Black Box : Learning
-In this box, we will learn about learning...
+In this box, you will learn about learning...
 
 ## Learning{11}
-{descriptions.md}
+{Info:Description}
 
-{NB3_Clicker-Training.md}
+{Lesson:NB3_Clicker-Training}
 
 ---
 
 # Projects
-{projects.md}
+{Project:Some-Project}

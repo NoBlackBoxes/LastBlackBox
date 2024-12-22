@@ -1,13 +1,13 @@
 # The Last Black Box : Amplifiers
-In this box, we will learn about amplifiers...
+In this box, you will learn about amplifiers...
 
 ## Amplifiers{11}
-{descriptions.md}
+{Info:Description}
 
-{Differential-Amplifier.md}
-{Op-Amps.md}
+{Lesson:Differential-Amplifier}
+{Lesson:Op-Amps}
 
 ---
 
 # Projects
-{projects.md}
+{Project:Some-Project}

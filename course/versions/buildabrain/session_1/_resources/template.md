@@ -2,24 +2,26 @@
 We will start by learning how electricity is used to create "sensors", which will be the inputs for your robot brain. Sensors will measure anything you want your robot to know about the world (light intensity, temperature, pressure, sound, etc.).
 
 ## Atoms{01}
-*"Let's start at the very beginning, a very good place to start"*. - R&H
-
-{Atomic-Structure.md}
-{The-Periodic-Table.md}
-{Heat.md}
+{template.md:Description}
+---
+{lessons/Atomic-Structure:Lesson}
+{lessons/The-Periodic-Table:Lesson}
+{lessons/Heat:Lesson}
+---
 
 ## Electrons{01}
-Electrons are the sub-atomic particles that underlie *electricity*. Controlling the movement of electrons (and the effects of their movement) will allow us to build many different kinds of electronic devices, from simple circuits to robots and computers.
-
-{Voltage.md}
-{Conductors.md}
-{Batteries.md}
-{Current.md}
-{Resistors.md}
-{NB3_Body.md}
-{NB3_Building-Circuits.md}
-{Ohms-Law.md}
-{Voltage-Dividers.md}
+{description}
+---
+{Voltage}
+{Conductors}
+{Batteries}
+{Current}
+{Resistors}
+{NB3_Body}
+{NB3_Building-Circuits}
+{Ohms-Law}
+{Voltage-Dividers}
+---
 
 ## Sensors{01}
 Your robot's brain is based on digital computers, which can *only* measure electrical signals. Sensors are necessary to convert (transduce) physical signals (light intensity, heat, air pressure, etc.) into electrical signals.

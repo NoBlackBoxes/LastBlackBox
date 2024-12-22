@@ -26,6 +26,7 @@ class Session:
         self.description = None         # Session description
         self.boxes = None               # Session boxes
         self.project = None             # Session project
+        self.template = None            # Session template
         if text:
             self.parse(text)            # Parse session from template text
         elif dictionary:
@@ -98,6 +99,10 @@ class Session:
                 project_text.append(text[line_count])
             line_count += 1
         self.project = Project.Project(project_text)
+
+        # Store template
+        self.template = text
+
         return
 
 #FIN

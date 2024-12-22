@@ -1,12 +1,12 @@
 # The Last Black Box : Servers
-In this box, we will learn about servers...
+In this box, you will learn about servers...
 
 ## Servers{11}
-{descriptions.md}
+{Info:Description}
 
-{Flask.md}
+{Lesson:Flask}
 
 ---
 
 # Projects
-{projects.md}
+{Project:Some-Project}

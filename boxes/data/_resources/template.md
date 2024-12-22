@@ -1,14 +1,14 @@
 # The Last Black Box : Data
-In this box, we will learn about data...
+In this box, you will learn about data...
 
 ## Data{11}
-{descriptions.md}
+{Info:Description}
 
-{Analog-to-Digital-Converters.md}
-{Binary-Numbers.md}
-{NB3_Build-an-ADC-input.md}
+{Lesson:Analog-to-Digital-Converters}
+{Lesson:Binary-Numbers}
+{Lesson:NB3_Build-an-ADC-input}
 
 ---
 
 # Projects
-{projects.md}
+{Project:Some-Project}

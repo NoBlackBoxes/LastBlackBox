@@ -1,13 +1,13 @@
 # The Last Black Box : Sensors
-In this box, we will learn about sensors...
+In this box, you will learn about sensors...
 
 ## Sensors{11}
-{descriptions.md}
+{Info:Description}
 
-{Transducers.md}
-{NB3_Building-a-Light-Sensor.md}
+{Lesson:Transducers}
+{Lesson:NB3_Building-a-Light-Sensor}
 
 ---
 
 # Projects
-{projects.md}
+{Project:Some-Project}

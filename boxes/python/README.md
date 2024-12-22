@@ -1,6 +1,6 @@
 # Python
 
-Seting up a python environment
+Setting up a python environment.
 
 ----
 

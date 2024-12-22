@@ -1,15 +1,15 @@
 # The Last Black Box : Magnets
-In this box, we will learn about magnets...
+In this box, you will learn about magnets...
 
 ## Magnets{11}
-{descriptions.md}
+{Info:Description}
 
-{NB3_Building-a-Speaker.md}
-{Ferromagnetism.md}
-{Electromagnets.md}
-{Induction.md}
+{Lesson:NB3_Building-a-Speaker}
+{Lesson:Ferromagnetism}
+{Lesson:Electromagnets}
+{Lesson:Induction}
 
 ---
 
 # Projects
-{projects.md}
+{Project:Some-Project}

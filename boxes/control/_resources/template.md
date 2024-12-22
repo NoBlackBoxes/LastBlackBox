@@ -1,15 +1,15 @@
 # The Last Black Box : Control
-In this box, we will learn about control...
+In this box, you will learn about control...
 
 ## Control{11}
-{descriptions.md}
+{Info:Description}
 
-{PWM.md}
-{Servo-Loops.md}
-{NB3_Building-a-PWM-Speed-Controller.md}
-{H-Bridges.md}
+{Lesson:PWM}
+{Lesson:Servo-Loops}
+{Lesson:NB3_Building-a-PWM-Speed-Controller}
+{Lesson:H-Bridges}
 
 ---
 
 # Projects
-{projects.md}
+{Project:Some-Project}

@@ -1,13 +1,13 @@
 # The Last Black Box : Logic
-In this box, we will learn about logic...
+In this box, you will learn about logic...
 
 ## Logic{11}
-{descriptions.md}
+{Info:Description}
 
-{Logic-Gates.md}
-{NB3_Build-an-ADC-output.md}
+{Lesson:Logic-Gates}
+{Lesson:NB3_Build-an-ADC-output}
 
 ---
 
 # Projects
-{projects.md}
+{Project:Some-Project}

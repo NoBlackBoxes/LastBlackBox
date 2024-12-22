@@ -1,15 +1,15 @@
 # The Last Black Box : Computers
-In this box, we will learn about computers...
+In this box, you will learn about computers...
 
 ## Computers{11}
-{descriptions.md}
+{Info:Description}
 
-{Architecture.md}
-{NB3_Hindbrain.md}
-{NB3_Building-a-Theremin.md}
-{NB3_Programming-Arduino.md}
+{Lesson:Architecture}
+{Lesson:NB3_Hindbrain}
+{Lesson:NB3_Building-a-Theremin}
+{Lesson:NB3_Programming-Arduino}
 
 ---
 
 # Projects
-{projects.md}
+{Project:Some-Project}

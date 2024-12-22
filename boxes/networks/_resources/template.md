@@ -1,12 +1,12 @@
 # The Last Black Box : Networks
-In this box, we will learn about networks...
+In this box, you will learn about networks...
 
 ## Networks{11}
-{descriptions.md}
+{Info:Description}
 
-{Sockets.md}
+{Lesson:Sockets}
 
 ---
 
 # Projects
-{projects.md}
+{Project:Some-Project}

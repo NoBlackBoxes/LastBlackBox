@@ -1,12 +1,12 @@
 # The Last Black Box : Vision
-In this box, we will learn about vision...
+In this box, you will learn about vision...
 
 ## Vision{11}
-{descriptions.md}
+{Info:Description}
 
-{Cameras.md}
+{Lesson:Cameras}
 
 ---
 
 # Projects
-{projects.md}
+{Project:Some-Project}
