@@ -22,33 +22,35 @@ You will be building a brain for your robot. The robot's physical layout mimics 
 
 ## Schedule
 
-### Day 1 - Analog Electronics
+### Day 1 - Sensors and Motors
 
-- [Morning](session_1/): Atoms, Electrons, and Sensors
-- [Afternoon](session_2/): Magnets, Motors, and Transistors
+- [Morning](01_analog-electronics/): Atoms, Electrons, and Sensors
+- [Afternoon](02_magnets-and-semiconductors/): Magnets, Motors, and Transistors
 
-### Day 2 - Digital Computers
+### Day 2 - Computers and Robotics
 
-- [Morning](session_3/): Data, Logic, Memory, and Computers
-- [Afternoon](session_4/): Control and Robotics
+- [Morning](03_digital-computers/): Data, Logic, Memory, and Computers
+- [Afternoon](04_robot-control/): Control and Robotics
 
-### Day 3 - The Software Stack
+### Day 3 - Systems and Networks
 
-- [Morning](session_5/): Power, Systems, Linux, and Python
-- [Afternoon](session_6/): Networks, Websites, and Servers
+- [Morning](05_software-systems/): Power, Systems, Linux, and Python
+- [Afternoon](06_the-internet/): Networks, Websites, and Servers
 
-### Day 4 - Signal Processing
+### Day 4 - Audio
 
-- [Morning](session_7/): Audio
-- [Afternoon](session_8/): Digital signal processing (1-D data)
+- [Morning](07_microphone-and-speakers/): Audio input and output hardware
+- [Afternoon](08_signal-processing/): Signal processing (1-D data)
 
-### Day 5 - Computer Vision
+### Day 5 - Images
 
-- [Morning](session_9/): Vision
-- [Afternoon](session_10/): Image processing (2-D data)
+- [Morning](09_cameras/): Image acquisition hardware
+- [Afternoon](10_computer-vision/): Image processing (2-D data)
 
 ---
 
 ## License
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />The entire LastBlackBox repository and website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+
+---

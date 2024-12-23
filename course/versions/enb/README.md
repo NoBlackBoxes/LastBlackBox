@@ -1,18 +1,18 @@
-# The Last Black Box : *Experimental Neuroscience Bootcamp*
+# The Last Black Box : *Bootcamp*
 
-> **NeuroKit** (LBB-103): A one-week ***Technology Bootcamp*** for neuroscience researchers
+> **LBB-102**: A one-week ***Bootcamp Version*** of the Last Black Box course
 
 <p align="center">
 <img src="../../_resources/designs/layout/png/layout_bootcamp.png" alt="LBB bootcamp layout" width="800">
 <br>
-<span>The <b>black boxes</b> you will open during <b>ENB</b></span>
+<span>The <b>black boxes</b> you will open during Bootcamp</span>
 </p>
 
 ----
 
 ## NB3
 
-You will be building a robot. The robot's physical layout mimics the basic anatomy of a (vertebrate) brain. As you progress through the course, your robot will *evolve* into an increasingly sophisticated machine. The goal is to create an "intelligent" machine without using any **black boxes**. We thus call this robot the No-Black-Box-Brain or NBBB or ***NB3***.
+You will be building a brain for your robot. The robot's physical layout mimics the basic anatomy of a (vertebrate) brain. As you progress through the course, your robot will *evolve* into an increasingly sophisticated machine. The goal is to create an "intelligent" machine without using any **black boxes**. We thus call this robot the No-Black-Box-Brain or NBBB or ***NB3***.
 
 <p align="center">
 <img src="../../_resources/designs/NB3/NB3_render.png" alt="NB3 outline" width="300">
@@ -22,30 +22,30 @@ You will be building a robot. The robot's physical layout mimics the basic anato
 
 ## Schedule
 
-### Day 1 - [Analog Electronics](session_1/README.md)
+### Day 1 - Sensors and Motors
 
-- *Morning:* Atoms, Electrons, Magnets, Sensors, and Motors
-- *Afternoon:* Transistors
+- [Morning](01_analog-electronics/): Atoms, Electrons, and Sensors
+- [Afternoon](02_magnets-and-semiconductors/): Magnets, Motors, and Transistors
 
-### Day 2 - [Digital Computers](session_2/README.md)
+### Day 2 - Computers and Robotics
 
-- *Morning:* Computers
-- *Afternoon:* Robotics
+- [Morning](03_digital-computers/): Data, Logic, Memory, and Computers
+- [Afternoon](04_robot-control/): Control and Robotics
 
-### Day 3 - [The Software Stack](session_3/README.md)
+### Day 3 - Systems and Networks
 
-- *Morning:* Power, Systems, Linux, Python
-- *Afternoon:* Networks, Websites, and Servers
+- [Morning](05_software-systems/): Power, Systems, Linux, and Python
+- [Afternoon](06_the-internet/): Networks, Websites, and Servers
 
-### Day 4 - [Signal Processing](session_4)
+### Day 4 - Audio
 
-- *Morning:* [Audio (1-D data)](session_4/Morning.md)
-- *Afternoon:* [Digital signal processing](session_4/Afternoon.md)
+- [Morning](07_microphone-and-speakers/): Audio input and output hardware
+- [Afternoon](08_signal-processing/): Signal processing (1-D data)
 
-### Day 5 - [Computer Vision](session_5)
+### Day 5 - Images
 
-- *Morning:* [Vision (2-D data)](session_5/Morning.md)
-- *Afternoon:* [Image processing](session_5/Afternoon.md)
+- [Morning](09_cameras/): Image acquisition hardware
+- [Afternoon](10_computer-vision/): Image processing (2-D data)
 
 ---
 
