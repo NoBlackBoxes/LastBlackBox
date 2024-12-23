@@ -1,5 +1,5 @@
 # Bootcamp : Digital Computers
-It's time to learn how transistors can perform logic, store information, and work together in a circuit that **computes**.
+It's time to learn how transistors can perform logic, store information, and work together in a circuit that *computes*.
 
 ## Logic{01}
 {Logic-Gates}

@@ -1,5 +1,5 @@
 # Bootcamp : Robot Control
-It's time to learn how transistors can perform logic, store information, and work together in a circuit that **computes**.
+Here we will combine our sensors, motors, and a computer hindbrain to create a simple robot with complex behaviour.
 
 ## Control{01}
 {Servo-Loops}

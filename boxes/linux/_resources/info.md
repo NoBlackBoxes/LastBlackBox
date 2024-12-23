@@ -1,2 +1,2 @@
 ## Description
-Let's learn Linux.
+A free and open source operating system.

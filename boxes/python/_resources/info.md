@@ -1,2 +1,2 @@
 ## Description
-Setting up a python environment.
+Python is an interpreted programming language.
