@@ -119,28 +119,46 @@
 
 ## Python
 - [ ] [Virtual Environments]()
+- [ ] [Introducing the Interpreter]()
 
 ## Networks
+- [ ] [NB3 : Remote Control NB3 (TUI)]()
 - [ ] [Sockets]()
+- [ ] [NB3 : Develop a Protocol]()
 
 ## Websites
+- [ ] [Javascript]()
 - [ ] [HTML]()
+- [ ] [CSS]()
+- [ ] [NB3 : Build-a-Website]()
 
 ## Servers
+- [ ] [NB3 : Remote Control NB3 (GUI)]()
+- [ ] [NB3 : Host a Website]()
 - [ ] [Flask]()
 
 ## Security
 - [ ] [One Way Functions]()
 
 ## Audio
+- [ ] [NB3 : Install the Mouth]()
+- [ ] [NB3 : Install the Ears]()
+- [ ] [NB3 : Build and Install the Linux I2S Driver]()
+- [ ] [Speakers]()
 - [ ] [I2S]()
+- [ ] [Signal Processing]()
+- [ ] [Microphones]()
 
 ## Vision
 - [ ] [Cameras]()
+- [ ] [NB3 : Streaming Images]()
+- [ ] [Image-Processing]()
+- [ ] [NB3 : Install the Eye]()
 
 ## Learning
 - [ ] [NB3 : Clicker Training]()
 
 ## Intelligence
 - [ ] [Large Language Models]()
+- [ ] [NB3 : Install the Forebrain (NPU)]()
 

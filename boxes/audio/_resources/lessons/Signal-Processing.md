@@ -1,0 +1,10 @@
+# Audio : Signal Processing
+Digital signal processing is a set of techniques for processing one-dimensional data (1D).
+
+## [Video]()
+
+## Concepts
+
+## Connections
+
+## Lesson

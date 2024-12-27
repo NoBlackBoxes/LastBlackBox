@@ -1,14 +1,14 @@
 # Generate Video Thumbnails
-# - NOTE: Requires that Arial and Verdana "Windows Fonts" installed for use by Inkscape
+# - NOTE: Requires that the Arial and Verdana "Windows Fonts" are installed for use by Inkscape
 
 # Import Libraries
 import os
 import glob
 
 # Import Modules
-import LBB.config as Config
-import LBB.utilities as Utilities
-import Design.png as PNG
+import LBB.Engine.config as Config
+import LBB.Engine.utilities as Utilities
+import LBB.Design.png as PNG
 
 # Specify paths
 resources_folder = f"{Config.course_root}/_resources/videos"
