@@ -28,7 +28,7 @@ for course_name in course_names:
     course = Course.Course(course_name)
 
     # Generate BOM
-    BOM_path = f"{Config.course_root}/_resources/materials/{course.slug}_BOM.csv"
+    BOM_path = f"{Config.course_root}/_resources/materials/BOM/{course.slug}_BOM.csv"
     with open(BOM_path, 'w') as file:
         file.write("Part,Level,Description,Quantity,Datasheet,Supplier,Package,x(mm),y(mm),z(mm)\n")
         file.write(",,,,,,,,,\n")
