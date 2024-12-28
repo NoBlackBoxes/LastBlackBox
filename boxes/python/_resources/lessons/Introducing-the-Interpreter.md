@@ -8,10 +8,11 @@ What is Python? Where is it? How does it work? How can it work for you?
 - Where is the Python interpreter?
 - An interpreter is program running on your operating system. It interprets Python commands into machine code your CPU can understand.
 - Executing a command changes the state of the interpreter. It retains memory items you create...until you close the current interpreter.
-- You can stores commands in a file or execute them in an interactive shell (called IPython).
+- You can store commands in a file or execute them in an interactive shell (called IPython).
 - Python has a simple syntax, which requires you to use indentation/spacing inside of loops, conditions, etc.
 - You can use other libraries by importing them.
 - You can install other libraries/packages using Pip, the Python package manager
+- The Python extension for VS code can help make it easier to write (and view) Python code by highlighting the syntax
 - It is a *good* idea to keep the packages you use separate from those used by your operating system. You can do this by creating a **virtual environment**.
 
 ## Connections
