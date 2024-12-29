@@ -24,7 +24,7 @@ dtparam=i2s=on
 dtoverlay=max98357a,sdmode-pin=16
 ```
 
-### Install Kernal Headers
+### Install Kernel Headers
 
 ```bash
 # Download the Linux kernel headers (for RPi's current kernel version) - after running update/upgrade
@@ -36,14 +36,18 @@ sudo apt-get install raspberrypi-kernel-headers
 The NB3 Ear and NB3 mouth boards need a special driver that is not included by default in the Raspberry Pi Linux kernel. Thus you will have to build (compile and link) the driver as a "kernel module" and then install it in your system. Here are the steps.
 
 ```bash
-# Clone the LastBlackBox repo (if you have not done so already!)
-cd ~
-mkdir NoBlackBoxes
-cd NoBlackBoxes 
-git clone --depth 1 https://github.com/NoBlackBoxes/LastBlackBox
-
 # Navigate to the i2s/driver folder
 cd ~/NoBlackBoxes/LastBlackBox/boxes/audio/i2s/driver
+
+# Create a temporary folder to store the output of the build
+mkdir _tmp
+
+# Copy the required files to the temporary folder
+cp Makefile _tmp/.
+cp nb3-audio-module.c _tmp/.
+
+# Navigate to the temporary folder
+cd _tmp
 
 # Run the Makefile
 make all

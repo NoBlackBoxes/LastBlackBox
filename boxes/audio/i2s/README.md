@@ -11,7 +11,7 @@ i2s is a digital sound protocol used by many compute platforms.
     - Use short pin-to-socket jumper cables to form the connections shown below
 
 <p align="center">
-<img src="_resources/images/NB3_audio_wiring.png" alt="NB3 Audio Wiring" width="1200" height="450">
+<img src="_resources/images/NB3_audio_wiring.png" alt="NB3 Audio Wiring" width="1200">
 </p>
 
 5. Turn on NB3 and test the microphones and speaker with Linux ALSA commands:
