@@ -3,7 +3,7 @@ import time
 
 # Configure serial port
 ser = serial.Serial()
-ser.baudrate = 19200
+ser.baudrate = 115200
 ser.port = '/dev/ttyUSB0'
 
 # Open serial port

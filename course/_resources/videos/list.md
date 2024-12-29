@@ -102,6 +102,7 @@
 ## Power
 - [x] [NB3 : Power Supply](https://vimeo.com/1035306761)
 - [x] [DC-DC Converters](https://vimeo.com/1035304311)
+- [ ] [NB3 : Battery Pack]()
 
 ## Systems
 - [x] [Visual Studio Code](https://vimeo.com/1036716612)

@@ -12,7 +12,7 @@ int pin_right_B = 5;
 
 void setup() {
   // Initialize serial port
-  Serial.begin(19200);
+  Serial.begin(115200);
 
   // LED Feedback
   pinMode(LED_BUILTIN, OUTPUT);

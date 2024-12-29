@@ -169,7 +169,7 @@ We will soon see what we can do with Python!
 
 void setup() {
   // Initialize serial port
-  Serial.begin(19200);
+  Serial.begin(115200);
 
   // Initialize output pins
   pinMode(LED_BUILTIN, OUTPUT);
