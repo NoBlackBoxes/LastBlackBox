@@ -1,4 +1,4 @@
-# Requires installing sshkeyboard: pip3 install sshkeyboard
+# Requires installing sshkeyboard: pip install sshkeyboard
 import os
 import serial
 import time

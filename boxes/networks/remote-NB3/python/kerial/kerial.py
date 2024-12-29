@@ -29,12 +29,24 @@ try:
         if char == ord('q'):
             break
         elif char == ord('x'):
-            screen.addstr(0, 0, 'OFF')
+            screen.addstr(0, 0, 'STOP ')
             ser.write(b'x')
             time.sleep(0.05)
-        elif char == ord('o'):
-            screen.addstr(0, 0, 'ON')
-            ser.write(b'o')
+        elif char == curses.KEY_RIGHT:
+            screen.addstr(0, 0, 'right')
+            ser.write(b'r')
+            time.sleep(0.05)
+        elif char == curses.KEY_LEFT:
+            screen.addstr(0, 0, 'left ')       
+            ser.write(b'l')
+            time.sleep(0.05)
+        elif char == curses.KEY_UP:
+            screen.addstr(0, 0, 'up   ')       
+            ser.write(b'f')
+            time.sleep(0.05)
+        elif char == curses.KEY_DOWN:
+            screen.addstr(0, 0, 'down ')
+            ser.write(b'b')
             time.sleep(0.05)
 finally:
     # shut down
