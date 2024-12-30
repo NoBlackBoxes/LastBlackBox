@@ -17,11 +17,23 @@ i2s is a digital sound protocol used by many compute platforms.
 5. Turn on NB3 and test the microphones and speaker with Linux ALSA commands:
 
 ```bash
+# Create a temporary folder to store sound recordings
 cd ~/NoBlackBoxes/LastBlackBox  # Navigate to repo root
 mkdir -p _tmp/sounds   # Create folder for sound files
 cd _tmp/sounds  # Navigate to sound folder
+
+# List audio devices
+arecord -l # input devices
+aplay -l   # output devices
+
+# Record from microphones
 arecord -D plughw:3 -c2 -r 48000 -f S32_LE -t wav -V stereo -v file_stereo.wav
+
+# Playback recording
 aplay -D plughw:3 -c2 -r 48000 -f S32_LE -t wav -V stereo -v file_stereo.wav
+
+# Play an example WAV file
+aplay -D plughw:3 -c2 -r 44100 -f S16_LE -t wav -V stereo -v ~/NoBlackBoxes/LastBlackBox/boxes/audio/_resources/sounds/Bach_prelude_C_major.wav
 ```
 
 ## Usage
