@@ -62,8 +62,26 @@ sudo apt-get install libedgetpu1-std
 5. Install the Tensorflow-lite interpreter for Python (3.7). You will use this to control your EdgeTPU from Python.
 
 ```bash
-sudo pip3 install https://dl.google.com/coral/python/tflite_runtime-2.1.0.post1-cp37-cp37m-linux_armv7l.whl
+#sudo pip3 install https://dl.google.com/coral/python/tflite_runtime-2.1.0.post1-cp37-cp37m-linux_armv7l.whl
+python3 -m pip install tflite-runtime
 ```
+
+*NEW* Update udev rules to the following:
+- create file /etc/udev/rules.d/71-edgetpu.rules
+- add
+```bash
+# Change udev rules (needed to fix weird coral issue where it can't load delegate)
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="1a6e", ATTRS{idProduct}=="089a", MODE="0664", TAG+="uaccess"
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="18d1", ATTRS{idProduct}=="9302", MODE="0664", TAG+="uaccess"
+```
+
+- Relaod rules
+```bash
+sudo udevadm control --reload-rules
+sudo udevadm trigger
+```
+
+Should work...
 
 6. Now connect your EdgeTPU to the USB3 port (a blue one) of your RPi.
 
@@ -87,13 +105,13 @@ git clone https://github.com/google-coral/tflite.git
 ```bash
 cd ~/LastBlackBox/tools/coral
 cd tflite/python/examples/classification
-sudo ./install_requirements.sh
+./install_requirements.sh
 ```
 
 3. Run the model (classify_image.py) with a test image, on your EdgeTPU, and see if it works.
 
 ```bash
-sudo python3 classify_image.py \
+python3 classify_image.py \
 --model models/mobilenet_v2_1.0_224_inat_bird_quant_edgetpu.tflite \
 --labels models/inat_bird_labels.txt \
 --input images/parrot.jpg
