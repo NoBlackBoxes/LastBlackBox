@@ -33,7 +33,7 @@ M3 nut (square)|10|square M3 nut 1.8 mm thick|4|-|[-L-](https://www.accu.co.uk/f
 
 ## Setup your NPU
 
-Your nerual processing unit is made by Google (and distributed by Coral). It contains an EdgeTPU (tensor processing unit) that very efficiently implements the computations used in (feed forward) neural networks. It can connect to your RPi via USB3, allowing you to send "input" data and retreive "outputs" after network inference very quickly. However, in order to communicate with your EdgeTPU, you will need to install some additional libraries.
+Your neural processing unit is made by Google (and distributed by Coral). It contains an EdgeTPU (tensor processing unit) that very efficiently implements the computations used in (feed forward) neural networks. It can connect to your RPi via USB3, allowing you to send "input" data and retrieve "outputs" after network inference very quickly. However, in order to communicate with your EdgeTPU, you will need to install some additional libraries.
 
 1. Add the EdgeTPU runtime library "package feed" to the list of feeds that APT will monitor
 
