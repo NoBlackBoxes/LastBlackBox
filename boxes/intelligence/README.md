@@ -59,52 +59,57 @@ sudo apt-get update
 sudo apt-get install libedgetpu1-std
 ```
 
-5. Install the Tensorflow-lite interpreter for Python (3.7). You will use this to control your EdgeTPU from Python.
+5. Install the Tensorflow-lite interpreter for Python. You will use this to control your EdgeTPU from Python.
 
 ```bash
-#sudo pip3 install https://dl.google.com/coral/python/tflite_runtime-2.1.0.post1-cp37-cp37m-linux_armv7l.whl
 python3 -m pip install tflite-runtime
 ```
 
-*NEW* Update udev rules to the following:
-- create file /etc/udev/rules.d/71-edgetpu.rules
-- add
+6. Update UDEV rules to allow USB doral device access.
+
+- Create file "/etc/udev/rules.d/71-edgetpu.rules"
+
 ```bash
-# Change udev rules (needed to fix weird coral issue where it can't load delegate)
-SUBSYSTEMS=="usb", ATTRS{idVendor}=="1a6e", ATTRS{idProduct}=="089a", MODE="0664", TAG+="uaccess"
-SUBSYSTEMS=="usb", ATTRS{idVendor}=="18d1", ATTRS{idProduct}=="9302", MODE="0664", TAG+="uaccess"
+sudo nano /etc/udev/rules.d/71-edgetpu.rules
 ```
 
-- Relaod rules
+- Add the following contents and save the file
+
+```txt
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="1a6e", ATTRS{idProduct}=="089a", MODE="0664", TAG+="uaccess"
+```
+
+- Reload UDEV rules
 ```bash
 sudo udevadm control --reload-rules
 sudo udevadm trigger
 ```
 
-Should work...
-
-6. Now connect your EdgeTPU to the USB3 port (a blue one) of your RPi.
+7. Now connect your EdgeTPU to the USB3 port (a blue one) of your RPi.
 
 ## Test your NPU
 
-Let's see if your EdgeTPU is working.
+Let's see if your EdgeTPU is working!
 
 1. Create a new folder to store some example code and pre-trained neural networks (as well as test datasets)
 
 ```bash
-cd ~/LastBlackBox
-mkdir -p tools
-cd tools
+# Navigate to your LBB temporary folder
+cd ~/NoBlackBoxes/LastBlackBox/_tmp
+
+# Make and enter a directory to store the example code and datasets
 mkdir coral
 cd coral
+
+# Clone and enter the Google tflite examples
 git clone https://github.com/google-coral/tflite.git
+cd tflite
 ```
 
 2. Download a "model" that was trained to take pictures of birds and classify them into species
 
 ```bash
-cd ~/LastBlackBox/tools/coral
-cd tflite/python/examples/classification
+cd python/examples/classification
 ./install_requirements.sh
 ```
 
