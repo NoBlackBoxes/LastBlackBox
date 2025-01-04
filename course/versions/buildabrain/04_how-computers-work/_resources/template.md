@@ -1,4 +1,4 @@
-# Build a Brain : Session 4 - How Computers Work
+# Build a Brain : How Computers Work
 Logic + Memory = Computer
 
 ## Power

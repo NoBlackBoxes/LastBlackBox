@@ -22,50 +22,42 @@ You will be building a brain for your robot. The robot's physical layout mimics 
 
 ## Schedule
 
-### Session 1 - [Sensing the World](session_1/README.md)
-
+### Session 1 - [Sensing the World](01_sensing-the-world/README.md)
 - Add some sensory input
   - Learn about atoms, electrons, sensors, and light
   - **Project**: *Build a Light Sensor*
 
-### Session 2 - [Making Things Move](session_2/README.md)
-
+### Session 2 - [Making Things Move](02_making-things-move/README.md)
 - Create and control motion
   - Learn about magnets and motors
   - **Project**: *Build a Speaker*
 
-### Session 3 - [Digital Decisions](session_3/README.md)
-
+### Session 3 - [Digital Decisions](03_digital-decisions/README.md)
 - The most important thing you were never taught
   - Learn about transistors, amplifiers, circuits, and power
   - **Project**: *Build a Light-Sensitive Motor*
 
-### Session 4 - [How Computers Work](session_4/README.md)
-
+### Session 4 - [How Computers Work](04_how-computers-work/README.md)
 - To think is to compute
   - Learn about data, logic, memory, computers, and FPGAs
   - **Project**: *Program a Microcontroller*
 
-### Session 5 - [Build a Robot](session_5/README.md)
-
+### Session 5 - [Build a Robot](05_build-a-robot/README.md)
 - Build your first brain + body that can sense, move, and make decisions
   - Learn about control and robotics
   - **Project**: *Build a Braitenberg Vehicle*
 
-### Session 6 - [Software Skills](session_6/README.md)
-
+### Session 6 - [Software Skills](06_software-skills/README.md)
 - Extend your brain with some human-engineered complexity
   - Learn about Linux and Python
   - **Project**: *Connect Wirelessly to your Robot*
 
-### Session 7 - [How Networks Work](session_7/README.md)
-
+### Session 7 - [How the Internet Works](07_how-the-internet-works/README.md)
 - Connect and communicate...like a machine
   - Learn about websites, servers, networks, and security
   - **Project**: *Build a Remote Control Robot*
 
-### Session 8 - [Artificial Intelligence](session_8/README.md)
-
+### Session 8 - [Artificial Intelligence](08_artificial_intelligence/README.md)
 - Make it smart....what is *smart*?
   - Learn about audio, vision, learning, and intelligence
   - **Project**: *Add a Camera, Speaker, and Microphones*
