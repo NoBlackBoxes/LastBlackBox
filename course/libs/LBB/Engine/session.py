@@ -6,6 +6,7 @@ LBB: Session Class
 """
 
 # Import libraries
+import json
 
 # Import modules
 import LBB.Engine.utilities as Utilities
@@ -99,7 +100,31 @@ class Session:
                 project_text.append(text[line_count])
             line_count += 1
         self.project = Project.Project(project_text)
+        return
 
+    # Render session object as Markdown or HTML
+    def render(self, course_name, type="MD"):
+        output = []
+        if type == "MD":
+            output.append(f"# {course_name} : {self.name}\n")
+            output.append(f"{self.description}\n\n")
+        elif type == "HTML":
+            output.append(f"<h1>{course_name} : {self.name}</h1")
+            output.append(f"{self.description}<br>")
+        for box in self.boxes:
+            output.extend(box.render(type=type))
+        return output
+
+    # Load session object from JSON
+    def load(self, path):
+        with open(path, "r") as file:
+            self.from_dict(json.load(file))
+        return
+
+    # Store session object in JSON file
+    def store(self, path):
+        with open(path, "w") as file:
+            json.dump(self.to_dict(), file, indent=4)
         return
 
 #FIN

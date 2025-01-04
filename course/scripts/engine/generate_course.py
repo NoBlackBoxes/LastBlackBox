@@ -26,12 +26,21 @@ importlib.reload(Course)
 name = "Bootcamp"
 course = Course.Course(name)
 
-# Report
-for session in course.sessions:
-    print(session.name)
+# Debug
+sessions = course.sessions[0:1]
+
+# Print README for each sessions
+for session in sessions:
+    print(f"# {course.name} : {session.name}")
+    print(f"{session.description}\n")
     for box in session.boxes:
-        print(f"- {box.name} : {box.depth}")
+        print(f"## {box.name} : {box.depth}")
+        print(f"{box.description}\n")
         for material in box.materials:
-            print(f"  - {material.part}")
+            #print(f"  - {material.part}")
+            pass
+        for lesson in box.lessons:
+            print(f"### {lesson.name}")
+        print(f"\n")
 
 # FIN

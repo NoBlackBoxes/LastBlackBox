@@ -50,8 +50,13 @@ class Video:
         return
 
     # Render video in Markdown or HTML
-    def render(self):
-        embed_string = f"<iframe id=\"video_player\" src=\"https://player.vimeo.com/video/{self.id}?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\" width=\"640\" height=\"360\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write\" title=\"{self.name}\"></iframe>"
-        return "<p align=\"center\">\n" + embed_string + "\n</p>\n"
+    def render(self, type):
+        output = ''
+        if type == "MD":
+            output = f"[{self.name}]({self.url})"
+        elif type == "HTML":
+            embed_string = f"<iframe id=\"video_player\" src=\"https://player.vimeo.com/video/{self.id}?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\" width=\"640\" height=\"360\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write\" title=\"{self.name}\"></iframe>"
+            output = f"<p align=\"center\">\n{embed_string}\n</p>\n"
+        return output
 
 #FIN

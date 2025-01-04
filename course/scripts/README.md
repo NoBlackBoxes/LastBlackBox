@@ -4,6 +4,6 @@ Python scripts to generate LBB designs, material lists, video lists, and run the
 ## Setup
 - Add LBB course libraries to "site-packages"
 ```bash
-# On Host (current Python version 3.12.7, assuming LBB virtual environment)
-echo "/home/${USER}/NoBlackBoxes/LastBlackBox/course/libs" >> /home/${USER}/NoBlackBoxes/LastBlackBox/_tmp/LBB/lib/python3.12/site-packages/LBB.pth
+# On Host (current Python version 3.13.1, assuming LBB virtual environment)
+echo "/home/${USER}/NoBlackBoxes/LastBlackBox/course/libs" >> /home/${USER}/NoBlackBoxes/LastBlackBox/_tmp/LBB/lib/python3.13/site-packages/LBB.pth
 ```

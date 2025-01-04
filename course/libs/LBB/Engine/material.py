@@ -19,7 +19,7 @@ class Material:
     """
     def __init__(self, text=None, dictionary=None):
         self.part = None                # Material part (name)
-        self.level = None               # Material level (depth required)
+        self.depth = None               # Material depth
         self.description = None         # Material description
         self.quantity = None            # Material quantity
         self.datasheet = None           # Material datasheet (link)
@@ -38,7 +38,7 @@ class Material:
     def to_dict(self):
         dictionary = {
             "part": self.part,
-            "level": self.level,
+            "depth": self.depth,
             "description": self.description,
             "quantity": self.quantity,
             "datasheet": self.datasheet,
@@ -53,7 +53,7 @@ class Material:
     # Convert dictionary to material object
     def from_dict(self, dictionary):
         self.part = dictionary.get("part")
-        self.level = dictionary.get("level")
+        self.depth = dictionary.get("depth")
         self.description = dictionary.get("description")
         self.quantity = dictionary.get("quantity")
         self.datasheet = dictionary.get("datasheet")
@@ -68,7 +68,7 @@ class Material:
     def parse(self, text):
         fields = text.split(",")
         self.part = fields[0].strip()
-        self.level = fields[1].strip()
+        self.depth = fields[1].strip()
         self.description = fields[2].strip()
         self.quantity = int(fields[3].strip())
         self.datasheet = fields[4].strip()

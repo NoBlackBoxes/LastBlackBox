@@ -67,7 +67,6 @@ class Box:
         max_count = len(text)
         
         # Extract name, slug, and depth
-        print(text)
         title = text[0][2:].strip()
         self.name = title.split("{")[0]
         self.slug = self.name.lower()
@@ -92,7 +91,7 @@ class Box:
             depths.append("10")
             depths.append("11")
         else:
-            print(f"Invalid Depth Level: {self.depth}")
+            print(f"Invalid Box Depth Level: {self.depth}")
             exit(-1)
 
         # Load materials
@@ -115,9 +114,6 @@ class Box:
                 exit(-1)
             lesson_basename = text[line_count].split("{")[1][:-1]
             lesson_path = f"{Config.boxes_root}/{self.slug}/_resources/lessons/{lesson_basename}.md"
-
-            print(lesson_path)
-
             lesson_text = Utilities.read_clean_text(lesson_path)
             lesson = Lesson.Lesson(lesson_text)
             lesson.index = lesson_count
@@ -127,23 +123,17 @@ class Box:
         return
 
     # Render box object as Markdown or HTML
-    def render(self):
+    def render(self, type="MD"):
         output = []
-        output.append(f"## {self.name}\n")
-        output.append(f"{self.description}\n")
+        if type == "MD":
+            output.append(f"## {self.name}\n")
+            output.append(f"{self.description}\n\n")
+        elif type == "HTML":
+            output.append(f"<h2>{self.name}</h2")
+            output.append(f"{self.description}<br>")
         for lesson in self.lessons:
-            output.append(lesson.render())
+            output.extend(lesson.render(type=type))
+            pass
         return output
 
-    # Load box object from JSON
-    def load(self, path):
-        with open(path, "r") as file:
-            self.from_dict(json.load(file))
-        return
-
-    # Store box object in JSON file
-    def store(self, path):
-        with open(path, "w") as file:
-            json.dump(self.to_dict(), file, indent=4)
-        return
 #FIN

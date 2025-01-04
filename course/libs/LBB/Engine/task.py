@@ -71,22 +71,43 @@ class Task:
         self.steps = []
         step_count = 0
         while not text[line_count].startswith("> "):
+            step_depth = Utilities.get_depth_from_symbol(text[line_count][0])
+            step_text = text[line_count][2:]
             # Classify task step
-            if text[line_count].startswith('!['):
-                image = Image.Image(text[line_count])
+            if step_text.startswith('!['):
+                image = Image.Image(step_text)
                 image.index = step_count
+                image.depth = step_depth
                 self.steps.append(image)
             else:
-                instruction = Instruction.Instruction(text[line_count])
+                instruction = Instruction.Instruction(step_text)
                 instruction.index = step_count
+                instruction.depth = step_depth
                 self.steps.append(instruction)
             step_count += 1
             line_count += 1
 
         # Extract target
         self.target = text[line_count][2:]
-        self.target = Utilities.convert_emphasis_tags(self.target)
-        self.target = Utilities.convert_markdown_links(self.target)
         return
+
+    # Render task object as Markdown or HTML
+    def render(self, type="MD"):
+        output = []
+        if type == "MD":
+            output.append(f"**TASK**: {self.description}\n")
+        elif type == "HTML":
+            output.append(f"<task>")
+        for step in self.steps:
+            output.extend(f"{step.render(type=type)[0]}")
+        if type == "MD":
+            output.append(f"<details><summary><strong>Target</strong></summary>\n")
+            output.append(f"{self.target}\n")
+            output.append(f"</details><hr>\n\n")
+        elif type == "HTML":
+            html = Utilities.convert_emphasis_tags(self.target)
+            html = Utilities.convert_markdown_links(html)
+            output.append(f"{html}\n")
+        return output
 
 #FIN

@@ -15,16 +15,15 @@ We will not add a more powerful computer (which will require more electrical *po
 {Visual-Studio-Code}
 
 ## Linux{01}
-A free and open source operating system.
 
 {Navigating-the-Command-Line}
 {Package-Managers}
 {Git}
 
 ## Python{01}
-Python is an interpreted programming language.
 
-{Virtual-Environment}
+{Introducing-the-Interpreter}
+{Virtual-Environments}
 
 # Project
 ### Explore Linux

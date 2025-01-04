@@ -64,7 +64,7 @@ class Course:
                 session_folders.append(session_folder)
         else:
             course_folder = f"{Config.course_root}/versions/{self.slug}"
-            session_folders = sorted(glob.glob(f"{course_folder}/session_*"))
+            session_folders = sorted(glob.glob(f"{course_folder}/[0-9][0-9]_*"))
 
         # Load sessions from templates
         self.sessions = []

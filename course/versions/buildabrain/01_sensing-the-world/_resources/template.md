@@ -1,17 +1,12 @@
-# Build a Brain : Sensing the world
+# Build a Brain : Sensing the World
 We will start by learning how electricity is used to create "sensors", which will be the inputs for your robot brain. Sensors will measure anything you want your robot to know about the world (light intensity, temperature, pressure, sound, etc.).
 
 ## Atoms{01}
-{template.md:Description}
----
-{lessons/Atomic-Structure:Lesson}
-{lessons/The-Periodic-Table:Lesson}
-{lessons/Heat:Lesson}
----
+{Atomic-Structure}
+{The-Periodic-Table}
+{Heat}
 
 ## Electrons{01}
-{description}
----
 {Voltage}
 {Conductors}
 {Batteries}
@@ -21,17 +16,9 @@ We will start by learning how electricity is used to create "sensors", which wil
 {NB3_Building-Circuits}
 {Ohms-Law}
 {Voltage-Dividers}
----
 
 ## Sensors{01}
-Your robot's brain is based on digital computers, which can *only* measure electrical signals. Sensors are necessary to convert (transduce) physical signals (light intensity, heat, air pressure, etc.) into electrical signals.
-
-{Transducers.md}
-
-#### Watch this video: [Light Sensors](https://vimeo.com/1000794164)
-> A light sensor converts a change light intensity into a change in an electrical signal (voltage, current, or resistance).
-
----
+{Transducers}
 
 # Project
 ### Build a Light Sensor

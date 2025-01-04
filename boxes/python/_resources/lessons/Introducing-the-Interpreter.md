@@ -20,12 +20,7 @@ What is Python? Where is it? How does it work? How can it work for you?
 ## Lesson
 
 - **TASK**: Say "hello world" in Python
-    - Print the words "Hello World" to your terminal screen
-    - Print the words "Hello World" many times on your terminal screen
+    - Print the words "Hello World" on your terminal screen
+    - Print the words "Hello World" on your terminal screen many, many times
     - Print the words "Hello World for the {Nth} time" on your terminal screen, where "Nth" reports the iteration count, i.e. "1", "2", "3"...or (*bonus task*) "1st", "2nd", "3rd", etc.
-> You should see something like the following in your terminal:
-'''bash
-Hello World for the 1 time
-Hello World for the 2 time
-Hello World for the 3 time
-'''
+> You should see something like "Hello World for the 1st time", "Hello World for the 2nd time", etc. printed line by line in your terminal screen.

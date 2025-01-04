@@ -23,6 +23,7 @@ class Lesson:
         self.index = None               # Lesson index
         self.name = None                # Lesson name
         self.slug = None                # Lesson slug
+        self.depth = None               # Lesson depth
         self.description = None         # Lesson description
         self.video = None               # Lesson video
         self.steps = None               # Lesson steps
@@ -38,6 +39,7 @@ class Lesson:
             "index": self.index,
             "name": self.name,
             "slug": self.slug,
+            "depth": self.depth,
             "description": self.description,
             "video": self.video.to_dict(),
             "steps": [step.to_dict() for step in self.steps]
@@ -49,6 +51,7 @@ class Lesson:
         self.index = dictionary.get("index")
         self.name = dictionary.get("name")
         self.slug = dictionary.get("slug")
+        self.depth = dictionary.get("depth")
         self.description = dictionary.get("description")
         self.video = Video.Video(dictionary=dictionary.get("video"))
         self.steps = []
@@ -80,6 +83,21 @@ class Lesson:
         self.description = text[line_count]
         line_count += 1
 
+        # List lesson depths
+        depths = []
+        if self.depth == "01":
+            depths.append("01")
+        elif self.depth == "10":
+            depths.append("01")
+            depths.append("10")
+        elif self.depth == "11":
+            depths.append("01")
+            depths.append("10")
+            depths.append("11")
+        else:
+            print(f"Invalid Lesson Depth Level: {self.depth}")
+            exit(-1)
+
         # Extract video
         video_url = text[line_count].split('(')[1][:-1]
         if video_url != '':
@@ -103,25 +121,50 @@ class Lesson:
                 line_count += 1
                 # Extract task steps
                 while not text[line_count].startswith(">"):
-                    task_text.append(text[line_count])
+                    task_text.append(text[line_count].strip())
                     line_count += 1
                 task_text.append(text[line_count])
                 task = Task.Task(task_text)
                 task.index = step_count
                 task.depth = step_depth
-                self.steps.append(task)
+                if step_depth in depths:
+                    self.steps.append(task)
             elif step_text.startswith('!['):
                 image = Image.Image(step_text)
                 image.index = step_count
                 image.depth = step_depth
-                self.steps.append(image)
+                if step_depth in depths:
+                    self.steps.append(image)
             else:
                 instruction = Instruction.Instruction(step_text)
                 instruction.index = step_count
                 instruction.depth = step_depth
-                self.steps.append(instruction)
+                if step_depth in depths:
+                    self.steps.append(instruction)
             step_count += 1
             line_count += 1
         return
+
+    # Render lesson object as Markdown or HTML
+    def render(self, type="MD"):
+        output = []
+        if type == "MD":
+            if self.video:
+                output.append(f"#### Watch this video: {self.video.render(type)}\n")
+            else:
+                output.append(f"### {self.name}\n")
+            output.append(f"> {self.description}\n\n")
+        elif type == "HTML":
+            output.append(f"<h3>{self.name}</h3")
+            output.append(f"{self.description}<br>")
+            if self.video:
+                output.extend(self.video.render(type))
+        for step in self.steps:
+            output.extend(step.render(type=type))
+        if type == "MD":
+            output.append("\n")
+        elif type == "HTML":
+            output.append("<hr>")
+        return output
 
 #FIN

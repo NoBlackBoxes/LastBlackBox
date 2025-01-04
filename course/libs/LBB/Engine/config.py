@@ -15,6 +15,7 @@ username = os.getlogin()
 repo_root = f"/home/{username}/NoBlackBoxes/LastBlackBox"
 boxes_root = repo_root + "/boxes"
 course_root = repo_root + "/course"
+image_prefix = ""
 
 # Store box names (and order)
 box_names = [

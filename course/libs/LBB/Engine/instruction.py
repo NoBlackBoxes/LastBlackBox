@@ -17,7 +17,7 @@ class Instruction:
         self.index = None               # Step index
         self.type = "instruction"       # Step type
         self.depth = None               # Step depth
-        self.html = None                # Instruction html
+        self.content = None             # Instruction content
         if text:
             self.parse(text)            # Parse instruction from README text
         elif dictionary:
@@ -43,12 +43,23 @@ class Instruction:
 
     # Parse instruction string
     def parse(self, text):
-        text = Utilities.convert_emphasis_tags(text)
-        text = Utilities.convert_markdown_links(text)
-        if text[0] == '>': # Block Quote
-            self.html = f"<blockquote id=\"quote\">{text[1:].strip()}</blockquote>\n"
-        else:
-            self.html = f"<span id=\"instruction\">{text}</span>\n"
+        self.content = text
         return
+
+    # Render instruction object as Markdown or HTML
+    def render(self, type="MD"):
+        output = []
+        if type == "MD":
+            output.append(f"- {self.content}\n")
+        elif type == "HTML":
+            text = self.content
+            text = Utilities.convert_emphasis_tags(text)
+            text = Utilities.convert_markdown_links(text)
+            if text[0] == '>': # Block Quote
+                text = f"<blockquote id=\"quote\">{text[1:].strip()}</blockquote>\n"
+            else:
+                text = f"<span id=\"instruction\">{text}</span>\n"
+            output.append(text)
+        return output
 
 #FIN
