@@ -36,15 +36,28 @@ def list_subfolder_names(folder_path):
 # Get depth from symbol
 def get_depth_from_symbol(symbol):
     if symbol == '-':
-        depth = 1
+        depth = "01"
     elif symbol == '+':
-        depth = 2
+        depth = "10"
     elif symbol == '*':
-        depth = 3
+        depth = "11"
     else:
         print(f"Unrecognized depth symbol ({symbol}) in lesson text.")
         exit(-1)
     return depth
+
+# Get depths list
+def get_depths(depth):
+    depths = []
+    if depth == "01":
+        depths.append("01")
+    elif depth == "10":
+        depths.extend(["01", "10"])
+    elif depth == "11":
+        depths.extend(["01", "10", "11"])
+    else:
+        print(f"Invalid Box Depth Level: {depth}")
+    return depths
 
 # Read text file, strip whitespace (including newline), and remove empty lines
 def read_clean_text(path):

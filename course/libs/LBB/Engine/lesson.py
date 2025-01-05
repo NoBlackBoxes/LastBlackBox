@@ -19,11 +19,11 @@ class Lesson:
 
     Stores a link to a video tutorial (optional) and a list of steps to complete the lesson
     """ 
-    def __init__(self, text=None, dictionary=None):
+    def __init__(self, depth, text=None, dictionary=None):
         self.index = None               # Lesson index
         self.name = None                # Lesson name
         self.slug = None                # Lesson slug
-        self.depth = None               # Lesson depth
+        self.depth = depth              # Lesson depth
         self.description = None         # Lesson description
         self.video = None               # Lesson video
         self.steps = None               # Lesson steps
@@ -75,8 +75,13 @@ class Lesson:
         max_count = len(text)
 
         # Extract name and slug
-        self.name = text[line_count].split(':')[1].strip()
-        self.slug = self.name.lower().replace(' ', '-')
+        sections = text[line_count].split(':')
+        if len(sections) == 3:
+            self.name = f"NB3 : {sections[2].strip()}"
+            self.slug = f"NB3_{sections[2].strip().lower().replace(' ', '-')}"
+        else:
+            self.name = sections[1].strip()
+            self.slug = self.name.lower().replace(' ', '-')
         line_count += 1
 
         # Extract description
@@ -84,19 +89,7 @@ class Lesson:
         line_count += 1
 
         # List lesson depths
-        depths = []
-        if self.depth == "01":
-            depths.append("01")
-        elif self.depth == "10":
-            depths.append("01")
-            depths.append("10")
-        elif self.depth == "11":
-            depths.append("01")
-            depths.append("10")
-            depths.append("11")
-        else:
-            print(f"Invalid Lesson Depth Level: {self.depth}")
-            exit(-1)
+        depths = Utilities.get_depths(self.depth)
 
         # Extract video
         video_url = text[line_count].split('(')[1][:-1]
@@ -115,7 +108,7 @@ class Lesson:
             step_depth = Utilities.get_depth_from_symbol(text[line_count][0])
             step_text = text[line_count][2:]
             # Classify step
-            if step_text.startswith("**TASK**"):
+            if step_text.startswith("**TASK**"):    # Task
                 task_text = []
                 task_text.append(step_text)
                 line_count += 1
@@ -129,19 +122,21 @@ class Lesson:
                 task.depth = step_depth
                 if step_depth in depths:
                     self.steps.append(task)
-            elif step_text.startswith('!['):
+                    step_count += 1
+            elif step_text.startswith('!['):        # Image
                 image = Image.Image(step_text)
                 image.index = step_count
                 image.depth = step_depth
                 if step_depth in depths:
                     self.steps.append(image)
-            else:
+                    step_count += 1
+            else:                                   # Instruction
                 instruction = Instruction.Instruction(step_text)
                 instruction.index = step_count
                 instruction.depth = step_depth
                 if step_depth in depths:
                     self.steps.append(instruction)
-            step_count += 1
+                    step_count += 1
             line_count += 1
         return
 

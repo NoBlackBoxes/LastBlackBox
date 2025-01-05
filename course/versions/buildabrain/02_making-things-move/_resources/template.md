@@ -1,7 +1,9 @@
 # Build a Brain : Making Things Move
 Something about motors and magnets
 
-## Magnets
+## Magnets{01}
+{Electromagnetism}
+
 Magnets were known about (and useful) long before we understood electricity. However, the connection between electricity and magnetism is one of the most profound discoveries of science, and it has major implications for your everyday life...and your NB3.
 
 #### Watch this video: [Electromagnetism](https://vimeo.com/1000810115)

@@ -80,19 +80,7 @@ class Box:
         self.description = info_text[description_line]
 
         # List box depths
-        depths = []
-        if self.depth == "01":
-            depths.append("01")
-        elif self.depth == "10":
-            depths.append("01")
-            depths.append("10")
-        elif self.depth == "11":
-            depths.append("01")
-            depths.append("10")
-            depths.append("11")
-        else:
-            print(f"Invalid Box Depth Level: {self.depth}")
-            exit(-1)
+        depths = Utilities.get_depths(self.depth)
 
         # Load materials
         materials_path = f"{Config.boxes_root}/{self.slug}/_resources/materials.csv"
@@ -115,7 +103,7 @@ class Box:
             lesson_basename = text[line_count].split("{")[1][:-1]
             lesson_path = f"{Config.boxes_root}/{self.slug}/_resources/lessons/{lesson_basename}.md"
             lesson_text = Utilities.read_clean_text(lesson_path)
-            lesson = Lesson.Lesson(lesson_text)
+            lesson = Lesson.Lesson(self.depth, text=lesson_text)
             lesson.index = lesson_count
             self.lessons.append(lesson)
             lesson_count += 1

@@ -20,7 +20,5 @@ We will start by learning how electricity is used to create "sensors", which wil
 ## Sensors{01}
 {Transducers}
 
-# Project
-### Build a Light Sensor
-Build a voltage divider with one of the fixed resistors replaced with an LDR (light-dependent resistor). Does the "output" voltage vary with light level? What should the value of the fixed resistor be to maximize the sensitive range of the output voltage for varying light levels?
-- *Help*: A guide to completing this task (and all of the morning circuit building tasks) can be found here: [NB3-Building a Light Sensor](https://vimeo.com/??????)
+# Project{01}
+{Sensors:NB3_Building-a-Light-Sensor}

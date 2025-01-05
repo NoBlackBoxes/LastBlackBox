@@ -23,5 +23,5 @@ Many materials hold onto their outer electrons and resist their movement. We can
 ## Lesson
 
 - **TASK**: Measure the resistance of your resistors.
-  - *Help*: If you are new to measuring resistance with a multimeter, then I recommend you watch this video: [NB3-Measuring Resistance](https://vimeo.com/??????)
+  - *Help*: If you are new to measuring resistance with a multimeter, then I recommend that you watch this video: [NB3-Measuring Resistance](https://vimeo.com/1027761453)
 > Your kit contains 470 &Omega;, 1 k&Omega;, and 10 k&Omega; resistors. You should measure these values.

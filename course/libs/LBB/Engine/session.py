@@ -9,6 +9,7 @@ LBB: Session Class
 import json
 
 # Import modules
+import LBB.Engine.config as Config
 import LBB.Engine.utilities as Utilities
 import LBB.Engine.box as Box
 import LBB.Engine.project as Project
@@ -26,7 +27,7 @@ class Session:
         self.slug = None                # Session slug (URL)
         self.description = None         # Session description
         self.boxes = None               # Session boxes
-        self.project = None             # Session project
+        self.projects = None            # Session projects
         if text:
             self.parse(text)            # Parse session from template text
         elif dictionary:
@@ -41,7 +42,7 @@ class Session:
             "slug": self.slug,
             "description": self.description,
             "boxes": [box.to_dict() for box in self.boxes],
-            "project": self.project.to_dict()
+            "projects": self.projects.to_dict()
         }
         return dictionary
 
@@ -52,7 +53,7 @@ class Session:
         self.slug = dictionary.get("slug")
         self.description = dictionary.get("description")
         self.boxes = [Box.Box(dictionary=box_dictionary) for box_dictionary in dictionary.get("boxes", [])]
-        self.project = Project.Project(dictionary=dictionary.get("project"))
+        self.projects = [Project.Project(dictionary=project_dictionary) for project_dictionary in dictionary.get("projects", [])]
         return
 
     # Parse session template
@@ -91,15 +92,26 @@ class Session:
             box.index = box_count
             self.boxes.append(box)
             box_count += 1
-        line_count += 1
     
-        # Load project
-        project_text = []
+        # Load project(s)
+        project_depth = text[line_count].split("{")[1][0:2]
+        line_count += 1
+        self.projects = []
+        project_count = 0
         while line_count < max_count:
-            if text[line_count][0] != '\n':
-                project_text.append(text[line_count])
+            if not text[line_count].startswith("{"):
+                print(f"Invalid Project Tag: {text[line_count]}")
+                exit(-1)
+            project_basename = text[line_count].split("{")[1][:-1]
+            project_box = project_basename.split(":")[0].lower()
+            project_lesson = project_basename.split(":")[1]
+            project_path = f"{Config.boxes_root}/{project_box}/_resources/lessons/{project_lesson}.md"
+            project_text = Utilities.read_clean_text(project_path)
+            project = Project.Project(project_depth, text=project_text)
+            project.index = project_count
+            self.projects.append(project)
+            project_count += 1
             line_count += 1
-        self.project = Project.Project(project_text)
         return
 
     # Render session object as Markdown or HTML
@@ -113,6 +125,9 @@ class Session:
             output.append(f"{self.description}<br>")
         for box in self.boxes:
             output.extend(box.render(type=type))
+        output.extend(f"# Project\n")
+        for project in self.projects:
+            output.extend(project.render(type=type))
         return output
 
     # Load session object from JSON

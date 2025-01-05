@@ -62,9 +62,7 @@ class Task:
         line_count = 0
         
         # Extract description
-        self.description = text[line_count][10:]
-        self.description = Utilities.convert_emphasis_tags(self.description)
-        self.description = Utilities.convert_markdown_links(self.description)
+        self.description = text[line_count].split(":")[1].strip()
         line_count += 1
 
         # Extract task steps
@@ -97,12 +95,14 @@ class Task:
         if type == "MD":
             output.append(f"**TASK**: {self.description}\n")
         elif type == "HTML":
-            output.append(f"<task>")
+            html = Utilities.convert_emphasis_tags(self.description)
+            html = Utilities.convert_markdown_links(html)
+            output.append(f"{html}")
         for step in self.steps:
             output.extend(f"{step.render(type=type)[0]}")
         if type == "MD":
             output.append(f"<details><summary><strong>Target</strong></summary>\n")
-            output.append(f"{self.target}\n")
+            output.append(f":-:-: {self.target}\n")
             output.append(f"</details><hr>\n\n")
         elif type == "HTML":
             html = Utilities.convert_emphasis_tags(self.target)
