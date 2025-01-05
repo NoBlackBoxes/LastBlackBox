@@ -147,10 +147,10 @@ class Project:
         output = []
         if type == "MD":
             output.append(f"### {self.name}\n")
-            output.append(f"{self.description}\n\n")
+            output.append(f"> {self.description}\n\n")
         elif type == "HTML":
             output.append(f"<h3>{self.name}</h3")
-            output.append(f"{self.description}<br>")
+            output.append(f"> {self.description}<br>")
         if type == "MD":
             output.append(f"<details><summary><weak>Guide</weak></summary>\n")
             guide_string = f":-:-: A video guide to completing this project can be viewed <a href=\"{self.video.url}\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>."

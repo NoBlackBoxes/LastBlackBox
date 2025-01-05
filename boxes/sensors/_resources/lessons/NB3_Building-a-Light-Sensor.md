@@ -1,5 +1,5 @@
 # Sensors : NB3 : Building a Light Sensor
-Our NB3 will use LDRs to convert light into voltage. Here we will build and test the underlying circuit.
+Your NB3 will use LDRs to convert light into voltage. Here you will build and test this light sensing circuit.
 
 ## [Video](https://vimeo.com/1031479533)
 

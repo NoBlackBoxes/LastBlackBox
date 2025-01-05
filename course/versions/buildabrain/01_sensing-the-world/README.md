@@ -115,7 +115,7 @@ Computers and brains work with electrical signals. In order for either to unders
 
 # Project
 ### NB3 : Building a Light Sensor
-Our NB3 will use LDRs to convert light into voltage. Here we will build and test the underlying circuit.
+> Your NB3 will use LDRs to convert light into voltage. Here you will build and test this light sensing circuit.
 
 <details><summary><weak>Guide</weak></summary>
 :-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1031479533" target="_blank" rel="noopener noreferrer">here</a>.
