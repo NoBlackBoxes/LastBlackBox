@@ -61,8 +61,8 @@
         "monitoring_type": 0,
         "private_settings": {}
     },
-    "current_scene": "Front",
-    "current_program_scene": "Front",
+    "current_scene": "Images",
+    "current_program_scene": "Images",
     "scene_order": [
         {
             "name": "Front"
@@ -379,7 +379,7 @@
             "id": "scene",
             "versioned_id": "scene",
             "settings": {
-                "id_counter": 7,
+                "id_counter": 8,
                 "custom_size": false,
                 "items": [
                     {
@@ -541,7 +541,7 @@
                     {
                         "name": "Arduino Pinout",
                         "source_uuid": "415592aa-f390-4151-8ae2-8aa1abcfbd6a",
-                        "visible": false,
+                        "visible": true,
                         "locked": false,
                         "rot": 0.0,
                         "pos": {
@@ -619,7 +619,7 @@
                     {
                         "name": "RPi Pinout",
                         "source_uuid": "9f43c055-8db1-4528-a4f6-29dae77f6d5a",
-                        "visible": true,
+                        "visible": false,
                         "locked": false,
                         "rot": 0.0,
                         "pos": {
@@ -643,6 +643,45 @@
                         "crop_right": 0,
                         "crop_bottom": 0,
                         "id": 7,
+                        "group_item_backup": false,
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
+                    },
+                    {
+                        "name": "Snowball",
+                        "source_uuid": "ce4385e4-1c00-4367-bb8e-a271b42dc9ef",
+                        "visible": true,
+                        "locked": false,
+                        "rot": 0.0,
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 8,
                         "group_item_backup": false,
                         "scale_filter": "disable",
                         "blend_method": "default",
@@ -683,7 +722,9 @@
                 "libobs.show_scene_item.6": [],
                 "libobs.hide_scene_item.6": [],
                 "libobs.show_scene_item.7": [],
-                "libobs.hide_scene_item.7": []
+                "libobs.hide_scene_item.7": [],
+                "libobs.show_scene_item.8": [],
+                "libobs.hide_scene_item.8": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -1398,12 +1439,12 @@
                 "OBSBasic.SelectScene": [],
                 "libobs.show_scene_item.1": [],
                 "libobs.hide_scene_item.1": [],
-                "libobs.show_scene_item.2": [],
-                "libobs.hide_scene_item.2": [],
+                "libobs.show_scene_item.4": [],
+                "libobs.hide_scene_item.4": [],
                 "libobs.show_scene_item.3": [],
                 "libobs.hide_scene_item.3": [],
-                "libobs.show_scene_item.4": [],
-                "libobs.hide_scene_item.4": []
+                "libobs.show_scene_item.2": [],
+                "libobs.hide_scene_item.2": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
@@ -1444,17 +1485,17 @@
             "versioned_id": "v4l2_input",
             "settings": {
                 "device_id": "/dev/video2",
-                "input": 0,
-                "pixelformat": 861030210,
-                "resolution": 8246337209400,
-                "framerate": 30,
-                "color_range": 2,
                 "White Balance, Automatic": true,
                 "Power Line Frequency": 1,
                 "White Balance Temperature": 3465,
                 "Backlight Compensation": 0,
                 "Focus, Absolute": 0,
-                "Focus, Automatic Continuous": false
+                "Focus, Automatic Continuous": false,
+                "input": 0,
+                "pixelformat": 861030210,
+                "resolution": 8246337209400,
+                "framerate": 30,
+                "color_range": 2
             },
             "mixers": 0,
             "sync": 0,
@@ -1523,45 +1564,6 @@
                         "private_settings": {}
                     },
                     {
-                        "name": "HDMI Capture",
-                        "source_uuid": "191930bd-a8b1-437a-8817-b292cb71ad93",
-                        "visible": true,
-                        "locked": false,
-                        "rot": 0.0,
-                        "pos": {
-                            "x": 1329.0,
-                            "y": 30.0
-                        },
-                        "scale": {
-                            "x": 0.4270833432674408,
-                            "y": 0.42685183882713318
-                        },
-                        "align": 5,
-                        "bounds_type": 0,
-                        "bounds_align": 0,
-                        "bounds_crop": false,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "crop_left": 0,
-                        "crop_top": 0,
-                        "crop_right": 0,
-                        "crop_bottom": 0,
-                        "id": 5,
-                        "group_item_backup": false,
-                        "scale_filter": "disable",
-                        "blend_method": "default",
-                        "blend_type": "normal",
-                        "show_transition": {
-                            "duration": 0
-                        },
-                        "hide_transition": {
-                            "duration": 0
-                        },
-                        "private_settings": {}
-                    },
-                    {
                         "name": "Screen Capture",
                         "source_uuid": "5e49be74-7cd2-471d-b5d0-0792c722644c",
                         "visible": true,
@@ -1599,6 +1601,45 @@
                             "duration": 0
                         },
                         "private_settings": {}
+                    },
+                    {
+                        "name": "HDMI Capture",
+                        "source_uuid": "191930bd-a8b1-437a-8817-b292cb71ad93",
+                        "visible": false,
+                        "locked": false,
+                        "rot": 0.0,
+                        "pos": {
+                            "x": 1083.0,
+                            "y": 16.0
+                        },
+                        "scale": {
+                            "x": 0.4270833432674408,
+                            "y": 0.42685183882713318
+                        },
+                        "align": 5,
+                        "bounds_type": 0,
+                        "bounds_align": 0,
+                        "bounds_crop": false,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "crop_left": 0,
+                        "crop_top": 0,
+                        "crop_right": 0,
+                        "crop_bottom": 0,
+                        "id": 5,
+                        "group_item_backup": false,
+                        "scale_filter": "disable",
+                        "blend_method": "default",
+                        "blend_type": "normal",
+                        "show_transition": {
+                            "duration": 0
+                        },
+                        "hide_transition": {
+                            "duration": 0
+                        },
+                        "private_settings": {}
                     }
                 ]
             },
@@ -1617,10 +1658,10 @@
                 "OBSBasic.SelectScene": [],
                 "libobs.show_scene_item.2": [],
                 "libobs.hide_scene_item.2": [],
-                "libobs.show_scene_item.5": [],
-                "libobs.hide_scene_item.5": [],
                 "libobs.show_scene_item.6": [],
-                "libobs.hide_scene_item.6": []
+                "libobs.hide_scene_item.6": [],
+                "libobs.show_scene_item.5": [],
+                "libobs.hide_scene_item.5": []
             },
             "deinterlace_mode": 0,
             "deinterlace_field_order": 0,
