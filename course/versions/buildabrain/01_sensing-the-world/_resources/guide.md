@@ -31,6 +31,6 @@ Build a light sensing circuit that change's the output voltage in response to ch
 - (05:075) Explain how to build circuits on a breadboard (and how a breadboard works!)
 + (05:080) **Attach the breadboard(s) to the robot body**
 + (15:095) **Build and measure a voltage divider**
-? (10:105) *Explain and use a potentiometer*
+* (10:105) *Explain and use a potentiometer*
 - (05:110) Explain light-dependent resistors LDRs
 + (15:125) **Build a light sensor**
