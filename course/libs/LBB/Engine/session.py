@@ -103,6 +103,8 @@ class Session:
                 print(f"Invalid Project Tag: {text[line_count]}")
                 exit(-1)
             project_basename = text[line_count].split("{")[1][:-1]
+            if len(project_basename.split(":")) < 2:
+                print(f"Missing box/lesson name in Project tag - session{self.name}")
             project_box = project_basename.split(":")[0].lower()
             project_lesson = project_basename.split(":")[1]
             project_path = f"{Config.boxes_root}/{project_box}/_resources/lessons/{project_lesson}.md"

@@ -1,7 +1,7 @@
 # Magnets : NB3 : Building a Speaker
 Oscillating current in a coil creates a dynamic magnetic field. Let's turn these oscillations into sound.
 
-## [Video](https://vimeo.com/videos/1031277112)
+## [Video](https://vimeo.com/1031277112)
 
 ## Concepts
 - We are going to use an electromagnet to produce sound.

@@ -23,11 +23,13 @@ importlib.reload(Session)
 # Config
 Config.image_prefix = "../../../.."
 
-# Specify session
-session_template = f"{Config.course_root}/versions/buildabrain/01_sensing-the-world/_resources/template.md"
+# Specify course/session
+#course_session_basename = "/versions/buildabrain/01_sensing-the-world"
+course_session_basename = "/versions/buildabrain/02_making-things-move"
+session_template_path = f"{Config.course_root}/{course_session_basename}/_resources/template.md"
 
 # Load session template
-session_text = Utilities.read_clean_text(session_template)
+session_text = Utilities.read_clean_text(session_template_path)
 
 # Build session
 session = Session.Session(session_text)
@@ -36,7 +38,7 @@ session = Session.Session(session_text)
 README_text = session.render("Build a Brain", type="MD")
 
 # Save README
-README_path = f"{Config.course_root}/versions/buildabrain/01_sensing-the-world/README.md"
+README_path = f"{Config.course_root}/{course_session_basename}/README.md"
 with open(README_path, 'w', encoding='utf8') as f:
     f.writelines(README_text)    
 
