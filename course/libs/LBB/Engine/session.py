@@ -74,19 +74,19 @@ class Session:
 
         # Find boxes section
         line_count = Utilities.find_line(text, "## ")
-        boxes_max_count = Utilities.find_line(text, "# Project") - 1
+        project_line_count = Utilities.find_line(text, "# Project")
 
         # Load boxes
         self.boxes = []
         box_count = 0
-        while line_count < boxes_max_count:
+        while line_count < project_line_count:
             box_text = []
             box_text.append(text[line_count])
             line_count += 1
             while text[line_count][0:3] != '## ': # Next box
                 box_text.append(text[line_count])
                 line_count += 1
-                if line_count >= boxes_max_count:
+                if line_count >= project_line_count:
                     break
             box = Box.Box(box_text)
             box.index = box_count
@@ -94,17 +94,19 @@ class Session:
             box_count += 1
     
         # Load project(s)
+        line_count = Utilities.find_line(text, "# Project")
         project_depth = text[line_count].split("{")[1][0:2]
         line_count += 1
         self.projects = []
         project_count = 0
         while line_count < max_count:
             if not text[line_count].startswith("{"):
-                print(f"Invalid Project Tag: {text[line_count]}")
+                print(f"Invalid Project Tag: {text[line_count]} - session({self.name})")
                 exit(-1)
-            project_basename = text[line_count].split("{")[1][:-1]
-            if len(project_basename.split(":")) < 2:
-                print(f"Missing box/lesson name in Project tag - session{self.name}")
+            project_basename = text[line_count].split("}")[0][1:]
+            if len(project_basename.split(":")) != 2:
+                print(f"Missing box/lesson name in Project tag - session({self.name})")
+                exit(-1)
             project_box = project_basename.split(":")[0].lower()
             project_lesson = project_basename.split(":")[1]
             project_path = f"{Config.boxes_root}/{project_box}/_resources/lessons/{project_lesson}.md"
