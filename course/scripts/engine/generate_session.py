@@ -29,7 +29,9 @@ Config.image_prefix = "../../../.."
 #course_session_basename = "/versions/buildabrain/03_digital-decisions"
 #course_session_basename = "/versions/buildabrain/04_how-computers-work"
 #course_session_basename = "/versions/buildabrain/05_build-a-robot"
-course_session_basename = "/versions/buildabrain/06_the-software-stack"
+#course_session_basename = "/versions/buildabrain/06_the-software-stack"
+#course_session_basename = "/versions/buildabrain/07_how-the-internet-works"
+course_session_basename = "/versions/buildabrain/08_artificial_intelligence"
 session_template_path = f"{Config.course_root}/{course_session_basename}/_resources/template.md"
 
 # Load session template

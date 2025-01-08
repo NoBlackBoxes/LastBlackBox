@@ -121,10 +121,12 @@
 ## Python
 - [ ] [Virtual Environments]()
 - [ ] [Introducing the Interpreter]()
+- [ ] [NB3 : Playing With Python]()
 
 ## Networks
 - [ ] [NB3 : Remote Control NB3 (TUI)]()
 - [ ] [Sockets]()
+- [ ] [Physical Layers]()
 - [ ] [NB3 : Develop a Protocol]()
 
 ## Websites
@@ -137,6 +139,7 @@
 - [ ] [NB3 : Remote Control NB3 (GUI)]()
 - [ ] [NB3 : Host a Website]()
 - [ ] [Flask]()
+- [ ] [HTTP]()
 
 ## Security
 - [ ] [One Way Functions]()

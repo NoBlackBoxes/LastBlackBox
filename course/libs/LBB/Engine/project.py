@@ -13,6 +13,8 @@ import LBB.Engine.instruction as Instruction
 import LBB.Engine.image as Image
 import LBB.Engine.video as Video
 import LBB.Engine.task as Task
+import LBB.Engine.code as Code
+
 
 # Project Class
 class Project:
@@ -131,6 +133,18 @@ class Project:
                 image.depth = step_depth
                 if step_depth in depths:
                     self.steps.append(image)
+                    step_count += 1
+            elif step_text.startswith("`"):         # Code
+                code_text = []
+                while text[line_count].strip() != "```":
+                    code_text.append(text[line_count].strip())
+                    line_count += 1
+                code_text.append(text[line_count].strip())
+                code = Code.Code(code_text)
+                code.index = step_count
+                code.depth = step_depth
+                if step_depth in depths:
+                    self.steps.append(code)
                     step_count += 1
             else:                                   # Instruction
                 instruction = Instruction.Instruction(step_text)
