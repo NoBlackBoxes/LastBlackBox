@@ -25,7 +25,7 @@ Semiconductors are materials that can both conduct and resist the flow of electr
 > MOSFETs are the thing that humans have built more of than anything else. They must be useful! Let's discuss what they are and how they work.
 
 **TASK**: Measure the threshold voltage that opens your MOSFET gate. Compare it to the "expected" range listed in the
-- The datasheet for your MOSFETs can be found here: [IRF510](/boxes/transistors/_resources/datasheets/IRF510.pdf) and here: [IRL510](/boxes/transistors/_resources/datasheets/IRL510.pdf)
+- The datasheet for your MOSFETs can be found here [IRF510](/boxes/transistors/_resources/datasheets/IRF510.pdf) and here [IRL510](/boxes/transistors/_resources/datasheets/IRL510.pdf)
 <details><summary><strong>Target</strong></summary>
 :-:-: The threshold for when current starts to flow through your MOSFET ("Gate-Source Threshold Voltage") should be between 2 to 4 Volts for the IRF510 and 1 to 3 vols for the IRL510. However, the amount of current it allows will rise rapidly up to (and beyond) 10 Volts for the IRF510 and 5 Volts for the IRL510. Check the datasheets (Figure 3).
 </details><hr>
@@ -39,10 +39,10 @@ Semiconductors are materials that can both conduct and resist the flow of electr
 :-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1032454998" target="_blank" rel="noopener noreferrer">here</a>.
 </details><hr>
 
-**TASK**: Use a MOSFET transistor to control how much current is flowing through your motor. - *Hint*
+**TASK**: Use a MOSFET transistor to control how much current is flowing through your motor and gate the MOSFET with the output voltage from your light sensor...creating a motor that spins when the light is **ON** and stops when the light is **OFF**, or the other way around.
 - *Hint*: Use the following circuit as a guide: [MOSFET driver:400](/boxes/transistors/_resources/images/MOSFET_motor_driver.png)
 <details><summary><strong>Target</strong></summary>
-:-:-: Your motor should change how fast it spins when you change hoe much light hits the LDR.
+:-:-: Your motor should change how fast it spins when you change how much light hits the LDR.
 </details><hr>
 
 

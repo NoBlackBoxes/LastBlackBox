@@ -18,8 +18,5 @@ Building a light-to-sound feedback loop musical instrument (theremin) using an A
 > You should here a sound that varies with your hand motion (in front of a light)
 
 - **TASK**: ***Have fun!*** (Make something cool)
-- This diagram of the Arduino "pins" will definitely be useful:
-<p align="center">
-<img src="../../../boxes/computers/_resources/images/pinout_arduino_nano.png" alt="arduino pinout" width="650">
-</p>
-> You should have fun
+- This diagram of the Arduino "pins" will definitely be useful: ![Arduino Pinout](/boxes/computers/_resources/images/pinout_arduino_nano.png)
+> You should have fun!
