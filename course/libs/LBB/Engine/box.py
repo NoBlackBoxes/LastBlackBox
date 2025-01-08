@@ -120,7 +120,8 @@ class Box:
             output.append(f"<h2>{self.name}</h2")
             output.append(f"{self.description}<br>")
         for lesson in self.lessons:
-            output.extend(lesson.render(type=type))
+            for line in lesson.render(type=type):
+                output.append(line)
             pass
         return output
 

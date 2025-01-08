@@ -11,6 +11,7 @@ import LBB.Engine.instruction as Instruction
 import LBB.Engine.image as Image
 import LBB.Engine.video as Video
 import LBB.Engine.task as Task
+import LBB.Engine.code as Code
 
 # Lesson Class
 class Lesson:
@@ -106,7 +107,7 @@ class Lesson:
         step_count = 0
         while line_count < max_count:
             step_depth = Utilities.get_depth_from_symbol(text[line_count][0])
-            step_text = text[line_count][2:]
+            step_text = text[line_count][2:].strip()
             # Classify step
             if step_text.startswith("**TASK**"):    # Task
                 task_text = []
@@ -129,6 +130,18 @@ class Lesson:
                 image.depth = step_depth
                 if step_depth in depths:
                     self.steps.append(image)
+                    step_count += 1
+            elif step_text.startswith("`"):         # Code
+                code_text = []
+                while text[line_count].strip() != "```":
+                    code_text.append(text[line_count].strip())
+                    line_count += 1
+                code_text.append(text[line_count].strip())
+                code = Code.Code(code_text)
+                code.index = step_count
+                code.depth = step_depth
+                if step_depth in depths:
+                    self.steps.append(code)
                     step_count += 1
             else:                                   # Instruction
                 instruction = Instruction.Instruction(step_text)
@@ -153,9 +166,11 @@ class Lesson:
             output.append(f"<h3>{self.name}</h3")
             output.append(f"{self.description}<br>")
             if self.video:
-                output.extend(self.video.render(type))
+                for line in self.video.render(type):
+                    output.append(line)
         for step in self.steps:
-            output.extend(step.render(type=type))
+            for line in step.render(type=type):
+                output.append(line)
         if type == "MD":
             output.append("\n")
         elif type == "HTML":

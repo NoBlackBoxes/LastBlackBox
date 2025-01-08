@@ -9,6 +9,7 @@ LBB: Task Class
 import LBB.Engine.utilities as Utilities
 import LBB.Engine.instruction as Instruction
 import LBB.Engine.image as Image
+import LBB.Engine.code as Code
 
 # Task Class
 class Task:
@@ -60,7 +61,7 @@ class Task:
     def parse(self, text):
         # Set line counter
         line_count = 0
-        
+
         # Extract description
         self.description = text[line_count].split(":")[1].strip()
         line_count += 1
@@ -70,13 +71,23 @@ class Task:
         step_count = 0
         while not text[line_count].startswith("> "):
             step_depth = Utilities.get_depth_from_symbol(text[line_count][0])
-            step_text = text[line_count][2:]
+            step_text = text[line_count][2:].strip()
             # Classify task step
             if step_text.startswith('!['):
                 image = Image.Image(step_text)
                 image.index = step_count
                 image.depth = step_depth
                 self.steps.append(image)
+            elif step_text.startswith("```"):
+                code_text = []
+                while text[line_count].strip() != "```":
+                    code_text.append(text[line_count].strip())
+                    line_count += 1
+                code_text.append(text[line_count].strip())
+                code = Code.Code(code_text)
+                code.index = step_count
+                code.depth = step_depth
+                self.steps.append(code)
             else:
                 instruction = Instruction.Instruction(step_text)
                 instruction.index = step_count
@@ -99,7 +110,8 @@ class Task:
             html = Utilities.convert_markdown_links(html)
             output.append(f"{html}")
         for step in self.steps:
-            output.extend(f"{step.render(type=type)[0]}")
+            for line in step.render(type=type):
+                output.append(line)
         if type == "MD":
             output.append(f"<details><summary><strong>Target</strong></summary>\n")
             output.append(f":-:-: {self.target}\n")

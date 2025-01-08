@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-LBB: Instruction Class
+LBB: Code Class
 
 @author: kampff
 """
@@ -11,15 +11,16 @@ import re
 # Import modules
 import LBB.Engine.utilities as Utilities
 
-# Instruction Class
-class Instruction:
+# Code Class
+class Code:
     def __init__(self, text=None, dictionary=None):
         self.index = None               # Step index
-        self.type = "instruction"       # Step type
+        self.type = "code"              # Step type
         self.depth = None               # Step depth
-        self.content = None             # Instruction content
+        self.syntax = None              # Code syntax
+        self.content = None             # Code content
         if text:
-            self.parse(text)            # Parse instruction from README text
+            self.parse(text)            # Parse code from README text
         elif dictionary:
             self.from_dict(dictionary)  # Load instruction from dictionary
         return
@@ -30,6 +31,7 @@ class Instruction:
             "index": self.index,
             "type": self.type,
             "depth": self.depth,
+            "syntax": self.syntax,
             "content": self.content
         }
         return dictionary
@@ -39,19 +41,24 @@ class Instruction:
         self.index = dictionary.get("index")
         self.type = dictionary.get("type")
         self.depth = dictionary.get("depth")
+        self.syntax = dictionary.get("syntax")
         self.content = dictionary.get("content")
         return
 
     # Parse instruction string
     def parse(self, text):
-        self.content = text
+        self.syntax = text[0].split("```")[1].strip()
+        self.content = text[1:-1]
         return
 
     # Render instruction object as Markdown or HTML
     def render(self, type="MD"):
         output = []
         if type == "MD":
-            output.append(f"- {self.content}\n")
+            output.append(f"- ```{self.syntax}\n")
+            for line in self.content:
+                output.append(f"  {line}\n")
+            output.append(f"  ```\n\n")
         elif type == "HTML":
             text = self.content
             text = Utilities.convert_emphasis_tags(text)

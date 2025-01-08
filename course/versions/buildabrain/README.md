@@ -47,10 +47,10 @@ You will be building a brain for your robot. The robot's physical layout mimics 
   - Learn about control and robotics
   - **Project**: *Build a Braitenberg Vehicle*
 
-### Session 6 - [Software Skills](06_software-skills/README.md)
+### Session 6 - [The Software Stack](06_the-software-stack/README.md)
 - Extend your brain with some human-engineered complexity
   - Learn about Linux and Python
-  - **Project**: *Connect Wirelessly to your Robot*
+  - **Project**: *Connect Wirelessly to your Robot and Play with Python*
 
 ### Session 7 - [How the Internet Works](07_how-the-internet-works/README.md)
 - Connect and communicate...like a machine

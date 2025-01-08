@@ -151,13 +151,14 @@ class Project:
         elif type == "HTML":
             output.append(f"<h3>{self.name}</h3")
             output.append(f"> {self.description}<br>")
-        if type == "MD":
-            output.append(f"<details><summary><weak>Guide</weak></summary>\n")
-            guide_string = f":-:-: A video guide to completing this project can be viewed <a href=\"{self.video.url}\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>."
-            output.append(f"{guide_string}\n")
-            output.append(f"</details><hr>\n\n")
-        elif type == "HTML":
-            output.append(f"<HTML GUIDE>\n")
+        if self.video:
+            if type == "MD":
+                output.append(f"<details><summary><weak>Guide</weak></summary>\n")
+                guide_string = f":-:-: A video guide to completing this project can be viewed <a href=\"{self.video.url}\" target=\"_blank\" rel=\"noopener noreferrer\">here</a>."
+                output.append(f"{guide_string}\n")
+                output.append(f"</details><hr>\n\n")
+            elif type == "HTML":
+                output.append(f"<HTML GUIDE>\n")
         for step in self.steps:
             output.extend(step.render(type=type))
         if type == "MD":

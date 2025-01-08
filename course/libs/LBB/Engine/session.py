@@ -128,10 +128,12 @@ class Session:
             output.append(f"<h1>{course_name} : {self.name}</h1")
             output.append(f"{self.description}<br>")
         for box in self.boxes:
-            output.extend(box.render(type=type))
-        output.extend(f"# Project\n")
+            for line in box.render(type=type):
+                output.append(line)
+        output.append(f"# Project\n")
         for project in self.projects:
-            output.extend(project.render(type=type))
+            for line in project.render(type=type):
+                output.append(line)
         return output
 
     # Load session object from JSON
