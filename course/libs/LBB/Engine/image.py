@@ -66,7 +66,7 @@ class Image:
         if type == "MD":
             output.append(f"<p align=\"center\">\n")
             output.append(f"<img src=\"{Config.image_prefix}{self.path}\" alt=\"{self.name}\" width=\"{self.width}\">\n")
-            output.append(f"</p>\n")
+            output.append(f"</p>\n\n")
         elif type == "HTML":
             output.append(f"<p align=\"center\">\n")
             output.append(f"<img src=\"{self.url}\" alt=\"{self.name}\" width=\"{self.width}\">\n")
