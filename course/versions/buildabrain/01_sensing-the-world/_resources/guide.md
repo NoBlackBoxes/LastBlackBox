@@ -1,7 +1,7 @@
 # Teaching Guide
 
 ## Goal
-Build a light sensing circuit that change's the output voltage in response to changes in light.
+Build a light sensing circuit that changes its output voltage in response to changes in light.
 - Assemble the NB3's body (prototyping base)
 - Learn how to use a multimeter to measure voltage and resistance (maybe current)
 - Learn how a solderless breadboard works
