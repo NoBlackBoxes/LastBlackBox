@@ -1,7 +1,7 @@
 # Power : NB3 : Battery Pack
-Let's install a rechargeable NiMH battery pack to our NB3.
+Let's install a rechargeable NiMH battery pack on our NB3.
 
-## [Video]()
+## [Video](https://vimeo.com/1042781111)
 
 ## Concepts
 - Add velcro mount

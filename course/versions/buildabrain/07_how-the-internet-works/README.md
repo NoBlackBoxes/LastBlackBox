@@ -12,7 +12,7 @@ Things started getting really interesting when organisms began to interact with 
 > Sockets abstract the idea of a connection between computers. A socket communicates to another socket using either TCP or UDP packets. It has an address. It can listen for and request connections.
 
 
-### NB3 : Develop a Protocol
+#### Watch this video: [NB3 : Develop a Protocol](https://vimeo.com/1042782602)
 > Let's develop a simple network protocol for communication between our NB3's midbrain computer and hindbrain microcontroller.
 
 - Decide on your command format (x,o)
@@ -52,6 +52,10 @@ Serving HTML files to who ever requests them (via HTTP).
 # Project
 ### NB3 : Remote Control NB3 (TUI)
 > Let's remotely control our NB3 using a simple text-based user interface (TUI). We will detect a keypress in the terminal and send the appropriate command to our hindbrain motor controller.
+
+<details><summary><weak>Guide</weak></summary>
+:-:-: A video guide to completing this project can be viewed <a href="TUI)" target="_blank" rel="noopener noreferrer">here</a>.
+</details><hr>
 
 - Expand your hindbrain command repertoire
 - Detect a key press in Python (on your midbrain)

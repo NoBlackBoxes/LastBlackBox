@@ -87,7 +87,7 @@ A free and open source operating system.
 ## Python
 Python is an interpreted programming language.
 
-### Introducing the Interpreter
+#### Watch this video: [Introducing the Interpreter](https://vimeo.com/1042618092)
 > What is Python? Where is it? How does it work? How can it work for you?
 
 **TASK**: Say "hello world" in Python
@@ -99,7 +99,7 @@ Python is an interpreted programming language.
 </details><hr>
 
 
-### Virtual Environments
+#### Watch this video: [Virtual Environments](https://vimeo.com/1042637566)
 > We will next create a Python **virtual environment** on our NB3 that will isolate the specific Python packages we require for the course from the Python packages used by the Raspberry Pi's operating system.
 
 **TASK**: Create a "virtual environment" called LBB

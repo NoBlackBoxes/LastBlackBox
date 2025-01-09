@@ -101,7 +101,7 @@
 
 ## Power
 - [x] [NB3 : Power Supply](https://vimeo.com/1035306761)
-- [ ] [NB3 : Battery Pack]()
+- [x] [NB3 : Battery Pack](https://vimeo.com/1042781111)
 - [x] [DC-DC Converters](https://vimeo.com/1035304311)
 
 ## Systems
@@ -119,15 +119,15 @@
 - [x] [Git](https://vimeo.com/1036825331)
 
 ## Python
-- [ ] [Virtual Environments]()
-- [ ] [Introducing the Interpreter]()
+- [x] [Virtual Environments](https://vimeo.com/1042637566)
+- [x] [Introducing the Interpreter](https://vimeo.com/1042618092)
 - [ ] [NB3 : Playing With Python]()
 
 ## Networks
-- [ ] [NB3 : Remote Control NB3 (TUI)]()
+- [x] [NB3 : Remote Control NB3 (TUI)](https://vimeo.com/1042784651)
 - [ ] [Sockets]()
 - [ ] [Physical Layers]()
-- [ ] [NB3 : Develop a Protocol]()
+- [x] [NB3 : Develop a Protocol](https://vimeo.com/1042782602)
 
 ## Websites
 - [ ] [Javascript]()
@@ -145,9 +145,9 @@
 - [ ] [One Way Functions]()
 
 ## Audio
-- [ ] [NB3 : Install the Mouth]()
-- [ ] [NB3 : Install the Ears]()
-- [ ] [NB3 : Build and Install the Linux I2S Driver]()
+- [x] [NB3 : Install the Mouth](https://vimeo.com/1042947561)
+- [x] [NB3 : Install the Ears](https://vimeo.com/1042943195)
+- [x] [NB3 : Build and Install the Linux I2S Driver](https://vimeo.com/1042781850)
 - [ ] [Speakers]()
 - [ ] [I2S]()
 - [ ] [Signal Processing]()
@@ -157,12 +157,12 @@
 - [ ] [Cameras]()
 - [ ] [NB3 : Streaming Images]()
 - [ ] [Image-Processing]()
-- [ ] [NB3 : Install the Eye]()
+- [x] [NB3 : Install the Eye](https://vimeo.com/1042945461)
 
 ## Learning
 - [ ] [NB3 : Clicker Training]()
 
 ## Intelligence
 - [ ] [Large Language Models]()
-- [ ] [NB3 : Install the Forebrain (NPU)]()
+- [x] [NB3 : Install the Forebrain (NPU)](https://vimeo.com/1043159124)
 

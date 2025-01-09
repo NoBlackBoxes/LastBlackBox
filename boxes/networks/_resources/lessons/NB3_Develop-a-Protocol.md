@@ -1,7 +1,7 @@
 # Networks : NB3 : Develop a Protocol
 Let's develop a simple network protocol for communication between our NB3's midbrain computer and hindbrain microcontroller.
 
-## [Video]()
+## [Video](https://vimeo.com/1042782602)
 
 ## Concepts
 

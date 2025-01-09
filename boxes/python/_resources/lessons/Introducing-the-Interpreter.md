@@ -1,7 +1,7 @@
 # Python : Introducing the Interpreter
 What is Python? Where is it? How does it work? How can it work for you?
 
-## [Video]()
+## [Video](https://vimeo.com/1042618092)
 
 ## Concepts
 - Python is an interpreted programming language. It requires an *interpreter*.

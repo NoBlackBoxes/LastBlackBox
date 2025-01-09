@@ -1,7 +1,7 @@
 # Python : Virtual Environments
 We will next create a Python **virtual environment** on our NB3 that will isolate the specific Python packages we require for the course from the Python packages used by the Raspberry Pi's operating system.
 
-## [Video]()
+## [Video](https://vimeo.com/1042637566)
 
 ## Concepts
 - Many different pieces of software on your operating system use Python (and associated libraries).
