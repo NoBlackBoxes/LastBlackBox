@@ -42,7 +42,7 @@ Combining sensors, motors, and a "brain" in between.
 </details><hr>
 
 <p align="center">
-<img src="../../../../boxes/robotics/_resources/images/braitenberg_vehicle.png" alt="Braitenberg Vehicle" width="600">
+<img src="/boxes/robotics/_resources/images/braitenberg_vehicle.png" alt="Braitenberg Vehicle" width="600">
 </p>
 
 **TASK**: Measure two light sensors and *decide* how to activate the direction of your two wheels in response.

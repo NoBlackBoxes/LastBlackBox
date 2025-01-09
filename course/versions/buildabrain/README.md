@@ -57,7 +57,7 @@ You will be building a brain for your robot. The robot's physical layout mimics 
   - Learn about websites, servers, networks, and security
   - **Project**: *Build a Remote Control Robot*
 
-### Session 8 - [Artificial Intelligence](08_artificial_intelligence/README.md)
+### Session 8 - [Artificial Intelligence](08_artificial-intelligence/README.md)
 - Make it smart....what is *smart*?
   - Learn about audio, vision, learning, and intelligence
   - **Project**: *Add a Camera, Speaker, and Microphones*

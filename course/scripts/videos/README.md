@@ -9,11 +9,11 @@ Use FFMPEG's loudnorm filter (via a Python wrapper: https://github.com/slhck/ffm
 pip install ffmpeg-normalize
 
 # Usage
-ffmpeg-normalize -p -v -f -c:a aac -b:a 320k -t -17 --keep-loudness-range-target <filename.mkv>
+ffmpeg-normalize -p -v -f -c:a aac -b:a 320k -t -16 --keep-loudness-range-target <filename.mkv>
 
 # Detect volume levels
-ffmpeg -af "volumedetect" -vn -sn -dn -f null - -i <filename.mkv>
+ffmpeg -filter:a ebur128 -map 0:a -f null - -i <filename.mkv>
 
-## Mean output volume should be around -20dB (to be confirmed)
+## Integrated loudness should be around -16 LUFS
 ```
 

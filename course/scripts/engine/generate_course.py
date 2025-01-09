@@ -22,25 +22,19 @@ importlib.reload(Course)
 
 # Build course
 #name = "The Last Black Box"
-#name = "Build a Brain"
-name = "Bootcamp"
+name = "Build a Brain"
+#name = "Bootcamp"
 course = Course.Course(name)
 
-# Debug
-sessions = course.sessions[0:1]
-
-# Print README for each sessions
-for session in sessions:
-    print(f"# {course.name} : {session.name}")
-    print(f"{session.description}\n")
-    for box in session.boxes:
-        print(f"## {box.name} : {box.depth}")
-        print(f"{box.description}\n")
-        for material in box.materials:
-            #print(f"  - {material.part}")
-            pass
-        for lesson in box.lessons:
-            print(f"### {lesson.name}")
-        print(f"\n")
+# Render README for each session
+for session in course.sessions:
+    README_text = session.render("Build a Brain", type="MD")
+    if name == "The Last Black Box":
+        session_folder = f"{Config.boxes_root/{session.slug}}"
+    else:
+        session_folder = f"{Config.course_root}/versions/{course.slug}/{(session.index+1):02d}_{session.slug}"
+    README_path = f"{session_folder}/README.md"
+    with open(README_path, 'w', encoding='utf8') as f:
+        f.writelines(README_text)    
 
 # FIN
