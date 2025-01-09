@@ -16,6 +16,7 @@ Resolution: 1920x1080
   - High Quality
   - Encoding Speed: Good
   - Keyframe Interval: 18
+  - Bitrate: ~10000
 - Audio
   - AAC
   - Stereo
