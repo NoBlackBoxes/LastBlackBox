@@ -55,10 +55,12 @@ class Code:
     def render(self, type="MD"):
         output = []
         if type == "MD":
-            output.append(f"- ```{self.syntax}\n")
-            for line in self.content:
-                output.append(f"  {line}\n")
-            output.append(f"  ```\n\n")
+            output.append(f"```{self.syntax}\n")
+            for index, line in enumerate(self.content):
+                if (index > 0) and (line.startswith("#")):
+                    output.append(f"\n")
+                output.append(f"{line}\n")
+            output.append(f"```\n\n")
         elif type == "HTML":
             text = self.content
             text = Utilities.convert_emphasis_tags(text)

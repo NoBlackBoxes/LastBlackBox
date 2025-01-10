@@ -11,6 +11,12 @@ import glob
 import shutil
 import re
 
+# Import modules
+import LBB.Engine.instruction as Instruction
+import LBB.Engine.image as Image
+import LBB.Engine.task as Task
+import LBB.Engine.code as Code
+
 # Confirm folder (create if it does not exist)
 def confirm_folder(folder_path):
     if not os.path.exists(folder_path):
@@ -96,5 +102,72 @@ def replace_link(match):
         link_url = re.sub(r'^(?:\.\./)+', '', link_url)
         link_url = f"https://github.com/NoBlackBoxes/LastBlackBox/tree/master/{link_url}"
     return f'<a id="link" href="{link_url}" target="_blank">{link_text}</a>'
+
+# Extract step from template text
+def extract_step_from_text(text, line_count):
+    step = None
+    step_depth = get_depth_from_symbol(text[line_count][0])
+    step_text = text[line_count][2:].strip()
+    if step_text.startswith("**TASK**"):    # Task
+        task_text = []
+        task_text.append(step_text)
+        line_count += 1
+        # Extract task steps
+        while not text[line_count].startswith(">"):
+            task_text.append(text[line_count].strip())
+            line_count += 1
+        task_text.append(text[line_count])
+        task = Task.Task(task_text)
+        task.depth = step_depth
+        step = task
+    elif step_text.startswith('!['):        # Image
+        image = Image.Image(step_text)
+        image.depth = step_depth
+        step = image
+    elif step_text.startswith("`"):         # Code
+        code_text = []
+        while text[line_count].strip() != "```":
+            code_text.append(text[line_count].strip())
+            line_count += 1
+        code_text.append(text[line_count].strip())
+        code = Code.Code(code_text)
+        code.depth = step_depth
+        step = code
+    else:                                   # Instruction
+        instruction = Instruction.Instruction(step_text)
+        instruction.depth = step_depth
+        step = instruction
+    line_count += 1
+    return line_count, step
+
+# Extract steps from dictionary
+def extract_steps_from_dict(dictionary):
+    steps = []
+    for step_dictionary in dictionary.get("steps"):
+        if step_dictionary.get("type") == "instruction":
+            step = Instruction.Instruction(dictionary=step_dictionary)
+        elif step_dictionary.get("type") == "image":
+            step = Image.Image(dictionary=step_dictionary)
+        elif step_dictionary.get("type") == "task":
+            step = Task.Task(dictionary=step_dictionary)
+        elif step_dictionary.get("type") == "code":
+            step = Code.Code(dictionary=step_dictionary)
+        else:
+            print(f"Unknown step type in dictionary")
+            exit(-1)
+        steps.append(step)
+    return steps
+
+
+# Extract name and slug
+def extract_lesson_name_and_slug(line):
+    sections = line.split(':')
+    if len(sections) == 3:
+        name = f"NB3 : {sections[2].strip()}"
+        slug = f"NB3_{sections[2].strip().lower().replace(' ', '-')}"
+    else:
+        name = sections[1].strip()
+        slug = name.lower().replace(' ', '-')
+    return name, slug
 
 #FIN

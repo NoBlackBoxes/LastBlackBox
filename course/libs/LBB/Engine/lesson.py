@@ -55,18 +55,7 @@ class Lesson:
         self.depth = dictionary.get("depth")
         self.description = dictionary.get("description")
         self.video = Video.Video(dictionary=dictionary.get("video"))
-        self.steps = []
-        for step_dictionary in dictionary.get("steps"):
-            if step_dictionary.get("type") == "instruction":
-                step = Instruction.Instruction(dictionary=step_dictionary)
-            elif step_dictionary.get("type") == "image":
-                step = Image.Image(dictionary=step_dictionary)
-            elif step_dictionary.get("type") == "task":
-                step = Task.Task(dictionary=step_dictionary)
-            else:
-                print(f"Unknown step type in lesson: {self.name}")
-                exit(-1)
-            self.steps.append(step)
+        self.steps = Utilities.extract_steps_from_dict(dictionary)
         return
 
     # Parse lesson string
@@ -76,13 +65,7 @@ class Lesson:
         max_count = len(text)
 
         # Extract name and slug
-        sections = text[line_count].split(':')
-        if len(sections) == 3:
-            self.name = f"NB3 : {sections[2].strip()}"
-            self.slug = f"NB3_{sections[2].strip().lower().replace(' ', '-')}"
-        else:
-            self.name = sections[1].strip()
-            self.slug = self.name.lower().replace(' ', '-')
+        self.name, self.slug = Utilities.extract_lesson_name_and_slug(text[line_count])
         line_count += 1
 
         # Extract description
@@ -102,55 +85,15 @@ class Lesson:
         line_count = Utilities.find_line(text, "## Lesson")
         line_count += 1
 
-        # Load steps
+        # Extract lesson steps
         self.steps = []
         step_count = 0
         while line_count < max_count:
-            step_depth = Utilities.get_depth_from_symbol(text[line_count][0])
-            step_text = text[line_count][2:].strip()
-            # Classify step
-            if step_text.startswith("**TASK**"):    # Task
-                task_text = []
-                task_text.append(step_text)
-                line_count += 1
-                # Extract task steps
-                while not text[line_count].startswith(">"):
-                    task_text.append(text[line_count].strip())
-                    line_count += 1
-                task_text.append(text[line_count])
-                task = Task.Task(task_text)
-                task.index = step_count
-                task.depth = step_depth
-                if step_depth in depths:
-                    self.steps.append(task)
-                    step_count += 1
-            elif step_text.startswith('!['):        # Image
-                image = Image.Image(step_text)
-                image.index = step_count
-                image.depth = step_depth
-                if step_depth in depths:
-                    self.steps.append(image)
-                    step_count += 1
-            elif step_text.startswith("`"):         # Code
-                code_text = []
-                while text[line_count].strip() != "```":
-                    code_text.append(text[line_count].strip())
-                    line_count += 1
-                code_text.append(text[line_count].strip())
-                code = Code.Code(code_text)
-                code.index = step_count
-                code.depth = step_depth
-                if step_depth in depths:
-                    self.steps.append(code)
-                    step_count += 1
-            else:                                   # Instruction
-                instruction = Instruction.Instruction(step_text)
-                instruction.index = step_count
-                instruction.depth = step_depth
-                if step_depth in depths:
-                    self.steps.append(instruction)
-                    step_count += 1
-            line_count += 1
+            line_count, step = Utilities.extract_step_from_text(text, line_count)
+            if step.depth in depths:
+                step.index = step_count
+                self.steps.append(step)
+                step_count += 1
         return
 
     # Render lesson object as Markdown or HTML

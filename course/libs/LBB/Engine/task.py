@@ -44,16 +44,7 @@ class Task:
         self.type = dictionary.get("type")
         self.depth = dictionary.get("depth")
         self.description = dictionary.get("description")
-        self.steps = []
-        for step_dictionary in dictionary.get("steps"):
-            if step_dictionary.get("type") == "instruction":
-                step = Instruction.Instruction(dictionary=step_dictionary)
-            elif step_dictionary.get("type") == "image":
-                step = Image.Image(dictionary=step_dictionary)
-            else:
-                print(f"Unknown step type in task: {self.description}")
-                exit(-1)
-            self.steps.append(step)
+        self.steps = Utilities.extract_steps_from_dict(dictionary)
         self.target = dictionary.get("target")
         return
     
@@ -70,31 +61,10 @@ class Task:
         self.steps = []
         step_count = 0
         while not text[line_count].startswith("> "):
-            step_depth = Utilities.get_depth_from_symbol(text[line_count][0])
-            step_text = text[line_count][2:].strip()
-            # Classify task step
-            if step_text.startswith('!['):
-                image = Image.Image(step_text)
-                image.index = step_count
-                image.depth = step_depth
-                self.steps.append(image)
-            elif step_text.startswith("```"):
-                code_text = []
-                while text[line_count].strip() != "```":
-                    code_text.append(text[line_count].strip())
-                    line_count += 1
-                code_text.append(text[line_count].strip())
-                code = Code.Code(code_text)
-                code.index = step_count
-                code.depth = step_depth
-                self.steps.append(code)
-            else:
-                instruction = Instruction.Instruction(step_text)
-                instruction.index = step_count
-                instruction.depth = step_depth
-                self.steps.append(instruction)
+            line_count, step = Utilities.extract_step_from_text(text, line_count)
+            step.index = step_count
+            self.steps.append(step)
             step_count += 1
-            line_count += 1
 
         # Extract target
         self.target = text[line_count][2:]

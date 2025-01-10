@@ -1,9 +1,9 @@
 ## Atoms
-- [n] [The Periodic Table](https://vimeo.com/1028399080)
+- [o] [The Periodic Table](https://vimeo.com/1028399080)
 - [ ] [Chemistry]()
 - [ ] [Nuclear Forces]()
-- [n] [Heat](https://vimeo.com/1029691491)
-- [n] [Atomic Structure](https://vimeo.com/1000458082)
+- [o] [Heat](https://vimeo.com/1029691491)
+- [o] [Atomic Structure](https://vimeo.com/1000458082)
 - [ ] [Fission and Fusion]()
 
 ## Electrons
