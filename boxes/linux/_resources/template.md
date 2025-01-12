@@ -7,4 +7,3 @@ In this box, you will learn about linux...
 {Git}
 
 # Projects{11}
-{Some-Project}

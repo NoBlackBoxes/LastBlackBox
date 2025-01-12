@@ -8,4 +8,3 @@ In this box, you will learn about light...
 {Electromagnetic-Radiation}
 
 # Projects{11}
-{Some-Project}

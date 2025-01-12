@@ -27,9 +27,14 @@ for box_name in Config.box_names:
         file.write(f"\n")
         file.write(f"## {box_name}{{11}}\n")
         for lesson_path in lesson_paths:
-            file.write(f"{{{os.path.basename(lesson_path)[:-3]}}}\n")
+            lesson_name = os.path.basename(lesson_path)[:-3]
+            if not lesson_name.startswith("NB3"):
+                file.write(f"{{{lesson_name}}}\n")
         file.write(f"\n")
         file.write(f"# Projects{{11}}\n")
-        file.write(f"{{Some-Project}}\n")
+        for lesson_path in lesson_paths:
+            lesson_name = os.path.basename(lesson_path)[:-3]
+            if lesson_name.startswith("NB3"):
+                file.write(f"{{{box_name}:{lesson_name}}}\n")
 
 # FIN

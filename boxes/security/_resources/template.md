@@ -5,4 +5,3 @@ In this box, you will learn about security...
 {One-Way-Functions}
 
 # Projects{11}
-{Some-Project}

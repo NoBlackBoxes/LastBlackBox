@@ -17,9 +17,7 @@ We can control a computer by loading a list of instructions ("operations") into 
 
 - **TASK**: Blink an (external) LED 
 - *Hint*: Connect the LED to a digital output pin (D13 in the example below), but don't forget your current limiting resistor!
-<p align="center">
-<img src="../../../boxes/computers/_resources/images/LED_driver_circuit.png" alt="LED driver" width="400">
-</p>
+- ![LED Driver:400](/boxes/computers/_resources/images/LED_driver_circuit.png)
 > Your external LED should now be blinking at the same time as the built-in LED (both are connected to pin 13).
 
 - **TASK**: Measure an analog signal from your LDR light sensor circuit
@@ -34,7 +32,5 @@ We can control a computer by loading a list of instructions ("operations") into 
 - *Note*: make sure the tiny wire ends of the buzzer cables are firmly connected your digital output pin (red) and ground (black). You can also use your aligator clips if it is too difficult to connect them to the breadboard.
 - Now investigate Arduino's "tone" Library. Some examples can be found in the *File->Examples-Digital* folder. You can use this library to make some (slightly) more pleasant sounds.
 - This is a piezo buzzer:
-<p align="center">
-<img src="../../../boxes/computers/_resources/images/piezo_buzzer.png" alt="Piezo Buzzer" width="300">
-</p>
+- ![Piezo Buzzer:300](/boxes/computers/_resources/images/piezo_buzzer.png)
 > You should here a (somewhat unpleasant) sound

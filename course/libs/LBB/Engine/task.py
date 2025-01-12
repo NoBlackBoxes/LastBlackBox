@@ -84,7 +84,7 @@ class Task:
                 output.append(line)
         if type == "MD":
             output.append(f"<details><summary><strong>Target</strong></summary>\n")
-            output.append(f":-:-: {self.target}\n")
+            output.append(f"    {self.target}\n")
             output.append(f"</details><hr>\n\n")
         elif type == "HTML":
             html = Utilities.convert_emphasis_tags(self.target)

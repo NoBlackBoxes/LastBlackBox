@@ -6,4 +6,3 @@ In this box, you will learn about amplifiers...
 {Op-Amps}
 
 # Projects{11}
-{Some-Project}

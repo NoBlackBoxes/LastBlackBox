@@ -4,6 +4,13 @@ Logic + Memory = Computer
 ## Logic
 Boole was coole.
 
+<details><summary><i>Materials</i></summary><p>
+
+Contents|Depth|Description| # |Data|Link|
+:-------|:---:|:----------|:-:|:--:|:--:|
+
+</p></details><hr>
+
 #### Watch this video: [Logic Gates](https://vimeo.com/1033231995)
 > The essential elements of computation (NOT, AND, OR, XOR, etc.) can be built from straight forward combinations of MOSFETs.
 
@@ -11,12 +18,29 @@ Boole was coole.
 ## Memory
 There are many ways to store information.
 
+<details><summary><i>Materials</i></summary><p>
+
+Contents|Depth|Description| # |Data|Link|
+:-------|:---:|:----------|:-:|:--:|:--:|
+
+</p></details><hr>
+
 #### Watch this video: [Flash Memory](https://vimeo.com/1033230293)
 > Storing most of your data requires quantum mechanics.
 
 
 ## Computers
 It may not yet seem believable, but you can build a **computer** by combining transistors in a clever way. **Let's learn how!**
+
+<details><summary><i>Materials</i></summary><p>
+
+Contents|Depth|Description| # |Data|Link|
+:-------|:---:|:----------|:-:|:--:|:--:|
+Microcontroller|01|Arduino Nano (rev.3)|1|[-D-](/boxes/computers/_resources/datasheets/arduino_nano_rev3.pdf)|[-L-](https://uk.farnell.com/arduino/a000005/arduino-nano-evaluation-board/dp/1848691)
+Piezo Buzzer|01|Piezoelectric speaker/transducer|1|[-D-](/boxes/computers/_resources/datasheets/piezo_buzzer.pdf)|[-L-](https://uk.farnell.com/tdk/ps1240p02bt/piezoelectric-buzzer-4khz-70dba/dp/3267212)
+Cable (MiniUSB-1m)|01|Mini-USB to Type-A cable (1 m)|1|[-D-](/boxes/computers/)|[-L-](https://uk.farnell.com/molex/88732-8602/usb-cable-2-0-plug-plug-1m/dp/1221071)
+
+</p></details><hr>
 
 #### Watch this video: [Architecture](https://vimeo.com/1033601146)
 > The basic building blocks of a computer (memory, ALU, clock, bus, and IO) have a standard arrangement (architecture) in modern systems.
@@ -27,7 +51,7 @@ It may not yet seem believable, but you can build a **computer** by combining tr
 
 **TASK**: Mount and power your Arduino-based hindbrain (connect the mini-USB cable)
 <details><summary><strong>Target</strong></summary>
-:-:-: The built-in LED on the board should be blinking at 1 Hz.
+    The built-in LED on the board should be blinking at 1 Hz.
 </details><hr>
 
 
@@ -46,13 +70,13 @@ It may not yet seem believable, but you can build a **computer** by combining tr
 **TASK**: Build a Theremin
 - *Hint*: What if you used the analog voltage signal measured from your light sensor to change the frequency of the "tone" playing on your buzzer? Hmm...
 <details><summary><strong>Target</strong></summary>
-:-:-: You should here a sound that varies with your hand motion (in front of a light)
+    You should here a sound that varies with your hand motion (in front of a light)
 </details><hr>
 
 **TASK**: ***Have fun!*** (Make something cool)
 - This diagram of the Arduino "pins" will definitely be useful: ![Arduino Pinout](/boxes/computers/_resources/images/pinout_arduino_nano.png)
 <details><summary><strong>Target</strong></summary>
-:-:-: You should have fun!
+    You should have fun!
 </details><hr>
 
 

@@ -4,8 +4,7 @@ In this box, you will learn about control...
 ## Control{11}
 {PWM}
 {Servo-Loops}
-{NB3_Building-a-PWM-Speed-Controller}
 {H-Bridges}
 
 # Projects{11}
-{Some-Project}
+{Control:NB3_Building-a-PWM-Speed-Controller}

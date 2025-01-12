@@ -5,4 +5,3 @@ In this box, you will learn about fpgas...
 {Hardware-Description-Languages}
 
 # Projects{11}
-{Some-Project}

@@ -20,7 +20,7 @@ class Box:
     LBB Box Class
 
     Stores a list of lessons and materials required to open this black box
-    - Each box has "depth level" (01, 10, 11) indicating the degree of difficulty
+    - Each box has a "depth" (01, 10, 11) indicating the degree of difficulty
     """
     def __init__(self, text=None, dictionary=None):
         self.index = None               # Box index
@@ -90,6 +90,7 @@ class Box:
             material_depth = material_text.split(",")[1]
             if material_depth in depths:
                 material = Material.Material(material_text)
+                material.datasheet = f"/boxes/{self.slug}/{material.datasheet}"
                 materials.append(material)
         self.materials = materials
 
@@ -116,6 +117,13 @@ class Box:
         if type == "MD":
             output.append(f"## {self.name}\n")
             output.append(f"{self.description}\n\n")
+            output.append(f"<details><summary><i>Materials</i></summary><p>\n\n")
+            output.append("Contents|Depth|Description| # |Data|Link|\n")
+            output.append(":-------|:---:|:----------|:-:|:--:|:--:|\n")
+            for m in self.materials:
+                output.append(f"{m.part}|{m.depth}|{m.description}|{m.quantity}|[-D-]({m.datasheet})|[-L-]({m.supplier})\n")
+            output.append(f"\n</p></details><hr>\n\n")
+
         elif type == "HTML":
             output.append(f"<h2>{self.name}</h2")
             output.append(f"{self.description}<br>")

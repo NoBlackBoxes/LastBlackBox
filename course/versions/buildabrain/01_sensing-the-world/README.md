@@ -4,6 +4,14 @@ We will start by learning how electricity is used to create "sensors", which wil
 ## Atoms
 *"Let's start at the very beginning, a very good place to start"*. - R&H
 
+<details><summary><i>Materials</i></summary><p>
+
+Contents|Depth|Description| # |Data|Link|
+:-------|:---:|:----------|:-:|:--:|:--:|
+Periodic Table|01|Periodic Table business card|1|[-D-](/boxes/atoms/card)|[-L-](VK)
+
+</p></details><hr>
+
 #### Watch this video: [Atomic Structure](https://vimeo.com/1000458082)
 > A brief introduction to the physics of atoms, their parts (protons, neutrons, and electrons), and their classical vs. quantum structure.
 
@@ -19,6 +27,26 @@ We will start by learning how electricity is used to create "sensors", which wil
 
 ## Electrons
 Electrons are the sub-atomic particles that underlie *electricity*. Controlling the movement of electrons (and the effects of that movement) will allow us to build many different kinds of electronic devices, from simple circuits to robots and computers.
+
+<details><summary><i>Materials</i></summary><p>
+
+Contents|Depth|Description| # |Data|Link|
+:-------|:---:|:----------|:-:|:--:|:--:|
+NB3 Body|01|NB3 robot base PCB|1|[-D-](/boxes/electrons/NB3_body)|[-L-](VK)
+Resistor (470)|01|470 &Omega;/0.25 W|2|[-D-](/boxes/electrons/_resources/datasheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943)
+Resistor (1k)|01|1 k&Omega;/0.25 W|2|[-D-](/boxes/electrons/_resources/datasheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-1k/res-1k-1-250mw-axial-metal-film/dp/9341102)
+Resistor (10k)|01|10 k&Omega;/0.25 W|2|[-D-](/boxes/electrons/_resources/datasheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-10k/res-10k-1-250mw-axial-metal-film/dp/9341110)
+Potentiometer|01|2.2 k&Omega; variable resistor|2|[-D-](/boxes/electrons/_resources/datasheets/pot_2k2.pdf)|[-L-](https://uk.farnell.com/bourns/3362p-1-222lf/trimmer-pot-2-2kohm-10-1turn-th/dp/2328599)
+Breadboard (400)|01|400-tie solderless breadboard|1|[-D-](/boxes/electrons/_resources/datasheets/breadboard_400.pdf)|[-L-](https://www.amazon.co.uk/gp/product/B0739XRX8F)
+Breadboards (170)|01|170-tie solderless breadboard|4|[-D-](/boxes/electrons/_resources/datasheets/breadboard_170.pdf)|[-L-](https://www.amazon.co.uk/ELEGOO-tie-points-Breadboard-Breadboards-Electronic/dp/B01N0YWIR7)
+Batteries (AA)|01|AA 1.5 V alkaline battery|4|[-D-](/boxes/electrons/)|[-L-]()
+Battery holder|01|4xAA battery holder with ON-OFF switch|1|[-D-](/boxes/electrons/)|[-L-](https://www.amazon.co.uk/gp/product/B0814ZH68F)
+Jumper Kit|01|Kit of multi-length 22 AWG breadboard jumpers|1|[-D-](/boxes/electrons/_resources/datasheets/jumper_kit.pdf)|[-L-](https://uk.farnell.com/multicomp/mc001810/hard-jumper-wire-22awg-140pc/dp/2770338)
+Jumper Wires|01|Assorted 22 AWG jumper wire leads (male/female)|1|[-D-](/boxes/electrons/_resources/datasheets/jumper_wires.pdf)|[-L-](https://www.amazon.co.uk/240pcs-Solderless-Breadboard-Arduino-Project/dp/B08PJSTS3C)
+Test Lead|01|Alligator clip to 0.64 mm pin (20 cm)|2|[-D-](/boxes/electrons/)|[-L-](https://www.amazon.co.uk/gp/product/B096JR15JW)
+Rubber feet|01|Adhesive rubber standoffs (1421T6CL)|4|[-D-](/boxes/electrons/_resources/datasheets/rubber_feet.pdf)|[-L-](https://uk.farnell.com/hammond/1421t6cl/feet-stick-on-pk24/dp/1876522)
+
+</p></details><hr>
 
 #### Watch this video: [Voltage](https://vimeo.com/1000730032)
 > When there is more negative or positive charge in one location vs. another there is a *potential difference* between these locations. This *potential difference* is called a **voltage** and it creates a pressure that pushes electrons from the location with more negative charge to the location with less.
@@ -36,13 +64,13 @@ Electrons are the sub-atomic particles that underlie *electricity*. Controlling 
 - *Help*: If you are new to using a multimeter, then I recommend that you watch this video: [NB3-Multimeter Basics](https://vimeo.com/1027764019)
 - *Help*: If you are new to measuring voltage with a multimeter, then I recommend that you watch this video: [NB3-Measuring Voltage](https://vimeo.com/1027762531)
 <details><summary><strong>Target</strong></summary>
-:-:-: A single AA battery, fully charged, should have a voltage of ~1.6 Volts. If it is less than 1.5 Volts, then the battery is nearly *dead*.
+    A single AA battery, fully charged, should have a voltage of ~1.6 Volts. If it is less than 1.5 Volts, then the battery is nearly *dead*.
 </details><hr>
 
 **TASK**: Measure the voltage of 4xAA batteries in series (end to end).
 - *Hint*: You can use your battery holder.
 <details><summary><strong>Target</strong></summary>
-:-:-: Batteries connected in series will sum their voltages. You should measure four times the voltage of a single AA battery, ~6.4 Volts, from the batteries in your 4xAA holder.
+    Batteries connected in series will sum their voltages. You should measure four times the voltage of a single AA battery, ~6.4 Volts, from the batteries in your 4xAA holder.
 </details><hr>
 
 
@@ -56,7 +84,7 @@ Electrons are the sub-atomic particles that underlie *electricity*. Controlling 
 **TASK**: Measure the resistance of your resistors.
 - *Help*: If you are new to measuring resistance with a multimeter, then I recommend that you watch this video: [NB3-Measuring Resistance](https://vimeo.com/1027761453)
 <details><summary><strong>Target</strong></summary>
-:-:-: Your kit contains 470 &Omega;, 1 k&Omega;, and 10 k&Omega; resistors. You should measure these values.
+    Your kit contains 470 &Omega;, 1 k&Omega;, and 10 k&Omega; resistors. You should measure these values.
 </details><hr>
 
 
@@ -66,7 +94,7 @@ Electrons are the sub-atomic particles that underlie *electricity*. Controlling 
 **TASK**: Assemble the robot body (prototyping base board).
 - *Challenge*: If you are curious how the *NB3 Body* printed circuit board (PCB) was designed, then you can find the KiCAD files here: [NB3 Body PCB](/boxes/electrons/NB3_body).
 <details><summary><strong>Target</strong></summary>
-:-:-: Your NB3 should now look like [this](/boxes/electrons/NB3_body/NB3_body_front.png). Your breadboards will be different colors...and you should have some rubber feet on the back.
+    Your NB3 should now look like [this](/boxes/electrons/NB3_body/NB3_body_front.png). Your breadboards will be different colors...and you should have some rubber feet on the back.
 </details><hr>
 
 
@@ -78,7 +106,7 @@ Electrons are the sub-atomic particles that underlie *electricity*. Controlling 
 - *Warning*: Measuring current with a multimeter is ***tricky***. You can only get an accurate measurement if ***ALL*** of the current in the circuit is forced to flow through your multimeter. This means that when measuring current, your multimeter must be in *series* with the rest of the circuit. (As opposed to measuring voltage, when your multimeter is placed "parallel" to the circuit.)
 - *Help*: If you are new to measuring current with a multimeter, then I recommend you watch this video: [NB3-Measuring Current](https://vimeo.com/1027757287).
 <details><summary><strong>Target</strong></summary>
-:-:-: Not too much current...and do not break your multimeter.
+    Not too much current...and do not break your multimeter.
 </details><hr>
 
 
@@ -87,7 +115,7 @@ Electrons are the sub-atomic particles that underlie *electricity*. Controlling 
 
 **TASK**: Does Ohm's Law hold? You know the voltage of the batteries (V) and the resistance of the resistor (R). Measure the current flowing (I) for different resistors and confirm that V = I*R.
 <details><summary><strong>Target</strong></summary>
-:-:-: For the resistors in your kit, then Ohm's Law should determine the current that you measure.
+    For the resistors in your kit, then Ohm's Law should determine the current that you measure.
 </details><hr>
 
 
@@ -96,18 +124,26 @@ Electrons are the sub-atomic particles that underlie *electricity*. Controlling 
 
 **TASK**: Build a voltage divider using two resistors of the same value. Measure the intermediate voltage (between the resistors).
 <details><summary><strong>Target</strong></summary>
-:-:-: With equal size resistors, the intermediate voltage you measure should be half of the supply voltage.
+    With equal size resistors, the intermediate voltage you measure should be half of the supply voltage.
 </details><hr>
 
 **TASK**: Build a voltage divider using a variable resistor (potentiometer). Measure the intermediate voltage. What happens when you change the position of the internal contact of the variable resistor (by turning the screw)?
 - *Help*: A video guide to completing these tasks can be found here: [NB3-Building Voltage Dividers](https://vimeo.com/1030790826)
 <details><summary><strong>Target</strong></summary>
-:-:-: The intermediate voltage should vary continuously as you adjust the potentiometer.
+    The intermediate voltage should vary continuously as you adjust the potentiometer.
 </details><hr>
 
 
 ## Sensors
 Computers and brains work with electrical signals. In order for either to understand signals in the environment (light, sound, pressure, heat, etc.), then these physical signals must be converted into electrical signals. This conversion is called *transduction* and the thing that does it is a *transducer*. However, given their role in sensing the environment, it is common to call these transduction devices ***sensors***.
+
+<details><summary><i>Materials</i></summary><p>
+
+Contents|Depth|Description| # |Data|Link|
+:-------|:---:|:----------|:-:|:--:|:--:|
+Photoresistor (LDR)|01|Light-dependent resistor (GL5516 and GL5528)|4|[-D-](/boxes/sensors/)|[-L-](https://www.amazon.co.uk/Resistor-Dependent-Photoresistor-Sensitive-Sensors/dp/B08SC1M7V7)
+
+</p></details><hr>
 
 #### Watch this video: [Transducers](https://vimeo.com/1031477896)
 > A sensor converts (transduces) a physical quantity (light, heat, pressure, etc.) into an electrical signal (voltage, current, or resistance).
@@ -125,7 +161,7 @@ Computers and brains work with electrical signals. In order for either to unders
 - *Hint*: Build a voltage divider with one of the fixed resistors replaced with an LDR (light-dependent resistor). Does the "output" voltage vary with light level?
 - *Challenge*: What should the value of the fixed resistor be to maximize the sensitive range of the output voltage for varying light levels?
 <details><summary><strong>Target</strong></summary>
-:-:-: Your multimeter should measure a change in voltage as you cover your LDR or shine light on it. The voltage will either increase with more light or decrease, depending on whether your LDR is the first or second resistor in the voltage divider circuit.
+    Your multimeter should measure a change in voltage as you cover your LDR or shine light on it. The voltage will either increase with more light or decrease, depending on whether your LDR is the first or second resistor in the voltage divider circuit.
 </details><hr>
 
 

@@ -4,6 +4,14 @@ Computers talking to other computers forms a **network**. Networks talking to ot
 ## Networks
 Things started getting really interesting when organisms began to interact with each other. In this box, we will enter the world of **networks** and start by communicating between our local NB3's. We will then move on to communicating with the outside world, via the *internet*.
 
+<details><summary><i>Materials</i></summary><p>
+
+Contents|Depth|Description| # |Data|Link|
+:-------|:---:|:----------|:-:|:--:|:--:|
+Cable (Mini-USB/20cm)|01|Short mini-USB to Type-A cable (20 cm)|1|[-D-](/boxes/networks/)|[-L-](https://www.amazon.co.uk/LINDY-0-2-Type-Mini-B-Cable/dp/B01IZ4VFCO)
+
+</p></details><hr>
+
 ### Physical Layers
 > Connections must be made between computers in order for them to communicate. These can be wires carrying electrical signals (from two wires for serial connections to many wires for parallel connections) or wireless that most often uses light (radio waves). This is the physical layer of the network...and a message may traverse many different types of physical connections on its path from the sender to the receiver.
 
@@ -21,6 +29,13 @@ Things started getting really interesting when organisms began to interact with 
 
 ## Websites
 Creating a website, from simple to complex.
+
+<details><summary><i>Materials</i></summary><p>
+
+Contents|Depth|Description| # |Data|Link|
+:-------|:---:|:----------|:-:|:--:|:--:|
+
+</p></details><hr>
 
 ### HTML
 > Hyper-text markup language.
@@ -40,6 +55,13 @@ Creating a website, from simple to complex.
 
 ## Servers
 Serving HTML files to who ever requests them (via HTTP).
+
+<details><summary><i>Materials</i></summary><p>
+
+Contents|Depth|Description| # |Data|Link|
+:-------|:---:|:----------|:-:|:--:|:--:|
+
+</p></details><hr>
 
 ### HTTP
 > The common language of the internet is HTTP...the Hyper Text Transfer Protocol, which delivers the HTML files to your browser.

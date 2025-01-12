@@ -3,6 +3,8 @@ In this box, you will learn about vision...
 
 ## Vision{11}
 {Cameras}
+{Image-Processing}
 
 # Projects{11}
-{Some-Project}
+{Vision:NB3_Streaming-Images}
+{Vision:NB3_Install-the-Eye}

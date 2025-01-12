@@ -5,4 +5,4 @@ In this box, you will learn about intelligence...
 {Large-Language-Models}
 
 # Projects{11}
-{Some-Project}
+{Intelligence:NB3_Install-the-Forebrain-NPU}

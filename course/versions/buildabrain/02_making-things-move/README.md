@@ -4,6 +4,17 @@
 ## Magnets
 Magnets were known about (and useful) long before we understood electricity. However, the connection between electricity and magnetism is one of the most important discoveries of science. It has major implications for your everyday life (and your NB3).
 
+<details><summary><i>Materials</i></summary><p>
+
+Contents|Depth|Description| # |Data|Link|
+:-------|:---:|:----------|:-:|:--:|:--:|
+Magnet Wire|01|Narrow gauge epoxy insulated (1 m)|1|[-D-](/boxes/magnets/)|[-L-](https://www.amazon.co.uk/Enameled-Magnet-Soldering-Winding-Enamelled/dp/B07N65LRVD)
+Magnet|01|Neodymium disc (8 mm x 3 mm)|4|[-D-](/boxes/magnets/)|[-L-](https://uk.farnell.com/duratool/d01766/magnets-rare-earth-8-x-3mm-pk10/dp/1888095)
+USB Sound Card|01|USB to 3.5 mm Audio out/in|1|[-D-](/boxes/magnets/)|[-L-](https://www.amazon.co.uk/UGREEN-Headphone-Microphone-Raspberry-Ultrabook/dp/B01N905VOY)
+Stereo Plug Terminal|01|3.5 mm plug to screw terminal|2|[-D-](/boxes/magnets/)|[-L-](https://www.amazon.co.uk/dp/B07MNYBFL9)
+
+</p></details><hr>
+
 #### Watch this video: [Ferromagnetism](https://vimeo.com/1031272573)
 > A mysterious force found in certain types of "magical" materials, ferromagnetism was known about and used for thousands of years, but it was only understood quite recently.
 
@@ -15,13 +26,21 @@ Magnets were known about (and useful) long before we understood electricity. How
 ## Motors
 Clever arrangements of electromagnets and their control circuits can be used to produce a rotational force. You will use these devices to make your NB3 move!
 
+<details><summary><i>Materials</i></summary><p>
+
+Contents|Depth|Description| # |Data|Link|
+:-------|:---:|:----------|:-:|:--:|:--:|
+DC Brushed Motor|01|6V Brushed DC motor|1|[-D-](/boxes/motors/)|[-L-](https://www.amazon.co.uk/Gikfun-1V-6V-Hobby-Arduino-EK1894/dp/B07BHHP2BT)
+
+</p></details><hr>
+
 #### Watch this video: [DC Motors](https://vimeo.com/1031627739)
 > An electric motor converts current into rotation using electromagnets that are turned on and off in a coordinated pattern. Different types of motors (stepper, brushed, or brushless) use different strategies (circuits) for this coordination.
 
 **TASK**: Play with your brushed DC motor. Spin it forwards *and* backwards...
 - *Challenge*: What are some ways you could change the *speed* with which your motor spins?
 <details><summary><strong>Target</strong></summary>
-:-:-: Switching the direction that current flows through your motor will change the direction it spins.
+    Switching the direction that current flows through your motor will change the direction it spins.
 </details><hr>
 
 

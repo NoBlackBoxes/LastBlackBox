@@ -5,4 +5,3 @@ In this box, you will learn about circuits...
 {Radios}
 
 # Projects{11}
-{Some-Project}
