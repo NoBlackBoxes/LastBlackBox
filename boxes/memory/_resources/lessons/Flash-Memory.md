@@ -1,5 +1,5 @@
 # Memory : Flash Memory
-Storing most of your data requires quantum mechanics.
+Storing much of your data requires *quantum mechanics*.
 
 ## [Video](https://vimeo.com/1033230293)
 
