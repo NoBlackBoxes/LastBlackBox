@@ -13,7 +13,7 @@ The title font is "FreeMono Oblique" size 72
 Resolution: 1920x1080
 - FFmpeg Video
   - H.264
-  - High Quality
+  - Perceptually Lossless
   - Encoding Speed: Good
   - Keyframe Interval: 18
   - Bitrate: ~10000
