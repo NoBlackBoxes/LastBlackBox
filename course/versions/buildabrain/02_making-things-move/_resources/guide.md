@@ -10,9 +10,11 @@ Build a speaker using an electromagnet, paper cup, and audio source.
 ## Tools
 - Magnet wire (0.4 mm or thinner)
 - Neodymium magnets (~4 per speaker)
-- Paper cups (1 per speaker)
+- Paper cup (1 per speaker)
 - Sandpaper (for removing magnet wire enamel insulation)
-- Audio sources (3.5 mm jack)
+- Audio source (3.5 mm jack)
+- Clear tape
+- Scissors
 
 ## Steps
 > lecture - **practical** - *optional*
