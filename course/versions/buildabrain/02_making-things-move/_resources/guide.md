@@ -1,5 +1,11 @@
 # Teaching Guide
 
+## Topics
+- Ferromagnetism
+- Electromagnet (principle and coils)
+- Audio speaker
+- DC Motor (stepper and brushed)
+
 ## Goal
 Build a speaker using an electromagnet, paper cup, and audio source.
 - Play with magnets and compass

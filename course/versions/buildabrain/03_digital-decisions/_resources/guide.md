@@ -1,5 +1,10 @@
 # Teaching Guide
 
+## Topics
+- Semiconductor
+- Transistor (MOSFET)
+- Motor driver and PWM
+
 ## Goal
 Build a light-sensitive motor.
 - Build a MOSFET motor driver (find the threshold voltage)

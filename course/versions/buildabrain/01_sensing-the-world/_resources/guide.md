@@ -1,5 +1,13 @@
 # Teaching Guide
 
+## Topics
+- Basic electronics (voltage, current, and resistance)
+- Measuring with a multimeter
+- Ohm's Law
+- Circuit schematics
+- Voltage-Divider
+- Transducer (sensor) using a light-dependent resistor
+
 ## Goal
 Build a light sensing circuit that changes its output voltage in response to changes in light.
 - Assemble the NB3's body (prototyping base)
