@@ -22,13 +22,13 @@ importlib.reload(Course)
 
 # Build course
 #name = "The Last Black Box"
-name = "Build a Brain"
-#name = "Bootcamp"
+#name = "Build a Brain"
+name = "Bootcamp"
 course = Course.Course(name)
 
 # Render README for each session
 for session in course.sessions:
-    README_text = session.render("Build a Brain", type="MD")
+    README_text = session.render(name, type="MD")
     if name == "The Last Black Box":
         session_folder = f"{Config.boxes_root/{session.slug}}"
     else:

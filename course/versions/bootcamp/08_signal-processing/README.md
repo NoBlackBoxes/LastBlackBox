@@ -1,5 +1,5 @@
-# Bootcamp : Microphones and Speakers
-Now we will add a speaker (mouth) and microphones (ears) to your NB3.
+# Bootcamp : Signal Processing
+Let's learn how to process one-dimensional time series data...like audio waveforms.
 
 ## Audio
 Listen up, speak up.
@@ -24,40 +24,12 @@ M2 nut|01|regular M2 nut|2|[-D-](/boxes/audio/)|[-L-](https://www.accu.co.uk/hex
 
 </p></details><hr>
 
-### Microphones
-> MEMs mics and beyond.
-
-
-### Speakers
-> Better sounding speakers.
-
-
-### I2S
-> I2S is a fully-digital protocol used by modern CPUs to talk to audio devices over a small number of connections. It requires only a clock, LR select (for selecting which channel is being written/read), data in (for microphone input), and data out (for speaker output).
+### Signal Processing
+> Digital signal processing is a set of techniques for processing one-dimensional data (1D).
 
 
 # Project
-### NB3 : Build and Install the Linux I2S Driver
-> Let's build (compile) and install the Linux device driver for our NB3's sound card. This software module is required to access the NB3's ears (microphone) and mouth (speaker).
-
-<details><summary><weak>Guide</weak></summary>
-:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1042781850" target="_blank" rel="noopener noreferrer">here</a>.
-</details><hr>
-
-
-### NB3 : Install the Ears
-> Let's add some ears to your NB3.
-
-<details><summary><weak>Guide</weak></summary>
-:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1042943195" target="_blank" rel="noopener noreferrer">here</a>.
-</details><hr>
-
-
-### NB3 : Install the Mouth
-> Let's add a mouth to your NB3.
-
-<details><summary><weak>Guide</weak></summary>
-:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1042947561" target="_blank" rel="noopener noreferrer">here</a>.
-</details><hr>
+### Signal Processing
+> Digital signal processing is a set of techniques for processing one-dimensional data (1D).
 
 

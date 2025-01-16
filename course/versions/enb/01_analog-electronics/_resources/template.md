@@ -20,4 +20,4 @@ Here we will learn where electricity comes from, how we can measure it, and what
 {Transducers}
 
 # Project{01}
-{NB3_Building-a-Light-Sensor}
+{Sensors:NB3_Building-a-Light-Sensor}

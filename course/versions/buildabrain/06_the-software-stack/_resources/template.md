@@ -6,9 +6,11 @@ Modern computing relies on many layers of software to coordinate increasingly po
 {NB3_Power-Supply}
 
 ## Systems{01}
+{Operating-Systems}
 {NB3_Midbrain}
 {NB3_RPiOS}
 {NB3_Connecting-to-RPi}
+{Visual-Studio-Code}
 
 ## Linux{01}
 {Navigating-the-Command-Line}

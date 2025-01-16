@@ -1,49 +1,31 @@
-# Bootcamp : Session 5 - Computer Vision
+# Bootcamp : Computer Vision
+Let's learn how ot process two-dimensional data (images).
 
 ## Vision
+Look at everyone.
 
-### Watch this video: [Cameras](https://vimeo.com/??????)
-> How does a digital camera work?
+<details><summary><i>Materials</i></summary><p>
 
-### Watch this video: [NB3 Forebrain](https://vimeo.com/628545232)
-> Let's add a camera (eyes) to your NB3!
+Contents|Depth|Description| # |Data|Link|
+:-------|:---:|:----------|:-:|:--:|:--:|
+Camera (RPi v3)|01|RPi color camera with auto-focus (version 3)|1|[-D-](/boxes/vision/_resources/datasheets/rpi_camera_v3.pdf)|[-L-](https://uk.farnell.com/raspberry-pi/sc0872/rpi-camera-mod-3-standard-lens/dp/4132318)
+NB3 Camera Mount|01|Custom laser cut mount for RPi camera|1|[-D-](/boxes/vision/NB3_camera_mount)|[-L-](VK)
+NB3 Cortex Mount|01|Custom laser cut holder for NPU|1|[-D-](/boxes/vision/NB3_cortex_mount)|[-L-](VK)
+M2.5 bolt (6)|01|6 mm long M2.5 bolt|4|[-D-](/boxes/vision/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2)
+M2.5 standoff (20/PS)|01|20 mm long plug-to-socket M2.5 standoff|4|[-D-](/boxes/vision/)|[-L-](https://uk.farnell.com/wurth-elektronik/971200151/standoff-hex-male-female-20mm/dp/2884418)
+M3 nut (square)|01|square M3 nut 1.8 mm thick|1|[-D-](/boxes/vision/)|[-L-](https://www.accu.co.uk/flat-square-nuts/21326-HFSN-M3-A2)
+M3 bolt (12)|01|12 mm long M3 bolt|1|[-D-](/boxes/vision/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/500116-SPP-M3-12-ST-BZP)
+M2 bolt (8)|01|8 mm long M2 bolt|4|[-D-](/boxes/vision/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/500101-SPP-M2-8-ST-BZP)
+M2 nut|01|regular M2 nut|4|[-D-](/boxes/vision/)|[-L-](https://www.accu.co.uk/hexagon-nuts/456429-HPN-M2-C8-Z)
 
-- [] **TASK**: Check whether your camera works by running the following command from the Linux terminal.
-```bash
-libcamera-still -o test.png
-```
-- *Hint*: This command will take a picture and save it as a PNG in the same folder where you run the command. You can open it directly in VS Code.
+</p></details><hr>
+
+### Image-Processing
+> Old-school (classical) techniques for processing two-dimensional data (2D).
 
 
-## Computer Vision
+# Project
+### NB3 : Streaming Images
+> Let's stream live images from your NB3's camera to any web browser.
 
-Taking a picture is just the first step in making a computer "see". How do we extract useful information from the image? How do we detect movement? How do we identify and localise different objects? Many of these tasks are surprisingly hard and remain unsolved problems in both engineering and neuroscience?
 
-Let's get started.
-
-The first step will be acquiring an image using Python (so we can then manipulate and analyse the image using code).
-
-### Acquire an image using Python
-
-- Run this [Example](resources/python/camera/capture_save.py) code to acquire a still image and save it to a file.
-
-### Process an image using Python and the Numpy library
-
-- Run this [Example](resources/python/camera/capture_process_save.py) code to acquire a still image and save it to a file.
-- Note: you may need to install another library to save the numpy array as an image
-
-  ```bash
-  pip install pillow
-  ```
-
-### Stream images from your NB3 camera to the local network (so we can view the live stream on your laptop)
-
-- Run this [Example](resources/python/camera/capture_stream.py) code to continously acquire images and stream them to a website.
-
-----
-
-## Afternoon
-
-Project Work
-
-----

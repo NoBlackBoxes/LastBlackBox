@@ -1,56 +1,136 @@
-# Bootcamp : Session 3 - Software
-
----
-# Morning
+# Bootcamp : Software Systems
+We will now add a more powerful computer (which will require more electrical *power*) to our NB3's midbrain. This added computation will allow us to run software systems, such as Linux, and develop high-level programs in Python.
 
 ## Power
-Running more capable software requires a faster computer, which requires more power. We will first explore how a power supply works and then install one on your NB3.
+Running more capable software requires a faster computer, which requires more electrical power. We will now explore how power supplies work and then install one on your NB3.
 
-#### Watch this video: [NB3-Power](https://vimeo.com/1005162740)
-> We install a DC-DC power supply on our NB3.
+<details><summary><i>Materials</i></summary><p>
 
-- **TASK**: Add a (regulated) 5 volt power supply to your robot, which you can use while debugging to save your AA batteries and to provide enough power for the Raspberry Pi computer.
+Contents|Depth|Description| # |Data|Link|
+:-------|:---:|:----------|:-:|:--:|:--:|
+NB3 Power Board|01|Regulated DC-DC power supply (5 Volts - 4 Amps)|1|[-D-](/boxes/power/NB3_power)|[-L-](VK)
+Power Cable|01|Custom 4 pin NB3 power connector cable|1|[-D-](/boxes/power/)|[-L-](VK)
+M2.5 standoff (7/PS)|01|7 mm long plug-to-socket M2.5 standoff|4|[-D-](/boxes/power/)|[-L-](https://uk.farnell.com/wurth-elektronik/971070151/standoff-hex-male-female-7mm-m2/dp/2884371)
+M2.5 bolt (6)|01|6 mm long M2.5 bolt|4|[-D-](/boxes/power/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2)
+M2.5 nut|01|regular M2.5 nut|4|[-D-](/boxes/power/-)|[-L-](https://www.accu.co.uk/hexagon-nuts/456430-HPN-M2-5-C8-Z)
+12V DC Power Supply|01|12 V AC-DC transformer (UK/EU/USA plugs)|1|[-D-](/boxes/power/)|[-L-](https://www.amazon.co.uk/gp/product/B09QG4R1R4)
+Battery|01|NiMH 9.6V 8-cell 2000 mAh battery|1|[-D-](/boxes/power/)|[-L-](https://www.amazon.co.uk/BAKTH-Capacity-Rechargeable-Discharge-Customized/dp/B08VRC8KL7)
+Battery Cable|01|Barrel Jack to Tamiya Plug|1|[-D-](/boxes/power/)|[-L-](VK)
+Battery Charger|01|NiMH battery charger (UK plug)|1|[-D-](/boxes/power/)|[-L-](https://www.amazon.co.uk/dp/B089VRXKWY?psc=1&smid=AOVA4BIXU2O7J&ref_=chk_typ_imgToDp)
+Velcro Patch|01|Velcro adhesive|1|[-D-](/boxes/power/)|[-L-]()
+
+</p></details><hr>
+
+#### Watch this video: [DC-DC Converters](https://vimeo.com/1035304311)
+> How does efficient DC to DC conversion work? Buck and Boost.
+
+
+#### Watch this video: [NB3 : Power Supply](https://vimeo.com/1035306761)
+> Let's install a DC-DC power supply on our NB3.
+
+**TASK**: Add a (regulated) 5 volt power supply to your robot, which you can use while debugging to save your AA batteries and to provide enough power for the Raspberry Pi computer.
 - *NOTE*: Your NB3_power board cable *might* have inverted colors (black to +5V, red to 0V) relative to that shown in the assembly video. This doesn't matter, as the plugs will only work in one orientation and the correct voltage is conveyed to the correct position on the body.
 <details><summary><strong>Target</strong></summary>
-Your NB3 should now look like this: <p align="center">
-<img src="../../../boxes/power/_resources/images/NB3_power_wiring.png" alt="NB3 power wiring" width="400">
-</p>
+    Your NB3 should now look like this: ![NB3 power wiring:400](../../../boxes/power/_resources/images/NB3_power_wiring.png)"
 </details><hr>
 
+
 ## Systems
-Modern computers combine a huge number of different technologies into a functional "system". They still need a core CPU and memory (RAM), but also a graphics processor, a network connection (wired and wireless), specialized hardware
+Modern computers combine a huge number of different technologies into a functional "system". They still need a core CPU and memory (RAM), but also a graphics processor, a network connection (wired and wireless), and other specialized hardware. All of these hardware devices are coordinated by a sophisticated (and complex) piece of software called an *operating system*.
 
-#### Watch this video: [NB3 Midbrain](https://vimeo.com/1005170402)
-> Add a more powerful midbrain computer (Raspberry Pi) to your NB3.
+<details><summary><i>Materials</i></summary><p>
 
-- **TASK**: Mount a Raspberry Pi on your robot (and connect its power inputs using your *shortest* jumper cables, 2x5V and 2x0V from the NB3, to the correct GPIO pins on the RPi...please *double-check* the pin numbers)
-- This pinout of the Raspberry Pi GPIO might be useful: [Raspberry Pi GPIO](../../../boxes/systems/_resources/images/rpi_GPIO_pinout.png)
+Contents|Depth|Description| # |Data|Link|
+:-------|:---:|:----------|:-:|:--:|:--:|
+Computer (RPi4)|01|Raspberry Pi 4b with 2 GB RAM|1|[-D-](/boxes/systems/_resources/datasheets/rpi4b.pdf)|[-L-](https://uk.farnell.com/raspberry-pi/rpi4-modbp-2gb/raspberry-pi-4-model-b-2gb/dp/3051886)
+Heatsinks|01|Heatsinks for RPi 4b chips|1|[-D-](/boxes/systems/_resources/datasheets/rpi4b_heatsinks.jpg)|[-L-](https://www.amazon.co.uk/gp/product/B07VRNT3HX)
+SD Card|01|16 GB micro SD card|1|[-D-](/boxes/systems/_resources/datasheets/SanDisk-SDSQUAR-016G-GN6MA-datasheet.pdf)|[-L-](https://uk.farnell.com/sandisk/sdsquar-016g-gn6ma/memory-card-microsdhc-uhs-i-16gb/dp/2931924)
+USB SD Card IO|01|SD card reader/writer|1|[-D-](/boxes/systems/)|[-L-](https://www.amazon.co.uk/Beikell-High-speed-Adapter-Supports-MMC-Compatible-Windows/dp/B07L9VT8YY)
+M2.5 bolt (6)|01|6 mm long M2.5 bolt|8|[-D-](/boxes/systems/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2)
+M2.5 standoff (20/SS)|01|20 mm long socket-to-socket M2.5 standoff|4|[-D-](/boxes/systems/)|[-L-](https://uk.farnell.com/wurth-elektronik/970200154/standoff-hex-female-female-20mm/dp/2987903)
 
-#### Watch this video: [RPiOS](https://vimeo.com/??????)
-> After mounting and wiring your NB3's midbrain computer, you must now give it some core software to run...an operating system.
-  
-- **TASK**: Install the Linux-based Raspberry Pi OS on your NB3
+</p></details><hr>
+
+#### Watch this video: [Multi-Tasking](https://vimeo.com/1036086160)
+> Back when computers were very expensive mainframes, some clever software engineers developed strategies to share the computer's resources between multiple users, running multiple different tasks, at the same time. These "scheduling" programs still form the basis of our modern **multi-tasking** operating systems.
+
+**TASK**: Develop a multi-tasking "scheduling" program for your microcontroller.
+<details><summary><strong>Target</strong></summary>
+    Changing the timescale of one task should not affect the other.
+</details><hr>
+
+
+#### Watch this video: [NB3 : Programming Concurrency (Arduino)](Arduino))
+> Getting a microcontroller to perform two tasks (with very different timescales) at the same time is a fun programming challenge. You will develop new skills in organizing your programs and get a glimpse of the problems solved by the *kernel* of a modern operating system.
+
+
+#### Watch this video: [Operating Systems](https://vimeo.com/1036096746)
+> As computer hardware became much more capable, software was developed to manage this complexity and power. This software took responsibility for managing access to the computer's resources: processing, memory, and devices. These days, when we *operate* a computer, we rarely interact directly with the hardware. Instead, we talk to this control software, which we call an **operating system**.
+
+**TASK**: Install the Linux-based Raspberry Pi OS on your NB3
 - Follow these [RPiOS installation instructions](../../../boxes/systems/rpios/README.md)
+<details><summary><strong>Target</strong></summary>
+    Booted!
+</details><hr>
 
-#### Watch this video: [Connecting to RPi](https://vimeo.com/??????)
-> When you have installed your NB3's operating system, then you can power it on and try to connect to it from your Host computer over WiFi.
 
-- ***TASK***: Connect to your NB3 via WiFi
+#### Watch this video: [NB3 : Midbrain](https://vimeo.com/1036089510)
+> Now we will add a more powerful computer (Raspberry Pi) to your NB3's midbrain.
+
+**TASK**: Mount a Raspberry Pi on your robot (and connect its power inputs using your *shortest* jumper cables, 2x5V and 2x0V from the NB3, to the correct GPIO pins on the RPi...please *double-check* the pin numbers)
+- This pinout of the Raspberry Pi GPIO might be useful: [Raspberry Pi GPIO](../../../boxes/systems/_resources/images/rpi_GPIO_pinout.png)
+<details><summary><strong>Target</strong></summary>
+    A powered and blinking RPi midbrain.
+</details><hr>
+
+
+#### Watch this video: [NB3 : RPiOS](https://vimeo.com/1036095710)
+> After mounting and wiring your NB3's midbrain computer, you must now give it some core software to run...an operating system.
+
+**TASK**: Install the Linux-based Raspberry Pi OS on your NB3
+- Follow these [RPiOS installation instructions](../../../boxes/systems/rpios/README.md)
+<details><summary><strong>Target</strong></summary>
+    Booted!
+</details><hr>
+
+
+#### Watch this video: [NB3 : Connecting to RPi](https://vimeo.com/1036391512)
+> When you have installed your NB3's operating system, then you can power it on and try to connect to it from your Host computer over WiFi or UART.
+
+**TASK**: Connect to your NB3 via WiFi
 - Follow these instruction [Connecting to RPi](../../../boxes/systems/connecting/README.md)
+<details><summary><strong>Target</strong></summary>
+    Connected!
+</details><hr>
+
+
+#### Watch this video: [Visual Studio Code](https://vimeo.com/1036716612)
+> We will be using Visual Studio Code (VS Code) as our tool for writing programs. VS Code is just a simple, *but really powerful*, text editor. It has extensions for all sorts of useful tools (Python, Git, etc.), and for connecting to a "remote" computer (our NB3's midbrain).
+
 
 ## Linux
 A free and open source operating system.
 
-### Watch this video: [Linux: Introduction](https://vimeo.com/1005196173)
-> Linux us based on UNIX.
+<details><summary><i>Materials</i></summary><p>
 
-- **TASK**: Explore Linux. Spend any extra time you have fiddling, playing with the UNIX approach to controlling a computer. Create some folders. Edit some files.
+Contents|Depth|Description| # |Data|Link|
+:-------|:---:|:----------|:-:|:--:|:--:|
 
-### Watch this video: [Git](https://vimeo.com/??????)
-> Git is a program that keeps track of changes to your files. It is very useful when developing code. This entire course is stores as a git "repository".
+</p></details><hr>
 
-- **TASK**: "Clone" (copy) all of the code in the LastBlackBox GitHub repository directly to your NB3's midbrain. It will help with later exercises if we all put this example code at the same location on the Raspberry Pi (the "home" directory).
+#### Watch this video: [Navigating the Command Line](https://vimeo.com/1036829527)
+> The original user interfaces were entirely based on text. You typed commands as a line of text into your terminal console and received the result as a string of characters on the screen. Navigating this **command line** remains a useful skill, and a necessary one when working with remote machines.
 
+**TASK**: Explore Linux. Spend any extra time you have fiddling, playing with the UNIX approach to controlling a computer. Create some folders. Edit some files.
+<details><summary><strong>Target</strong></summary>
+    You should see this in the command line.
+</details><hr>
+
+
+#### Watch this video: [Git](https://vimeo.com/1036825331)
+> Git is a program that keeps track of changes to your files. It is very useful when developing code. This entire course is stored as a git "repository" on GitHub.
+
+**TASK**: "Clone" (copy) all of the code in the LastBlackBox GitHub repository directly to your NB3's midbrain. It will help with later exercises if we all put this example code at the same location on the Raspberry Pi (the "home" directory).
 ```bash
 cd ~                # Navigate to "home" directory
 mkdir NoBlackBoxes  # Create NoBlackBoxes directory
@@ -60,42 +140,62 @@ cd NoBlackBoxes     # Change to NoBlackBoxes directory
 git clone --depth 1 https://github.com/NoBlackBoxes/LastBlackBox
 ```
 
+<details><summary><strong>Target</strong></summary>
+    You should now have a complete copy of the LBB repo on your NB3.
+</details><hr>
+
+
+#### Watch this video: [Package Managers](https://vimeo.com/1036834036)
+> Installing and "managing" software can get complicated. Programs that help coordinate this process are called **package managers**.
+
+
 ## Python
 Python is an interpreted programming language.
 
-### Watch this video: [Virtual Environments](https://vimeo.com/??????)
-> We will next create a Python virtual environment on our NB3 that will isolate the specific software packages we require for the course from the Python packages used by Raspberry Pi's operating system.
+<details><summary><i>Materials</i></summary><p>
 
-- **TASK**: Create a "virtual environment" called LBB
+Contents|Depth|Description| # |Data|Link|
+:-------|:---:|:----------|:-:|:--:|:--:|
+
+</p></details><hr>
+
+#### Watch this video: [Introducing the Interpreter](https://vimeo.com/1042618092)
+> What is Python? Where is it? How does it work? How can it work for you?
+
+**TASK**: Say "hello world" in Python
+- Print the words "Hello World" on your terminal screen
+- Print the words "Hello World" on your terminal screen many, many times
+- Print the words "Hello World for the {Nth} time" on your terminal screen, where "Nth" reports the iteration count, i.e. "1", "2", "3"...or (*bonus task*) "1st", "2nd", "3rd", etc.
+<details><summary><strong>Target</strong></summary>
+    You should see something like "Hello World for the 1st time", "Hello World for the 2nd time", etc. printed line by line in your terminal screen.
+</details><hr>
+
+
+#### Watch this video: [Virtual Environments](https://vimeo.com/1042637566)
+> We will next create a Python **virtual environment** on our NB3 that will isolate the specific Python packages we require for the course from the Python packages used by the Raspberry Pi's operating system.
+
+**TASK**: Create a "virtual environment" called LBB
 - Follow the instructions here: [virtual environments](../../../boxes/python/virtual_environments/README.md)
+<details><summary><strong>Target</strong></summary>
+    You should now have a virtual environment activated (and installed in the folder "_tmp/LBB").
+</details><hr>
 
----
-# Afternoon
+**TASK**: Install some useful packages using PIP
+- Install numpy
+- Install matplotlib
+- Make a cool plot and save it to an image file
+<details><summary><strong>Target</strong></summary>
+    You should now hav an image of your plot saved, which you can open and view inside VS code.
+</details><hr>
 
-## Networks
-
-## Websites
-
-## Servers
-
----
 
 # Project
-### Build a remote-control robot!
-Your goal is to press a key on your "host" computer and have your NB3 respond. If you detect different keys, then you can have your NB3 respond with different behaviours/directions.
+### NB3 : Playing With Python
+> Let's see what Python can do...and get used to what it "feels like" to do stuff with Python.
 
-This is a ***creative*** task with lots of different solutions. However, to get you started, I have created the example code described below.
+**TASK**: Let's make some fun things using Python
+<details><summary><strong>Target</strong></summary>
+    You should have made something fun.
+</details><hr>
 
-0. SSH connection from your "host" computer to your NB3.
-1. Code to detect keypresses with your NB3's Raspberry Pi (keypresses are sent via SSH whenever you type in the terminal window)
-   - Python example code for detecting keypresses: [python keyboard](../../../boxes/python/remote-NB3/keyboard/keyboard.py)
-2. Code to send "serial" commands from your NB3's midbrain (RPi) to hindbrain (Arduino)
-    - Python example code to send serial commands: [python serial](../../../boxes/python/remote-NB3/serial/serial_write.py)
-3. Code to run on your NB3's hindbrain (Arduino) that listens for serial commands and responds with behaviour
-    - Arduino example code to respond to a single serial command with LED: [arduino serial server](../../../boxes/python/remote-NB3/arduino/serial_server/)
-    - Arduino example code to respond to a multiple serial command with different servo movements: [arduino serial controller](../../../boxes/python/remote-NB3/arduino/serial_controller/)
-4. Code that combines detecting keypresses and sending serial commands
-   - Python example code that combines keypress detection and serial command writing: [python kerial](../../../boxes/python/remote-NB3/kerial/kerial.py)
-   - Python example code that combines keypress detection (using a more capable library, **sshkeyboard**, that also detects when a key is held down) and serial command writing: [python drive](../../../boxes/python/remote-NB3/drive/drive.py)
 
-----

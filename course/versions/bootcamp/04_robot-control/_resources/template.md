@@ -6,7 +6,7 @@ Here we will combine our sensors, motors, and a computer hindbrain to create a s
 
 ## Robotics{01}
 {NB3_Muscles-Servos}
-{Ball-Caster}
+{NB3_Ball-Caster}
 
 # Project{01}
-{NB3_Build-a-Braitenberg-Vehicle}
+{Robotics:NB3_Build-a-Braitenberg-Vehicle}

@@ -1,6 +1,8 @@
 # Bootcamp : Computer Vision
+Let's learn how ot process two-dimensional data (images).
 
 ## Vision{01}
+{Image-Processing}
 
-# Project
-### Process some images
+# Project{01}
+{Vision:NB3_Streaming-Images}

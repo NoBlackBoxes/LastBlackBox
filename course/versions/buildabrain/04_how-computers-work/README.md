@@ -26,7 +26,7 @@ Contents|Depth|Description| # |Data|Link|
 </p></details><hr>
 
 #### Watch this video: [Flash Memory](https://vimeo.com/1033230293)
-> Storing most of your data requires quantum mechanics.
+> Storing much of your data requires *quantum mechanics*.
 
 
 ## Computers

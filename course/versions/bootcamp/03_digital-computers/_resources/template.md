@@ -13,4 +13,4 @@ It's time to learn how transistors can perform logic, store information, and wor
 {Low-Level-Programming}
 
 # Project{01}
-{NB3_Building-a-Theremin}
+{Computers:NB3_Building-a-Theremin}

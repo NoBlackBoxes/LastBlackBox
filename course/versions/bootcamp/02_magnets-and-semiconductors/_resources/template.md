@@ -14,4 +14,4 @@ Here we will learn about electromagnetism, motors, and transistors.
 {MOSFETs}
 
 # Project{01}
-{NB3_Building-a-Light-Sensitive-Motor}
+{Transistors:NB3_Building-a-Light-Sensitive-Motor}
