@@ -1,48 +1,31 @@
-# Light
+# The Last Black Box : Light
+In this box, you will learn about light...
 
-In this box, we will learn about light...how to measure it and how to **create** it.
+## Light
+What is light? How do we measure it? How to **create** it?
 
-----
+<details><summary><i>Materials</i></summary><p>
 
-<details><summary><b>Materials</b></summary><p>
-
-Contents|Level|Description| # |Data|Link|
+Contents|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
-Lightbulb|10|Mini incandescent bulb (6 V)|1|[-D-](_resources/datasheets/lamp_6V.pdf)|[-L-](https://uk.farnell.com/cml-innovative-technologies/3820al/lamp-w-e-axial-t3-8-6v-0-6w/dp/1139454)
+Lightbulb|10|Mini incandescent bulb (6 V)|1|[-D-](/boxes/light/_resources/datasheets/lamp_6V.pdf)|[-L-](https://uk.farnell.com/cml-innovative-technologies/3820al/lamp-w-e-axial-t3-8-6v-0-6w/dp/1139454)
 
-</p></details>
+</p></details><hr>
 
-----
+### The EM Spectrum
+> Light comes in many shapes in sizes...well, wavelengths. This wavelength determines how much energy the light particles carry, how they interact with materials, and whether or not we can see them.
 
-## Topics
-- EM waves (wiggle/accelerate electron - light)
-  - energy ~ frequency
-  - wavelength, c
-- PMT
-  - photons?
-- (NEW) Polarization: https://www.youtube.com/watch?v=MhhHPOxTUy8
-- Wave picture (Huygens)
-  - Wavefront
-Light hits stuff?
-- absorb
-- reflect
-- refract
-- scatter
-- Refraction (Snell's Law)
-  - Different materials let EM wave through easier/harder....same freq, less wavelength....slower
-  - index of refaction
-- Reflection
-  - QED: https://upload.wikimedia.org/wikipedia/commons/7/77/Feynmans_QED_probability_amplitudes.gif
-- Diffraction
-- Two slits (interference)
-- Lenses (or curved mirrors)
 
-----
+### Optics
+> When light interacts with matter funny, but useful, things happen.
 
-## Goals
 
-1. Light a lightbulb, think about the jiggling electrons.
-2. Build two dipole antennas (transmitter and receiver)...a wireless telegraph.
-3. Use an inductor to build a "choke". Power a lightbulb (or LED) via an inductor in paralell. What happens? (decay times)
+### Maxwell's Equations
+> The fundamental equations of classical electromagnetism are surprisingly easy to understand...and measure.
 
-----
+
+#### Watch this video: [Electromagnetic Radiation](https://vimeo.com/1032447600)
+> When an electric charge is accelerated something surprising happens. This acceleration creates a ripple in the electric field (which induces a magnetic field). This ripple propagates away from the accelerated charge at the speed of light. It is light.
+
+
+# Project

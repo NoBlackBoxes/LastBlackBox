@@ -1,38 +1,20 @@
-# Circuits
+# The Last Black Box : Circuits
+In this box, you will learn about circuits...
+
+## Circuits
 Analog circuits can do some amazing things.
 
-----
+<details><summary><i>Materials</i></summary><p>
 
-<details><summary><b>Materials</b></summary><p>
-
-Contents|Level|Description| # |Data|Link|
+Contents|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
-Caster|01|¾” metal ball caster|1|[-D-](https://www.pololu.com/product/955)|[-L-](https://www.pololu.com/product/955)
-Spacer|01|NB3 spacer 3 mm spacer for mounting ball caster|5|[-D-](NB3_spacer)|[-L-](VK)
+Caster|01|¾” metal ball caster|1|[-D-](/boxes/circuits/https://www.pololu.com/product/955)|[-L-](https://www.pololu.com/product/955)
+Spacer|01|NB3 spacer 3 mm spacer for mounting ball caster|5|[-D-](/boxes/circuits/NB3_spacer)|[-L-](VK)
 
-</p></details>
+</p></details><hr>
 
-----
+### Radios
+> Let's make some light, send it across the room, and decode it into a useful signal.
 
-## Topics
 
-- To Do
-
-----
-
-## Goals
-
-1. Build a Braitenberg vehicle the moves towards light
-2. Build a Braitenberg vehicle the avoids light
-3. Build a Braitenberg vehicle with active components
-4. Build a Braitenberg vehicle that responds to sound
-
-----
-
-#### NOTES
-
-- Screws for bearings are imperial....don't lose nut
-- Could build comparator for alternating left-right follower-bot using Op-Amp with positve feedback?
-
-----
-
+# Project

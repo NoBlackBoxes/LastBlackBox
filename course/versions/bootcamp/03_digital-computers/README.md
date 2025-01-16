@@ -69,7 +69,7 @@ Cable (MiniUSB-1m)|01|Mini-USB to Type-A cable (1 m)|1|[-D-](/boxes/computers/)|
 **TASK**: Blink an (external) LED
 - *Hint*: Connect the LED to a digital output pin (D13 in the example below), but don't forget your current limiting resistor!
 <p align="center">
-<img src="/boxes/computers/_resources/images/LED_driver_circuit.png" alt="LED Driver" width="400">
+<img src="../../../../boxes/computers/_resources/images/LED_driver_circuit.png" alt="LED Driver" width="400">
 </p>
 
 <details><summary><strong>Target</strong></summary>
@@ -91,7 +91,7 @@ Cable (MiniUSB-1m)|01|Mini-USB to Type-A cable (1 m)|1|[-D-](/boxes/computers/)|
 - Now investigate Arduino's "tone" Library. Some examples can be found in the *File->Examples-Digital* folder. You can use this library to make some (slightly) more pleasant sounds.
 - This is a piezo buzzer:
 <p align="center">
-<img src="/boxes/computers/_resources/images/piezo_buzzer.png" alt="Piezo Buzzer" width="300">
+<img src="../../../../boxes/computers/_resources/images/piezo_buzzer.png" alt="Piezo Buzzer" width="300">
 </p>
 
 <details><summary><strong>Target</strong></summary>

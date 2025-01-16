@@ -1,22 +1,30 @@
-# Servers
+# The Last Black Box : Servers
+In this box, you will learn about servers...
 
-Serving HTML files to who ever requests them (via HTTP)
+## Servers
+Serving HTML files to who ever requests them (via HTTP).
 
-----
+<details><summary><i>Materials</i></summary><p>
 
-<details><summary><b>Materials</b></summary><p>
-
-Contents|Level|Description| # |Data|Link|
+Contents|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 
-</p></details>
+</p></details><hr>
 
-----
+### Flask
+> A Python micro-framework for building web applications.
 
-## Goals
 
-1. Run a server
-2. Cloud website
-3. Port forwarding
+### HTTP
+> The common language of the internet is HTTP...the Hyper Text Transfer Protocol, which delivers the HTML files to your browser.
 
-----
+
+# Project
+### NB3 : Remote Control NB3 (GUI)
+> Let's remotely control our NB3 using a simple graphical user interface (GUI) that we can access from any web browser.
+
+
+### NB3 : Host a Website
+> Host a simple website on your NB3!
+
+

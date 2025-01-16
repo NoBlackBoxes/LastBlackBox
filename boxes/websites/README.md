@@ -1,33 +1,30 @@
-# Websites
+# The Last Black Box : Websites
+In this box, you will learn about websites...
 
-Creating a wesbite, from simple to complex.
+## Websites
+Creating a website, from simple to complex.
 
-----
+<details><summary><i>Materials</i></summary><p>
 
-<details><summary><b>Materials</b></summary><p>
-
-Contents|Level|Description| # |Data|Link|
+Contents|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 
-</p></details>
+</p></details><hr>
 
-----
+### Javascript
+> The browser's programming (scripting) language. Has very little to do with Java.
 
-## Topics
 
-- To Do
+### HTML
+> Hyper-text markup language.
 
-----
 
-## Goals
+### CSS
+> Cascading Style Sheets.
 
-### Grey
 
-1. Create a static HTML website
-2. Style a static website with CSS
-3. Javascript
-4. Cookies
-5. Host server
-6. Game
+# Project
+### NB3 : Build-a-Website
+> Let's create a simple (static) website using HTML and CSS...and a little javascript.
 
-----
+

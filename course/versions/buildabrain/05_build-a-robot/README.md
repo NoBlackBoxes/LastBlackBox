@@ -61,7 +61,7 @@ M2.5 standoff (12/SS)|01|12 mm long socket-to-socket M2.5 standoff|4|[-D-](/boxe
 </details><hr>
 
 <p align="center">
-<img src="/boxes/robotics/_resources/images/braitenberg_vehicle.png" alt="Braitenberg Vehicle" width="600">
+<img src="../../../../boxes/robotics/_resources/images/braitenberg_vehicle.png" alt="Braitenberg Vehicle" width="600">
 </p>
 
 **TASK**: Measure two light sensors and *decide* how to activate the direction of your two wheels in response.

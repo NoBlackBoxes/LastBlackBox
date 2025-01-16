@@ -51,6 +51,16 @@ M2.5 standoff (20/SS)|01|20 mm long socket-to-socket M2.5 standoff|4|[-D-](/boxe
 
 </p></details><hr>
 
+#### Watch this video: [Operating Systems](https://vimeo.com/1036096746)
+> As computer hardware became much more capable, software was developed to manage this complexity and power. This software took responsibility for managing access to the computer's resources: processing, memory, and devices. These days, when we *operate* a computer, we rarely interact directly with the hardware. Instead, we talk to this control software, which we call an **operating system**.
+
+**TASK**: Install the Linux-based Raspberry Pi OS on your NB3
+- Follow these [RPiOS installation instructions](../../../boxes/systems/rpios/README.md)
+<details><summary><strong>Target</strong></summary>
+    Booted!
+</details><hr>
+
+
 #### Watch this video: [NB3 : Midbrain](https://vimeo.com/1036089510)
 > Now we will add a more powerful computer (Raspberry Pi) to your NB3's midbrain.
 
@@ -79,6 +89,10 @@ M2.5 standoff (20/SS)|01|20 mm long socket-to-socket M2.5 standoff|4|[-D-](/boxe
 <details><summary><strong>Target</strong></summary>
     Connected!
 </details><hr>
+
+
+#### Watch this video: [Visual Studio Code](https://vimeo.com/1036716612)
+> We will be using Visual Studio Code (VS Code) as our tool for writing programs. VS Code is just a simple, *but really powerful*, text editor. It has extensions for all sorts of useful tools (Python, Git, etc.), and for connecting to a "remote" computer (our NB3's midbrain).
 
 
 ## Linux

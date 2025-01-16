@@ -1,43 +1,39 @@
-# Magnets
+# The Last Black Box : Magnets
+In this box, you will learn about magnets...
 
-In this box, we will learn about magnetism...how to create it and how to **use** it.
+## Magnets
+Magnets were known about (and useful) long before we understood electricity. However, the connection between electricity and magnetism is one of the most important discoveries of science. It has major implications for your everyday life (and your NB3).
 
-----
+<details><summary><i>Materials</i></summary><p>
 
-<details><summary><b>Materials</b></summary><p>
-
-Contents|Level|Description| # |Data|Link|
+Contents|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
-Inductor|10|1 mH toroidal inductor|1|[-D-](_resources/datasheets/inductor_toroidal.pdf)|[-L-](https://uk.farnell.com/bourns/2124-v-rc/inductor-1000uh-15-1-3a-toroid/dp/1929753)
-Magnet Wire|01|Narrow gauge epoxy insulated (1 m)|1|-|[-L-](https://www.amazon.co.uk/Enameled-Magnet-Soldering-Winding-Enamelled/dp/B07N65LRVD)
-Magnet|01|Neodymium disc (8 mm x 3 mm)|4|-|[-L-](https://uk.farnell.com/duratool/d01766/magnets-rare-earth-8-x-3mm-pk10/dp/1888095)
-USB Sound Card|01|USB to 3.5 mm Audio out/in|1|-|[-L-](https://www.amazon.co.uk/UGREEN-Headphone-Microphone-Raspberry-Ultrabook/dp/B01N905VOY)
-Stereo Plug Terminal|01|3.5 mm plug to screw terminal|2|-|[-L-](https://www.amazon.co.uk/dp/B07MNYBFL9)
+Inductor|10|1 mH toroidal inductor|1|[-D-](/boxes/magnets/_resources/datasheets/inductor_toroidal.pdf)|[-L-](https://uk.farnell.com/bourns/2124-v-rc/inductor-1000uh-15-1-3a-toroid/dp/1929753)
+Magnet Wire|01|Narrow gauge epoxy insulated (1 m)|1|[-D-](/boxes/magnets/)|[-L-](https://www.amazon.co.uk/Enameled-Magnet-Soldering-Winding-Enamelled/dp/B07N65LRVD)
+Magnet|01|Neodymium disc (8 mm x 3 mm)|4|[-D-](/boxes/magnets/)|[-L-](https://uk.farnell.com/duratool/d01766/magnets-rare-earth-8-x-3mm-pk10/dp/1888095)
+USB Sound Card|01|USB to 3.5 mm Audio out/in|1|[-D-](/boxes/magnets/)|[-L-](https://www.amazon.co.uk/UGREEN-Headphone-Microphone-Raspberry-Ultrabook/dp/B01N905VOY)
+Stereo Plug Terminal|01|3.5 mm plug to screw terminal|2|[-D-](/boxes/magnets/)|[-L-](https://www.amazon.co.uk/dp/B07MNYBFL9)
 
-</p></details>
+</p></details><hr>
 
-----
+#### Watch this video: [Ferromagnetism](https://vimeo.com/1031272573)
+> A mysterious force found in certain types of "magical" materials, ferromagnetism was known about and used for thousands of years, but it was only understood quite recently.
 
-## Topics
 
-- History (lodestone, compasses, North v South)
-- Magnetism (discovery...moving charge creates magnetic field)
-- Magnetic field (right-hand rule) - weak
-- Electromagnets (coils) - strong
-- *Permanent magnets*
-- Generators
-- *Inductors*
+#### Watch this video: [Electromagnets](https://vimeo.com/1031275874)
+> When electrons move they create a (weak) magnetic field. With clever geometry we can make this field much, much stronger.
 
-----
 
-## Goals
+#### Watch this video: [Induction](https://vimeo.com/1031538232)
+> A *changing* magnetic field **induces** an electromotive force on charged particles (and current in a complete conducting circuit). This electromagnetic induction is key to building time-dependent electronic circuits (such as filters) and generating the electricity we use in our homes.
 
-1. Build an electromagnet. (6V accros coil next to magnet)
-2. Build a telegraph (coil + battery + putty + paper clip).
-3. Build a dancing coil. (Make sure contact is good, make sure coil resistance is greater than 4 Ohms)
-4. Use an inductor to build a "choke". Power a lightbulb (or LED) via an inductor in paralell. What happens?
-5. Create a wireless inductive power transfer circuit. Two coils, seperated by an air gap, one connected to battery, the other to an LED/Lightbulb
-6. Build a speaker.
-7. Build a microphone (mic jack pin input differs from audio output?)
 
-----
+# Project
+### NB3 : Building a Speaker
+> Oscillating current in a coil creates a dynamic magnetic field. Let's turn these oscillations into sound.
+
+<details><summary><weak>Guide</weak></summary>
+:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1031277112" target="_blank" rel="noopener noreferrer">here</a>.
+</details><hr>
+
+

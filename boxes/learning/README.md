@@ -1,34 +1,23 @@
-# Learning
+# The Last Black Box : Learning
+In this box, you will learn about learning...
 
+## Learning
 Supervised, unsupervised, and reinforcement learning
 
-----
+<details><summary><i>Materials</i></summary><p>
 
-<details><summary><b>Materials</b></summary><p>
-
-Contents|Level|Description| # |Data|Link|
+Contents|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
-Clicker|10|Loud sound maker (and whistle)|1|-|[-L-](https://www.amazon.co.uk/gp/product/B07HD3RDMK)
+Clicker|10|Loud sound maker (and whistle)|1|[-D-](/boxes/learning/)|[-L-](https://www.amazon.co.uk/gp/product/B07HD3RDMK)
 
-</p></details>
+</p></details><hr>
 
-----
+### Gradient Descent
+> If it gets better, then keep going!
 
-## Topics
 
-- To Do
+# Project
+### NB3 : Clicker Training
+> If a *click* is reinforcing, then training complex behaviour becomes far simpler.
 
-----
 
-## Goals
-
-1. Undertsand gradient descent (supervised)
-2. Use auto-differentiation (supervised)
-3. Train a simple neural network (supervised)
-4. Ponder unsupervised learning (unsupervised)
-5. Clicker train yourself (reinforcemnt)
-6. Clicker train your robot
-7. Train an image classifier
-8. Develop a Deep Learning framework based on Jax
-
-----

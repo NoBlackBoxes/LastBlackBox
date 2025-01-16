@@ -1,163 +1,201 @@
-# Electrons
-Electrons are the sub-atomic particles that underlie *electricity*. Controlling the movement of electrons (and the effects of their movement) will allow us to build many different kinds of electronic devices, from simple circuits to robots and computers.
+# The Last Black Box : Electrons
+In this box, you will learn about electrons...
 
-In this box, we will learn about electricity...how to measure it and how to **control** it.
+## Electrons
+Electrons are the sub-atomic particles that underlie *electricity*. Controlling the movement of electrons (and the effects of that movement) will allow us to build many different kinds of electronic devices, from simple circuits to robots and computers.
 
-----
+<details><summary><i>Materials</i></summary><p>
 
-<details><summary><b>Materials</b></summary><p>
-
-Contents|Level|Description| # |Data|Link|
+Contents|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
-NB3 Body|01|NB3 robot base PCB|1|[-D-](NB3_body)|[-L-](VK)
-Resistor (330)|10|330 &Omega;/0.25 W|2|[-D-](_resources/datasheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-330r/res-330r-1-250mw-axial-metal-film/dp/9341730)
-Resistor (470)|01|470 &Omega;/0.25 W|2|[-D-](_resources/datasheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943)
-Resistor (1k)|01|1 k&Omega;/0.25 W|2|[-D-](_resources/datasheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-1k/res-1k-1-250mw-axial-metal-film/dp/9341102)
-Resistor (10k)|01|10 k&Omega;/0.25 W|2|[-D-](_resources/datasheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-10k/res-10k-1-250mw-axial-metal-film/dp/9341110)
-Capacitor (small)|10|0.1 uF ceramic capacitor|1|[-D-](_resources/datasheets/capacitor_ceramic.pdf)|[-L-](https://uk.farnell.com/kemet/c322c104k1r5ta/cap-0-1-f-100v-10-x7r/dp/1457685)
-Capacitor (large)|10|100 uF aluminum electrolytic capacitor|1|[-D-](_resources/datasheets/capacitor_electrolytic.pdf)|[-L-](https://uk.farnell.com/rubycon/16zlh100mefc5x11/cap-100-f-16v-20/dp/8126283)
-Button|10|Tactile switch|2|[-D-](_resources/datasheets/button.pdf)|[-L-](https://uk.farnell.com/omron/b3f-1000/switch-spno-0-05a-24v-tht-0-98n/dp/176432)
-Potentiometer|01|2.2 k&Omega; variable resistor|2|[-D-](_resources/datasheets/pot_2k2.pdf)|[-L-](https://uk.farnell.com/bourns/3362p-1-222lf/trimmer-pot-2-2kohm-10-1turn-th/dp/2328599)
-Breadboard (400)|01|400-tie solderless breadboard|1|[-D-](_resources/datasheets/breadboard_400.pdf)|[-L-](https://www.amazon.co.uk/gp/product/B0739XRX8F)
-Breadboards (170)|01|170-tie solderless breadboard|4|[-D-](_resources/datasheets/breadboard_170.pdf)|[-L-](https://www.amazon.co.uk/ELEGOO-tie-points-Breadboard-Breadboards-Electronic/dp/B01N0YWIR7)
-Batteries (AA)|01|AA 1.5 V alkaline battery|4|-|-
-Battery holder|01|4xAA battery holder with ON-OFF switch|1|-|[-L-](https://www.amazon.co.uk/gp/product/B0814ZH68F)
-Jumper Kit|01|Kit of multi-length 22 AWG breadboard jumpers|1|[-D-](_resources/datasheets/jumper_kit.pdf)|[-L-](https://uk.farnell.com/multicomp/mc001810/hard-jumper-wire-22awg-140pc/dp/2770338)
-Jumper Wires|01|Assorted 22 AWG jumper wire leads (male/female)|1|[-D-](_resources/datasheets/jumper_wires.pdf)|[-L-](https://www.amazon.co.uk/240pcs-Solderless-Breadboard-Arduino-Project/dp/B08PJSTS3C)
-Test Lead|01|Alligator clip to 0.64 mm pin (20 cm)|2|-|[-L-](https://www.amazon.co.uk/gp/product/B096JR15JW)
-Rubber feet|01|Adhesive rubber standoffs (1421T6CL)|4|[-D-](_resources/datasheets/rubber_feet.pdf)|[-L-](https://uk.farnell.com/hammond/1421t6cl/feet-stick-on-pk24/dp/1876522)
+NB3 Body|01|NB3 robot base PCB|1|[-D-](/boxes/electrons/NB3_body)|[-L-](VK)
+Resistor (330)|10|330 &Omega;/0.25 W|2|[-D-](/boxes/electrons/_resources/datasheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-330r/res-330r-1-250mw-axial-metal-film/dp/9341730)
+Resistor (470)|01|470 &Omega;/0.25 W|2|[-D-](/boxes/electrons/_resources/datasheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943)
+Resistor (1k)|01|1 k&Omega;/0.25 W|2|[-D-](/boxes/electrons/_resources/datasheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-1k/res-1k-1-250mw-axial-metal-film/dp/9341102)
+Resistor (10k)|01|10 k&Omega;/0.25 W|2|[-D-](/boxes/electrons/_resources/datasheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-10k/res-10k-1-250mw-axial-metal-film/dp/9341110)
+Capacitor (small)|10|0.1 uF ceramic capacitor|1|[-D-](/boxes/electrons/_resources/datasheets/capacitor_ceramic.pdf)|[-L-](https://uk.farnell.com/kemet/c322c104k1r5ta/cap-0-1-f-100v-10-x7r/dp/1457685)
+Capacitor (large)|10|100 uF aluminum electrolytic capacitor|1|[-D-](/boxes/electrons/_resources/datasheets/capacitor_electrolytic.pdf)|[-L-](https://uk.farnell.com/rubycon/16zlh100mefc5x11/cap-100-f-16v-20/dp/8126283)
+Button|10|Tactile switch|2|[-D-](/boxes/electrons/_resources/datasheets/button.pdf)|[-L-](https://uk.farnell.com/omron/b3f-1000/switch-spno-0-05a-24v-tht-0-98n/dp/176432)
+Potentiometer|01|2.2 k&Omega; variable resistor|2|[-D-](/boxes/electrons/_resources/datasheets/pot_2k2.pdf)|[-L-](https://uk.farnell.com/bourns/3362p-1-222lf/trimmer-pot-2-2kohm-10-1turn-th/dp/2328599)
+Breadboard (400)|01|400-tie solderless breadboard|1|[-D-](/boxes/electrons/_resources/datasheets/breadboard_400.pdf)|[-L-](https://www.amazon.co.uk/gp/product/B0739XRX8F)
+Breadboards (170)|01|170-tie solderless breadboard|4|[-D-](/boxes/electrons/_resources/datasheets/breadboard_170.pdf)|[-L-](https://www.amazon.co.uk/ELEGOO-tie-points-Breadboard-Breadboards-Electronic/dp/B01N0YWIR7)
+Batteries (AA)|01|AA 1.5 V alkaline battery|4|[-D-](/boxes/electrons/)|[-L-]()
+Battery holder|01|4xAA battery holder with ON-OFF switch|1|[-D-](/boxes/electrons/)|[-L-](https://www.amazon.co.uk/gp/product/B0814ZH68F)
+Jumper Kit|01|Kit of multi-length 22 AWG breadboard jumpers|1|[-D-](/boxes/electrons/_resources/datasheets/jumper_kit.pdf)|[-L-](https://uk.farnell.com/multicomp/mc001810/hard-jumper-wire-22awg-140pc/dp/2770338)
+Jumper Wires|01|Assorted 22 AWG jumper wire leads (male/female)|1|[-D-](/boxes/electrons/_resources/datasheets/jumper_wires.pdf)|[-L-](https://www.amazon.co.uk/240pcs-Solderless-Breadboard-Arduino-Project/dp/B08PJSTS3C)
+Test Lead|01|Alligator clip to 0.64 mm pin (20 cm)|2|[-D-](/boxes/electrons/)|[-L-](https://www.amazon.co.uk/gp/product/B096JR15JW)
+Rubber feet|01|Adhesive rubber standoffs (1421T6CL)|4|[-D-](/boxes/electrons/_resources/datasheets/rubber_feet.pdf)|[-L-](https://uk.farnell.com/hammond/1421t6cl/feet-stick-on-pk24/dp/1876522)
 
-</p></details>
+</p></details><hr>
 
-----
+#### Watch this video: [Voltage Dividers](https://vimeo.com/1030787469)
+> Controlling the level of voltage at different places in a circuit is critical to designing electronic devices.
 
-## Electric Fields
+**TASK**: Build a voltage divider using two resistors of the same value. Measure the intermediate voltage (between the resistors).
+<details><summary><strong>Target</strong></summary>
+    With equal size resistors, the intermediate voltage you measure should be half of the supply voltage.
+</details><hr>
 
-Electric fields describe the force that a charged particle feels when nearby another charged particle.
+**TASK**: Build a voltage divider using a variable resistor (potentiometer). Measure the intermediate voltage. What happens when you change the position of the internal contact of the variable resistor (by turning the screw)?
+- *Help*: A video guide to completing these tasks can be found here: [NB3-Building Voltage Dividers](https://vimeo.com/1030790826)
+<details><summary><strong>Target</strong></summary>
+    The intermediate voltage should vary continuously as you adjust the potentiometer.
+</details><hr>
 
-{01}
-Watch this video...closely.
-- *Video*: [LBB:Electrons:Electric Fields](https://vimeo.com/625820421)
 
-{10}
-Watch this video.
-- *Video*: [NB3:Electrons:Dipoles](https://vimeo.com/1000458082)
+#### Watch this video: [Electric Fields](https://vimeo.com/1032441712)
+> A very useful, and quite simple, depiction of the lines of force surrounding charged particles.
 
-Use the following image as a starting point for the next task.
-<img src="../electrons/_resources/images/dipole_field_template.png" alt="dipole field template" height="250" style="border: 2px solid #000000;"/>
+- Draw the electric field around a negative charge and positive charge separated by a small distance. Use the following image as a starting point.
 
-- **TASK**(draw_a_dipole_field): Draw the electric field around an electron(-) and a proton(+) seperated by some small distance (as experienced by another electon). Upload a photo of your field drawing. [photo]
+#### Watch this video: [Capacitors](https://vimeo.com/1035298931)
+> Two conductors separated by an insulator (but in close proximity) can interact through the electric field. If we put an external voltage across these conductors, then they will gradually accumulate charge until their own voltage matches the external potential. We say that these devices have an intrinsic capacity for storing charge and we call them **capacitors**.
 
-## Voltage
 
-Voltage describes the difference in net charge in one location versus another.
+#### Watch this video: [Resistors](https://vimeo.com/1029696806)
+> Many materials hold onto their outer electrons and resist their movement. We can create mixtures of these "resisting" materials and better "conducting" materials, often in the form of ceramics, to create **resistors** with a range of different *resistance* values, which we measure in Ohms (&Omega;).
 
-{01}
-- *Video*: [LBB:Electrons:Voltage](https://vimeo.com/XXX)
+**TASK**: Measure the resistance of your resistors.
+- *Help*: If you are new to measuring resistance with a multimeter, then I recommend that you watch this video: [NB3-Measuring Resistance](https://vimeo.com/1027761453)
+<details><summary><strong>Target</strong></summary>
+    Your kit contains 470 &Omega;, 1 k&Omega;, and 10 k&Omega; resistors. You should measure these values.
+</details><hr>
 
-## Batteries
 
-Producing a stable voltage was hard, but very useful.
+#### Watch this video: [Current](https://vimeo.com/1029334167)
+> The rate at which electrons flow, measured as *#charges / second*, is called **current**. We use the unit *Amps* (A) and the circuit symbol **I**.
 
-{01}
-- *Video*: [LBB:Electrons:Batteries](https://vimeo.com/XXX)
 
-{10}
-- *Video*: [NB3:Electrons:Household Battery](https://vimeo.com/XXX)
-- **TASK**(build_a_battery): Build a battery. Upload a photo of your design and the voltage generated (as shown on the multimeter screen) here: [photo]
- 
-## Measuring Voltage
+#### Watch this video: [Ohm's Law](https://vimeo.com/1029695302)
+> Ohm's Law describes the relationship between Voltage, Current, and Resistance. It is not complicated, but it is very useful.
 
-We can measure voltage (and other electrical properties) with a multi-meter.
+**TASK**: Does Ohm's Law hold? You know the voltage of the batteries (V) and the resistance of the resistor (R). Measure the current flowing (I) for different resistors and confirm that V = I*R.
+<details><summary><strong>Target</strong></summary>
+    For the resistors in your kit, then Ohm's Law should determine the current that you measure.
+</details><hr>
 
-{01}
-- *Video*: [NB3:Electrons:Measuring Voltage](https://vimeo.com/XXX)
-- **TASK**(measure_AA_battery): Measure the voltage of a AA battery. Enter your measurement [number].
-- **TASK**(measure_4xAA_batteries): Measure the voltage of 4xAA batteries in series (i.e. in your battery holder). Enter your measurement here [number].
 
-## Conductors
+#### Watch this video: [Power](https://vimeo.com/1029693122)
+> When electrons move through a circuit, they deliver power (some amount of energy in some amount of time). This power can be used to do useful things: make a motor move, light a lamp, or generate heat. If we deliver too little power, then our electronic device may not work as designed. If we deliver too much, then it may never work again. We measure power in Watts.
 
-Some materials have electrons that are very loosely connected to their atom's nucleus. In a material made up of many atom's of this type, then the electrons can hop from nucleus to nucleus. The electrons can "move". We call these materials conductors.
 
-{10}
-- *Video*: [LBB:Electrons:Conductors](https://vimeo.com/XXX)
+#### Watch this video: [Batteries](https://vimeo.com/1029278169)
+> Generating a stable voltage requires a renewable source of electrons to maintain a *potential difference*. We can accomplish this with a (redox) chemical reaction inside the wonderfully useful device that we call a **battery**.
 
-## Resistors
+**TASK**: Measure the voltage of a AA battery using your multimeter.
+- *Hint*: Select the voltage ("V") setting and touch your probes to either end of the battery. Depending on your multimeter, you may also need to select an appropriate "range". For a single AA battery, you should expect to measure between 1 and 2 Volts.
+- *Help*: If you are new to using a multimeter, then I recommend that you watch this video: [NB3-Multimeter Basics](https://vimeo.com/1027764019)
+- *Help*: If you are new to measuring voltage with a multimeter, then I recommend that you watch this video: [NB3-Measuring Voltage](https://vimeo.com/1027762531)
+<details><summary><strong>Target</strong></summary>
+    A single AA battery, fully charged, should have a voltage of ~1.6 Volts. If it is less than 1.5 Volts, then the battery is nearly *dead*.
+</details><hr>
 
-In other materials, some electrons are free and others are not. They can move, but not as well. They experience resistance. We call these materials resitors, and they will help us *control* electricity.
+**TASK**: Measure the voltage of 4xAA batteries in series (end to end).
+- *Hint*: You can use your battery holder.
+<details><summary><strong>Target</strong></summary>
+    Batteries connected in series will sum their voltages. You should measure four times the voltage of a single AA battery, ~6.4 Volts, from the batteries in your 4xAA holder.
+</details><hr>
 
-{10}
-- *Video*: [LBB:Electrons:Resistors](https://vimeo.com/XXX)
 
-## Measuring Resistance
+#### Watch this video: [Conductors](https://vimeo.com/1029337222)
+> Some materials have electrons in their outer orbitals that are happy to jump between neighboring atomic nuclei (of the same element). These electrons are "free" to move around the material. If we place such a material between two locations with a *potential difference* (voltage), then electrons will flow from the **(-)** location to the **(+)** location; the material will **conduct** electricity.
 
-We can measure resitance (and other electrical properties) with a multi-mteter.
 
-{10}
-- *Video*: [NB3:Electrons:Measuring Resistance](https://vimeo.com/XXX)
+#### Watch this video: [Voltage](https://vimeo.com/1000730032)
+> When there is more negative or positive charge in one location vs. another there is a *potential difference* between these locations. This *potential difference* is called a **voltage** and it creates a pressure that pushes electrons from the location with more negative charge to the location with less.
 
-## Circuit Diagrams
 
-We can draw simple schematics of electronic circuits using symbols for the real devices. We will draw and build *many* of these.
+# Project
+### NB3 : Multimeter Basics
+> An overview of digital multimeters for beginners. What can it measure? What features do you need to complete the course?
 
-{01}
-- *Video*: [LBB:Electrons:Circuit Diagrams](https://vimeo.com/XXX)
-- **TASK**(draw_a_simple_circuit): Draw a circuit with one battery and two resistors. Lable the voltage and resistor values. Upload a picture of your circuit here [photo].
+<details><summary><weak>Guide</weak></summary>
+:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1027764019" target="_blank" rel="noopener noreferrer">here</a>.
+</details><hr>
 
-## Prototyping
 
-Let's build a prototyping board for creating and testing our first circuits.
+### NB3 : Body
+> We will now start measuring and manipulating electricity, but first we will assemble a "prototyping platform" that also happens to be the **body** of your robot (NB3).
 
-{01}
-- *Video*: [NB3:Electrons:Assemble NB3 Body](https://vimeo.com/XXX)
-- **TASK**(assemble_nb3_body): Build your NB3 body [photo].
+<details><summary><weak>Guide</weak></summary>
+:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1030776673" target="_blank" rel="noopener noreferrer">here</a>.
+</details><hr>
 
-## Printed Circuit Boards
+**TASK**: Assemble the robot body (prototyping base board).
+- *Challenge*: If you are curious how the *NB3 Body* printed circuit board (PCB) was designed, then you can find the KiCAD files here: [NB3 Body PCB](/boxes/electrons/NB3_body).
+<details><summary><strong>Target</strong></summary>
+    Your NB3 should now look like [this](/boxes/electrons/NB3_body/NB3_body_front.png). Your breadboards will be different colors...and you should have some rubber feet on the back.
+</details><hr>
 
-Let's have a look at a printed circuit board.
+- You can also watch this short introduction to PCB design with KiCAD here: [NB3-Designing PCBs with KiCAD](https://vimeo.com/??????).
 
-{01}
-- *Video*: [NB3:Electrons:Assemble NB3 Body](https://vimeo.com/XXX)
-- **TASK**(assemble_nb3_body): Build your NB3 body [photo].
-  
-## Current
+### NB3 : Designing PCBs With KiCAD
+> What is KiCAD and how can we use it to design (and manufacture) PCBs?
 
-Electrons, pushed by a voltage, moving in a conductor, or less so in a resistor create a current.
 
-{01}
-- *Video*: [LBB:Electrons:Current](https://vimeo.com/XXX)
-- **TASK**(measure_current): Measure the current flowing across a resitor. Enter the votage you used here [number.voltage], the resistor value here [number.resistance], and the measured current here [number.current].
+### NB3 : Measuring Resistance
+> How to measure resistance with a digital multimeter.
 
-## Measuring Current
+<details><summary><weak>Guide</weak></summary>
+:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1027761453" target="_blank" rel="noopener noreferrer">here</a>.
+</details><hr>
 
-We can measure current (and other electrical properties) with a multi-mteter.
 
-{01}
-- *Video*: [LBB:Electrons:Measuring Current](https://vimeo.com/XXX)
-- **TASK**(measure_current): Measure the current flowing across a resistor. Enter the votage you used here [number.voltage], the resistor value here [number.resistance], and the measured current here [number.current].
+### NB3 : Building Circuits
+> With a voltage source (battery) and resistors, then we can start building "circuits" - complete paths of conduction that allow current to flow from a location with *less* electrons **(+)** to a location with *more* electrons **(-)**.
 
-## Ohm's Law
+<details><summary><weak>Guide</weak></summary>
+:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1030783826" target="_blank" rel="noopener noreferrer">here</a>.
+</details><hr>
 
-A simple, linear, relationship between voltage, current, and resistance.
+- *Note*: This is *weird*. Electrons are the things moving. Shouldn't we say that current "flows" from the **(-)** area to the **(+)** area? Unfortunately, current was described before anyone knew about electrons and we are stuck with the following awkward convention: **Current is defined to flow from (+) to (-)**...even though we now know that electrons are moving the opposite direction.
+**TASK**: Build the simple circuit below and measure the current flowing when you connect the battery pack.
+- *Warning*: Measuring current with a multimeter is ***tricky***. You can only get an accurate measurement if ***ALL*** of the current in the circuit is forced to flow through your multimeter. This means that when measuring current, your multimeter must be in *series* with the rest of the circuit. (As opposed to measuring voltage, when your multimeter is placed "parallel" to the circuit.)
+- *Help*: If you are new to measuring current with a multimeter, then I recommend you watch this video: [NB3-Measuring Current](https://vimeo.com/1027757287).
+<details><summary><strong>Target</strong></summary>
+    Not too much current...and do not break your multimeter.
+</details><hr>
 
-{01}
-- *Video*: [LBB:Electrons:Ohms's Law](https://vimeo.com/XXX)
-- **TASK**: Measure the current flowing across a resitor [number].
 
-## Voltage Divider
+### NB3 : Building Voltage Dividers
+> Step-by-step guide to building and testing voltage dividers with discrete resistors and a potentiometer.
 
-Your first circuit.
+<details><summary><weak>Guide</weak></summary>
+:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1030790826" target="_blank" rel="noopener noreferrer">here</a>.
+</details><hr>
 
-{01}
-- *Video*: [LBB:Electrons:Voltage Divider](https://vimeo.com/625820421)
-- **TASK**: Build a voltage divider using two resistors and measure the "divided" voltage level. Is it what you epxected? Upload a picture of your circuit diagram with voltage and resistor values indicated [photo].
 
-## Capacitors
+### NB3 : Measuring Current
+> How to measure current with a digital multimeter.
 
-Capacitors are cool.
+<details><summary><weak>Guide</weak></summary>
+:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1027757287" target="_blank" rel="noopener noreferrer">here</a>.
+</details><hr>
 
-{10}
-- *Video*: [LBB:Electrons:Capacitors](https://vimeo.com/625820421)
-- **TASK**: Measure the capacitance of your cap [number]
 
-----
+### NB3 : How Do Multimeters Work
+> Learn how multimeters actually work
+
+
+### NB3 : Measuring Voltage
+> How to measure voltage with a digital multimeter.
+
+<details><summary><weak>Guide</weak></summary>
+:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1027762531" target="_blank" rel="noopener noreferrer">here</a>.
+</details><hr>
+
+
+### NB3 : Building a Battery
+> Let's build a version of the *first* battery, and use it to power an LED.
+
+<details><summary><weak>Guide</weak></summary>
+:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1029280971" target="_blank" rel="noopener noreferrer">here</a>.
+</details><hr>
+
+**TASK**: Build a simple battery
+- Combine two different metals, one that oxidizes well and one that does not, and connect them together with a layer of electrolyte between (salt water soaked paper works fine, so does a piece of fruit).
+<details><summary><strong>Target</strong></summary>
+    You should see a voltage if you choose your two metals wisely. Zinc and Copper should produce ~0.76 Volts. If you stack multiple cells in series, then the resulting voltage should sum.
+</details><hr>
+
+

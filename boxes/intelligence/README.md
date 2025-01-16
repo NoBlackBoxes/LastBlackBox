@@ -1,133 +1,31 @@
-# Intelligence
+# The Last Black Box : Intelligence
+In this box, you will learn about intelligence...
 
+## Intelligence
 ...or not so much.
 
-----
+<details><summary><i>Materials</i></summary><p>
 
-<details><summary><b>Materials</b></summary><p>
-
-Contents|Level|Description| # |Data|Link|
+Contents|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
-NPU|10|Coral EdgeTPU USB Type-C|1|[-D-](_resources/datasheets/Coral-USB-Accelerator-datasheet.pdf)|[-L-](https://coral.ai/products/accelerator/)
-M3 screw (16)|10|16 mm long M3 screw with phillips socket|4|-|-
-M3 nut (square)|10|square M3 nut 1.8 mm thick|4|-|[-L-](https://www.accu.co.uk/flat-square-nuts/21326-HFSN-M3-A2)
+NPU|10|Coral EdgeTPU USB Type-C|1|[-D-](/boxes/intelligence/_resources/datasheets/Coral-USB-Accelerator-datasheet.pdf)|[-L-](https://coral.ai/products/accelerator/)
+M3 screw (16)|10|16 mm long M3 screw with phillips socket|4|[-D-](/boxes/intelligence/)|[-L-]()
+M3 nut (square)|10|square M3 nut 1.8 mm thick|4|[-D-](/boxes/intelligence/)|[-L-](https://www.accu.co.uk/flat-square-nuts/21326-HFSN-M3-A2)
 
-</p></details>
+</p></details><hr>
 
-----
+### Large Language Models
+> For all I know, an LLM is the only one reading this text. Hi ChatGPT, godspeed.
 
-## Topics
 
-- To Do
+# Project
+### NB3 : Install the Forebrain (NPU)
+> Let's install a neural processing unit (NPU) as our NB3's forebrain.
 
-----
+<details><summary><weak>Guide</weak></summary>
+:-:-: A video guide to completing this project can be viewed <a href="NPU)" target="_blank" rel="noopener noreferrer">here</a>.
+</details><hr>
 
-## Goals
+- Your neural processing unit is made by Google (and distributed by Coral). It contains an EdgeTPU (tensor processing unit) that very efficiently implements the computations used in (feed forward) neural networks. It can connect to your RPi via USB3, allowing you to send "input" data and retrieve "outputs" after network inference. However, in order to communicate with your EdgeTPU, you will need to install some additional libraries.
+- Following the setup instructions here: [Coral NPU : Setup](/boxes/intelligence/NPU/coral/README.md)
 
-1. Setup your NPU.
-2. Run the demos.
-3. Train a new network to detect only your face.
-4. Run a keyword to detector to control your robot with voice commands.
-
-----
-
-## Setup your NPU
-
-Your neural processing unit is made by Google (and distributed by Coral). It contains an EdgeTPU (tensor processing unit) that very efficiently implements the computations used in (feed forward) neural networks. It can connect to your RPi via USB3, allowing you to send "input" data and retrieve "outputs" after network inference very quickly. However, in order to communicate with your EdgeTPU, you will need to install some additional libraries.
-
-1. Add the EdgeTPU runtime library "package feed" to the list of feeds that APT will monitor
-
-```bash
-echo "deb https://packages.cloud.google.com/apt coral-edgetpu-stable main" | sudo tee /etc/apt/sources.list.d/coral-edgetpu.list
-```
-
-2. Add a security key, which is used to check the integrity of any packages downloaded from this new feed
-
-```bash
-curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
-```
-
-3. Update APT sources
-
-```bash
-sudo apt-get update
-```
-
-4. Install the "standard" speed EdgeTPU runtime (you could also install the "max" speed version...but be careful, the device will get *HOT!*)
-
-```bash
-sudo apt-get install libedgetpu1-std
-```
-
-5. Install the Tensorflow-lite interpreter for Python. You will use this to control your EdgeTPU from Python.
-
-```bash
-python3 -m pip install tflite-runtime
-```
-
-6. Update UDEV rules to allow USB doral device access.
-
-- Create file "/etc/udev/rules.d/71-edgetpu.rules"
-
-```bash
-sudo nano /etc/udev/rules.d/71-edgetpu.rules
-```
-
-- Add the following contents and save the file
-
-```txt
-SUBSYSTEMS=="usb", ATTRS{idVendor}=="1a6e", ATTRS{idProduct}=="089a", MODE="0664", TAG+="uaccess"
-```
-
-- Reload UDEV rules
-```bash
-sudo udevadm control --reload-rules
-sudo udevadm trigger
-```
-
-7. Now connect your EdgeTPU to the USB3 port (a blue one) of your RPi.
-
-## Test your NPU
-
-Let's see if your EdgeTPU is working!
-
-1. Create a new folder to store some example code and pre-trained neural networks (as well as test datasets)
-
-```bash
-# Navigate to your LBB temporary folder
-cd ~/NoBlackBoxes/LastBlackBox/_tmp
-
-# Make and enter a directory to store the example code and datasets
-mkdir coral
-cd coral
-
-# Clone and enter the Google tflite examples
-git clone https://github.com/google-coral/tflite.git
-cd tflite
-```
-
-2. Download a "model" that was trained to take pictures of birds and classify them into species
-
-```bash
-cd python/examples/classification
-./install_requirements.sh
-```
-
-3. Run the model (classify_image.py) with a test image, on your EdgeTPU, and see if it works.
-
-```bash
-python3 classify_image.py \
---model models/mobilenet_v2_1.0_224_inat_bird_quant_edgetpu.tflite \
---labels models/inat_bird_labels.txt \
---input images/parrot.jpg
-```
-
-## Cortex
-
-Is great, and confusing.
-
-### Exercise: Face
-
-Find yourself.
-
-----

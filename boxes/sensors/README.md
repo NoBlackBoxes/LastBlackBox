@@ -1,36 +1,36 @@
-# Sensors
+# The Last Black Box : Sensors
+In this box, you will learn about sensors...
 
+## Sensors
 Computers and brains work with electrical signals. In order for either to understand signals in the environment (light, sound, pressure, heat, etc.), then these physical signals must be converted into electrical signals. This conversion is called *transduction* and the thing that does it is a *transducer*. However, given their role in sensing the environment, it is common to call these transduction devices ***sensors***.
 
-----
+<details><summary><i>Materials</i></summary><p>
 
-<details><summary><b>Materials</b></summary><p>
-
-Contents|Level|Description| # |Data|Link|
+Contents|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
-Thermistor|10|Temperature sensitive resistor|2|[-D-](_resources/datasheets/thermistor.pdf)|[-L-](https://uk.farnell.com/epcos/b57891m0103k000/thermistor-ntc-radial-leaded/dp/2285471)
-Photoresistor (LDR)|01|Light-dependent resistor (GL5516 and GL5528)|4|-|[-L-](https://www.amazon.co.uk/Resistor-Dependent-Photoresistor-Sensitive-Sensors/dp/B08SC1M7V7)
-Piezo|10|Piezo element|1|[-D-](_resources/datasheets/piezo.pdf)|[-L-](https://uk.farnell.com/multicomp/mcabt-455-rc/audio-element-piezo-2-8khz-35mm/dp/2433035)
+Thermistor|10|Temperature sensitive resistor|2|[-D-](/boxes/sensors/_resources/datasheets/thermistor.pdf)|[-L-](https://uk.farnell.com/epcos/b57891m0103k000/thermistor-ntc-radial-leaded/dp/2285471)
+Photoresistor (LDR)|01|Light-dependent resistor (GL5516 and GL5528)|4|[-D-](/boxes/sensors/)|[-L-](https://www.amazon.co.uk/Resistor-Dependent-Photoresistor-Sensitive-Sensors/dp/B08SC1M7V7)
+Piezo|10|Piezo element|1|[-D-](/boxes/sensors/_resources/datasheets/piezo.pdf)|[-L-](https://uk.farnell.com/multicomp/mcabt-455-rc/audio-element-piezo-2-8khz-35mm/dp/2433035)
 
-</p></details>
+</p></details><hr>
 
-----
+#### Watch this video: [Transducers](https://vimeo.com/1031477896)
+> A sensor converts (transduces) a physical quantity (light, heat, pressure, etc.) into an electrical signal (voltage, current, or resistance).
 
-## Topics
 
-- Transducers...
-    - Light
-    - Heat
-    - Pressure (sound)
-- Pizeoeletric effect
+# Project
+### NB3 : Building a Light Sensor
+> Your NB3 will use LDRs to convert light into voltage. Here you will build and test this light sensing circuit.
 
-----
+<details><summary><weak>Guide</weak></summary>
+:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1031479533" target="_blank" rel="noopener noreferrer">here</a>.
+</details><hr>
 
-## Goals
+**TASK**: Build a light sensor
+- *Hint*: Build a voltage divider with one of the fixed resistors replaced with an LDR (light-dependent resistor). Does the "output" voltage vary with light level?
+- *Challenge*: What should the value of the fixed resistor be to maximize the sensitive range of the output voltage for varying light levels?
+<details><summary><strong>Target</strong></summary>
+    Your multimeter should measure a change in voltage as you cover your LDR or shine light on it. The voltage will either increase with more light or decrease, depending on whether your LDR is the first or second resistor in the voltage divider circuit.
+</details><hr>
 
-1. Build a light sensor
-2. Build a heat sensor
-3. Detect pressure sensor using a piezo and your multimeter
-4. Build a "gain control circut" for your light/heat sensor
 
-----
