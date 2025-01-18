@@ -67,6 +67,7 @@
 			)
 			(layer "dielectric 1"
 				(type "core")
+				(color "FR4 natural")
 				(thickness 0.11)
 				(material "FR4")
 				(epsilon_r 4.5)
@@ -78,6 +79,7 @@
 			)
 			(layer "dielectric 2"
 				(type "prepreg")
+				(color "FR4 natural")
 				(thickness 1.22)
 				(material "FR4")
 				(epsilon_r 4.5)
@@ -89,6 +91,7 @@
 			)
 			(layer "dielectric 3"
 				(type "core")
+				(color "FR4 natural")
 				(thickness 0.11)
 				(material "FR4")
 				(epsilon_r 4.5)

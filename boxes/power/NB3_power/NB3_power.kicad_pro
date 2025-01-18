@@ -82,6 +82,7 @@
         "footprint_type_mismatch": "error",
         "hole_clearance": "error",
         "hole_near_hole": "error",
+        "holes_co_located": "warning",
         "invalid_outline": "error",
         "isolated_copper": "warning",
         "item_on_disabled_layer": "error",
@@ -498,7 +499,7 @@
       "specctra_dsn": "",
       "step": "NB3_power.step",
       "svg": "",
-      "vrml": ""
+      "vrml": "NB3_power.wrl"
     },
     "page_layout_descr_file": ""
   },

@@ -40,6 +40,7 @@
       9,
       10,
       11,
+      12,
       13,
       14,
       15,
@@ -66,6 +67,12 @@
     ],
     "visible_layers": "ffffffd_ffffffff",
     "zone_display_mode": 0
+  },
+  "git": {
+    "repo_password": "",
+    "repo_type": "",
+    "repo_username": "",
+    "ssh_key": ""
   },
   "meta": {
     "filename": "NB3_body.kicad_prl",
