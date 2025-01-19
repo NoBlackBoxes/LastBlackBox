@@ -32,3 +32,13 @@ For rendering purposes, export a VRML file.
 - VRML looks good in blender, but is not vey configurable
 - VRML in FreeCAD looks good, but is a pain t position
 - You can arrange assemblies in FreeCAD (eveything except VRML assests) and export them as GLTF, which can then be imported into Blender for rendering
+
+## Movies
+
+```bash
+# Assemble movie from PNGs
+ffmpeg -r 30 -f image2 -pattern_type glob -i '*.png' -s 1920x1080 -vcodec libx264 animation.mp4
+
+# Loop movie (assumes 4 loops and 2x240 frames)
+ffmpeg -i animation.mp4 -filter_complex "[0]reverse[r];[0][r]concat,loop=4:480,setpts=N/60/TB" loop.mp4
+```
