@@ -5,7 +5,7 @@ The building blocks of our digital world.
 {Semiconductors}
 {Diodes}
 {NB3_Testing-Diodes}
-{MOSFETs}
+{Transistors-MOSFETs}
 
 # Project{01}
 {Transistors:NB3_Building-a-Light-Sensitive-Motor}

@@ -11,7 +11,7 @@ Here we will learn about electromagnetism, motors, and transistors.
 ## Transistors{01}
 {Semiconductors}
 {Diodes}
-{MOSFETs}
+{Transistors-MOSFETs}
 
 # Project{01}
 {Transistors:NB3_Building-a-Light-Sensitive-Motor}

@@ -4,8 +4,8 @@ In this box, you will learn about transistors...
 ## Transistors{11}
 {Diodes}
 {Semiconductors}
-{BJTs}
-{MOSFETs}
+{Transistors-BJTs}
+{Transistors-MOSFETs}
 
 # Projects{11}
 {Transistors:NB3_Building-a-Light-Sensitive-Motor}

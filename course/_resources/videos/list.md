@@ -48,12 +48,12 @@
 - [x] [DC Motors](https://vimeo.com/1031627739)
 
 ## Transistors
+- [ ] [Transistors (BJTs)]()
 - [x] [Diodes](https://vimeo.com/1032443724)
 - [x] [Semiconductors](https://vimeo.com/1032460818)
-- [ ] [BJTs]()
 - [x] [NB3 : Building a Light-Sensitive Motor](https://vimeo.com/1032454998)
+- [x] [Transistors (MOSFETs)](https://vimeo.com/1032452466)
 - [x] [NB3 : Testing Diodes](https://vimeo.com/1032458879)
-- [x] [MOSFETs](https://vimeo.com/1032452466)
 
 ## Amplifiers
 - [ ] [Differential Amplifier]()
@@ -95,6 +95,7 @@
 
 ## Robotics
 - [ ] [NB3 : Muscles (DC Gear Motors)]()
+- [ ] [Reflexes]()
 - [x] [NB3 : Muscles (Servos)](https://vimeo.com/1034800702)
 - [x] [NB3 : Build a Braitenberg Vehicle](https://vimeo.com/1034798460)
 - [x] [NB3 : Ball Caster](https://vimeo.com/1034797327)
@@ -161,6 +162,7 @@
 
 ## Learning
 - [ ] [NB3 : Clicker Training]()
+- [ ] [Gradient Descent]()
 
 ## Intelligence
 - [ ] [Large Language Models]()
