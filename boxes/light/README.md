@@ -6,7 +6,7 @@ What is light? How do we measure it? How to **create** it?
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 Lightbulb|10|Mini incandescent bulb (6 V)|1|[-D-](/boxes/light/_resources/datasheets/lamp_6V.pdf)|[-L-](https://uk.farnell.com/cml-innovative-technologies/3820al/lamp-w-e-axial-t3-8-6v-0-6w/dp/1139454)
 

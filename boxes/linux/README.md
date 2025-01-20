@@ -6,7 +6,7 @@ A free and open source operating system.
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 
 </p></details><hr>

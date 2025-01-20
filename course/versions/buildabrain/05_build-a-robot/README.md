@@ -6,7 +6,7 @@ Getting a motor to move precisely how you want it to (direction and speed) is ve
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 Servo Motor|01|FT90R Digital Micro Continuous Rotation Servo|2|[-D-](/boxes/control/)|[-L-](https://www.pololu.com/product/2817)
 Servo Wheel|01|Wheels (70x8mm) for servos|2|[-D-](/boxes/control/)|[-L-](https://www.pololu.com/product/4925)
@@ -26,7 +26,7 @@ Combining sensors, motors, and a "brain" in between.
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 Servo Mount|01|Mount for servo motor|2|[-D-](/boxes/robotics/)|[-L-](VK)
 M2.5 bolt (6)|01|6 mm long M2.5 bolt|8|[-D-](/boxes/robotics/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2)
@@ -34,7 +34,7 @@ M2.5 standoff (12/SS)|01|12 mm long socket-to-socket M2.5 standoff|4|[-D-](/boxe
 
 </p></details><hr>
 
-#### Watch this video: [NB3 : Muscles (Servos)](Servos))
+#### Watch this video: [NB3 : Muscles (Servos)](https://vimeo.com/1034800702)
 > Let's build your robot's movement system (using servo motors).
 
 **TASK**: Mount the servo motors and wheels to your NB3.

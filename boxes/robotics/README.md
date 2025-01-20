@@ -6,7 +6,7 @@ Combining sensors, motors, and a "brain" in between.
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 Servo Mount|01|Mount for servo motor|2|[-D-](/boxes/robotics/)|[-L-](VK)
 M2.5 bolt (6)|01|6 mm long M2.5 bolt|8|[-D-](/boxes/robotics/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2)
@@ -33,7 +33,7 @@ Motor Mount|10|Mount for TT Gearbox DC Motors - L-Bracket Type with hardware|2|[
 > Let's build your robot's movement system (using servo motors).
 
 <details><summary><weak>Guide</weak></summary>
-:-:-: A video guide to completing this project can be viewed <a href="Servos)" target="_blank" rel="noopener noreferrer">here</a>.
+:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1034800702" target="_blank" rel="noopener noreferrer">here</a>.
 </details><hr>
 
 **TASK**: Mount the servo motors and wheels to your NB3.

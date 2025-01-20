@@ -6,7 +6,7 @@ In this box, you will learn about atoms...
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 Periodic Table|01|Periodic Table business card|1|[-D-](/boxes/atoms/card)|[-L-](VK)
 

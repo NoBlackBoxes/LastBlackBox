@@ -6,7 +6,7 @@ Running more capable software requires a faster computer, which requires more el
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 NB3 Power Board|01|Regulated DC-DC power supply (5 Volts - 4 Amps)|1|[-D-](/boxes/power/NB3_power)|[-L-](VK)
 Power Cable|01|Custom 4 pin NB3 power connector cable|1|[-D-](/boxes/power/)|[-L-](VK)
@@ -40,7 +40,7 @@ Modern computers combine a huge number of different technologies into a function
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 Computer (RPi4)|01|Raspberry Pi 4b with 2 GB RAM|1|[-D-](/boxes/systems/_resources/datasheets/rpi4b.pdf)|[-L-](https://uk.farnell.com/raspberry-pi/rpi4-modbp-2gb/raspberry-pi-4-model-b-2gb/dp/3051886)
 Heatsinks|01|Heatsinks for RPi 4b chips|1|[-D-](/boxes/systems/_resources/datasheets/rpi4b_heatsinks.jpg)|[-L-](https://www.amazon.co.uk/gp/product/B07VRNT3HX)
@@ -60,7 +60,7 @@ M2.5 standoff (20/SS)|01|20 mm long socket-to-socket M2.5 standoff|4|[-D-](/boxe
 </details><hr>
 
 
-#### Watch this video: [NB3 : Programming Concurrency (Arduino)](Arduino))
+#### Watch this video: [NB3 : Programming Concurrency (Arduino)](https://vimeo.com/1036094397)
 > Getting a microcontroller to perform two tasks (with very different timescales) at the same time is a fun programming challenge. You will develop new skills in organizing your programs and get a glimpse of the problems solved by the *kernel* of a modern operating system.
 
 
@@ -113,7 +113,7 @@ A free and open source operating system.
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 
 </p></details><hr>
@@ -154,7 +154,7 @@ Python is an interpreted programming language.
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 
 </p></details><hr>

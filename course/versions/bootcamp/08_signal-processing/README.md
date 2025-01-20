@@ -6,7 +6,7 @@ Listen up, speak up.
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 NB3 Ear|01|I2S mems microphone breakout board|2|[-D-](/boxes/audio/NB3_ear)|[-L-](VK)
 NB3 Mouth|01|I2S DAC-AMP breakout board|1|[-D-](/boxes/audio/NB3_mouth)|[-L-](VK)

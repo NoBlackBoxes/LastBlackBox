@@ -6,7 +6,7 @@ Computers and brains work with electrical signals. In order for either to unders
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 Thermistor|10|Temperature sensitive resistor|2|[-D-](/boxes/sensors/_resources/datasheets/thermistor.pdf)|[-L-](https://uk.farnell.com/epcos/b57891m0103k000/thermistor-ntc-radial-leaded/dp/2285471)
 Photoresistor (LDR)|01|Light-dependent resistor (GL5516 and GL5528)|4|[-D-](/boxes/sensors/)|[-L-](https://www.amazon.co.uk/Resistor-Dependent-Photoresistor-Sensitive-Sensors/dp/B08SC1M7V7)

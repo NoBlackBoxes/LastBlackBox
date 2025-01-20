@@ -6,7 +6,7 @@ Boole was coole.
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 Gate (AND)|10|4xAND gate|1|[-D-](/boxes/logic/_resources/datasheets/AND_gates.pdf)|[-L-](https://uk.farnell.com/texas-instruments/cd4081be/ic-4000-cmos-4081-dip14-18v/dp/3120147)
 Gate (OR)|10|4xOR gate|1|[-D-](/boxes/logic/_resources/datasheets/OR_gates.pdf)|[-L-](https://uk.farnell.com/texas-instruments/cd4072be/ic-gate/dp/3120138)

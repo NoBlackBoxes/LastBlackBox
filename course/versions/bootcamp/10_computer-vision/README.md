@@ -6,7 +6,7 @@ Look at everyone.
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 Camera (RPi v3)|01|RPi color camera with auto-focus (version 3)|1|[-D-](/boxes/vision/_resources/datasheets/rpi_camera_v3.pdf)|[-L-](https://uk.farnell.com/raspberry-pi/sc0872/rpi-camera-mod-3-standard-lens/dp/4132318)
 NB3 Camera Mount|01|Custom laser cut mount for RPi camera|1|[-D-](/boxes/vision/NB3_camera_mount)|[-L-](VK)

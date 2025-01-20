@@ -118,10 +118,10 @@ class Box:
             output.append(f"## {self.name}\n")
             output.append(f"{self.description}\n\n")
             output.append(f"<details><summary><i>Materials</i></summary><p>\n\n")
-            output.append("Contents|Depth|Description| # |Data|Link|\n")
+            output.append("Name|Depth|Description| # |Data|Link|\n")
             output.append(":-------|:---:|:----------|:-:|:--:|:--:|\n")
             for m in self.materials:
-                output.append(f"{m.part}|{m.depth}|{m.description}|{m.quantity}|[-D-]({m.datasheet})|[-L-]({m.supplier})\n")
+                output.append(f"{m.name}|{m.depth}|{m.description}|{m.quantity}|[-D-]({m.datasheet})|[-L-]({m.supplier})\n")
             output.append(f"\n</p></details><hr>\n\n")
 
         elif type == "HTML":

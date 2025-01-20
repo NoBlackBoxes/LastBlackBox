@@ -44,8 +44,9 @@ class Video:
 
     # Parse video string
     def parse(self, text):
-        self.name = text.split(']')[0][1:]
-        self.url = text.split('(')[1][:-1]
+        split_line = text.split(']') 
+        self.name = split_line[0][1:]
+        self.url = split_line[1].split('(')[1][:-1]
         self.id = self.url.split('/')[-1]
         return
 

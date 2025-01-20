@@ -6,7 +6,7 @@ Electrons are the sub-atomic particles that underlie *electricity*. Controlling 
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 NB3 Body|01|NB3 robot base PCB|1|[-D-](/boxes/electrons/NB3_body)|[-L-](VK)
 Resistor (330)|10|330 &Omega;/0.25 W|2|[-D-](/boxes/electrons/_resources/datasheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-330r/res-330r-1-250mw-axial-metal-film/dp/9341730)

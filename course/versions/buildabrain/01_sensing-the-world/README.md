@@ -6,7 +6,7 @@ We will start by learning how electricity is used to create "sensors", which wil
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 Periodic Table|01|Periodic Table business card|1|[-D-](/boxes/atoms/card)|[-L-](VK)
 
@@ -30,7 +30,7 @@ Electrons are the sub-atomic particles that underlie *electricity*. Controlling 
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 NB3 Body|01|NB3 robot base PCB|1|[-D-](/boxes/electrons/NB3_body)|[-L-](VK)
 Resistor (470)|01|470 &Omega;/0.25 W|2|[-D-](/boxes/electrons/_resources/datasheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943)
@@ -139,7 +139,7 @@ Computers and brains work with electrical signals. In order for either to unders
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 Photoresistor (LDR)|01|Light-dependent resistor (GL5516 and GL5528)|4|[-D-](/boxes/sensors/)|[-L-](https://www.amazon.co.uk/Resistor-Dependent-Photoresistor-Sensitive-Sensors/dp/B08SC1M7V7)
 

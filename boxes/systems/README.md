@@ -6,7 +6,7 @@ Modern computers combine a huge number of different technologies into a function
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 Computer (RPi4)|01|Raspberry Pi 4b with 2 GB RAM|1|[-D-](/boxes/systems/_resources/datasheets/rpi4b.pdf)|[-L-](https://uk.farnell.com/raspberry-pi/rpi4-modbp-2gb/raspberry-pi-4-model-b-2gb/dp/3051886)
 Heatsinks|01|Heatsinks for RPi 4b chips|1|[-D-](/boxes/systems/_resources/datasheets/rpi4b_heatsinks.jpg)|[-L-](https://www.amazon.co.uk/gp/product/B07VRNT3HX)
@@ -46,7 +46,7 @@ Cable (Ethernet)|10|RJ45 cact5e ethernet patch cable (1 m)|1|[-D-](/boxes/system
 > Getting a microcontroller to perform two tasks (with very different timescales) at the same time is a fun programming challenge. You will develop new skills in organizing your programs and get a glimpse of the problems solved by the *kernel* of a modern operating system.
 
 <details><summary><weak>Guide</weak></summary>
-:-:-: A video guide to completing this project can be viewed <a href="Arduino)" target="_blank" rel="noopener noreferrer">here</a>.
+:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1036094397" target="_blank" rel="noopener noreferrer">here</a>.
 </details><hr>
 
 

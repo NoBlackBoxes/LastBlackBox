@@ -6,7 +6,7 @@ Semiconductors are materials that can both conduct and resist the flow of electr
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 MOSFET (10V)|01|Power MOSFET/N-channel (IRF510)|1|[-D-](/boxes/transistors/_resources/datasheets/IRF510.pdf)|[-L-](https://uk.farnell.com/vishay/irf510pbf/mosfet-n-100v-5-6a-to-220ab/dp/1653658)
 MOSFET (5V)|01|Power MOSFET/N-channel (IRL510)|1|[-D-](/boxes/transistors/_resources/datasheets/IRL510.pdf)|[-L-](https://uk.farnell.com/vishay/irl510pbf/mosfet-n-logic-to-220/dp/9102779)
@@ -34,7 +34,7 @@ Resistor (470)|01|470 &Omega;/0.25 W|2|[-D-](/boxes/transistors/../electrons/_re
 > Diodes allow current to flow in only one direction...if you overcome the internal junction potential. Let's measure this...and also use an LED to emit some light.
 
 
-#### Watch this video: [Transistors (MOSFETs)](MOSFETs))
+#### Watch this video: [Transistors (MOSFETs)](https://vimeo.com/1032452466)
 > MOSFETs are the thing that humans have built more of than anything else. They must be useful! Let's discuss what they are and how they work.
 
 **TASK**: Measure the threshold voltage that opens your MOSFET gate. Compare it to the "expected" range listed in the

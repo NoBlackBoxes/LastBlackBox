@@ -6,7 +6,7 @@ What is a data...for computers? for brains? How can machines decide what to do b
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 Comparator|10|LM339 (DIP-14)|2|[-D-](/boxes/data/_resources/datasheets/lm2901.pdf)|[-L-](https://uk.farnell.com/texas-instruments/lm2901n/ic-comparator-quad-2901-dip14/dp/3118410)
 LED (Red)|10|3 mm/2 mA red LED|2|[-D-](/boxes/data/_resources/datasheets/led_HLMP.pdf)|[-L-](https://uk.farnell.com/broadcom-limited/hlmp-1700/led-3mm-red-2-1mcd-626nm/dp/1003207)
@@ -30,7 +30,7 @@ Resistor (330)|10|330 &Omega;/0.25 W|4|[-D-](/boxes/data/_resources/datasheets/r
 > Use a comparator to convert analog values into discrete levels.
 
 <details><summary><weak>Guide</weak></summary>
-:-:-: A video guide to completing this project can be viewed <a href="input)" target="_blank" rel="noopener noreferrer">here</a>.
+:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1034767170" target="_blank" rel="noopener noreferrer">here</a>.
 </details><hr>
 
 

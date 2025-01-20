@@ -6,7 +6,7 @@ Magnets were known about (and useful) long before we understood electricity. How
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 Inductor|10|1 mH toroidal inductor|1|[-D-](/boxes/magnets/_resources/datasheets/inductor_toroidal.pdf)|[-L-](https://uk.farnell.com/bourns/2124-v-rc/inductor-1000uh-15-1-3a-toroid/dp/1929753)
 Magnet Wire|01|Narrow gauge epoxy insulated (1 m)|1|[-D-](/boxes/magnets/)|[-L-](https://www.amazon.co.uk/Enameled-Magnet-Soldering-Winding-Enamelled/dp/B07N65LRVD)

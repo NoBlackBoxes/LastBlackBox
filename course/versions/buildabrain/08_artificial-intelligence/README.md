@@ -6,7 +6,7 @@ Listen up, speak up.
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 NB3 Ear|01|I2S mems microphone breakout board|2|[-D-](/boxes/audio/NB3_ear)|[-L-](VK)
 NB3 Mouth|01|I2S DAC-AMP breakout board|1|[-D-](/boxes/audio/NB3_mouth)|[-L-](VK)
@@ -57,7 +57,7 @@ Look at everyone.
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 Camera (RPi v3)|01|RPi color camera with auto-focus (version 3)|1|[-D-](/boxes/vision/_resources/datasheets/rpi_camera_v3.pdf)|[-L-](https://uk.farnell.com/raspberry-pi/sc0872/rpi-camera-mod-3-standard-lens/dp/4132318)
 NB3 Camera Mount|01|Custom laser cut mount for RPi camera|1|[-D-](/boxes/vision/NB3_camera_mount)|[-L-](VK)
@@ -107,7 +107,7 @@ Supervised, unsupervised, and reinforcement learning
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 
 </p></details><hr>
@@ -121,7 +121,7 @@ Contents|Depth|Description| # |Data|Link|
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 
 </p></details><hr>
@@ -135,7 +135,7 @@ Contents|Depth|Description| # |Data|Link|
 > Let's install a neural processing unit (NPU) as our NB3's forebrain.
 
 <details><summary><weak>Guide</weak></summary>
-:-:-: A video guide to completing this project can be viewed <a href="NPU)" target="_blank" rel="noopener noreferrer">here</a>.
+:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1043159124" target="_blank" rel="noopener noreferrer">here</a>.
 </details><hr>
 
 - Your neural processing unit is made by Google (and distributed by Coral). It contains an EdgeTPU (tensor processing unit) that very efficiently implements the computations used in (feed forward) neural networks. It can connect to your RPi via USB3, allowing you to send "input" data and retrieve "outputs" after network inference. However, in order to communicate with your EdgeTPU, you will need to install some additional libraries.

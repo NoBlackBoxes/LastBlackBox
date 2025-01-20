@@ -7,6 +7,7 @@ LBB: Material Class
 
 # Import libraries
 import json
+import re
 
 # Import modules
 
@@ -18,7 +19,8 @@ class Material:
     Describes a hardware material used to open a box in LBB
     """
     def __init__(self, text=None, dictionary=None):
-        self.part = None                # Material part (name)
+        self.name = None                # Material name
+        self.slug = None                # Material slug
         self.depth = None               # Material depth
         self.description = None         # Material description
         self.quantity = None            # Material quantity
@@ -37,7 +39,8 @@ class Material:
     # Convert material object to dictionary
     def to_dict(self):
         dictionary = {
-            "part": self.part,
+            "name": self.name,
+            "slug": self.slug,
             "depth": self.depth,
             "description": self.description,
             "quantity": self.quantity,
@@ -52,7 +55,8 @@ class Material:
 
     # Convert dictionary to material object
     def from_dict(self, dictionary):
-        self.part = dictionary.get("part")
+        self.name = dictionary.get("name")
+        self.slug = dictionary.get("slug")
         self.depth = dictionary.get("depth")
         self.description = dictionary.get("description")
         self.quantity = dictionary.get("quantity")
@@ -67,7 +71,8 @@ class Material:
     # Parse material string
     def parse(self, text):
         fields = text.split(",")
-        self.part = fields[0].strip()
+        self.name = fields[0].strip()
+        self.slug = re.sub(r'[^\w]', '_', self.name)
         self.depth = fields[1].strip()
         self.description = fields[2].strip()
         self.quantity = int(fields[3].strip())

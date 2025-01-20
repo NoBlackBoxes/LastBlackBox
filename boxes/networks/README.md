@@ -6,7 +6,7 @@ Things started getting really interesting when organisms began to interact with 
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 Cable (Mini-USB/20cm)|01|Short mini-USB to Type-A cable (20 cm)|1|[-D-](/boxes/networks/)|[-L-](https://www.amazon.co.uk/LINDY-0-2-Type-Mini-B-Cable/dp/B01IZ4VFCO)
 
@@ -25,7 +25,7 @@ Cable (Mini-USB/20cm)|01|Short mini-USB to Type-A cable (20 cm)|1|[-D-](/boxes/n
 > Let's remotely control our NB3 using a simple text-based user interface (TUI). We will detect a keypress in the terminal and send the appropriate command to our hindbrain motor controller.
 
 <details><summary><weak>Guide</weak></summary>
-:-:-: A video guide to completing this project can be viewed <a href="TUI)" target="_blank" rel="noopener noreferrer">here</a>.
+:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1042784651" target="_blank" rel="noopener noreferrer">here</a>.
 </details><hr>
 
 - Expand your hindbrain command repertoire

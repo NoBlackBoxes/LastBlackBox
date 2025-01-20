@@ -6,7 +6,7 @@ Running more capable software requires a faster computer, which requires more el
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 NB3 Power Board|01|Regulated DC-DC power supply (5 Volts - 4 Amps)|1|[-D-](/boxes/power/NB3_power)|[-L-](VK)
 Power Cable|01|Custom 4 pin NB3 power connector cable|1|[-D-](/boxes/power/)|[-L-](VK)

@@ -6,7 +6,7 @@ ODHWI&TV"£*O&"^VRS"^VSOV&"
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 Secret Message|10|A SHA256 encrypted message (in HEX)|1|[-D-](/boxes/security/)|[-L-]()
 

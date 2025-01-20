@@ -6,7 +6,7 @@ Magnets were known about (and useful) long before we understood electricity. How
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 Magnet Wire|01|Narrow gauge epoxy insulated (1 m)|1|[-D-](/boxes/magnets/)|[-L-](https://www.amazon.co.uk/Enameled-Magnet-Soldering-Winding-Enamelled/dp/B07N65LRVD)
 Magnet|01|Neodymium disc (8 mm x 3 mm)|4|[-D-](/boxes/magnets/)|[-L-](https://uk.farnell.com/duratool/d01766/magnets-rare-earth-8-x-3mm-pk10/dp/1888095)
@@ -28,7 +28,7 @@ Clever arrangements of electromagnets and their control circuits can be used to 
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 DC Brushed Motor|01|6V Brushed DC motor|1|[-D-](/boxes/motors/)|[-L-](https://www.amazon.co.uk/Gikfun-1V-6V-Hobby-Arduino-EK1894/dp/B07BHHP2BT)
 
