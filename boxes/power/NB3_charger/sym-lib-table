@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "NB3_charger")(type "KiCad")(uri "${KIPRJMOD}/libraries/NB3_charger.kicad_sym")(options "")(descr ""))
+)

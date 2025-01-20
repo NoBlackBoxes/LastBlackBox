@@ -1,0 +1,108 @@
+(kicad_symbol_lib (version 20211014) (generator kicad_symbol_editor)
+  (symbol "2460" (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
+    (property "Reference" "B" (id 0) (at 4.826 3.81 0)
+      (effects (font (size 1.524 1.524)))
+    )
+    (property "Value" "2460" (id 1) (at 4.826 -3.81 0)
+      (effects (font (size 1.524 1.524)))
+    )
+    (property "Footprint" "2460_KEY" (id 2) (at 0 0 0)
+      (effects (font (size 1.27 1.27) italic) hide)
+    )
+    (property "Datasheet" "2460" (id 3) (at 0 0 0)
+      (effects (font (size 1.27 1.27) italic) hide)
+    )
+    (property "ki_keywords" "2460" (id 4) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "ki_locked" "" (id 5) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "ki_fp_filters" "2460_KEY" (id 6) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (symbol "2460_0_1"
+      (polyline
+        (pts
+          (xy 2.286 0.762)
+          (xy 2.286 1.778)
+        )
+        (stroke (width 0.2032) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 6.604 0)
+          (xy 7.62 0)
+        )
+        (stroke (width 0.2032) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 3.556 -1.778)
+          (xy 3.556 1.778)
+        )
+        (stroke (width 0.2032) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 1.778 1.27)
+          (xy 2.794 1.27)
+        )
+        (stroke (width 0.2032) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 2.54 0)
+          (xy 3.4798 0)
+        )
+        (stroke (width 0.2032) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 5.588 -1.778)
+          (xy 5.588 1.778)
+        )
+        (stroke (width 0.2032) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 6.604 0.762)
+          (xy 6.604 -0.762)
+        )
+        (stroke (width 0.2032) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 4.572 0.762)
+          (xy 4.572 -0.762)
+        )
+        (stroke (width 0.2032) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 7.366 1.27)
+          (xy 8.382 1.27)
+        )
+        (stroke (width 0.2032) (type default) (color 0 0 0 0))
+        (fill (type none))
+      )
+      (pin unspecified line (at 10.16 0 180) (length 2.54)
+        (name "" (effects (font (size 1.27 1.27))))
+        (number "1" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line (at 0 0 0) (length 2.54)
+        (name "" (effects (font (size 1.27 1.27))))
+        (number "2" (effects (font (size 1.27 1.27))))
+      )
+    )
+  )
+)
+
