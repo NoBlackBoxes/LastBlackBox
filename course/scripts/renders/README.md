@@ -37,8 +37,11 @@ For rendering purposes, export a VRML file.
 
 ```bash
 # Assemble movie from PNGs
-ffmpeg -r 30 -f image2 -pattern_type glob -i '*.png' -s 1920x1080 -vcodec libx264 animation.mp4
+ffmpeg -r 30 -f image2 -pattern_type glob -i '*.png' -s 1920x1080 -vcodec libx264 -pix_fmt yuv420p
+ animation.mp4
+# -pix_fmt yuv420p necessary for WhatsApp
 
-# Loop movie (assumes 4 loops and 2x240 frames)
-ffmpeg -i animation.mp4 -filter_complex "[0]reverse[r];[0][r]concat,loop=4:480,setpts=N/60/TB" loop.mp4
+
+# Loop movie (assumes 4 loops and 2x240 frames, 30 FPS)
+ffmpeg -i animation.mp4 -filter_complex "[0]reverse[r];[0][r]concat,loop=4:480,setpts=N/30/TB" loop.mp4
 ```
