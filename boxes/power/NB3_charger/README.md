@@ -6,6 +6,9 @@ PCB design and fabrication for NB3 charger, a 5V/3A DC to DC power supply and Ni
 - Battery Holder (Keystone 1028)
   - Substitute LCSC version (C5290180), may require modified footprint
 - AP64501SP-13, DC-DC converter, Diodes Inc. [datasheet](libraries/parts/Voltage_Regulator_AP64501/Voltage_Regulator_AP64501.pdf)
+- Body Power Connector
+  - B4B-PH-SM4-TB (SMD)
+  - B4B-PH-K-S (through-hole)
 
 ## Fabrication
 

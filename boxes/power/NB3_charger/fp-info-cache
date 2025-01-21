@@ -1,4 +1,4 @@
-24428906126427066
+24430643592453574
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -68186,6 +68186,13 @@ CUI 2.0 mm surface mount barrel jack
 0
 3
 3
+NB3_charger
+Connector_B4B-PH-K-S(LF)(SN)
+
+
+0
+4
+4
 NB3_charger
 Connector_S4B-PH-SM4-TB(LF)(SN)
 

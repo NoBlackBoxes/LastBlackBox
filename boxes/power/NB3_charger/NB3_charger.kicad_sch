@@ -1367,34 +1367,38 @@
 				)
 			)
 		)
-		(symbol "NB3_charger:Connector_S4B-PH-SM4-TB(LF)(SN)"
+		(symbol "NB3_charger:Connector_B4B-PH-K-S(LF)(SN)"
 			(pin_names
-				(offset 0.254) hide)
+				(offset 1.016)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "J"
-				(at 8.89 6.35 0)
+				(at -5.58 7.62 0)
 				(effects
 					(font
-						(size 1.524 1.524)
+						(size 1.27 1.27)
 					)
+					(justify left bottom)
 				)
 			)
-			(property "Value" "Connector_S4B-PH-SM4-TB(LF)(SN)"
-				(at 2.54 -13.97 0)
+			(property "Value" "B4B-PH-K-S"
+				(at -5.08 -7.62 0)
 				(effects
 					(font
-						(size 1.524 1.524)
+						(size 1.27 1.27)
 					)
+					(justify left bottom)
 				)
 			)
-			(property "Footprint" "NB3_charger:Connector_S4B-PH-SM4-TB(LF)(SN)"
-				(at 8.89 -11.43 0)
+			(property "Footprint" "Connector_B4B-PH-K-S(LF)(SN)"
+				(at -6.35 -21.844 0)
 				(effects
 					(font
-						(size 1.524 1.524)
+						(size 1.27 1.27)
 					)
+					(justify bottom)
 					(hide yes)
 				)
 			)
@@ -1402,8 +1406,9 @@
 				(at 0 0 0)
 				(effects
 					(font
-						(size 1.524 1.524)
+						(size 1.27 1.27)
 					)
+					(hide yes)
 				)
 			)
 			(property "Description" ""
@@ -1415,22 +1420,147 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "CONN_S4B-PH-SM4-TBLFSN_JST"
-				(at 0 0 0)
+			(property "MF" "JST"
+				(at -7.366 -7.62 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify bottom)
 					(hide yes)
 				)
 			)
-			(symbol "Connector_S4B-PH-SM4-TB(LF)(SN)_1_1"
+			(property "Description_1" "\n                        \n                             2.0 mm pitch/Disconnectable Crimp style connectors\n                        \n"
+				(at -1.016 -13.462 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Package" "None"
+				(at 22.098 -2.794 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Price" "None"
+				(at 21.59 -4.572 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Check_prices" "https://www.snapeda.com/parts/B4B-PH-K-S(LF)(SN)/JST/view-part/?ref=eda"
+				(at -0.254 -14.224 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "SnapEDA_Link" "https://www.snapeda.com/parts/B4B-PH-K-S(LF)(SN)/JST/view-part/?ref=snap"
+				(at 0 -16.51 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "MP" "B4B-PH-K-S(LF)(SN)"
+				(at -16.002 -18.796 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "Availability" "In Stock"
+				(at 22.86 -8.128 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(property "MANUFACTURER" "JST"
+				(at 17.526 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify bottom)
+					(hide yes)
+				)
+			)
+			(symbol "Connector_B4B-PH-K-S(LF)(SN)_0_0"
+				(rectangle
+					(start -4.445 -2.8575)
+					(end -2.8575 -2.2225)
+					(stroke
+						(width 0.1)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -4.445 -0.3175)
+					(end -2.8575 0.3175)
+					(stroke
+						(width 0.1)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -4.445 2.2225)
+					(end -2.8575 2.8575)
+					(stroke
+						(width 0.1)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -4.445 4.7625)
+					(end -2.8575 5.3975)
+					(stroke
+						(width 0.1)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
 				(polyline
 					(pts
-						(xy 5.08 -10.16) (xy 12.7 -10.16)
+						(xy -5.08 -3.81) (xy -3.81 -5.08)
 					)
 					(stroke
-						(width 0.127)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -1439,10 +1569,10 @@
 				)
 				(polyline
 					(pts
-						(xy 5.08 2.54) (xy 5.08 -10.16)
+						(xy -5.08 -2.54) (xy -3.175 -2.54)
 					)
 					(stroke
-						(width 0.127)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -1451,10 +1581,10 @@
 				)
 				(polyline
 					(pts
-						(xy 10.16 -7.62) (xy 5.08 -7.62)
+						(xy -5.08 0) (xy -3.175 0)
 					)
 					(stroke
-						(width 0.127)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -1463,10 +1593,10 @@
 				)
 				(polyline
 					(pts
-						(xy 10.16 -7.62) (xy 8.89 -8.4582)
+						(xy -5.08 2.54) (xy -3.175 2.54)
 					)
 					(stroke
-						(width 0.127)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -1475,10 +1605,10 @@
 				)
 				(polyline
 					(pts
-						(xy 10.16 -7.62) (xy 8.89 -6.7818)
+						(xy -5.08 5.08) (xy -3.175 5.08)
 					)
 					(stroke
-						(width 0.127)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -1487,130 +1617,10 @@
 				)
 				(polyline
 					(pts
-						(xy 10.16 -5.08) (xy 5.08 -5.08)
+						(xy -5.08 6.35) (xy -3.81 7.62)
 					)
 					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -5.08) (xy 8.89 -5.9182)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -5.08) (xy 8.89 -4.2418)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -2.54) (xy 5.08 -2.54)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -2.54) (xy 8.89 -3.3782)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -2.54) (xy 8.89 -1.7018)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 0) (xy 5.08 0)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 0) (xy 8.89 -0.8382)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 0) (xy 8.89 0.8382)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 12.7 -10.16) (xy 12.7 2.54)
-					)
-					(stroke
-						(width 0.127)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 12.7 2.54) (xy 5.08 2.54)
-					)
-					(stroke
-						(width 0.127)
+						(width 0.254)
 						(type default)
 					)
 					(fill
@@ -1618,75 +1628,88 @@
 					)
 				)
 				(pin passive line
-					(at 0 0 0)
+					(at -10.16 5.08 0)
 					(length 5.08)
 					(name "1"
 						(effects
 							(font
-								(size 1.4986 1.4986)
+								(size 1.016 1.016)
 							)
 						)
 					)
 					(number "1"
 						(effects
 							(font
-								(size 1.4986 1.4986)
+								(size 1.016 1.016)
 							)
 						)
 					)
 				)
 				(pin passive line
-					(at 0 -2.54 0)
+					(at -10.16 2.54 0)
 					(length 5.08)
 					(name "2"
 						(effects
 							(font
-								(size 1.4986 1.4986)
+								(size 1.016 1.016)
 							)
 						)
 					)
 					(number "2"
 						(effects
 							(font
-								(size 1.4986 1.4986)
+								(size 1.016 1.016)
 							)
 						)
 					)
 				)
 				(pin passive line
-					(at 0 -5.08 0)
+					(at -10.16 0 0)
 					(length 5.08)
 					(name "3"
 						(effects
 							(font
-								(size 1.4986 1.4986)
+								(size 1.016 1.016)
 							)
 						)
 					)
 					(number "3"
 						(effects
 							(font
-								(size 1.4986 1.4986)
+								(size 1.016 1.016)
 							)
 						)
 					)
 				)
 				(pin passive line
-					(at 0 -7.62 0)
+					(at -10.16 -2.54 0)
 					(length 5.08)
 					(name "4"
 						(effects
 							(font
-								(size 1.4986 1.4986)
+								(size 1.016 1.016)
 							)
 						)
 					)
 					(number "4"
 						(effects
 							(font
-								(size 1.4986 1.4986)
+								(size 1.016 1.016)
 							)
 						)
+					)
+				)
+			)
+			(symbol "Connector_B4B-PH-K-S(LF)(SN)_0_1"
+				(rectangle
+					(start -3.81 -5.08)
+					(end 3.81 7.62)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
 			)
@@ -4383,6 +4406,16 @@
 		)
 		(uuid "b1661e1e-5444-4314-bf6b-e396aac06e7c")
 	)
+	(polyline
+		(pts
+			(xy 114.935 196.215) (xy 170.815 196.215)
+		)
+		(stroke
+			(width 0.5)
+			(type solid)
+		)
+		(uuid "b67cecc9-549b-45ef-b876-bd6b1c5bb8b1")
+	)
 	(wire
 		(pts
 			(xy 132.715 104.14) (xy 125.73 104.14)
@@ -4725,7 +4758,7 @@
 	)
 	(polyline
 		(pts
-			(xy 118.11 153.67) (xy 118.11 179.07)
+			(xy 114.935 149.225) (xy 114.935 196.215)
 		)
 		(stroke
 			(width 0.5)
@@ -4735,7 +4768,7 @@
 	)
 	(polyline
 		(pts
-			(xy 118.11 153.67) (xy 173.99 153.67)
+			(xy 114.935 149.225) (xy 170.815 149.225)
 		)
 		(stroke
 			(width 0.5)
@@ -4745,17 +4778,7 @@
 	)
 	(polyline
 		(pts
-			(xy 118.11 179.07) (xy 173.99 179.07)
-		)
-		(stroke
-			(width 0.5)
-			(type solid)
-		)
-		(uuid "f4d3c3c4-5bd5-4ebb-883a-f63b2d31c3ca")
-	)
-	(polyline
-		(pts
-			(xy 173.99 179.07) (xy 173.99 153.67)
+			(xy 170.815 196.215) (xy 170.815 149.225)
 		)
 		(stroke
 			(width 0.5)
@@ -4830,7 +4853,7 @@
 	)
 	(text "Mounting Holes"
 		(exclude_from_sim no)
-		(at 120.142 158.75 0)
+		(at 116.205 153.67 0)
 		(effects
 			(font
 				(size 2 2)
@@ -5890,6 +5913,133 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 124.46 191.77 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2e92c76f-bbdd-4bc3-a828-04cbfd6ff61a")
+		(property "Reference" "H13"
+			(at 128.27 191.1349 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 128.27 193.6749 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_ISO7380_Pad"
+			(at 124.46 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 124.46 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 124.46 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "NB3_charger"
+				(path "/865a6659-88ab-4157-bbc8-8818e83bf79d"
+					(reference "H13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 147.32 186.055 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2ee5ec0a-ab9c-4152-8ede-fe9f27be92f0")
+		(property "Reference" "H12"
+			(at 151.13 185.4199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 151.13 187.9599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_ISO7380_Pad"
+			(at 147.32 186.055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 147.32 186.055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 147.32 186.055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "NB3_charger"
+				(path "/865a6659-88ab-4157-bbc8-8818e83bf79d"
+					(reference "H12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 171.45 135.89 0)
 		(unit 1)
@@ -6183,7 +6333,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 127 163.83 0)
+		(at 124.46 157.48 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6192,7 +6342,7 @@
 		(fields_autoplaced yes)
 		(uuid "39250da4-c637-43ee-a483-1f32947514fb")
 		(property "Reference" "H1"
-			(at 130.81 163.1949 0)
+			(at 128.27 156.8449 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6201,7 +6351,7 @@
 			)
 		)
 		(property "Value" "MountingHole"
-			(at 130.81 165.7349 0)
+			(at 128.27 159.3849 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6210,7 +6360,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_ISO7380_Pad"
-			(at 127 163.83 0)
+			(at 124.46 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6219,7 +6369,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 127 163.83 0)
+			(at 124.46 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6228,7 +6378,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 127 163.83 0)
+			(at 124.46 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6429,6 +6579,133 @@
 			(project "NB3_charger"
 				(path "/865a6659-88ab-4157-bbc8-8818e83bf79d"
 					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 124.46 168.91 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "46045628-1ee3-4f22-9e14-0f0e5961cdd9")
+		(property "Reference" "H5"
+			(at 128.27 168.2749 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 128.27 170.8149 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_ISO7380_Pad"
+			(at 124.46 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 124.46 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 124.46 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "NB3_charger"
+				(path "/865a6659-88ab-4157-bbc8-8818e83bf79d"
+					(reference "H5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 124.46 186.055 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4626767c-9d33-4461-8b68-541431515394")
+		(property "Reference" "H10"
+			(at 128.27 185.4199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 128.27 187.9599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_ISO7380_Pad"
+			(at 124.46 186.055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 124.46 186.055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 124.46 186.055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "NB3_charger"
+				(path "/865a6659-88ab-4157-bbc8-8818e83bf79d"
+					(reference "H10")
 					(unit 1)
 				)
 			)
@@ -7106,6 +7383,70 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 147.32 168.91 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "69b688d8-851d-46b2-98ef-cd771a297972")
+		(property "Reference" "H7"
+			(at 151.13 168.2749 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 151.13 170.8149 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_ISO7380_Pad"
+			(at 147.32 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 147.32 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 147.32 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "NB3_charger"
+				(path "/865a6659-88ab-4157-bbc8-8818e83bf79d"
+					(reference "H7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "NB3_charger:AA_Battery_Holder_1028")
 		(at 41.91 177.8 0)
 		(unit 1)
@@ -7483,6 +7824,134 @@
 		)
 	)
 	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 147.32 174.625 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7ba2ba17-19ab-4946-bf63-6084988eb497")
+		(property "Reference" "H8"
+			(at 151.13 173.9899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 151.13 176.5299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_ISO7380_Pad"
+			(at 147.32 174.625 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 147.32 174.625 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 147.32 174.625 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "NB3_charger"
+				(path "/865a6659-88ab-4157-bbc8-8818e83bf79d"
+					(reference "H8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 124.46 180.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7e39d741-ee3e-4788-ba88-43d1eb30b607")
+		(property "Reference" "H9"
+			(at 128.27 179.7049 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 128.27 182.2449 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_ISO7380_Pad"
+			(at 124.46 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 124.46 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 124.46 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "NB3_charger"
+				(path "/865a6659-88ab-4157-bbc8-8818e83bf79d"
+					(reference "H9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 226.06 107.95 0)
 		(unit 1)
@@ -7789,6 +8258,172 @@
 			(project "NB3_charger"
 				(path "/865a6659-88ab-4157-bbc8-8818e83bf79d"
 					(reference "#FLG01")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "NB3_charger:Connector_B4B-PH-K-S(LF)(SN)")
+		(at 199.39 54.61 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8fbec50c-9242-4ded-ab3c-0a90e9f41a7e")
+		(property "Reference" "J2"
+			(at 198.12 45.085 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "B4B-PH-K-S"
+			(at 192.405 61.595 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "NB3_charger:Connector_B4B-PH-K-S(LF)(SN)"
+			(at 193.04 76.454 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 199.39 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 199.39 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MF" "JST"
+			(at 192.024 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Description_1" "\n                        \n                             2.0 mm pitch/Disconnectable Crimp style connectors\n                        \n"
+			(at 198.374 68.072 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Package" "None"
+			(at 221.488 57.404 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Price" "None"
+			(at 220.98 59.182 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Check_prices" "https://www.snapeda.com/parts/B4B-PH-K-S(LF)(SN)/JST/view-part/?ref=eda"
+			(at 199.136 68.834 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "SnapEDA_Link" "https://www.snapeda.com/parts/B4B-PH-K-S(LF)(SN)/JST/view-part/?ref=snap"
+			(at 199.39 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MP" "B4B-PH-K-S(LF)(SN)"
+			(at 183.388 73.406 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "Availability" "In Stock"
+			(at 222.25 62.738 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "MANUFACTURER" "JST"
+			(at 216.916 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify bottom)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a815d199-a090-45fe-999a-e9d1f185e2ad")
+		)
+		(pin "4"
+			(uuid "0b608c8b-6e4b-474c-ba06-45b945083ff9")
+		)
+		(pin "3"
+			(uuid "5070559f-2afc-4d33-b94e-8f98db284960")
+		)
+		(pin "1"
+			(uuid "5d3d13b2-2b32-4eac-af4a-946e2164e503")
+		)
+		(instances
+			(project ""
+				(path "/865a6659-88ab-4157-bbc8-8818e83bf79d"
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -8112,7 +8747,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 149.86 163.83 0)
+		(at 147.32 157.48 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8121,7 +8756,7 @@
 		(fields_autoplaced yes)
 		(uuid "9ec8c106-a940-450a-aef2-47581c8a41cb")
 		(property "Reference" "H3"
-			(at 153.67 163.1949 0)
+			(at 151.13 156.8449 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8130,7 +8765,7 @@
 			)
 		)
 		(property "Value" "MountingHole"
-			(at 153.67 165.7349 0)
+			(at 151.13 159.3849 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8139,7 +8774,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_ISO7380_Pad"
-			(at 149.86 163.83 0)
+			(at 147.32 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8148,7 +8783,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 149.86 163.83 0)
+			(at 147.32 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8157,7 +8792,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 149.86 163.83 0)
+			(at 147.32 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8355,7 +8990,7 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 149.86 173.99 0)
+		(at 147.32 163.195 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8364,7 +8999,7 @@
 		(fields_autoplaced yes)
 		(uuid "c45a5e6e-706a-45f1-934b-74a3f628172c")
 		(property "Reference" "H4"
-			(at 153.67 173.3549 0)
+			(at 151.13 162.5599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8373,7 +9008,7 @@
 			)
 		)
 		(property "Value" "MountingHole"
-			(at 153.67 175.8949 0)
+			(at 151.13 165.0999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8382,7 +9017,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_ISO7380_Pad"
-			(at 149.86 173.99 0)
+			(at 147.32 163.195 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8391,7 +9026,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 149.86 173.99 0)
+			(at 147.32 163.195 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8400,7 +9035,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 149.86 173.99 0)
+			(at 147.32 163.195 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8977,16 +9612,15 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 127 173.99 0)
+		(at 124.46 163.195 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "d844c34c-e2c8-4848-ae50-4dcab21ac5e5")
 		(property "Reference" "H2"
-			(at 130.81 173.3549 0)
+			(at 128.27 162.5599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8995,7 +9629,7 @@
 			)
 		)
 		(property "Value" "MountingHole"
-			(at 130.81 175.8949 0)
+			(at 128.27 165.0999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9004,7 +9638,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_ISO7380_Pad"
-			(at 127 173.99 0)
+			(at 124.46 163.195 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9013,7 +9647,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 127 173.99 0)
+			(at 124.46 163.195 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9022,7 +9656,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 127 173.99 0)
+			(at 124.46 163.195 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9040,52 +9674,34 @@
 		)
 	)
 	(symbol
-		(lib_id "NB3_charger:Connector_S4B-PH-SM4-TB(LF)(SN)")
-		(at 189.23 57.15 0)
-		(mirror x)
+		(lib_id "Mechanical:MountingHole")
+		(at 124.46 174.625 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "ddf5b3ab-5704-4e10-8e98-e6581c198b1e")
-		(property "Reference" "J2"
-			(at 203.2 54.61 0)
+		(uuid "d8a4488d-ab2b-4665-bcb8-77140b75b8d5")
+		(property "Reference" "H6"
+			(at 128.27 173.9899 0)
 			(effects
 				(font
-					(size 1.524 1.524)
+					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
-		(property "Value" "Connector_S4B-PH-SM4-TB(LF)(SN)"
-			(at 167.64 76.2 0)
+		(property "Value" "MountingHole"
+			(at 128.27 176.5299 0)
 			(effects
 				(font
-					(size 1.524 1.524)
+					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
-		(property "Footprint" "NB3_charger:Connector_S4B-PH-SM4-TB(LF)(SN)"
-			(at 198.12 45.72 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 189.23 57.15 0)
-			(effects
-				(font
-					(size 1.524 1.524)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 189.23 57.15 0)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_ISO7380_Pad"
+			(at 124.46 174.625 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9093,22 +9709,92 @@
 				(hide yes)
 			)
 		)
-		(pin "1"
-			(uuid "a7d073d3-7b85-4f72-abb6-4d462665f619")
+		(property "Datasheet" "~"
+			(at 124.46 174.625 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
 		)
-		(pin "2"
-			(uuid "5a7622b9-fac3-440b-a2aa-64fc21d71a08")
-		)
-		(pin "3"
-			(uuid "2bfe3035-1be4-4d21-bbf6-3861230a15c5")
-		)
-		(pin "4"
-			(uuid "00ce94a0-258e-4f3c-b93c-31a73ba30d11")
+		(property "Description" ""
+			(at 124.46 174.625 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
 		)
 		(instances
 			(project "NB3_charger"
 				(path "/865a6659-88ab-4157-bbc8-8818e83bf79d"
-					(reference "J2")
+					(reference "H6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 147.32 180.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dc52a782-867e-4180-8f2a-3e77077cd26c")
+		(property "Reference" "H11"
+			(at 151.13 179.7049 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 151.13 182.2449 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_ISO7380_Pad"
+			(at 147.32 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 147.32 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 147.32 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "NB3_charger"
+				(path "/865a6659-88ab-4157-bbc8-8818e83bf79d"
+					(reference "H11")
 					(unit 1)
 				)
 			)
@@ -9793,6 +10479,70 @@
 			(project "NB3_charger"
 				(path "/865a6659-88ab-4157-bbc8-8818e83bf79d"
 					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 147.32 191.77 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f406a8a6-fdee-4adb-923c-26421f9c6bf2")
+		(property "Reference" "H14"
+			(at 151.13 191.1349 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 151.13 193.6749 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_2.7mm_M2.5_ISO7380_Pad"
+			(at 147.32 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 147.32 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 147.32 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "NB3_charger"
+				(path "/865a6659-88ab-4157-bbc8-8818e83bf79d"
+					(reference "H14")
 					(unit 1)
 				)
 			)
