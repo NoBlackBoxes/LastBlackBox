@@ -119,16 +119,17 @@ class Eye:
         self.set_row(7, True)
         self.set_col(0, True)
         self.set_col(7, True)
+        self.set_pixel(0,0,False)
+        self.set_pixel(7,0,False)
+        self.set_pixel(0,7,False)
+        self.set_pixel(7,7,False)
         # Draw pupil
         if x-1 > 0:
             self.set_pixel(x-1, y, True)
+            if y-1 > 0:
+                self.set_pixel(x, y-1, True)
+                self.set_pixel(x-1, y-1, True)
         self.set_pixel(x, y, True)
-        if x+1 < 8:
-            self.set_pixel(x+1, y, True)
-        if y-1 > 0:
-            self.set_pixel(x, y-1, True)
-        if y+1 < 8:
-            self.set_pixel(x, y+1, True)
         self.refresh()
 
     def saccade(self, x, y, duration):
