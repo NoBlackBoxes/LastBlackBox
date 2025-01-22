@@ -1,0 +1,214 @@
+(footprint "Barrel_Jack_TH_XUNPU_DC-005-A200"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "DC-IN-TH_DC-005-A200 footprint")
+	(tags "DC-IN-TH_DC-005-A200 footprint C720557")
+	(property "Reference" "REF**"
+		(at -3.499886 -8.825603 0)
+		(layer "F.SilkS")
+		(uuid "cefcead2-1939-42b3-85c4-5f653e7bfc15")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "DC-IN-TH_DC-005-A200"
+		(at -3.499886 4.325375 0)
+		(layer "F.Fab")
+		(uuid "c06378f8-75b1-4f16-8cf6-8ff3103dbb21")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b644c440-f93f-4c73-bb24-881f5fe79dad")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a720c742-e319-4f6a-a393-2529907a6cdb")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b6ad36da-3b3e-49d8-96f7-cbd9d981f177")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -10.499873 -6.825603)
+		(end 3.500102 -6.825603)
+		(stroke
+			(width 0.254001)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a01fd9c8-8c10-4aea-ad40-c3a1c2bdc0f2")
+	)
+	(fp_line
+		(start -10.499873 2.174422)
+		(end -10.499873 -6.825603)
+		(stroke
+			(width 0.254001)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ff3bb23c-b060-4d73-b7cb-99d673450f1a")
+	)
+	(fp_line
+		(start -7.199898 2.174422)
+		(end -7.199898 -6.825603)
+		(stroke
+			(width 0.254001)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "184d935b-2930-4c2f-950f-23210477527e")
+	)
+	(fp_line
+		(start -7.119914 -5.525349)
+		(end 3.500102 -5.525349)
+		(stroke
+			(width 0.254001)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "83775fec-b696-4a23-a330-6df72a9d2b26")
+	)
+	(fp_line
+		(start -7.119914 0.874397)
+		(end 3.500102 0.874397)
+		(stroke
+			(width 0.254001)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ab71e4a7-f8ce-4659-b239-7d7f151a3832")
+	)
+	(fp_line
+		(start -1.419329 2.174422)
+		(end -10.499873 2.174422)
+		(stroke
+			(width 0.254001)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "bde5692c-a0c2-4c8d-ab1d-423c1be52586")
+	)
+	(fp_line
+		(start 3.500102 -6.825603)
+		(end 3.500102 -4.318872)
+		(stroke
+			(width 0.254001)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d02cef9d-61c3-423b-bf49-2638ee04c442")
+	)
+	(fp_line
+		(start 3.500102 -0.332106)
+		(end 3.500102 2.174422)
+		(stroke
+			(width 0.254001)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "4e1a82cf-3f05-49b8-ad65-2b5461cbbd85")
+	)
+	(fp_line
+		(start 3.500102 2.174422)
+		(end 2.419558 2.174422)
+		(stroke
+			(width 0.254001)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f6a553f5-2517-42a8-940b-04fc9519e705")
+	)
+	(fp_circle
+		(center 3.499873 -6.952502)
+		(end 3.529845 -6.952502)
+		(stroke
+			(width 0.059995)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "0f8380c3-c8b8-443c-a533-1a211d064536")
+	)
+	(fp_text user "REF**"
+		(at -3.499886 6.325375 0)
+		(layer "F.Fab")
+		(uuid "141de9ed-18f0-4514-b5de-c00ce6cc9dc3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole oval
+		(at 3.000127 -2.325375)
+		(size 1.5 3.8)
+		(drill oval 0.900025 3.100178)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "651308e9-09df-4023-934b-cd1948fd389c")
+	)
+	(pad "2" thru_hole oval
+		(at -3.000127 -2.325375 180)
+		(size 1.5 3.8)
+		(drill oval 0.900025 3.100178)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "8e656e84-c658-48c7-aa71-2efab86a8e80")
+	)
+	(pad "3" thru_hole oval
+		(at 0.5 2.325375 270)
+		(size 1.5 3.4)
+		(drill oval 0.900025 2.599797)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "f9cbe2f5-7fd3-4819-a90f-02f3e29bb908")
+	)
+	(model "${KIPRJMOD}/libraries/parts/Barrel_Jack_TH_XUNPU_DC-005-A200/Barrel_Jack_TH_XUNPU_DC-005-A200.step"
+		(offset
+			(xyz -3.499993 2.175002 -0.099992)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

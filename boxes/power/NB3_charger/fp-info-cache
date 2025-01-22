@@ -1,4 +1,4 @@
-24430643592453574
+24434118676057918
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -68187,6 +68187,13 @@ CUI 2.0 mm surface mount barrel jack
 3
 3
 NB3_charger
+Barrel_Jack_TH_XUNPU_DC-005-A200
+DC-IN-TH_DC-005-A200 footprint
+DC-IN-TH_DC-005-A200 footprint C720557
+0
+3
+3
+NB3_charger
 Connector_B4B-PH-K-S(LF)(SN)
 
 
@@ -68214,6 +68221,13 @@ Logo_VK_15mm
 0
 0
 0
+NB3_charger
+NiMH_Charger_BQ25172DSGR
+
+
+0
+11
+11
 NB3_charger
 PinHeader_TSM-104-01-L-SH
 
