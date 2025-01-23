@@ -1,0 +1,12 @@
+### Footprint positions - created on 2025-01-23T12:21:15+0000 ###
+### Printed by KiCad version 8.0.7
+## Unit = mm, Angle = deg.
+## Side : All
+# Ref     Val                  Package                                        PosX       PosY       Rot  Side
+J1        2x5_Pin_Header_side  PinHeader_Male_TH_Side_2x5_C60563           34.0800    12.5200    0.0000  top
+J2        2x5_Pin_Header_side  PinHeader_Male_TH_Side_2x5_C60563           34.0800   -12.5200  180.0000  top
+J3        Socket_1x5_side      SocketHeader_Female_TH_Side_1x5_C2897387    12.0000    19.0000  180.0000  top
+J4        Socket_1x5_side      SocketHeader_Female_TH_Side_1x5_C2897387    12.0000   -19.0000    0.0000  top
+J5        2x5_Socket_Vertical  SocketHeader_Female_TH_2x5_C492399          12.0000     5.7300    0.0000  top
+J6        2x5_Socket_Vertical  SocketHeader_Female_TH_2x5_C492399          12.0000    -5.7300  180.0000  top
+## End

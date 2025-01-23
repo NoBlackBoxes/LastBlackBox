@@ -1,4 +1,4 @@
-24421957467954600
+24428907975261176
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -68166,6 +68166,27 @@ threaded screw
 4
 1
 NB3_eye
+Logo_NBB_15mm
+
+
+0
+0
+0
+NB3_eye
+Logo_VK_5mm
+
+
+0
+0
+0
+NB3_eye
+Logo_VK_15mm
+
+
+0
+0
+0
+NB3_eye
 PinHeader_Male_TH_2x5_C492422
 HDR-TH_10P-P2.54-V-M-R2-C5-S2.54 footprint
 HDR-TH_10P-P2.54-V-M-R2-C5-S2.54 footprint C492422
@@ -68193,6 +68214,13 @@ HDR-TH_10P-P2.54-V-F-R2-C5-S2.54 footprint C492399
 0
 10
 10
+NB3_eye
+SocketHeader_Female_TH_Side_1x4_C5252508
+HDR-TH_4P-P2.54-H-W8.6_A2541HWR-4P footprint
+HDR-TH_4P-P2.54-H-W8.6_A2541HWR-4P footprint C5252508
+0
+4
+4
 NB3_eye
 SocketHeader_Female_TH_Side_1x5_C2897387
 HDR-TH_5P-P2.54-H-F-W10.0-N footprint

@@ -4,7 +4,7 @@ PCB design and fabrication for NB3 body, a brain-shaped electronics prototyping 
 
 ## Parts
 
-- Just connnectors and passives
+- Just connectors and passives
 
 ## Fabrication
 
