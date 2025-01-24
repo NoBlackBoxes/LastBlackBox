@@ -495,7 +495,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "power.net",
-      "plot": "",
+      "plot": "fab/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "NB3_body.step",
