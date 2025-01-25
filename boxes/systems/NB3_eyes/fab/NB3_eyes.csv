@@ -1,0 +1,4 @@
+Designator,Footprint,Quantity,Designation,LCSC#
+J7,SocketHeader_Female_TH_Side_1x4_C5252508,1,Socket_1x4_Side,C5252508
+"J2,J1",PinHeader_Male_TH_Side_2x5_C60563,2,2x5_Pin_Header_side,C60563
+"J4,J3",SocketHeader_Female_TH_Side_1x5_C2897387,2,Socket_1x5_side,C2897387
