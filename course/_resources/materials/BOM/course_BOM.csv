@@ -4,13 +4,13 @@ Atoms,,,,,,,,,
 Periodic Table,01,Periodic Table business card,1,/boxes/atoms/card,VK,Loose,40,60,1
 ,,,,,,,,,
 Electrons,,,,,,,,,
-NB3 Body,01,NB3 robot base PCB,1,/boxes/electrons/NB3_body,VK,Loose,200,200,15
-Resistor (330),10,330 &Omega;/0.25 W,2,/boxes/electrons/_resources/datasheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-330r/res-330r-1-250mw-axial-metal-film/dp/9341730,Passive,50,5,3
-Resistor (470),01,470 &Omega;/0.25 W,2,/boxes/electrons/_resources/datasheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943,Passive,50,5,3
-Resistor (1k),01,1 k&Omega;/0.25 W,2,/boxes/electrons/_resources/datasheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-1k/res-1k-1-250mw-axial-metal-film/dp/9341102,Passive,50,5,3
-Resistor (10k),01,10 k&Omega;/0.25 W,2,/boxes/electrons/_resources/datasheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-10k/res-10k-1-250mw-axial-metal-film/dp/9341110,Passive,50,5,3
-Capacitor (small),10,0.1 uF ceramic capacitor,1,/boxes/electrons/_resources/datasheets/capacitor_ceramic.pdf,https://uk.farnell.com/kemet/c322c104k1r5ta/cap-0-1-f-100v-10-x7r/dp/1457685,Passive,50,5,3
-Capacitor (large),10,100 uF aluminum electrolytic capacitor,1,/boxes/electrons/_resources/datasheets/capacitor_electrolytic.pdf,https://uk.farnell.com/rubycon/16zlh100mefc5x11/cap-100-f-16v-20/dp/8126283,Passive,50,5,3
+NB3 Body,01,NB3 robot base PCB,1,/boxes/electrons/NB3_body,VK,Loose,200,200,11
+Resistor (330),10,330 &Omega;/0.25 W,2,/boxes/electrons/_resources/datasheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-330r/res-330r-1-250mw-axial-metal-film/dp/9341730,Passive,50,2,2
+Resistor (470),01,470 &Omega;/0.25 W,2,/boxes/electrons/_resources/datasheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943,Passive,50,2,2
+Resistor (1k),01,1 k&Omega;/0.25 W,2,/boxes/electrons/_resources/datasheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-1k/res-1k-1-250mw-axial-metal-film/dp/9341102,Passive,50,2,2
+Resistor (10k),01,10 k&Omega;/0.25 W,2,/boxes/electrons/_resources/datasheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-10k/res-10k-1-250mw-axial-metal-film/dp/9341110,Passive,50,2,2
+Capacitor (small),10,0.1 uF ceramic capacitor,1,/boxes/electrons/_resources/datasheets/capacitor_ceramic.pdf,https://uk.farnell.com/kemet/c322c104k1r5ta/cap-0-1-f-100v-10-x7r/dp/1457685,Passive,50,2,2
+Capacitor (large),10,100 uF aluminum electrolytic capacitor,1,/boxes/electrons/_resources/datasheets/capacitor_electrolytic.pdf,https://uk.farnell.com/rubycon/16zlh100mefc5x11/cap-100-f-16v-20/dp/8126283,Passive,50,4,4
 Button,10,Tactile switch,2,/boxes/electrons/_resources/datasheets/button.pdf,https://uk.farnell.com/omron/b3f-1000/switch-spno-0-05a-24v-tht-0-98n/dp/176432,Passive,5,5,3
 Potentiometer,01,2.2 k&Omega; variable resistor,2,/boxes/electrons/_resources/datasheets/pot_2k2.pdf,https://uk.farnell.com/bourns/3362p-1-222lf/trimmer-pot-2-2kohm-10-1turn-th/dp/2328599,Passive,5,5,3
 Breadboard (400),01,400-tie solderless breadboard,1,/boxes/electrons/_resources/datasheets/breadboard_400.pdf,https://www.amazon.co.uk/gp/product/B0739XRX8F,Loose,85,60,10
@@ -18,8 +18,8 @@ Breadboards (170),01,170-tie solderless breadboard,4,/boxes/electrons/_resources
 Batteries (AA),01,AA 1.5 V alkaline battery,4,/boxes/electrons/,,Loose,60,15,15
 Battery holder,01,4xAA battery holder with ON-OFF switch,1,/boxes/electrons/,https://www.amazon.co.uk/gp/product/B0814ZH68F,Loose,65,70,20
 Jumper Kit,01,Kit of multi-length 22 AWG breadboard jumpers,1,/boxes/electrons/_resources/datasheets/jumper_kit.pdf,https://uk.farnell.com/multicomp/mc001810/hard-jumper-wire-22awg-140pc/dp/2770338,Loose,170,55,15
-Jumper Wires,01,Assorted 22 AWG jumper wire leads (male/female),1,/boxes/electrons/_resources/datasheets/jumper_wires.pdf,https://www.amazon.co.uk/240pcs-Solderless-Breadboard-Arduino-Project/dp/B08PJSTS3C,Loose,200,40,10
-Test Lead,01,Alligator clip to 0.64 mm pin (20 cm),2,/boxes/electrons/,https://www.amazon.co.uk/gp/product/B096JR15JW,Loose,220,20,10
+Jumper Wires,01,Assorted 22 AWG jumper wire leads (male/female),1,/boxes/electrons/_resources/datasheets/jumper_wires.pdf,https://www.amazon.co.uk/240pcs-Solderless-Breadboard-Arduino-Project/dp/B08PJSTS3C,Cables,200,40,10
+Test Lead,01,Alligator clip to 0.64 mm pin (20 cm),2,/boxes/electrons/,https://www.amazon.co.uk/gp/product/B096JR15JW,Cables,220,20,10
 Rubber feet,01,Adhesive rubber standoffs (1421T6CL),4,/boxes/electrons/_resources/datasheets/rubber_feet.pdf,https://uk.farnell.com/hammond/1421t6cl/feet-stick-on-pk24/dp/1876522,Passive,20,20,4
 ,,,,,,,,,
 Magnets,,,,,,,,,
@@ -57,8 +57,6 @@ LM741,10,OpAmp,1,/boxes/amplifiers/_resources/datasheets/IRF510.pdf,https://uk.f
 LM386N-4/NOPB,10,Audio-Amp,2,/boxes/amplifiers/_resources/datasheets/IRF510.pdf,https://uk.farnell.com/vishay/irf510pbf/mosfet-n-100v-5-6a-to-220ab/dp/1653658,Active,5,5,3
 ,,,,,,,,,
 Circuits,,,,,,,,,
-Caster,01,¾” metal ball caster,1,/boxes/circuits/https://www.pololu.com/product/955,https://www.pololu.com/product/955,Loose,70,50,20
-Spacer,01,NB3 spacer 3 mm spacer for mounting ball caster,5,/boxes/circuits/NB3_spacer,VK,Mounts,25,25,5
 ,,,,,,,,,
 Data,,,,,,,,,
 Comparator,10,LM339 (DIP-14),2,/boxes/data/_resources/datasheets/lm2901.pdf,https://uk.farnell.com/texas-instruments/lm2901n/ic-comparator-quad-2901-dip14/dp/3118410,Active,7,6,5
@@ -77,12 +75,12 @@ Gate (NAND),10,4xNAND gate,2,/boxes/memory/_resources/datasheets/NAND_gates.pdf,
 ,,,,,,,,,
 FPGAs,,,,,,,,,
 NB3 Hindbrain,10,ICE40UP5K dev board with ADC/DAC,1,/boxes/fpgas/NB3_hindbrain,VK,Hindbrain,60,30,20
-Cable (MicroUSB-1m),10,Micro-USB to Type-A cable (1 m),1,/boxes/fpgas/,,Loose,100,50,15
+Cable (MicroUSB-1m),10,Micro-USB to Type-A cable (1 m),1,/boxes/fpgas/,,Cables,100,50,15
 ,,,,,,,,,
 Computers,,,,,,,,,
 Microcontroller,01,Arduino Nano (rev.3),1,/boxes/computers/_resources/datasheets/arduino_nano_rev3.pdf,https://uk.farnell.com/arduino/a000005/arduino-nano-evaluation-board/dp/1848691,Loose,82,60,25
 Piezo Buzzer,01,Piezoelectric speaker/transducer,1,/boxes/computers/_resources/datasheets/piezo_buzzer.pdf,https://uk.farnell.com/tdk/ps1240p02bt/piezoelectric-buzzer-4khz-70dba/dp/3267212,Passive,30,30,1
-Cable (MiniUSB-1m),01,Mini-USB to Type-A cable (1 m),1,/boxes/computers/,https://uk.farnell.com/molex/88732-8602/usb-cable-2-0-plug-plug-1m/dp/1221071,Loose,100,50,15
+Cable (MiniUSB-1m),01,Mini-USB to Type-A cable (1 m),1,/boxes/computers/,https://uk.farnell.com/molex/88732-8602/usb-cable-2-0-plug-plug-1m/dp/1221071,Cables,100,50,15
 ,,,,,,,,,
 Control,,,,,,,,,
 Servo Motor,01,FT90R Digital Micro Continuous Rotation Servo,2,/boxes/control/,https://www.pololu.com/product/2817,Loose,100,70,15
@@ -95,6 +93,8 @@ Servo Mount,01,Mount for servo motor,2,/boxes/robotics/,VK,Mounts,30,15,5
 M2.5 bolt (6),01,6 mm long M2.5 bolt,8,/boxes/robotics/,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2,Hardware,5,5,6
 M2.5 standoff (12/SS),01,12 mm long socket-to-socket M2.5 standoff,4,/boxes/robotics/,https://uk.farnell.com/wurth-elektronik/970120151/standoff-hex-female-female-12mm/dp/2884528,Hardware,5,5,12
 Motor Mount,10,Mount for TT Gearbox DC Motors - L-Bracket Type with hardware,2,/boxes/robotics/,https://www.adafruit.com/product/3768,Mounts,25,25,25
+Caster,01,¾” metal ball caster,1,/boxes/robotics/https://www.pololu.com/product/955,https://www.pololu.com/product/955,Loose,70,50,20
+Spacer,01,NB3 spacer 3 mm spacer for mounting ball caster,5,/boxes/robotics/NB3_spacer,VK,Mounts,25,25,5
 ,,,,,,,,,
 Power,,,,,,,,,
 NB3 Power Board,01,Regulated DC-DC power supply (5 Volts - 4 Amps),1,/boxes/power/NB3_power,VK,Power,50,50,15
@@ -115,14 +115,14 @@ SD Card,01,16 GB micro SD card,1,/boxes/systems/_resources/datasheets/SanDisk-SD
 USB SD Card IO,01,SD card reader/writer,1,/boxes/systems/,https://www.amazon.co.uk/Beikell-High-speed-Adapter-Supports-MMC-Compatible-Windows/dp/B07L9VT8YY,Loose,70,40,15
 M2.5 bolt (6),01,6 mm long M2.5 bolt,8,/boxes/systems/,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2,Hardware,5,5,6
 M2.5 standoff (20/SS),01,20 mm long socket-to-socket M2.5 standoff,4,/boxes/systems/,https://uk.farnell.com/wurth-elektronik/970200154/standoff-hex-female-female-20mm/dp/2987903,Hardware,5,5,20
-Cable (Ethernet),10,RJ45 cact5e ethernet patch cable (1 m),1,/boxes/systems/_resources/datasheets/ethernet_cable_1m.pdf,https://uk.farnell.com/pro-signal/ps11074/lead-patch-cat-5e-1-00m-black/dp/1734943,Loose,100,50,10
+Cable (Ethernet),10,RJ45 cact5e ethernet patch cable (1 m),1,/boxes/systems/_resources/datasheets/ethernet_cable_1m.pdf,https://uk.farnell.com/pro-signal/ps11074/lead-patch-cat-5e-1-00m-black/dp/1734943,Cables,100,50,10
 ,,,,,,,,,
 Linux,,,,,,,,,
 ,,,,,,,,,
 Python,,,,,,,,,
 ,,,,,,,,,
 Networks,,,,,,,,,
-Cable (Mini-USB/20cm),01,Short mini-USB to Type-A cable (20 cm),1,/boxes/networks/,https://www.amazon.co.uk/LINDY-0-2-Type-Mini-B-Cable/dp/B01IZ4VFCO,Loose,100,25,10
+Cable (Mini-USB/20cm),01,Short mini-USB to Type-A cable (20 cm),1,/boxes/networks/,https://www.amazon.co.uk/LINDY-0-2-Type-Mini-B-Cable/dp/B01IZ4VFCO,Cables,100,25,10
 ,,,,,,,,,
 Websites,,,,,,,,,
 ,,,,,,,,,

@@ -49,4 +49,18 @@ box_names = [
     'Intelligence'
 ]
 
+# Store package names
+package_names = [
+    'Active',
+    'Audio',
+    'Cables',
+    'Hardware',
+    'Hindbrain',
+    'Loose',
+    'Magnets',
+    'Mounts',
+    'Passive',
+    'Power'
+]
+
 #FIN
