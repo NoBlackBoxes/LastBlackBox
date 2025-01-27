@@ -10,7 +10,7 @@ Logic + Memory = Computer
 ## Computers{01}
 {Architecture}
 {NB3_Hindbrain}
-{NB3_Programming-Arduino}
 
 # Project{01}
+{Computers:NB3_Programming-Arduino}
 {Computers:NB3_Building-a-Theremin}
