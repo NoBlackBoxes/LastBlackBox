@@ -1,0 +1,42 @@
+Mailer
+------
+ Style: FEFCO 0427
+ Material: E-Flute (wall thickness = 2)
+ - Inner: 210 x 210 x 105 mm
+ - Outer: 214 x 214 x 109 mm
+
+Body
+----
+ Style: ECMA A20.20.03.01
+ Material: GSM 300 (wall thickness = 0.38)
+ - Inner: 206 x 11 x 206 mm
+ - Outer: 207 x 12 x 207 mm
+
+Large
+-----
+ Style: ECMA A55.20.01.01
+ Material: GSM 300 (wall thickness = 0.38)
+ - Inner: 176 x 116 x 86 mm
+ - Outer: 177 x 117 x 87 mm
+
+Medium
+------
+ Style: ECMA A55.20.01.01
+ Material: GSM 300 (wall thickness = 0.38)
+ - Inner: 116 x 86 x 86 mm
+ - Outer: 117 x 87 x 87 mm
+
+Small
+-----
+ Style: ECMA A55.20.01.01
+ Material: GSM 300 (wall thickness = 0.38)
+ - Inner: 86 x 56 x 86 mm
+ - Outer: 87 x 57 x 87 mm
+
+Cables
+------
+ Style: ECMA A20.20.03.01
+ Material: GSM 300 (wall thickness = 0.38)
+ - Inner: 86 x 26 x 206 mm
+ - Outer: 87 x 27 x 207 mm
+
