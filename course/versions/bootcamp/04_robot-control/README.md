@@ -35,6 +35,7 @@ Spacer|01|NB3 spacer 3 mm spacer for mounting ball caster|5|[-D-](/boxes/robotic
 #### Watch this video: [NB3 : Muscles (Servos)](https://vimeo.com/1034800702)
 > Let's build your robot's movement system (using servo motors).
 
+
 **TASK**: Mount the servo motors and wheels to your NB3.
 <details><summary><strong>Target</strong></summary>
     The mounted servo motors should look like this.
@@ -43,6 +44,7 @@ Spacer|01|NB3 spacer 3 mm spacer for mounting ball caster|5|[-D-](/boxes/robotic
 
 #### Watch this video: [NB3 : Ball Caster](https://vimeo.com/1034797327)
 > Let's add a front wheel (ball caster) to keep your NB3 from dragging its face on the ground.
+
 
 **TASK**: Mount caster (ball bearing) to the front of your NB3.
 <details><summary><strong>Target</strong></summary>
@@ -61,6 +63,7 @@ Spacer|01|NB3 spacer 3 mm spacer for mounting ball caster|5|[-D-](/boxes/robotic
 <p align="center">
 <img src="../../../../boxes/robotics/_resources/images/braitenberg_vehicle.png" alt="Braitenberg Vehicle" width="600">
 </p>
+
 
 **TASK**: Measure two light sensors and *decide* how to activate the direction of your two wheels in response.
 <details><summary><strong>Target</strong></summary>

@@ -6,7 +6,7 @@
 const int PIEZO_PIN = 11;       // Buzzer Pin (must have ~/PWM)
 const int LDR_PIN = A0;         // Light Sensor Pin (analog)
 
-// The setup function runs once when you press reset or power the board
+// The setup function runs once after you press reset or power up the board
 void setup() {
   // Initialize digital pin PIEZO_PIN as an output.
   pinMode(PIEZO_PIN, OUTPUT);
@@ -15,7 +15,7 @@ void setup() {
   Serial.begin(9600);           // Speak serial at 9600 bits per second
 }
 
-// The loop function runs over and over again forever
+// The loop function runs over and over again...forever
 void loop() {
   // Measure Analog Input
   int light = analogRead(LDR_PIN);

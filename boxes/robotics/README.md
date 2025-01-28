@@ -25,6 +25,7 @@ Spacer|01|NB3 spacer 3 mm spacer for mounting ball caster|5|[-D-](/boxes/robotic
 ### NB3 : Muscles (DC Gear Motors)
 > Let's build your robot's movement system (using brushed DC gear motors).
 
+
 **TASK**: Mount the DC gear motors and wheels to your NB3.
 <details><summary><strong>Target</strong></summary>
     The mounted DC gear motors should look like this.
@@ -37,6 +38,7 @@ Spacer|01|NB3 spacer 3 mm spacer for mounting ball caster|5|[-D-](/boxes/robotic
 <details><summary><weak>Guide</weak></summary>
 :-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1034800702" target="_blank" rel="noopener noreferrer">here</a>.
 </details><hr>
+
 
 **TASK**: Mount the servo motors and wheels to your NB3.
 <details><summary><strong>Target</strong></summary>
@@ -55,6 +57,7 @@ Spacer|01|NB3 spacer 3 mm spacer for mounting ball caster|5|[-D-](/boxes/robotic
 <img src="../../boxes/robotics/_resources/images/braitenberg_vehicle.png" alt="Braitenberg Vehicle" width="600">
 </p>
 
+
 **TASK**: Measure two light sensors and *decide* how to activate the direction of your two wheels in response.
 <details><summary><strong>Target</strong></summary>
     You should have created a robot that wither likes (turns toward) or avoids (turns away from) light.
@@ -67,6 +70,7 @@ Spacer|01|NB3 spacer 3 mm spacer for mounting ball caster|5|[-D-](/boxes/robotic
 <details><summary><weak>Guide</weak></summary>
 :-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1034797327" target="_blank" rel="noopener noreferrer">here</a>.
 </details><hr>
+
 
 **TASK**: Mount caster (ball bearing) to the front of your NB3.
 <details><summary><strong>Target</strong></summary>

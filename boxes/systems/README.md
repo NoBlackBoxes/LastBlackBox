@@ -21,8 +21,9 @@ Cable (Ethernet)|10|RJ45 cact5e ethernet patch cable (1 m)|1|[-D-](/boxes/system
 #### Watch this video: [Operating Systems](https://vimeo.com/1036096746)
 > As computer hardware became much more capable, software was developed to manage this complexity and power. This software took responsibility for managing access to the computer's resources: processing, memory, and devices. These days, when we *operate* a computer, we rarely interact directly with the hardware. Instead, we talk to this control software, which we call an **operating system**.
 
+
 **TASK**: Install the Linux-based Raspberry Pi OS on your NB3
-- Follow these [RPiOS installation instructions](../../../boxes/systems/rpios/README.md)
+- - Follow these [RPiOS installation instructions](../../../boxes/systems/rpios/README.md)
 <details><summary><strong>Target</strong></summary>
     Booted!
 </details><hr>
@@ -34,6 +35,7 @@ Cable (Ethernet)|10|RJ45 cact5e ethernet patch cable (1 m)|1|[-D-](/boxes/system
 
 #### Watch this video: [Multi-Tasking](https://vimeo.com/1036086160)
 > Back when computers were very expensive mainframes, some clever software engineers developed strategies to share the computer's resources between multiple users, running multiple different tasks, at the same time. These "scheduling" programs still form the basis of our modern **multi-tasking** operating systems.
+
 
 **TASK**: Develop a multi-tasking "scheduling" program for your microcontroller.
 <details><summary><strong>Target</strong></summary>
@@ -57,8 +59,9 @@ Cable (Ethernet)|10|RJ45 cact5e ethernet patch cable (1 m)|1|[-D-](/boxes/system
 :-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1036391512" target="_blank" rel="noopener noreferrer">here</a>.
 </details><hr>
 
+
 **TASK**: Connect to your NB3 via WiFi
-- Follow these instruction [Connecting to RPi](../../../boxes/systems/connecting/README.md)
+- - Follow these instruction [Connecting to RPi](../../../boxes/systems/connecting/README.md)
 <details><summary><strong>Target</strong></summary>
     Connected!
 </details><hr>
@@ -71,8 +74,9 @@ Cable (Ethernet)|10|RJ45 cact5e ethernet patch cable (1 m)|1|[-D-](/boxes/system
 :-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1036089510" target="_blank" rel="noopener noreferrer">here</a>.
 </details><hr>
 
+
 **TASK**: Mount a Raspberry Pi on your robot (and connect its power inputs using your *shortest* jumper cables, 2x5V and 2x0V from the NB3, to the correct GPIO pins on the RPi...please *double-check* the pin numbers)
-- This pinout of the Raspberry Pi GPIO might be useful: [Raspberry Pi GPIO](../../../boxes/systems/_resources/images/rpi_GPIO_pinout.png)
+- - This pinout of the Raspberry Pi GPIO might be useful: [Raspberry Pi GPIO](../../../boxes/systems/_resources/images/rpi_GPIO_pinout.png)
 <details><summary><strong>Target</strong></summary>
     A powered and blinking RPi midbrain.
 </details><hr>
@@ -85,8 +89,9 @@ Cable (Ethernet)|10|RJ45 cact5e ethernet patch cable (1 m)|1|[-D-](/boxes/system
 :-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1036095710" target="_blank" rel="noopener noreferrer">here</a>.
 </details><hr>
 
+
 **TASK**: Install the Linux-based Raspberry Pi OS on your NB3
-- Follow these [RPiOS installation instructions](../../../boxes/systems/rpios/README.md)
+- - Follow these [RPiOS installation instructions](../../../boxes/systems/rpios/README.md)
 <details><summary><strong>Target</strong></summary>
     Booted!
 </details><hr>

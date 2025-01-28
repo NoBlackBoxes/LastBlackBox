@@ -33,8 +33,9 @@ Velcro Patch|01|Velcro adhesive|1|[-D-](/boxes/power/)|[-L-]()
 :-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1035306761" target="_blank" rel="noopener noreferrer">here</a>.
 </details><hr>
 
+
 **TASK**: Add a (regulated) 5 volt power supply to your robot, which you can use while debugging to save your AA batteries and to provide enough power for the Raspberry Pi computer.
-- *NOTE*: Your NB3_power board cable *might* have inverted colors (black to +5V, red to 0V) relative to that shown in the assembly video. This doesn't matter, as the plugs will only work in one orientation and the correct voltage is conveyed to the correct position on the body.
+- - *NOTE*: Your NB3_power board cable *might* have inverted colors (black to +5V, red to 0V) relative to that shown in the assembly video. This doesn't matter, as the plugs will only work in one orientation and the correct voltage is conveyed to the correct position on the body.
 <details><summary><strong>Target</strong></summary>
     Your NB3 should now look like this: ![NB3 power wiring:400](../../../boxes/power/_resources/images/NB3_power_wiring.png)"
 </details><hr>
@@ -46,6 +47,7 @@ Velcro Patch|01|Velcro adhesive|1|[-D-](/boxes/power/)|[-L-]()
 <details><summary><weak>Guide</weak></summary>
 :-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1042781111" target="_blank" rel="noopener noreferrer">here</a>.
 </details><hr>
+
 
 **TASK**: Add a NiMH rechargeable 9.6 volt battery pack to your NB3.
 <details><summary><strong>Target</strong></summary>

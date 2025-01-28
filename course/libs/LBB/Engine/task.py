@@ -74,7 +74,7 @@ class Task:
     def render(self, type="MD"):
         output = []
         if type == "MD":
-            output.append(f"**TASK**: {self.description}\n")
+            output.append(f"\n**TASK**: {self.description}\n")
         elif type == "HTML":
             html = Utilities.convert_emphasis_tags(self.description)
             html = Utilities.convert_markdown_links(html)

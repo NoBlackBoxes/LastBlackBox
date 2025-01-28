@@ -49,9 +49,20 @@ Cable (MiniUSB-1m)|01|Mini-USB to Type-A cable (1 m)|1|[-D-](/boxes/computers/)|
 #### Watch this video: [NB3 : Hindbrain](https://vimeo.com/1033609727)
 > We will now add a *computer* to our robot. We be using a simple microcontroller as our NB3's hindbrain. It will be responsible for controlling the "muscles" (motors) in response to commands from another (larger) computer that we will be adding later to the NB3's midbrain.
 
+
 **TASK**: Mount and power your Arduino-based hindbrain (connect the mini-USB cable)
 <details><summary><strong>Target</strong></summary>
     The built-in LED on the board should be blinking at 1 Hz.
+</details><hr>
+
+
+**TASK**: Download and install the Arduino IDE (integrated development environment).
+- Follow the instructions for your "host" computer's operating system here: [Arduino IDE](https://www.arduino.cc/en/software)
+- Open the "Blink" Example: File -> Examples -> Basic -> Blink
+- Upload this example to your board
+- ***IMPORTANT***: If you have trouble connecting to the Arduino from your Laptop, then it may be necessary to install the "latest" driver from FTDI for the chip that communicates over the USB cable. This is not always necessary, so please try the normal installation first. However, if you are stuck, then please checkout these [FTDI driver installation instructions](https://support.arduino.cc/hc/en-us/articles/4411305694610-Install-or-update-FTDI-drivers).
+<details><summary><strong>Target</strong></summary>
+    You should be able to successfully compile and upload the "Blink" example (with no errors).
 </details><hr>
 
 
@@ -67,11 +78,13 @@ Cable (MiniUSB-1m)|01|Mini-USB to Type-A cable (1 m)|1|[-D-](/boxes/computers/)|
 :-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1033896646" target="_blank" rel="noopener noreferrer">here</a>.
 </details><hr>
 
+
 **TASK**: Build a Theremin
 - *Hint*: What if you used the analog voltage signal measured from your light sensor to change the frequency of the "tone" playing on your buzzer? Hmm...
 <details><summary><strong>Target</strong></summary>
     You should here a sound that varies with your hand motion (in front of a light)
 </details><hr>
+
 
 **TASK**: ***Have fun!*** (Make something cool)
 - This diagram of the Arduino "pins" will definitely be useful: ![Arduino Pinout](/boxes/computers/_resources/images/pinout_arduino_nano.png)

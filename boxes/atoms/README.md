@@ -37,6 +37,7 @@ Periodic Table|01|Periodic Table business card|1|[-D-](/boxes/atoms/card)|[-L-](
 #### Watch this video: [Atomic Structure](https://vimeo.com/1000458082)
 > A brief introduction to the physics of atoms, their parts (protons, neutrons, and electrons), and their classical vs. quantum structure.
 
+
 **TASK**: Draw your favorite atom in the "classical" style
 <details><summary><strong>Target</strong></summary>
     You should have thr appropriate number fo electrons in each orbital.

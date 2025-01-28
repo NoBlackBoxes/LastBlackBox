@@ -17,13 +17,13 @@ Git is a program that keeps track of changes to your files. It is very useful wh
 ## Lesson
 
 - **TASK**: "Clone" (copy) all of the code in the LastBlackBox GitHub repository directly to your NB3's midbrain. It will help with later exercises if we all put this example code at the same location on the Raspberry Pi (the "home" directory).
-
-- ```bash
-  cd ~                # Navigate to "home" directory
-  mkdir NoBlackBoxes  # Create NoBlackBoxes directory
-  cd NoBlackBoxes     # Change to NoBlackBoxes directory  
-  # Clone LBB repo (only the most recent version)
-  git clone --depth 1 https://github.com/NoBlackBoxes/LastBlackBox
-  ```
+ - *code*
+```bash
+cd ~                # Navigate to "home" directory
+mkdir NoBlackBoxes  # Create NoBlackBoxes directory
+cd NoBlackBoxes     # Change to NoBlackBoxes directory  
+# Clone LBB repo (only the most recent version)
+git clone --depth 1 https://github.com/NoBlackBoxes/LastBlackBox
+```
 
 > You should now have a complete copy of the LBB repo on your NB3.

@@ -45,11 +45,14 @@ M2 nut|01|regular M2 nut|4|[-D-](/boxes/vision/)|[-L-](https://www.accu.co.uk/he
 # Navigate to LBB root
 cd ~/NoBlackBoxes/LastBlackBox
 
+
 # Create folder for images in the temporary folder
 mkdir _tmp/images
 
+
 # Navigate to the temporary image folder
 cd _tmp/images
+
 
 # Capture a still image and save it to a file
 libcamera-still -o test.png

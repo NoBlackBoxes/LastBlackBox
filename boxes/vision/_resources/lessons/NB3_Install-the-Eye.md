@@ -9,17 +9,17 @@ Let's install a camera on your NB3.
 
 ## Lesson
 - Test your camera with the following command
+- *code*
+```bash
+# Navigate to LBB root
+cd ~/NoBlackBoxes/LastBlackBox
 
-- ```bash
-  # Navigate to LBB root
-  cd ~/NoBlackBoxes/LastBlackBox
+# Create folder for images in the temporary folder
+mkdir _tmp/images
 
-  # Create folder for images in the temporary folder
-  mkdir _tmp/images
+# Navigate to the temporary image folder
+cd _tmp/images
 
-  # Navigate to the temporary image folder
-  cd _tmp/images
-
-  # Capture a still image and save it to a file
-  libcamera-still -o test.png
-  ```
+# Capture a still image and save it to a file
+libcamera-still -o test.png
+```

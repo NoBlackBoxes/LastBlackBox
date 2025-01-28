@@ -70,9 +70,16 @@ def read_clean_text(path):
     with open(path, encoding='utf8') as f:
         lines = f.readlines()
     text = []
+    is_code = False
     for line in lines:
-        if line.strip():                # Remove empty lines
-            text.append(line.rstrip())  # Remove trailing whitespace (including /n)
+        # Check for formatted code blocks
+        if line.startswith("```"):
+            is_code = not is_code
+        if is_code:
+            text.append(line.rstrip())      # Remove trailing whitespace (including /n)
+        else:
+            if line.strip():                # Remove empty lines
+                text.append(line.rstrip())  # Remove trailing whitespace (including /n)
     return text
 
 # Find line
@@ -106,7 +113,7 @@ def replace_link(match):
 # Extract step from template text
 def extract_step_from_text(text, line_count):
     step = None
-    step_depth = get_depth_from_symbol(text[line_count][0])
+    step_depth = get_depth_from_symbol(text[line_count].strip()[0])
     step_text = text[line_count][2:].strip()
     if step_text.startswith("**TASK**"):    # Task
         task_text = []
@@ -114,25 +121,33 @@ def extract_step_from_text(text, line_count):
         line_count += 1
         # Extract task steps
         while not text[line_count].startswith(">"):
-            task_text.append(text[line_count].strip())
+            task_text.append(text[line_count])
             line_count += 1
         task_text.append(text[line_count])
         task = Task.Task(task_text)
         task.depth = step_depth
         step = task
-    elif step_text.startswith('!['):        # Image
+    elif step_text.startswith("!["):        # Image
         image = Image.Image(step_text)
         image.depth = step_depth
         step = image
-    elif step_text.startswith("`"):         # Code
+    elif step_text.startswith("*code*"):     # Code
         code_text = []
-        while text[line_count].strip() != "```":
-            code_text.append(text[line_count].strip())
+        line_count += 1
+        code_text.append(text[line_count])
+        line_count += 1
+        while not text[line_count].startswith("```"):
+            code_text.append(text[line_count])
             line_count += 1
-        code_text.append(text[line_count].strip())
+        code_text.append(text[line_count])
         code = Code.Code(code_text)
         code.depth = step_depth
         step = code
+    elif step_text.startswith("```"):       # Debug
+        print(text[:line_count])
+        print(text[line_count])
+        print("ERROR")
+        exit(-1)
     else:                                   # Instruction
         instruction = Instruction.Instruction(step_text)
         instruction.depth = step_depth

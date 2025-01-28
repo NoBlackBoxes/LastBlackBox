@@ -18,6 +18,7 @@ Name|Depth|Description| # |Data|Link|
 #### Watch this video: [Navigating the Command Line](https://vimeo.com/1036829527)
 > The original user interfaces were entirely based on text. You typed commands as a line of text into your terminal console and received the result as a string of characters on the screen. Navigating this **command line** remains a useful skill, and a necessary one when working with remote machines.
 
+
 **TASK**: Explore Linux. Spend any extra time you have fiddling, playing with the UNIX approach to controlling a computer. Create some folders. Edit some files.
 <details><summary><strong>Target</strong></summary>
     You should see this in the command line.
@@ -26,6 +27,7 @@ Name|Depth|Description| # |Data|Link|
 
 #### Watch this video: [Git](https://vimeo.com/1036825331)
 > Git is a program that keeps track of changes to your files. It is very useful when developing code. This entire course is stored as a git "repository" on GitHub.
+
 
 **TASK**: "Clone" (copy) all of the code in the LastBlackBox GitHub repository directly to your NB3's midbrain. It will help with later exercises if we all put this example code at the same location on the Raspberry Pi (the "home" directory).
 ```bash
