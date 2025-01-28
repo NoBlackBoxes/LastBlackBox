@@ -39,7 +39,7 @@ void loop() {
 > Your Arduino's built-in LED should now be blinking faster or slower than 1 Hz.
 
 - **TASK**: Blink an *external* LED 
-- *Hint*: Connect the LED to a digital output pin (D13 in the example below), but don't forget your current limiting resistor!
+- *Hint*: Connect an LED to digital pin 13, but don't forget your current limiting resistor!
 - ![LED Driver:400](/boxes/computers/_resources/images/LED_driver_circuit.png)
 > Your external LED should now be blinking at the same time as the built-in LED (both are connected to pin 13).
 
@@ -47,7 +47,7 @@ void loop() {
 - This is a piezo buzzer:
 - ![Piezo Buzzer:300](/boxes/computers/_resources/images/piezo_buzzer.png)
 - The piezo buzzer will expand (5V) and contract (0V) as you switch the voltage applied across it. This expansion/contraction forces air into and out of the plastic case. If you switch it ON/OFF fast enough, then you can *hear it*!
-- Connect one leg of the piezo to pin 13 and the other to Ground.
+- Connect one leg of the piezo to pin 11 and the other to Ground.
 - You could use the "Blink" example...but with a much shorter delay between the ON/OFF "blinks". However, it is much easier to use a function (command) called "tone()" which will allow you generate pulses at specific frequencies.
 - Upload this [code](/boxes/computers/arduino/ide/tone/tone.ino) to your Arduino.
 - *code*
