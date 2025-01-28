@@ -24,8 +24,8 @@ void loop() {
   // - The tone will play for 1000 ms and then silence for 500 ms
   delay(1500);
 
-  // Generate Sound Output at 1500 Hz (1.5 kHz) for 1000 ms (1 second)
-  tone(PIEZO_PIN, 2000, 1000);
+  // Generate Sound Output at 1700 Hz (1.7 kHz) for 1000 ms (1 second)
+  tone(PIEZO_PIN, 1700, 1000);
 
   // Wait 1500 ms for the tone to finish 
   // - The tone will play for 1000 ms and then silence for 500 ms
