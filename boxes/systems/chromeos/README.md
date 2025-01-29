@@ -23,12 +23,12 @@ A terminal window will appear. This is your Linux terminal.
 
   # Download ONE of the following, depending on your architecture
 
-  ## ...Download VS Code (amd64)
+  ## ...Download VS Code (amd64 or x86)
   wget "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64" -O "code-download.deb"
 
   # ...OR
 
-  ## ...Download VS Code (arm64)
+  ## ...Download VS Code (arm64 or aarch64)
   wget "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-arm64" -O "code-download.deb"
 
   # Install Gnome Keyring
@@ -44,12 +44,12 @@ A terminal window will appear. This is your Linux terminal.
   ```bash
   # Download ONE of the following, depending on your architecture
 
-  # ...Download Arduino 1.8.19 (amd64)
+  # ...Download Arduino 1.8.19 (amd64 or x86)
   wget "https://downloads.arduino.cc/arduino-1.8.19-linux64.tar.xz" -O "arduino-1.8.19.tar.xz"
 
   # ...OR
 
-  # ...Download Arduino 1.8.19 (arm64)
+  # ...Download Arduino 1.8.19 (arm64 or aarch64)
   wget "https://downloads.arduino.cc/arduino-1.8.19-linuxaarch64.tar.xz" -O "arduino-1.8.19.tar.xz"
 
   # Extract the archive

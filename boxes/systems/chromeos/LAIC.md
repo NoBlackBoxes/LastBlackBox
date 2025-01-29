@@ -11,8 +11,44 @@ A terminal window will appear. **This is your Linux terminal!**
 Run these commands inside your Linux terminal. You can simply copy and paste this entire block of text.
 
 ```bash
-# ...Download Arduino 1.8.19 (arm64/aarch64)
+# Make sure everything is up-to-date
+sudo apt update
+sudo apt upgrade -y
+
+# Check which CPU architecture your Chromebook is using
+dpkg --print-architecture
+```
+
+If your CPU architecture is **x86** or **amd64**, then run the following commands:
+```bash
+# ...Download Arduino 1.8.19 (amd64 or x86)
+wget "https://downloads.arduino.cc/arduino-1.8.19-linux64.tar.xz" -O "arduino-1.8.19.tar.xz"
+
+# Extract the archive
+tar -xf arduino-1.8.19.tar.xz
+
+# Run the install script
+cd arduino-1.8.19
+sudo ./install.sh
+```
+
+If your CPU architecture is **arm64** or **aarch64**, then run the following commands:
+```bash
+# ...Download Arduino 1.8.19 (am64 or aarch64)
 wget "https://downloads.arduino.cc/arduino-1.8.19-linuxaarch64.tar.xz" -O "arduino-1.8.19.tar.xz"
+
+# Extract the archive
+tar -xf arduino-1.8.19.tar.xz
+
+# Run the install script
+cd arduino-1.8.19
+sudo ./install.sh
+```
+
+If your CPU architecture is **arm32** or **aarch32**, then run the following commands:
+```bash
+# ...Download Arduino 1.8.19 (arm32 or aarch32)
+wget "https://downloads.arduino.cc/arduino-1.8.19-linuxarm.tar.xz" -O "arduino-1.8.19.tar.xz"
 
 # Extract the archive
 tar -xf arduino-1.8.19.tar.xz
