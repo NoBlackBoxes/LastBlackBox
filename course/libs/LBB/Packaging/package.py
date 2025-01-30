@@ -6,9 +6,9 @@ LBB : Packaging : Package Class
 """
 
 # Import libraries
+import cadquery as cq
 
 # Import modules
-import LBB.Engine.utilities as Utilities
 
 # Package Class
 class Package:
@@ -63,5 +63,16 @@ class Package:
         description.append(f" - Outer: {self.external["length"]} x {self.external["width"]} x {self.external["height"]} mm\n")
         description.append(f"\n")
         return "".join(description)
+
+    def generate_model(self):
+        outer =cq.Workplane("XY").box(self.external["length"], self.external["width"], self.external["height"])
+        z_offset = self.external["height"] - self.internal["height"]
+        inner = (
+            cq.Workplane("XY")
+            .box(self.internal["length"], self.internal["width"], self.internal["height"])
+            .translate((0, 0, z_offset))  # Move up to avoid cutting bottom
+        )       
+        model = outer.cut(inner)
+        return model
 
 #FIN

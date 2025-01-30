@@ -8,7 +8,9 @@ Generate LBB packaging descriptions
 # Import libraries
 
 # Import modules
+import LBB.Engine.utilities as Engine_Utilities
 import LBB.Engine.config as Config
+import LBB.Packaging.utilities as Packaging_Utilities
 import LBB.Packaging.package as Package
 
 # Specify parameters
@@ -31,5 +33,13 @@ with open(description_path, "w") as file:
     for package in packages:
         dim = package.print_dimensions()
         file.write(dim)
+
+# Save package model
+model_folder = f"{Config.course_root}/_resources/packaging/CAD/boxes"
+Engine_Utilities.clear_folder(model_folder)
+for package in packages:
+    model_path = f"{model_folder}/{package.name}.step"
+    model = package.generate_model()
+    Packaging_Utilities.save_STEP(model_path, package.name, model)
 
 # FIN
