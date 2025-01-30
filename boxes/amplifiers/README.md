@@ -8,8 +8,8 @@ The signals arriving from the environment are often too small to measure reliabl
 
 Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
-LM741|10|OpAmp|1|[-D-](/boxes/amplifiers/_resources/datasheets/IRF510.pdf)|[-L-](https://uk.farnell.com/vishay/irf510pbf/mosfet-n-100v-5-6a-to-220ab/dp/1653658)
-LM386N-4/NOPB|10|Audio-Amp|2|[-D-](/boxes/amplifiers/_resources/datasheets/IRF510.pdf)|[-L-](https://uk.farnell.com/vishay/irf510pbf/mosfet-n-100v-5-6a-to-220ab/dp/1653658)
+LM741|10|OpAmp|1|[-D-](/boxes/amplifiers/_resources/datasheets/LM741.pdf)|[-L-](https://uk.farnell.com/texas-instruments/lm741cn-nopb/op-amp-single-pdip-8-0-to-70deg/dp/3117118)
+LM386|10|Audio-Amp|2|[-D-](/boxes/amplifiers/_resources/datasheets/LM386.pdf)|[-L-](https://uk.farnell.com/texas-instruments/lm386n-4-nopb/audio-power-amplifier-class-ab/dp/3116866)
 
 </p></details><hr>
 

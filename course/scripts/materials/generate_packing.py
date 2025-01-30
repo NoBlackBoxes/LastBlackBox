@@ -35,23 +35,27 @@ for level_limit in level_limits:
     bom = pd.read_csv(bom_path)
 
     # Remove empty rows and label
-    filtered = bom[(bom['Quantity'] != 0) & (bom['Quantity'].notna())]
+    filtered = bom[(bom['quantity'] != 0) & (bom['quantity'].notna())]
 
     # Combine (aggregate) duplicates
     aggregations = {
-        'Part': 'first',            # First value
-        'Description': 'first',     # First value
-        'Quantity': 'sum',          # Sum the quantities
-        'Package': 'first',         # First value
-        'Supplier': 'first',        # First value
-        'x(mm)': 'first',           # First value
-        'y(mm)': 'first',           # First value
-        'z(mm)': 'first',           # First value
+        'name': 'first',            # First value
+        'depth': 'first',           # First value
+        'description': 'first',     # First value
+        'quantity': 'sum',          # Sum the quantities
+        'package': 'first',         # First value
+        'datasheet': 'first',       # First value
+        'supplier': 'first',        # First value
+        'x': 'first',               # First value
+        'y': 'first',               # First value
+        'z': 'first',               # First value
+        'unit_price': 'first',      # First value
+        'bulk_price': 'first',      # First value
     }
-    combined = filtered.groupby('Part', as_index=False).agg(aggregations)
+    combined = filtered.groupby('name', as_index=False).agg(aggregations)
 
     # Sort by packages
-    sorted = combined.sort_values('Package')
+    sorted = combined.sort_values('package')
 
     # Insert additional fields
     sorted.insert(4, '#Kits', int(num_kits))

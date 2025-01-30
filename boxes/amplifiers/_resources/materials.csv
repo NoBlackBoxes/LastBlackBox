@@ -1,2 +1,2 @@
-LM741,10,OpAmp,1,_resources/datasheets/IRF510.pdf,https://uk.farnell.com/vishay/irf510pbf/mosfet-n-100v-5-6a-to-220ab/dp/1653658,Active,5,5,3
-LM386N-4/NOPB,10,Audio-Amp,2,_resources/datasheets/IRF510.pdf,https://uk.farnell.com/vishay/irf510pbf/mosfet-n-100v-5-6a-to-220ab/dp/1653658,Active,5,5,3
+LM741,10,OpAmp,1,_resources/datasheets/LM741.pdf,https://uk.farnell.com/texas-instruments/lm741cn-nopb/op-amp-single-pdip-8-0-to-70deg/dp/3117118,Active,5,5,3,0.9732,0.5592
+LM386,10,Audio-Amp,2,_resources/datasheets/LM386.pdf,https://uk.farnell.com/texas-instruments/lm386n-4-nopb/audio-power-amplifier-class-ab/dp/3116866,Active,5,5,3,1.1784,1.1484

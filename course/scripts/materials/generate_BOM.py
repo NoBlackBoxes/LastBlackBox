@@ -8,6 +8,7 @@ Generate LBB Bill of Materials (BOM)
 # Import Libraries
 import os
 import glob
+import pandas as pd
 
 # Import modules
 import LBB.Engine.config as Config
@@ -27,16 +28,41 @@ course_names = ["The Last Black Box", "Bootcamp", "Build a Brain"]
 for course_name in course_names:
     course = Course.Course(course_name)
 
+    # Gather all materials
+    materials = []
+    for session in course.sessions:
+        for box in session.boxes:
+            for m in box.materials:
+                materials.append(m)
+    
+    # Build dataframe
+    dataframe = pd.DataFrame([m.to_dict() for m in materials])
+
+    # Remove empty rows and label
+    filtered = dataframe[(dataframe['quantity'] != 0) & (dataframe['quantity'].notna())]
+
+    # Combine (aggregate) duplicates
+    aggregations = {
+        'name': 'first',            # First value
+        'depth': 'first',           # First value
+        'description': 'first',     # First value
+        'quantity': 'sum',          # Sum the quantities
+        'package': 'first',         # First value
+        'datasheet': 'first',       # First value
+        'supplier': 'first',        # First value
+        'x': 'first',               # First value
+        'y': 'first',               # First value
+        'z': 'first',               # First value
+        'unit_price': 'first',      # First value
+        'bulk_price': 'first',      # First value
+    }
+    combined = filtered.groupby('name', as_index=False).agg(aggregations)
+
+    # Sort by packages
+    sorted = combined.sort_values('package')
+
     # Generate BOM
     BOM_path = f"{Config.course_root}/_resources/materials/BOM/{course.slug}_BOM.csv"
-    with open(BOM_path, 'w') as file:
-        file.write("Name,Depth,Description,Quantity,Datasheet,Supplier,Package,x(mm),y(mm),z(mm)\n")
-        file.write(",,,,,,,,,\n")
-        for session in course.sessions:
-            for box in session.boxes:
-                file.write(f"{box.name},,,,,,,,,\n")
-                for m in box.materials:
-                    file.write(f"{m.name},{m.depth},{m.description},{m.quantity},{m.datasheet},{m.supplier},{m.package},{m.x},{m.y},{m.z}\n")
-                file.write(",,,,,,,,,\n")
+    sorted.to_csv(BOM_path, index=False)  # Set index=False if you don't want to include the index in the CSV
 
 # FIN

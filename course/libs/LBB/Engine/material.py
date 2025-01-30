@@ -30,6 +30,8 @@ class Material:
         self.x = None                   # Material x dimension (mm)
         self.y = None                   # Material y dimension (mm)
         self.z = None                   # Material z dimension (mm)
+        self.unit_price = None          # Material unit price (£)
+        self.bulk_price = None          # Material bulk price (£)
         if text:
             self.parse(text)            # Parse material from "materials.csv" text
         elif dictionary:
@@ -49,7 +51,9 @@ class Material:
             "package": self.package,
             "x": self.x,
             "y": self.y,
-            "z": self.z
+            "z": self.z,
+            "unit_price": self.unit_price,
+            "bulk_price": self.bulk_price
         }
         return dictionary
 
@@ -66,6 +70,8 @@ class Material:
         self.x = dictionary.get("x")
         self.y = dictionary.get("y")
         self.z = dictionary.get("z")
+        self.unit_price = dictionary.get("unit_price"),
+        self.bulk_price = dictionary.get("bulk_price")
         return
     
     # Parse material string
@@ -82,6 +88,9 @@ class Material:
         self.x = int(fields[7].strip())
         self.y = int(fields[8].strip())
         self.z = int(fields[9].strip())
+        if len(fields) > 10: #DEBUG
+            self.unit_price = fields[10].strip()
+            self.bulk_price = fields[11].strip()
         return
 
     # Load material object from JSON
