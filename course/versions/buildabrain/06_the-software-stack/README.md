@@ -11,13 +11,13 @@ Name|Depth|Description| # |Data|Link|
 NB3 Power Board|01|Regulated DC-DC power supply (5 Volts - 4 Amps)|1|[-D-](/boxes/power/NB3_power)|[-L-](VK)
 Power Cable|01|Custom 4 pin NB3 power connector cable|1|[-D-](/boxes/power/)|[-L-](VK)
 M2.5 standoff (7/PS)|01|7 mm long plug-to-socket M2.5 standoff|4|[-D-](/boxes/power/)|[-L-](https://uk.farnell.com/wurth-elektronik/971070151/standoff-hex-male-female-7mm-m2/dp/2884371)
-M2.5 bolt (6)|01|6 mm long M2.5 bolt|4|[-D-](/boxes/power/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2)
+M2.5 bolt (6)|01|6 mm long M2.5 bolt|4|[-D-](/boxes/robotics/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2)
 M2.5 nut|01|regular M2.5 nut|4|[-D-](/boxes/power/-)|[-L-](https://www.accu.co.uk/hexagon-nuts/456430-HPN-M2-5-C8-Z)
 12V DC Power Supply|01|12 V AC-DC transformer (UK/EU/USA plugs)|1|[-D-](/boxes/power/)|[-L-](https://www.amazon.co.uk/gp/product/B09QG4R1R4)
-Battery|01|NiMH 9.6V 8-cell 2000 mAh battery|1|[-D-](/boxes/power/)|[-L-](https://www.amazon.co.uk/BAKTH-Capacity-Rechargeable-Discharge-Customized/dp/B08VRC8KL7)
+Battery|01|NiMH 9.6V 8-cell 2000 mAh battery|1|[-D-](/boxes/power/)|[-L-](https://www.amazon.co.uk/dp/B091H9ZFSF)
 Battery Cable|01|Barrel Jack to Tamiya Plug|1|[-D-](/boxes/power/)|[-L-](VK)
-Battery Charger|01|NiMH battery charger (UK plug)|1|[-D-](/boxes/power/)|[-L-](https://www.amazon.co.uk/dp/B089VRXKWY?psc=1&smid=AOVA4BIXU2O7J&ref_=chk_typ_imgToDp)
-Velcro Patch|01|Velcro adhesive|1|[-D-](/boxes/power/)|[-L-]()
+Battery Charger|01|NiMH battery charger (UK plug)|1|[-D-](/boxes/power/)|[-L-](https://www.amazon.co.uk/dp/B089VRXKWY)
+Velcro Patch|01|Velcro adhesive|1|[-D-](/boxes/power/)|[-L-](https://www.amazon.co.uk/50mmx100mm-Adhesive-Strips%EF%BC%8CExtra-Mounting-Organizing/dp/B0CKVNM69R)
 
 </p></details><hr>
 
@@ -45,9 +45,9 @@ Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 Computer (RPi4)|01|Raspberry Pi 4b with 2 GB RAM|1|[-D-](/boxes/systems/_resources/datasheets/rpi4b.pdf)|[-L-](https://uk.farnell.com/raspberry-pi/rpi4-modbp-2gb/raspberry-pi-4-model-b-2gb/dp/3051886)
 Heatsinks|01|Heatsinks for RPi 4b chips|1|[-D-](/boxes/systems/_resources/datasheets/rpi4b_heatsinks.jpg)|[-L-](https://www.amazon.co.uk/gp/product/B07VRNT3HX)
-SD Card|01|16 GB micro SD card|1|[-D-](/boxes/systems/_resources/datasheets/SanDisk-SDSQUAR-016G-GN6MA-datasheet.pdf)|[-L-](https://uk.farnell.com/sandisk/sdsquar-016g-gn6ma/memory-card-microsdhc-uhs-i-16gb/dp/2931924)
+SD Card|01|16 GB micro SD card|1|[-D-](/boxes/systems/_resources/datasheets/SanDisk-SDSQUAR-016G-GN6MA-datasheet.pdf)|[-L-](https://uk.farnell.com/integral/inmsdh16g-100v10/16gb-microsdhc-v10-uhs-i-u1/dp/3498606)
 USB SD Card IO|01|SD card reader/writer|1|[-D-](/boxes/systems/)|[-L-](https://www.amazon.co.uk/Beikell-High-speed-Adapter-Supports-MMC-Compatible-Windows/dp/B07L9VT8YY)
-M2.5 bolt (6)|01|6 mm long M2.5 bolt|8|[-D-](/boxes/systems/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2)
+M2.5 bolt (6)|01|6 mm long M2.5 bolt|8|[-D-](/boxes/robotics/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2)
 M2.5 standoff (20/SS)|01|20 mm long socket-to-socket M2.5 standoff|4|[-D-](/boxes/systems/)|[-L-](https://uk.farnell.com/wurth-elektronik/970200154/standoff-hex-female-female-20mm/dp/2987903)
 
 </p></details><hr>

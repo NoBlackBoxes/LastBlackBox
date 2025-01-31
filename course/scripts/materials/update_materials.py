@@ -36,8 +36,10 @@ for session in course.sessions:
     if len(materials) == 0:
         continue
     for m in materials:
-        # Update price for this material
+        # Update datasheet, supplier, and prices for this material
         BOM_row = bom[bom['name'] == m.name].index[0]
+        m.datasheet = bom.at[BOM_row, 'datasheet']
+        m.supplier = bom.at[BOM_row, 'supplier']
         m.unit_price = bom.at[BOM_row, 'unit_price']
         m.bulk_price = bom.at[BOM_row, 'bulk_price']
     # Write updated materials.csv

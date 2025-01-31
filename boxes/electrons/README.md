@@ -19,10 +19,10 @@ Button|10|Tactile switch|2|[-D-](/boxes/electrons/_resources/datasheets/button.p
 Potentiometer|01|2.2 k&Omega; variable resistor|2|[-D-](/boxes/electrons/_resources/datasheets/pot_2k2.pdf)|[-L-](https://uk.farnell.com/bourns/3362p-1-222lf/trimmer-pot-2-2kohm-10-1turn-th/dp/2328599)
 Breadboard (400)|01|400-tie solderless breadboard|1|[-D-](/boxes/electrons/_resources/datasheets/breadboard_400.pdf)|[-L-](https://www.amazon.co.uk/gp/product/B0739XRX8F)
 Breadboards (170)|01|170-tie solderless breadboard|4|[-D-](/boxes/electrons/_resources/datasheets/breadboard_170.pdf)|[-L-](https://www.amazon.co.uk/ELEGOO-tie-points-Breadboard-Breadboards-Electronic/dp/B01N0YWIR7)
-Batteries (AA)|01|AA 1.5 V alkaline battery|4|[-D-](/boxes/electrons/)|[-L-]()
+Batteries (AA)|01|AA 1.5 V alkaline battery|4|[-D-](/boxes/electrons/)|[-L-](https://www.amazon.co.uk/Duracell-Optimum-Alkaline-Batteries-MX1500/dp/B093Q5XY66)
 Battery holder|01|4xAA battery holder with ON-OFF switch|1|[-D-](/boxes/electrons/)|[-L-](https://www.amazon.co.uk/gp/product/B0814ZH68F)
 Jumper Kit|01|Kit of multi-length 22 AWG breadboard jumpers|1|[-D-](/boxes/electrons/_resources/datasheets/jumper_kit.pdf)|[-L-](https://uk.farnell.com/multicomp/mc001810/hard-jumper-wire-22awg-140pc/dp/2770338)
-Jumper Wires|01|Assorted 22 AWG jumper wire leads (male/female)|1|[-D-](/boxes/electrons/_resources/datasheets/jumper_wires.pdf)|[-L-](https://www.amazon.co.uk/240pcs-Solderless-Breadboard-Arduino-Project/dp/B08PJSTS3C)
+Jumper Wires|01|Assorted 22 AWG jumper wire leads (male/female)|1|[-D-](/boxes/electrons/_resources/datasheets/jumper_wires.pdf)|[-L-](https://www.amazon.co.uk/gp/product/B09KR7Z4PF)
 Test Lead|01|Alligator clip to 0.64 mm pin (20 cm)|2|[-D-](/boxes/electrons/)|[-L-](https://www.amazon.co.uk/gp/product/B096JR15JW)
 Rubber feet|01|Adhesive rubber standoffs (1421T6CL)|4|[-D-](/boxes/electrons/_resources/datasheets/rubber_feet.pdf)|[-L-](https://uk.farnell.com/hammond/1421t6cl/feet-stick-on-pk24/dp/1876522)
 

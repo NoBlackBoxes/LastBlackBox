@@ -17,8 +17,8 @@ Speaker Frame|01|Custom laser cut frame for speaker|1|[-D-](/boxes/audio/-)|[-L-
 M3 standoff (15/PS)|01|15 mm long plug-to-socket M3 standoff|2|[-D-](/boxes/audio/-)|[-L-](https://uk.farnell.com/ettinger/05-13-151/spacer-m3x15-vzk/dp/1466726)
 M3 nut (square)|01|square M3 nut 1.8 mm thick|2|[-D-](/boxes/audio/-)|[-L-](https://www.accu.co.uk/flat-square-nuts/21326-HFSN-M3-A2)
 M3 bolt (6)|01|6 mm long M3 bolt|2|[-D-](/boxes/audio/-)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/500113-SPP-M3-6-ST-BZP)
-M2.5 bolt (6)|01|6 mm long M2.5 bolt|2|[-D-](/boxes/audio/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2)
-M2.5 nut|01|regular M2.5 nut|2|[-D-](/boxes/audio/-)|[-L-](https://www.accu.co.uk/hexagon-nuts/456430-HPN-M2-5-C8-Z)
+M2.5 bolt (6)|01|6 mm long M2.5 bolt|2|[-D-](/boxes/robotics/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2)
+M2.5 nut|01|regular M2.5 nut|2|[-D-](/boxes/power/-)|[-L-](https://www.accu.co.uk/hexagon-nuts/456430-HPN-M2-5-C8-Z)
 M2 bolt (8)|01|8 mm long M2 bolt|2|[-D-](/boxes/audio/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/500101-SPP-M2-8-ST-BZP)
 M2 nut|01|regular M2 nut|2|[-D-](/boxes/audio/)|[-L-](https://www.accu.co.uk/hexagon-nuts/456429-HPN-M2-C8-Z)
 

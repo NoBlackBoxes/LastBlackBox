@@ -15,9 +15,10 @@ Photodiode (Visible)|10|Visible (broadband) photodiode|2|[-D-](/boxes/transistor
 Photodiode (IR)|10|IR sensitive photodiode|2|[-D-](/boxes/transistors/)|[-L-](https://uk.farnell.com/osram-opto-semiconductors/sfh203-fa/photodiode-ir-filtered/dp/1212743)
 LED (Blue)|10|Low power blue light emitting diode|2|[-D-](/boxes/transistors/)|[-L-](https://uk.farnell.com/broadcom-limited/hlmp-ka45-e0000/led-3mm-blue-85mcd-470nm/dp/1863182)
 LED (IR)|10|Low power IR light emitting diode|2|[-D-](/boxes/transistors/)|[-L-](https://uk.farnell.com/vishay/tsal6100/infrared-emitter-940nm-t-1-3-4/dp/1328299)
-LED (Red)|01|5 mm/2 mA red LED|2|[-D-](/boxes/transistors/_resources/datasheets/led_HLMP.pdf)|[-L-](https://uk.farnell.com/broadcom-limited/hlmp-4700/led-5mm-red-2-3mcd-626nm/dp/1003232)
+LED (Red)|01|3 mm/2 mA red LED|2|[-D-](/boxes/transistors/_resources/datasheets/led_HLMP.pdf)|[-L-](https://uk.farnell.com/broadcom-limited/hlmp-1700/led-3mm-red-2-1mcd-626nm/dp/1003207)
+LED (Yellow)|01|3 mm/2 mA yellow LED|2|[-D-](/boxes/transistors/_resources/datasheets/led_HLMP.pdf)|[-L-](https://uk.farnell.com/broadcom-limited/hlmp-1719/led-3mm-yellow-2-1mcd-585nm/dp/1003208)
 LED (Green)|01|3 mm/2 mA green LED|2|[-D-](/boxes/transistors/_resources/datasheets/led_HLMP.pdf)|[-L-](https://uk.farnell.com/broadcom-limited/hlmp-1790/led-3mm-green-2-3mcd-569nm/dp/1003209)
-Resistor (470)|01|470 &Omega;/0.25 W|2|[-D-](/boxes/transistors/../electrons/_resources/datasheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943)
+Resistor (470)|01|470 &Omega;/0.25 W|2|[-D-](/boxes/electrons/_resources/datasheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943)
 
 </p></details><hr>
 

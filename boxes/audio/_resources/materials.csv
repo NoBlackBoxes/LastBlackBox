@@ -1,13 +1,13 @@
-NB3 Ear,01,I2S mems microphone breakout board,2,/boxes/audio//boxes/audio//boxes/audio//boxes/audio/NB3_ear,VK,Audio,20,20,20,7.0,5.0
-NB3 Mouth,01,I2S DAC-AMP breakout board,1,/boxes/audio//boxes/audio//boxes/audio//boxes/audio/NB3_mouth,VK,Audio,20,20,20,7.0,5.0
-Speaker,01,3 Watt 4 Ohm with Dupont 2.54 mm socket,1,/boxes/audio//boxes/audio//boxes/audio//boxes/audio/_resources/datasheets/CQR0508.jpg,https://www.amazon.co.uk/dp/B09JJ28D6R,Loose,70,30,15,4.0,2.0
-Speaker (Hi-Fi),01,3 Watt 4 Ohm with Dupont 2.54 mm socket (High Fidelity: 2831/3128),1,/boxes/audio//boxes/audio//boxes/audio//boxes/audio/_resources/datasheets/3128_3W_4Ohm.jpg,https://www.amazon.co.uk/gp/product/B0D9QXW5FF,Loose,44,30,15,4.79,2.0
-Speaker Mount,01,Custom laser cut mount for speaker,1,/boxes/audio//boxes/audio//boxes/audio//boxes/audio/-,VK,Mounts,75,20,5,3.0,1.0
-Speaker Frame,01,Custom laser cut frame for speaker,1,/boxes/audio//boxes/audio//boxes/audio//boxes/audio/-,VK,Mounts,75,50,5,3.0,1.0
-M3 standoff (15/PS),01,15 mm long plug-to-socket M3 standoff,2,/boxes/audio//boxes/audio//boxes/audio//boxes/audio/-,https://uk.farnell.com/ettinger/05-13-151/spacer-m3x15-vzk/dp/1466726,Hardware,5,5,15,0.3924,0.3444
-M3 nut (square),01,square M3 nut 1.8 mm thick,2,/boxes/audio//boxes/audio//boxes/audio//boxes/audio/-,https://www.accu.co.uk/flat-square-nuts/21326-HFSN-M3-A2,Hardware,5,5,3,0.16,0.05
-M3 bolt (6),01,6 mm long M3 bolt,2,/boxes/audio//boxes/audio//boxes/audio//boxes/audio/-,https://www.accu.co.uk/pozi-pan-head-screws/500113-SPP-M3-6-ST-BZP,Hardware,5,5,6,0.14,0.03
-M2.5 bolt (6),01,6 mm long M2.5 bolt,2,/boxes/audio//boxes/audio//boxes/audio//boxes/audio/,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2,Hardware,5,5,6,0.15,0.04
-M2.5 nut,01,regular M2.5 nut,2,/boxes/audio//boxes/audio//boxes/audio//boxes/audio/-,https://www.accu.co.uk/hexagon-nuts/456430-HPN-M2-5-C8-Z,Hardware,5,5,3,0.14,0.03
-M2 bolt (8),01,8 mm long M2 bolt,2,/boxes/audio//boxes/audio//boxes/audio//boxes/audio/,https://www.accu.co.uk/pozi-pan-head-screws/500101-SPP-M2-8-ST-BZP,Hardware,5,5,8,0.14,0.03
-M2 nut,01,regular M2 nut,2,/boxes/audio//boxes/audio//boxes/audio//boxes/audio/,https://www.accu.co.uk/hexagon-nuts/456429-HPN-M2-C8-Z,Hardware,5,5,3,0.14,0.03
+NB3 Ear,01,I2S mems microphone breakout board,2,/boxes/audio/NB3_ear,VK,Audio,20,20,20,7.0,5.0
+NB3 Mouth,01,I2S DAC-AMP breakout board,1,/boxes/audio/NB3_mouth,VK,Audio,20,20,20,7.0,5.0
+Speaker,01,3 Watt 4 Ohm with Dupont 2.54 mm socket,1,/boxes/audio/_resources/datasheets/CQR0508.jpg,https://www.amazon.co.uk/dp/B09JJ28D6R,Loose,70,30,15,4.0,2.0
+Speaker (Hi-Fi),01,3 Watt 4 Ohm with Dupont 2.54 mm socket (High Fidelity: 2831/3128),1,/boxes/audio/_resources/datasheets/3128_3W_4Ohm.jpg,https://www.amazon.co.uk/gp/product/B0D9QXW5FF,Loose,44,30,15,4.79,2.0
+Speaker Mount,01,Custom laser cut mount for speaker,1,/boxes/audio/-,VK,Mounts,75,20,5,3.0,1.0
+Speaker Frame,01,Custom laser cut frame for speaker,1,/boxes/audio/-,VK,Mounts,75,50,5,3.0,1.0
+M3 standoff (15/PS),01,15 mm long plug-to-socket M3 standoff,2,/boxes/audio/-,https://uk.farnell.com/ettinger/05-13-151/spacer-m3x15-vzk/dp/1466726,Hardware,5,5,15,0.3924,0.3444
+M3 nut (square),01,square M3 nut 1.8 mm thick,2,/boxes/audio/-,https://www.accu.co.uk/flat-square-nuts/21326-HFSN-M3-A2,Hardware,5,5,3,0.16,0.05
+M3 bolt (6),01,6 mm long M3 bolt,2,/boxes/audio/-,https://www.accu.co.uk/pozi-pan-head-screws/500113-SPP-M3-6-ST-BZP,Hardware,5,5,6,0.14,0.03
+M2.5 bolt (6),01,6 mm long M2.5 bolt,2,/boxes/robotics/,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2,Hardware,5,5,6,0.15,0.04
+M2.5 nut,01,regular M2.5 nut,2,/boxes/power/-,https://www.accu.co.uk/hexagon-nuts/456430-HPN-M2-5-C8-Z,Hardware,5,5,3,0.14,0.03
+M2 bolt (8),01,8 mm long M2 bolt,2,/boxes/audio/,https://www.accu.co.uk/pozi-pan-head-screws/500101-SPP-M2-8-ST-BZP,Hardware,5,5,8,0.14,0.03
+M2 nut,01,regular M2 nut,2,/boxes/audio/,https://www.accu.co.uk/hexagon-nuts/456429-HPN-M2-C8-Z,Hardware,5,5,3,0.14,0.03

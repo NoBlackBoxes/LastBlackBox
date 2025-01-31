@@ -9,7 +9,7 @@ Field-programmable-gate-arrays-are-awesome.
 Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 NB3 Hindbrain|10|ICE40UP5K dev board with ADC/DAC|1|[-D-](/boxes/fpgas/NB3_hindbrain)|[-L-](VK)
-Cable (MicroUSB-1m)|10|Micro-USB to Type-A cable (1 m)|1|[-D-](/boxes/fpgas/)|[-L-]()
+Cable (MicroUSB-1m)|10|Micro-USB to Type-A cable (1 m)|1|[-D-](/boxes/fpgas/)|[-L-](https://www.amazon.co.uk/gp/product/B07GBCKX49)
 
 </p></details><hr>
 

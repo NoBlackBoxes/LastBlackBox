@@ -17,8 +17,8 @@ Speaker Frame|01|Custom laser cut frame for speaker|1|[-D-](/boxes/audio/-)|[-L-
 M3 standoff (15/PS)|01|15 mm long plug-to-socket M3 standoff|2|[-D-](/boxes/audio/-)|[-L-](https://uk.farnell.com/ettinger/05-13-151/spacer-m3x15-vzk/dp/1466726)
 M3 nut (square)|01|square M3 nut 1.8 mm thick|2|[-D-](/boxes/audio/-)|[-L-](https://www.accu.co.uk/flat-square-nuts/21326-HFSN-M3-A2)
 M3 bolt (6)|01|6 mm long M3 bolt|2|[-D-](/boxes/audio/-)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/500113-SPP-M3-6-ST-BZP)
-M2.5 bolt (6)|01|6 mm long M2.5 bolt|2|[-D-](/boxes/audio/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2)
-M2.5 nut|01|regular M2.5 nut|2|[-D-](/boxes/audio/-)|[-L-](https://www.accu.co.uk/hexagon-nuts/456430-HPN-M2-5-C8-Z)
+M2.5 bolt (6)|01|6 mm long M2.5 bolt|2|[-D-](/boxes/robotics/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2)
+M2.5 nut|01|regular M2.5 nut|2|[-D-](/boxes/power/-)|[-L-](https://www.accu.co.uk/hexagon-nuts/456430-HPN-M2-5-C8-Z)
 M2 bolt (8)|01|8 mm long M2 bolt|2|[-D-](/boxes/audio/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/500101-SPP-M2-8-ST-BZP)
 M2 nut|01|regular M2 nut|2|[-D-](/boxes/audio/)|[-L-](https://www.accu.co.uk/hexagon-nuts/456429-HPN-M2-C8-Z)
 
@@ -62,12 +62,12 @@ Name|Depth|Description| # |Data|Link|
 Camera (RPi v3)|01|RPi color camera with auto-focus (version 3)|1|[-D-](/boxes/vision/_resources/datasheets/rpi_camera_v3.pdf)|[-L-](https://uk.farnell.com/raspberry-pi/sc0872/rpi-camera-mod-3-standard-lens/dp/4132318)
 NB3 Camera Mount|01|Custom laser cut mount for RPi camera|1|[-D-](/boxes/vision/NB3_camera_mount)|[-L-](VK)
 NB3 Cortex Mount|01|Custom laser cut holder for NPU|1|[-D-](/boxes/vision/NB3_cortex_mount)|[-L-](VK)
-M2.5 bolt (6)|01|6 mm long M2.5 bolt|4|[-D-](/boxes/vision/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2)
+M2.5 bolt (6)|01|6 mm long M2.5 bolt|4|[-D-](/boxes/robotics/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2)
 M2.5 standoff (20/PS)|01|20 mm long plug-to-socket M2.5 standoff|4|[-D-](/boxes/vision/)|[-L-](https://uk.farnell.com/wurth-elektronik/971200151/standoff-hex-male-female-20mm/dp/2884418)
-M3 nut (square)|01|square M3 nut 1.8 mm thick|1|[-D-](/boxes/vision/)|[-L-](https://www.accu.co.uk/flat-square-nuts/21326-HFSN-M3-A2)
+M3 nut (square)|01|square M3 nut 1.8 mm thick|1|[-D-](/boxes/audio/-)|[-L-](https://www.accu.co.uk/flat-square-nuts/21326-HFSN-M3-A2)
 M3 bolt (12)|01|12 mm long M3 bolt|1|[-D-](/boxes/vision/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/500116-SPP-M3-12-ST-BZP)
-M2 bolt (8)|01|8 mm long M2 bolt|4|[-D-](/boxes/vision/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/500101-SPP-M2-8-ST-BZP)
-M2 nut|01|regular M2 nut|4|[-D-](/boxes/vision/)|[-L-](https://www.accu.co.uk/hexagon-nuts/456429-HPN-M2-C8-Z)
+M2 bolt (8)|01|8 mm long M2 bolt|4|[-D-](/boxes/audio/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/500101-SPP-M2-8-ST-BZP)
+M2 nut|01|regular M2 nut|4|[-D-](/boxes/audio/)|[-L-](https://www.accu.co.uk/hexagon-nuts/456429-HPN-M2-C8-Z)
 
 </p></details><hr>
 
@@ -126,12 +126,12 @@ Name|Depth|Description| # |Data|Link|
 
 Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
-M2.5 bolt (6)|01|6 mm long M2.5 bolt|14|[-D-](/boxes/intelligence/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2)
+M2.5 bolt (6)|01|6 mm long M2.5 bolt|14|[-D-](/boxes/robotics/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2)
 M2.5 standoff (30/PS)|01|30 mm long plug-to-socket M2.5 standoff|6|[-D-](/boxes/intelligence/)|[-L-](https://uk.farnell.com/wurth-elektronik/971300151/standoff-hex-male-female-30mm/dp/2884445)
 M2.5 standoff (30/SS)|01|30 mm long socket-to-socket M2.5 standoff|2|[-D-](/boxes/intelligence/)|[-L-](https://uk.farnell.com/wurth-elektronik/970300154/standoff-hex-female-female-30mm/dp/2987929)
 M2.5 standoff (25/PS)|01|25 mm long plug-to-socket M2.5 standoff|4|[-D-](/boxes/intelligence/)|[-L-](https://uk.farnell.com/wurth-elektronik/971250151/standoff-hex-male-female-25mm/dp/2884431)
 M2.5 standoff (25/SS)|01|25 mm long socket-to-socket M2.5 standoff|2|[-D-](/boxes/intelligence/)|[-L-](https://uk.farnell.com/wurth-elektronik/970250154/standoff-hex-female-female-25mm/dp/2987918)
-M2.5 standoff (12/SS)|01|12 mm long socket-to-socket M2.5 standoff|2|[-D-](/boxes/intelligence/)|[-L-](https://uk.farnell.com/wurth-elektronik/970120151/standoff-hex-female-female-12mm/dp/2884528)
+M2.5 standoff (12/SS)|01|12 mm long socket-to-socket M2.5 standoff|2|[-D-](/boxes/robotics/)|[-L-](https://uk.farnell.com/wurth-elektronik/970120151/standoff-hex-female-female-12mm/dp/2884528)
 
 </p></details><hr>
 

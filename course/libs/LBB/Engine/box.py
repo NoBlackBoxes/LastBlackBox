@@ -90,7 +90,6 @@ class Box:
             material_depth = material_text.split(",")[1]
             if material_depth in depths:
                 material = Material.Material(material_text)
-                material.datasheet = f"/boxes/{self.slug}/{material.datasheet}"
                 materials.append(material)
         self.materials = materials
 
