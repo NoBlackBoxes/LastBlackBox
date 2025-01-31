@@ -1,3 +1,3 @@
-Thermistor,10,Temperature sensitive resistor,2,_resources/datasheets/thermistor.pdf,https://uk.farnell.com/epcos/b57891m0103k000/thermistor-ntc-radial-leaded/dp/2285471,Passive,50,10,3
-Photoresistor (LDR),01,Light-dependent resistor (GL5516 and GL5528),4,,https://www.amazon.co.uk/Resistor-Dependent-Photoresistor-Sensitive-Sensors/dp/B08SC1M7V7,Passive,50,10,3
-Piezo,10,Piezo element,1,_resources/datasheets/piezo.pdf,https://uk.farnell.com/multicomp/mcabt-455-rc/audio-element-piezo-2-8khz-35mm/dp/2433035,Passive,50,50,3
+Thermistor,10,Temperature sensitive resistor,2,/boxes/sensors/_resources/datasheets/thermistor.pdf,https://uk.farnell.com/epcos/b57891m0103k000/thermistor-ntc-radial-leaded/dp/2285471,Passive,50,10,3,0.6456,0.5376
+Photoresistor (LDR),01,Light-dependent resistor (GL5516 and GL5528),4,/boxes/sensors/,https://www.amazon.co.uk/Resistor-Dependent-Photoresistor-Sensitive-Sensors/dp/B08SC1M7V7,Passive,50,10,3,1.14,0.7584
+Piezo,10,Piezo element,1,/boxes/sensors/_resources/datasheets/piezo.pdf,https://uk.farnell.com/multicomp/mcabt-455-rc/audio-element-piezo-2-8khz-35mm/dp/2433035,Passive,50,50,3,1.932,1.644

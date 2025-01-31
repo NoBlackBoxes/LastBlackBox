@@ -1,86 +1,55 @@
-#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
- - Generate a packing list from the BOM
-  - Specify level limt
-  - Group identical items
-  - Estimate package volume
+ - Generate a packing list from a BOM
+
+ @author: kampff
 """
 import os
 import numpy as np
 import pandas as pd
 
-# Get user name
-username = os.getlogin()
-
-# Specify paths
-repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
+# Import modules
+import LBB.Engine.config as Config
+import LBB.Engine.utilities as Utilities
+import LBB.Engine.course as Course
 
 # Specify Number of Kits
 num_kits = 15
 
-# Specify Level Limits
-level_limits = ['01', '10', '11']
-
-# Generate packing list for each level
-for level_limit in level_limits:
-
-    # Load BOM
-    if level_limit == '01':
-        bom_path = repo_path + "/course/_resources/materials/BOM_01.csv"
-    elif level_limit == '10':
-        bom_path = repo_path + "/course/_resources/materials/BOM_10.csv"
-    else:
-        bom_path = repo_path + "/course/_resources/materials/BOM_11.csv"
-    bom = pd.read_csv(bom_path)
-
-    # Remove empty rows and label
-    filtered = bom[(bom['quantity'] != 0) & (bom['quantity'].notna())]
-
-    # Combine (aggregate) duplicates
-    aggregations = {
-        'name': 'first',            # First value
-        'depth': 'first',           # First value
-        'description': 'first',     # First value
-        'quantity': 'sum',          # Sum the quantities
-        'package': 'first',         # First value
-        'datasheet': 'first',       # First value
-        'supplier': 'first',        # First value
-        'x': 'first',               # First value
-        'y': 'first',               # First value
-        'z': 'first',               # First value
-        'unit_price': 'first',      # First value
-        'bulk_price': 'first',      # First value
-    }
-    combined = filtered.groupby('name', as_index=False).agg(aggregations)
-
-    # Sort by packages
-    sorted = combined.sort_values('package')
+# List courses
+course_names = ["The Last Black Box", "Bootcamp", "Build a Brain"]
+for course_name in course_names:
+    course = Course.Course(course_name)
+    BOM_path = f"{Config.course_root}/_resources/materials/BOM/{course.slug}_BOM.csv"
+    bom = pd.read_csv(BOM_path)
 
     # Insert additional fields
-    sorted.insert(4, '#Kits', int(num_kits))
-    sorted.insert(5, '#Required', num_kits*sorted['Quantity'].astype(int))
-    sorted.insert(6, '#Available', 0)
-    sorted.insert(7, '#Order', 0)
-    sorted.insert(8, '#Ordered', 0)
+    bom.insert(4, '#kits', int(num_kits))
+    bom.insert(5, '#required', num_kits*bom['quantity'].astype(int))
+    bom.insert(6, '#available', 0)
+    bom.insert(7, '#order', 0)
+    bom.insert(8, '#ordered', 0)
 
     # Save to packing file
-    packing_path = repo_path + f"/course/_resources/materials/packing_{level_limit}.csv"
-    sorted.to_csv(packing_path, index=False)  # Set index=False if you don't want to include the index in the CSV
+    packing_path = f"{Config.course_root}/_resources/materials/packing/{course.slug}_packing_list.csv"
+    bom.to_csv(packing_path, index=False)  # Set index=False if you don't want to include the index in the CSV
 
     # Group packages
-    grouped = sorted.groupby('Package')
+    grouped = bom.groupby('package')
     packages = {}
     for name, package in grouped:
         packages[name] = package
 
     # Estimate package volumes
     total_volume = 0.0
+    print("\n")
+    print(f"{course.name}")
+    print(f"----------------")
     for name in packages:
         package = packages[name]
-        lengths = package['x(mm)']
-        widths = package['y(mm)']
-        heights = package['z(mm)']
+        lengths = package['x']
+        widths = package['y']
+        heights = package['z']
         volume = np.sum(lengths * widths * heights)
         print(f"{name}: {volume}")
         total_volume = total_volume + volume

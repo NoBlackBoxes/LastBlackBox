@@ -59,7 +59,7 @@ for course_name in course_names:
     combined = filtered.groupby('name', as_index=False).agg(aggregations)
 
     # Sort by packages
-    sorted = combined.sort_values('package')
+    sorted = combined.sort_values(['package', 'name'])
 
     # Generate BOM
     BOM_path = f"{Config.course_root}/_resources/materials/BOM/{course.slug}_BOM.csv"
