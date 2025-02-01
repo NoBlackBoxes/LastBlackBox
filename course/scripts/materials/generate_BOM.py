@@ -29,12 +29,15 @@ for course_name in course_names:
     course = Course.Course(course_name)
 
     # Gather all materials
+    boxes = []
     materials = []
     for session in course.sessions:
         for box in session.boxes:
-            for m in box.materials:
-                materials.append(m)
-    
+            if box.slug not in boxes:
+                for m in box.materials:
+                    materials.append(m)
+                boxes.append(box.slug)
+
     # Build dataframe
     dataframe = pd.DataFrame([m.to_dict() for m in materials])
 

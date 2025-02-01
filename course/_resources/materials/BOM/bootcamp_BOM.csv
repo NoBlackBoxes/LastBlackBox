@@ -5,24 +5,24 @@ LED (Red),01,3 mm/2 mA red LED,2,Active,/boxes/transistors/_resources/datasheets
 LED (Yellow),01,3 mm/2 mA yellow LED,2,Active,/boxes/transistors/_resources/datasheets/led_HLMP.pdf,https://uk.farnell.com/broadcom-limited/hlmp-1719/led-3mm-yellow-2-1mcd-585nm/dp/1003208,50,5,3,0.5148,0.1548
 MOSFET (10V),01,Power MOSFET/N-channel (IRF510),1,Active,/boxes/transistors/_resources/datasheets/IRF510.pdf,https://uk.farnell.com/vishay/irf510pbf/mosfet-n-100v-5-6a-to-220ab/dp/1653658,40,15,4,0.984,0.5412
 MOSFET (5V),01,Power MOSFET/N-channel (IRL510),1,Active,/boxes/transistors/_resources/datasheets/IRL510.pdf,https://uk.farnell.com/vishay/irl510pbf/mosfet-n-logic-to-220/dp/9102779,40,15,4,1.296,0.7476
-NB3 Ear,01,I2S mems microphone breakout board,4,Audio,/boxes/audio/NB3_ear,VK,20,20,20,7.0,5.0
-NB3 Mouth,01,I2S DAC-AMP breakout board,2,Audio,/boxes/audio/NB3_mouth,VK,20,20,20,7.0,5.0
+NB3 Ear,01,I2S mems microphone breakout board,2,Audio,/boxes/audio/NB3_ear,VK,20,20,20,7.0,5.0
+NB3 Mouth,01,I2S DAC-AMP breakout board,1,Audio,/boxes/audio/NB3_mouth,VK,20,20,20,7.0,5.0
 Cable (MiniUSB-1m),01,Mini-USB to Type-A cable (1 m),1,Cables,/boxes/computers/,https://www.amazon.co.uk/gp/product/B07FWF2KBF,100,50,15,3.24,1.94
 Cable (MiniUSB-20cm),01,Short mini-USB to Type-A cable (20 cm),1,Cables,/boxes/networks/,https://www.amazon.co.uk/gp/product/B07FW69HNT,100,25,10,3.02,1.58
 Jumper Wires,01,Assorted 22 AWG jumper wire leads (male/female),1,Cables,/boxes/electrons/_resources/datasheets/jumper_wires.pdf,https://www.amazon.co.uk/gp/product/B09KR7Z4PF,200,40,10,4.0,3.75
 Test Lead,01,Alligator clip to 0.64 mm pin (20 cm),2,Cables,/boxes/electrons/,https://www.amazon.co.uk/gp/product/B096JR15JW,220,20,10,1.5,0.85
-M2 bolt (8),01,8 mm long M2 bolt,12,Hardware,/boxes/audio/,https://www.accu.co.uk/pozi-pan-head-screws/500101-SPP-M2-8-ST-BZP,5,5,8,0.14,0.03
-M2 nut,01,regular M2 nut,12,Hardware,/boxes/audio/,https://www.accu.co.uk/hexagon-nuts/456429-HPN-M2-C8-Z,5,5,3,0.14,0.03
-M2.5 bolt (6),01,6 mm long M2.5 bolt,32,Hardware,/boxes/robotics/,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2,5,5,6,0.15,0.04
-M2.5 nut,01,regular M2.5 nut,8,Hardware,/boxes/power/-,https://www.accu.co.uk/hexagon-nuts/456430-HPN-M2-5-C8-Z,5,5,3,0.14,0.03
+M2 bolt (8),01,8 mm long M2 bolt,6,Hardware,/boxes/audio/,https://www.accu.co.uk/pozi-pan-head-screws/500101-SPP-M2-8-ST-BZP,5,5,8,0.14,0.03
+M2 nut,01,regular M2 nut,6,Hardware,/boxes/audio/,https://www.accu.co.uk/hexagon-nuts/456429-HPN-M2-C8-Z,5,5,3,0.14,0.03
+M2.5 bolt (6),01,6 mm long M2.5 bolt,26,Hardware,/boxes/robotics/,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2,5,5,6,0.15,0.04
+M2.5 nut,01,regular M2.5 nut,6,Hardware,/boxes/power/-,https://www.accu.co.uk/hexagon-nuts/456430-HPN-M2-5-C8-Z,5,5,3,0.14,0.03
 M2.5 standoff (12/SS),01,12 mm long socket-to-socket M2.5 standoff,4,Hardware,/boxes/robotics/,https://uk.farnell.com/wurth-elektronik/970120151/standoff-hex-female-female-12mm/dp/2884528,5,5,12,0.606,0.3816
-M2.5 standoff (20/PS),01,20 mm long plug-to-socket M2.5 standoff,8,Hardware,/boxes/vision/,https://uk.farnell.com/wurth-elektronik/971200151/standoff-hex-male-female-20mm/dp/2884418,5,5,20,0.6624,0.534
+M2.5 standoff (20/PS),01,20 mm long plug-to-socket M2.5 standoff,4,Hardware,/boxes/vision/,https://uk.farnell.com/wurth-elektronik/971200151/standoff-hex-male-female-20mm/dp/2884418,5,5,20,0.6624,0.534
 M2.5 standoff (20/SS),01,20 mm long socket-to-socket M2.5 standoff,4,Hardware,/boxes/systems/,https://uk.farnell.com/wurth-elektronik/970200154/standoff-hex-female-female-20mm/dp/2987903,5,5,20,0.7368,0.54
 M2.5 standoff (7/PS),01,7 mm long plug-to-socket M2.5 standoff,4,Hardware,/boxes/power/,https://uk.farnell.com/wurth-elektronik/971070151/standoff-hex-male-female-7mm-m2/dp/2884371,5,5,7,0.4836,0.3792
-M3 bolt (12),01,12 mm long M3 bolt,2,Hardware,/boxes/vision/,https://www.accu.co.uk/pozi-pan-head-screws/500116-SPP-M3-12-ST-BZP,5,5,12,0.14,0.03
-M3 bolt (6),01,6 mm long M3 bolt,4,Hardware,/boxes/audio/-,https://www.accu.co.uk/pozi-pan-head-screws/500113-SPP-M3-6-ST-BZP,5,5,6,0.14,0.03
-M3 nut (square),01,square M3 nut 1.8 mm thick,6,Hardware,/boxes/audio/-,https://www.accu.co.uk/flat-square-nuts/21326-HFSN-M3-A2,5,5,3,0.16,0.05
-M3 standoff (15/PS),01,15 mm long plug-to-socket M3 standoff,4,Hardware,/boxes/audio/-,https://uk.farnell.com/ettinger/05-13-151/spacer-m3x15-vzk/dp/1466726,5,5,15,0.3924,0.3444
+M3 bolt (12),01,12 mm long M3 bolt,1,Hardware,/boxes/vision/,https://www.accu.co.uk/pozi-pan-head-screws/500116-SPP-M3-12-ST-BZP,5,5,12,0.14,0.03
+M3 bolt (6),01,6 mm long M3 bolt,2,Hardware,/boxes/audio/-,https://www.accu.co.uk/pozi-pan-head-screws/500113-SPP-M3-6-ST-BZP,5,5,6,0.14,0.03
+M3 nut (square),01,square M3 nut 1.8 mm thick,3,Hardware,/boxes/audio/-,https://www.accu.co.uk/flat-square-nuts/21326-HFSN-M3-A2,5,5,3,0.16,0.05
+M3 standoff (15/PS),01,15 mm long plug-to-socket M3 standoff,2,Hardware,/boxes/audio/-,https://uk.farnell.com/ettinger/05-13-151/spacer-m3x15-vzk/dp/1466726,5,5,15,0.3924,0.3444
 12V DC Power Supply,01,12 V AC-DC transformer (UK/EU/USA plugs),1,Loose,/boxes/power/,https://www.amazon.co.uk/gp/product/B09QG4R1R4,100,100,80,12.99,12.99
 Batteries (AA),01,AA 1.5 V alkaline battery,4,Loose,/boxes/electrons/,https://www.amazon.co.uk/Duracell-Optimum-Alkaline-Batteries-MX1500/dp/B093Q5XY66,60,15,15,5.75,3.0
 Battery,01,NiMH 9.6V 8-cell 2000 mAh battery,1,Loose,/boxes/power/,https://www.amazon.co.uk/dp/B091H9ZFSF,100,60,15,16.99,16.99
@@ -31,7 +31,7 @@ Battery Charger,01,NiMH battery charger (UK plug),1,Loose,/boxes/power/,https://
 Battery holder,01,4xAA battery holder with ON-OFF switch,1,Loose,/boxes/electrons/,https://www.amazon.co.uk/gp/product/B0814ZH68F,65,70,20,3.0,2.0
 Breadboard (400),01,400-tie solderless breadboard,1,Loose,/boxes/electrons/_resources/datasheets/breadboard_400.pdf,https://www.amazon.co.uk/gp/product/B0739XRX8F,85,60,10,4.0,2.3
 Breadboards (170),01,170-tie solderless breadboard,4,Loose,/boxes/electrons/_resources/datasheets/breadboard_170.pdf,https://www.amazon.co.uk/ELEGOO-tie-points-Breadboard-Breadboards-Electronic/dp/B01N0YWIR7,35,50,10,2.0,1.0
-Camera (RPi v3),01,RPi color camera with auto-focus (version 3),2,Loose,/boxes/vision/_resources/datasheets/rpi_camera_v3.pdf,https://uk.farnell.com/raspberry-pi/sc0872/rpi-camera-mod-3-standard-lens/dp/4132318,120,75,23,23.808,23.808
+Camera (RPi v3),01,RPi color camera with auto-focus (version 3),1,Loose,/boxes/vision/_resources/datasheets/rpi_camera_v3.pdf,https://uk.farnell.com/raspberry-pi/sc0872/rpi-camera-mod-3-standard-lens/dp/4132318,120,75,23,23.808,23.808
 Caster,01,¾” metal ball caster,1,Loose,/boxes/robotics/https://www.pololu.com/product/955,https://www.pololu.com/product/955,70,50,20,3.95,3.08
 Computer (RPi4),01,Raspberry Pi 4b with 2 GB RAM,1,Loose,/boxes/systems/_resources/datasheets/rpi4b.pdf,https://uk.farnell.com/raspberry-pi/rpi4-modbp-2gb/raspberry-pi-4-model-b-2gb/dp/3051886,95,70,26,42.852,42.852
 DC Brushed Motor,01,6V Brushed DC motor,1,Loose,/boxes/motors/,https://www.amazon.co.uk/Gikfun-1V-6V-Hobby-Arduino-EK1894/dp/B07BHHP2BT,20,40,15,2.5,1.25
@@ -43,19 +43,19 @@ Periodic Table,01,Periodic Table business card,1,Loose,/boxes/atoms/card,VK,40,6
 SD Card,01,16 GB micro SD card,1,Loose,/boxes/systems/_resources/datasheets/SanDisk-SDSQUAR-016G-GN6MA-datasheet.pdf,https://uk.farnell.com/integral/inmsdh16g-100v10/16gb-microsdhc-v10-uhs-i-u1/dp/3498606,100,50,3,5.652,5.652
 Servo Motor,01,FT90R Digital Micro Continuous Rotation Servo,2,Loose,/boxes/control/,https://www.pololu.com/product/2817,100,70,15,8.95,5.0
 Servo Wheel,01,Wheels (70x8mm) for servos,2,Loose,/boxes/control/,https://www.pololu.com/product/4925,100,70,15,3.5,2.5
-Speaker,01,3 Watt 4 Ohm with Dupont 2.54 mm socket,2,Loose,/boxes/audio/_resources/datasheets/CQR0508.jpg,https://www.amazon.co.uk/dp/B09JJ28D6R,70,30,15,4.0,2.0
-Speaker (Hi-Fi),01,3 Watt 4 Ohm with Dupont 2.54 mm socket (High Fidelity: 2831/3128),2,Loose,/boxes/audio/_resources/datasheets/3128_3W_4Ohm.jpg,https://www.amazon.co.uk/gp/product/B0D9QXW5FF,44,30,15,4.79,2.0
+Speaker,01,3 Watt 4 Ohm with Dupont 2.54 mm socket,1,Loose,/boxes/audio/_resources/datasheets/CQR0508.jpg,https://www.amazon.co.uk/dp/B09JJ28D6R,70,30,15,4.0,2.0
+Speaker (Hi-Fi),01,3 Watt 4 Ohm with Dupont 2.54 mm socket (High Fidelity: 2831/3128),1,Loose,/boxes/audio/_resources/datasheets/3128_3W_4Ohm.jpg,https://www.amazon.co.uk/gp/product/B0D9QXW5FF,44,30,15,4.79,2.0
 Stereo Plug Terminal,01,3.5 mm plug to screw terminal,2,Loose,/boxes/magnets/,https://www.amazon.co.uk/dp/B07MNYBFL9,40,20,15,2.0,1.0
 USB SD Card IO,01,SD card reader/writer,1,Loose,/boxes/systems/,https://www.amazon.co.uk/Beikell-High-speed-Adapter-Supports-MMC-Compatible-Windows/dp/B07L9VT8YY,70,40,15,4.07,4.07
 USB Sound Card,01,USB to 3.5 mm Audio out/in,1,Loose,/boxes/magnets/,https://www.amazon.co.uk/UGREEN-USB-C-3-5mm-Female-Adapter-dp-B08TR7LWQH/dp/B08TR7LWQH,150,90,15,8.98,8.98
 Velcro Patch,01,Velcro adhesive,1,Loose,/boxes/power/,https://www.amazon.co.uk/50mmx100mm-Adhesive-Strips%EF%BC%8CExtra-Mounting-Organizing/dp/B0CKVNM69R,50,75,4,2.0,0.5
 Magnet,01,Neodymium disc (8 mm x 3 mm),4,Magnets,/boxes/magnets/,https://uk.farnell.com/duratool/d01766/magnets-rare-earth-8-x-3mm-pk10/dp/1888095,20,20,5,0.5136,0.4416
-NB3 Camera Mount,01,Custom laser cut mount for RPi camera,2,Mounts,/boxes/vision/NB3_camera_mount,VK,40,30,5,3.0,1.0
-NB3 Cortex Mount,01,Custom laser cut holder for NPU,2,Mounts,/boxes/vision/NB3_cortex_mount,VK,75,65,5,4.0,2.0
+NB3 Camera Mount,01,Custom laser cut mount for RPi camera,1,Mounts,/boxes/vision/NB3_camera_mount,VK,40,30,5,3.0,1.0
+NB3 Cortex Mount,01,Custom laser cut holder for NPU,1,Mounts,/boxes/vision/NB3_cortex_mount,VK,75,65,5,4.0,2.0
 Servo Mount,01,Mount for servo motor,2,Mounts,/boxes/robotics/,VK,30,15,5,2.0,0.75
 Spacer,01,NB3 spacer 3 mm spacer for mounting ball caster,5,Mounts,/boxes/robotics/NB3_spacer,VK,25,25,5,0.5,0.25
-Speaker Frame,01,Custom laser cut frame for speaker,2,Mounts,/boxes/audio/-,VK,75,50,5,3.0,1.0
-Speaker Mount,01,Custom laser cut mount for speaker,2,Mounts,/boxes/audio/-,VK,75,20,5,3.0,1.0
+Speaker Frame,01,Custom laser cut frame for speaker,1,Mounts,/boxes/audio/-,VK,75,50,5,3.0,1.0
+Speaker Mount,01,Custom laser cut mount for speaker,1,Mounts,/boxes/audio/-,VK,75,20,5,3.0,1.0
 Magnet Wire,01,Narrow gauge epoxy insulated (1 m),1,Passive,/boxes/magnets/,https://www.amazon.co.uk/sourcing-map-Enameled-Transformers-Inductors/dp/B0CYP8L4L1,30,30,20,12.59,0.1259
 Photoresistor (LDR),01,Light-dependent resistor (GL5516 and GL5528),4,Passive,/boxes/sensors/,https://uk.farnell.com/advanced-photonix/nsl-19m51/light-dependent-resistor-550nm/dp/3168335,50,10,3,1.14,0.7584
 Piezo Buzzer,01,Piezoelectric speaker/transducer,1,Passive,/boxes/computers/_resources/datasheets/piezo_buzzer.pdf,https://uk.farnell.com/tdk/ps1240p02bt/piezoelectric-buzzer-4khz-70dba/dp/3267212,30,30,1,0.4296,0.3576
