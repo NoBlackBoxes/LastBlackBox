@@ -1,0 +1,183 @@
+(footprint "PMOS_SMD_FDC658AP"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0.24017 -2.30964 0)
+		(layer "F.SilkS")
+		(uuid "51d332dd-955f-4a86-ba3b-1ead43bf2f2d")
+		(effects
+			(font
+				(size 0.800567 0.800567)
+				(thickness 0.015)
+			)
+		)
+	)
+	(property "Value" "FDC658AP"
+		(at 5.82944 2.292555 0)
+		(layer "F.Fab")
+		(uuid "e2b4f8ba-68db-4218-89b0-551fdf53f5b4")
+		(effects
+			(font
+				(size 0.800197 0.800197)
+				(thickness 0.015)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "31b366ba-5f8f-4677-8e57-7e1415fa236f")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "61439406-ff66-4403-8d39-d43acd28c69c")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d846e4a8-0c62-4cc5-b453-4eeb034ab5df")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_circle
+		(center -2.1 -1.6)
+		(end -2.05 -1.6)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "2865c13f-3296-46d5-8521-3d049754f234")
+	)
+	(fp_line
+		(start -2.25 -1.75)
+		(end 2.25 -1.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "8416e88b-aaa6-430a-85bd-54bc28f72a39")
+	)
+	(fp_line
+		(start -2.25 1.75)
+		(end -2.25 -1.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "56c02a88-bf6b-460b-9966-893a6043980f")
+	)
+	(fp_line
+		(start 2.25 -1.75)
+		(end 2.25 1.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "070d36f2-202f-4913-a3d2-008b1fd8921f")
+	)
+	(fp_line
+		(start 2.25 1.75)
+		(end -2.25 1.75)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "556ac842-1e53-4c52-b812-2f1334234c37")
+	)
+	(fp_line
+		(start -0.8 1.45)
+		(end -0.8 -1.45)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "c3aec457-bcc4-464c-bed4-6b9b94bc387f")
+	)
+	(fp_line
+		(start 0.8 -1.45)
+		(end 0.8 1.45)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "c6d07e2a-a2e9-479a-b447-4d311a0e116a")
+	)
+	(pad "1" smd rect
+		(at -1.165 -0.95)
+		(size 1.4 0.6)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "76a81fc3-d697-40c3-9d95-7c99c7b44281")
+	)
+	(pad "2" smd rect
+		(at -1.165 0)
+		(size 1.4 0.6)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "f67dad4e-4e8d-40f7-8c46-aaa7d0ba2f2c")
+	)
+	(pad "3" smd rect
+		(at -1.165 0.95)
+		(size 1.4 0.6)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "e9e4f742-aa49-4458-aa1a-d4cb4e89bcb4")
+	)
+	(pad "4" smd rect
+		(at 1.165 0.95)
+		(size 1.4 0.6)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "1fa1323f-934d-4b19-8123-ec00c9728260")
+	)
+	(pad "5" smd rect
+		(at 1.165 0)
+		(size 1.4 0.6)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "f002a6b0-75c7-4cba-826e-6a8710f5000f")
+	)
+	(pad "6" smd rect
+		(at 1.165 -0.95)
+		(size 1.4 0.6)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "a0fc49b1-ca5a-4d4c-a32f-5f8d791c15a1")
+	)
+	(model "${KIPRJMOD}/libraries/parts/PMOS_SMD_FDC658AP/PMOS_SMD_FDC658AP.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 90)
+		)
+	)
+)

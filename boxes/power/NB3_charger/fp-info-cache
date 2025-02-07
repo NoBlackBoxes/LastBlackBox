@@ -1,4 +1,4 @@
-24434118676057918
+24441074277241064
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -68222,12 +68222,26 @@ Logo_VK_15mm
 0
 0
 NB3_charger
+NiMH_Charger_BQ25171-Q1
+
+
+0
+15
+15
+NB3_charger
 NiMH_Charger_BQ25172DSGR
 
 
 0
 11
 11
+NB3_charger
+PMOS_SMD_FDC658AP
+
+
+0
+6
+6
 NB3_charger
 PinHeader_TSM-104-01-L-SH
 
@@ -68236,12 +68250,26 @@ PinHeader_TSM-104-01-L-SH
 4
 4
 NB3_charger
+Schottky_PMEG3050EP,115
+
+
+0
+2
+2
+NB3_charger
 Switch_SPDT_SMD_Slide_JS102011JCQN
 
 
 0
 3
 3
+NB3_charger
+Thermistor_NTC_NTCG163JF103FT1
+Thermistor NTC
+
+0
+2
+2
 NB3_charger
 Voltage_Regulator_AP64501
 SOIC, 8 Pin (http://www.ti.com/lit/ds/symlink/lm5017.pdf#page=31), generated with kicad-footprint-generator ipc_gullwing_generator.py

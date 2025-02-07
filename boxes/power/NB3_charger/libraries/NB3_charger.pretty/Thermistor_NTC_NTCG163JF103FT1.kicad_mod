@@ -1,0 +1,171 @@
+(footprint "Thermistor_NTC_NTCG163JF103FT1"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "Thermistor NTC")
+	(property "Reference" "REF**"
+		(at 0 -2.660605 0)
+		(layer "F.SilkS")
+		(uuid "3f2ed13d-e0dd-493a-98f9-e77e6512ff29")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "NTCG163JF103FT1"
+		(at 0 2.660605 0)
+		(layer "F.Fab")
+		(uuid "ba2c2eab-d1e4-4c0c-a826-a20b63d1495e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" "NTCG163JF103FT1"
+		(at 0 7 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3ae15891-1ca1-408c-b897-1f3b16b5fec0")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8af4df20-25f0-4e10-af47-39ee46782620")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "54d6b8e7-e417-4c60-b750-e327cc6c025b")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -1.38509 -0.660605)
+		(end -0.426213 -0.660605)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "cf055acf-41c0-415f-9094-e75f33c9dde2")
+	)
+	(fp_line
+		(start -1.38509 0.660605)
+		(end -1.38509 -0.660605)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "3ed8fc7c-4303-42dd-b6e4-a44145318038")
+	)
+	(fp_line
+		(start -0.426213 0.660605)
+		(end -1.38509 0.660605)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d4787979-d340-46b8-9a0b-33bf24e3a2d4")
+	)
+	(fp_line
+		(start 0.426213 0.660605)
+		(end 1.38509 0.660605)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9116c347-4931-4c75-ac53-578ca115f9f3")
+	)
+	(fp_line
+		(start 1.38509 -0.660605)
+		(end 0.426213 -0.660605)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "54ea9d5b-ca82-44c8-83d2-8164bff67b5d")
+	)
+	(fp_line
+		(start 1.38509 0.660605)
+		(end 1.38509 -0.660605)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "23241605-37aa-42e1-a52b-3c800ac7c7a1")
+	)
+	(fp_circle
+		(center -0.800102 0.400051)
+		(end -0.77013 0.400051)
+		(stroke
+			(width 0.059995)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "d618c5d0-265c-499f-82b3-d48b8f2a3002")
+	)
+	(fp_text user "REF**"
+		(at 0 4.660605 0)
+		(layer "F.Fab")
+		(uuid "962991c6-9a28-47ac-a61c-d1f4753a6930")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -0.753366 0)
+		(size 0.806477 0.864008)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "ef7a502c-29f4-4365-a996-6ba52f3fbdfb")
+	)
+	(pad "2" smd rect
+		(at 0.753366 0)
+		(size 0.806477 0.864008)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "39181958-3797-4602-ada8-4c6c355cd904")
+	)
+	(model "${KIPRJMOD}/libraries/parts/Thermistor_NTC_NTCG163JF103FT1/Thermistor_NTC_NTCG163JF103FT1.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 -90)
+		)
+	)
+)
