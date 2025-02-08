@@ -6740,6 +6740,16 @@
 		)
 		(uuid "3fd7cf98-5860-43bf-ac9b-0686093a9870")
 	)
+	(text "The body diode allows voltage from drain\nto appear on source, making source more +\nthan gate when external power is\ndisconnected...\nwhich opens PMOS."
+		(exclude_from_sim no)
+		(at 168.91 46.99 0)
+		(effects
+			(font
+				(size 0.635 0.635)
+			)
+		)
+		(uuid "527a28c9-46d2-4fdd-b6e2-dcc62c20d4fb")
+	)
 	(text "NiMH Charger"
 		(exclude_from_sim no)
 		(at 36.83 26.67 0)
@@ -7593,6 +7603,72 @@
 			(project "NB3_charger"
 				(path "/865a6659-88ab-4157-bbc8-8818e83bf79d"
 					(reference "#FLG03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VDC")
+		(at 269.24 82.55 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1d22db44-5b82-456f-a55d-3b81c10f28c7")
+		(property "Reference" "#PWR012"
+			(at 269.24 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VDC"
+			(at 269.24 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 269.24 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 269.24 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VDC\""
+			(at 269.24 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "87cade24-e94f-4a94-be66-6f25a951c191")
+		)
+		(instances
+			(project "NB3_charger"
+				(path "/865a6659-88ab-4157-bbc8-8818e83bf79d"
+					(reference "#PWR012")
 					(unit 1)
 				)
 			)
@@ -9808,71 +9884,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+12V")
-		(at 269.24 82.55 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "6980725d-70a4-4fd8-80b3-88c4a26b5ba3")
-		(property "Reference" "#PWR012"
-			(at 269.24 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+12V"
-			(at 269.6083 78.2256 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 269.24 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 269.24 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 269.24 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e69f18ff-5a56-47b0-a4c9-459d5904f0d5")
-		)
-		(instances
-			(project "NB3_charger"
-				(path "/865a6659-88ab-4157-bbc8-8818e83bf79d"
-					(reference "#PWR012")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 83.82 72.39 0)
 		(unit 1)
@@ -9891,7 +9902,7 @@
 			)
 		)
 		(property "Value" "15K 1%"
-			(at 74.93 73.533 0)
+			(at 81.28 80.01 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12277,7 +12288,7 @@
 			)
 		)
 		(property "Value" "3.6K 1%"
-			(at 54.61 65.913 0)
+			(at 60.96 73.66 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12870,71 +12881,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+12V")
-		(at 250.19 82.55 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "c981b494-de06-4e97-a8ae-493003501a49")
-		(property "Reference" "#PWR09"
-			(at 250.19 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+12V"
-			(at 250.5583 78.2256 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 250.19 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 250.19 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 250.19 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "84e3710a-2546-415a-bb6c-325f7dd12143")
-		)
-		(instances
-			(project "NB3_charger"
-				(path "/865a6659-88ab-4157-bbc8-8818e83bf79d"
-					(reference "#PWR09")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "NB3_charger:AA_Battery_Holder_1028")
 		(at 210.82 74.93 0)
 		(unit 1)
@@ -13137,7 +13083,7 @@
 			)
 		)
 		(property "Value" "1.5K 1%"
-			(at 64.77 69.723 0)
+			(at 71.12 77.47 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13250,7 +13196,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "LED (Green)"
+		(property "Value" "LED (Yellow)"
 			(at 124.8918 55.9308 90)
 			(effects
 				(font
@@ -14292,6 +14238,72 @@
 			(project "NB3_charger"
 				(path "/865a6659-88ab-4157-bbc8-8818e83bf79d"
 					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VDC")
+		(at 250.19 82.55 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "eac02da7-0cbf-4aa5-aa45-11ea919d51de")
+		(property "Reference" "#PWR09"
+			(at 250.19 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VDC"
+			(at 250.19 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 250.19 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 250.19 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VDC\""
+			(at 250.19 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9f8a30ac-d47e-4951-91f1-eb226a438a0e")
+		)
+		(instances
+			(project "NB3_charger"
+				(path "/865a6659-88ab-4157-bbc8-8818e83bf79d"
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
