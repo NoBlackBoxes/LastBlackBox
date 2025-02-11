@@ -8,12 +8,11 @@ LBB : Design : Config
 # Import libraries
 
 # Import modules
-import LBB.Design.box as Box
 
 # Store layout box parameters
-box_fill = "#000000"
-box_border = "#FFFFFF"
-label_size = 1.75
+layout_box_fill     = "#000000"
+layout_box_border   = "#FFFFFF"
+layout_label_size   = 1.75
 
 # Store logo box positions
 logo_box_positions = [[31.111,50.084],

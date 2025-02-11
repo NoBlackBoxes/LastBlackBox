@@ -13,11 +13,11 @@ import LBB.Design.arrow as Arrow
 
 # Box Class
 class Box:
-    def __init__(self, _name, _label, _label_size, _state, _x, _y, _width, _height, _stroke, _fill, _border):
+    def __init__(self, _name, _label, _label_size, _arrow, _x, _y, _width, _height, _stroke, _fill, _border):
         self.name = _name               # Name
         self.label = _label             # Label
         self.label_size = _label_size   # Label size
-        self.state = _state             # State (arrow direction)
+        self.arrow = _arrow             # Arrow (0 = none, 1 = right, -1 = left)
         self.x = _x                     # X position
         self.y = _y                     # Y position
         self.width = _width             # Width
@@ -40,8 +40,8 @@ class Box:
             else:
                 label = Label.Label(self.name, self.label, self.x+self.width/2.0, self.y+1.75/3.0+self.height/2.0, 1.00, "#000000", "Arial", anchor)
             tag.append(label.draw())
-        if self.state != 0:
-            arrow = Arrow.Arrow(self, "DDDDDD", self.state)
+        if self.arrow != 0:
+            arrow = Arrow.Arrow(self, "DDDDDD", self.arrow)
             tag.append(arrow.draw())
         tag.append(f"</g>\n")
         return "".join(tag)

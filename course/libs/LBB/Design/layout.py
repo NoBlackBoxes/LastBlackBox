@@ -13,7 +13,7 @@ import LBB.Design.box as Box
 # Layout Class
 class Layout:
     def __init__(self, _name, _num_rows, _num_cols, _box_names, _box_size, _box_stroke, _box_spacing, _box_fill, _box_border, _with_labels, _with_arrows):
-        self.name = _name                   # Name
+        self.name = _name                   # Layout name
         self.num_rows = _num_rows           # Layout #rows
         self.num_cols = _num_cols           # Layout #columns
         self.x_offset = _box_stroke         # Layout offset (x)

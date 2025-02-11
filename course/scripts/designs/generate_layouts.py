@@ -64,10 +64,10 @@ PNG.PNG(svg.name, dpi=600).convert(svg_path, png_path)
 # ----------------
 # Animated (hover)
 # ----------------
-#box_parameters_path = f"{Config.course_root}/_resources/designs/logo/box_parameters_LBB.csv"
-#animation_parameters_path = f"{output_folder}/animation_parameters_position_hover.csv"
-#svg = SVG.SVG("layout_animated_hover", None, 100, 100, "0 0 100 100", _with_profile=False, _with_title=False, _with_labels=True)
-#svg_path = f"{output_folder}/animated/{svg.name}.svg"
-#svg.animate(box_parameters_path, animation_parameters_path, True, False, True, svg_path)
+layout = Layout.Layout("LBB", 4, 7, Config.box_names, 13.0, 0.125, 1.25, "#000000", "#FFFFFF", True, True)
+animation_parameters_path = f"{output_folder}/animation_parameters_position_hover.csv"
+svg = SVG.SVG("layout_animated_hover", None, 100, 100, "0 0 100 100", layout.boxes, _with_profile=False, _with_title=False, _with_labels=True)
+svg_path = f"{output_folder}/animated/{svg.name}.svg"
+svg.animate(animation_parameters_path, True, False, True, svg_path)
 
 #FIN

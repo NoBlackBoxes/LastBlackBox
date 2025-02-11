@@ -7,6 +7,7 @@ Design: SVG Class
 
 # Import libraries
 import numpy as np
+import copy
 
 # Import modules
 import LBB.Design.profile as Profile
@@ -33,6 +34,7 @@ class SVG:
         self.write_headers(svg_file)
         self.write_profile(svg_file)
         box_offset = self.get_offset()
+        print(box_offset)
         self.write_boxes(box_offset, svg_file)
         self.write_title(svg_file)
         self.write_footer(svg_file)
@@ -40,13 +42,12 @@ class SVG:
         return
 
     # Create animated SVG
-    def animate(self, box_parameters_path, animation_parameters_path, hover, repeat, transform, output_path):
+    def animate(self, animation_parameters_path, hover, repeat, transform, output_path):
         svg_file = open(output_path, "w")
         self.write_headers(svg_file)
         self.write_profile(svg_file)
         box_offset = self.get_offset()
-        box_parameters = np.genfromtxt(box_parameters_path, delimiter=",", dtype=str, comments='##')
-        self.write_boxes(box_parameters, box_offset, svg_file)
+        self.write_boxes(box_offset, svg_file)
         self.write_title(svg_file)
         #Box,start_time,mid_time,end_time,start_x,mid_x,end_x,start_y,mid_y,end_y,start_delay,value#1,start_value#1,mid_value#1,end_value#1,value#2,start_value#2,mid_value#2,end_value#2,...
         animation_parameters = np.genfromtxt(animation_parameters_path, delimiter=",", dtype=str, comments='##')
@@ -84,9 +85,10 @@ class SVG:
     # Write boxes
     def write_boxes(self, box_offset, svg_file):
         for box in self.boxes:
-            box.x = box.x + box_offset[0]
-            box.y = box.y + box_offset[1]
-            tag = box.draw()
+            this_box = copy.deepcopy(box)
+            this_box.x = this_box.x + box_offset[0]
+            this_box.y = this_box.y + box_offset[1]
+            tag = this_box.draw()
             ret = svg_file.write(tag)
         return
 

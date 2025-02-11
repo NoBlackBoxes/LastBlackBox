@@ -14,3 +14,6 @@ All measurements at 5 Volts, USB power
 2 seconds, 3 revolutions = 90 RPM
 (requires mounting spacer for snug fit using 12 mm standoffs)
  - Should move mounting holes out towards edge by a little more than the thickness of a dupont connector
+
+## FT90MR
+- T.B.D.

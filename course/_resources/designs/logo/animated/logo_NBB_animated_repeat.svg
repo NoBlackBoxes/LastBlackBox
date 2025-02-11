@@ -27,29 +27,29 @@
 <g id="Circuits" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
 	<rect class="box" id="box_Circuits" x="68.657" y="34.046" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
-<g id="Power" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
-	<rect class="box" id="box_Power" x="63.446" y="29.572" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
-</g>
 <g id="Data" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
-	<rect class="box" id="box_Data" x="58.531" y="25.627" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<rect class="box" id="box_Data" x="63.446" y="29.572" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
 <g id="Logic" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
-	<rect class="box" id="box_Logic" x="49.949" y="23.757" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<rect class="box" id="box_Logic" x="58.531" y="25.627" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
 <g id="Memory" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
-	<rect class="box" id="box_Memory" x="55.655" y="36.185" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<rect class="box" id="box_Memory" x="49.949" y="23.757" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
-<g id="FPGAs" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#000000;font-size:0.0px;">
-	<rect class="box" id="box_FPGAs" x="45.271" y="32.576" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+<g id="FPGAs" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_FPGAs" x="55.655" y="36.185" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
-<g id="Computers" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
-	<rect class="box" id="box_Computers" x="40.460" y="22.821" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+<g id="Computers" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Computers" x="45.271" y="32.576" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
 <g id="Control" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
-	<rect class="box" id="box_Control" x="30.438" y="24.826" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<rect class="box" id="box_Control" x="40.460" y="22.821" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
 <g id="Robotics" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
-	<rect class="box" id="box_Robotics" x="35.347" y="34.227" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<rect class="box" id="box_Robotics" x="30.438" y="24.826" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+</g>
+<g id="Power" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Power" x="35.347" y="34.227" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
 <g id="Systems" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
 	<rect class="box" id="box_Systems" x="29.536" y="38.456" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
