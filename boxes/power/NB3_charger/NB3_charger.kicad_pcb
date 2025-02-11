@@ -168,7 +168,7 @@
 			)
 		)
 		(property "Value" "1028"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "c0d20957-4445-4765-98b7-ce34fefafd07")
 			(effects
@@ -179,7 +179,7 @@
 			)
 		)
 		(property "Footprint" "NB3_charger:AA_Battery_Holder_1028"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cf650eb7-df78-4eeb-bba7-01d5ee299cf4")
@@ -191,7 +191,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c8ac2bf8-b6cd-40cc-b45f-9d3bccd0ecc8")
@@ -203,7 +203,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "44422b87-8a02-43e5-8b53-42d12c475abf")
@@ -522,7 +522,7 @@
 		(descr "Through hole straight pin header, 1x02, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x02 2.54mm single row")
 		(property "Reference" "J4"
-			(at 1 -3.225 360)
+			(at 1 -3.225 0)
 			(layer "F.SilkS")
 			(uuid "c1443253-fed6-4814-9b5d-0af4f213b3a8")
 			(effects
@@ -738,7 +738,7 @@
 			(uuid "b9437e78-9802-4816-836e-c1d1e5ce0c59")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 1.27 360)
+			(at 0 1.27 0)
 			(layer "F.Fab")
 			(uuid "3f615cd4-5340-40ee-9353-ee93b5575b44")
 			(effects
@@ -851,7 +851,7 @@
 			)
 		)
 		(property "Field4" "Digikey"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8b50f029-0808-42ff-86cc-91a38dc512f5")
@@ -863,7 +863,7 @@
 			)
 		)
 		(property "Field5" "490-14381-1-ND"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "732f3376-f131-4f52-96c1-e5f44ce04769")
@@ -875,7 +875,7 @@
 			)
 		)
 		(property "Field6" "GRM21BR71A106KA73L"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f6e683db-bade-445c-ac58-250b8b351f1c")
@@ -887,7 +887,7 @@
 			)
 		)
 		(property "Field7" "Murata"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "eb583c35-4055-4b67-867d-298966fc751a")
@@ -899,7 +899,7 @@
 			)
 		)
 		(property "Field8" "111893011"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3fafd36c-078e-44db-b1e1-2e196623225f")
@@ -911,7 +911,7 @@
 			)
 		)
 		(property "Part Description" "	10uF 10% 10V Ceramic Capacitor X7R 0805 (2012 Metric)"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6a5efae1-dca7-452a-8597-493f86449634")
@@ -1074,7 +1074,7 @@
 		(at 56.468926 33.524941 180)
 		(descr "Thermistor NTC")
 		(property "Reference" "T1"
-			(at 0 -2.660605 360)
+			(at 0 -2.660605 0)
 			(layer "F.SilkS")
 			(uuid "0dd42dd1-2561-4865-a692-ef89047c55c3")
 			(effects
@@ -1085,7 +1085,7 @@
 			)
 		)
 		(property "Value" "NTCG163JF103FT1"
-			(at 0 2.660605 360)
+			(at 0 2.660605 0)
 			(layer "F.Fab")
 			(uuid "5849edd9-b55a-40d6-b8a3-a0930b986754")
 			(effects
@@ -1096,7 +1096,7 @@
 			)
 		)
 		(property "Footprint" "NB3_charger:Thermistor_NTC_NTCG163JF103FT1"
-			(at 0 7 360)
+			(at 0 7 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3aaa9dd6-a95a-42b5-95f8-74d935dc8c3a")
@@ -1108,7 +1108,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "88ad9580-f7fc-42d9-938a-f9aeadd14076")
@@ -1120,7 +1120,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "dc4d603a-b420-4192-89c8-d296c5ab029e")
@@ -1220,7 +1220,7 @@
 			(uuid "b28aa877-141f-47cd-bf56-b2db29fe2184")
 		)
 		(fp_text user "REF**"
-			(at 0 4.660605 360)
+			(at 0 4.660605 0)
 			(layer "F.Fab")
 			(uuid "2bebee56-94a5-4dbf-bac6-b27bcc5276a8")
 			(effects
@@ -1267,7 +1267,7 @@
 		(descr "Resistor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R2"
-			(at 0 -1.17 360)
+			(at 0 -1.17 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "806a2e8e-32b6-4157-9ee3-194c3e499322")
@@ -1279,7 +1279,7 @@
 			)
 		)
 		(property "Value" "10R"
-			(at 0 1.17 360)
+			(at 0 1.17 0)
 			(layer "F.Fab")
 			(uuid "2044c968-40f2-4e2b-b3b9-e6472192bb3b")
 			(effects
@@ -1329,7 +1329,7 @@
 			)
 		)
 		(property "Field4" "Farnell"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5759b8cd-dca9-4af0-8d41-897cc3ba5433")
@@ -1341,7 +1341,7 @@
 			)
 		)
 		(property "Field5" "9238999"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "da600959-f9ee-4b38-bf1d-19a5f95d2ed9")
@@ -1353,7 +1353,7 @@
 			)
 		)
 		(property "Field6" "RC0402FR-0710RL"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "bf2c0150-d397-4924-8c61-a4ada87ae3b2")
@@ -1365,7 +1365,7 @@
 			)
 		)
 		(property "Field7" "Yageo"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3ab03a63-c6ce-4d35-b51c-bc3792879a74")
@@ -1377,7 +1377,7 @@
 			)
 		)
 		(property "Field8" "URES00256"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "15e04f75-a57c-4fc7-9d96-68deb1acb152")
@@ -1389,7 +1389,7 @@
 			)
 		)
 		(property "Part Description" "Resistor 10R M1005 1% 63mW"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "25733679-f582-4220-95d0-13c30613874e")
@@ -1486,7 +1486,7 @@
 			(uuid "23cff8fd-4f34-4bda-9473-287fdf6782ff")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "85018fe6-b2fd-4fc6-8478-163fd791c1b8")
 			(effects
@@ -1533,7 +1533,7 @@
 		(descr "Resistor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R6"
-			(at 0 -1.17 360)
+			(at 0 -1.17 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "3afcb142-ae95-4974-9711-b190ae18ef6b")
@@ -1700,7 +1700,7 @@
 			(uuid "a873de04-5727-4052-818d-f521ab1dc2fc")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "636cc1c6-743f-4a32-a3b0-17cbca567455")
 			(effects
@@ -1809,7 +1809,7 @@
 			)
 		)
 		(property "Field4" "Digikey"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "977bbc3e-9658-4220-8e65-fff9b086e143")
@@ -1821,7 +1821,7 @@
 			)
 		)
 		(property "Field5" "490-10505-1-ND"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f27bcf11-a66f-493f-99ca-d6f7be30a8ac")
@@ -1833,7 +1833,7 @@
 			)
 		)
 		(property "Field6" "GRM21BC8YA106KE11L "
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2659b5e6-3238-42c7-83b3-8ebb8fd70bca")
@@ -1845,7 +1845,7 @@
 			)
 		)
 		(property "Field7" "Murata"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d9fde0c7-1ba9-4764-849f-a1ef6b5ebbca")
@@ -1857,7 +1857,7 @@
 			)
 		)
 		(property "Field8" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "557de23f-6e24-4a83-8ae7-7675b3d153db")
@@ -1869,7 +1869,7 @@
 			)
 		)
 		(property "Part Description" "	10uF 10% or 20% 35V Ceramic Capacitor X6S 0805 (2012 Metric)"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "594a6ddf-2bea-4cae-ba32-f8c959dff8bc")
@@ -2504,7 +2504,7 @@
 		(descr "Through hole straight pin header, 1x02, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x02 2.54mm single row")
 		(property "Reference" "J5"
-			(at -3 1.275 360)
+			(at -3 1.275 0)
 			(layer "F.SilkS")
 			(uuid "6ab76a29-c7c4-420e-a170-07a0151ef159")
 			(effects
@@ -2515,7 +2515,7 @@
 			)
 		)
 		(property "Value" "Conn_01x02_Pin"
-			(at 0 4.87 360)
+			(at 0 4.87 0)
 			(layer "F.Fab")
 			(uuid "7af4b0eb-1580-469a-b02e-4daa5412ae49")
 			(effects
@@ -2781,7 +2781,7 @@
 			)
 		)
 		(property "Value" "1028"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "be8934ca-9caa-4cfc-a9ed-7460e2b9b273")
 			(effects
@@ -2792,7 +2792,7 @@
 			)
 		)
 		(property "Footprint" "NB3_charger:AA_Battery_Holder_1028"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a0eed6b9-2681-48b5-ad8a-17d366e71c04")
@@ -2804,7 +2804,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4ee110f5-1b49-4a4c-a80a-59c2af72688f")
@@ -2816,7 +2816,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f37873c0-dfe8-4b73-a521-16d0cfb52a9d")
@@ -3135,7 +3135,7 @@
 		(descr "Mounting Hole 2.7mm, M2.5, ISO7380")
 		(tags "mounting hole 2.7mm m2.5 iso7380")
 		(property "Reference" "H3"
-			(at 0 -3.25 360)
+			(at 0 -3.25 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "45dda44b-8f3e-4cdb-86c5-e49e94999a36")
@@ -3147,7 +3147,7 @@
 			)
 		)
 		(property "Value" "MountingHole"
-			(at 0 3.25 360)
+			(at 0 3.25 0)
 			(layer "F.Fab")
 			(uuid "8dd357b3-5779-4002-ba06-0d37e9935a83")
 			(effects
@@ -3224,7 +3224,7 @@
 			(uuid "9945b486-95c4-40ce-bd98-5f8b726ec03a")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "a157d3e0-1038-4790-baf1-8e1971675b68")
 			(effects
@@ -3250,7 +3250,7 @@
 		(descr "Mounting Hole 2.7mm, M2.5, ISO7380")
 		(tags "mounting hole 2.7mm m2.5 iso7380")
 		(property "Reference" "H2"
-			(at 0 -3.25 360)
+			(at 0 -3.25 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "9d37faee-6697-41dd-bf2f-a07e8fa3fb76")
@@ -3262,7 +3262,7 @@
 			)
 		)
 		(property "Value" "MountingHole"
-			(at 0 3.25 360)
+			(at 0 3.25 0)
 			(layer "F.Fab")
 			(uuid "fa80a3be-9361-4376-8cb1-a8e9997c7787")
 			(effects
@@ -3339,7 +3339,7 @@
 			(uuid "d7217cc0-4c8e-4647-aae2-5cd19ac1411d")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "4069014e-4f8b-4d5e-a58b-26ae583b2d0d")
 			(effects
@@ -3365,7 +3365,7 @@
 		(descr "Through hole straight pin header, 1x02, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x02 2.54mm single row")
 		(property "Reference" "J6"
-			(at 3 1.275 360)
+			(at 3 1.275 0)
 			(layer "F.SilkS")
 			(uuid "c665a25f-6953-453f-849e-a9718fa873cf")
 			(effects
@@ -3376,7 +3376,7 @@
 			)
 		)
 		(property "Value" "Conn_01x02_Pin"
-			(at 0 4.87 360)
+			(at 0 4.87 0)
 			(layer "F.Fab")
 			(uuid "5423b023-3a45-4a2f-9fcf-32581346a509")
 			(effects
@@ -3694,7 +3694,7 @@
 			)
 		)
 		(property "Field4" "Digikey"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f3002d57-78d7-45a2-909e-e09e01e431af")
@@ -3706,7 +3706,7 @@
 			)
 		)
 		(property "Field5" "490-10505-1-ND"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1f45d377-6a42-4c45-8db7-ab50818aaf07")
@@ -3718,7 +3718,7 @@
 			)
 		)
 		(property "Field6" "GRM21BC8YA106KE11L "
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4057ea05-44bc-4401-a146-e2defe6ee4af")
@@ -3730,7 +3730,7 @@
 			)
 		)
 		(property "Field7" "Murata"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2d066588-748b-4c0c-bc78-2a2b5fddf84a")
@@ -3742,7 +3742,7 @@
 			)
 		)
 		(property "Field8" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "05f1f6d6-cd48-44d3-bf1c-ee7a35b2502c")
@@ -3754,7 +3754,7 @@
 			)
 		)
 		(property "Part Description" "	10uF 10% or 20% 35V Ceramic Capacitor X6S 0805 (2012 Metric)"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "178707fc-3ce8-4102-a292-5978e61af6a4")
@@ -3980,7 +3980,7 @@
 			)
 		)
 		(property "Field4" "Digikey"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "97869e3a-6424-4f23-8d2b-c4c07599ce82")
@@ -3992,7 +3992,7 @@
 			)
 		)
 		(property "Field5" "490-14381-1-ND"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "36744307-be7c-43da-8800-41eda884adf1")
@@ -4004,7 +4004,7 @@
 			)
 		)
 		(property "Field6" "GRM21BR71A106KA73L"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4f330c4e-2ecd-4c34-859f-45058987452d")
@@ -4016,7 +4016,7 @@
 			)
 		)
 		(property "Field7" "Murata"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a527b309-78ae-4f8f-bf8f-0209fd4c9420")
@@ -4028,7 +4028,7 @@
 			)
 		)
 		(property "Field8" "111893011"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "67d51a9d-1845-4623-a5c6-473f1455fbff")
@@ -4040,7 +4040,7 @@
 			)
 		)
 		(property "Part Description" "	10uF 10% 10V Ceramic Capacitor X7R 0805 (2012 Metric)"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5cbde278-ca37-491f-b453-bade22520e0b")
@@ -4204,7 +4204,7 @@
 		(descr "Resistor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R3"
-			(at 2.5 -0.05 360)
+			(at 2.5 -0.05 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "7f146559-8dfe-403f-8228-aa5e2215b026")
@@ -4216,7 +4216,7 @@
 			)
 		)
 		(property "Value" "20K 1%"
-			(at 0 1.35 360)
+			(at 0 1.35 0)
 			(layer "F.Fab")
 			(uuid "70fc6fee-658c-461d-bfe2-9387b72b07bf")
 			(effects
@@ -4266,7 +4266,7 @@
 			)
 		)
 		(property "Field4" "Farnell"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b1232247-0d42-43ec-b748-9464c2363d0e")
@@ -4278,7 +4278,7 @@
 			)
 		)
 		(property "Field5" "2331485"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "327c11a8-d33e-4b49-a28e-9385d47e6a54")
@@ -4290,7 +4290,7 @@
 			)
 		)
 		(property "Field6" "RK73H1ETTP2002F"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fba608ff-03d4-4aba-b0d1-3df8ef8c61e3")
@@ -4302,7 +4302,7 @@
 			)
 		)
 		(property "Field7" "KOA EUROPE GMBH"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0ce3e366-d24d-4703-878d-a4862e7b22c1")
@@ -4314,7 +4314,7 @@
 			)
 		)
 		(property "Part Description" "Resistor 20K M1005 1% 63mW"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1a9fb43a-264f-4e14-8493-7ef15caf3ddd")
@@ -4411,7 +4411,7 @@
 			(uuid "8dd841d5-4872-494e-a84f-b03bf90f762b")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "9bc2d0b2-0789-455e-886b-b0bf5a3b567b")
 			(effects
@@ -4468,7 +4468,7 @@
 			)
 		)
 		(property "Value" "1028"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "ebaaba3f-b48b-4bb4-90e9-3b83e4014936")
 			(effects
@@ -4479,7 +4479,7 @@
 			)
 		)
 		(property "Footprint" "NB3_charger:AA_Battery_Holder_1028"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b1c1ad9d-5963-4a42-9b30-97fa3428cead")
@@ -4491,7 +4491,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d0642527-3ad9-4208-b9ac-48b42c89c15f")
@@ -4503,7 +4503,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "956ed5f4-419c-4702-b09c-2a52289c0972")
@@ -5067,7 +5067,7 @@
 		(descr "Resistor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R1"
-			(at 2 0 360)
+			(at 2 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "2b0f34cf-edef-4f28-982a-f8ef96f37e06")
@@ -5234,7 +5234,7 @@
 			(uuid "2b3f739c-63c6-4c1f-8edf-b7e496cb7c81")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "13467965-e506-4198-993b-0abc89fa9a78")
 			(effects
@@ -5660,7 +5660,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C18"
-			(at 0 -1.68 360)
+			(at 0 -1.68 0)
 			(layer "F.SilkS")
 			(uuid "29bf3869-cefb-4822-bfdf-9444f6ae87a9")
 			(effects
@@ -5671,7 +5671,7 @@
 			)
 		)
 		(property "Value" "10uF"
-			(at 0 1.68 360)
+			(at 0 1.68 0)
 			(layer "F.Fab")
 			(uuid "1873cca3-2027-48d0-916a-f02031177a78")
 			(effects
@@ -5904,7 +5904,7 @@
 			(uuid "b427e37c-229e-4f9e-a892-573987ab6c87")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "54dd19ea-c11e-4aea-a440-5062128e73db")
 			(effects
@@ -5961,7 +5961,7 @@
 			)
 		)
 		(property "Value" "1028"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "f3efcb17-1453-47be-9299-84f7e4bcbd57")
 			(effects
@@ -5972,7 +5972,7 @@
 			)
 		)
 		(property "Footprint" "NB3_charger:AA_Battery_Holder_1028"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b73d3844-bc1c-41c4-bc8c-ffe8579ac033")
@@ -5984,7 +5984,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "155f5665-fdb2-4fa7-a7f5-1640f23d9422")
@@ -5996,7 +5996,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6a8da1b7-06c3-4aa0-ba29-25f66c31e0a0")
@@ -6312,7 +6312,7 @@
 		(uuid "6ed3b8be-4db6-4d54-a713-a8c1c3808627")
 		(at 98.700216 170.626746 90)
 		(property "Reference" "SW1"
-			(at -5.5 0 360)
+			(at -5.5 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "5cde555f-d690-4291-95e1-b6dffa086d1e")
@@ -6565,7 +6565,7 @@
 		(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C10"
-			(at -2.5 -0.05 360)
+			(at -2.5 -0.05 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "3e93fb54-edda-4a84-ba4d-e7238fce8f7c")
@@ -6577,7 +6577,7 @@
 			)
 		)
 		(property "Value" "1.2nF"
-			(at 0 1.17 360)
+			(at 0 1.17 0)
 			(layer "F.Fab")
 			(uuid "fd503e56-e5ac-49f3-9583-a70a705ed9d1")
 			(effects
@@ -6627,7 +6627,7 @@
 			)
 		)
 		(property "Field4" "Digikey"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "bf9696a7-928f-4e85-b975-c6d7504d360f")
@@ -6639,7 +6639,7 @@
 			)
 		)
 		(property "Field5" "490-16429-1-ND"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "df585cde-cfbb-4784-9b57-e4db1d061625")
@@ -6651,7 +6651,7 @@
 			)
 		)
 		(property "Field6" "GCM155R71H122KA37D"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9cfd2429-0dbd-4eda-9dcd-22cccb93a7c6")
@@ -6663,7 +6663,7 @@
 			)
 		)
 		(property "Field7" "Murata"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "de36ccd1-9d6c-4315-8fd6-0221a2e696ea")
@@ -6675,7 +6675,7 @@
 			)
 		)
 		(property "Part Description" "1200pF 10% 10V Ceramic Capacitor X5R 0402 (1005 Metric)"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "279e1303-98f2-4da8-9e35-ab3a0d3ca09f")
@@ -6772,7 +6772,7 @@
 			(uuid "1d814437-33c6-40ea-a034-03e8848bd4f5")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "279dbbb2-7c64-4209-ae69-f823a328d9ad")
 			(effects
@@ -6881,7 +6881,7 @@
 			)
 		)
 		(property "Field4" "Digikey"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b2ed02e1-2e27-4389-baf4-9f9a1b8690e1")
@@ -6893,7 +6893,7 @@
 			)
 		)
 		(property "Field5" "490-10505-1-ND"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "50b4b85d-b3e3-46e4-8a64-78faa6ec7971")
@@ -6905,7 +6905,7 @@
 			)
 		)
 		(property "Field6" "GRM21BC8YA106KE11L "
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6efc707e-04b9-4408-b3dd-a0662579000e")
@@ -6917,7 +6917,7 @@
 			)
 		)
 		(property "Field7" "Murata"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e09d608d-a9ca-4e9c-a308-b6b9c819d841")
@@ -6929,7 +6929,7 @@
 			)
 		)
 		(property "Field8" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0d68cf4c-5c95-4bc9-ae6b-31dc390133e9")
@@ -6941,7 +6941,7 @@
 			)
 		)
 		(property "Part Description" "	10uF 10% or 20% 35V Ceramic Capacitor X6S 0805 (2012 Metric)"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9dae0440-114c-44d1-aa65-9c68fd433679")
@@ -7105,7 +7105,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C19"
-			(at 0 -1.68 360)
+			(at 0 -1.68 0)
 			(layer "F.SilkS")
 			(uuid "4dc93a18-16ad-4db9-a0de-6437c490ec87")
 			(effects
@@ -7116,7 +7116,7 @@
 			)
 		)
 		(property "Value" "10uF 35v"
-			(at 0 1.68 360)
+			(at 0 1.68 0)
 			(layer "F.Fab")
 			(uuid "f2de8134-0b70-4705-b305-1e276a55069c")
 			(effects
@@ -7349,7 +7349,7 @@
 			(uuid "e2b7857c-d0f7-44b5-9395-d75a8cfda4b0")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "dbafb450-75c3-4539-bb54-6b41658dd13d")
 			(effects
@@ -7397,7 +7397,7 @@
 		(descr "Through hole straight pin header, 1x02, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x02 2.54mm single row")
 		(property "Reference" "J3"
-			(at -1 -3.225 360)
+			(at -1 -3.225 0)
 			(layer "F.SilkS")
 			(uuid "b7860637-a3a7-4dfb-bc33-c5a1934ea65b")
 			(effects
@@ -7613,7 +7613,7 @@
 			(uuid "18f8c4d0-7309-4d63-a1cd-86b63a9f0308")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 1.27 360)
+			(at 0 1.27 0)
 			(layer "F.Fab")
 			(uuid "5e4f74da-7efe-42d1-a556-3056c648dd25")
 			(effects
@@ -7664,7 +7664,7 @@
 		(descr "Resistor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R11"
-			(at 0 -1.17 360)
+			(at 0 -1.17 0)
 			(layer "F.SilkS")
 			(uuid "70ad6f2b-642f-4f45-9964-19890273df05")
 			(effects
@@ -7675,7 +7675,7 @@
 			)
 		)
 		(property "Value" "15K 1%"
-			(at 0 1.17 360)
+			(at 0 1.17 0)
 			(layer "F.Fab")
 			(uuid "bb28916c-ae80-4fe7-b6fe-a90a2fc309d5")
 			(effects
@@ -7895,7 +7895,7 @@
 			(uuid "ed8a48e7-8039-4e54-b6db-dc6b8f4bc172")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "bc00f583-1c79-4d7d-ba7c-98694009d57b")
 			(effects
@@ -8004,7 +8004,7 @@
 			)
 		)
 		(property "Field4" "Digikey"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "bf5f494f-5350-48ba-a4cd-697cf01cea46")
@@ -8016,7 +8016,7 @@
 			)
 		)
 		(property "Field5" "490-10505-1-ND"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "caf216f4-f22d-4ce2-a905-a00e6ba84471")
@@ -8028,7 +8028,7 @@
 			)
 		)
 		(property "Field6" "GRM21BC8YA106KE11L "
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "75a220a3-088d-4abd-bfae-575e5a966c42")
@@ -8040,7 +8040,7 @@
 			)
 		)
 		(property "Field7" "Murata"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "86cbadea-cfdb-4865-a2e2-bb7cbcf1d121")
@@ -8052,7 +8052,7 @@
 			)
 		)
 		(property "Field8" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5c3700cd-fe22-47a7-9aa7-1561a1e09092")
@@ -8064,7 +8064,7 @@
 			)
 		)
 		(property "Part Description" "	10uF 10% or 20% 35V Ceramic Capacitor X6S 0805 (2012 Metric)"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ec0cb37c-55e7-420b-84d6-2888eedd5f78")
@@ -8290,7 +8290,7 @@
 			)
 		)
 		(property "Field4" "Digikey"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fe3e3b58-6f57-4858-85c8-b5424426841c")
@@ -8302,7 +8302,7 @@
 			)
 		)
 		(property "Field5" "490-14381-1-ND"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5c7c3adc-f216-4f9d-8160-2716eca01dae")
@@ -8314,7 +8314,7 @@
 			)
 		)
 		(property "Field6" "GRM21BR71A106KA73L"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9094527b-3539-4551-b48c-4a562d0c0f36")
@@ -8326,7 +8326,7 @@
 			)
 		)
 		(property "Field7" "Murata"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fa5a311f-323d-4e0a-af7d-0a9294b57753")
@@ -8338,7 +8338,7 @@
 			)
 		)
 		(property "Field8" "111893011"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "564fe019-a3d6-4618-a368-f9114b3cb6d5")
@@ -8350,7 +8350,7 @@
 			)
 		)
 		(property "Part Description" "	10uF 10% 10V Ceramic Capacitor X7R 0805 (2012 Metric)"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5718c9de-c5aa-4765-8907-110bdea196a4")
@@ -8812,7 +8812,7 @@
 			)
 		)
 		(property "Field4" "Digikey"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5770c9f2-ec35-436b-a1ba-8a008681f57e")
@@ -8824,7 +8824,7 @@
 			)
 		)
 		(property "Field5" "490-10505-1-ND"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2052d468-2ecc-431e-9551-eda87ec37881")
@@ -8836,7 +8836,7 @@
 			)
 		)
 		(property "Field6" "GRM21BC8YA106KE11L "
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f5b4c97a-67ac-4108-bd3e-652003f779a4")
@@ -8848,7 +8848,7 @@
 			)
 		)
 		(property "Field7" "Murata"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f385f2ba-40e0-42c3-9dcc-7d327a3c4fa2")
@@ -8860,7 +8860,7 @@
 			)
 		)
 		(property "Field8" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c1808c36-a68d-4a28-91cc-0f93252394cd")
@@ -8872,7 +8872,7 @@
 			)
 		)
 		(property "Part Description" "	10uF 10% or 20% 35V Ceramic Capacitor X6S 0805 (2012 Metric)"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c1ec0785-b468-4884-9ef9-3bade12e72aa")
@@ -9098,7 +9098,7 @@
 			)
 		)
 		(property "Field4" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0544edae-a7fd-4dcb-8fec-683473fa67f7")
@@ -9110,7 +9110,7 @@
 			)
 		)
 		(property "Field5" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "56777c78-2d50-4b4b-be4d-3be8fce18967")
@@ -9122,7 +9122,7 @@
 			)
 		)
 		(property "Field6" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "eeeeb16b-b117-4e4f-8366-4cb26cf6f343")
@@ -9134,7 +9134,7 @@
 			)
 		)
 		(property "Field7" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9862aa7f-bcbd-48b4-9c00-f764c919a333")
@@ -9146,7 +9146,7 @@
 			)
 		)
 		(property "Part Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ff93ea73-2127-4b5b-b4ac-40ab08291cdc")
@@ -9290,7 +9290,7 @@
 		(descr "Resistor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R10"
-			(at 0 -1.17 360)
+			(at 0 -1.17 0)
 			(layer "F.SilkS")
 			(uuid "07718c0d-a967-48af-bf58-88ff2262a822")
 			(effects
@@ -9301,7 +9301,7 @@
 			)
 		)
 		(property "Value" "15K 1%"
-			(at 0 1.17 360)
+			(at 0 1.17 0)
 			(layer "F.Fab")
 			(uuid "86ad9442-8d26-4069-b4da-0f45e474c7e8")
 			(effects
@@ -9521,7 +9521,7 @@
 			(uuid "5ca01a93-6191-4434-994d-e4ef59170d03")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "e5f2bb34-d47f-4dd2-a801-64328a562769")
 			(effects
@@ -9578,7 +9578,7 @@
 			)
 		)
 		(property "Value" "1028"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "6dc0de8c-d40a-4ad1-b1a0-48f40398c795")
 			(effects
@@ -9589,7 +9589,7 @@
 			)
 		)
 		(property "Footprint" "NB3_charger:AA_Battery_Holder_1028"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6e594eca-bcc8-42d2-a102-304116d04797")
@@ -9601,7 +9601,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7121fd78-2e64-4cd7-9af0-e11463eb216e")
@@ -9613,7 +9613,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a9db85ef-5d20-448c-b12a-b9666e2745bd")
@@ -9932,7 +9932,7 @@
 		(descr "Mounting Hole 2.7mm, M2.5, ISO7380")
 		(tags "mounting hole 2.7mm m2.5 iso7380")
 		(property "Reference" "H4"
-			(at 0 -3.25 360)
+			(at 0 -3.25 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "f30e8dce-e280-4ab7-bb36-35bb9c87ffda")
@@ -9944,7 +9944,7 @@
 			)
 		)
 		(property "Value" "MountingHole"
-			(at 0 3.25 360)
+			(at 0 3.25 0)
 			(layer "F.Fab")
 			(uuid "a83440e3-473d-4255-9438-879799b37ba7")
 			(effects
@@ -10021,7 +10021,7 @@
 			(uuid "1ffaaaf1-f9a6-4d8a-8b34-5ec04d247ac5")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "d7683f10-4b07-43c7-9a5e-75fc4af463a7")
 			(effects
@@ -10046,7 +10046,7 @@
 		(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C7"
-			(at 0 -1.17 360)
+			(at 0 -1.17 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "02436c46-77cb-4eac-9338-533431e9a6aa")
@@ -10058,7 +10058,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 0 1.17 360)
+			(at 0 1.17 0)
 			(layer "F.Fab")
 			(uuid "64b4180e-8115-45b4-9f04-8bff04f89338")
 			(effects
@@ -10108,7 +10108,7 @@
 			)
 		)
 		(property "Field4" "Farnell"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a7aaf91c-5c38-417c-a120-4dac83520e1a")
@@ -10120,7 +10120,7 @@
 			)
 		)
 		(property "Field5" "2611911"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8e0945c8-ccee-4b57-9ea7-4d0bec643be6")
@@ -10132,7 +10132,7 @@
 			)
 		)
 		(property "Field6" "RM EMK105 B7104KV-F"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "59d3c448-6569-4aa9-8ef3-1d2d8f8dcc7b")
@@ -10144,7 +10144,7 @@
 			)
 		)
 		(property "Field7" "TAIYO YUDEN EUROPE GMBH"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d12a70e4-9d76-4cbe-8bcb-370b01d8c4c2")
@@ -10156,7 +10156,7 @@
 			)
 		)
 		(property "Field8" "110091611"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "00a6f6ef-9342-4bdf-b6d3-dad7f01d71b2")
@@ -10168,7 +10168,7 @@
 			)
 		)
 		(property "Part Description" "	0.1uF 10% 16V Ceramic Capacitor X7R 0402 (1005 Metric)"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9043e1a9-c223-4045-b40f-71d58781687b")
@@ -10265,7 +10265,7 @@
 			(uuid "fd8347c4-c393-4462-a96c-3e24190c6334")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "54a1a76f-32fa-4085-8668-f7b30672460f")
 			(effects
@@ -10312,7 +10312,7 @@
 		(descr "Resistor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R7"
-			(at 0 -1.17 360)
+			(at 0 -1.17 0)
 			(layer "F.SilkS")
 			(uuid "60d8ce4d-dd09-4d59-aa6a-24c600316d07")
 			(effects
@@ -10323,7 +10323,7 @@
 			)
 		)
 		(property "Value" "5.6k"
-			(at 0 1.17 360)
+			(at 0 1.17 0)
 			(layer "F.Fab")
 			(uuid "e905fe8e-5ee2-4fac-a9eb-9a3f2969935e")
 			(effects
@@ -10478,7 +10478,7 @@
 			(uuid "1b4e9beb-22b3-4196-a750-208b63820884")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "e5c20287-1bec-4b66-bef9-e7d3f2681189")
 			(effects
@@ -10525,7 +10525,7 @@
 		(descr "Resistor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R8"
-			(at 0 -1.17 360)
+			(at 0 -1.17 0)
 			(layer "F.SilkS")
 			(uuid "48c21685-4abb-49b8-80d8-3397d1669a0c")
 			(effects
@@ -10536,7 +10536,7 @@
 			)
 		)
 		(property "Value" "3.6K 1%"
-			(at 0 1.17 360)
+			(at 0 1.17 0)
 			(layer "F.Fab")
 			(uuid "883f31be-3ed9-4529-8e7a-4129047d82e5")
 			(effects
@@ -10756,7 +10756,7 @@
 			(uuid "b35af654-6396-4a33-a3cc-d8997d17e96d")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "8a8d5792-efd5-419d-b14c-bf70c3d90b7e")
 			(effects
@@ -10801,7 +10801,7 @@
 		(uuid "a794764b-1226-4dd2-bad4-ff96e68ed303")
 		(at 86.701516 47.1885 180)
 		(property "Reference" "CR1"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.SilkS")
 			(uuid "fe385c03-6394-4e07-984d-7ba429f165ac")
 			(effects
@@ -10812,7 +10812,7 @@
 			)
 		)
 		(property "Value" "Schottky_PMEG3050EP,115"
-			(at 0 3 360)
+			(at 0 3 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "d8805ee8-ee3a-4045-999e-78c70045d770")
@@ -10824,7 +10824,7 @@
 			)
 		)
 		(property "Footprint" "NB3_charger:Schottky_PMEG3050EP,115"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a4a8c014-bbdb-4ddb-b00f-7964637a3ea2")
@@ -10836,7 +10836,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c0edd154-64d2-4344-8426-a4748c2a25e9")
@@ -10848,7 +10848,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "9f7fa1f8-898f-4e2f-ac0f-3450e5b436ed")
@@ -11185,7 +11185,7 @@
 			(uuid "4af15c9e-4f6b-4a7c-8701-3be6f5e81aac")
 		)
 		(fp_text user "*"
-			(at -3.0861 0 360)
+			(at -3.0861 0 0)
 			(layer "F.SilkS")
 			(uuid "571b8225-564a-449a-9f4e-437bcf7fbe83")
 			(effects
@@ -11196,7 +11196,7 @@
 			)
 		)
 		(fp_text user "*"
-			(at -3.0861 0 360)
+			(at -3.0861 0 0)
 			(layer "F.SilkS")
 			(uuid "6902b23f-aa46-4f84-8fb6-df81feafce5c")
 			(effects
@@ -11207,7 +11207,7 @@
 			)
 		)
 		(fp_text user "Copyright 2016 Accelerated Designs. All rights reserved."
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "Cmts.User")
 			(uuid "95e2767c-2f74-49e3-a664-43a4b550984e")
 			(effects
@@ -11218,7 +11218,7 @@
 			)
 		)
 		(fp_text user "*"
-			(at -1.7399 0 360)
+			(at -1.7399 0 0)
 			(layer "F.Fab")
 			(uuid "299ba1a1-26ee-4846-821b-ad5fdbfe0ddc")
 			(effects
@@ -11229,7 +11229,7 @@
 			)
 		)
 		(fp_text user "*"
-			(at -1.7399 0 360)
+			(at -1.7399 0 0)
 			(layer "F.Fab")
 			(uuid "f17065a1-eb9b-41ad-bb86-29587e670da6")
 			(effects
@@ -11272,7 +11272,7 @@
 		(uuid "a7ee5356-059a-4467-942d-3b439af451e3")
 		(at 86.550216 38.9385 180)
 		(property "Reference" "U2"
-			(at 0.925 -2.385 360)
+			(at 0.925 -2.385 0)
 			(layer "F.SilkS")
 			(uuid "b7f2dad2-d354-4d89-bb49-c538e63eec3e")
 			(effects
@@ -11283,7 +11283,7 @@
 			)
 		)
 		(property "Value" "BQ25172DSGR"
-			(at 6.64 2.385 360)
+			(at 6.64 2.385 0)
 			(layer "F.Fab")
 			(uuid "357b827d-4c0a-4e37-8374-6ce70b9a0fcc")
 			(effects
@@ -11294,7 +11294,7 @@
 			)
 		)
 		(property "Footprint" "NB3_charger:NiMH_Charger_BQ25172DSGR"
-			(at 0 5 360)
+			(at 0 5 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "dda4566c-4983-4462-864f-ff168052cce5")
@@ -11306,7 +11306,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3254fe07-312d-4f4b-aa56-a60fe8c5cc49")
@@ -11318,7 +11318,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ed2faae7-8f5c-43f3-b974-29fab465fe2e")
@@ -11706,7 +11706,7 @@
 		(descr "Mounting Hole 2.7mm, M2.5, ISO7380")
 		(tags "mounting hole 2.7mm m2.5 iso7380")
 		(property "Reference" "H1"
-			(at 0 -3.25 360)
+			(at 0 -3.25 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "04a537c7-da94-49bb-8ab9-e5a31ec412c2")
@@ -11718,7 +11718,7 @@
 			)
 		)
 		(property "Value" "MountingHole"
-			(at 0 3.25 360)
+			(at 0 3.25 0)
 			(layer "F.Fab")
 			(uuid "19cf28f0-6b3e-4cc6-8928-e1d18a707ad4")
 			(effects
@@ -11795,7 +11795,7 @@
 			(uuid "4b1f3b1f-af76-4d83-85c5-db0615b4b9e5")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "29b703ad-a191-418b-8f5e-b25a151646fd")
 			(effects
@@ -11818,7 +11818,7 @@
 		(uuid "b5557e96-05fc-4067-be1a-6adc754e85f1")
 		(at 95.835216 39.1385 180)
 		(property "Reference" "Q1"
-			(at 0.24017 -2.30964 360)
+			(at 0.24017 -2.30964 0)
 			(layer "F.SilkS")
 			(uuid "001416a4-371f-42cb-91df-3115baf04c30")
 			(effects
@@ -11829,7 +11829,7 @@
 			)
 		)
 		(property "Value" "PMOS_FDC658AP"
-			(at 5.82944 2.292555 360)
+			(at 5.82944 2.292555 0)
 			(layer "F.Fab")
 			(uuid "78adb92a-2929-4697-9828-1e6525b82c20")
 			(effects
@@ -11840,7 +11840,7 @@
 			)
 		)
 		(property "Footprint" "NB3_charger:PMOS_SMD_FDC658AP"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6395a6c2-a04c-4fe0-96eb-cc04efe49602")
@@ -11852,7 +11852,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8097dc0f-cc00-4028-ae1c-58f886067635")
@@ -11864,7 +11864,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3da0848c-e610-48f4-a158-13e93cc83d12")
@@ -12023,7 +12023,7 @@
 		(descr "Resistor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R4"
-			(at -2.5 -0.1 360)
+			(at -2.5 -0.1 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "966ec951-b049-4411-b9ef-ebfc8caedf82")
@@ -12035,7 +12035,7 @@
 			)
 		)
 		(property "Value" "12K 1%"
-			(at 0 1.17 360)
+			(at 0 1.17 0)
 			(layer "F.Fab")
 			(uuid "6dc9eb47-7994-460a-b88f-949d7bcee4bd")
 			(effects
@@ -12085,7 +12085,7 @@
 			)
 		)
 		(property "Field4" "Farnell"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a5d877a9-23be-40ac-ba32-98883cccd3ef")
@@ -12097,7 +12097,7 @@
 			)
 		)
 		(property "Field5" "9239367"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fee73995-59da-4187-be6e-f555e2fcbe99")
@@ -12109,7 +12109,7 @@
 			)
 		)
 		(property "Field6" "MCR01MZPF1202"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b03c4aad-7932-410e-9de5-149312fc8cf8")
@@ -12121,7 +12121,7 @@
 			)
 		)
 		(property "Field7" "Rohm"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "458cc314-d789-495c-a544-82a07661c6e8")
@@ -12133,7 +12133,7 @@
 			)
 		)
 		(property "Part Description" "Resistor 12K M1005 1% 63mW"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e461c45c-7700-4268-94ff-31bef54864b9")
@@ -12230,7 +12230,7 @@
 			(uuid "025e9c2c-4a4f-4175-8ba9-1e8cbe47ed3e")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "1b70940b-9c04-4993-b581-7a939d8d08c0")
 			(effects
@@ -12339,7 +12339,7 @@
 			)
 		)
 		(property "Field4" "Digikey"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f83dfc0b-cc18-4198-be20-496d2c6ae2df")
@@ -12351,7 +12351,7 @@
 			)
 		)
 		(property "Field5" "490-14381-1-ND"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "dd74ed38-b8f1-4e9c-adc9-b5abd6402968")
@@ -12363,7 +12363,7 @@
 			)
 		)
 		(property "Field6" "GRM21BR71A106KA73L"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "5b5849c9-b995-4b99-8614-0290e3ed8cbc")
@@ -12375,7 +12375,7 @@
 			)
 		)
 		(property "Field7" "Murata"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "69ef264d-972c-474c-a91c-43532d5eb4fb")
@@ -12387,7 +12387,7 @@
 			)
 		)
 		(property "Field8" "111893011"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cca79fc2-1403-4424-847e-28b5a65750d0")
@@ -12399,7 +12399,7 @@
 			)
 		)
 		(property "Part Description" "	10uF 10% 10V Ceramic Capacitor X7R 0805 (2012 Metric)"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "0d9bf970-a7fb-4052-8cb4-fbb29700b610")
@@ -12563,7 +12563,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C17"
-			(at 0 -1.68 360)
+			(at 0 -1.68 0)
 			(layer "F.SilkS")
 			(uuid "602a88a7-0a4a-4313-8066-73eeee048a5e")
 			(effects
@@ -12574,7 +12574,7 @@
 			)
 		)
 		(property "Value" "10uF 35v"
-			(at 0 1.68 360)
+			(at 0 1.68 0)
 			(layer "F.Fab")
 			(uuid "6d3d6944-1264-4582-89af-7308c539c325")
 			(effects
@@ -12807,7 +12807,7 @@
 			(uuid "4e615d75-337d-458c-9d2a-ed5b24b8953b")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "0508e355-615e-414a-a818-c2fe515efec0")
 			(effects
@@ -12916,7 +12916,7 @@
 			)
 		)
 		(property "Field4" "Digikey"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "bf3500d2-244a-4770-8add-11e15777dff1")
@@ -12928,7 +12928,7 @@
 			)
 		)
 		(property "Field5" "490-10505-1-ND"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c80c1185-c7fb-49b9-a218-8f91b516c434")
@@ -12940,7 +12940,7 @@
 			)
 		)
 		(property "Field6" "GRM21BC8YA106KE11L "
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b73b6671-4683-4677-a76b-b97e1e2d8103")
@@ -12952,7 +12952,7 @@
 			)
 		)
 		(property "Field7" "Murata"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1c495143-5c0f-4aa5-a4a6-60b8a70fd652")
@@ -12964,7 +12964,7 @@
 			)
 		)
 		(property "Field8" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "599a7369-0de7-4f89-aed6-8e5149ea03c9")
@@ -12976,7 +12976,7 @@
 			)
 		)
 		(property "Part Description" "	10uF 10% or 20% 35V Ceramic Capacitor X6S 0805 (2012 Metric)"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "dc5ebd49-38ac-4ba1-af26-78f7d845f417")
@@ -13375,7 +13375,7 @@
 		(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C11"
-			(at -2.5 0 360)
+			(at -2.5 0 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "09ce55f8-4436-40bc-8870-227ea977b9b0")
@@ -13387,7 +13387,7 @@
 			)
 		)
 		(property "Value" "1nF"
-			(at 0 1.17 360)
+			(at 0 1.17 0)
 			(layer "F.Fab")
 			(uuid "674214aa-1094-4beb-af55-3a30f9003ed4")
 			(effects
@@ -13437,7 +13437,7 @@
 			)
 		)
 		(property "Field4" "Farnell"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f1c04e5d-fc7d-4458-a5b4-9e116293c0ce")
@@ -13449,7 +13449,7 @@
 			)
 		)
 		(property "Field5" "2666374"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "bd71d0df-9a95-4996-8d5a-3d50f5b6bbc6")
@@ -13461,7 +13461,7 @@
 			)
 		)
 		(property "Field6" "GRM1555C1H221JA01D"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b30c190c-e203-498c-b1f3-01ba074c4be5")
@@ -13473,7 +13473,7 @@
 			)
 		)
 		(property "Field7" "Murata"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3f4c2ca7-a22f-4606-8141-77379ca64c31")
@@ -13485,7 +13485,7 @@
 			)
 		)
 		(property "Part Description" "220 pF, 50 V, 0402 [1005 Metric], ± 5%, C0G / NP0/CH, GCM Series"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "51479312-1e46-44ce-991d-b51102d87b68")
@@ -13582,7 +13582,7 @@
 			(uuid "d67becaf-365d-4dbb-94d6-44c75a2a7e56")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "57fb22d7-74d4-49c6-be6f-53e026aeed61")
 			(effects
@@ -13629,7 +13629,7 @@
 		(descr "http://www.bourns.com/docs/product-datasheets/srn6045ta.pdf")
 		(tags "Semi-shielded Power Inductor")
 		(property "Reference" "L1"
-			(at -0.15 0.1 360)
+			(at -0.15 0.1 0)
 			(layer "F.SilkS")
 			(uuid "a8a5ffae-eaa6-401a-8cb4-c87e24e3da32")
 			(effects
@@ -13691,7 +13691,7 @@
 			)
 		)
 		(property "Field4" "Farnell"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "84394cd1-5837-4cd1-b47e-9b8ed6ff827f")
@@ -13703,7 +13703,7 @@
 			)
 		)
 		(property "Field5" "2616889"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "66275f88-a7a5-472b-8a0b-8a9c299b3c53")
@@ -13715,7 +13715,7 @@
 			)
 		)
 		(property "Field6" "SRN6045TA-3R3Y"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b038b66b-e678-4d47-943a-d856623d4598")
@@ -13727,7 +13727,7 @@
 			)
 		)
 		(property "Field7" "Bourns"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c0069eda-c02b-4e82-8cd1-8c95ac8eabeb")
@@ -13739,7 +13739,7 @@
 			)
 		)
 		(property "Part Description" "3.3µH Semi-Shielded Wirewound Inductor 7.8A 21mOhm Nonstandard"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6b914718-34f0-4dea-89b8-22cb44e384e4")
@@ -13896,7 +13896,7 @@
 			(uuid "5686af83-b7be-4264-a2fd-a8876bb1f66d")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "4a13f0ec-79c4-411e-8c28-ca11d36e6514")
 			(effects
@@ -13943,7 +13943,7 @@
 		(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C8"
-			(at 0 1.8 360)
+			(at 0 1.8 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "bdc873a6-2fc4-44ca-86d3-43288236cdb7")
@@ -13955,7 +13955,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 0 1.17 360)
+			(at 0 1.17 0)
 			(layer "F.Fab")
 			(uuid "2ee5303b-f328-4c59-82e7-98f7c380847f")
 			(effects
@@ -14005,7 +14005,7 @@
 			)
 		)
 		(property "Field4" "Farnell"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "7914a41d-74c6-4a02-8808-07f1dda3c119")
@@ -14017,7 +14017,7 @@
 			)
 		)
 		(property "Field5" "2611911"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "b4854f54-a5a9-4ab6-9894-d100f44e1c33")
@@ -14029,7 +14029,7 @@
 			)
 		)
 		(property "Field6" "RM EMK105 B7104KV-F"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "4b845d88-52c8-43ea-9bfa-094ce3863e19")
@@ -14041,7 +14041,7 @@
 			)
 		)
 		(property "Field7" "TAIYO YUDEN EUROPE GMBH"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "22637146-4784-4008-a1c5-aa21ad51c902")
@@ -14053,7 +14053,7 @@
 			)
 		)
 		(property "Field8" "110091611"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "52b0b621-14cc-4b7f-95e6-8876301e6971")
@@ -14065,7 +14065,7 @@
 			)
 		)
 		(property "Part Description" "	0.1uF 10% 16V Ceramic Capacitor X7R 0402 (1005 Metric)"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cfd0cf3e-5f5d-450e-ac73-41aed5590f6b")
@@ -14162,7 +14162,7 @@
 			(uuid "83a9cce1-8f97-4f91-be1b-a974a8927c3b")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "69c254ce-93d8-4cbb-97fe-d890ae8a202f")
 			(effects
@@ -14209,7 +14209,7 @@
 		(descr "Resistor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R5"
-			(at 0 -1.17 360)
+			(at 0 -1.17 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "55c2a5e1-f40e-401a-9987-6c25588837ae")
@@ -14221,7 +14221,7 @@
 			)
 		)
 		(property "Value" "2.2K 1%"
-			(at 0 1.17 360)
+			(at 0 1.17 0)
 			(layer "F.Fab")
 			(uuid "036bf56a-25fe-453c-90bf-855d43e846db")
 			(effects
@@ -14271,7 +14271,7 @@
 			)
 		)
 		(property "Field4" "Farnell"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "d88da4d9-c589-42ea-bcf0-7b530917e334")
@@ -14283,7 +14283,7 @@
 			)
 		)
 		(property "Field5" "9239278"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fefcb56e-09f8-4e62-ae07-17723cae8e82")
@@ -14295,7 +14295,7 @@
 			)
 		)
 		(property "Field6" "RK73G1ETQTP2201D         "
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "40788870-2b41-4f1f-8932-2b7adf3291ad")
@@ -14307,7 +14307,7 @@
 			)
 		)
 		(property "Field7" "KOA EUROPE GMBH"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1d1c72e5-b883-4084-91d5-79874d6c3052")
@@ -14319,7 +14319,7 @@
 			)
 		)
 		(property "Field8" "120889581"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "88ba92b8-0cf7-4098-92f0-631034d34371")
@@ -14331,7 +14331,7 @@
 			)
 		)
 		(property "Part Description" "Resistor 2.2K M1005 1% 63mW"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "1e51ca5b-485e-40af-ac87-d38e18cfe578")
@@ -14428,7 +14428,7 @@
 			(uuid "4b75eb31-de68-4f58-bcd7-8ff94d060a17")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "bb25fac8-ed76-453a-ab27-a14d8568105e")
 			(effects
@@ -14475,7 +14475,7 @@
 		(descr "SOIC, 8 Pin (http://www.ti.com/lit/ds/symlink/lm5017.pdf#page=31), generated with kicad-footprint-generator ipc_gullwing_generator.py")
 		(tags "SOIC SO")
 		(property "Reference" "U1"
-			(at -0.05 -3.5 360)
+			(at -0.05 -3.5 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "5cf41749-930c-4967-88b6-4188f419a6d4")
@@ -14487,7 +14487,7 @@
 			)
 		)
 		(property "Value" "Voltage_Regulator_AP64501"
-			(at 0 3.4 360)
+			(at 0 3.4 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "cd4464d9-431f-4c00-adaf-40ad4cc0f11b")
@@ -14672,7 +14672,7 @@
 			(uuid "2bd4ca68-4451-41f4-9a55-7dc0b311ddae")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "bddce3f6-06a8-4073-a453-757af40a0e86")
 			(effects
@@ -14923,7 +14923,7 @@
 		(descr "Resistor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor")
 		(property "Reference" "R9"
-			(at 0 -1.17 360)
+			(at 0 -1.17 0)
 			(layer "F.SilkS")
 			(uuid "9c314a2c-6809-4893-bb09-a7d0136b390b")
 			(effects
@@ -14934,7 +14934,7 @@
 			)
 		)
 		(property "Value" "1.5K 1%"
-			(at 0 1.17 360)
+			(at 0 1.17 0)
 			(layer "F.Fab")
 			(uuid "5a2fb0d6-9356-4b57-8f2f-9a282f849101")
 			(effects
@@ -15154,7 +15154,7 @@
 			(uuid "4603234a-2b13-4d2e-83bb-96701b246411")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "8493cf00-b216-4603-9adc-c899f681f3ac")
 			(effects
@@ -15211,7 +15211,7 @@
 			)
 		)
 		(property "Value" "1028"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "ec54553b-6cba-4dfa-ad46-00c7354b342c")
 			(effects
@@ -15222,7 +15222,7 @@
 			)
 		)
 		(property "Footprint" "NB3_charger:AA_Battery_Holder_1028"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "51f988d3-06a1-4403-bb2e-29e573ff2760")
@@ -15234,7 +15234,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "657557c3-9c4e-405a-8de4-3b253d7320e0")
@@ -15246,7 +15246,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "829913de-97dc-4fed-9f7d-20abf4dd1157")
@@ -15562,7 +15562,7 @@
 		(uuid "ea55c66e-de2d-49b1-8b50-e6d7f5797ae7")
 		(at 97.701516 47.1885 180)
 		(property "Reference" "CR2"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.SilkS")
 			(uuid "45547165-8a1c-43de-979e-6777b5fd32af")
 			(effects
@@ -15573,7 +15573,7 @@
 			)
 		)
 		(property "Value" "Schottky_PMEG3050EP,115"
-			(at 0 3 360)
+			(at 0 3 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "b9436dea-74ec-42ec-968f-2fb306d94915")
@@ -15585,7 +15585,7 @@
 			)
 		)
 		(property "Footprint" "NB3_charger:Schottky_PMEG3050EP,115"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f61c09d7-1201-47ed-8be4-c912b9700834")
@@ -15597,7 +15597,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "bdfa8a09-5de9-4649-be15-507767259094")
@@ -15609,7 +15609,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "bdb7146f-bf0e-4b51-9bb7-d54f07c5e77d")
@@ -15946,7 +15946,7 @@
 			(uuid "64d6629b-a575-46d4-969c-40ccb54bad2f")
 		)
 		(fp_text user "*"
-			(at -3.0861 0 360)
+			(at -3.0861 0 0)
 			(layer "F.SilkS")
 			(uuid "e2105423-2bae-4212-b905-4cbd80c97c72")
 			(effects
@@ -15957,7 +15957,7 @@
 			)
 		)
 		(fp_text user "*"
-			(at -3.0861 0 360)
+			(at -3.0861 0 0)
 			(layer "F.SilkS")
 			(uuid "feb3953e-a2ce-43d7-9f3c-8385f62e6baa")
 			(effects
@@ -15968,7 +15968,7 @@
 			)
 		)
 		(fp_text user "Copyright 2016 Accelerated Designs. All rights reserved."
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "Cmts.User")
 			(uuid "b2338ae2-c896-4226-a401-90aff6c6e2eb")
 			(effects
@@ -15979,7 +15979,7 @@
 			)
 		)
 		(fp_text user "*"
-			(at -1.7399 0 360)
+			(at -1.7399 0 0)
 			(layer "F.Fab")
 			(uuid "3a2077d9-f673-4c55-99b2-4166a99f5e02")
 			(effects
@@ -15990,7 +15990,7 @@
 			)
 		)
 		(fp_text user "*"
-			(at -1.7399 0 360)
+			(at -1.7399 0 0)
 			(layer "F.Fab")
 			(uuid "8ade7079-b696-47ad-9d5b-18c161de6595")
 			(effects
@@ -16034,7 +16034,7 @@
 		(uuid "ef52d80d-029d-4504-863d-eb6a90b90c01")
 		(at 108.500216 54.126746)
 		(property "Reference" "J2"
-			(at 0 -1.5 360)
+			(at 0 -1.5 0)
 			(layer "F.SilkS")
 			(uuid "c1f2c56a-7fa4-44e5-93a8-58fad4e02437")
 			(effects
@@ -16045,7 +16045,7 @@
 			)
 		)
 		(property "Value" "B4B-PH-K-S"
-			(at 0 -2 360)
+			(at 0 -2 0)
 			(layer "F.Fab")
 			(uuid "341337cc-e01f-44f7-b5de-316d9dcbe834")
 			(effects
@@ -16056,7 +16056,7 @@
 			)
 		)
 		(property "Footprint" "NB3_charger:Connector_B4B-PH-K-S(LF)(SN)"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8d134c79-b626-4c99-b0a3-8a41d93bf9fd")
@@ -16068,7 +16068,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "249a192a-229e-4d70-b76e-f0c7b3857ef2")
@@ -16080,7 +16080,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "8af3e9e2-a3b6-4a01-b253-b1189876be19")
@@ -16413,6 +16413,28 @@
 				(xyz -90 0 0)
 			)
 		)
+	)
+	(gr_circle
+		(center 84.000216 112.6885)
+		(end 85.500216 112.6885)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill none)
+		(layer "B.SilkS")
+		(uuid "5a4dbc30-72c5-4f43-9609-0cac8a44ac12")
+	)
+	(gr_circle
+		(center 133.000216 112.6885)
+		(end 134.500216 112.6885)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill none)
+		(layer "B.SilkS")
+		(uuid "81997a88-01df-4a2a-86a2-0283ba59af86")
 	)
 	(gr_line
 		(start 76.000216 26.626746)
