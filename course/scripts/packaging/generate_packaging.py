@@ -34,12 +34,19 @@ with open(description_path, "w") as file:
         dim = package.print_dimensions()
         file.write(dim)
 
-# Save package model
+# Save package models
 model_folder = f"{Config.course_root}/_resources/packaging/CAD/boxes"
 Engine_Utilities.clear_folder(model_folder)
 for package in packages:
     model_path = f"{model_folder}/{package.name}.step"
     model = package.generate_model()
     Packaging_Utilities.save_STEP(model_path, package.name, model)
+
+# Save package designs (printing)
+design_folder = f"{Config.course_root}/_resources/packaging/designs"
+Engine_Utilities.clear_folder(design_folder)
+for package in packages:
+    design_path = f"{design_folder}/{package.name}.svg"
+    design = package.generate_design()
 
 # FIN

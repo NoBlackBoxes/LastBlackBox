@@ -1,12 +1,13 @@
 # Generate Course Layouts
 
 # Import Libraries
-import Design.utilities as Utilities
+import LBB.Design.utilities as Utilities
 
 # Import Modules
-import LBB.config as Config
-import Design.svg as SVG
-import Design.png as PNG
+import LBB.Engine.config as Config
+import LBB.Design.layout as Layout
+import LBB.Design.svg as SVG
+import LBB.Design.png as PNG
 
 # Specify output folders
 resources_folder = f"{Config.course_root}/_resources/designs"
@@ -23,50 +24,50 @@ Utilities.clear_folder(animated_folder)
 # ---
 # LBB
 # ---
-box_parameters_path = f"{output_folder}/box_parameters_LBB.csv"
-svg = SVG.SVG("layout_LBB", None, 98.75, 56.0, "0 0 98.75 56.0", with_profile=False, with_title=False, with_labels=True)
+layout = Layout.Layout("LBB", 4, 7, Config.box_names, 13.0, 0.125, 1.25, "#000000", "#FFFFFF", True, True)
+svg = SVG.SVG("layout_LBB", None, 98.75, 56.0, "0 0 98.75 56.0", layout.boxes, _with_profile=False, _with_title=False, _with_labels=True)
 svg_path = f"{output_folder}/svg/{svg.name}.svg"
-svg.draw(box_parameters_path, svg_path)
+svg.draw(svg_path)
 png_path = f"{output_folder}/png/{svg.name}.png"
 PNG.PNG(svg.name, dpi=600).convert(svg_path, png_path)
 
 # --------
 # Bootcamp
 # --------
-box_parameters_path = f"{output_folder}/box_parameters_bootcamp.csv"
-svg = SVG.SVG("layout_bootcamp", None, 98.75, 56.0, "0 0 98.75 56.0", with_profile=False, with_title=False, with_labels=True)
+layout = Layout.Layout("Bootcamp", 3, 7, Config.bootcamp_box_names, 13.0, 0.125, 1.25, "#000000", "#FFFFFF", True, True)
+svg = SVG.SVG("layout_bootcamp", None, 98.75, 56.0, "0 0 98.75 56.0", layout.boxes, _with_profile=False, _with_title=False, _with_labels=True)
 svg_path = f"{output_folder}/svg/{svg.name}.svg"
-svg.draw(box_parameters_path, svg_path)
+svg.draw(svg_path)
 png_path = f"{output_folder}/png/{svg.name}.png"
 PNG.PNG(svg.name, dpi=600).convert(svg_path, png_path)
 
 # -------------
 # Build a Brain
 # -------------
-box_parameters_path = f"{output_folder}/box_parameters_buildabrain.csv"
-svg = SVG.SVG("layout_buildabrain", None, 98.75, 56.0, "0 0 98.75 56.0", with_profile=False, with_title=False, with_labels=True)
+layout = Layout.Layout("Build a Brain", 2, 4, Config.buildabrain_box_names, 13.0, 0.125, 1.25, "#000000", "#FFFFFF", True, True)
+svg = SVG.SVG("layout_buildabrain", None, 98.75, 56.0, "0 0 98.75 56.0", layout.boxes, _with_profile=False, _with_title=False, _with_labels=True)
 svg_path = f"{output_folder}/svg/{svg.name}.svg"
-svg.draw(box_parameters_path, svg_path)
+svg.draw(svg_path)
 png_path = f"{output_folder}/png/{svg.name}.png"
 PNG.PNG(svg.name, dpi=600).convert(svg_path, png_path)
 
 # ---------
 # Own Phone
 # ---------
-box_parameters_path = f"{output_folder}/box_parameters_ownphone.csv"
-svg = SVG.SVG("layout_ownphone", None, 98.75, 56.0, "0 0 98.75 56.0", with_profile=False, with_title=False, with_labels=True)
+layout = Layout.Layout("Own Phone", 3, 3, Config.ownphone_box_names, 13.0, 0.125, 1.25, "#000000", "#FFFFFF", True, True)
+svg = SVG.SVG("layout_ownphone", None, 98.75, 56.0, "0 0 98.75 56.0", layout.boxes, _with_profile=False, _with_title=False, _with_labels=True)
 svg_path = f"{output_folder}/svg/{svg.name}.svg"
-svg.draw(box_parameters_path, svg_path)
+svg.draw(svg_path)
 png_path = f"{output_folder}/png/{svg.name}.png"
 PNG.PNG(svg.name, dpi=600).convert(svg_path, png_path)
 
 # ----------------
 # Animated (hover)
 # ----------------
-box_parameters_path = f"{Config.course_root}/_resources/designs/logo/box_parameters_LBB.csv"
-animation_parameters_path = f"{output_folder}/animation_parameters_position_hover.csv"
-svg = SVG.SVG("layout_animated_hover", None, 100, 100, "0 0 100 100", with_profile=False, with_title=False, with_labels=True)
-svg_path = f"{output_folder}/animated/{svg.name}.svg"
-svg.animate(box_parameters_path, animation_parameters_path, True, False, True, svg_path)
+#box_parameters_path = f"{Config.course_root}/_resources/designs/logo/box_parameters_LBB.csv"
+#animation_parameters_path = f"{output_folder}/animation_parameters_position_hover.csv"
+#svg = SVG.SVG("layout_animated_hover", None, 100, 100, "0 0 100 100", _with_profile=False, _with_title=False, _with_labels=True)
+#svg_path = f"{output_folder}/animated/{svg.name}.svg"
+#svg.animate(box_parameters_path, animation_parameters_path, True, False, True, svg_path)
 
 #FIN

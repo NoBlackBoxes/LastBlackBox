@@ -9,31 +9,31 @@ Design: SVG Class
 import numpy as np
 
 # Import modules
-import Design.profile as Profile
-import Design.text as Text
-import Design.box as Box
+import LBB.Design.profile as Profile
+import LBB.Design.text as Text
+import LBB.Design.box as Box
 
 # SVG Class
 class SVG:
-    def __init__(self, _name, _title, _width, _height, _viewbox, with_profile=False, with_title=False, with_labels=False):
+    def __init__(self, _name, _title, _width, _height, _viewbox, _boxes, _with_profile=False, _with_title=False, _with_labels=False):
         self.name = _name                   # Name
         self.title = _title                 # Title
         self.width = _width                 # Width
         self.height = _height               # Height
         self.viewbox = _viewbox             # Viewbox
-        self.boxes = []                     # List of boxes
-        self.with_profile = with_profile    # With profile?
-        self.with_labels = with_labels      # With labels?
+        self.boxes = _boxes                 # List of boxes
+        self.with_profile = _with_profile   # With profile?
+        self.with_title = _with_title       # With title?
+        self.with_labels = _with_labels     # With labels?
         return
     
     # Create SVG
-    def draw(self, box_parameters_path, output_path):
+    def draw(self, output_path):
         svg_file = open(output_path, "w")
         self.write_headers(svg_file)
         self.write_profile(svg_file)
-        box_offset = self.set_offset()
-        box_parameters = np.genfromtxt(box_parameters_path, delimiter=",", dtype=str, comments='##')
-        self.write_boxes(box_parameters, box_offset, svg_file)
+        box_offset = self.get_offset()
+        self.write_boxes(box_offset, svg_file)
         self.write_title(svg_file)
         self.write_footer(svg_file)
         svg_file.close()
@@ -44,7 +44,7 @@ class SVG:
         svg_file = open(output_path, "w")
         self.write_headers(svg_file)
         self.write_profile(svg_file)
-        box_offset = self.set_offset()
+        box_offset = self.get_offset()
         box_parameters = np.genfromtxt(box_parameters_path, delimiter=",", dtype=str, comments='##')
         self.write_boxes(box_parameters, box_offset, svg_file)
         self.write_title(svg_file)
@@ -71,7 +71,7 @@ class SVG:
         return
 
     # Set box offset
-    def set_offset(self):
+    def get_offset(self):
         box_offset = [0.0, 0.0]
         if self.title != None:
             box_offset[0] = 0.0
@@ -81,25 +81,11 @@ class SVG:
             box_offset[1] = -11.0
         return box_offset
 
-    # Write boxes (based on parameters)
-    def write_boxes(self, box_parameters, box_offset, svg_file):
-        num_boxes = box_parameters.shape[0]
-        for i in range(num_boxes):
-            name = box_parameters[i,0]
-            x = float(box_parameters[i,1])+box_offset[0]
-            y = float(box_parameters[i,2])+box_offset[1]
-            width = float(box_parameters[i,3])
-            height = float(box_parameters[i,4])
-            stroke = float(box_parameters[i,5])
-            fill = box_parameters[i,6]
-            border = box_parameters[i,7]
-            state = float(box_parameters[i,8])
-            label_size = float(box_parameters[i,9])
-            if self.with_labels:
-                label = name
-            else:
-                label = None
-            box = Box.Box(name, label, label_size, state, x, y, width, height, stroke, fill, border)
+    # Write boxes
+    def write_boxes(self, box_offset, svg_file):
+        for box in self.boxes:
+            box.x = box.x + box_offset[0]
+            box.y = box.y + box_offset[1]
             tag = box.draw()
             ret = svg_file.write(tag)
         return

@@ -9,6 +9,7 @@ LBB : Packaging : Package Class
 import cadquery as cq
 
 # Import modules
+import LBB.Design.
 
 # Package Class
 class Package:
@@ -74,5 +75,9 @@ class Package:
         )       
         model = outer.cut(inner)
         return model
+
+    def generate_design(self):
+        
+        return design
 
 #FIN

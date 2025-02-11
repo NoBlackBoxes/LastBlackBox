@@ -8,8 +8,8 @@ Design: Box Class
 # Import libraries
 
 # Import modules
-import Design.label as Label
-import Design.arrow as Arrow
+import LBB.Design.label as Label
+import LBB.Design.arrow as Arrow
 
 # Box Class
 class Box:

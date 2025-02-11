@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-LBB: Config Class
+LBB : Engine : Config
 
 @author: kampff
 """
@@ -61,6 +61,56 @@ package_names = [
     'Mounts',
     'Passive',
     'Power'
+]
+
+# Store box names (and order) - Bootcamp
+bootcamp_box_names = [
+    'Atoms',
+    'Electrons',
+    'Magnets',
+    'Sensors',
+    'Motors',
+    'Transistors',
+    'Data',
+    'Logic',
+    'Memory',
+    'Computers',
+    'Control',
+    'Robotics',
+    'Power',
+    'Systems',
+    'Linux',
+    'Python',
+    'Networks',
+    'Websites',
+    'Servers',
+    'Audio',
+    'Vision'
+]
+
+# Store box names (and order) - Build a Brain
+buildabrain_box_names = [
+    'Sensors',
+    'Motors',
+    'Transistors',
+    'Computers',
+    'Robotics',
+    'Systems',
+    'Networks',
+    'Intelligence'
+]
+
+# Store box names (and order) - Own Phone
+ownphone_box_names = [
+    'Electrons',
+    'Magnets',
+    'Light',
+    'Transistors',
+    'Data',
+    'Computers',
+    'Systems',
+    'Networks',
+    'Security'
 ]
 
 #FIN
