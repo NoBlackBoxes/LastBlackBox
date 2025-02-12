@@ -1,140 +1,116 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg id="layout_animated_hover" width="100mm" height="100mm" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-<g id="Atoms" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:1.75px;">
-	<rect class="box" id="box_Atoms" x="0.125" y="0.125" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.125;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
-	<text class= "text" id="text_Atoms" x="6.625" y="7.208" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Atoms</text>
-	<polygon class="arrow" id="arrow_Atoms" style="fill:#DDDDDD;stroke:none" points="13.1875, 7.1875, 13.1875, 6.1875, 14.325, 6.6875"/>
+<g id="Atoms" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:0.0px;">
+	<rect class="box" id="box_Atoms" x="31.111" y="50.084" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Atoms" x="37.611" y="57.167" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Atoms</text>
 </g>
-<g id="Electrons" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:1.75px;">
-	<rect class="box" id="box_Electrons" x="14.375" y="0.125" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.125;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
-	<text class= "text" id="text_Electrons" x="20.875" y="7.208" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Electrons</text>
-	<polygon class="arrow" id="arrow_Electrons" style="fill:#DDDDDD;stroke:none" points="27.4375, 7.1875, 27.4375, 6.1875, 28.575, 6.6875"/>
+<g id="Electrons" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:0.0px;">
+	<rect class="box" id="box_Electrons" x="44.056" y="52.834" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Electrons" x="50.556" y="59.917" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Electrons</text>
 </g>
-<g id="Magnets" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:1.75px;">
-	<rect class="box" id="box_Magnets" x="28.625" y="0.125" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.125;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
-	<text class= "text" id="text_Magnets" x="35.125" y="7.208" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Magnets</text>
-	<polygon class="arrow" id="arrow_Magnets" style="fill:#DDDDDD;stroke:none" points="41.6875, 7.1875, 41.6875, 6.1875, 42.825, 6.6875"/>
+<g id="Magnets" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:0.0px;">
+	<rect class="box" id="box_Magnets" x="45.787" y="43.810" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Magnets" x="52.287" y="50.893" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Magnets</text>
 </g>
-<g id="Light" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:1.75px;">
-	<rect class="box" id="box_Light" x="42.875" y="0.125" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.125;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
-	<text class= "text" id="text_Light" x="49.375" y="7.208" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Light</text>
-	<polygon class="arrow" id="arrow_Light" style="fill:#DDDDDD;stroke:none" points="55.9375, 7.1875, 55.9375, 6.1875, 57.075, 6.6875"/>
+<g id="Light" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:0.0px;">
+	<rect class="box" id="box_Light" x="57.432" y="49.147" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Light" x="63.932" y="56.230" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Light</text>
 </g>
-<g id="Sensors" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:1.75px;">
-	<rect class="box" id="box_Sensors" x="57.125" y="0.125" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.125;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
-	<text class= "text" id="text_Sensors" x="63.625" y="7.208" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Sensors</text>
-	<polygon class="arrow" id="arrow_Sensors" style="fill:#DDDDDD;stroke:none" points="70.1875, 7.1875, 70.1875, 6.1875, 71.325, 6.6875"/>
+<g id="Sensors" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:0.0px;">
+	<rect class="box" id="box_Sensors" x="52.633" y="41.232" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Sensors" x="59.133" y="48.315" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Sensors</text>
 </g>
-<g id="Motors" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:1.75px;">
-	<rect class="box" id="box_Motors" x="71.375" y="0.125" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.125;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
-	<text class= "text" id="text_Motors" x="77.875" y="7.208" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Motors</text>
-	<polygon class="arrow" id="arrow_Motors" style="fill:#DDDDDD;stroke:none" points="84.4375, 7.1875, 84.4375, 6.1875, 85.575, 6.6875"/>
+<g id="Motors" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:0.0px;">
+	<rect class="box" id="box_Motors" x="61.730" y="44.465" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Motors" x="68.230" y="51.548" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Motors</text>
 </g>
-<g id="Transistors" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:1.75px;">
-	<rect class="box" id="box_Transistors" x="85.625" y="0.125" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.125;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
-	<text class= "text" id="text_Transistors" x="92.125" y="7.208" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Transistors</text>
+<g id="Transistors" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:0.0px;">
+	<rect class="box" id="box_Transistors" x="69.113" y="52.489" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Transistors" x="75.613" y="59.572" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Transistors</text>
 </g>
-<g id="Amplifiers" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:1.75px;">
-	<rect class="box" id="box_Amplifiers" x="0.125" y="14.375" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.125;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
-	<text class= "text" id="text_Amplifiers" x="6.625" y="21.458" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Amplifiers</text>
-	<polygon class="arrow" id="arrow_Amplifiers" style="fill:#DDDDDD;stroke:none" points="13.1875, 21.4375, 13.1875, 20.4375, 14.325, 20.9375"/>
+<g id="Amplifiers" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:0.0px;">
+	<rect class="box" id="box_Amplifiers" x="72.266" y="41.664" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Amplifiers" x="78.766" y="48.747" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Amplifiers</text>
 </g>
-<g id="Circuits" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:1.75px;">
-	<rect class="box" id="box_Circuits" x="14.375" y="14.375" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.125;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
-	<text class= "text" id="text_Circuits" x="20.875" y="21.458" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Circuits</text>
-	<polygon class="arrow" id="arrow_Circuits" style="fill:#DDDDDD;stroke:none" points="27.4375, 21.4375, 27.4375, 20.4375, 28.575, 20.9375"/>
+<g id="Circuits" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:0.0px;">
+	<rect class="box" id="box_Circuits" x="68.657" y="34.046" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Circuits" x="75.157" y="41.129" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Circuits</text>
 </g>
-<g id="Data" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:1.75px;">
-	<rect class="box" id="box_Data" x="28.625" y="14.375" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.125;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
-	<text class= "text" id="text_Data" x="35.125" y="21.458" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Data</text>
-	<polygon class="arrow" id="arrow_Data" style="fill:#DDDDDD;stroke:none" points="41.6875, 21.4375, 41.6875, 20.4375, 42.825, 20.9375"/>
+<g id="Data" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:0.0px;">
+	<rect class="box" id="box_Data" x="63.446" y="29.572" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Data" x="69.946" y="36.655" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Data</text>
 </g>
-<g id="Logic" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:1.75px;">
-	<rect class="box" id="box_Logic" x="42.875" y="14.375" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.125;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
-	<text class= "text" id="text_Logic" x="49.375" y="21.458" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Logic</text>
-	<polygon class="arrow" id="arrow_Logic" style="fill:#DDDDDD;stroke:none" points="55.9375, 21.4375, 55.9375, 20.4375, 57.075, 20.9375"/>
+<g id="Logic" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:0.0px;">
+	<rect class="box" id="box_Logic" x="58.531" y="25.627" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Logic" x="65.031" y="32.710" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Logic</text>
 </g>
-<g id="Memory" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:1.75px;">
-	<rect class="box" id="box_Memory" x="57.125" y="14.375" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.125;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
-	<text class= "text" id="text_Memory" x="63.625" y="21.458" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Memory</text>
-	<polygon class="arrow" id="arrow_Memory" style="fill:#DDDDDD;stroke:none" points="70.1875, 21.4375, 70.1875, 20.4375, 71.325, 20.9375"/>
+<g id="Memory" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:0.0px;">
+	<rect class="box" id="box_Memory" x="49.949" y="23.757" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Memory" x="56.449" y="30.840" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Memory</text>
 </g>
-<g id="FPGAs" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:1.75px;">
-	<rect class="box" id="box_FPGAs" x="71.375" y="14.375" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.125;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
-	<text class= "text" id="text_FPGAs" x="77.875" y="21.458" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">FPGAs</text>
-	<polygon class="arrow" id="arrow_FPGAs" style="fill:#DDDDDD;stroke:none" points="84.4375, 21.4375, 84.4375, 20.4375, 85.575, 20.9375"/>
+<g id="FPGAs" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:0.0px;">
+	<rect class="box" id="box_FPGAs" x="55.655" y="36.185" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_FPGAs" x="62.155" y="43.268" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">FPGAs</text>
 </g>
-<g id="Computers" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:1.75px;">
-	<rect class="box" id="box_Computers" x="85.625" y="14.375" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.125;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
-	<text class= "text" id="text_Computers" x="92.125" y="21.458" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Computers</text>
+<g id="Computers" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:0.0px;">
+	<rect class="box" id="box_Computers" x="45.271" y="32.576" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Computers" x="51.771" y="39.659" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Computers</text>
 </g>
-<g id="Control" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:1.75px;">
-	<rect class="box" id="box_Control" x="0.125" y="28.625" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.125;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
-	<text class= "text" id="text_Control" x="6.625" y="35.708" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Control</text>
-	<polygon class="arrow" id="arrow_Control" style="fill:#DDDDDD;stroke:none" points="13.1875, 35.6875, 13.1875, 34.6875, 14.325, 35.1875"/>
+<g id="Control" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:0.0px;">
+	<rect class="box" id="box_Control" x="40.460" y="22.821" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Control" x="46.960" y="29.904" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Control</text>
 </g>
-<g id="Robotics" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:1.75px;">
-	<rect class="box" id="box_Robotics" x="14.375" y="28.625" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.125;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
-	<text class= "text" id="text_Robotics" x="20.875" y="35.708" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Robotics</text>
-	<polygon class="arrow" id="arrow_Robotics" style="fill:#DDDDDD;stroke:none" points="27.4375, 35.6875, 27.4375, 34.6875, 28.575, 35.1875"/>
+<g id="Robotics" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:0.0px;">
+	<rect class="box" id="box_Robotics" x="30.438" y="24.826" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Robotics" x="36.938" y="31.909" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Robotics</text>
 </g>
-<g id="Power" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:1.75px;">
-	<rect class="box" id="box_Power" x="28.625" y="28.625" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.125;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
-	<text class= "text" id="text_Power" x="35.125" y="35.708" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Power</text>
-	<polygon class="arrow" id="arrow_Power" style="fill:#DDDDDD;stroke:none" points="41.6875, 35.6875, 41.6875, 34.6875, 42.825, 35.1875"/>
+<g id="Power" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:0.0px;">
+	<rect class="box" id="box_Power" x="35.347" y="34.227" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Power" x="41.847" y="41.310" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Power</text>
 </g>
-<g id="Systems" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:1.75px;">
-	<rect class="box" id="box_Systems" x="42.875" y="28.625" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.125;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
-	<text class= "text" id="text_Systems" x="49.375" y="35.708" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Systems</text>
-	<polygon class="arrow" id="arrow_Systems" style="fill:#DDDDDD;stroke:none" points="55.9375, 35.6875, 55.9375, 34.6875, 57.075, 35.1875"/>
+<g id="Systems" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:0.0px;">
+	<rect class="box" id="box_Systems" x="29.536" y="38.456" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Systems" x="36.036" y="45.539" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Systems</text>
 </g>
-<g id="Linux" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:1.75px;">
-	<rect class="box" id="box_Linux" x="57.125" y="28.625" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.125;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
-	<text class= "text" id="text_Linux" x="63.625" y="35.708" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Linux</text>
-	<polygon class="arrow" id="arrow_Linux" style="fill:#DDDDDD;stroke:none" points="70.1875, 35.6875, 70.1875, 34.6875, 71.325, 35.1875"/>
+<g id="Linux" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:0.0px;">
+	<rect class="box" id="box_Linux" x="22.519" y="27.498" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Linux" x="29.019" y="34.581" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Linux</text>
 </g>
-<g id="Python" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:1.75px;">
-	<rect class="box" id="box_Python" x="71.375" y="28.625" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.125;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
-	<text class= "text" id="text_Python" x="77.875" y="35.708" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Python</text>
-	<polygon class="arrow" id="arrow_Python" style="fill:#DDDDDD;stroke:none" points="84.4375, 35.6875, 84.4375, 34.6875, 85.575, 35.1875"/>
+<g id="Python" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:0.0px;">
+	<rect class="box" id="box_Python" x="16.807" y="32.443" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Python" x="23.307" y="39.526" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Python</text>
 </g>
-<g id="Networks" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:1.75px;">
-	<rect class="box" id="box_Networks" x="85.625" y="28.625" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.125;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
-	<text class= "text" id="text_Networks" x="92.125" y="35.708" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Networks</text>
+<g id="Networks" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:0.0px;">
+	<rect class="box" id="box_Networks" x="13.733" y="37.922" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Networks" x="20.233" y="45.005" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Networks</text>
 </g>
-<g id="Websites" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:1.75px;">
-	<rect class="box" id="box_Websites" x="0.125" y="42.875" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.125;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
-	<text class= "text" id="text_Websites" x="6.625" y="49.958" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Websites</text>
-	<polygon class="arrow" id="arrow_Websites" style="fill:#DDDDDD;stroke:none" points="13.1875, 49.9375, 13.1875, 48.9375, 14.325, 49.4375"/>
+<g id="Websites" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:0.0px;">
+	<rect class="box" id="box_Websites" x="16.807" y="44.470" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Websites" x="23.307" y="51.553" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Websites</text>
 </g>
-<g id="Servers" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:1.75px;">
-	<rect class="box" id="box_Servers" x="14.375" y="42.875" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.125;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
-	<text class= "text" id="text_Servers" x="20.875" y="49.958" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Servers</text>
-	<polygon class="arrow" id="arrow_Servers" style="fill:#DDDDDD;stroke:none" points="27.4375, 49.9375, 27.4375, 48.9375, 28.575, 49.4375"/>
+<g id="Servers" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:0.0px;">
+	<rect class="box" id="box_Servers" x="49.552" y="59.843" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Servers" x="56.052" y="66.926" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Servers</text>
 </g>
-<g id="Security" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:1.75px;">
-	<rect class="box" id="box_Security" x="28.625" y="42.875" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.125;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
-	<text class= "text" id="text_Security" x="35.125" y="49.958" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Security</text>
-	<polygon class="arrow" id="arrow_Security" style="fill:#DDDDDD;stroke:none" points="41.6875, 49.9375, 41.6875, 48.9375, 42.825, 49.4375"/>
+<g id="Security" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:0.0px;">
+	<rect class="box" id="box_Security" x="65.787" y="57.432" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Security" x="72.287" y="64.515" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Security</text>
 </g>
-<g id="Audio" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:1.75px;">
-	<rect class="box" id="box_Audio" x="42.875" y="42.875" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.125;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
-	<text class= "text" id="text_Audio" x="49.375" y="49.958" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Audio</text>
-	<polygon class="arrow" id="arrow_Audio" style="fill:#DDDDDD;stroke:none" points="55.9375, 49.9375, 55.9375, 48.9375, 57.075, 49.4375"/>
+<g id="Audio" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:0.0px;">
+	<rect class="box" id="box_Audio" x="56.365" y="62.345" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Audio" x="62.865" y="69.428" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Audio</text>
 </g>
-<g id="Vision" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:1.75px;">
-	<rect class="box" id="box_Vision" x="57.125" y="42.875" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.125;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
-	<text class= "text" id="text_Vision" x="63.625" y="49.958" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Vision</text>
-	<polygon class="arrow" id="arrow_Vision" style="fill:#DDDDDD;stroke:none" points="70.1875, 49.9375, 70.1875, 48.9375, 71.325, 49.4375"/>
+<g id="Vision" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:0.0px;">
+	<rect class="box" id="box_Vision" x="61.080" y="68.178" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Vision" x="67.580" y="75.261" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Vision</text>
 </g>
-<g id="Learning" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:1.75px;">
-	<rect class="box" id="box_Learning" x="71.375" y="42.875" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.125;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
-	<text class= "text" id="text_Learning" x="77.875" y="49.958" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Learning</text>
-	<polygon class="arrow" id="arrow_Learning" style="fill:#DDDDDD;stroke:none" points="84.4375, 49.9375, 84.4375, 48.9375, 85.575, 49.4375"/>
+<g id="Learning" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:0.0px;">
+	<rect class="box" id="box_Learning" x="23.050" y="47.314" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Learning" x="29.550" y="54.397" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Learning</text>
 </g>
-<g id="Intelligence" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:1.75px;">
-	<rect class="box" id="box_Intelligence" x="85.625" y="42.875" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.125;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
-	<text class= "text" id="text_Intelligence" x="92.125" y="49.958" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Intelligence</text>
+<g id="Intelligence" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:0.0px;">
+	<rect class="box" id="box_Intelligence" x="32.787" y="43.810" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Intelligence" x="39.287" y="50.893" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Intelligence</text>
 </g>
 <style>
 	#layout_animated_hover:hover #Atoms {animation: animate_Atoms 0.30s linear; animation-fill-mode: forwards; animation-delay: 0s}
@@ -146,14 +122,14 @@
 	#layout_animated_hover:hover #Transistors {animation: animate_Transistors 0.15s linear; animation-fill-mode: forwards; animation-delay: 0s}
 	#layout_animated_hover:hover #Amplifiers {animation: animate_Amplifiers 0.50s linear; animation-fill-mode: forwards; animation-delay: 0s}
 	#layout_animated_hover:hover #Circuits {animation: animate_Circuits 0.50s linear; animation-fill-mode: forwards; animation-delay: 0s}
-	#layout_animated_hover:hover #Power {animation: animate_Power 0.30s linear; animation-fill-mode: forwards; animation-delay: 0s}
-	#layout_animated_hover:hover #Data {animation: animate_Data 0.35s linear; animation-fill-mode: forwards; animation-delay: 0s}
-	#layout_animated_hover:hover #Logic {animation: animate_Logic 0.55s linear; animation-fill-mode: forwards; animation-delay: 0s}
-	#layout_animated_hover:hover #Memory {animation: animate_Memory 0.35s linear; animation-fill-mode: forwards; animation-delay: 0s}
-	#layout_animated_hover:hover #FPGAs {animation: animate_FPGAs 0.50s linear; animation-fill-mode: forwards; animation-delay: 0s}
-	#layout_animated_hover:hover #Computers {animation: animate_Computers 0.35s linear; animation-fill-mode: forwards; animation-delay: 0s}
-	#layout_animated_hover:hover #Control {animation: animate_Control 0.20s linear; animation-fill-mode: forwards; animation-delay: 0s}
-	#layout_animated_hover:hover #Robotics {animation: animate_Robotics 0.35s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#layout_animated_hover:hover #Data {animation: animate_Data 0.30s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#layout_animated_hover:hover #Logic {animation: animate_Logic 0.35s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#layout_animated_hover:hover #Memory {animation: animate_Memory 0.55s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#layout_animated_hover:hover #FPGAs {animation: animate_FPGAs 0.35s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#layout_animated_hover:hover #Computers {animation: animate_Computers 0.50s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#layout_animated_hover:hover #Control {animation: animate_Control 0.35s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#layout_animated_hover:hover #Robotics {animation: animate_Robotics 0.20s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#layout_animated_hover:hover #Power {animation: animate_Power 0.35s linear; animation-fill-mode: forwards; animation-delay: 0s}
 	#layout_animated_hover:hover #Systems {animation: animate_Systems 0.25s linear; animation-fill-mode: forwards; animation-delay: 0s}
 	#layout_animated_hover:hover #Linux {animation: animate_Linux 0.50s linear; animation-fill-mode: forwards; animation-delay: 0s}
 	#layout_animated_hover:hover #Python {animation: animate_Python 0.45s linear; animation-fill-mode: forwards; animation-delay: 0s}
@@ -220,49 +196,49 @@
 		100%   {transform:translate(-54.282px, 2.329px);font-size:1.75px;}
 	}
 
-	@keyframes animate_Power {
+	@keyframes animate_Data {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		95%    {transform:translate(-34.821px, 6.803px);font-size:1px;}
 		100%   {transform:translate(-34.821px, 6.803px);font-size:1.75px;}
 	}
 
-	@keyframes animate_Data {
+	@keyframes animate_Logic {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		95%    {transform:translate(-15.656px, 10.748px);font-size:1px;}
 		100%   {transform:translate(-15.656px, 10.748px);font-size:1.75px;}
 	}
 
-	@keyframes animate_Logic {
+	@keyframes animate_Memory {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		94%    {transform:translate(7.176px, 12.618px);font-size:1px;}
 		100%   {transform:translate(7.176px, 12.618px);font-size:1.75px;}
 	}
 
-	@keyframes animate_Memory {
+	@keyframes animate_FPGAs {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		95%    {transform:translate(15.72px, 0.19px);font-size:1px;}
 		100%   {transform:translate(15.72px, 0.19px);font-size:1.75px;}
 	}
 
-	@keyframes animate_FPGAs {
+	@keyframes animate_Computers {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		95%    {transform:translate(40.354px, 3.799px);font-size:1px;}
 		100%   {transform:translate(40.354px, 3.799px);font-size:1.75px;}
 	}
 
-	@keyframes animate_Computers {
+	@keyframes animate_Control {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		95%    {transform:translate(-40.335px, 27.804px);font-size:1px;}
 		100%   {transform:translate(-40.335px, 27.804px);font-size:1.75px;}
 	}
 
-	@keyframes animate_Control {
+	@keyframes animate_Robotics {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		95%    {transform:translate(-16.063px, 25.799px);font-size:1px;}
 		100%   {transform:translate(-16.063px, 25.799px);font-size:1.75px;}
 	}
 
-	@keyframes animate_Robotics {
+	@keyframes animate_Power {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		95%    {transform:translate(-6.722px, 16.398px);font-size:1px;}
 		100%   {transform:translate(-6.722px, 16.398px);font-size:1.75px;}

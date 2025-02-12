@@ -94,14 +94,14 @@
 	#logo_NBB_animated_hover:hover #Transistors {animation: animate_Transistors 0.30s linear; animation-fill-mode: forwards; animation-delay: 0s}
 	#logo_NBB_animated_hover:hover #Amplifiers {animation: animate_Amplifiers 1.00s linear; animation-fill-mode: forwards; animation-delay: 0s}
 	#logo_NBB_animated_hover:hover #Circuits {animation: animate_Circuits 1.20s linear; animation-fill-mode: forwards; animation-delay: 0s}
-	#logo_NBB_animated_hover:hover #Power {animation: animate_Power 0.60s linear; animation-fill-mode: forwards; animation-delay: 0s}
 	#logo_NBB_animated_hover:hover #Data {animation: animate_Data 0.70s linear; animation-fill-mode: forwards; animation-delay: 0s}
 	#logo_NBB_animated_hover:hover #Logic {animation: animate_Logic 1.20s linear; animation-fill-mode: forwards; animation-delay: 0s}
 	#logo_NBB_animated_hover:hover #Memory {animation: animate_Memory 0.70s linear; animation-fill-mode: forwards; animation-delay: 0s}
-	#logo_NBB_animated_hover:hover #FPGAs {animation: animate_FPGAs 1.00s linear; animation-fill-mode: forwards; animation-delay: 0s}
-	#logo_NBB_animated_hover:hover #Computers {animation: animate_Computers 0.70s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#logo_NBB_animated_hover:hover #FPGAs {animation: animate_FPGAs 0.70s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#logo_NBB_animated_hover:hover #Computers {animation: animate_Computers 1.00s linear; animation-fill-mode: forwards; animation-delay: 0s}
 	#logo_NBB_animated_hover:hover #Control {animation: animate_Control 0.40s linear; animation-fill-mode: forwards; animation-delay: 0s}
 	#logo_NBB_animated_hover:hover #Robotics {animation: animate_Robotics 0.70s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#logo_NBB_animated_hover:hover #Power {animation: animate_Power 0.60s linear; animation-fill-mode: forwards; animation-delay: 0s}
 	#logo_NBB_animated_hover:hover #Systems {animation: animate_Systems 1.50s linear; animation-fill-mode: forwards; animation-delay: 0s}
 	#logo_NBB_animated_hover:hover #Linux {animation: animate_Linux 1.00s linear; animation-fill-mode: forwards; animation-delay: 0s}
 	#logo_NBB_animated_hover:hover #Python {animation: animate_Python 2.90s linear; animation-fill-mode: forwards; animation-delay: 0s}
@@ -168,12 +168,6 @@
 		100%   {fill:#FFFFFF;stroke:#000000;}
 	}
 
-	@keyframes animate_Power {
-		0%     {fill:#000000;stroke:#FFFFFF;}
-		95%    {fill:#FFFFFF;stroke:#000000;}
-		100%   {fill:#FFFFFF;stroke:#000000;}
-	}
-
 	@keyframes animate_Data {
 		0%     {fill:#000000;stroke:#FFFFFF;}
 		95%    {fill:#FFFFFF;stroke:#000000;}
@@ -194,13 +188,13 @@
 
 	@keyframes animate_FPGAs {
 		0%     {fill:#000000;stroke:#FFFFFF;}
-		95%    {fill:#000000;stroke:#FFFFFF;}
+		95%    {fill:#FFFFFF;stroke:#000000;}
 		100%   {fill:#FFFFFF;stroke:#000000;}
 	}
 
 	@keyframes animate_Computers {
 		0%     {fill:#000000;stroke:#FFFFFF;}
-		95%    {fill:#FFFFFF;stroke:#000000;}
+		95%    {fill:#000000;stroke:#FFFFFF;}
 		100%   {fill:#FFFFFF;stroke:#000000;}
 	}
 
@@ -211,6 +205,12 @@
 	}
 
 	@keyframes animate_Robotics {
+		0%     {fill:#000000;stroke:#FFFFFF;}
+		95%    {fill:#FFFFFF;stroke:#000000;}
+		100%   {fill:#FFFFFF;stroke:#000000;}
+	}
+
+	@keyframes animate_Power {
 		0%     {fill:#000000;stroke:#FFFFFF;}
 		95%    {fill:#FFFFFF;stroke:#000000;}
 		100%   {fill:#FFFFFF;stroke:#000000;}

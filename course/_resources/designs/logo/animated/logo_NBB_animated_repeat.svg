@@ -94,7 +94,6 @@
 	#Transistors  {animation: animate_Transistors 4.20s linear infinite; animation-delay: 1s}
 	#Amplifiers  {animation: animate_Amplifiers 4.20s linear infinite; animation-delay: 1s}
 	#Circuits  {animation: animate_Circuits 4.20s linear infinite; animation-delay: 1s}
-	#Power  {animation: animate_Power 4.20s linear infinite; animation-delay: 1s}
 	#Data  {animation: animate_Data 4.20s linear infinite; animation-delay: 1s}
 	#Logic  {animation: animate_Logic 4.20s linear infinite; animation-delay: 1s}
 	#Memory  {animation: animate_Memory 4.20s linear infinite; animation-delay: 1s}
@@ -102,6 +101,7 @@
 	#Computers  {animation: animate_Computers 4.20s linear infinite; animation-delay: 1s}
 	#Control  {animation: animate_Control 4.20s linear infinite; animation-delay: 1s}
 	#Robotics  {animation: animate_Robotics 4.20s linear infinite; animation-delay: 1s}
+	#Power  {animation: animate_Power 4.20s linear infinite; animation-delay: 1s}
 	#Systems  {animation: animate_Systems 4.20s linear infinite; animation-delay: 1s}
 	#Linux  {animation: animate_Linux 4.20s linear infinite; animation-delay: 1s}
 	#Python  {animation: animate_Python 4.20s linear infinite; animation-delay: 1s}
@@ -168,12 +168,6 @@
 		100%   {fill:#FFFFFF;stroke:#000000;}
 	}
 
-	@keyframes animate_Power {
-		0%     {fill:#000000;stroke:#FFFFFF;}
-		13%    {fill:#FFFFFF;stroke:#000000;}
-		100%   {fill:#FFFFFF;stroke:#000000;}
-	}
-
 	@keyframes animate_Data {
 		0%     {fill:#000000;stroke:#FFFFFF;}
 		15%    {fill:#FFFFFF;stroke:#000000;}
@@ -194,13 +188,13 @@
 
 	@keyframes animate_FPGAs {
 		0%     {fill:#000000;stroke:#FFFFFF;}
-		22%    {fill:#000000;stroke:#FFFFFF;}
+		15%    {fill:#FFFFFF;stroke:#000000;}
 		100%   {fill:#FFFFFF;stroke:#000000;}
 	}
 
 	@keyframes animate_Computers {
 		0%     {fill:#000000;stroke:#FFFFFF;}
-		15%    {fill:#FFFFFF;stroke:#000000;}
+		22%    {fill:#000000;stroke:#FFFFFF;}
 		100%   {fill:#FFFFFF;stroke:#000000;}
 	}
 
@@ -213,6 +207,12 @@
 	@keyframes animate_Robotics {
 		0%     {fill:#000000;stroke:#FFFFFF;}
 		15%    {fill:#FFFFFF;stroke:#000000;}
+		100%   {fill:#FFFFFF;stroke:#000000;}
+	}
+
+	@keyframes animate_Power {
+		0%     {fill:#000000;stroke:#FFFFFF;}
+		13%    {fill:#FFFFFF;stroke:#000000;}
 		100%   {fill:#FFFFFF;stroke:#000000;}
 	}
 

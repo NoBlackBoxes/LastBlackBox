@@ -73,7 +73,7 @@ NBB_box_parameters = [[31.111,50.084,"#FFFFFF","#000000"],
 
 # Logo Class
 class Logo:
-    def __init__(self, _name, _x_offset, _y_offset, _box_names, _box_params, _box_size, _box_stroke):
+    def __init__(self, _name, _x_offset, _y_offset, _box_names, _box_params, _box_size, _box_stroke, _with_labels=False):
         self.name = _name                   # Logo name
         self.x_offset = _x_offset           # Logo offset (x)
         self.y_offset = _y_offset           # Logo offset (y)
@@ -81,7 +81,8 @@ class Logo:
         self.box_params = _box_params       # Box parameters
         self.box_size = _box_size           # Box size (mm)
         self.box_stroke = _box_stroke       # Box stroke
-        self.boxes = self.generate_boxes()
+        self.with_labels = _with_labels     # With box labels?
+        self.boxes = self.generate_boxes()  # Logo boxes
         return
     
     def generate_boxes(self):
@@ -93,7 +94,11 @@ class Logo:
             y = self.box_params[i][1]
             fill = self.box_params[i][2]
             border = self.box_params[i][3]
-            box = Box.Box(name, None, 0.0, 0, x + self.x_offset, y + self.y_offset, self.box_size, self.box_size, self.box_stroke, fill, border)
+            if self.with_labels:
+                label = name
+            else:
+                label = None
+            box = Box.Box(name, label, 0.0, 0, x + self.x_offset, y + self.y_offset, self.box_size, self.box_size, self.box_stroke, fill, border)
             boxes.append(box)
         return boxes
 

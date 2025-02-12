@@ -34,7 +34,6 @@ class SVG:
         self.write_headers(svg_file)
         self.write_profile(svg_file)
         box_offset = self.get_offset()
-        print(box_offset)
         self.write_boxes(box_offset, svg_file)
         self.write_title(svg_file)
         self.write_footer(svg_file)

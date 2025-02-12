@@ -6,6 +6,7 @@ import LBB.Design.utilities as Utilities
 # Import Modules
 import LBB.Engine.config as Config
 import LBB.Design.layout as Layout
+import LBB.Design.logo as Logo
 import LBB.Design.svg as SVG
 import LBB.Design.png as PNG
 
@@ -64,9 +65,9 @@ PNG.PNG(svg.name, dpi=600).convert(svg_path, png_path)
 # ----------------
 # Animated (hover)
 # ----------------
-layout = Layout.Layout("LBB", 4, 7, Config.box_names, 13.0, 0.125, 1.25, "#000000", "#FFFFFF", True, True)
+logo = Logo.Logo("LBB", 0.0, 0.0, Config.box_names, Logo.LBB_box_parameters, 13.0, 0.5, _with_labels=True)
 animation_parameters_path = f"{output_folder}/animation_parameters_position_hover.csv"
-svg = SVG.SVG("layout_animated_hover", None, 100, 100, "0 0 100 100", layout.boxes, _with_profile=False, _with_title=False, _with_labels=True)
+svg = SVG.SVG("layout_animated_hover", None, 100, 100, "0 0 100 100", logo.boxes, _with_profile=False, _with_title=False, _with_labels=True)
 svg_path = f"{output_folder}/animated/{svg.name}.svg"
 svg.animate(animation_parameters_path, True, False, True, svg_path)
 
