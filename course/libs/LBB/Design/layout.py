@@ -12,7 +12,7 @@ import LBB.Design.box as Box
 
 # Layout Class
 class Layout:
-    def __init__(self, _name, _num_rows, _num_cols, _box_names, _box_size, _box_stroke, _box_spacing, _box_fill, _box_border, _with_labels, _with_arrows):
+    def __init__(self, _name, _num_rows, _num_cols, _box_names, _box_size, _box_stroke, _box_spacing, _box_fill, _box_border, _label_size, _with_labels, _with_arrows):
         self.name = _name                   # Layout name
         self.num_rows = _num_rows           # Layout #rows
         self.num_cols = _num_cols           # Layout #columns
@@ -24,6 +24,7 @@ class Layout:
         self.box_spacing = _box_spacing     # Box spacing
         self.box_fill = _box_fill           # Box fill
         self.box_border = _box_border       # Box border
+        self.label_size = _label_size       # Label size
         self.with_labels  = _with_labels    # With labels?
         self.with_arrows  = _with_arrows    # With arrows?
         self.boxes = self.generate_boxes()
@@ -59,7 +60,7 @@ class Layout:
                 label = None
 
             # Create box (and append to list)
-            box = Box.Box(name, label, 1.75, arrow_state, x + self.x_offset, y + self.y_offset, self.box_size, self.box_size, self.box_stroke, self.box_fill, self.box_border)
+            box = Box.Box(name, label, self.label_size, arrow_state, x + self.x_offset, y + self.y_offset, self.box_size, self.box_size, self.box_stroke, self.box_fill, self.box_border)
             boxes.append(box)
 
             # Set next X,Y (and steps)

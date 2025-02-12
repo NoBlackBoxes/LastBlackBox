@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg id="layout_LBB" width="98.75mm" height="56.0mm" viewBox="0 0 98.75 56.0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+<g id="Atoms" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:3.5698005698005697px;">
+	<rect class="box" id="box_Atoms" x="0.255" y="0.255" width="26.5" height="26.5" style="fill-opacity:1;stroke-width:0.254985754985755;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Atoms" x="13.514" y="14.098" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Atoms</text>
+</g>
+<g id="Electrons" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:3.5698005698005697px;">
+	<rect class="box" id="box_Electrons" x="29.323" y="0.255" width="26.5" height="26.5" style="fill-opacity:1;stroke-width:0.254985754985755;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Electrons" x="42.583" y="14.098" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Electrons</text>
+</g>
+<g id="Magnets" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:3.5698005698005697px;">
+	<rect class="box" id="box_Magnets" x="58.392" y="0.255" width="26.5" height="26.5" style="fill-opacity:1;stroke-width:0.254985754985755;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Magnets" x="71.651" y="14.098" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Magnets</text>
+</g>
+<g id="Light" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:3.5698005698005697px;">
+	<rect class="box" id="box_Light" x="87.460" y="0.255" width="26.5" height="26.5" style="fill-opacity:1;stroke-width:0.254985754985755;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Light" x="100.719" y="14.098" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Light</text>
+</g>
+<g id="Sensors" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:3.5698005698005697px;">
+	<rect class="box" id="box_Sensors" x="0.255" y="29.323" width="26.5" height="26.5" style="fill-opacity:1;stroke-width:0.254985754985755;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Sensors" x="13.514" y="43.166" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Sensors</text>
+</g>
+<g id="Motors" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:3.5698005698005697px;">
+	<rect class="box" id="box_Motors" x="29.323" y="29.323" width="26.5" height="26.5" style="fill-opacity:1;stroke-width:0.254985754985755;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Motors" x="42.583" y="43.166" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Motors</text>
+</g>
+<g id="Transistors" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:3.5698005698005697px;">
+	<rect class="box" id="box_Transistors" x="58.392" y="29.323" width="26.5" height="26.5" style="fill-opacity:1;stroke-width:0.254985754985755;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Transistors" x="71.651" y="43.166" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Transistors</text>
+</g>
+<g id="Amplifiers" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:3.5698005698005697px;">
+	<rect class="box" id="box_Amplifiers" x="87.460" y="29.323" width="26.5" height="26.5" style="fill-opacity:1;stroke-width:0.254985754985755;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Amplifiers" x="100.719" y="43.166" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Amplifiers</text>
+</g>
+<g id="Circuits" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:3.5698005698005697px;">
+	<rect class="box" id="box_Circuits" x="0.255" y="58.392" width="26.5" height="26.5" style="fill-opacity:1;stroke-width:0.254985754985755;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Circuits" x="13.514" y="72.234" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Circuits</text>
+</g>
+<g id="Data" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:3.5698005698005697px;">
+	<rect class="box" id="box_Data" x="29.323" y="58.392" width="26.5" height="26.5" style="fill-opacity:1;stroke-width:0.254985754985755;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Data" x="42.583" y="72.234" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Data</text>
+</g>
+<g id="Logic" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:3.5698005698005697px;">
+	<rect class="box" id="box_Logic" x="58.392" y="58.392" width="26.5" height="26.5" style="fill-opacity:1;stroke-width:0.254985754985755;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Logic" x="71.651" y="72.234" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Logic</text>
+</g>
+<g id="Memory" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:3.5698005698005697px;">
+	<rect class="box" id="box_Memory" x="87.460" y="58.392" width="26.5" height="26.5" style="fill-opacity:1;stroke-width:0.254985754985755;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Memory" x="100.719" y="72.234" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Memory</text>
+</g>
+<g id="FPGAs" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:3.5698005698005697px;">
+	<rect class="box" id="box_FPGAs" x="0.255" y="87.460" width="26.5" height="26.5" style="fill-opacity:1;stroke-width:0.254985754985755;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_FPGAs" x="13.514" y="101.303" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">FPGAs</text>
+</g>
+<g id="Computers" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:3.5698005698005697px;">
+	<rect class="box" id="box_Computers" x="29.323" y="87.460" width="26.5" height="26.5" style="fill-opacity:1;stroke-width:0.254985754985755;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Computers" x="42.583" y="101.303" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Computers</text>
+</g>
+<g id="Control" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:3.5698005698005697px;">
+	<rect class="box" id="box_Control" x="58.392" y="87.460" width="26.5" height="26.5" style="fill-opacity:1;stroke-width:0.254985754985755;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Control" x="71.651" y="101.303" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Control</text>
+</g>
+<g id="Robotics" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:3.5698005698005697px;">
+	<rect class="box" id="box_Robotics" x="87.460" y="87.460" width="26.5" height="26.5" style="fill-opacity:1;stroke-width:0.254985754985755;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Robotics" x="100.719" y="101.303" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Robotics</text>
+</g>
+<g id="Power" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:3.5698005698005697px;">
+	<rect class="box" id="box_Power" x="0.255" y="116.528" width="26.5" height="26.5" style="fill-opacity:1;stroke-width:0.254985754985755;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Power" x="13.514" y="130.371" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Power</text>
+</g>
+<g id="Systems" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:3.5698005698005697px;">
+	<rect class="box" id="box_Systems" x="29.323" y="116.528" width="26.5" height="26.5" style="fill-opacity:1;stroke-width:0.254985754985755;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Systems" x="42.583" y="130.371" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Systems</text>
+</g>
+<g id="Linux" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:3.5698005698005697px;">
+	<rect class="box" id="box_Linux" x="58.392" y="116.528" width="26.5" height="26.5" style="fill-opacity:1;stroke-width:0.254985754985755;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Linux" x="71.651" y="130.371" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Linux</text>
+</g>
+<g id="Python" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:3.5698005698005697px;">
+	<rect class="box" id="box_Python" x="87.460" y="116.528" width="26.5" height="26.5" style="fill-opacity:1;stroke-width:0.254985754985755;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Python" x="100.719" y="130.371" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Python</text>
+</g>
+<g id="Networks" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:3.5698005698005697px;">
+	<rect class="box" id="box_Networks" x="0.255" y="145.597" width="26.5" height="26.5" style="fill-opacity:1;stroke-width:0.254985754985755;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Networks" x="13.514" y="159.439" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Networks</text>
+</g>
+<g id="Websites" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:3.5698005698005697px;">
+	<rect class="box" id="box_Websites" x="29.323" y="145.597" width="26.5" height="26.5" style="fill-opacity:1;stroke-width:0.254985754985755;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Websites" x="42.583" y="159.439" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Websites</text>
+</g>
+<g id="Servers" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:3.5698005698005697px;">
+	<rect class="box" id="box_Servers" x="58.392" y="145.597" width="26.5" height="26.5" style="fill-opacity:1;stroke-width:0.254985754985755;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Servers" x="71.651" y="159.439" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Servers</text>
+</g>
+<g id="Security" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:3.5698005698005697px;">
+	<rect class="box" id="box_Security" x="87.460" y="145.597" width="26.5" height="26.5" style="fill-opacity:1;stroke-width:0.254985754985755;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Security" x="100.719" y="159.439" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Security</text>
+</g>
+</svg>

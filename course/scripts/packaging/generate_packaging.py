@@ -46,7 +46,8 @@ for package in packages:
 design_folder = f"{Config.course_root}/_resources/packaging/designs"
 Engine_Utilities.clear_folder(design_folder)
 for package in packages:
-    design_path = f"{design_folder}/{package.name}.svg"
-    design = package.generate_design()
+    if package.name in ["Large", "Medium", "Small", "Cables"]:
+        design_path = f"{design_folder}/{package.name}.svg"
+        design = package.generate_design(unit, design_path)
 
 # FIN

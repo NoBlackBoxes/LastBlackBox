@@ -9,7 +9,10 @@ LBB : Packaging : Package Class
 import cadquery as cq
 
 # Import modules
-import LBB.Design.
+import LBB.Engine.config as Config
+import LBB.Design.layout as Layout
+import LBB.Design.svg as SVG
+import LBB.Design.png as PNG
 
 # Package Class
 class Package:
@@ -76,8 +79,22 @@ class Package:
         model = outer.cut(inner)
         return model
 
-    def generate_design(self):
-        
-        return design
+    def generate_design(self, unit, design_path):
+        num_rows = int(round(self.external["length"] / unit))
+        num_cols = int(round(self.external["width"] / unit))
+        num_boxes = num_rows * num_cols
+        if num_boxes > 28:
+            box_names = Config.box_names.extend(Config.box_names[:(num_boxes - 28)])
+        else:
+            box_names = Config.box_names[:num_boxes]
+        scale = (self.external["length"] / num_rows) / (13.0 + 0.125 + 1.5)
+        box_size = 13.0 * scale
+        label_size = 1.75 * scale
+        stroke = 0.125 * scale
+        spacing = 1.25 * scale
+        layout = Layout.Layout(self.name + "_layout", num_rows, num_cols, box_names, box_size, stroke, spacing, "#000000", "#FFFFFF", label_size, _with_labels=True, _with_arrows = False)
+        svg = SVG.SVG("layout_LBB", None, 98.75, 56.0, "0 0 98.75 56.0", layout.boxes, _with_profile=False, _with_title=False, _with_labels=True)
+        svg.draw(design_path)
+        return
 
 #FIN
