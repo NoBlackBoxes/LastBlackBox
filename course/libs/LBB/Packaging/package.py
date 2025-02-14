@@ -101,7 +101,7 @@ class Package:
 def store_design(package, design_name, num_r, num_c, spacing_ratio, box_names, scale, design_folder):
     # Adjust scale
     box_size = 13.0 * scale
-    label_size = 1.75 * scale
+    label_size = 2.0 * scale
     stroke = 0.125 * scale
     spacing = 1.25 * scale
     x_spacing = spacing * spacing_ratio

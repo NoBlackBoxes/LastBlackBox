@@ -145,169 +145,169 @@
 	@keyframes animate_Atoms {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		95%    {transform:translate(-30.986px, -27.959px);font-size:1px;}
-		100%   {transform:translate(-30.986px, -27.959px);font-size:1.75px;}
+		100%   {transform:translate(-30.986px, -27.959px);font-size:2.00px;}
 	}
 
 	@keyframes animate_Electrons {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		95%    {transform:translate(-29.681px, -30.709px);font-size:1px;}
-		100%   {transform:translate(-29.681px, -30.709px);font-size:1.75px;}
+		100%   {transform:translate(-29.681px, -30.709px);font-size:2.00px;}
 	}
 
 	@keyframes animate_Magnets {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		95%    {transform:translate(-17.162px, -21.685px);font-size:1px;}
-		100%   {transform:translate(-17.162px, -21.685px);font-size:1.75px;}
+		100%   {transform:translate(-17.162px, -21.685px);font-size:2.00px;}
 	}
 
 	@keyframes animate_Light {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		95%    {transform:translate(-14.557px, -27.022px);font-size:1px;}
-		100%   {transform:translate(-14.557px, -27.022px);font-size:1.75px;}
+		100%   {transform:translate(-14.557px, -27.022px);font-size:2.00px;}
 	}
 
 	@keyframes animate_Sensors {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		95%    {transform:translate(4.492px, -19.107px);font-size:1px;}
-		100%   {transform:translate(4.492px, -19.107px);font-size:1.75px;}
+		100%   {transform:translate(4.492px, -19.107px);font-size:2.00px;}
 	}
 
 	@keyframes animate_Motors {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		86%    {transform:translate(9.645px, -22.34px);font-size:1px;}
-		100%   {transform:translate(9.645px, -22.34px);font-size:1.75px;}
+		100%   {transform:translate(9.645px, -22.34px);font-size:2.00px;}
 	}
 
 	@keyframes animate_Transistors {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		95%    {transform:translate(16.512px, -30.364px);font-size:1px;}
-		100%   {transform:translate(16.512px, -30.364px);font-size:1.75px;}
+		100%   {transform:translate(16.512px, -30.364px);font-size:2.00px;}
 	}
 
 	@keyframes animate_Amplifiers {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		95%    {transform:translate(-72.141px, -5.289px);font-size:1px;}
-		100%   {transform:translate(-72.141px, -5.289px);font-size:1.75px;}
+		100%   {transform:translate(-72.141px, -5.289px);font-size:2.00px;}
 	}
 
 	@keyframes animate_Circuits {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		104%    {transform:translate(-54.282px, 2.329px);font-size:1px;}
-		100%   {transform:translate(-54.282px, 2.329px);font-size:1.75px;}
+		100%   {transform:translate(-54.282px, 2.329px);font-size:2.00px;}
 	}
 
 	@keyframes animate_Data {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		95%    {transform:translate(-34.821px, 6.803px);font-size:1px;}
-		100%   {transform:translate(-34.821px, 6.803px);font-size:1.75px;}
+		100%   {transform:translate(-34.821px, 6.803px);font-size:2.00px;}
 	}
 
 	@keyframes animate_Logic {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		95%    {transform:translate(-15.656px, 10.748px);font-size:1px;}
-		100%   {transform:translate(-15.656px, 10.748px);font-size:1.75px;}
+		100%   {transform:translate(-15.656px, 10.748px);font-size:2.00px;}
 	}
 
 	@keyframes animate_Memory {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		94%    {transform:translate(7.176px, 12.618px);font-size:1px;}
-		100%   {transform:translate(7.176px, 12.618px);font-size:1.75px;}
+		100%   {transform:translate(7.176px, 12.618px);font-size:2.00px;}
 	}
 
 	@keyframes animate_FPGAs {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		95%    {transform:translate(15.72px, 0.19px);font-size:1px;}
-		100%   {transform:translate(15.72px, 0.19px);font-size:1.75px;}
+		100%   {transform:translate(15.72px, 0.19px);font-size:2.00px;}
 	}
 
 	@keyframes animate_Computers {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		95%    {transform:translate(40.354px, 3.799px);font-size:1px;}
-		100%   {transform:translate(40.354px, 3.799px);font-size:1.75px;}
+		100%   {transform:translate(40.354px, 3.799px);font-size:2.00px;}
 	}
 
 	@keyframes animate_Control {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		95%    {transform:translate(-40.335px, 27.804px);font-size:1px;}
-		100%   {transform:translate(-40.335px, 27.804px);font-size:1.75px;}
+		100%   {transform:translate(-40.335px, 27.804px);font-size:2.00px;}
 	}
 
 	@keyframes animate_Robotics {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		95%    {transform:translate(-16.063px, 25.799px);font-size:1px;}
-		100%   {transform:translate(-16.063px, 25.799px);font-size:1.75px;}
+		100%   {transform:translate(-16.063px, 25.799px);font-size:2.00px;}
 	}
 
 	@keyframes animate_Power {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		95%    {transform:translate(-6.722px, 16.398px);font-size:1px;}
-		100%   {transform:translate(-6.722px, 16.398px);font-size:1.75px;}
+		100%   {transform:translate(-6.722px, 16.398px);font-size:2.00px;}
 	}
 
 	@keyframes animate_Systems {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		85%    {transform:translate(13.339px, 12.169px);font-size:1px;}
-		100%   {transform:translate(13.339px, 12.169px);font-size:1.75px;}
+		100%   {transform:translate(13.339px, 12.169px);font-size:2.00px;}
 	}
 
 	@keyframes animate_Linux {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		95%    {transform:translate(34.606px, 23.127px);font-size:1px;}
-		100%   {transform:translate(34.606px, 23.127px);font-size:1.75px;}
+		100%   {transform:translate(34.606px, 23.127px);font-size:2.00px;}
 	}
 
 	@keyframes animate_Python {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		83%    {transform:translate(54.568px, 18.182px);font-size:1px;}
-		100%   {transform:translate(54.568px, 18.182px);font-size:1.75px;}
+		100%   {transform:translate(54.568px, 18.182px);font-size:2.00px;}
 	}
 
 	@keyframes animate_Networks {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		95%    {transform:translate(71.892px, 12.703px);font-size:1px;}
-		100%   {transform:translate(71.892px, 12.703px);font-size:1.75px;}
+		100%   {transform:translate(71.892px, 12.703px);font-size:2.00px;}
 	}
 
 	@keyframes animate_Websites {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		82%    {transform:translate(-16.682px, 20.405px);font-size:1px;}
-		100%   {transform:translate(-16.682px, 20.405px);font-size:1.75px;}
+		100%   {transform:translate(-16.682px, 20.405px);font-size:2.00px;}
 	}
 
 	@keyframes animate_Servers {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		95%    {transform:translate(-35.177px, 5.032px);font-size:1px;}
-		100%   {transform:translate(-35.177px, 5.032px);font-size:1.75px;}
+		100%   {transform:translate(-35.177px, 5.032px);font-size:2.00px;}
 	}
 
 	@keyframes animate_Security {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		95%    {transform:translate(-37.162px, 7.443px);font-size:1px;}
-		100%   {transform:translate(-37.162px, 7.443px);font-size:1.75px;}
+		100%   {transform:translate(-37.162px, 7.443px);font-size:2.00px;}
 	}
 
 	@keyframes animate_Audio {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		91%    {transform:translate(-13.49px, 2.53px);font-size:1px;}
-		100%   {transform:translate(-13.49px, 2.53px);font-size:1.75px;}
+		100%   {transform:translate(-13.49px, 2.53px);font-size:2.00px;}
 	}
 
 	@keyframes animate_Vision {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		95%    {transform:translate(-3.955px, -3.303px);font-size:1px;}
-		100%   {transform:translate(-3.955px, -3.303px);font-size:1.75px;}
+		100%   {transform:translate(-3.955px, -3.303px);font-size:2.00px;}
 	}
 
 	@keyframes animate_Learning {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		95%    {transform:translate(48.325px, 17.561px);font-size:1px;}
-		100%   {transform:translate(48.325px, 17.561px);font-size:1.75px;}
+		100%   {transform:translate(48.325px, 17.561px);font-size:2.00px;}
 	}
 
 	@keyframes animate_Intelligence {
 		0%     {transform:translate(0.0px, 0.0px);font-size:0px;}
 		92%    {transform:translate(52.838px, 21.065px);font-size:1px;}
-		100%   {transform:translate(52.838px, 21.065px);font-size:1.75px;}
+		100%   {transform:translate(52.838px, 21.065px);font-size:2.00px;}
 	}
 </style>
 </svg>

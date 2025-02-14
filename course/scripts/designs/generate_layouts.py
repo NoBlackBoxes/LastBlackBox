@@ -25,7 +25,7 @@ Utilities.clear_folder(animated_folder)
 # ---
 # LBB
 # ---
-layout = Layout.Layout("LBB", 4, 7, Config.box_names, 13.0, 0.125, 1.25, 1.25, "#000000", "#FFFFFF", 1.75, True, True)
+layout = Layout.Layout("LBB", 4, 7, Config.box_names, 13.0, 0.125, 1.25, 1.25, "#000000", "#FFFFFF", 2.00, True, True)
 svg = SVG.SVG("layout_LBB", None, 98.75, 56.0, "0 0 98.75 56.0", layout.boxes, _with_profile=False, _with_title=False, _with_labels=True)
 svg_path = f"{output_folder}/svg/{svg.name}.svg"
 svg.draw(svg_path)
@@ -35,7 +35,7 @@ PNG.PNG(svg.name, dpi=600).convert(svg_path, png_path)
 # --------
 # Bootcamp
 # --------
-layout = Layout.Layout("Bootcamp", 3, 7, Config.bootcamp_box_names, 13.0, 0.125, 1.25, 1.25, "#000000", "#FFFFFF", 1.75, True, True)
+layout = Layout.Layout("Bootcamp", 3, 7, Config.bootcamp_box_names, 13.0, 0.125, 1.25, 1.25, "#000000", "#FFFFFF", 2.00, True, True)
 svg = SVG.SVG("layout_bootcamp", None, 98.75, 56.0, "0 0 98.75 56.0", layout.boxes, _with_profile=False, _with_title=False, _with_labels=True)
 svg_path = f"{output_folder}/svg/{svg.name}.svg"
 svg.draw(svg_path)
@@ -45,7 +45,7 @@ PNG.PNG(svg.name, dpi=600).convert(svg_path, png_path)
 # -------------
 # Build a Brain
 # -------------
-layout = Layout.Layout("Build a Brain", 2, 4, Config.buildabrain_box_names, 13.0, 0.125, 1.25, 1.25, "#000000", "#FFFFFF", 1.75, True, True)
+layout = Layout.Layout("Build a Brain", 2, 4, Config.buildabrain_box_names, 13.0, 0.125, 1.25, 1.25, "#000000", "#FFFFFF", 2.00, True, True)
 svg = SVG.SVG("layout_buildabrain", None, 98.75, 56.0, "0 0 98.75 56.0", layout.boxes, _with_profile=False, _with_title=False, _with_labels=True)
 svg_path = f"{output_folder}/svg/{svg.name}.svg"
 svg.draw(svg_path)
@@ -55,7 +55,7 @@ PNG.PNG(svg.name, dpi=600).convert(svg_path, png_path)
 # ---------
 # Own Phone
 # ---------
-layout = Layout.Layout("Own Phone", 3, 3, Config.ownphone_box_names, 13.0, 0.125, 1.25, 1.25, "#000000", "#FFFFFF", 1.75, True, True)
+layout = Layout.Layout("Own Phone", 3, 3, Config.ownphone_box_names, 13.0, 0.125, 1.25, 1.25, "#000000", "#FFFFFF", 2.00, True, True)
 svg = SVG.SVG("layout_ownphone", None, 98.75, 56.0, "0 0 98.75 56.0", layout.boxes, _with_profile=False, _with_title=False, _with_labels=True)
 svg_path = f"{output_folder}/svg/{svg.name}.svg"
 svg.draw(svg_path)

@@ -119,7 +119,6 @@ PNG.PNG(svg.name, width=64, height=64).convert(svg_path, png_path)
 # --------
 # Animated
 # --------
-box_parameters_path = f"{output_folder}/box_parameters_NBB.csv"
 # NBB
 animation_parameters_path = f"{output_folder}/animation_parameters_fill_stroke_delay.csv"
 svg = SVG.SVG("logo_NBB_animated_delay", None, 100, 100, "0 0 100 100", logo.boxes, _with_profile=False, _with_title=False)
