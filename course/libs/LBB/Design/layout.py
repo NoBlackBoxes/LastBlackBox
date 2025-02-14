@@ -12,7 +12,7 @@ import LBB.Design.box as Box
 
 # Layout Class
 class Layout:
-    def __init__(self, _name, _num_rows, _num_cols, _box_names, _box_size, _box_stroke, _box_spacing, _box_fill, _box_border, _label_size, _with_labels, _with_arrows):
+    def __init__(self, _name, _num_rows, _num_cols, _box_names, _box_size, _box_stroke, _box_x_spacing, _box_y_spacing, _box_fill, _box_border, _label_size, _with_labels, _with_arrows):
         self.name = _name                   # Layout name
         self.num_rows = _num_rows           # Layout #rows
         self.num_cols = _num_cols           # Layout #columns
@@ -21,7 +21,8 @@ class Layout:
         self.box_names = _box_names         # Box names
         self.box_size = _box_size           # Box size (mm)
         self.box_stroke = _box_stroke       # Box stroke
-        self.box_spacing = _box_spacing     # Box spacing
+        self.box_x_spacing = _box_x_spacing # Box X spacing
+        self.box_y_spacing = _box_y_spacing # Box Y spacing
         self.box_fill = _box_fill           # Box fill
         self.box_border = _box_border       # Box border
         self.label_size = _label_size       # Label size
@@ -34,8 +35,8 @@ class Layout:
         boxes = []
         x = 0.0
         y = 0.0
-        x_step = self.box_size + self.box_spacing
-        y_step = self.box_size + self.box_spacing
+        x_step = self.box_size + self.box_x_spacing
+        y_step = self.box_size + self.box_y_spacing
         num_boxes = len(self.box_names)
         if num_boxes != (self.num_rows * self.num_cols):
             print(f"Invalid number of boxes in layout {self.name}: #boxes = {num_boxes}, num_rows: {self.num_rows}, num_cols: {self.num_cols}")

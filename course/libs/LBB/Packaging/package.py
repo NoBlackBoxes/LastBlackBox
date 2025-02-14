@@ -6,6 +6,7 @@ LBB : Packaging : Package Class
 """
 
 # Import libraries
+import random
 import cadquery as cq
 
 # Import modules
@@ -79,22 +80,54 @@ class Package:
         model = outer.cut(inner)
         return model
 
-    def generate_design(self, unit, design_path):
-        num_rows = int(round(self.external["length"] / unit))
-        num_cols = int(round(self.external["width"] / unit))
-        num_boxes = num_rows * num_cols
-        if num_boxes > 28:
-            box_names = Config.box_names.extend(Config.box_names[:(num_boxes - 28)])
-        else:
-            box_names = Config.box_names[:num_boxes]
-        scale = (self.external["length"] / num_rows) / (13.0 + 0.125 + 1.5)
-        box_size = 13.0 * scale
-        label_size = 1.75 * scale
-        stroke = 0.125 * scale
-        spacing = 1.25 * scale
-        layout = Layout.Layout(self.name + "_layout", num_rows, num_cols, box_names, box_size, stroke, spacing, "#000000", "#FFFFFF", label_size, _with_labels=True, _with_arrows = False)
-        svg = SVG.SVG("layout_LBB", None, 98.75, 56.0, "0 0 98.75 56.0", layout.boxes, _with_profile=False, _with_title=False, _with_labels=True)
-        svg.draw(design_path)
+    def store_designs(self, unit, scale, spacing_ratio, design_folder):
+        # Unit dimensions
+        num_cols = int(round(self.external["length"] / unit))
+        num_rows = int(round(self.external["width"] / unit))
+        num_deps = int(round(self.external["height"] / unit))
+
+        # Top/Bottom (l x w)
+        store_design(self, "Top", num_rows, num_cols, spacing_ratio, Config.box_names, scale, design_folder)
+        store_design(self, "Bottom", num_rows, num_cols, spacing_ratio, Config.box_names, scale, design_folder)
+        store_design(self, "Front", num_deps, num_cols, spacing_ratio, Config.box_names, scale, design_folder)
+        store_design(self, "Back", num_deps, num_cols, spacing_ratio, Config.box_names, scale, design_folder)
+        store_design(self, "Left", num_deps, num_rows, spacing_ratio, Config.box_names, scale, design_folder)
+        store_design(self, "Right", num_deps, num_rows, spacing_ratio, Config.box_names, scale, design_folder)
         return
+
+###################
+# Package Library #
+###################
+def store_design(package, design_name, num_r, num_c, spacing_ratio, box_names, scale, design_folder):
+    # Adjust scale
+    box_size = 13.0 * scale
+    label_size = 1.75 * scale
+    stroke = 0.125 * scale
+    spacing = 1.25 * scale
+    x_spacing = spacing * spacing_ratio
+    y_spacing = spacing
+
+    # Extend box names
+    box_names = Config.box_names + Config.box_names
+
+    # Store RxC design
+    name = f"{package.name}_{design_name}"
+    random.shuffle(box_names)
+    num_boxes = num_r * num_c
+    layout = Layout.Layout(name, num_r, num_c, box_names[:num_boxes], box_size, stroke, x_spacing, y_spacing, "#000000", "#FFFFFF", label_size, _with_labels=True, _with_arrows = False)
+    svg = SVG.SVG(name, None, package.external["width"], package.external["height"], f"0 0 {package.external["width"]} {package.external["height"]}", layout.boxes, _with_profile=False, _with_title=False, _with_labels=True)
+    design_path = f"{design_folder}/{name}.svg"
+    svg.draw(design_path)
+
+    # Store CxR design
+    name = f"{package.name}_{design_name}_T"
+    random.shuffle(box_names)
+    num_boxes = num_c * num_r
+    layout = Layout.Layout(name, num_c, num_r, box_names[:num_boxes], box_size, stroke, x_spacing, y_spacing, "#000000", "#FFFFFF", label_size, _with_labels=True, _with_arrows = False)
+    svg = SVG.SVG(name, None, package.external["width"], package.external["height"], f"0 0 {package.external["width"]} {package.external["height"]}", layout.boxes, _with_profile=False, _with_title=False, _with_labels=True)
+    design_path = f"{design_folder}/{name}.svg"
+    svg.draw(design_path)
+
+    return
 
 #FIN

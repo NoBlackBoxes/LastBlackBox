@@ -45,9 +45,9 @@ for package in packages:
 # Save package designs (printing)
 design_folder = f"{Config.course_root}/_resources/packaging/designs"
 Engine_Utilities.clear_folder(design_folder)
-for package in packages:
-    if package.name in ["Large", "Medium", "Small", "Cables"]:
-        design_path = f"{design_folder}/{package.name}.svg"
-        design = package.generate_design(unit, design_path)
+packages[2].store_designs(unit, 2.00, 1.1, design_folder)
+packages[3].store_designs(unit, 2.00, 1.1, design_folder)
+packages[4].store_designs(unit, 2.00, 1.1, design_folder)
+packages[5].store_designs(unit, 2.00, 1.1, design_folder)
 
 # FIN
