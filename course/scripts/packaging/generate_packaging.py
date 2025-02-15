@@ -49,6 +49,6 @@ Engine_Utilities.clear_folder(design_folder)
 packages[2].store_designs(unit, 2.00, 1.1, Packaging_Config.large_box_names, design_folder)
 packages[3].store_designs(unit, 2.00, 1.1, Packaging_Config.medium_box_names, design_folder)
 packages[4].store_designs(unit, 2.00, 1.1, Packaging_Config.small_box_names, design_folder)
-packages[5].store_designs(unit, 2.00, 1.1, Packaging_Config.cables_box_names, design_folder)
+packages[5].store_designs(unit, 2.00, 1.1, Packaging_Config.cables_box_names, design_folder, shuffle=False)
 
 # FIN

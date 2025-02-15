@@ -80,7 +80,7 @@ class Package:
         model = outer.cut(inner)
         return model
 
-    def store_designs(self, unit, scale, spacing_ratio, box_names, design_folder):
+    def store_designs(self, unit, scale, spacing_ratio, box_names, design_folder, shuffle = True):
         # Unit dimensions
         num_cols = int(round(self.external["length"] / unit))
         num_rows = int(round(self.external["width"] / unit))
@@ -88,17 +88,22 @@ class Package:
 
         # Top uses listed box names
         store_design(self, "Top", num_rows, num_cols, spacing_ratio, box_names, scale, design_folder)
-        # Other sides use random box names
-        box_names = Config.box_names
-        random.shuffle(box_names)
+        # Other sides use random shuffle of box names (maybe)
+        if shuffle:
+            box_names = Config.box_names
+            random.shuffle(box_names)
         store_design(self, "Bottom", num_rows, num_cols, spacing_ratio, box_names, scale, design_folder)
-        random.shuffle(box_names)
+        if shuffle:
+            random.shuffle(box_names)
         store_design(self, "Front", num_deps, num_cols, spacing_ratio, box_names, scale, design_folder)
-        random.shuffle(box_names)
+        if shuffle:
+            random.shuffle(box_names)
         store_design(self, "Back", num_deps, num_cols, spacing_ratio, box_names, scale, design_folder)
-        random.shuffle(box_names)
+        if shuffle:
+            random.shuffle(box_names)
         store_design(self, "Left", num_deps, num_rows, spacing_ratio, box_names, scale, design_folder)
-        random.shuffle(box_names)
+        if shuffle:
+            random.shuffle(box_names)
         store_design(self, "Right", num_deps, num_rows, spacing_ratio, box_names, scale, design_folder)
         return
 
