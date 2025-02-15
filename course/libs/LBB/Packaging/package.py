@@ -80,19 +80,26 @@ class Package:
         model = outer.cut(inner)
         return model
 
-    def store_designs(self, unit, scale, spacing_ratio, design_folder):
+    def store_designs(self, unit, scale, spacing_ratio, box_names, design_folder):
         # Unit dimensions
         num_cols = int(round(self.external["length"] / unit))
         num_rows = int(round(self.external["width"] / unit))
         num_deps = int(round(self.external["height"] / unit))
 
-        # Top/Bottom (l x w)
-        store_design(self, "Top", num_rows, num_cols, spacing_ratio, Config.box_names, scale, design_folder)
-        store_design(self, "Bottom", num_rows, num_cols, spacing_ratio, Config.box_names, scale, design_folder)
-        store_design(self, "Front", num_deps, num_cols, spacing_ratio, Config.box_names, scale, design_folder)
-        store_design(self, "Back", num_deps, num_cols, spacing_ratio, Config.box_names, scale, design_folder)
-        store_design(self, "Left", num_deps, num_rows, spacing_ratio, Config.box_names, scale, design_folder)
-        store_design(self, "Right", num_deps, num_rows, spacing_ratio, Config.box_names, scale, design_folder)
+        # Top uses listed box names
+        store_design(self, "Top", num_rows, num_cols, spacing_ratio, box_names, scale, design_folder)
+        # Other sides use random box names
+        box_names = Config.box_names
+        random.shuffle(box_names)
+        store_design(self, "Bottom", num_rows, num_cols, spacing_ratio, box_names, scale, design_folder)
+        random.shuffle(box_names)
+        store_design(self, "Front", num_deps, num_cols, spacing_ratio, box_names, scale, design_folder)
+        random.shuffle(box_names)
+        store_design(self, "Back", num_deps, num_cols, spacing_ratio, box_names, scale, design_folder)
+        random.shuffle(box_names)
+        store_design(self, "Left", num_deps, num_rows, spacing_ratio, box_names, scale, design_folder)
+        random.shuffle(box_names)
+        store_design(self, "Right", num_deps, num_rows, spacing_ratio, box_names, scale, design_folder)
         return
 
 ###################
@@ -107,12 +114,8 @@ def store_design(package, design_name, num_r, num_c, spacing_ratio, box_names, s
     x_spacing = spacing * spacing_ratio
     y_spacing = spacing
 
-    # Extend box names
-    box_names = Config.box_names + Config.box_names
-
     # Store RxC design
     name = f"{package.name}_{design_name}"
-    random.shuffle(box_names)
     num_boxes = num_r * num_c
     layout = Layout.Layout(name, num_r, num_c, box_names[:num_boxes], box_size, stroke, x_spacing, y_spacing, "#000000", "#FFFFFF", label_size, _with_labels=True, _with_arrows = False)
     svg = SVG.SVG(name, None, package.external["width"], package.external["height"], f"0 0 {package.external["width"]} {package.external["height"]}", layout.boxes, _with_profile=False, _with_title=False, _with_labels=True)
@@ -121,7 +124,6 @@ def store_design(package, design_name, num_r, num_c, spacing_ratio, box_names, s
 
     # Store CxR design
     name = f"{package.name}_{design_name}_T"
-    random.shuffle(box_names)
     num_boxes = num_c * num_r
     layout = Layout.Layout(name, num_c, num_r, box_names[:num_boxes], box_size, stroke, x_spacing, y_spacing, "#000000", "#FFFFFF", label_size, _with_labels=True, _with_arrows = False)
     svg = SVG.SVG(name, None, package.external["width"], package.external["height"], f"0 0 {package.external["width"]} {package.external["height"]}", layout.boxes, _with_profile=False, _with_title=False, _with_labels=True)

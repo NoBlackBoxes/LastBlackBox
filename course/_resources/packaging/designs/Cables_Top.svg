@@ -4,12 +4,12 @@
 	<rect class="box" id="box_Websites" x="0.250" y="0.250" width="26.0" height="26.0" style="fill-opacity:1;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 	<text class= "text" id="text_Websites" x="13.250" y="13.833" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Websites</text>
 </g>
-<g id="Linux" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:4.0px;">
-	<rect class="box" id="box_Linux" x="29.000" y="0.250" width="26.0" height="26.0" style="fill-opacity:1;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
-	<text class= "text" id="text_Linux" x="42.000" y="13.833" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Linux</text>
+<g id="Servers" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:4.0px;">
+	<rect class="box" id="box_Servers" x="29.000" y="0.250" width="26.0" height="26.0" style="fill-opacity:1;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Servers" x="42.000" y="13.833" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Servers</text>
 </g>
-<g id="Linux" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:4.0px;">
-	<rect class="box" id="box_Linux" x="57.750" y="0.250" width="26.0" height="26.0" style="fill-opacity:1;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
-	<text class= "text" id="text_Linux" x="70.750" y="13.833" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Linux</text>
+<g id="Security" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#FFFFFF;font-size:4.0px;">
+	<rect class="box" id="box_Security" x="57.750" y="0.250" width="26.0" height="26.0" style="fill-opacity:1;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<text class= "text" id="text_Security" x="70.750" y="13.833" style="font-style:normal;font-weight:700;line-height:1.0;font-family:'Arial';white-space:pre;display:inline;fill:#FFFFFF;fill-opacity:1;stroke:none" alignment-baseline="middle" text-anchor="middle">Security</text>
 </g>
 </svg>
