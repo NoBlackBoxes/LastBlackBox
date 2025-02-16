@@ -404,17 +404,6 @@
 			)
 		)
 	)
-	(fp_text user "Copyright 2016 Accelerated Designs. All rights reserved."
-		(at 0 0 0)
-		(layer "Cmts.User")
-		(uuid "497fa6d1-2d19-476c-b51f-bdfbc2bb5b63")
-		(effects
-			(font
-				(size 0.127 0.127)
-				(thickness 0.002)
-			)
-		)
-	)
 	(fp_text user "*"
 		(at -1.7399 0 0)
 		(layer "F.Fab")

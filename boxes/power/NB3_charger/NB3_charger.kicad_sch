@@ -4757,16 +4757,16 @@
 		(uuid "09fd98d8-0fe0-4589-b0c8-3e0ab21e4efa")
 	)
 	(junction
+		(at 158.75 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0ab88f4e-12ec-4de9-9fbb-8eeaad5c20cf")
+	)
+	(junction
 		(at 62.23 125.73)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0b7d5286-c6f0-498f-a67d-8e5e7e2a35e8")
-	)
-	(junction
-		(at 118.11 125.73)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0bad6fca-2c5d-45cf-b025-c8c59516525a")
 	)
 	(junction
 		(at 142.24 43.18)
@@ -4779,6 +4779,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1337e1d7-f36c-4a3f-b1f5-c7af953b81fb")
+	)
+	(junction
+		(at 139.7 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "207708c1-1b10-475f-a1a4-e300f99c7d86")
 	)
 	(junction
 		(at 236.22 111.76)
@@ -4857,6 +4863,12 @@
 		(diameter 1.016)
 		(color 0 0 0 0)
 		(uuid "596b979b-5b14-4cb5-8c69-385c5c1f9066")
+	)
+	(junction
+		(at 154.94 63.5)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5e557843-431e-4132-b9d8-619d4ab30e23")
 	)
 	(junction
 		(at 26.67 60.96)
@@ -4955,12 +4967,6 @@
 		(uuid "aaf4b24a-4704-4130-bc7b-b5b18d9d91b8")
 	)
 	(junction
-		(at 154.94 63.5)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ac5bc705-2a16-4799-8ed7-dd72c85bd509")
-	)
-	(junction
 		(at 96.52 82.55)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4973,10 +4979,10 @@
 		(uuid "b51ee022-a078-4b0c-9644-8c3fc5bf3a4d")
 	)
 	(junction
-		(at 154.94 54.61)
+		(at 168.91 63.5)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "b53d780c-8da1-4fd7-82d5-c74da4a344b6")
+		(uuid "bb867470-930f-4029-bbf1-a67a84b54324")
 	)
 	(junction
 		(at 214.63 31.75)
@@ -4989,6 +4995,12 @@
 		(diameter 1.016)
 		(color 0 0 0 0)
 		(uuid "c3b91a77-1bef-45db-9410-09f459daa7d9")
+	)
+	(junction
+		(at 158.75 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cd414275-45ad-4d9a-9e42-be73208515ff")
 	)
 	(junction
 		(at 260.35 31.75)
@@ -5031,12 +5043,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e9ee68ee-9a4b-4878-84e6-c1902e77bf4c")
-	)
-	(junction
-		(at 154.94 74.93)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ed47105c-0240-4cc4-a530-3516a66a71c7")
 	)
 	(junction
 		(at 157.48 111.76)
@@ -5128,7 +5134,7 @@
 	)
 	(wire
 		(pts
-			(xy 105.41 125.73) (xy 118.11 125.73)
+			(xy 105.41 125.73) (xy 137.16 125.73)
 		)
 		(stroke
 			(width 0)
@@ -5218,6 +5224,16 @@
 	)
 	(wire
 		(pts
+			(xy 158.75 63.5) (xy 158.75 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "27c5438c-bd91-4370-b451-f1c094f88e33")
+	)
+	(wire
+		(pts
 			(xy 252.73 66.04) (xy 250.19 66.04)
 		)
 		(stroke
@@ -5298,16 +5314,6 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 74.93) (xy 154.94 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "358af5d4-5385-4084-bf96-1db56054560d")
-	)
-	(wire
-		(pts
 			(xy 153.67 125.73) (xy 156.21 125.73)
 		)
 		(stroke
@@ -5355,16 +5361,6 @@
 			(type default)
 		)
 		(uuid "3b59256f-cef3-4a41-aed0-1f7a25e26ac5")
-	)
-	(wire
-		(pts
-			(xy 154.94 54.61) (xy 154.94 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3b7bc80c-07c2-4976-af1b-95d5b813415c")
 	)
 	(wire
 		(pts
@@ -5428,7 +5424,7 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 48.26) (xy 154.94 54.61)
+			(xy 154.94 48.26) (xy 154.94 63.5)
 		)
 		(stroke
 			(width 0)
@@ -5668,16 +5664,6 @@
 	)
 	(wire
 		(pts
-			(xy 118.11 138.43) (xy 118.11 125.73)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "6d147390-815d-4cd9-b3bb-a26da365ef7f")
-	)
-	(wire
-		(pts
 			(xy 262.89 36.83) (xy 260.35 36.83)
 		)
 		(stroke
@@ -5738,16 +5724,6 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 69.85) (xy 142.24 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "74e4b2b6-c636-456b-b0a9-da7dbc8f702f")
-	)
-	(wire
-		(pts
 			(xy 260.35 36.83) (xy 260.35 39.37)
 		)
 		(stroke
@@ -5755,16 +5731,6 @@
 			(type solid)
 		)
 		(uuid "757148a0-da78-4fb7-b313-6c52f62eaa0a")
-	)
-	(wire
-		(pts
-			(xy 142.24 69.85) (xy 142.24 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "767fc18e-21d0-4611-9b5e-68b86e345c17")
 	)
 	(wire
 		(pts
@@ -5808,6 +5774,16 @@
 	)
 	(wire
 		(pts
+			(xy 158.75 74.93) (xy 158.75 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "78b41ed3-1115-439a-9fd4-0aad2fbe0654")
+	)
+	(wire
+		(pts
 			(xy 181.61 128.27) (xy 191.77 128.27)
 		)
 		(stroke
@@ -5838,6 +5814,16 @@
 	)
 	(wire
 		(pts
+			(xy 168.91 63.5) (xy 170.18 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7dad94b6-af61-459b-ba8e-f2b33d4f887f")
+	)
+	(wire
+		(pts
 			(xy 74.93 55.88) (xy 83.82 55.88)
 		)
 		(stroke
@@ -5845,16 +5831,6 @@
 			(type default)
 		)
 		(uuid "7ed12a97-3a6c-4f91-94b6-3ca809bb0f3f")
-	)
-	(wire
-		(pts
-			(xy 154.94 82.55) (xy 154.94 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7fc381c3-c3d7-46e4-bfa4-2a35105c7308")
 	)
 	(wire
 		(pts
@@ -5905,6 +5881,16 @@
 			(type default)
 		)
 		(uuid "867f2267-7d7a-4734-96cd-acc1d4c46213")
+	)
+	(wire
+		(pts
+			(xy 168.91 82.55) (xy 158.75 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "868a9558-6a8d-42a8-aa0f-59d73d6e2be6")
 	)
 	(wire
 		(pts
@@ -5968,16 +5954,6 @@
 	)
 	(wire
 		(pts
-			(xy 118.11 125.73) (xy 137.16 125.73)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(uuid "97cdf211-e2f0-44de-a85e-361b90cf8cdc")
-	)
-	(wire
-		(pts
 			(xy 214.63 119.38) (xy 214.63 127)
 		)
 		(stroke
@@ -6005,6 +5981,16 @@
 			(type solid)
 		)
 		(uuid "9857d225-c54b-4e57-ac69-26cc4a2aca1a")
+	)
+	(wire
+		(pts
+			(xy 118.11 133.35) (xy 118.11 138.43)
+		)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(uuid "98d53fdb-5332-40c6-9eb7-35140c1a4124")
 	)
 	(wire
 		(pts
@@ -6125,6 +6111,26 @@
 			(type default)
 		)
 		(uuid "a5196234-7929-49e4-b70a-0b6ae6845d07")
+	)
+	(wire
+		(pts
+			(xy 168.91 74.93) (xy 168.91 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a913307a-4ed8-42e9-91aa-d7dddbfbcbbb")
+	)
+	(wire
+		(pts
+			(xy 168.91 63.5) (xy 168.91 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab9eceab-1361-418a-bf41-44aa88e71afa")
 	)
 	(wire
 		(pts
@@ -6285,6 +6291,16 @@
 			(type default)
 		)
 		(uuid "c78faeda-f04a-496d-a8fb-e0850d9bd534")
+	)
+	(wire
+		(pts
+			(xy 139.7 69.85) (xy 139.7 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8684949-e90a-434b-905e-b0e482f06701")
 	)
 	(wire
 		(pts
@@ -6558,6 +6574,36 @@
 	)
 	(wire
 		(pts
+			(xy 139.7 82.55) (xy 158.75 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e969c442-9b5a-4c73-86c7-fbc2fc206517")
+	)
+	(wire
+		(pts
+			(xy 158.75 63.5) (xy 168.91 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ead86529-4b97-4de0-ad4b-f16f6fb5058a")
+	)
+	(wire
+		(pts
+			(xy 134.62 69.85) (xy 139.7 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ec02d71d-c3f1-4efc-8c21-f49503a1b8ee")
+	)
+	(wire
+		(pts
 			(xy 156.21 147.32) (xy 162.56 147.32)
 		)
 		(stroke
@@ -6578,7 +6624,7 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 82.55) (xy 154.94 82.55)
+			(xy 129.54 82.55) (xy 139.7 82.55)
 		)
 		(stroke
 			(width 0)
@@ -6648,16 +6694,6 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 74.93) (xy 154.94 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f35536bc-771a-4595-b79a-fcf47652690b")
-	)
-	(wire
-		(pts
 			(xy 250.19 82.55) (xy 252.73 82.55)
 		)
 		(stroke
@@ -6705,6 +6741,16 @@
 			(type solid)
 		)
 		(uuid "fb662073-d763-4eb1-8490-313835114170")
+	)
+	(wire
+		(pts
+			(xy 154.94 63.5) (xy 158.75 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc471497-f909-466a-b280-057d30566c9c")
 	)
 	(wire
 		(pts
@@ -7118,7 +7164,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 254 39.37 0)
+		(at 248.92 31.75 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7126,7 +7172,7 @@
 		(dnp no)
 		(uuid "00000000-0000-0000-0000-00005fb3b3a2")
 		(property "Reference" "#PWR06"
-			(at 254 45.72 0)
+			(at 242.57 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7135,7 +7181,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 254.127 43.7642 0)
+			(at 244.5258 31.877 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7143,7 +7189,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 254 39.37 0)
+			(at 248.92 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7152,7 +7198,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 254 39.37 0)
+			(at 248.92 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7161,7 +7207,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 254 39.37 0)
+			(at 248.92 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7689,6 +7735,71 @@
 			(project "NB3_charger"
 				(path "/865a6659-88ab-4157-bbc8-8818e83bf79d"
 					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+12V")
+		(at 118.11 133.35 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1f81ca9a-aea2-4dd3-afae-d42c7b954c4e")
+		(property "Reference" "#PWR024"
+			(at 118.11 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+12V"
+			(at 118.4783 129.0256 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 118.11 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 118.11 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+12V\""
+			(at 118.11 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7fda3449-c7e9-4ead-b627-e5dd31f1453e")
+		)
+		(instances
+			(project "NB3_charger"
+				(path "/865a6659-88ab-4157-bbc8-8818e83bf79d"
+					(reference "#PWR024")
 					(unit 1)
 				)
 			)
@@ -9012,6 +9123,129 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 158.75 71.12 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4ba18be7-3614-4c4a-9d28-cfca01bee63b")
+		(property "Reference" "C18"
+			(at 159.004 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF 35v"
+			(at 155.448 76.708 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 159.7152 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-global/products/productdetail.aspx?partno=GRM21BC8YA106ME11%23"
+			(at 158.75 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 158.75 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field5" "490-10505-1-ND"
+			(at 158.75 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" "Digikey"
+			(at 158.75 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field6" "GRM21BC8YA106KE11L "
+			(at 158.75 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field7" "Murata"
+			(at 158.75 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part Description" "	10uF 10% or 20% 35V Ceramic Capacitor X6S 0805 (2012 Metric)"
+			(at 158.75 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field8" ""
+			(at 158.75 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8fa12df2-d041-4532-ad3e-d72786a7f282")
+		)
+		(pin "2"
+			(uuid "42e25014-265d-4f9b-b007-589354555e78")
+		)
+		(instances
+			(project "NB3_charger"
+				(path "/865a6659-88ab-4157-bbc8-8818e83bf79d"
+					(reference "C18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 261.62 115.57 90)
 		(unit 1)
@@ -9904,6 +10138,129 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 168.91 71.12 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "696761c8-87f4-4eb8-bfce-128d78f0a363")
+		(property "Reference" "C20"
+			(at 169.164 68.834 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF 35v"
+			(at 165.608 76.708 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 169.8752 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.murata.com/en-global/products/productdetail.aspx?partno=GRM21BC8YA106ME11%23"
+			(at 168.91 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 168.91 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field5" "490-10505-1-ND"
+			(at 168.91 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field4" "Digikey"
+			(at 168.91 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field6" "GRM21BC8YA106KE11L "
+			(at 168.91 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field7" "Murata"
+			(at 168.91 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part Description" "	10uF 10% or 20% 35V Ceramic Capacitor X6S 0805 (2012 Metric)"
+			(at 168.91 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Field8" ""
+			(at 168.91 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "99309192-40ba-4445-bc8a-c3861684cf2f")
+		)
+		(pin "2"
+			(uuid "952b9464-ae9a-4a20-a1b0-f89633bac952")
+		)
+		(instances
+			(project "NB3_charger"
+				(path "/865a6659-88ab-4157-bbc8-8818e83bf79d"
+					(reference "C20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 83.82 72.39 0)
 		(unit 1)
@@ -10197,129 +10554,6 @@
 			(project "NB3_charger"
 				(path "/865a6659-88ab-4157-bbc8-8818e83bf79d"
 					(reference "#FLG02")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 154.94 67.31 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "71bdd1c8-2592-4106-88df-58c9b6c6e162")
-		(property "Reference" "C18"
-			(at 157.861 66.1416 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10uF"
-			(at 157.861 68.453 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 155.9052 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM21BR71A106KA73-01.pdf"
-			(at 154.94 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 154.94 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Field5" "490-14381-1-ND"
-			(at 154.94 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Field4" "Digikey"
-			(at 154.94 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Field6" "GRM21BR71A106KA73L"
-			(at 154.94 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Field7" "Murata"
-			(at 154.94 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Part Description" "	10uF 10% 10V Ceramic Capacitor X7R 0805 (2012 Metric)"
-			(at 154.94 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Field8" "111893011"
-			(at 154.94 67.31 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f1f06bc6-bc44-4f91-8e68-1d23816b5da5")
-		)
-		(pin "2"
-			(uuid "af822277-8920-4cbd-81c8-8adee2de75d3")
-		)
-		(instances
-			(project "NB3_charger"
-				(path "/865a6659-88ab-4157-bbc8-8818e83bf79d"
-					(reference "C18")
 					(unit 1)
 				)
 			)
@@ -11583,7 +11817,7 @@
 	)
 	(symbol
 		(lib_id "power:+BATT")
-		(at 154.94 54.61 270)
+		(at 170.18 63.5 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11591,7 +11825,7 @@
 		(dnp no)
 		(uuid "99cb6c9a-6c79-4798-92e5-f0e576804574")
 		(property "Reference" "#PWR020"
-			(at 151.13 54.61 0)
+			(at 166.37 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11600,7 +11834,7 @@
 			)
 		)
 		(property "Value" "+BATT"
-			(at 160.655 54.61 90)
+			(at 175.895 63.5 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11608,7 +11842,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 154.94 54.61 0)
+			(at 170.18 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11617,7 +11851,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 154.94 54.61 0)
+			(at 170.18 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11626,7 +11860,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+BATT\""
-			(at 154.94 54.61 0)
+			(at 170.18 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14715,7 +14949,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 248.92 31.75 90)
+		(at 254 39.37 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14723,7 +14957,7 @@
 		(dnp no)
 		(uuid "fe338787-7632-4c46-a27e-f905b7e20161")
 		(property "Reference" "#PWR05"
-			(at 252.73 31.75 0)
+			(at 257.81 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14732,7 +14966,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 245.745 31.3817 90)
+			(at 250.825 39.0017 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14741,7 +14975,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 248.92 31.75 0)
+			(at 254 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14750,7 +14984,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 248.92 31.75 0)
+			(at 254 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14759,7 +14993,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 248.92 31.75 0)
+			(at 254 39.37 0)
 			(effects
 				(font
 					(size 1.27 1.27)
