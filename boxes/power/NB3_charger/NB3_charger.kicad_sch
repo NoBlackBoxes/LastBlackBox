@@ -4877,6 +4877,12 @@
 		(uuid "6978bafa-f725-4eeb-a22f-f5f6daaca4e7")
 	)
 	(junction
+		(at 129.54 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6db70178-df18-4e1d-a827-a849cee967fb")
+	)
+	(junction
 		(at 62.23 133.35)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5001,12 +5007,6 @@
 		(diameter 1.016)
 		(color 0 0 0 0)
 		(uuid "db0c4c10-dbb4-40ea-bed8-b851cf65f56b")
-	)
-	(junction
-		(at 148.59 74.93)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e16369c9-efee-4ae2-bf7a-2f2fd9c5e529")
 	)
 	(junction
 		(at 83.82 133.35)
@@ -5255,16 +5255,6 @@
 			(type default)
 		)
 		(uuid "2f022809-598a-45a7-bed2-f2a40e992ca9")
-	)
-	(wire
-		(pts
-			(xy 124.46 69.85) (xy 148.59 69.85)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "312cdde4-3497-4dba-b40d-91ae6aa7bd7a")
 	)
 	(wire
 		(pts
@@ -5638,16 +5628,6 @@
 	)
 	(wire
 		(pts
-			(xy 134.62 74.93) (xy 148.59 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6728be06-0ff6-41c6-ac6c-726a8fbe23e2")
-	)
-	(wire
-		(pts
 			(xy 113.03 133.35) (xy 113.03 147.32)
 		)
 		(stroke
@@ -5758,6 +5738,16 @@
 	)
 	(wire
 		(pts
+			(xy 134.62 69.85) (xy 142.24 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74e4b2b6-c636-456b-b0a9-da7dbc8f702f")
+	)
+	(wire
+		(pts
 			(xy 260.35 36.83) (xy 260.35 39.37)
 		)
 		(stroke
@@ -5768,7 +5758,7 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 69.85) (xy 148.59 74.93)
+			(xy 142.24 69.85) (xy 142.24 74.93)
 		)
 		(stroke
 			(width 0)
@@ -5795,6 +5785,16 @@
 			(type solid)
 		)
 		(uuid "77193f72-2f88-4207-85b8-5311a51bfca1")
+	)
+	(wire
+		(pts
+			(xy 129.54 74.93) (xy 129.54 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "775974ae-de83-4598-93de-76522721791d")
 	)
 	(wire
 		(pts
@@ -6176,6 +6176,16 @@
 		)
 		(uuid "b19dfd17-1c3a-42af-a5f0-80683b57efbb")
 	)
+	(wire
+		(pts
+			(xy 124.46 74.93) (xy 129.54 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b374997c-7357-43a2-b1c5-c1d37ecc9e05")
+	)
 	(polyline
 		(pts
 			(xy 227.33 154.94) (xy 283.21 154.94)
@@ -6398,7 +6408,7 @@
 	)
 	(wire
 		(pts
-			(xy 101.6 82.55) (xy 154.94 82.55)
+			(xy 101.6 82.55) (xy 129.54 82.55)
 		)
 		(stroke
 			(width 0)
@@ -6568,6 +6578,16 @@
 	)
 	(wire
 		(pts
+			(xy 129.54 82.55) (xy 154.94 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eddb1ae2-ae31-40b0-b54b-d6aa02d71aa8")
+	)
+	(wire
+		(pts
 			(xy 53.34 60.96) (xy 53.34 43.18)
 		)
 		(stroke
@@ -6628,7 +6648,7 @@
 	)
 	(wire
 		(pts
-			(xy 148.59 74.93) (xy 154.94 74.93)
+			(xy 142.24 74.93) (xy 154.94 74.93)
 		)
 		(stroke
 			(width 0)
@@ -7163,7 +7183,7 @@
 	)
 	(symbol
 		(lib_id "NB3_charger:AA_Battery_Holder_1028")
-		(at 226.06 74.93 0)
+		(at 226.06 74.93 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7172,7 +7192,7 @@
 		(fields_autoplaced yes)
 		(uuid "01e36647-c73d-4f75-ae47-5547c04611f4")
 		(property "Reference" "BT3"
-			(at 225.425 67.31 0)
+			(at 226.695 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7180,7 +7200,7 @@
 			)
 		)
 		(property "Value" "1028"
-			(at 225.425 69.85 0)
+			(at 226.695 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7188,7 +7208,7 @@
 			)
 		)
 		(property "Footprint" "NB3_charger:AA_Battery_Holder_1028"
-			(at 227.584 84.582 0)
+			(at 224.536 65.278 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7216,7 +7236,7 @@
 			)
 		)
 		(property "PARTREV" "C"
-			(at 218.186 84.582 0)
+			(at 233.934 65.278 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7226,7 +7246,7 @@
 			)
 		)
 		(property "STANDARD" "Manufacturer Recommendations"
-			(at 228.346 82.296 0)
+			(at 223.774 67.564 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7236,7 +7256,7 @@
 			)
 		)
 		(property "SNAPEDA_PN" "1028"
-			(at 214.884 84.582 0)
+			(at 237.236 65.278 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7246,7 +7266,7 @@
 			)
 		)
 		(property "MAXIMUM_PACKAGE_HEIGHT" "15.49mm"
-			(at 239.014 86.106 0)
+			(at 213.106 63.754 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7256,7 +7276,7 @@
 			)
 		)
 		(property "MANUFACTURER" "Keystone"
-			(at 215.646 86.614 0)
+			(at 236.474 63.246 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7745,7 +7765,7 @@
 	)
 	(symbol
 		(lib_id "NB3_charger:AA_Battery_Holder_1028")
-		(at 195.58 90.17 0)
+		(at 195.58 90.17 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7754,7 +7774,7 @@
 		(fields_autoplaced yes)
 		(uuid "28005a58-1203-4175-9249-c628c6716198")
 		(property "Reference" "BT4"
-			(at 194.945 82.55 0)
+			(at 196.215 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7762,7 +7782,7 @@
 			)
 		)
 		(property "Value" "1028"
-			(at 194.945 85.09 0)
+			(at 196.215 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7770,7 +7790,7 @@
 			)
 		)
 		(property "Footprint" "NB3_charger:AA_Battery_Holder_1028"
-			(at 197.104 99.822 0)
+			(at 194.056 80.518 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7798,7 +7818,7 @@
 			)
 		)
 		(property "PARTREV" "C"
-			(at 187.706 99.822 0)
+			(at 203.454 80.518 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7808,7 +7828,7 @@
 			)
 		)
 		(property "STANDARD" "Manufacturer Recommendations"
-			(at 197.866 97.536 0)
+			(at 193.294 82.804 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7818,7 +7838,7 @@
 			)
 		)
 		(property "SNAPEDA_PN" "1028"
-			(at 184.404 99.822 0)
+			(at 206.756 80.518 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7828,7 +7848,7 @@
 			)
 		)
 		(property "MAXIMUM_PACKAGE_HEIGHT" "15.49mm"
-			(at 208.534 101.346 0)
+			(at 182.626 78.994 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7838,7 +7858,7 @@
 			)
 		)
 		(property "MANUFACTURER" "Keystone"
-			(at 185.166 101.854 0)
+			(at 205.994 78.486 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8486,7 +8506,7 @@
 	)
 	(symbol
 		(lib_id "power:+BATT")
-		(at 186.69 74.93 0)
+		(at 233.68 90.17 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8495,7 +8515,7 @@
 		(fields_autoplaced yes)
 		(uuid "3772a745-656b-4700-84d8-2611a6451b36")
 		(property "Reference" "#PWR011"
-			(at 186.69 78.74 0)
+			(at 233.68 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8504,7 +8524,7 @@
 			)
 		)
 		(property "Value" "+BATT"
-			(at 186.69 69.85 0)
+			(at 233.68 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8512,7 +8532,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 186.69 74.93 0)
+			(at 233.68 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8521,7 +8541,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 186.69 74.93 0)
+			(at 233.68 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8530,7 +8550,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+BATT\""
-			(at 186.69 74.93 0)
+			(at 233.68 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9766,7 +9786,7 @@
 	)
 	(symbol
 		(lib_id "NB3_charger:AA_Battery_Holder_1028")
-		(at 226.06 90.17 0)
+		(at 226.06 90.17 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9775,7 +9795,7 @@
 		(fields_autoplaced yes)
 		(uuid "66841316-6971-459f-a68b-8f47f9b34d84")
 		(property "Reference" "BT6"
-			(at 225.425 82.55 0)
+			(at 226.695 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9783,7 +9803,7 @@
 			)
 		)
 		(property "Value" "1028"
-			(at 225.425 85.09 0)
+			(at 226.695 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9791,7 +9811,7 @@
 			)
 		)
 		(property "Footprint" "NB3_charger:AA_Battery_Holder_1028"
-			(at 227.584 99.822 0)
+			(at 224.536 80.518 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9819,7 +9839,7 @@
 			)
 		)
 		(property "PARTREV" "C"
-			(at 218.186 99.822 0)
+			(at 233.934 80.518 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9829,7 +9849,7 @@
 			)
 		)
 		(property "STANDARD" "Manufacturer Recommendations"
-			(at 228.346 97.536 0)
+			(at 223.774 82.804 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9839,7 +9859,7 @@
 			)
 		)
 		(property "SNAPEDA_PN" "1028"
-			(at 214.884 99.822 0)
+			(at 237.236 80.518 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9849,7 +9869,7 @@
 			)
 		)
 		(property "MAXIMUM_PACKAGE_HEIGHT" "15.49mm"
-			(at 239.014 101.346 0)
+			(at 213.106 78.994 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9859,7 +9879,7 @@
 			)
 		)
 		(property "MANUFACTURER" "Keystone"
-			(at 215.646 101.854 0)
+			(at 236.474 78.486 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9999,7 +10019,7 @@
 	)
 	(symbol
 		(lib_id "NB3_charger:AA_Battery_Holder_1028")
-		(at 210.82 90.17 0)
+		(at 210.82 90.17 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10008,7 +10028,7 @@
 		(fields_autoplaced yes)
 		(uuid "6e42b084-341a-484b-a6ed-afd3860032ab")
 		(property "Reference" "BT5"
-			(at 210.185 82.55 0)
+			(at 211.455 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10016,7 +10036,7 @@
 			)
 		)
 		(property "Value" "1028"
-			(at 210.185 85.09 0)
+			(at 211.455 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10024,7 +10044,7 @@
 			)
 		)
 		(property "Footprint" "NB3_charger:AA_Battery_Holder_1028"
-			(at 212.344 99.822 0)
+			(at 209.296 80.518 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10052,7 +10072,7 @@
 			)
 		)
 		(property "PARTREV" "C"
-			(at 202.946 99.822 0)
+			(at 218.694 80.518 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10062,7 +10082,7 @@
 			)
 		)
 		(property "STANDARD" "Manufacturer Recommendations"
-			(at 213.106 97.536 0)
+			(at 208.534 82.804 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10072,7 +10092,7 @@
 			)
 		)
 		(property "SNAPEDA_PN" "1028"
-			(at 199.644 99.822 0)
+			(at 221.996 80.518 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10082,7 +10102,7 @@
 			)
 		)
 		(property "MAXIMUM_PACKAGE_HEIGHT" "15.49mm"
-			(at 223.774 101.346 0)
+			(at 197.866 78.994 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10092,7 +10112,7 @@
 			)
 		)
 		(property "MANUFACTURER" "Keystone"
-			(at 200.406 101.854 0)
+			(at 221.234 78.486 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11742,7 +11762,7 @@
 	)
 	(symbol
 		(lib_id "NB3_charger:Thermistor_NTC_NTCG163JF103FT1")
-		(at 129.54 74.93 0)
+		(at 129.54 69.85 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11750,7 +11770,7 @@
 		(dnp no)
 		(uuid "9c16c002-1c5e-4f42-9c9d-9657021084fd")
 		(property "Reference" "T1"
-			(at 130.81 72.39 0)
+			(at 130.81 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11759,7 +11779,7 @@
 			)
 		)
 		(property "Value" "NTCG163JF103FT1"
-			(at 144.78 78.74 0)
+			(at 148.59 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11768,7 +11788,7 @@
 			)
 		)
 		(property "Footprint" "NB3_charger:Thermistor_NTC_NTCG163JF103FT1"
-			(at 129.54 85.09 0)
+			(at 129.54 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11778,7 +11798,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 127.254 74.803 0)
+			(at 127.254 69.723 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11788,7 +11808,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 129.54 74.93 0)
+			(at 129.54 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11797,7 +11817,7 @@
 			)
 		)
 		(property "LCSC" "C76589"
-			(at 129.54 79.502 0)
+			(at 129.54 74.422 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11959,7 +11979,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 233.68 90.17 0)
+		(at 186.69 74.93 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11967,7 +11987,7 @@
 		(dnp no)
 		(uuid "aeeac1b8-cfa0-44e7-88fa-13aad97b44de")
 		(property "Reference" "#PWR010"
-			(at 233.68 96.52 0)
+			(at 186.69 68.58 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11976,7 +11996,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 233.807 94.5642 0)
+			(at 186.563 70.5358 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11984,7 +12004,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 233.68 90.17 0)
+			(at 186.69 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11993,7 +12013,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 233.68 90.17 0)
+			(at 186.69 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12002,7 +12022,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 233.68 90.17 0)
+			(at 186.69 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12882,7 +12902,7 @@
 	)
 	(symbol
 		(lib_id "NB3_charger:AA_Battery_Holder_1028")
-		(at 210.82 74.93 0)
+		(at 210.82 74.93 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12891,7 +12911,7 @@
 		(fields_autoplaced yes)
 		(uuid "cb75b721-e2aa-4eca-a174-7092345635c0")
 		(property "Reference" "BT2"
-			(at 210.185 67.31 0)
+			(at 211.455 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12899,7 +12919,7 @@
 			)
 		)
 		(property "Value" "1028"
-			(at 210.185 69.85 0)
+			(at 211.455 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12907,7 +12927,7 @@
 			)
 		)
 		(property "Footprint" "NB3_charger:AA_Battery_Holder_1028"
-			(at 212.344 84.582 0)
+			(at 209.296 65.278 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12935,7 +12955,7 @@
 			)
 		)
 		(property "PARTREV" "C"
-			(at 202.946 84.582 0)
+			(at 218.694 65.278 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12945,7 +12965,7 @@
 			)
 		)
 		(property "STANDARD" "Manufacturer Recommendations"
-			(at 213.106 82.296 0)
+			(at 208.534 67.564 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12955,7 +12975,7 @@
 			)
 		)
 		(property "SNAPEDA_PN" "1028"
-			(at 199.644 84.582 0)
+			(at 221.996 65.278 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12965,7 +12985,7 @@
 			)
 		)
 		(property "MAXIMUM_PACKAGE_HEIGHT" "15.49mm"
-			(at 223.774 86.106 0)
+			(at 197.866 63.754 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12975,7 +12995,7 @@
 			)
 		)
 		(property "MANUFACTURER" "Keystone"
-			(at 200.406 86.614 0)
+			(at 221.234 63.246 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13937,7 +13957,7 @@
 	)
 	(symbol
 		(lib_id "NB3_charger:AA_Battery_Holder_1028")
-		(at 195.58 74.93 0)
+		(at 195.58 74.93 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13946,7 +13966,7 @@
 		(fields_autoplaced yes)
 		(uuid "e69210ec-7cc4-46df-8c7f-1e227edbb4f7")
 		(property "Reference" "BT1"
-			(at 194.945 67.31 0)
+			(at 196.215 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13954,7 +13974,7 @@
 			)
 		)
 		(property "Value" "1028"
-			(at 194.945 69.85 0)
+			(at 196.215 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13962,7 +13982,7 @@
 			)
 		)
 		(property "Footprint" "NB3_charger:AA_Battery_Holder_1028"
-			(at 197.104 84.582 0)
+			(at 194.056 65.278 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13990,7 +14010,7 @@
 			)
 		)
 		(property "PARTREV" "C"
-			(at 187.706 84.582 0)
+			(at 203.454 65.278 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14000,7 +14020,7 @@
 			)
 		)
 		(property "STANDARD" "Manufacturer Recommendations"
-			(at 197.866 82.296 0)
+			(at 193.294 67.564 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14010,7 +14030,7 @@
 			)
 		)
 		(property "SNAPEDA_PN" "1028"
-			(at 184.404 84.582 0)
+			(at 206.756 65.278 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14020,7 +14040,7 @@
 			)
 		)
 		(property "MAXIMUM_PACKAGE_HEIGHT" "15.49mm"
-			(at 208.534 86.106 0)
+			(at 182.626 63.754 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14030,7 +14050,7 @@
 			)
 		)
 		(property "MANUFACTURER" "Keystone"
-			(at 185.166 86.614 0)
+			(at 205.994 63.246 0)
 			(effects
 				(font
 					(size 1.27 1.27)
