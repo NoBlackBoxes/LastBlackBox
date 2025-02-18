@@ -1,0 +1,184 @@
+(footprint "AA_Battery_Holder_BH-AA-A5BJ012"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "BAT-TH_BH-AA-A5BJ012 footprint")
+	(tags "BAT-TH_BH-AA-A5BJ012 footprint C5290180")
+	(property "Reference" "REF**"
+		(at 0 -10.3 0)
+		(layer "F.SilkS")
+		(uuid "45a15950-a6df-4bc4-8acc-67075395fb6f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "AA_Battery_Holder_BH-AA-A5BJ012"
+		(at 0 10.3 0)
+		(layer "F.Fab")
+		(uuid "1ba7e877-7a75-4689-b4ed-628ccc6af590")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "09de3008-34dc-440b-819c-3a343adbeb36")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c2462bbe-bedc-4bd9-b2b6-a57c342a5d25")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6450247b-ba92-4472-92d0-623ae0169e92")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -30 -8.3)
+		(end -27.777623 -8.3)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "64b2b59d-e214-4a02-82e1-1ac8e5ac7026")
+	)
+	(fp_line
+		(start -30 8.3)
+		(end -30 -8.3)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "fdf6c988-194b-4d3e-b7ee-ea3422f23cf1")
+	)
+	(fp_line
+		(start -27.522352 -8.3)
+		(end 30 -8.3)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8df9527e-cdd8-4779-8cb7-644e068c0d83")
+	)
+	(fp_line
+		(start 30 -8.3)
+		(end 30 8.3)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "10c909e2-db19-40ad-ac0d-dfb2c7f1bf72")
+	)
+	(fp_line
+		(start 30 8.3)
+		(end -30 8.3)
+		(stroke
+			(width 0.254)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "fa5a3fdd-0dc8-429b-b56f-7634c0660ed4")
+	)
+	(fp_circle
+		(center -30 8.299975)
+		(end -29.970028 8.299975)
+		(stroke
+			(width 0.059995)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "8e623a30-9e07-4ea0-ab2c-604f8de7bea9")
+	)
+	(fp_circle
+		(center -27.649987 -7.100076)
+		(end -27.249936 -7.100076)
+		(stroke
+			(width 0.8)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.Fab")
+		(uuid "b07ce6a0-8ded-4902-9c0f-ef53e06a80ee")
+	)
+	(fp_text user "REF**"
+		(at 0 12.3 0)
+		(layer "F.Fab")
+		(uuid "b28dfefc-97fd-4777-a7d0-c9e19dc06d0b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "" np_thru_hole circle
+		(at -27.649987 -7.100076)
+		(size 2 2)
+		(drill 2)
+		(layers "*.Cu" "*.Mask")
+		(uuid "d90a9d19-c95f-4843-9e11-febb9083135b")
+	)
+	(pad "1" thru_hole circle
+		(at -27.649987 0)
+		(size 2.3 2.3)
+		(drill 1.500025)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "6ecfa567-6490-410b-91dd-5f6371c94c0c")
+	)
+	(pad "2" thru_hole circle
+		(at 27.649987 0)
+		(size 2.3 2.3)
+		(drill 1.500025)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "6dc659d2-8a9d-4602-86c0-497cd51e6d59")
+	)
+	(model "${KIPRJMOD}/libraries/parts/AA_Battery_Holder_BH-AA-A5BJ012/AA_Battery_Holder_BH-AA-A5BJ012.step"
+		(offset
+			(xyz 0 0 0.000007)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

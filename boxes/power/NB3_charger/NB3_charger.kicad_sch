@@ -997,47 +997,43 @@
 				)
 			)
 		)
-		(symbol "NB3_charger:AA_Battery_Holder_1028"
-			(pin_names
-				(offset 1.016)
-			)
+		(symbol "NB3_charger:AA_Battery_Holder_BH-AA-A5BJ012"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "BT"
-				(at -3.81 3.81 0)
+			(property "Reference" "BAT"
+				(at 0 5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left bottom)
 				)
 			)
-			(property "Value" "1028"
-				(at -3.81 -5.08 0)
+			(property "Value" "BH-AA-A5BJ012"
+				(at 0 -2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left bottom)
 				)
 			)
-			(property "Footprint" "AA_Battery_Holder_1028"
-				(at 1.524 -9.652 0)
+			(property "Footprint" "AA_Battery_Holder_BH-AA-A5BJ012"
+				(at 0.508 -7.874 0)
 				(effects
 					(font
 						(size 1.27 1.27)
+						(italic yes)
 					)
-					(justify bottom)
 					(hide yes)
 				)
 			)
 			(property "Datasheet" ""
-				(at 0 0 0)
+				(at -2.286 0.127 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 					(hide yes)
 				)
 			)
@@ -1050,185 +1046,107 @@
 					(hide yes)
 				)
 			)
-			(property "PARTREV" "C"
-				(at -7.874 -9.652 0)
+			(property "LCSC" "C5290180"
+				(at -0.254 -5.588 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify bottom)
 					(hide yes)
 				)
 			)
-			(property "STANDARD" "Manufacturer Recommendations"
-				(at 2.286 -7.366 0)
+			(property "ki_keywords" "C5290180"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify bottom)
 					(hide yes)
 				)
 			)
-			(property "SNAPEDA_PN" "1028"
-				(at -11.176 -9.652 0)
-				(effects
-					(font
-						(size 1.27 1.27)
+			(symbol "AA_Battery_Holder_BH-AA-A5BJ012_0_1"
+				(polyline
+					(pts
+						(xy -1.27 2.286) (xy -1.27 -1.778)
 					)
-					(justify bottom)
-					(hide yes)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.508 1.27) (xy -0.508 -1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 2.286) (xy 0.254 -1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 1.27) (xy 1.016 -1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
 				)
 			)
-			(property "MAXIMUM_PACKAGE_HEIGHT" "15.49mm"
-				(at 12.954 -11.176 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(property "MANUFACTURER" "Keystone"
-				(at -10.414 -11.684 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify bottom)
-					(hide yes)
-				)
-			)
-			(symbol "AA_Battery_Holder_1028_0_0"
-				(polyline
-					(pts
-						(xy -3.81 1.905) (xy -2.54 1.905)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -3.175 2.54) (xy -3.175 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 0) (xy -2.54 0)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 0) (xy -1.27 -2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 2.54) (xy -1.27 0)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 0) (xy 1.27 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 0) (xy 2.54 0)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 1.27) (xy 1.27 0)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
+			(symbol "AA_Battery_Holder_BH-AA-A5BJ012_1_1"
 				(pin passive line
-					(at 7.62 0 180)
-					(length 5.08)
-					(name "~"
+					(at -6.35 0 0)
+					(length 3.81)
+					(name "1"
 						(effects
 							(font
-								(size 1.016 1.016)
+								(size 1 1)
 							)
 						)
 					)
-					(number "N"
+					(number "1"
 						(effects
 							(font
-								(size 1.016 1.016)
+								(size 1 1)
 							)
 						)
 					)
 				)
 				(pin passive line
-					(at -7.62 0 0)
-					(length 5.08)
-					(name "~"
+					(at 6.35 0 180)
+					(length 3.81)
+					(name "2"
 						(effects
 							(font
-								(size 1.016 1.016)
+								(size 1 1)
 							)
 						)
 					)
-					(number "P"
+					(number "2"
 						(effects
 							(font
-								(size 1.016 1.016)
+								(size 1 1)
 							)
 						)
 					)
@@ -5072,6 +4990,16 @@
 		)
 		(uuid "00020a70-d4af-4170-b385-681014527add")
 	)
+	(wire
+		(pts
+			(xy 217.17 74.93) (xy 219.71 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "00a2383d-6dc3-453d-89af-9df968ab6024")
+	)
 	(polyline
 		(pts
 			(xy 240.03 21.59) (xy 240.03 49.53)
@@ -5121,6 +5049,16 @@
 			(type default)
 		)
 		(uuid "07355083-b299-4856-85a0-0c82afbc3f2d")
+	)
+	(wire
+		(pts
+			(xy 217.17 90.17) (xy 219.71 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0bca3cdd-f198-4514-996c-ea57aa27fc5c")
 	)
 	(wire
 		(pts
@@ -5202,6 +5140,16 @@
 		)
 		(uuid "1eb5fb67-00f1-46a1-a7a5-b834a5acf1f5")
 	)
+	(wire
+		(pts
+			(xy 201.93 90.17) (xy 204.47 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "20b88f3d-f5e4-4504-adeb-f6c2b3e72602")
+	)
 	(polyline
 		(pts
 			(xy 181.61 21.59) (xy 181.61 45.72)
@@ -5271,6 +5219,16 @@
 			(type default)
 		)
 		(uuid "2f022809-598a-45a7-bed2-f2a40e992ca9")
+	)
+	(wire
+		(pts
+			(xy 232.41 90.17) (xy 233.68 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30e3ade4-a8e9-4198-bbfe-0ae901eeef75")
 	)
 	(wire
 		(pts
@@ -6094,6 +6052,16 @@
 	)
 	(wire
 		(pts
+			(xy 187.96 90.17) (xy 189.23 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a15696b4-20e4-4afb-b76a-28f8ac318b94")
+	)
+	(wire
+		(pts
 			(xy 260.35 34.29) (xy 260.35 31.75)
 		)
 		(stroke
@@ -6241,6 +6209,16 @@
 			(type solid)
 		)
 		(uuid "ba60c6df-b460-409a-afc4-7297eed9eda6")
+	)
+	(wire
+		(pts
+			(xy 201.93 74.93) (xy 204.47 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "baa3d008-f5db-4a48-a7b9-800965373bc3")
 	)
 	(wire
 		(pts
@@ -6564,7 +6542,7 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 74.93) (xy 187.96 74.93)
+			(xy 186.69 74.93) (xy 189.23 74.93)
 		)
 		(stroke
 			(width 0)
@@ -6721,6 +6699,16 @@
 			(type solid)
 		)
 		(uuid "f4d3c3c4-5bd5-4ebb-883a-f63b2d31c3cb")
+	)
+	(wire
+		(pts
+			(xy 232.41 74.93) (xy 233.68 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f609fe89-4dc0-42d3-963c-96604e1c892a")
 	)
 	(wire
 		(pts
@@ -7228,7 +7216,7 @@
 		)
 	)
 	(symbol
-		(lib_id "NB3_charger:AA_Battery_Holder_1028")
+		(lib_id "NB3_charger:AA_Battery_Holder_BH-AA-A5BJ012")
 		(at 226.06 74.93 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -7238,7 +7226,7 @@
 		(fields_autoplaced yes)
 		(uuid "01e36647-c73d-4f75-ae47-5547c04611f4")
 		(property "Reference" "BT3"
-			(at 226.695 67.31 0)
+			(at 226.06 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7246,29 +7234,31 @@
 			)
 		)
 		(property "Value" "1028"
-			(at 226.695 69.85 0)
+			(at 226.06 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
-		(property "Footprint" "NB3_charger:AA_Battery_Holder_1028"
-			(at 224.536 65.278 0)
+		(property "Footprint" "NB3_charger:AA_Battery_Holder_BH-AA-A5BJ012"
+			(at 225.552 67.056 0)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(italic yes)
 				)
-				(justify bottom)
 				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
-			(at 226.06 74.93 0)
+			(at 228.346 75.057 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -7331,10 +7321,19 @@
 				(hide yes)
 			)
 		)
-		(pin "N"
+		(property "LCSC" "C5290180"
+			(at 226.314 69.342 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
 			(uuid "e559891a-45b7-4c2b-825e-ff65f752e571")
 		)
-		(pin "P"
+		(pin "1"
 			(uuid "f1fbe016-3897-41f7-b907-889fe2668013")
 		)
 		(instances
@@ -7875,7 +7874,7 @@
 		)
 	)
 	(symbol
-		(lib_id "NB3_charger:AA_Battery_Holder_1028")
+		(lib_id "NB3_charger:AA_Battery_Holder_BH-AA-A5BJ012")
 		(at 195.58 90.17 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -7885,7 +7884,7 @@
 		(fields_autoplaced yes)
 		(uuid "28005a58-1203-4175-9249-c628c6716198")
 		(property "Reference" "BT4"
-			(at 196.215 82.55 0)
+			(at 195.58 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7893,29 +7892,31 @@
 			)
 		)
 		(property "Value" "1028"
-			(at 196.215 85.09 0)
+			(at 195.58 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
-		(property "Footprint" "NB3_charger:AA_Battery_Holder_1028"
-			(at 194.056 80.518 0)
+		(property "Footprint" "NB3_charger:AA_Battery_Holder_BH-AA-A5BJ012"
+			(at 195.072 82.296 0)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(italic yes)
 				)
-				(justify bottom)
 				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
-			(at 195.58 90.17 0)
+			(at 197.866 90.297 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -7978,10 +7979,19 @@
 				(hide yes)
 			)
 		)
-		(pin "N"
+		(property "LCSC" "C5290180"
+			(at 195.834 84.582 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
 			(uuid "146fd37e-ebc6-410f-84b7-36ea3211bb44")
 		)
-		(pin "P"
+		(pin "1"
 			(uuid "f06a3cb9-33db-411a-96e8-09d914695c73")
 		)
 		(instances
@@ -10019,7 +10029,7 @@
 		)
 	)
 	(symbol
-		(lib_id "NB3_charger:AA_Battery_Holder_1028")
+		(lib_id "NB3_charger:AA_Battery_Holder_BH-AA-A5BJ012")
 		(at 226.06 90.17 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -10029,7 +10039,7 @@
 		(fields_autoplaced yes)
 		(uuid "66841316-6971-459f-a68b-8f47f9b34d84")
 		(property "Reference" "BT6"
-			(at 226.695 82.55 0)
+			(at 226.06 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10037,29 +10047,31 @@
 			)
 		)
 		(property "Value" "1028"
-			(at 226.695 85.09 0)
+			(at 226.06 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
-		(property "Footprint" "NB3_charger:AA_Battery_Holder_1028"
-			(at 224.536 80.518 0)
+		(property "Footprint" "NB3_charger:AA_Battery_Holder_BH-AA-A5BJ012"
+			(at 225.552 82.296 0)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(italic yes)
 				)
-				(justify bottom)
 				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
-			(at 226.06 90.17 0)
+			(at 228.346 90.297 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -10122,10 +10134,19 @@
 				(hide yes)
 			)
 		)
-		(pin "N"
+		(property "LCSC" "C5290180"
+			(at 226.314 84.582 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
 			(uuid "5f115a11-3167-412f-9bd9-1a58addef5eb")
 		)
-		(pin "P"
+		(pin "2"
 			(uuid "9997a94b-22a6-4632-93cf-90203473cc78")
 		)
 		(instances
@@ -10375,7 +10396,7 @@
 		)
 	)
 	(symbol
-		(lib_id "NB3_charger:AA_Battery_Holder_1028")
+		(lib_id "NB3_charger:AA_Battery_Holder_BH-AA-A5BJ012")
 		(at 210.82 90.17 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -10385,7 +10406,7 @@
 		(fields_autoplaced yes)
 		(uuid "6e42b084-341a-484b-a6ed-afd3860032ab")
 		(property "Reference" "BT5"
-			(at 211.455 82.55 0)
+			(at 210.82 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10393,29 +10414,31 @@
 			)
 		)
 		(property "Value" "1028"
-			(at 211.455 85.09 0)
+			(at 210.82 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
-		(property "Footprint" "NB3_charger:AA_Battery_Holder_1028"
-			(at 209.296 80.518 0)
+		(property "Footprint" "NB3_charger:AA_Battery_Holder_BH-AA-A5BJ012"
+			(at 210.312 82.296 0)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(italic yes)
 				)
-				(justify bottom)
 				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
-			(at 210.82 90.17 0)
+			(at 213.106 90.297 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -10478,10 +10501,19 @@
 				(hide yes)
 			)
 		)
-		(pin "N"
+		(property "LCSC" "C5290180"
+			(at 211.074 84.582 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
 			(uuid "a538f602-e5c4-4398-ac06-7f79e2c620b0")
 		)
-		(pin "P"
+		(pin "1"
 			(uuid "c7e9928f-c982-4719-88f5-e52b17a7089f")
 		)
 		(instances
@@ -13135,7 +13167,7 @@
 		)
 	)
 	(symbol
-		(lib_id "NB3_charger:AA_Battery_Holder_1028")
+		(lib_id "NB3_charger:AA_Battery_Holder_BH-AA-A5BJ012")
 		(at 210.82 74.93 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -13145,7 +13177,7 @@
 		(fields_autoplaced yes)
 		(uuid "cb75b721-e2aa-4eca-a174-7092345635c0")
 		(property "Reference" "BT2"
-			(at 211.455 67.31 0)
+			(at 210.82 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13153,29 +13185,31 @@
 			)
 		)
 		(property "Value" "1028"
-			(at 211.455 69.85 0)
+			(at 210.82 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
-		(property "Footprint" "NB3_charger:AA_Battery_Holder_1028"
-			(at 209.296 65.278 0)
+		(property "Footprint" "NB3_charger:AA_Battery_Holder_BH-AA-A5BJ012"
+			(at 210.312 67.056 0)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(italic yes)
 				)
-				(justify bottom)
 				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
-			(at 210.82 74.93 0)
+			(at 213.106 75.057 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -13238,10 +13272,19 @@
 				(hide yes)
 			)
 		)
-		(pin "N"
+		(property "LCSC" "C5290180"
+			(at 211.074 69.342 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
 			(uuid "bb837555-e909-41c4-b4b0-e7c39af54dcc")
 		)
-		(pin "P"
+		(pin "2"
 			(uuid "aaff0e7a-c33a-4399-a06f-8c2acd288c1b")
 		)
 		(instances
@@ -14190,7 +14233,7 @@
 		)
 	)
 	(symbol
-		(lib_id "NB3_charger:AA_Battery_Holder_1028")
+		(lib_id "NB3_charger:AA_Battery_Holder_BH-AA-A5BJ012")
 		(at 195.58 74.93 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -14200,7 +14243,7 @@
 		(fields_autoplaced yes)
 		(uuid "e69210ec-7cc4-46df-8c7f-1e227edbb4f7")
 		(property "Reference" "BT1"
-			(at 196.215 67.31 0)
+			(at 195.58 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14208,29 +14251,31 @@
 			)
 		)
 		(property "Value" "1028"
-			(at 196.215 69.85 0)
+			(at 195.58 71.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
-		(property "Footprint" "NB3_charger:AA_Battery_Holder_1028"
-			(at 194.056 65.278 0)
+		(property "Footprint" "NB3_charger:AA_Battery_Holder_BH-AA-A5BJ012"
+			(at 195.072 67.056 0)
 			(effects
 				(font
 					(size 1.27 1.27)
+					(italic yes)
 				)
-				(justify bottom)
 				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
-			(at 195.58 74.93 0)
+			(at 197.866 75.057 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -14293,10 +14338,19 @@
 				(hide yes)
 			)
 		)
-		(pin "N"
+		(property "LCSC" "C5290180"
+			(at 195.834 69.342 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
 			(uuid "e9b6bf19-ad67-4597-9d3d-0757327fe9ec")
 		)
-		(pin "P"
+		(pin "2"
 			(uuid "46a8aa68-c8dd-41c4-ba40-8f6c0861f63f")
 		)
 		(instances

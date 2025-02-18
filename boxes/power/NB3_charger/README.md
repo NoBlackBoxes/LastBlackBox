@@ -19,31 +19,31 @@ PCB design and fabrication for NB3 charger, a 5V/3A DC to DC power supply and Ni
 3. Edit BOM: Open as ODS and save as XLSX in "fab" folder
 4. Generate Gerbers: File->Fabrication outputs->Gerbers [settings](NB3_charger_FAB_plot_settings.png)
 5. Generate Drill: File->Fabrication outputs->Drill Files [settings](NB3_charger_FAB_drill_settings.png)
-6. Generate Centroids: File->Fabrication outputs->Componenet Placement [settings](NB3_charger_FAB_pos_settings.png)
+6. Generate Centroids: File->Fabrication outputs->Component Placement [settings](NB3_charger_FAB_pos_settings.png)
 7. Zip entire fab folder (including BOM.xlsx)
 
 ### Upload boards(s) - PCBWay
 
 #### Assembly Service
 - Service: Turnkey Assembly
-- Board type: Panelized PCBs
+- Board type: Single Pieces
 - Assembly: Top-Side
-- Quantity: *80*
+- Quantity: *2*
 
 ##### Other Parameters
-- Number of unique Parts: 19
-- Number of SMD Parts: 30
-- Number of BGA/QFP Parts: 1
-- Number of Through-Hole Parts: 1
+- Number of unique Parts: 28
+- Number of SMD Parts: 42
+- Number of BGA/QFP Parts: 2
+- Number of Through-Hole Parts: 11
 			
 #### PCB Specifications
-- Board type: Panel by PCBWay
-- Panel requirements: Panel in 2*2, total 20 sets=80pcs boards.
-- Route Process: Panel as V-Scoring
+- Board type: 
+- Panel requirements: 
+- Route Process: 
 - X-out Allowance in Panel: Accept
 - Different design in panel: 1
-- Size: 102 x 100 mm
-- Quantity: 20
+- Size: 150 x 65 mm
+- Quantity: 5
 - Layer: 2 Layers
 - Material: FR-4: TG150-160
 - Thickness: 1.6 mm
