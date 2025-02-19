@@ -31,7 +31,7 @@ Velcro Patch|01|Velcro adhesive|1|[-D-](/boxes/power/)|[-L-]()
 **TASK**: Add a (regulated) 5 volt power supply to your robot, which you can use while debugging to save your AA batteries and to provide enough power for the Raspberry Pi computer.
 - *NOTE*: Your NB3_power board cable *might* have inverted colors (black to +5V, red to 0V) relative to that shown in the assembly video. This doesn't matter, as the plugs will only work in one orientation and the correct voltage is conveyed to the correct position on the body.
 <details><summary><strong>Target</strong></summary>
-    Your NB3 should now look like this: ![NB3 power wiring:400](../../../boxes/power/_resources/images/NB3_power_wiring.png)"
+    Your NB3 should now look like this: ![NB3 power wiring:400](/boxes/power/_resources/images/NB3_power_wiring.png)"
 </details><hr>
 
 
@@ -68,7 +68,7 @@ M2.5 standoff (20/SS)|01|20 mm long socket-to-socket M2.5 standoff|4|[-D-](/boxe
 > As computer hardware became much more capable, software was developed to manage this complexity and power. This software took responsibility for managing access to the computer's resources: processing, memory, and devices. These days, when we *operate* a computer, we rarely interact directly with the hardware. Instead, we talk to this control software, which we call an **operating system**.
 
 **TASK**: Install the Linux-based Raspberry Pi OS on your NB3
-- Follow these [RPiOS installation instructions](../../../boxes/systems/rpios/README.md)
+- Follow these [RPiOS installation instructions](/boxes/systems/rpios/README.md)
 <details><summary><strong>Target</strong></summary>
     Booted!
 </details><hr>
@@ -78,7 +78,7 @@ M2.5 standoff (20/SS)|01|20 mm long socket-to-socket M2.5 standoff|4|[-D-](/boxe
 > Now we will add a more powerful computer (Raspberry Pi) to your NB3's midbrain.
 
 **TASK**: Mount a Raspberry Pi on your robot (and connect its power inputs using your *shortest* jumper cables, 2x5V and 2x0V from the NB3, to the correct GPIO pins on the RPi...please *double-check* the pin numbers)
-- This pinout of the Raspberry Pi GPIO might be useful: [Raspberry Pi GPIO](../../../boxes/systems/_resources/images/rpi_GPIO_pinout.png)
+- This pinout of the Raspberry Pi GPIO might be useful: [Raspberry Pi GPIO](/boxes/systems/_resources/images/rpi_GPIO_pinout.png)
 <details><summary><strong>Target</strong></summary>
     A powered and blinking RPi midbrain.
 </details><hr>
@@ -88,7 +88,7 @@ M2.5 standoff (20/SS)|01|20 mm long socket-to-socket M2.5 standoff|4|[-D-](/boxe
 > After mounting and wiring your NB3's midbrain computer, you must now give it some core software to run...an operating system.
 
 **TASK**: Install the Linux-based Raspberry Pi OS on your NB3
-- Follow these [RPiOS installation instructions](../../../boxes/systems/rpios/README.md)
+- Follow these [RPiOS installation instructions](/boxes/systems/rpios/README.md)
 <details><summary><strong>Target</strong></summary>
     Booted!
 </details><hr>
@@ -98,7 +98,7 @@ M2.5 standoff (20/SS)|01|20 mm long socket-to-socket M2.5 standoff|4|[-D-](/boxe
 > When you have installed your NB3's operating system, then you can power it on and try to connect to it from your Host computer over WiFi or UART.
 
 **TASK**: Connect to your NB3 via WiFi
-- Follow these instruction [Connecting to RPi](../../../boxes/systems/connecting/README.md)
+- Follow these instruction [Connecting to RPi](/boxes/systems/connecting/README.md)
 <details><summary><strong>Target</strong></summary>
     Connected!
 </details><hr>
@@ -175,7 +175,7 @@ Contents|Depth|Description| # |Data|Link|
 > We will next create a Python **virtual environment** on our NB3 that will isolate the specific Python packages we require for the course from the Python packages used by the Raspberry Pi's operating system.
 
 **TASK**: Create a "virtual environment" called LBB
-- Follow the instructions here: [virtual environments](../../../boxes/python/virtual_environments/README.md)
+- Follow the instructions here: [virtual environments](/boxes/python/virtual_environments/README.md)
 <details><summary><strong>Target</strong></summary>
     You should now have a virtual environment activated (and installed in the folder "_tmp/LBB").
 </details><hr>

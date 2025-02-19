@@ -23,7 +23,7 @@ Cable (Ethernet)|10|RJ45 cact5e ethernet patch cable (1 m)|1|[-D-](/boxes/system
 
 
 **TASK**: Install the Linux-based Raspberry Pi OS on your NB3
-- - Follow these [RPiOS installation instructions](../../../boxes/systems/rpios/README.md)
+- - Follow these [RPiOS installation instructions](/boxes/systems/rpios/README.md)
 <details><summary><strong>Target</strong></summary>
     Booted!
 </details><hr>
@@ -61,7 +61,7 @@ Cable (Ethernet)|10|RJ45 cact5e ethernet patch cable (1 m)|1|[-D-](/boxes/system
 
 
 **TASK**: Connect to your NB3 via WiFi
-- - Follow these instruction [Connecting to RPi](../../../boxes/systems/connecting/README.md)
+- - Follow these instruction [Connecting to RPi](/boxes/systems/connecting/README.md)
 <details><summary><strong>Target</strong></summary>
     Connected!
 </details><hr>
@@ -76,7 +76,7 @@ Cable (Ethernet)|10|RJ45 cact5e ethernet patch cable (1 m)|1|[-D-](/boxes/system
 
 
 **TASK**: Mount a Raspberry Pi on your robot (and connect its power inputs using your *shortest* jumper cables, 2x5V and 2x0V from the NB3, to the correct GPIO pins on the RPi...please *double-check* the pin numbers)
-- - This pinout of the Raspberry Pi GPIO might be useful: [Raspberry Pi GPIO](../../../boxes/systems/_resources/images/rpi_GPIO_pinout.png)
+- - This pinout of the Raspberry Pi GPIO might be useful: [Raspberry Pi GPIO](/boxes/systems/_resources/images/rpi_GPIO_pinout.png)
 <details><summary><strong>Target</strong></summary>
     A powered and blinking RPi midbrain.
 </details><hr>
@@ -91,7 +91,7 @@ Cable (Ethernet)|10|RJ45 cact5e ethernet patch cable (1 m)|1|[-D-](/boxes/system
 
 
 **TASK**: Install the Linux-based Raspberry Pi OS on your NB3
-- - Follow these [RPiOS installation instructions](../../../boxes/systems/rpios/README.md)
+- - Follow these [RPiOS installation instructions](/boxes/systems/rpios/README.md)
 <details><summary><strong>Target</strong></summary>
     Booted!
 </details><hr>

@@ -18,7 +18,7 @@ We will next create a Python **virtual environment** on our NB3 that will isolat
 ## Lesson
 
 - **TASK**: Create a "virtual environment" called LBB
-    - Follow the instructions here: [virtual environments](../../../boxes/python/virtual_environments/README.md)
+    - Follow the instructions here: [virtual environments](/boxes/python/virtual_environments/README.md)
 > You should now have a virtual environment activated (and installed in the folder "_tmp/LBB").
 
 - **TASK**: Install some useful packages using PIP

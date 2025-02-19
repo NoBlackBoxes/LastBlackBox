@@ -16,7 +16,7 @@ Name|Depth|Description| # |Data|Link|
 
 
 **TASK**: Create a "virtual environment" called LBB
-- - Follow the instructions here: [virtual environments](../../../boxes/python/virtual_environments/README.md)
+- - Follow the instructions here: [virtual environments](/boxes/python/virtual_environments/README.md)
 <details><summary><strong>Target</strong></summary>
     You should now have a virtual environment activated (and installed in the folder "_tmp/LBB").
 </details><hr>
