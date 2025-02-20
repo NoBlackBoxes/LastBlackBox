@@ -1,5 +1,8 @@
+# Requires netifaces (to get ip address)
+
 import io
 import logging
+import netifaces
 import socketserver
 from http import server
 from threading import Condition
@@ -20,6 +23,12 @@ PAGE = """\
 </body>
 </html>
 """
+
+def get_ip_from_interface(interface="wlan0"):
+    try:
+        return netifaces.ifaddresses(interface)[netifaces.AF_INET][0]['addr']
+    except KeyError:
+        return None
 
 class StreamingOutput(io.BufferedIOBase):
     def __init__(self):
@@ -76,11 +85,13 @@ class StreamingServer(socketserver.ThreadingMixIn, server.HTTPServer):
     daemon_threads = True
 
 picam2 = Picamera2()
-camera_config = picam2.create_video_configuration(main={"size": (640, 480)})
+camera_config = picam2.create_video_configuration(main={"size": (1280, 720)})
 #camera_config["transform"] = libcamera.Transform(hflip=0, vflip=0)
 picam2.configure(camera_config)
 output = StreamingOutput()
 picam2.start_recording(MJPEGEncoder(), FileOutput(output))
+ip_address = get_ip_from_interface("wlan0")
+print(f"Connect to http://{ip_address}:8000")  
 
 try:
     address = ('', 8000)
