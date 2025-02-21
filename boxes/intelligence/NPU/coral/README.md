@@ -90,3 +90,6 @@ python3 classify_image.py \
 --labels models/inat_bird_labels.txt \
 --input images/parrot.jpg
 ```
+
+## Python Versions
+The tflite-runtime on PyPI currently requires Python 3.11. This can make it difficult to run the Coral examples on an up-to-date host system. It is possible to install an earlier version of Python.

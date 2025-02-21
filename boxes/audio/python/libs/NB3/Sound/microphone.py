@@ -119,7 +119,7 @@ class Microphone:
         # Get latest
         latest = np.copy(self.sound[(self.valid_samples-self.buffer_size_samples):self.valid_samples, :])
 
-        # Compute amps and enrgies
+        # Compute amps and energies
         amplitudes = np.abs(np.fft.fft(latest[:,0]))[1:]
         energies = amplitudes**2
 
@@ -146,6 +146,40 @@ class Microphone:
             speech = False
         
         return speech
+
+    # Mel features
+    def mel_features(self, window_size):
+        # Is there data for mel feature detection?
+        if self.valid_samples < self.buffer_size_samples:
+            return False
+
+        latest = self.sound[(self.valid_samples-self.buffer_size_samples):self.valid_samples, 0]
+
+        window_length_samples = int(0.025 * self.sample_rate)
+        hop_length_samples = int(0.010 * self.sample_rate)
+        fft_length = 512
+
+        frames = []
+        for i in range(0, len(latest) - window_length_samples + 1, hop_length_samples):
+            frame = latest[i:i+window_length_samples]
+            windowed = frame * np.hanning(window_length_samples)
+            frames.append(np.abs(np.fft.rfft(windowed, fft_length)))
+        spectrogram = np.stack(frames)
+
+        mel_matrix = np.zeros((spectrogram.shape[1], 20))
+        freq_bins = np.linspace(0, self.sample_rate / 2, spectrogram.shape[1])
+        mel_bins = np.linspace(125, 3800, 22)
+
+        for i in range(20):
+            lower = mel_bins[i]
+            center = mel_bins[i + 1]
+            upper = mel_bins[i + 2]
+            mel_matrix[:, i] = np.maximum(0, np.minimum((freq_bins - lower) / (center - lower), (upper - freq_bins) / (upper - center)))
+
+        mel_spectrogram = np.dot(spectrogram, mel_matrix)
+        log_mel_spectrogram = np.log(mel_spectrogram + 1e-6)
+
+        return log_mel_spectrogram.mean(axis=0)
 
     # Start saving WAV
     def save_wav(self, wav_path, wav_max_samples):
