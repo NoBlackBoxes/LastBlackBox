@@ -11,6 +11,7 @@ The NB3's bash shell will automatically activate the LBB python virtual environm
 The following "aliases" are stored in the student user's *.bashrc* file. They all run python scripts stored throughout the LBB repository. These aliases can be run from anywhere.
 
 ```bash
+Sync    # Sync with the latest LBB repo (and these bash aliases)
 Drive   # Run the python driving controller (for remotely-controlling NB3)
 Stream  # Run the camera streaming (camera images will be streamed to the indicated website)
 Listen  # Run the keyword detection model and respond to commands

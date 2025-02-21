@@ -91,10 +91,12 @@ picam2.configure(camera_config)
 output = StreamingOutput()
 picam2.start_recording(MJPEGEncoder(), FileOutput(output))
 ip_address = get_ip_from_interface("wlan0")
-print(f"Connect to http://{ip_address}:8000")  
+port = 8000
+print(f"\n\nConnect to http://{ip_address}:{port} to view camera stream")  
+print(f" - (Ctrl-C to Quit)")
 
 try:
-    address = ('', 8000)
+    address = ('', port)
     server = StreamingServer(address, StreamingHandler)
     server.serve_forever()
 finally:
