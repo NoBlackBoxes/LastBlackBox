@@ -11,15 +11,20 @@ import NB3.Sound.utilities as Utilities
 # Get user name
 username = os.getlogin()
 
-# Specify model
-model_file = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/intelligence/NPU/listen-NB3/_tmp/voice_commands_v0.8_edgetpu.tflite"
+# Specify model and labels
+model_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/intelligence/NPU/listen-NB3/model/voice_commands_v0.8_edgetpu.tflite"
+labels_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/intelligence/NPU/listen-NB3/model/labels.txt"
 
 # Load delegate (EdgeTPU)
 delegate = tflite.load_delegate('libedgetpu.so.1')
 
 # Create interpreter
-interpreter = tflite.Interpreter(model_path=model_file, experimental_delegates=[delegate])
+interpreter = tflite.Interpreter(model_path=model_path, experimental_delegates=[delegate])
 interpreter.allocate_tensors()
+
+# Load labels
+labels = np.genfromtxt(labels_path, dtype=str)
+labels = np.insert(labels, 0, "-silence-")
 
 # Get input and output details
 input_details = interpreter.get_input_details()
@@ -36,9 +41,9 @@ microphone.gain = 100.0
 microphone.start()
 
 # Live processing
-for i in range(50):
+for i in range(150):
 
-    # Compute mel features
+    # Compute mel spectrogram
     mel_spectrogram = microphone.mel_spectrogram()
 
     # Are we waiting for sufficient audio in the buffer?
@@ -47,15 +52,8 @@ for i in range(50):
         time.sleep(0.1)
         continue
     
-    # Normalize spectrogram
-    mel_spectrogram -= np.mean(mel_spectrogram, axis=1, keepdims=True)
-    mel_spectrogram /= (3 * np.std(mel_spectrogram, axis=1, keepdims=True))
-    mel_spectrogram += 1
-    mel_spectrogram *= 127.5
-    mel_spectrogram = np.clip(mel_spectrogram, 0, 255).astype(np.uint8)
-
     # Send to NPU
-    interpreter.set_tensor(input_details[0]['index'], mel_spectrogram)    
+    interpreter.set_tensor(input_details[0]['index'], np.expand_dims(mel_spectrogram, axis=0))
 
     # Run inference
     interpreter.invoke()
@@ -70,15 +68,13 @@ for i in range(50):
     top_3_results = []
     for index in top_3_indices:
         score = output_data[index]
-        top_3_results.append(f"[{index}: {score:.3f}]")
+        top_3_results.append(f"[{labels[index]}: {score:.3f}]")
 
     # Print all on one line
     print("Top 3 predictions:", ", ".join(top_3_results))
     
     # Wait a bit
-    time.sleep(0.1)
-
-microphone.save_wav("_tmp/here.wav", microphone.valid_samples)
+    time.sleep(0.05)
 
 # Shutdown microphone
 microphone.stop()

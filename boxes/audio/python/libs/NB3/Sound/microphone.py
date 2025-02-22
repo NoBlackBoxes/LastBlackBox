@@ -44,7 +44,7 @@ class Microphone:
         self.mel_fft_length = 512
         self.mel_num_bins = 32
         self.mel_num_frames = 198
-        self.mel_num_needed_samples = self.mel_window_length_samples + ((self.mel_num_frames - 1) * self.mel_hop_length_samples)
+        self.mel_num_samples_required = self.mel_window_length_samples + ((self.mel_num_frames - 1) * self.mel_hop_length_samples)
         self.mel_matrix = self._generate_mel_matrix()
         
         # Profiling
@@ -172,10 +172,14 @@ class Microphone:
 
     # Compue mel spectrograme
     def mel_spectrogram(self):
-        if self.valid_samples < self.mel_num_needed_samples:
+        # Check that we have sufficient valid samples recorded
+        if self.valid_samples < self.mel_num_samples_required:
             return None
 
-        latest = self.sound[(self.valid_samples - self.mel_num_needed_samples):self.valid_samples, 0]
+        # Get latest samples (one channel ONLY, 0)
+        latest = self.sound[(self.valid_samples - self.mel_num_samples_required):self.valid_samples, 0]
+
+        # Compute spectrograms
         frames = []
         for i in range(0, len(latest) - self.mel_window_length_samples + 1, self.mel_hop_length_samples):
             frame = latest[i:i+self.mel_window_length_samples]
@@ -183,10 +187,18 @@ class Microphone:
             frames.append(np.abs(np.fft.rfft(windowed, self.mel_fft_length)))
         spectrogram = np.stack(frames)
 
+        # Apply mel filters and take log
         mel_spectrogram = np.dot(spectrogram, self.mel_matrix)
         log_mel_spectrogram = np.log(mel_spectrogram + 0.001)
 
-        return log_mel_spectrogram.reshape(1, self.mel_num_frames, self.mel_num_bins)
+        # Normalise and convert to unit8
+        log_mel_spectrogram -= np.mean(log_mel_spectrogram, axis=0, keepdims=True)
+        log_mel_spectrogram /= (3 * np.std(log_mel_spectrogram, axis=0, keepdims=True))
+        log_mel_spectrogram += 1
+        log_mel_spectrogram *= 127.5
+        log_mel_spectrogram = np.clip(log_mel_spectrogram, 0, 255).astype(np.uint8)
+
+        return log_mel_spectrogram
     
     # Start saving WAV
     def save_wav(self, wav_path, wav_max_samples):
