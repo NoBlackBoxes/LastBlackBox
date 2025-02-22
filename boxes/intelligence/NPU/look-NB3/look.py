@@ -20,11 +20,8 @@ ser.port = '/dev/ttyUSB0'
 ser.open()
 
 # Specify model and labels
-#model_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/intelligence/NPU/look-NB3/model/Posenet-Mobilenet-Quantized_edgetpu.tflite"
-#model_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/intelligence/NPU/look-NB3/model/posenet_mobilenet_v1_075_324_324_16_quant_decoder_edgetpu.tflite"
 model_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/intelligence/NPU/look-NB3/model/movenet_single_pose_thunder_ptq_edgetpu.tflite"
 #model_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/intelligence/NPU/listen-NB3/model/voice_commands_v0.8_edgetpu.tflite"
-#labels_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/intelligence/NPU/listen-NB3/model/labels.txt"
 
 # Load delegate (EdgeTPU)
 delegate = tflite.load_delegate('libedgetpu.so.1')
@@ -33,23 +30,9 @@ delegate = tflite.load_delegate('libedgetpu.so.1')
 interpreter = tflite.Interpreter(model_path=model_path, experimental_delegates=[delegate])
 interpreter.allocate_tensors()
 
-# Load labels
-labels = np.genfromtxt(labels_path, dtype=str)
-labels = np.insert(labels, 0, "-silence-")
-
 # Get input and output details
 input_details = interpreter.get_input_details()
 output_details = interpreter.get_output_details()
-
-# Initialize microphone
-input_device = 1
-num_channels = 1
-sample_rate = 16000
-buffer_size = int(sample_rate / 10)
-max_samples = int(sample_rate * 10)
-microphone = Microphone.Microphone(input_device, num_channels, 'int32', sample_rate, buffer_size, max_samples)
-microphone.gain = 100.0
-microphone.start()
 
 # Initialize interactive terminal
 screen = curses.initscr()

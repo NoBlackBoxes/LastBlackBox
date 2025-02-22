@@ -8,3 +8,8 @@ Old-school (classical) techniques for processing two-dimensional data (2D).
 ## Connections
 
 ## Lesson
+
+- Install python opencv
+```bash
+pip install opencv-python
+```
