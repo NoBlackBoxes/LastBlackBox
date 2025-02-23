@@ -27,3 +27,10 @@ sudo apt install build-essential python3-dev vim hdparm sysbench speedtest-cli p
 ```bash
 pip install --upgrade pip setuptools wheel pip install numpy==1.26.4 scipy matplotlib opencv-python pyaudio wave soundfile sshkeyboard netifaces tflite-runtime
 ```
+
+## Cloning a working NB3 sd card
+
+```bash
+sudo dd if=/dev/sda of=~/Downloads/NB3-card.img bs=1M status=progress
+```
+- Then use "pishrink" to create an auto-decompressing smaller image
