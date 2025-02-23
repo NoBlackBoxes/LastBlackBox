@@ -1,6 +1,7 @@
 import time
 import cv2
 import numpy as np
+from pprint import *
 from threading import Lock
 from picamera2 import Picamera2
 
@@ -17,22 +18,33 @@ class Camera:
         self.handle = Picamera2()
 
         # Select image format and num_channels
-        if format in ['RGB', 'BGR']:
+        if format == 'RGB':
+            self.num_channels = 3
+            self.picam_format = 'BGR888'
+        elif format == 'BGR':
             self.num_channels = 3
             self.picam_format = 'RGB888'
-        elif format in ['RGBA', 'BGRA']:
+        elif format == 'RGBA':
             self.num_channels = 4
-            self.picam_format = 'RGBA8888'
+            self.picam_format = 'XBGR8888'
+        elif format == 'BGRA':
+            self.num_channels = 4
+            self.picam_format = 'XRGB8888'
         else:
             self.num_channels = 1
-            self.picam_format = 'Y'
-
+            self.picam_format = 'YUV420'
+        
         # Configure camera
         config = self.handle.create_preview_configuration(main={"size": (self.width, self.height),"format": self.picam_format})
         self.handle.configure(config)
 
         # Create buffer for current frame
         self.current = np.zeros((self.height, self.width, self.num_channels), dtype=np.uint8)
+
+    # Report sensor modes
+    def report_modes(self):
+        pprint(self.handle.sensor_modes)
+        return
 
     # Start camera
     def start(self):

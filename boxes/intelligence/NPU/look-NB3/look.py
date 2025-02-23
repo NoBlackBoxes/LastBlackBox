@@ -7,11 +7,13 @@ import numpy as np
 import tflite_runtime.interpreter as tflite
 
 # Import modules
-#import NB3.Sound.microphone as Microphone
-#import NB3.Sound.utilities as Utilities
+import NB3.Vision.camera as Camera
 
 # Get user name
 username = os.getlogin()
+
+# Set base path
+npu_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/intelligence/NPU"
 
 # Configure serial port
 ser = serial.Serial()
@@ -20,8 +22,8 @@ ser.port = '/dev/ttyUSB0'
 ser.open()
 
 # Specify model and labels
-model_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/intelligence/NPU/look-NB3/model/movenet_single_pose_thunder_ptq_edgetpu.tflite"
-#model_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/intelligence/NPU/listen-NB3/model/voice_commands_v0.8_edgetpu.tflite"
+model_path = f"{npu_path}/look-NB3/model/ssd_mobilenet_v2_face_quant_postprocess_edgetpu.tflite"
+#model_path = f"{npu_path}/look-NB3/model/movenet_single_pose_thunder_ptq_edgetpu.tflite"
 
 # Load delegate (EdgeTPU)
 delegate = tflite.load_delegate('libedgetpu.so.1')

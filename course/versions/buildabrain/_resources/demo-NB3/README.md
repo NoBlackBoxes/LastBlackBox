@@ -18,3 +18,12 @@ Listen  # Run the keyword detection model and respond to commands
 Look    # Run the face tracking model and follow detected faces
 ```
 
+## Installed Packages
+- Linux
+```bash
+sudo apt install build-essential python3-dev vim hdparm sysbench speedtest-cli portaudio19-dev
+```
+- Python
+```bash
+pip install --upgrade pip setuptools wheel pip install numpy==1.26.4 scipy matplotlib opencv-python pyaudio wave soundfile sshkeyboard netifaces tflite-runtime
+```

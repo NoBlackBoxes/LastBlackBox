@@ -110,7 +110,7 @@ cmake .. \
     -DFLATBUFFERS_BUILD_TESTS=OFF \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=/usr/local
-make -j3
+make -j2
 sudo make install
 cd ../..
 ```
@@ -118,7 +118,7 @@ cd ../..
 ```bash
 git clone https://github.com/tensorflow/tensorflow
 cd tensorflow
-git checkout v2.14.0 (also version of tflite runtime)
+git checkout v2.14.0 # (same version of tflite runtime)
 cd ..
 ```
 - Clone libedgetpu repo
@@ -182,7 +182,7 @@ LIBEDGETPU_LDFLAGS := \
 - Build
 ```bash
 cd libedgetpu/makefile_build
-TFROOT=/home/${USER}/Repos/tensorflow make -j3 libedgetpu
+TFROOT=/home/${USER}/Repos/tensorflow make -j2 libedgetpu
 ```
 
 - Install

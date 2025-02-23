@@ -13,6 +13,9 @@ import NB3.Sound.utilities as Utilities
 # Get user name
 username = os.getlogin()
 
+# Set base path
+npu_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/intelligence/NPU"
+
 # Configure serial port
 ser = serial.Serial()
 ser.baudrate = 115200
@@ -20,11 +23,11 @@ ser.port = '/dev/ttyUSB0'
 ser.open()
 
 # Specify model and labels
-model_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/intelligence/NPU/listen-NB3/model/voice_commands_v0.8_edgetpu.tflite"
-labels_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/intelligence/NPU/listen-NB3/model/labels.txt"
+model_path = f"{npu_path}/listen-NB3/model/voice_commands_v0.8_edgetpu.tflite"
+labels_path = f"{npu_path}/listen-NB3/model/labels.txt"
 
 # Load delegate (EdgeTPU)
-delegate = tflite.load_delegate('libedgetpu.so.1')
+delegate = tflite.load_delegate(f"libedgetpu.so.1")
 
 # Create interpreter
 interpreter = tflite.Interpreter(model_path=model_path, experimental_delegates=[delegate])
