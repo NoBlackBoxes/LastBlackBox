@@ -36,6 +36,11 @@ interpreter.allocate_tensors()
 input_details = interpreter.get_input_details()
 output_details = interpreter.get_output_details()
 
+# Open camera, start, and wait for it to settle
+camera = Camera.Camera(type='picamera2', device=0, width=320, height=320, format='RGB')
+camera.start()
+time.sleep(1.0)
+
 # Initialize interactive terminal
 screen = curses.initscr()
 curses.noecho()
@@ -51,49 +56,41 @@ try:
         if char == ord('q'):
             break
 
-        # Compute mel spectrogram
-        mel_spectrogram = microphone.mel_spectrogram()
-
         # Clear screen
         screen.erase()
 
-        # Are we waiting for sufficient audio in the buffer?
-        if(mel_spectrogram is None):
-            screen.addstr(0, 0, 'Status: ...filling buffer...')       
-            time.sleep(0.1)
-            continue
-        screen.addstr(0, 0, 'Status: ...Listening...')       
-                
+        # Capture latest image
+        frame = camera.latest()
+
         # Send to NPU
-        interpreter.set_tensor(input_details[0]['index'], np.expand_dims(mel_spectrogram, axis=0))
+        interpreter.set_tensor(input_details[0]['index'], np.expand_dims(frame, axis=0))
 
         # Run inference
         interpreter.invoke()
 
-        # Get output tensor
-        output_data = interpreter.get_tensor(output_details[0]['index'])[0]
-        
-        # Get indices of top 3 predictions
-        top_3_indices = np.argsort(output_data)[-3:][::-1]
+        # Get output tensors
+        output_rects = interpreter.get_tensor(output_details[0]['index'])[0]
+        output_scores = interpreter.get_tensor(output_details[2]['index'])[0]
+        output_num_faces = interpreter.get_tensor(output_details[3]['index'])[0]
 
-        # Build a readable string for top 3 predictions
-        for i, index in enumerate(top_3_indices):
-            score = output_data[index]
-            results = f"[{labels[index]}: {score:.3f}]"
-            screen.addstr(i+1, 0, f"  {i}: {results}")
-        
-        # Check for commands
-        if labels[top_3_indices[0]] == "turn_left":
-            ser.write(b'l')
-            time.sleep(2.0)
-            ser.write(b'x')
-        
-        # Wait a bit
-        time.sleep(0.05)
+        # Process best detected face
+        screen.addstr(0, 0, 'Status: ...Looking...')       
+        if output_scores[0] > 0.1:
+            face_rect_x = output_rects[0][1] * camera.width
+            face_rect_y = output_rects[0][0] * camera.height
+            x2 = output_rects[0][3] * camera.width
+            y2 = output_rects[0][2] * camera.height
+            face_rect_width = x2 - face_rect_x
+            face_rect_height = y2 - face_rect_y
+            x_mid = (face_rect_x + face_rect_width) / 2.0
+            y_mid = (face_rect_y + face_rect_height) / 2.0
+            screen.addstr(1, 0, f" -  Face Detected: X: {x_mid:.1f}, Y: {y_mid:.1f}")
+        else:
+            screen.addstr(1, 0, f"-NO-Face Detected")
 
 finally:
-    # Shutdown microphone
-    microphone.stop()
+    # Shutdown camera
+    camera.stop()
 
     # Close serial port
     ser.close()
