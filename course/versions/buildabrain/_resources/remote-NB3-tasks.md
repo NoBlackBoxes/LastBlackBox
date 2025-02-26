@@ -149,3 +149,17 @@ void stop()
   right.write(90);
 }
 ```
+
+## Remote Control your NB3
+If you connect to your NB3's Raspberry Pi via SSH, then you can run commands on your Raspberry Pi remotely. The Python code [here](/boxes/networks/remote-NB3/python/drive/drive.py) listens for a keypress (either the up, down, left, or right arrow) and then sends the appropriate command to your Arduino to driver forward, backward, or turn. You can exit this Python code by pressing 'q' to quit.
+
+To run this code, you can navigate to the folder containing the file and run it with Python.
+```bash
+cd /home/${USER}/NoBlackBoxes/LastBlackBox/boxes/networks/remote-NB3/python/drive
+python drive.py
+```
+
+...or you can use a "shortcut" command we have added to your Linux terminal (which just does the same as the above...more succinctly)
+```bash
+Drive
+```
