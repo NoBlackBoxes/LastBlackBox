@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -i
 set -eu
 
 # Sync "The Last Black Box" GitHub repo

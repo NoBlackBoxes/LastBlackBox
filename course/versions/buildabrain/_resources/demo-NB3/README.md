@@ -16,6 +16,7 @@ Drive   # Run the python driving controller (for remotely-controlling NB3)
 Stream  # Run the camera streaming (camera images will be streamed to the indicated website)
 Listen  # Run the keyword detection model and respond to commands
 Look    # Run the face tracking model and follow detected faces
+Music   # Play some music through the speaker
 ```
 
 ## Installed Packages
