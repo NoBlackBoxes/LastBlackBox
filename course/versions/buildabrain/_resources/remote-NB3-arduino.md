@@ -4,8 +4,8 @@
 This code will run on your Arduino. It listens for single letter commands sent via the serial (USB) cable and responds by moving the wheels.
 - Command 'f': Forwards
 - Command 'b': Backwards
-- Command 'l': Turn left
-- Command 'r': Turn right
+- Command 'l': Turn Left
+- Command 'r': Turn Right
 - Command 'x': Stop
 
 **Note**: Your servo motors must be connected to pin 9 (right servo) and pin 10 (left servo) of your Arduino Nano.
@@ -105,7 +105,7 @@ void stop()
 ```
 
 ## Remote Control your NB3
-If you connect to your NB3's Raspberry Pi via SSH, then you can run commands on your Raspberry Pi remotely. The Python code [here](/boxes/networks/remote-NB3/python/drive/drive.py) listens for a keypress (either the up, down, left, or right arrow) and then sends the appropriate command to your Arduino to driver forward, backward, or turn. You can exit this Python code by pressing 'q' to quit.
+If you connect to your NB3's Raspberry Pi via SSH, then you can run commands on your Raspberry Pi remotely. The Python code [here](/boxes/networks/remote-NB3/python/drive/drive.py) listens for a keypress (either the up, down, left, or right arrow) and then sends the appropriate command to your Arduino to drive forward, backward, or turn. You can exit this Python code by pressing 'q' to quit.
 
 To run this code, you can navigate to the folder containing the file and run it with Python.
 ```bash

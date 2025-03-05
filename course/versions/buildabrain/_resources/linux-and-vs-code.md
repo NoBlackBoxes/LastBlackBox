@@ -211,4 +211,10 @@ This code is where (if the NB3 is not moving) we respond to keys pressed by send
     return True
 ```
 
-Congrats! You made your first new behaviour....***Have Fun!***
+Now you can test your modified code.
+
+```bash
+python mydrive.py
+```
+
+Congrats! You made your first new behaviour...***Have Fun!***
