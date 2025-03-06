@@ -2,10 +2,10 @@
 <svg id="logo_NBB_profile_animated_repeat" width="100mm" height="125mm" viewBox="0 0 100 125" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
 	<path class="profile" id="head" d="M 36.766274,124.56293 C 36.43594,122.21923 35.11219,102.19327 33.858365,100.59719 30.967333,98.039539 26.56689,98.31006 23.080291,99.23721 20.097634,99.082276 16.885914,99.642988 14.238413,97.877226 10.985701,94.274373 11.371495,89.316454 12.058688,84.783991 L 11.453474,83.424006 9.7584006,82.92969 C 8.9096572,81.766448 8.8734894,79.949036 9.2737493,78.606266 L 9.8789605,78.111949 8.6685371,77.617633 7.5786737,76.506036 C 7.95241,74.270546 9.1797114,71.811261 9.6378407,69.588067 6.9951628,68.481388 2.3994114,68.695347 1.1600537,65.75896 0.51626267,63.425099 12.574685,47.188897 13.150962,45.253439 9.6981207,21.388535 22.583584,4.1120555 46.213365,1.7757344 63.856132,0.65184101 84.621403,4.6358832 94.538679,21.169658 c 6.604281,12.325939 5.299826,27.300526 -0.605212,39.653516 -3.214133,6.049842 -8.007602,12.175921 -10.416393,18.65368 -3.460075,14.708985 3.373272,29.813916 6.662151,43.976936" style="fill-opacity:0;stroke:#FFFFFF;stroke-width:0.5"/>
 <g id="Atoms" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
-	<rect class="box" id="box_Atoms" x="36.111" y="39.084" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<rect class="box" id="box_Atoms" x="36.511" y="39.084" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
 <g id="Electrons" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
-	<rect class="box" id="box_Electrons" x="49.056" y="41.834" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+	<rect class="box" id="box_Electrons" x="49.456" y="41.834" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
 </g>
 <g id="Magnets" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
 	<rect class="box" id="box_Magnets" x="50.787" y="32.810" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>

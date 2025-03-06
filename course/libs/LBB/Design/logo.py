@@ -13,8 +13,8 @@ import LBB.Design.box as Box
 # Store logo box parameters
 default_box_size = 13.0
 default_box_stroke = 0.5
-LBB_box_parameters = [[31.111,50.084,"#000000","#FFFFFF"],
-                      [44.056,52.834,"#000000","#FFFFFF"],
+LBB_box_parameters = [[31.511,50.084,"#000000","#FFFFFF"],
+                      [44.456,52.834,"#000000","#FFFFFF"],
                       [45.787,43.810,"#000000","#FFFFFF"],
                       [57.432,49.147,"#000000","#FFFFFF"],
                       [52.633,41.232,"#000000","#FFFFFF"],
@@ -42,8 +42,8 @@ LBB_box_parameters = [[31.111,50.084,"#000000","#FFFFFF"],
                       [23.050,47.314,"#000000","#FFFFFF"],
                       [32.787,43.810,"#000000","#FFFFFF"]]
 
-NBB_box_parameters = [[31.111,50.084,"#FFFFFF","#000000"],
-                      [44.056,52.834,"#FFFFFF","#000000"],
+NBB_box_parameters = [[31.511,50.084,"#FFFFFF","#000000"],
+                      [44.456,52.834,"#FFFFFF","#000000"],
                       [45.787,43.810,"#FFFFFF","#000000"],
                       [57.432,49.147,"#FFFFFF","#000000"],
                       [52.633,41.232,"#FFFFFF","#000000"],
