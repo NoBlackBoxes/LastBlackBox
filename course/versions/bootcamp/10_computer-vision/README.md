@@ -23,6 +23,11 @@ M2 nut|01|regular M2 nut|4|[-D-](/boxes/audio/)|[-L-](https://www.accu.co.uk/hex
 ### Image-Processing
 > Old-school (classical) techniques for processing two-dimensional data (2D).
 
+- Install python opencv
+```bash
+pip install opencv-python
+```
+
 
 # Project
 ### NB3 : Streaming Images

@@ -20,6 +20,9 @@ site_root = repo_root + "/site"
 # Store course names
 course_names = ["The Last Black Box", "Bootcamp", "Build a Brain"]
 
+# Store image prefix
+image_prefix = None
+
 # Store box names (and order)
 box_names = [
     'Atoms',

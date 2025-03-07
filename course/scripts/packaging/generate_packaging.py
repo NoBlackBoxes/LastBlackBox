@@ -5,14 +5,10 @@ Generate LBB packaging descriptions
 @author: kampff
 """
 
-# Import libraries
-
-# Import modules
-import LBB.Engine.utilities as Engine_Utilities
-import LBB.Engine.config as Engine_Config
-import LBB.Packaging.config as Packaging_Config
-import LBB.Packaging.utilities as Packaging_Utilities
-import LBB.Packaging.package as Package
+# Imports
+import LBB.utilities as Utilities
+import LBB.config as Config
+import LBB.Design.package as Package
 
 # Specify parameters
 unit = 30           # Unit size (mm)
@@ -29,26 +25,26 @@ packages.append(Package.Package("Small",  "ECMA A55.20.01.01", "external", 3*uni
 packages.append(Package.Package("Cables", "ECMA A20.20.03.01", "external", 3*unit, 1*unit, 7*unit,   "GSM 300", thin_wall,  0.5, "down"))
 
 # Save package descriptions
-description_path = f"{Engine_Config.course_root}/_resources/packaging/package_dimensions.txt"
+description_path = f"{Config.course_root}/_resources/packaging/package_dimensions.txt"
 with open(description_path, "w") as file:
     for package in packages:
         dim = package.print_dimensions()
         file.write(dim)
 
 # Save package models
-model_folder = f"{Engine_Config.course_root}/_resources/packaging/CAD/boxes"
-Engine_Utilities.clear_folder(model_folder)
+model_folder = f"{Config.course_root}/_resources/packaging/CAD/boxes"
+Utilities.clear_folder(model_folder)
 for package in packages:
     model_path = f"{model_folder}/{package.name}.step"
     model = package.generate_model()
-    Packaging_Utilities.save_STEP(model_path, package.name, model)
+    Package.save_STEP(model_path, package.name, model)
 
 # Save package designs (printing)
-design_folder = f"{Engine_Config.course_root}/_resources/packaging/designs"
-Engine_Utilities.clear_folder(design_folder)
-packages[2].store_designs(unit, 2.00, 1.1, Packaging_Config.large_box_names, design_folder)
-packages[3].store_designs(unit, 2.00, 1.1, Packaging_Config.medium_box_names, design_folder)
-packages[4].store_designs(unit, 2.00, 1.1, Packaging_Config.small_box_names, design_folder)
-packages[5].store_designs(unit, 2.00, 1.1, Packaging_Config.cables_box_names, design_folder, shuffle=False)
+design_folder = f"{Config.course_root}/_resources/packaging/designs"
+Utilities.clear_folder(design_folder)
+packages[2].store_designs(unit, 2.00, 1.1, Config.large_box_names, design_folder)
+packages[3].store_designs(unit, 2.00, 1.1, Config.medium_box_names, design_folder)
+packages[4].store_designs(unit, 2.00, 1.1, Config.small_box_names, design_folder)
+packages[5].store_designs(unit, 2.00, 1.1, Config.cables_box_names, design_folder, shuffle=False)
 
 # FIN

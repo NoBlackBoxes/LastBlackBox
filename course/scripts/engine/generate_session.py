@@ -5,16 +5,14 @@ Generate a session README from a template
 @author: kampff
 """
 
-# Import Libraries
+# Imports
 import os
 import glob
-
-# Import modules
-import LBB.Engine.utilities as Utilities
-import LBB.Engine.config as Config
+import LBB.utilities as Utilities
+import LBB.config as Config
 import LBB.Engine.session as Session
 
-# Reload libraries and modules
+# Reload libraries
 import importlib
 importlib.reload(Utilities)
 importlib.reload(Config)

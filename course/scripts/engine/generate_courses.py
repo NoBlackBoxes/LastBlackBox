@@ -1,44 +1,39 @@
 # -*- coding: utf-8 -*-
 """
-Generate LBB Courses
+Generate LBB Courses (session READMEs) from templates
 
 @author: kampff
 """
 
-# Import Libraries
+# Imports
 import os
 import glob
-
-# Import modules
-import LBB.Engine.utilities as Utilities
-import LBB.Engine.config as Config
+import LBB.utilities as Utilities
+import LBB.config as Config
 import LBB.Engine.course as Course
 
-# Reload libraries and modules
+# Reload libraries
 import importlib
 importlib.reload(Utilities)
 importlib.reload(Config)
 importlib.reload(Course)
 
-# Course names
-names = ["The Last Black Box", "Build a Brain", "Bootcamp"]
-
 # Build courses
-for name in names:
+for course_name in Config.course_names:
     # Set paths
-    if name == "The Last Black Box":
+    if course_name == "The Last Black Box":
         Config.image_prefix = "../.."
     else:
         Config.image_prefix = "../../../.."
 
     # Load course
-    print(f"Loading \"{name}\"...")
-    course = Course.Course(name)
+    print(f"Loading \"{course_name}\"...")
+    course = Course.Course(course_name)
 
     # Render README for each session
     for session in course.sessions:
-        README_text = session.render(name, type="MD")
-        if name == "The Last Black Box":
+        README_text = session.render(course_name, type="MD")
+        if course_name == "The Last Black Box":
             session_folder = f"{Config.boxes_root}/{session.slug}"
         else:
             session_folder = f"{Config.course_root}/versions/{course.slug}/{(session.index+1):02d}_{session.slug}"

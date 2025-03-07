@@ -20,13 +20,13 @@ class Course:
     Stores a list course sessions and boxes
     """
     def __init__(self, name=None, path=None):
-        self.name = None        # Course name
-        self.slug = None        # Course slug (URL)
-        self.sessions = None    # Course sessions
+        self.name = None         # Course name
+        self.slug = None         # Course slug (URL)
+        self.sessions = None     # Course sessions
         if name:
-            self.build(name)    # Build course from repository
+            self.build(name)     # Build course from repository
         elif path:
-            self.load(path)     # Load course from JSON file
+            self.load(path)      # Load course from JSON file
         return
 
     # Convert course object to dictionary

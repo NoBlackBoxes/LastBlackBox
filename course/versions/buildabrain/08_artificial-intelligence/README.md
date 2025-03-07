@@ -104,6 +104,11 @@ libcamera-still -o test.png
 ### Image-Processing
 > Old-school (classical) techniques for processing two-dimensional data (2D).
 
+- Install python opencv
+```bash
+pip install opencv-python
+```
+
 
 ## Learning
 Supervised, unsupervised, and reinforcement learning

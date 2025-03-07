@@ -4,10 +4,8 @@
 # Import Libraries
 import os
 import glob
-
-# Import Modules
-import LBB.Engine.config as Config
-import LBB.Engine.utilities as Utilities
+import LBB.config as Config
+import LBB.utilities as Utilities
 import LBB.Design.png as PNG
 
 # Specify paths

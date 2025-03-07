@@ -5,16 +5,10 @@ Generate templates (template.md) for each box in LBB
 @author: kampff
 """
 
-# Import Libraries
+# Imports
 import os
 import glob
-
-# Import modules
-import LBB.Engine.config as Config
-
-# Reload libraries and modules
-import importlib
-importlib.reload(Config)
+import LBB.config as Config
 
 # Generate templates
 for box_name in Config.box_names:
