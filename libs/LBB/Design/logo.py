@@ -5,10 +5,8 @@ LBB : Design : Logo Class
 @author: kampff
 """
 
-# Import libraries
-
-# Import modules
-import LBB.Design.box as Box
+# Imports
+import LBB.Design.rectangle as Rectangle
 
 # Store logo box parameters
 default_box_size = 13.0
@@ -98,7 +96,7 @@ class Logo:
                 label = name
             else:
                 label = None
-            box = Box.Box(name, label, 0.0, 0, x + self.x_offset, y + self.y_offset, self.box_size, self.box_size, self.box_stroke, fill, border)
+            box = Rectangle.Rectangle(name, label, 0.0, 0, x + self.x_offset, y + self.y_offset, self.box_size, self.box_size, self.box_stroke, fill, border)
             boxes.append(box)
         return boxes
 

@@ -1,17 +1,15 @@
 # -*- coding: utf-8 -*-
 """
-LBB: Course Class
+LBB : Engine : Course Class
 
 @author: kampff
 """
 
-# Import libraries
+# Imports
 import glob
 import json
-
-# Import modules
-import LBB.Engine.utilities as Utilities
-import LBB.Engine.config as Config
+import LBB.utilities as Utilities
+import LBB.config as Config
 import LBB.Engine.session as Session
 
 # Course Class

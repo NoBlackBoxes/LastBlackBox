@@ -1,14 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-LBB: Project Class
+LBB : Engine : Project Class
 
 @author: kampff
 """
 
-# Import libraries
-
-# Import modules
-import LBB.Engine.utilities as Utilities
+# Imports
+import LBB.utilities as Utilities
 import LBB.Engine.instruction as Instruction
 import LBB.Engine.image as Image
 import LBB.Engine.video as Video

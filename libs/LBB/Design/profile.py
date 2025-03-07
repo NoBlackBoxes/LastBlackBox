@@ -1,13 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-Design: Profile Class
+LBB : Design : Profile Class
 
 @author: kampff
 """
 
-# Import libraries
-
-# Import modules
+# Imports
 
 # Profile Class
 class Profile:

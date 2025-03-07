@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
 """
- - Generate a packing list from a BOM
+Generate packing lists from course BOMs
 
- @author: kampff
+@author: kampff
 """
+
+# Imports
 import os
 import numpy as np
 import pandas as pd
-
-# Import modules
-import LBB.Engine.config as Config
-import LBB.Engine.utilities as Utilities
+import LBB.config as Config
+import LBB.utilities as Utilities
 import LBB.Engine.course as Course
 
 # Specify Number of Kits

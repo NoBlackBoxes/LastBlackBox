@@ -1,16 +1,14 @@
 # -*- coding: utf-8 -*-
 """
-LBB: Session Class
+LBB : Engine : Session Class
 
 @author: kampff
 """
 
-# Import libraries
+# Imports
 import json
-
-# Import modules
-import LBB.Engine.config as Config
-import LBB.Engine.utilities as Utilities
+import LBB.config as Config
+import LBB.utilities as Utilities
 import LBB.Engine.box as Box
 import LBB.Engine.project as Project
 

@@ -1,14 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-Design: PNG Class
+LBB : Design : PNG Class
 
 @author: kampff
 """
 
-# Import libraries
+# Imports
 import os
-
-# Import modules
 
 # PNG Class
 class PNG:

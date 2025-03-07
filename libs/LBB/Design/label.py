@@ -1,13 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-Design: Label Class
+LBB : Design : Label Class
 
 @author: kampff
 """
-
-# Import libraries
-
-# Import modules
+# Imports
 
 # Label Class
 class Label:

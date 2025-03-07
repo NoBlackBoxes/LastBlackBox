@@ -1,14 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-LBB: Image Class
+LBB : Engine : Image Class
 
 @author: kampff
 """
 
-# Import libraries
-
-# Import modules
-import LBB.Engine.config as Config
+# Imports
+import LBB.config as Config
 
 # Image Class
 class Image:

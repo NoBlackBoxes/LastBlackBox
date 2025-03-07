@@ -1,16 +1,14 @@
 # -*- coding: utf-8 -*-
 """
-LBB: Box Class
+LBB : Engine : Box Class
 
 @author: kampff
 """
 
-# Import libraries
+# Imports
 import json
-
-# Import modules
-import LBB.Engine.utilities as Utilities
-import LBB.Engine.config as Config
+import LBB.utilities as Utilities
+import LBB.config as Config
 import LBB.Engine.lesson as Lesson
 import LBB.Engine.material as Material
 

@@ -1,10 +1,8 @@
 # Generate LBB logos
 
-# Import Libraries
-import LBB.Design.utilities as Utilities
-
-# Import Modules
-import LBB.Engine.config as Config
+# Imports
+import LBB.utilities as Utilities
+import LBB.config as Config
 import LBB.Design.logo as Logo
 import LBB.Design.svg as SVG
 import LBB.Design.png as PNG

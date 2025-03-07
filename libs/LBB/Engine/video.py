@@ -1,13 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-LBB: Video Class
+LBB : Engine : Video Class
 
 @author: kampff
 """
 
-# Import libraries
-
-# Import modules
+# Imports
 
 # Video Class
 class Video:

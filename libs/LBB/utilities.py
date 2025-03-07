@@ -1,17 +1,15 @@
 # -*- coding: utf-8 -*-
 """
-LBB : Utility Library
+LBB : Utilities
 
 @author: kampff
 """
 
-# Import libraries
+# Imports
 import os
 import glob
 import shutil
 import re
-
-# Import modules
 import LBB.Engine.instruction as Instruction
 import LBB.Engine.image as Image
 import LBB.Engine.task as Task
@@ -49,7 +47,7 @@ def get_depth_from_symbol(symbol):
         depth = "11"
     else:
         print(f"Unrecognized depth symbol ({symbol}) in lesson text.")
-        exit(-1)
+        depth = -1
     return depth
 
 # Get depths list
@@ -114,6 +112,9 @@ def replace_link(match):
 def extract_step_from_text(text, line_count):
     step = None
     step_depth = get_depth_from_symbol(text[line_count].strip()[0])
+    if step_depth == -1:
+        print(f"Line: {line_count} - Error in {text}")
+        exit(-1)
     step_text = text[line_count][2:].strip()
     if step_text.startswith("**TASK**"):    # Task
         task_text = []

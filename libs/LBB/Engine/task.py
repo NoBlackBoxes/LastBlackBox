@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-LBB: Task Class
+LBB : Engine : Task Class
 
 @author: kampff
 """
 
-# Import modules
-import LBB.Engine.utilities as Utilities
+# Imports
+import LBB.utilities as Utilities
 import LBB.Engine.instruction as Instruction
 import LBB.Engine.image as Image
 import LBB.Engine.code as Code

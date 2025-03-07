@@ -1,18 +1,15 @@
 # -*- coding: utf-8 -*-
 """
-Design: SVG Class
+LBB : Design : SVG Class
 
 @author: kampff
 """
 
-# Import libraries
+# Imports
 import numpy as np
 import copy
-
-# Import modules
 import LBB.Design.profile as Profile
 import LBB.Design.text as Text
-import LBB.Design.box as Box
 
 # SVG Class
 class SVG:

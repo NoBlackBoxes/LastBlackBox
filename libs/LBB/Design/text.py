@@ -1,13 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-Design: Text Class
+LBB : Design : Text Class
 
 @author: kampff
 """
 
-# Import libraries
-
-# Import modules
+# Imports
 
 # Text Class
 class Text:

@@ -1,16 +1,14 @@
 # -*- coding: utf-8 -*-
 """
-LBB : Packaging : Package Class
+LBB : Design : Package Class
 
 @author: kampff
 """
 
-# Import libraries
+# Imports
 import random
 import cadquery as cq
-
-# Import modules
-import LBB.Engine.config as Config
+import LBB.config as Config
 import LBB.Design.layout as Layout
 import LBB.Design.svg as SVG
 import LBB.Design.png as PNG
@@ -135,6 +133,17 @@ def store_design(package, design_name, num_r, num_c, spacing_ratio, box_names, s
     design_path = f"{design_folder}/{name}.svg"
     svg.draw(design_path)
 
+    return
+
+# Save named STEP file
+def save_STEP(step_path, step_name, model):
+    model.val().label = step_name
+    cq.exporters.export(model, step_path, exportType=cq.exporters.ExportTypes.STEP)
+    with open(step_path, 'r') as file:
+        content = file.read()
+        content = content.replace("Open CASCADE STEP translator ", step_name)
+    with open(step_path, 'w') as file:
+        file.write(content)
     return
 
 #FIN

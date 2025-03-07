@@ -1,27 +1,18 @@
 # -*- coding: utf-8 -*-
 """
-Update pricing from BOM in local material.csv files
+Update datasheet, supplier, and pricing from BOM in local material.csv files
 
 @author: kampff
 """
 
-# Import Libraries
+# Imports
 import os
 import glob
 import pandas as pd
-
-# Import modules
-import LBB.Engine.config as Config
-import LBB.Engine.utilities as Utilities
+import LBB.config as Config
+import LBB.utilities as Utilities
 import LBB.Engine.course as Course
 import LBB.Engine.box as Box
-
-# Reload libraries and modules
-import importlib
-importlib.reload(Config)
-importlib.reload(Utilities)
-importlib.reload(Course)
-importlib.reload(Box)
 
 # Load LBB BOM
 course_BOM_path = f"{Config.course_root}/_resources/materials/BOM/course_BOM.csv"

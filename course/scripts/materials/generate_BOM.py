@@ -1,27 +1,18 @@
 # -*- coding: utf-8 -*-
 """
-Generate LBB Bill of Materials (BOM)
+Generate Bill of Materials (BOM)
 
 @author: kampff
 """
 
-# Import Libraries
+# Imports
 import os
 import glob
 import pandas as pd
-
-# Import modules
-import LBB.Engine.config as Config
-import LBB.Engine.utilities as Utilities
+import LBB.config as Config
+import LBB.utilities as Utilities
 import LBB.Engine.course as Course
 import LBB.Engine.box as Box
-
-# Reload libraries and modules
-import importlib
-importlib.reload(Config)
-importlib.reload(Utilities)
-importlib.reload(Course)
-importlib.reload(Box)
 
 # Build courses
 course_names = ["The Last Black Box", "Bootcamp", "Build a Brain"]

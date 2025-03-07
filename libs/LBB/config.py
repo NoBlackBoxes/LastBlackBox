@@ -5,7 +5,7 @@ LBB : Config
 @author: kampff
 """
 
-# Import libraries
+# Imports
 import os
 
 # Get username
@@ -15,7 +15,10 @@ username = os.getlogin()
 repo_root = f"/home/{username}/NoBlackBoxes/LastBlackBox"
 boxes_root = repo_root + "/boxes"
 course_root = repo_root + "/course"
-image_prefix = ""
+site_root = repo_root + "/site"
+
+# Store course names
+course_names = ["The Last Black Box", "Bootcamp", "Build a Brain"]
 
 # Store box names (and order)
 box_names = [
@@ -111,6 +114,90 @@ ownphone_box_names = [
     'Systems',
     'Networks',
     'Security'
+]
+
+# Specify package box names (7 x 7 grid)
+
+# Large (6 x 4)
+large_box_names = [
+    'Atoms',
+    'Electrons',
+    'Magnets',
+    'Light',
+    'Amplifiers',
+    'Circuits',
+    'Data',
+    'Logic',
+    'Control',
+    'Robotics',
+    'Power',
+    'Systems',
+    'Websites',
+    'Servers',
+    'Security',
+    'Audio',
+    'Atoms',
+    'Electrons',
+    'Magnets',
+    'Light',
+    'Amplifiers',
+    'Circuits',
+    'Data',
+    'Logic'
+]
+
+# Medium (4 x 3)
+medium_box_names = [
+    'Sensors',
+    'Motors',
+    'Transistors',
+    'Memory',
+    'FPGAs',
+    'Computers',
+    'Linux',
+    'Python',
+    'Networks',
+    'Vision',
+    'Learning',
+    'Intelligence'
+]
+
+# Small (2 x 3)
+small_box_names = [
+    'Sensors',
+    'Motors',
+    'Transistors',
+    'Memory',
+    'FPGAs',
+    'Computers',
+    'Linux',
+    'Python',
+    'Networks'
+]
+
+# Cables (1 x 7)
+cables_box_names = [
+    'Websites',
+    'Servers',
+    'Security',
+    'Audio',
+    'Vision',
+    'Learning',
+    'Intelligence',
+    'Atoms',
+    'Electrons',
+    'Magnets',
+    'Light',
+    'Sensors',
+    'Motors',
+    'Transistors',
+    'Amplifiers',
+    'Circuits',
+    'Data',
+    'Logic',
+    'Memory',
+    'FPGAs',
+    'Computers'
 ]
 
 #FIN

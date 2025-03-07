@@ -1,14 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-Design: Layout Class
+LBB : Design : Layout Class
 
 @author: kampff
 """
 
-# Import libraries
-
-# Import modules
-import LBB.Design.box as Box
+# Imports
+import LBB.Design.rectangle as Rectangle
 
 # Layout Class
 class Layout:
@@ -61,7 +59,7 @@ class Layout:
                 label = None
 
             # Create box (and append to list)
-            box = Box.Box(name, label, self.label_size, arrow_state, x + self.x_offset, y + self.y_offset, self.box_size, self.box_size, self.box_stroke, self.box_fill, self.box_border)
+            box = Rectangle.Rectangle(name, label, self.label_size, arrow_state, x + self.x_offset, y + self.y_offset, self.box_size, self.box_size, self.box_stroke, self.box_fill, self.box_border)
             boxes.append(box)
 
             # Set next X,Y (and steps)

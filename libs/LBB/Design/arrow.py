@@ -1,13 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-Design: Arrow Class
+LBB : Design : Arrow Class
 
 @author: kampff
 """
 
-# Import libraries
-
-# Import modules
+# Imports
 
 # Arrow Class
 class Arrow:

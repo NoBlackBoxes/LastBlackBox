@@ -1,15 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-LBB: Material Class
+LBB : Engine : Material Class
 
 @author: kampff
 """
 
-# Import libraries
+# Imports
 import json
 import re
-
-# Import modules
 
 # Material Class
 class Material:

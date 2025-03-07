@@ -1,18 +1,16 @@
 # -*- coding: utf-8 -*-
 """
-Design: Box Class
+LBB : Design : Rectangle Class
 
 @author: kampff
 """
 
-# Import libraries
-
-# Import modules
+# Imports
 import LBB.Design.label as Label
 import LBB.Design.arrow as Arrow
 
-# Box Class
-class Box:
+# Rectangle Class
+class Rectangle:
     def __init__(self, _name, _label, _label_size, _arrow, _x, _y, _width, _height, _stroke, _fill, _border):
         self.name = _name               # Name
         self.label = _label             # Label

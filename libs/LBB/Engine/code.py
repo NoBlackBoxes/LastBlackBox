@@ -1,15 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-LBB: Code Class
+LBB : Engine : Code Class
 
 @author: kampff
 """
 
-# Import libraries
+# Imports
 import re
-
-# Import modules
-import LBB.Engine.utilities as Utilities
+import LBB.utilities as Utilities
 
 # Code Class
 class Code:
