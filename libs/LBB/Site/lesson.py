@@ -45,7 +45,7 @@ class Lesson:
         self.name = dictionary.get("name")
         self.slug = dictionary.get("slug")
         self.description = dictionary.get("description")
-        self.video = Video.Video(dictionary=dictionary.get("video"))
+        self.video = Video.Video(self.course, dictionary=dictionary.get("video"))
         self.steps = []
         for step_dictionary in dictionary.get("steps"):
             if step_dictionary.get("type") == "instruction":
@@ -71,7 +71,7 @@ class Lesson:
         self.slug = self.name.lower().replace(' ', '-')
 
         # Extract video
-        self.video = Video.Video(text[line_count])
+        self.video = Video.Video(self.video, text[line_count])
         line_count += 1
 
         # Extract description

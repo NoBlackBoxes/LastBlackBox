@@ -19,7 +19,8 @@ class Session:
 
     Stores a list of boxes opened during this session and the session project
     """
-    def __init__(self, text=None, dictionary=None):
+    def __init__(self, _course, text=None, dictionary=None):
+        self.course = _course           # Session parent (course)
         self.index = None               # Session index
         self.name = None                # Session name
         self.slug = None                # Session slug (URL)
@@ -50,8 +51,8 @@ class Session:
         self.name = dictionary.get("name")
         self.slug = dictionary.get("slug")
         self.description = dictionary.get("description")
-        self.boxes = [Box.Box(dictionary=box_dictionary) for box_dictionary in dictionary.get("boxes", [])]
-        self.projects = [Project.Project(dictionary=project_dictionary) for project_dictionary in dictionary.get("projects", [])]
+        self.boxes = [Box.Box(self, dictionary=box_dictionary) for box_dictionary in dictionary.get("boxes", [])]
+        self.projects = [Project.Project(self, dictionary=project_dictionary) for project_dictionary in dictionary.get("projects", [])]
         return
 
     # Parse session template
@@ -86,7 +87,7 @@ class Session:
                 line_count += 1
                 if line_count >= project_line_count:
                     break
-            box = Box.Box(box_text)
+            box = Box.Box(self, text=box_text)
             box.index = box_count
             self.boxes.append(box)
             box_count += 1
@@ -109,7 +110,7 @@ class Session:
             project_lesson = project_basename.split(":")[1]
             project_path = f"{Config.boxes_root}/{project_box}/_resources/lessons/{project_lesson}.md"
             project_text = Utilities.read_clean_text(project_path)
-            project = Project.Project(project_depth, text=project_text)
+            project = Project.Project(self, project_depth, text=project_text)
             project.index = project_count
             self.projects.append(project)
             project_count += 1

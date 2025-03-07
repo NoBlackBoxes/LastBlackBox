@@ -11,7 +11,8 @@ import LBB.utilities as Utilities
 
 # Instruction Class
 class Instruction:
-    def __init__(self, text=None, dictionary=None):
+    def __init__(self, _course, text=None, dictionary=None):
+        self.course = _course           # Instruction parent (course)
         self.index = None               # Step index
         self.type = "instruction"       # Step type
         self.depth = None               # Step depth

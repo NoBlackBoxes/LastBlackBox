@@ -20,7 +20,9 @@ class Box:
     Stores a list of lessons and materials required to open this black box
     - Each box has a "depth" (01, 10, 11) indicating the degree of difficulty
     """
-    def __init__(self, text=None, dictionary=None):
+    def __init__(self, _session, text=None, dictionary=None):
+        self.course = _session.course   # Box parent (course)
+        self.session = _session         # Box parent (session)
         self.index = None               # Box index
         self.name = None                # Box name
         self.slug = None                # Box slug (URL)
@@ -55,7 +57,7 @@ class Box:
         self.depth = dictionary.get("depth")
         self.description = dictionary.get("description")
         self.materials = [Material.Material(dictionary=material_dictionary) for material_dictionary in dictionary.get("materials", [])]
-        self.lessons = [Lesson.Lesson(dictionary=lesson_dictionary) for lesson_dictionary in dictionary.get("lessons", [])]
+        self.lessons = [Lesson.Lesson(self, dictionary=lesson_dictionary) for lesson_dictionary in dictionary.get("lessons", [])]
         return
     
     # Parse box string
@@ -87,7 +89,7 @@ class Box:
         for material_text in materials_text:
             material_depth = material_text.split(",")[1]
             if material_depth in depths:
-                material = Material.Material(material_text)
+                material = Material.Material(text=material_text)
                 materials.append(material)
         self.materials = materials
 
@@ -101,7 +103,7 @@ class Box:
             lesson_basename = text[line_count].split("{")[1][:-1]
             lesson_path = f"{Config.boxes_root}/{self.slug}/_resources/lessons/{lesson_basename}.md"
             lesson_text = Utilities.read_clean_text(lesson_path)
-            lesson = Lesson.Lesson(self.depth, text=lesson_text)
+            lesson = Lesson.Lesson(self, self.depth, text=lesson_text)
             lesson.index = lesson_count
             self.lessons.append(lesson)
             lesson_count += 1

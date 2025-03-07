@@ -10,7 +10,8 @@ import LBB.config as Config
 
 # Image Class
 class Image:
-    def __init__(self, text=None, dictionary=None):
+    def __init__(self, _course, text=None, dictionary=None):
+        self.course = _course           # Image parent (course)
         self.index = None               # Step index
         self.type = "image"             # Step type
         self.depth = None               # Step depth
@@ -63,7 +64,7 @@ class Image:
         output = []
         if type == "MD":
             output.append(f"<p align=\"center\">\n")
-            output.append(f"<img src=\"{Config.image_prefix}{self.path}\" alt=\"{self.name}\" width=\"{self.width}\">\n")
+            output.append(f"<img src=\"{self.course.image_prefix}{self.path}\" alt=\"{self.name}\" width=\"{self.width}\">\n")
             output.append(f"</p>\n\n")
         elif type == "HTML":
             output.append(f"<p align=\"center\">\n")

@@ -109,7 +109,7 @@ def replace_link(match):
     return f'<a id="link" href="{link_url}" target="_blank">{link_text}</a>'
 
 # Extract step from template text
-def extract_step_from_text(text, line_count):
+def extract_step_from_text(course, text, line_count):
     step = None
     step_depth = get_depth_from_symbol(text[line_count].strip()[0])
     if step_depth == -1:
@@ -125,11 +125,11 @@ def extract_step_from_text(text, line_count):
             task_text.append(text[line_count])
             line_count += 1
         task_text.append(text[line_count])
-        task = Task.Task(task_text)
+        task = Task.Task(course, text=task_text)
         task.depth = step_depth
         step = task
     elif step_text.startswith("!["):        # Image
-        image = Image.Image(step_text)
+        image = Image.Image(course, text=step_text)
         image.depth = step_depth
         step = image
     elif step_text.startswith("*code*"):     # Code
@@ -141,7 +141,7 @@ def extract_step_from_text(text, line_count):
             code_text.append(text[line_count])
             line_count += 1
         code_text.append(text[line_count])
-        code = Code.Code(code_text)
+        code = Code.Code(course, text=code_text)
         code.depth = step_depth
         step = code
     elif step_text.startswith("```"):       # Debug
@@ -150,24 +150,24 @@ def extract_step_from_text(text, line_count):
         print("ERROR")
         exit(-1)
     else:                                   # Instruction
-        instruction = Instruction.Instruction(step_text)
+        instruction = Instruction.Instruction(course, text=step_text)
         instruction.depth = step_depth
         step = instruction
     line_count += 1
     return line_count, step
 
 # Extract steps from dictionary
-def extract_steps_from_dict(dictionary):
+def extract_steps_from_dict(course, dictionary):
     steps = []
     for step_dictionary in dictionary.get("steps"):
         if step_dictionary.get("type") == "instruction":
-            step = Instruction.Instruction(dictionary=step_dictionary)
+            step = Instruction.Instruction(course, dictionary=step_dictionary)
         elif step_dictionary.get("type") == "image":
-            step = Image.Image(dictionary=step_dictionary)
+            step = Image.Image(course, dictionary=step_dictionary)
         elif step_dictionary.get("type") == "task":
-            step = Task.Task(dictionary=step_dictionary)
+            step = Task.Task(course, dictionary=step_dictionary)
         elif step_dictionary.get("type") == "code":
-            step = Code.Code(dictionary=step_dictionary)
+            step = Code.Code(course, dictionary=step_dictionary)
         else:
             print(f"Unknown step type in dictionary")
             exit(-1)

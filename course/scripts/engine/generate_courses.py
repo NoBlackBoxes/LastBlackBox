@@ -20,14 +20,7 @@ importlib.reload(Course)
 
 # Build courses
 for course_name in Config.course_names:
-    # Set paths
-    if course_name == "The Last Black Box":
-        Config.image_prefix = "../.."
-    else:
-        Config.image_prefix = "../../../.."
-
-    # Load course
-    print(f"Loading \"{course_name}\"...")
+    print(f"Building \"{course_name}\"...")
     course = Course.Course(course_name)
 
     # Render README for each session

@@ -14,7 +14,8 @@ class Video:
 
     Stores a link to a video tutorial
     """ 
-    def __init__(self, text=None, dictionary=None):
+    def __init__(self, _course, text=None, dictionary=None):
+        self.course = _course           # Video parent (course)
         self.name = None                # Video name
         self.url = None                 # Video url
         self.id = None                  # Video id

@@ -5,34 +5,24 @@ Build the LBB site
 @author: kampff
 """
 
-# Import libraries
+# Imports
 import os
-
-# Import modules
-import LBB.Site.config as Site_Config
-import LBB.Site.utilities as Site_Utilities
+import LBB.config as Config
+import LBB.utilities as Utilities
 import LBB.Engine.course as Course
 
 # Reload libraries and modules
 import importlib
-importlib.reload(Site_Config)
-importlib.reload(Site_Utilities)
+importlib.reload(Config)
+importlib.reload(Utilities)
 importlib.reload(Course)
 
-#----------------------------------------------------------
-
-# Root paths
-repo_root = os.path.dirname(base_path)
-course_root = repo_root + "/course"
-templates_folder = base_path + "/templates"
+# Set paths
+templates_folder = Config.site_root + "/templates"
 courses_templates_folder = templates_folder + "/courses"
 
-
-# Course names
-names = ["The Last Black Box", "Build a Brain", "Bootcamp"]
-
 # Load and render each course
-for name in names:
+for course_name in Config.course_names:
     # Set paths
     if name == "The Last Black Box":
         Config.image_prefix = "../.."

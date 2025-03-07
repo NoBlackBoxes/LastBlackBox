@@ -18,9 +18,6 @@ importlib.reload(Utilities)
 importlib.reload(Config)
 importlib.reload(Session)
 
-# Config
-Config.image_prefix = "../../../.."
-
 # Specify course/session
 #course_session_basename = "/versions/buildabrain/01_sensing-the-world"
 #course_session_basename = "/versions/buildabrain/02_making-things-move"

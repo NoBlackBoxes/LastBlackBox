@@ -22,6 +22,7 @@ class Course:
     def __init__(self, name=None, path=None):
         self.name = None         # Course name
         self.slug = None         # Course slug (URL)
+        self.image_prefix = None # Course image prefix
         self.sessions = None     # Course sessions
         if name:
             self.build(name)     # Build course from repository
@@ -34,6 +35,7 @@ class Course:
         dictionary = {
             "name": self.name,
             "slug": self.slug,
+            "image_prefix": self.image_prefix,
             "sessions": [session.to_dict() for session in self.sessions]
         }
         return dictionary
@@ -42,6 +44,7 @@ class Course:
     def from_dict(self, dictionary):
         self.name = dictionary.get("name")
         self.slug = dictionary.get("slug")
+        self.image_prefix = dictionary.get("image_prefix")
         self.sessions = [Session.Session(dictionary=session_dictionary) for session_dictionary in dictionary.get("sessions", [])]
         return
     
@@ -53,6 +56,7 @@ class Course:
         # Set course parameters
         self.name = name
         self.slug = get_slug_from_name(name)
+        self.image_prefix = "../.." if name == "The Last Black Box" else "../../../.."
         
         # List session folders
         if self.slug == "course": # Full course
@@ -69,7 +73,7 @@ class Course:
         for session_index, session_folder in enumerate(session_folders):
             session_path = f"{session_folder}/_resources/template.md"
             session_text = Utilities.read_clean_text(session_path)
-            session = Session.Session(text=session_text)
+            session = Session.Session(self, text=session_text)
             session.index = session_index
             self.sessions.append(session)
         return

@@ -13,7 +13,8 @@ import LBB.Engine.code as Code
 
 # Task Class
 class Task:
-    def __init__(self, text=None, dictionary=None):
+    def __init__(self, _course, text=None, dictionary=None):
+        self.course = _course           # Task parent (course)
         self.index = None               # Step index
         self.type = "task"              # Step type
         self.depth = None               # Step depth
@@ -44,7 +45,7 @@ class Task:
         self.type = dictionary.get("type")
         self.depth = dictionary.get("depth")
         self.description = dictionary.get("description")
-        self.steps = Utilities.extract_steps_from_dict(dictionary)
+        self.steps = Utilities.extract_steps_from_dict(self.course, dictionary)
         self.target = dictionary.get("target")
         return
     
@@ -61,7 +62,7 @@ class Task:
         self.steps = []
         step_count = 0
         while not text[line_count].startswith("> "):
-            line_count, step = Utilities.extract_step_from_text(text, line_count)
+            line_count, step = Utilities.extract_step_from_text(self.course, text, line_count)
             step.index = step_count
             self.steps.append(step)
             step_count += 1

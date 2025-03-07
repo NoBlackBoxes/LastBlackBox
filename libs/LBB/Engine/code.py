@@ -11,7 +11,8 @@ import LBB.utilities as Utilities
 
 # Code Class
 class Code:
-    def __init__(self, text=None, dictionary=None):
+    def __init__(self, _course, text=None, dictionary=None):
+        self.course = _course           # Code parent (course)
         self.index = None               # Step index
         self.type = "code"              # Step type
         self.depth = None               # Step depth

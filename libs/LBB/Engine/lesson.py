@@ -20,11 +20,14 @@ class Lesson:
 
     Stores a link to a video tutorial (optional) and a list of steps to complete the lesson
     """ 
-    def __init__(self, depth, text=None, dictionary=None):
+    def __init__(self, _box, _depth, text=None, dictionary=None):
+        self.course = _box.course       # Lesson parent (course)
+        self.session = _box.session     # Lesson parent (session)
+        self.box = _box                 # Lesson parent (box)
         self.index = None               # Lesson index
         self.name = None                # Lesson name
         self.slug = None                # Lesson slug
-        self.depth = depth              # Lesson depth
+        self.depth = _depth             # Lesson depth
         self.description = None         # Lesson description
         self.video = None               # Lesson video
         self.steps = None               # Lesson steps
@@ -54,7 +57,7 @@ class Lesson:
         self.slug = dictionary.get("slug")
         self.depth = dictionary.get("depth")
         self.description = dictionary.get("description")
-        self.video = Video.Video(dictionary=dictionary.get("video"))
+        self.video = Video.Video(self, dictionary=dictionary.get("video"))
         self.steps = Utilities.extract_steps_from_dict(dictionary)
         return
 
@@ -78,7 +81,7 @@ class Lesson:
         # Extract video
         video_url = text[line_count].split('(')[1][:-1]
         if video_url != '':
-            self.video = Video.Video(f"[{self.name}]({video_url})")
+            self.video = Video.Video(self.course, f"[{self.name}]({video_url})")
         line_count += 1
 
         # Find lesson section
@@ -89,7 +92,7 @@ class Lesson:
         self.steps = []
         step_count = 0
         while line_count < max_count:
-            line_count, step = Utilities.extract_step_from_text(text, line_count)
+            line_count, step = Utilities.extract_step_from_text(self.course, text, line_count)
             if step.depth in depths:
                 step.index = step_count
                 self.steps.append(step)
