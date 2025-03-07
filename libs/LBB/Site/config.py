@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-LBB: Config Class
+LBB: Site: Config Class
 
 @author: kampff
 """

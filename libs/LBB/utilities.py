@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-LBB: Utility Library
+LBB : Utility Library
 
 @author: kampff
 """

@@ -38,17 +38,17 @@ pip install setuptools wheel
 pip install pyaudio wave
 ```
 
-## Add local (LBB) libray paths
+## Add local (LBB and NB3) libraries to Python paths
 You can include custom Python libraries by adding a ".pth" file to the *site-packages* folder with the absolute path to your library.
 
 ```bash
-# Insert the path (first bit of text) into (>) a *.pth file contained in your LBB virtual environment
+# Get the current Python version (into an environment variable that can be used by Linux)
+PYTHON_VERSION=$(python -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')
+echo "Python version is $PYTHON_VERSION"
 
-# On Host (current Python version 3.12.3)
-echo "/home/${USER}/NoBlackBoxes/LastBlackBox/boxes/audio/python/libs" >> /home/${USER}/NoBlackBoxes/LastBlackBox/_tmp/LBB/lib/python3.12/site-packages/NB3.pth
-
-# On NB3 (current Python version 3.11.2)
-echo "/home/${USER}/NoBlackBoxes/LastBlackBox/boxes/audio/python/libs" >> /home/${USER}/NoBlackBoxes/LastBlackBox/_tmp/LBB/lib/python3.11/site-packages/NB3.pth
+# Insert the local libraries path (libs) into (>) a *.pth file contained in your LBB virtual environment
+echo "/home/${USER}/NoBlackBoxes/LastBlackBox/libs" > "/home/${USER}/NoBlackBoxes/LastBlackBox/_tmp/LBB/lib/python${PYTHON_VERSION}/site-packages/local.pth"
+echo "LastBlackBox python libraries (libs) folder added to search path (as local.pth)"
 ```
 
 ---

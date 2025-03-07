@@ -24,11 +24,6 @@ Generate a secret key using the following command
 ```bash
 python -c 'import secrets; print(secrets.token_hex())'
 ```
-### Add Libraries to "site-packages"
-```bash
-# On Host (current Python version 3.12.3, assuming LBB virtual environment)
-echo "/home/${USER}/NoBlackBoxes/LastBlackBox/site/libs" >> /home/${USER}/NoBlackBoxes/LastBlackBox/_tmp/LBB/lib/python3.12/site-packages/LBB.pth
-```
 
 ### Create "database" file system structure
 ```bash

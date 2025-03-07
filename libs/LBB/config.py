@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-LBB : Engine : Config
+LBB : Config
 
 @author: kampff
 """
