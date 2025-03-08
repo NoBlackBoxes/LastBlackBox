@@ -6,9 +6,13 @@ import serial
 import numpy as np
 import tflite_runtime.interpreter as tflite
 import NB3.Vision.camera as Camera
+from NB3.Vision.stream import MJPEGStreamer
 
 # Get user name
 username = os.getlogin()
+
+# Load external index.html
+html_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/intelligence/NPU/look-NB3/index.html"
 
 # Set base path
 npu_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/intelligence/NPU"
@@ -38,6 +42,10 @@ output_details = interpreter.get_output_details()
 camera = Camera.Camera(width=320, height=320)
 camera.start()
 time.sleep(1.0)
+
+# Start MJPEG stream
+streamer = MJPEGStreamer(camera=camera, port=1234, html_path=html_path)
+streamer.start()
 
 # Initialize interactive terminal
 screen = curses.initscr()
@@ -83,12 +91,14 @@ try:
             x_mid = (face_rect_x + face_rect_width) / 2.0
             y_mid = (face_rect_y + face_rect_height) / 2.0
             screen.addstr(1, 0, f" -  Face Detected: X: {x_mid:.1f}, Y: {y_mid:.1f}")
+            camera.set_rectangle_overlay(face_rect_x, face_rect_y, face_rect_width, face_rect_height)
         else:
             screen.addstr(1, 0, f"-NO-Face Detected")
 
 finally:
     # Shutdown camera
     camera.stop()
+    streamer.stop()
 
     # Close serial port
     ser.close()
