@@ -1,4 +1,4 @@
-# Streaming image  (MJPEG) HTTP server
+# Streaming image (MJPEG) HTTP server
 import os
 import socket
 import mimetypes
@@ -63,7 +63,7 @@ try:
             client_connection.sendall(bytes('Content-Type: multipart/x-mixed-replace; boundary=FRAME\r\n', 'utf-8'))
             client_connection.sendall(bytes('\r\n', 'utf-8'))
 
-            # Continously send (stream) JPEG images
+            # Continuously send (stream) of JPEG images
             try:
                 while True:
                     # Read most recent frame
@@ -86,7 +86,7 @@ try:
         # Close client connection
         client_connection.close()
 except:
-    # Release the camera caputre
+    # Release the camera capture
     cap.release()
 
 #FIN

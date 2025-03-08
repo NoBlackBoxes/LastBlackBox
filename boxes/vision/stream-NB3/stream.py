@@ -1,103 +1,104 @@
-# Requires netifaces (to get ip address)
+# Streaming image (MJPEG) HTTP server
 
-import io
-import logging
+# Imports
+import os
+import time
+import socket
 import netifaces
-import socketserver
-from http import server
-from threading import Condition
+import mimetypes
+import numpy as np
+import cv2
+import NB3.Vision.camera as Camera
 
-import libcamera
-from picamera2 import Picamera2
-from picamera2.encoders import MJPEGEncoder
-from picamera2.outputs import FileOutput
+# Load page data (index.html)
+path = 'index.html'
+file = open(path,"r")
+html = file.read()
+file.close()
 
-PAGE = """\
-<html>
-<head>
-<title>NB3 Camera Streaming</title>
-</head>
-<body>
-<h1>Hi from NB3!</h1>
-<img src="stream.mjpg" width="1280" height="720" />
-</body>
-</html>
-"""
+# Get Host (NB3) IP address of the WiFI interface
+ip_address = netifaces.ifaddresses("wlan0")[netifaces.AF_INET][0]['addr']
 
-def get_ip_from_interface(interface="wlan0"):
-    try:
-        return netifaces.ifaddresses(interface)[netifaces.AF_INET][0]['addr']
-    except KeyError:
-        return None
+# Set port
+port = 1234
 
-class StreamingOutput(io.BufferedIOBase):
-    def __init__(self):
-        self.frame = None
-        self.condition = Condition()
+# Open socket
+listen_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+listen_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+listen_socket.bind((ip_address, port))
+listen_socket.listen(1)
 
-    def write(self, buf):
-        with self.condition:
-            self.frame = buf
-            self.condition.notify_all()
+# Open camera, start, and wait for it to settle
+camera = Camera.Camera(type='picamera2', device=0, width=640, height=480, format='RGB')
+camera.start()
+time.sleep(1.0)
 
-class StreamingHandler(server.BaseHTTPRequestHandler):
-    def do_GET(self):
-        if self.path == '/':
-            self.send_response(301)
-            self.send_header('Location', '/index.html')
-            self.end_headers()
-        elif self.path == '/index.html':
-            content = PAGE.encode('utf-8')
-            self.send_response(200)
-            self.send_header('Content-Type', 'text/html')
-            self.send_header('Content-Length', len(content))
-            self.end_headers()
-            self.wfile.write(content)
-        elif self.path == '/stream.mjpg':
-            self.send_response(200)
-            self.send_header('Age', 0)
-            self.send_header('Cache-Control', 'no-cache, private')
-            self.send_header('Pragma', 'no-cache')
-            self.send_header('Content-Type', 'multipart/x-mixed-replace; boundary=FRAME')
-            self.end_headers()
-            try:
-                while True:
-                    with output.condition:
-                        output.condition.wait()
-                        frame = output.frame
-                    self.wfile.write(b'--FRAME\r\n')
-                    self.send_header('Content-Type', 'image/jpeg')
-                    self.send_header('Content-Length', len(frame))
-                    self.end_headers()
-                    self.wfile.write(frame)
-                    self.wfile.write(b'\r\n')
-            except Exception as e:
-                logging.warning(
-                    'Removed streaming client %s: %s',
-                    self.client_address, str(e))
-        else:
-            self.send_error(404)
-            self.end_headers()
-
-
-class StreamingServer(socketserver.ThreadingMixIn, server.HTTPServer):
-    allow_reuse_address = True
-    daemon_threads = True
-
-picam2 = Picamera2()
-camera_config = picam2.create_video_configuration(main={"size": (1280, 720)})
-#camera_config["transform"] = libcamera.Transform(hflip=0, vflip=0)
-picam2.configure(camera_config)
-output = StreamingOutput()
-picam2.start_recording(MJPEGEncoder(), FileOutput(output))
-ip_address = get_ip_from_interface("wlan0")
-port = 8000
-print(f"\n\nConnect to http://{ip_address}:{port} to view camera stream")  
+# Clear screen and print status
+os.system('clear')
+print(f"\nConnect to http://{ip_address}:{port} to view camera stream")  
 print(f" - (Ctrl-C to Quit)")
 
+# Serve incoming connections
 try:
-    address = ('', port)
-    server = StreamingServer(address, StreamingHandler)
-    server.serve_forever()
-finally:
-    picam2.stop_recording()
+    while True:
+        # Listen for a connection
+        client_connection, client_address = listen_socket.accept()
+
+        # When a connection arrives, retrieve/decode HTTP request
+        request_data = client_connection.recv(1024)
+        request_text = request_data.decode('utf-8')
+
+        # Parse request
+        lines = request_text.split("\r\n")
+
+        # Select first line
+        line = lines[0]
+
+        # Parse fields
+        fields = line.split(" ")
+
+        # Parse target
+        if(len(fields) < 2):
+            continue
+        target = fields[1]
+
+        # Respond to target
+        if(target == '/'): # The default target, serve 'index.html'
+            http_response = bytes(html, 'utf-8')
+            client_connection.sendall(http_response)
+        elif(target == '/stream.mjpg'):
+            # Send header
+            client_connection.sendall(b'HTTP/1.1 200 OK\r\n')
+            client_connection.sendall(bytes('Age: 0\r\n', 'utf-8'))
+            client_connection.sendall(bytes('Cache-Control: no-cache, private\r\n', 'utf-8'))
+            client_connection.sendall(bytes('Pragma: no-cache\r\n', 'utf-8'))
+            client_connection.sendall(bytes('Content-Type: multipart/x-mixed-replace; boundary=FRAME\r\n', 'utf-8'))
+            client_connection.sendall(bytes('\r\n', 'utf-8'))
+
+            # Continuously send (stream) of JPEG images
+            try:
+                while True:
+                    # Capture latest image
+                    frame = camera.latest()
+
+                    # Encode as JPEG
+                    _, frame = cv2.imencode('.JPEG', frame)
+
+                    # Send frame data (with some header info)
+                    client_connection.sendall(b'--FRAME\r\n')
+                    client_connection.sendall(bytes('Content-Type: image/jpeg\r\n', 'utf-8'))
+                    client_connection.sendall(bytes('Content-Length: {0}\r\n'.format(len(frame)), 'utf-8'))
+                    client_connection.sendall(bytes('\r\n', 'utf-8'))
+                    client_connection.sendall(frame) # Send encoded data
+            except:
+                pass
+        else:
+            pass
+
+        # Close client connection
+        client_connection.close()
+except:
+    # Stop the camera
+    camera.stop()
+
+#FIN
