@@ -10,8 +10,11 @@ import numpy as np
 import cv2
 import NB3.Vision.camera as Camera
 
+# Get user name
+username = os.getlogin()
+
 # Load page data (index.html)
-path = 'index.html'
+path = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/vision/stream-NB3/index.html"
 file = open(path,"r")
 html = file.read()
 file.close()
@@ -29,7 +32,7 @@ listen_socket.bind((ip_address, port))
 listen_socket.listen(1)
 
 # Open camera, start, and wait for it to settle
-camera = Camera.Camera(type='picamera2', device=0, width=640, height=480, format='RGB')
+camera = Camera.Camera(width=640, height=480)
 camera.start()
 time.sleep(1.0)
 

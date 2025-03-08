@@ -16,7 +16,7 @@ PAGE = """\
 </head>
 <body>
 <h1>Hi from NB3!</h1>
-<img src="stream.mjpg" width="1280" height="720" />
+<img src="stream.mjpg" width="1920" height="1080" />
 </body>
 </html>
 """
@@ -76,7 +76,7 @@ class StreamingServer(socketserver.ThreadingMixIn, server.HTTPServer):
     daemon_threads = True
 
 picam2 = Picamera2()
-camera_config = picam2.create_video_configuration(main={"size": (640, 480)})
+camera_config = picam2.create_video_configuration(main={"size": (1920, 1080)})
 #camera_config["transform"] = libcamera.Transform(hflip=0, vflip=0)
 picam2.configure(camera_config)
 output = StreamingOutput()

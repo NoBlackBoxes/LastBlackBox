@@ -1,12 +1,10 @@
-# Import libraries
+# Imports
 import os
 import time
 import curses
 import serial
 import numpy as np
 import tflite_runtime.interpreter as tflite
-
-# Import modules
 import NB3.Vision.camera as Camera
 
 # Get user name
@@ -37,7 +35,7 @@ input_details = interpreter.get_input_details()
 output_details = interpreter.get_output_details()
 
 # Open camera, start, and wait for it to settle
-camera = Camera.Camera(type='picamera2', device=0, width=320, height=320, format='RGB')
+camera = Camera.Camera(width=320, height=320)
 camera.start()
 time.sleep(1.0)
 
