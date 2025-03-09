@@ -6,7 +6,8 @@ import serial
 import numpy as np
 import tflite_runtime.interpreter as tflite
 import NB3.Vision.camera as Camera
-from NB3.Vision.stream import MJPEGStreamer
+import NB3.Vision.stream as Stream
+import NB3.Vision.overlay as Overlay
 
 # Get user name
 username = os.getlogin()
@@ -39,13 +40,18 @@ input_details = interpreter.get_input_details()
 output_details = interpreter.get_output_details()
 
 # Open camera, start, and wait for it to settle
-camera = Camera.Camera(width=320, height=320)
+camera = Camera.Camera(width=640, height=640, lores_width=320, lores_height=320)
 camera.start()
 time.sleep(1.0)
 
+# Add Overlay
+overlay = Overlay.Overlay()
+overlay.timestamp = True
+camera.overlay = overlay
+
 # Start MJPEG stream
-streamer = MJPEGStreamer(camera=camera, port=1234, html_path=html_path)
-streamer.start()
+stream = Stream.Stream(camera=camera, port=1234, html_path=html_path)
+stream.start()
 
 # Initialize interactive terminal
 screen = curses.initscr()
@@ -65,8 +71,8 @@ try:
         # Clear screen
         screen.erase()
 
-        # Capture latest image
-        frame = camera.latest()
+        # Capture low res image
+        frame = camera.capture(lores=True, gray=False)
 
         # Send to NPU
         interpreter.set_tensor(input_details[0]['index'], np.expand_dims(frame, axis=0))
@@ -80,7 +86,7 @@ try:
         output_num_faces = interpreter.get_tensor(output_details[3]['index'])[0]
 
         # Process best detected face
-        screen.addstr(0, 0, 'Status: ...Looking...')       
+        screen.addstr(0, 0, 'Status: ...Looking...')
         if output_scores[0] > 0.1:
             face_rect_x = output_rects[0][1] * camera.width
             face_rect_y = output_rects[0][0] * camera.height
@@ -91,14 +97,18 @@ try:
             x_mid = (face_rect_x + face_rect_width) / 2.0
             y_mid = (face_rect_y + face_rect_height) / 2.0
             screen.addstr(1, 0, f" -  Face Detected: X: {x_mid:.1f}, Y: {y_mid:.1f}")
-            camera.set_rectangle_overlay(face_rect_x, face_rect_y, face_rect_width, face_rect_height)
+            overlay.rectangle = (face_rect_x, face_rect_y, face_rect_width, face_rect_height)
+            #screen.addstr(2, 0, f"{output_scores[0]}, {output_scores[1]}, {output_scores[2]}")
         else:
             screen.addstr(1, 0, f"-NO-Face Detected")
+            overlay.rectangle = None
+            #screen.addstr(2, 0, f"- {output_scores[0]}, {output_scores[1]}, {output_scores[2]}")
+        #screen.addstr(3, 0, f"+ {np.mean(frame[:,:,0])}, {np.mean(frame[:,:,1])}, {np.mean(frame[:,:,2])}")
 
 finally:
     # Shutdown camera
     camera.stop()
-    streamer.stop()
+    stream.stop()
 
     # Close serial port
     ser.close()

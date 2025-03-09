@@ -1,4 +1,11 @@
-import io
+# -*- coding: utf-8 -*-
+"""
+NB3 : Vision : Camera Class
+
+@author: kampff
+"""
+
+# Imports
 import time
 import cv2
 import numpy as np
@@ -6,80 +13,76 @@ from threading import Lock, Condition
 from picamera2 import Picamera2, MappedArray
 from picamera2.encoders import MJPEGEncoder
 from picamera2.outputs import FileOutput
+import NB3.Vision.stream as Stream
 
-class StreamingOutput(io.BufferedIOBase):
-    def __init__(self):
-        self.frame = None
-        self.condition = Condition()
-
-    def write(self, buf):
-        with self.condition:
-            self.frame = buf
-            self.condition.notify_all()
-
-    def get_frame(self):
-        with self.condition:
-            self.condition.wait()
-            return self.frame
-
+# Camera Class
 class Camera:
-    def __init__(self, width, height):
+    def __init__(self, width, height, lores_width=None, lores_height=None):
         self.width = width
         self.height = height
-        self.mutex = Lock()
-        self.handle = Picamera2()
+        self.lores_width = lores_width if lores_width else width
+        self.lores_height = lores_height if lores_height else height
         self.num_channels = 3
-        self.overlay_enabled = True  # Overlay toggle
-        self.overlay_rect = None     # (x,y,w,h) rectangle overlay
+        self.handle = Picamera2()
+        self.mutex = Lock()
+        self.overlay = None
 
+        # Configure camera (main and low resolution images)
         config = self.handle.create_video_configuration(
             main={"size": (self.width, self.height), "format": "RGB888"},
-            lores={"size": (self.width, self.height), "format": "YUV420"},
+            lores={"size": (self.lores_width, self.lores_height), "format": "YUV420"},
         )
         self.handle.configure(config)
-
-        self.current = np.zeros((self.height, self.width, self.num_channels), dtype=np.uint8)
-        self.encoder = MJPEGEncoder()
-        self.output = StreamingOutput()
-        self.handle.pre_callback = self.apply_overlay
+        self.encoder = MJPEGEncoder(bitrate=self._set_bitrate())
+        self.output = Stream.Output()
+        self.handle.pre_callback = self.pre_callback
 
     def start(self):
         self.handle.start()
         time.sleep(0.1)
         self.handle.start_encoder(self.encoder, FileOutput(self.output))
+        return
 
     def stop(self):
         self.handle.stop_encoder()
         self.handle.stop()
+        return
 
-    def latest(self):
+    def capture(self, lores=False, gray=False):
         with self.mutex:
-            frame = self.handle.capture_array()
-            np.copyto(self.current, frame)
-            return self.current
+            if lores:
+                if gray:
+                    frame = self.handle.capture_array("lores")[:self.lores_height,:]
+                else:
+                    frame = self.handle.capture_array("lores")
+                    frame = cv2.cvtColor(frame, cv2.COLOR_YUV2RGB_I420)
+            else:
+                if gray:
+                    frame = self.handle.capture_array("main")
+                    frame = cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY)
+                else:
+                    frame = self.handle.capture_array("main")
+            return frame
 
-    def latest_mjpeg(self):
+    def mjpeg(self):
         with self.mutex:
             return self.output.get_frame()
 
-    def apply_overlay(self, request):
-        if self.overlay_enabled:
+    def save(self, filename):
+        with self.mutex:
+            frame = self.handle.capture_array("main")
+            cv2.imwrite(filename, frame)
+            return
+
+    def pre_callback(self, request):
+        if self.overlay:
             with MappedArray(request, "main") as m:
-                # Add timestamp overlay
-                timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
-                cv2.putText(m.array, timestamp, (20, 40), cv2.FONT_HERSHEY_SIMPLEX, 
-                            1, (255,0,0), 2, cv2.LINE_AA)
-                
-                # Add rectangle overlay if set
-                if self.overlay_rect:
-                    x, y, w, h = self.overlay_rect
-                    cv2.rectangle(m.array, (int(x), int(y)), (int(x + w), int(y + h)), (0, 255, 0), 2)
+                self.overlay.draw(m.array)
+        return
 
-    def enable_overlay(self, enabled=True):
-        self.overlay_enabled = enabled
-
-    def set_rectangle_overlay(self, x, y, w, h):
-        self.overlay_rect = (x, y, w, h)
-
-    def clear_rectangle_overlay(self):
-        self.overlay_rect = None
+    def _set_bitrate(self):
+        reference_complexity = 1920 * 1080 * 30
+        actual_complexity = self.width * self.height * 60
+        reference_bitrate = 40 * 1000000
+        return int(reference_bitrate * actual_complexity / reference_complexity)
+#FIN

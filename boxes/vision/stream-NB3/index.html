@@ -1,13 +1,35 @@
 <!DOCTYPE html>
+<html>
 
 <head>
-    <title>NB3 Camera Stream</title>
+    <title>NB3 Camera Streaming</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .container img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    </style>
 </head>
 
 <body>
-
-    <img src="stream.mjpg" width="1920" height="1080" style="width:100%;height:100%;" />
-
+    <div class="container"><img src="stream.mjpg" /></div>
 </body>
 
 </html>
