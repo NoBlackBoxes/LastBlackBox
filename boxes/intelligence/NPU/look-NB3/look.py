@@ -6,17 +6,17 @@ import serial
 import numpy as np
 import tflite_runtime.interpreter as tflite
 import NB3.Vision.camera as Camera
-import NB3.Vision.stream as Stream
 import NB3.Vision.overlay as Overlay
+import NB3.Server.server as Server
 
 # Get user name
 username = os.getlogin()
 
-# Load external index.html
-html_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/intelligence/NPU/look-NB3/index.html"
-
 # Set base path
 npu_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/intelligence/NPU"
+
+# Specify site root
+root = f"{npu_path}/look-NB3/site"
 
 # Configure serial port
 ser = serial.Serial()
@@ -49,9 +49,10 @@ overlay = Overlay.Overlay()
 overlay.timestamp = True
 camera.overlay = overlay
 
-# Start MJPEG stream
-stream = Stream.Stream(camera=camera, port=1234, html_path=html_path)
-stream.start()
+# Start Server (for streaming)
+interface = Server.get_wifi_interface()
+server = Server.Server(root=root, interface=interface)
+server.start()
 
 # Initialize interactive terminal
 screen = curses.initscr()
@@ -86,7 +87,7 @@ try:
         output_num_faces = interpreter.get_tensor(output_details[3]['index'])[0]
 
         # Process best detected face
-        screen.addstr(0, 0, 'Status: ...Looking...')
+        screen.addstr(0, 0, 'Status: ...Looking for faces...             ')
         if output_scores[0] > 0.1:
             face_rect_x = output_rects[0][1] * camera.width
             face_rect_y = output_rects[0][0] * camera.height
@@ -104,11 +105,18 @@ try:
             overlay.rectangle = None
             #screen.addstr(2, 0, f"- {output_scores[0]}, {output_scores[1]}, {output_scores[2]}")
         #screen.addstr(3, 0, f"+ {np.mean(frame[:,:,0])}, {np.mean(frame[:,:,1])}, {np.mean(frame[:,:,2])}")
+        screen.addstr(4, 0, f"🌐 NB3 Server running at http://{server.ip_address}:{server.port}")
+        screen.addstr(5, 0, f"    - Press 'q' to Quit")
+        screen.addstr(7, 0, f"  ")
+
+        # Update stream
+        frame = camera.mjpeg()
+        server.update_stream("camera", frame)
 
 finally:
     # Shutdown camera
     camera.stop()
-    stream.stop()
+    server.stop()
 
     # Close serial port
     ser.close()

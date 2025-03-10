@@ -1,9 +1,8 @@
-<!DOCTYPE html>
 <html>
 
 <head>
     <link rel="icon" href="images/favicon.ico" type="image/png">
-    <title>NB3 Camera Streaming</title>
+    <title>NB3 Image Processing</title>
     <style>
         html,
         body {
@@ -17,7 +16,7 @@
         }
 
         .container {
-            width: 100vw;
+            width: 50vw;
             height: 100vh;
         }
 
@@ -26,11 +25,23 @@
             height: 100%;
             object-fit: fill;
         }
+
+        @media (orientation: portrait) {
+            body {
+                flex-direction: column;
+            }
+
+            .container {
+                width: 100vw;
+                height: 50vh;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="container"><img src="/stream/camera.mjpg" /></div>
+    <div class="container"><img src="/stream/display.mjpg" /></div>
 </body>
 
 </html>

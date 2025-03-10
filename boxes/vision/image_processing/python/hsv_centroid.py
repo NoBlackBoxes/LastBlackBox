@@ -3,8 +3,14 @@ import time
 import cv2
 import numpy as np
 import NB3.Vision.camera as Camera
-import NB3.Vision.stream as Stream
 import NB3.Vision.overlay as Overlay
+import NB3.Server.server as Server
+
+# Get user name
+username = os.getlogin()
+
+# Specify site root
+root = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/vision/image_processing/python/site"
 
 # Setup Camera
 camera = Camera.Camera(width=1280, height=720, lores_width=640, lores_height=480)
@@ -15,15 +21,18 @@ overlay = Overlay.Overlay()
 overlay.timestamp = True
 camera.overlay = overlay
 
-# Setup MJPEG stream
-stream = Stream.Stream(camera=camera, port=1234, lores=True)
-stream.start()
+# Start Server (for streaming)
+interface = Server.get_wifi_interface()
+server = Server.Server(root=root, interface=interface)
+server.start()
+server.status()
 
 # Define HSV range for green color
 lower_green = np.array([35, 90, 70])   # Lower bound (H, S, V)
 upper_green = np.array([85, 255, 255]) # Upper bound (H, S, V)
 
 try:
+    print(f"    - \"Control + C\" to Quit -")
     while True:
         # Capture frame (RGB)
         rgb = camera.capture(lores=True, gray=False)
@@ -46,9 +55,11 @@ try:
             # Draw the largest contour on the original frame
             cv2.drawContours(display, [largest_contour], -1, (0, 255, 0), 3)  # Green contour
 
-        # Update display stream
-        stream.display(display)
+        # Update streams
+        frame = camera.mjpeg()
+        server.update_stream("camera", frame)
+        server.update_stream("display", display)
 
 except KeyboardInterrupt:
-    stream.stop()
+    server.stop()
     camera.stop()

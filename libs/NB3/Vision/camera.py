@@ -13,7 +13,7 @@ from threading import Lock, Condition
 from picamera2 import Picamera2, MappedArray
 from picamera2.encoders import MJPEGEncoder
 from picamera2.outputs import FileOutput
-import NB3.Vision.stream as Stream
+import NB3.Vision.output as Output
 
 # Camera Class
 class Camera:
@@ -34,7 +34,7 @@ class Camera:
         )
         self.handle.configure(config)
         self.encoder = MJPEGEncoder(bitrate=self._set_bitrate())
-        self.output = Stream.Output()
+        self.output = Output.Output()
         self.handle.pre_callback = self.pre_callback
 
     def start(self):

@@ -7,7 +7,7 @@ import NB3.Server.server as Server
 username = os.getlogin()
 
 # Specify site root
-root = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/vision/stream-NB3"
+root = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/vision/stream-NB3/site"
 
 # Setup Camera
 camera = Camera.Camera(width=1280, height=720)
@@ -15,12 +15,18 @@ camera.start()
 
 # Start Server (for streaming)
 interface = Server.get_wifi_interface()
-server = Server.Server(root=html_path, interface=interface)
+server = Server.Server(root=root, interface=interface)
 server.start()
+server.status()
 
+# Stream camera images
 try:
+    print(f"    - \"Control + C\" to Quit -")
     while True:
-        time.sleep(1)
+        frame = camera.mjpeg()
+        server.update_stream("camera", frame)
+        time.sleep(0.0333) # (Optional) Slow down stream to 30 FPS
+
 except KeyboardInterrupt:
     camera.stop()
     server.stop()
