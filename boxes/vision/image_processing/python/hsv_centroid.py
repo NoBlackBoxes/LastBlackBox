@@ -59,6 +59,7 @@ try:
         frame = camera.mjpeg()
         server.update_stream("camera", frame)
         server.update_stream("display", display)
+        time.sleep(0.0333) # (Optional) Slow down stream to 30 FPS
 
 except KeyboardInterrupt:
     server.stop()
