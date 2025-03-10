@@ -9,13 +9,15 @@ NB3 : Server : Server Class
 import os
 import re
 import cv2
+import time
+import serial
 import socket
 import netifaces
 import threading
 import numpy as np
 
 class Server:
-    def __init__(self, root, port=1234, interface="wlan0"):
+    def __init__(self, root, port=1234, interface="wlan0", serial_device=None):
         self.root = os.path.abspath(root)   # Site root folder
         self.port = port                    # Server port
         self.ip_address = netifaces.ifaddresses(interface)[netifaces.AF_INET][0]['addr'] # Get IP address
@@ -30,8 +32,16 @@ class Server:
             self.stream_conditions[stream_name] = threading.Condition(self.stream_locks[stream_name])
         self.running = False
         self.server_thread = None
+        self.serial_device = None
+        if serial_device:
+            self.serial_device = serial.Serial()
+            self.serial_device.baudrate = 115200
+            self.serial_device.port = serial_device
 
     def start(self):
+        if self.serial_device:
+            self.serial_device.open()
+            time.sleep(1.0)
         self.running = True
         self.server_thread = threading.Thread(target=self._accept_clients, daemon=True)
         self.server_thread.start()
@@ -40,6 +50,8 @@ class Server:
         self.running = False
         if self.server_socket:
             self.server_socket.close()
+        if self.serial_device:
+            self.serial_device.close()
 
     def status(self):
         if self.running:
@@ -78,6 +90,12 @@ class Server:
             elif path.startswith("/stream/"):
                 stream_name = path.split("/")[-1].replace(".mjpg", "")
                 self.serve_stream(client_socket, stream_name)
+            elif path.startswith("/command/"):
+                command = path.split("/")[-1]
+                self.process_command(command)
+                response = b"HTTP/1.1 200 OK\r\nContent-Type: text/plain\r\n\r\nCommand Received"
+                client_socket.sendall(response)
+                client_socket.close()
             else:
                 self.serve_file(client_socket, os.path.join(self.root, path))
                 client_socket.close()
@@ -190,6 +208,24 @@ class Server:
         stream_pattern = re.findall(r'/stream/([\w-]+)\.mjpg', html_content)        
         return list(set(stream_pattern))
 
+    def process_command(self, command):
+        if self.serial_device.is_open:
+            if command == "forward_on":
+                self.serial_device.write(b'f\n')  # Send 'f' to move forward
+            elif command == "forward_off":
+                self.serial_device.write(b'x\n')  # Stop
+            elif command == "backward_on":
+                self.serial_device.write(b'b\n')  # Send 'b' to move backward
+            elif command == "backward_off":
+                self.serial_device.write(b'x\n')  # Stop
+            elif command == "left_on":
+                self.serial_device.write(b'l\n')  # Turn left
+            elif command == "left_off":
+                self.serial_device.write(b'x\n')  # Stop
+            elif command == "right_on":
+                self.serial_device.write(b'r\n')  # Turn right
+            elif command == "right_off":
+                self.serial_device.write(b'x\n')  # Stop
 # Utility
 def get_wifi_interface():
     for interface in netifaces.interfaces():
