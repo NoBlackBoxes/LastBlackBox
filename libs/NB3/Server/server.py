@@ -97,7 +97,7 @@ class Server:
                 client_socket.sendall(response)
                 client_socket.close()
             else:
-                self.serve_file(client_socket, os.path.join(self.root, path))
+                self.serve_file(client_socket, os.path.join(self.root, path[1:]))
                 client_socket.close()
 
         except Exception as e:
@@ -120,6 +120,8 @@ class Server:
             content_type = "image/jpeg"
         elif file_path.endswith(".png"):
             content_type = "image/png"
+        elif file_path.endswith(".svg"):
+            content_type = "image/svg+xml"
         else:
             content_type = "application/octet-stream"
 

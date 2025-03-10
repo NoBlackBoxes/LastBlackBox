@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #444444;
+}
+
+body, html {
+    overflow: hidden;
+    height: 100%;
+    touch-action: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 50vh;
+    background-color: black;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.1s ease-out;
+    border-radius: 5px;
+}
+
+.container svg {
+    width: 60%;
+    height: 60%;
+}
+
+.responsive-svg {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures the SVG stays within the div without cropping */
+}

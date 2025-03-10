@@ -12,6 +12,7 @@ root = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/servers/python/NB3/sit
 interface = Server.get_wifi_interface()
 server = Server.Server(root, interface=interface)
 server.start()
+server.status()
 
 try:
     while True:
