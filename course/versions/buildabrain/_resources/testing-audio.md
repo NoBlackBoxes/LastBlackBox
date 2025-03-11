@@ -16,7 +16,7 @@ arecord -D plughw:3 -c2 -r 48000 -f S32_LE -t wav -V stereo -v file_stereo.wav
 # - Press Control+C to stop the recording
 ```
 
-You should see a new file created in the VS Code "file explorer". If you select this file, then you will be able to play it back on your own computer using.
+You should see a new file created in the VS Code "file explorer". If you select this file, then you will be able to play it back on your own computer.
 
 ## Testing the Mouth
 The following command should be entered into the (Linux) terminal window. It will playback the audio file (WAV) called "file_stereo.wav" using the NB3's speaker.

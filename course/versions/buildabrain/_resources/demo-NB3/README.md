@@ -14,6 +14,7 @@ The following "aliases" are stored in the student user's *.bashrc* file. They al
 Sync    # Sync with the latest LBB repo (and these bash aliases)
 Drive   # Run the python driving controller (for remotely-controlling NB3)
 Stream  # Run the camera streaming (camera images will be streamed to the indicated website)
+Drone   # Run a web interface to both view the camera and drive the NB3
 Listen  # Run the keyword detection model and respond to commands
 Look    # Run the face tracking model and follow detected faces
 Music   # Play some music through the speaker

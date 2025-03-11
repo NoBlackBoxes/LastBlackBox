@@ -100,7 +100,7 @@ try:
         # Check for commands
         if labels[top_3_indices[0]] == "turn_left":
             ser.write(b'l')
-            time.sleep(2.0)
+            time.sleep(1.0)
             ser.write(b'x')
         
         # Wait a bit
