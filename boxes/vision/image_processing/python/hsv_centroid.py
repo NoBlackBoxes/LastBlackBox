@@ -57,8 +57,8 @@ try:
 
         # Update streams
         frame = camera.mjpeg()
-        server.update_stream("camera", frame)
-        server.update_stream("display", display)
+        server.update_stream("camera", frame, encoded=True)
+        server.update_stream("display", display, encoded=False)
         time.sleep(0.0333) # (Optional) Slow down stream to 30 FPS
 
 except KeyboardInterrupt:

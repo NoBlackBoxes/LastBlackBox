@@ -179,12 +179,12 @@ class Server:
                     break  # Exit thread if client disconnects
         client_socket.close()
 
-    def update_stream(self, stream_name, frame):
+    def update_stream(self, stream_name, frame, encoded=False):
         if stream_name not in self.stream_locks:
             return
 
-        # Encode frame if it's a numpy array
-        if isinstance(frame, np.ndarray):
+        # Encode frame if not already
+        if not encoded:
             success, encoded_frame = cv2.imencode('.jpg', frame)
             if success:
                 frame = encoded_frame.tobytes()

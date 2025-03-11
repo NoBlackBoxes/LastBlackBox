@@ -1,6 +1,6 @@
 import os
 import time
-import NB3.Vision.camera as Camera
+import NB3.Vision.webcam as Webcam
 import NB3.Server.server as Server
 
 # Get user name
@@ -10,8 +10,9 @@ username = os.getlogin()
 root = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/vision/stream-NB3/site"
 
 # Setup Camera
-camera = Camera.Camera(width=1280, height=720)
+camera = Webcam.Webcam(width=640, height=480)
 camera.start()
+camera.status()
 
 # Start Server (for streaming)
 interface = Server.get_wifi_interface()

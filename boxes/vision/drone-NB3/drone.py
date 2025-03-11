@@ -31,7 +31,7 @@ try:
     print(f"    - \"Control + C\" to Quit -")
     while True:
         frame = camera.mjpeg()
-        server.update_stream("camera", frame)
+        server.update_stream("camera", frame, encoded=True)
         time.sleep(0.0333) # (Optional) Slow down stream to 30 FPS
 except KeyboardInterrupt:
     camera.stop()
