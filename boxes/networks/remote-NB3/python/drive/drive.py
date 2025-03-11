@@ -27,7 +27,7 @@ def press(key):
 
     # Quit?
     if key == "q":
-        print("Quit")
+        print("\rQuiting                  ", end="", flush=True)
         ser.write(b'x')
         moving = False
         quit = True
@@ -38,25 +38,25 @@ def press(key):
     if not moving:
         # Forward?
         if key == "up":
-            print("Forward")
+            print("\rForward (press \'q\') to quit           ", end="", flush=True)
             ser.write(b'f')
             moving = True
             time.sleep(0.05)
         # Backward?
         if key == "down":
-            print("Backward")
+            print("\rBackward (press \'q\') to quit           ", end="", flush=True)
             ser.write(b'b')
             moving = True
             time.sleep(0.05)
         # Left?
         if key == "left":
-            print("Left")
+            print("\rLeft (press \'q\') to quit           ", end="", flush=True)
             ser.write(b'l')
             moving = True
             time.sleep(0.05)
         # Right?
         if key == "right":
-            print("Right")
+            print("\rRight (press \'q\') to quit           ", end="", flush=True)
             ser.write(b'r')
             moving = True
             time.sleep(0.05)
@@ -65,7 +65,7 @@ def press(key):
 def release(key):
     global moving
     if (key == "up") or (key == "down") or (key == "left") or (key == "right"):
-        print("Stop")
+        print("\rStopped (press \'q\') to quit           ", end="", flush=True)
         ser.write(b'x')
         moving = False
         time.sleep(0.05)
@@ -76,6 +76,7 @@ listen_keyboard(on_press=press, on_release=release, delay_second_char=0.10, unti
 
 # Turn on key echo
 os.system("stty echo")
+print()
 
 # Close serial port
 ser.close()
