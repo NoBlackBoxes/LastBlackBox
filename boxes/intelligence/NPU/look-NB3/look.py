@@ -111,7 +111,7 @@ try:
 
         # Update stream
         frame = camera.mjpeg()
-        server.update_stream("camera", frame, encoded=True)
+        server.update_stream("camera", frame)
 
 finally:
     # Shutdown camera

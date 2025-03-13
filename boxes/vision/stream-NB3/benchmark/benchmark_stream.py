@@ -40,7 +40,7 @@ try:
         # Update streams
         frame = camera.mjpeg()
         frame_size = len(frame)
-        server.update_stream("camera", frame, encoded=True)
+        server.update_stream("camera", frame)
         time.sleep(0.0333) # (Optional) Slow down stream to 30 FPS
 
         # Update benchmarks

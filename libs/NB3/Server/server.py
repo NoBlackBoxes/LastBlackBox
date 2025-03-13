@@ -13,30 +13,22 @@ import serial
 import socket
 import netifaces
 import threading
-import numpy as np
 
 class Server:
-    def __init__(self, root, port=1234, interface="wlan0", serial_device=None):
-        self.root = os.path.abspath(root)   # Site root folder
-        self.port = port                    # Server port
-        self.ip_address = netifaces.ifaddresses(interface)[netifaces.AF_INET][0]['addr'] # Get IP address
-        self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)           # Create socket
+    def __init__(self, root, port=1234, interface="wlan0", command_handler=None):
+        self.root = os.path.abspath(root)                                                # Site root folder
+        self.port = port                                                                 # Server port
+        self.ip_address = netifaces.ifaddresses(interface)[netifaces.AF_INET][0]['addr'] # Get IP address for interface
+        self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)           # Server socket
+        self.command_handler = command_handler                                           # Command handler callback
         self.stream_names = self.extract_stream_names(os.path.join(root, "index.html"))  # Extract stream names
         self.stream_clients = {}
         for stream_name in self.stream_names:
             self.stream_clients[stream_name] = []
         self.running = False
         self.server_thread = None
-        self.serial_device = None
-        if serial_device:
-            self.serial_device = serial.Serial()
-            self.serial_device.baudrate = 115200
-            self.serial_device.port = serial_device
-
+    
     def start(self):
-        if self.serial_device:
-            self.serial_device.open()
-            time.sleep(1.0)
         self.running = True
         self.server_thread = threading.Thread(target=self._accept_clients, daemon=True)
         self.server_thread.start()
@@ -44,9 +36,19 @@ class Server:
     def stop(self):
         self.running = False
         if self.server_socket:
+            try:
+                self.server_socket.shutdown(socket.SHUT_RDWR)
+            except OSError:
+                pass
             self.server_socket.close()
-        if self.serial_device:
-            self.serial_device.close()
+        for stream_name, clients in self.stream_clients.items():
+            for client_socket in clients:
+                try:
+                    client_socket.shutdown(socket.SHUT_RDWR)
+                    client_socket.close()
+                except OSError:
+                    pass
+            clients.clear()
 
     def status(self):
         if self.running:
@@ -63,7 +65,8 @@ class Server:
                 client_socket, _ = self.server_socket.accept()
                 threading.Thread(target=self._handle_client, args=(client_socket,), daemon=True).start()
             except Exception as e:
-                print(f"NB3 Server accept error: {e}")
+                if self.running:
+                    print(f"NB3 Server accept error: {e}")
 
     def _handle_client(self, client_socket):
         try:
@@ -85,17 +88,16 @@ class Server:
             elif path.startswith("/stream/"):
                 stream_name = path.split("/")[-1].replace(".mjpg", "")
                 self.serve_stream(client_socket, stream_name)
-                # Leave client socket open
+                # - Leave client socket open -
             elif path.startswith("/command/"):
                 command = path.split("/")[-1]
-                self.process_command(command)
+                self.handle_command(command)
                 response = b"HTTP/1.1 200 OK\r\nContent-Type: text/plain\r\n\r\nCommand Received"
                 client_socket.sendall(response)
                 client_socket.close()
             else:
                 self.serve_file(client_socket, os.path.join(self.root, path[1:]))
                 client_socket.close()
-
         except (BrokenPipeError, ConnectionResetError, OSError):
             print(f"NB3 Server: Client disconnected.")
         except Exception as e:
@@ -169,14 +171,16 @@ class Server:
             + f"Content-Length: {len(frame)}\r\n\r\n".encode()
             + frame
         )
+        clients_to_remove = []
         for client_socket in self.stream_clients[stream_name]:
             try:
-                #print(f"Sending {len(frame)} of {stream_name} to {client_socket}")
                 client_socket.sendall(multipart_frame)
             except (BrokenPipeError, ConnectionResetError, OSError):
-                self.stream_clients[stream_name].remove(client_socket)
-                client_socket.close()
-
+                clients_to_remove.append(client_socket)  # Mark for removal
+        for client_socket in clients_to_remove:
+            self.stream_clients[stream_name].remove(client_socket)
+            client_socket.close()
+    
     def send_404(self, client_socket):
         response = b"HTTP/1.1 404 Not Found\r\nContent-Length: 0\r\n\r\n"
         client_socket.sendall(response)
@@ -190,24 +194,15 @@ class Server:
         stream_pattern = re.findall(r'/stream/([\w-]+)\.mjpg', html_content)        
         return list(set(stream_pattern))
 
-    def process_command(self, command):
-        if self.serial_device.is_open:
-            if command == "forward_on":
-                self.serial_device.write(b'f\n')  # Send 'f' to move forward
-            elif command == "forward_off":
-                self.serial_device.write(b'x\n')  # Stop
-            elif command == "backward_on":
-                self.serial_device.write(b'b\n')  # Send 'b' to move backward
-            elif command == "backward_off":
-                self.serial_device.write(b'x\n')  # Stop
-            elif command == "left_on":
-                self.serial_device.write(b'l\n')  # Turn left
-            elif command == "left_off":
-                self.serial_device.write(b'x\n')  # Stop
-            elif command == "right_on":
-                self.serial_device.write(b'r\n')  # Turn right
-            elif command == "right_off":
-                self.serial_device.write(b'x\n')  # Stop
+    def handle_command(self, command):
+        if self.command_handler:
+            try:
+                self.command_handler(command)
+            except Exception as e:
+                print(f"NB3 Server: Error in command handler: {e}")
+        else:
+            print(f"NB3 Server: No command handler set. Received: {command}")
+
 # Utility
 def get_wifi_interface():
     for interface in netifaces.interfaces():

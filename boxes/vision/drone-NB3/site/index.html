@@ -1,139 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>NB3 FPV</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-
-    <style>
-        /* Reset styles */
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-            overflow: hidden;
-            display: flex;
-            flex-direction: row;
-        }
-
-        /* Container for the camera stream */
-        .stream-container {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: black;
-        }
-
-        .stream-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Control Panel */
-        .control-panel {
-            width: 50vw;
-            height: 100vh;
-            background: rgba(30, 30, 30, 0.8);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* Buttons */
-        .control-panel button {
-            width: 80%;
-            padding: 20px;
-            margin: 10px;
-            font-size: 1.2em;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            touch-action: none; /* Prevents mobile long-press context menu */
-        }
-
-        .control-panel button:active {
-            background-color: #388E3C;
-        }
-
-        /* Responsive Layout for Portrait Mode */
-        @media screen and (orientation: portrait) {
-            body {
-                flex-direction: column;
-            }
-
-            .stream-container {
-                height: 50vh;
-                width: 100vw;
-            }
-
-            .control-panel {
-                width: 100vw;
-                height: 50vh;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: space-around;
-            }
-
-            .control-panel button {
-                width: 40%;
-            }
-        }
-    </style>
+    <title>NB3 FPV</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon"> <!-- Favicon added -->
 </head>
 
 <body>
     <!-- Camera Stream -->
     <div class="stream-container">
-        <img src="/stream/camera.mjpg" />
+        <img src="/stream/camera.mjpg" alt="Camera Stream">
     </div>
 
-    <!-- Control Panel -->
+    <!-- HUD Control Panel -->
     <div class="control-panel">
-        <button id="forward" >Forward</button>
-        <button id="backward" >Backward</button>
-        <button id="left" >Left</button>
-        <button id="right" >Right</button>
+        <div class="button-container">
+            <button id="forward">▲</button>
+            <button id="backward">▼</button>
+            <button id="left">◀</button>
+            <button id="right">▶</button>
+        </div>
+        <button id="horn" class="horn-button">🔊</button>
     </div>
 
-    <!-- JavaScript for Sending Commands (Mouse & Touch) -->
-    <script>
-        function sendCommand(command) {
-            fetch('/command/' + command, { method: 'GET' })
-                .then(response => console.log(command + ' sent'))
-                .catch(error => console.error('Error:', error));
-        }
-
-        function setupButton(id, commandOn, commandOff) {
-            let button = document.getElementById(id);
-
-            // Handle both touch and mouse events
-            button.addEventListener("mousedown", () => sendCommand(commandOn));
-            button.addEventListener("mouseup", () => sendCommand(commandOff));
-            button.addEventListener("mouseleave", () => sendCommand(commandOff)); // Stops if user drags finger off
-
-            button.addEventListener("touchstart", (event) => {
-                event.preventDefault(); // Prevents iOS double-tap zoom
-                sendCommand(commandOn);
-            });
-
-            button.addEventListener("touchend", (event) => {
-                event.preventDefault();
-                sendCommand(commandOff);
-            });
-        }
-
-        // Set up all buttons
-        setupButton("forward", "forward_on", "forward_off");
-        setupButton("backward", "backward_on", "backward_off");
-        setupButton("left", "left_on", "left_off");
-        setupButton("right", "right_on", "right_off");
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
