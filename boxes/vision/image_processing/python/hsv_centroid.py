@@ -13,7 +13,7 @@ username = os.getlogin()
 root = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/vision/image_processing/python/site"
 
 # Setup Camera
-camera = Camera.Camera(width=1280, height=720, lores_width=640, lores_height=480)
+camera = Camera.Camera(width=800, height=600, lores_width=640, lores_height=480)
 camera.start()
 
 # Add Overlay
@@ -43,9 +43,6 @@ try:
         # Threshold for GREEN
         mask = cv2.inRange(hsv, lower_green, upper_green)
 
-        # Convert mask to RGB so the output remains 3-channel
-        display = cv2.cvtColor(mask, cv2.COLOR_GRAY2RGB)
-
         # Find contours in the mask
         contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
         if contours:
@@ -53,12 +50,17 @@ try:
             largest_contour = max(contours, key=cv2.contourArea)
 
             # Draw the largest contour on the original frame
-            cv2.drawContours(display, [largest_contour], -1, (0, 255, 0), 3)  # Green contour
+            bgr = cv2.drawContours(rgb, [largest_contour], -1, (0, 255, 0), 3)  # Green contour
+
+        # Convert mask to RGB so the output remains 3-channel
+        rgb = cv2.cvtColor(bgr, cv2.COLOR_BGR2RGB)
+        _, encoded = cv2.imencode('.jpg', rgb, [cv2.IMWRITE_JPEG_QUALITY, 70])
+        display = encoded.tobytes()
 
         # Update streams
         frame = camera.mjpeg()
-        server.update_stream("camera", frame, encoded=True)
-        server.update_stream("display", display, encoded=False)
+        server.update_stream("camera", frame)
+        server.update_stream("display", display)
         time.sleep(0.0333) # (Optional) Slow down stream to 30 FPS
 
 except KeyboardInterrupt:

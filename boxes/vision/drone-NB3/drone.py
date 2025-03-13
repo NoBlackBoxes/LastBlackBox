@@ -18,7 +18,7 @@ username = os.getlogin()
 root = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/vision/drone-NB3/site"
 
 # Setup Camera
-camera = Camera.Camera(width=1280, height=720)
+camera = Camera.Camera(width=800, height=600)
 camera.start()
 
 # Start Server (for streaming)

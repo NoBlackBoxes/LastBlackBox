@@ -82,7 +82,7 @@ class Camera:
 
     def _set_bitrate(self):
         reference_complexity = 1920 * 1080 * 30
-        actual_complexity = self.width * self.height * 60
+        actual_complexity = self.width * self.height * 30
         reference_bitrate = 40 * 1000000
         return int(reference_bitrate * actual_complexity / reference_complexity)
 #FIN

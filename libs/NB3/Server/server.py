@@ -8,7 +8,6 @@ NB3 : Server : Server Class
 # Imports
 import os
 import re
-import cv2
 import time
 import serial
 import socket
@@ -23,13 +22,9 @@ class Server:
         self.ip_address = netifaces.ifaddresses(interface)[netifaces.AF_INET][0]['addr'] # Get IP address
         self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)           # Create socket
         self.stream_names = self.extract_stream_names(os.path.join(root, "index.html"))  # Extract stream names
-        self.stream_frames = {}
-        self.stream_locks = {}              
-        self.stream_conditions = {}
+        self.stream_clients = {}
         for stream_name in self.stream_names:
-            self.stream_frames[stream_name] = None
-            self.stream_locks[stream_name] = threading.Lock()
-            self.stream_conditions[stream_name] = threading.Condition(self.stream_locks[stream_name])
+            self.stream_clients[stream_name] = []
         self.running = False
         self.server_thread = None
         self.serial_device = None
@@ -90,6 +85,7 @@ class Server:
             elif path.startswith("/stream/"):
                 stream_name = path.split("/")[-1].replace(".mjpg", "")
                 self.serve_stream(client_socket, stream_name)
+                # Leave client socket open
             elif path.startswith("/command/"):
                 command = path.split("/")[-1]
                 self.process_command(command)
@@ -100,9 +96,10 @@ class Server:
                 self.serve_file(client_socket, os.path.join(self.root, path[1:]))
                 client_socket.close()
 
+        except (BrokenPipeError, ConnectionResetError, OSError):
+            print(f"NB3 Server: Client disconnected.")
         except Exception as e:
             print(f"NB3 Server client error: {e}")
-            client_socket.close()
 
     def serve_file(self, client_socket, file_path):
         if not os.path.exists(file_path):
@@ -143,59 +140,42 @@ class Server:
             self.send_404(client_socket)
             client_socket.close()
             return
-
-        # Spawn a dedicated thread for this client
-        threading.Thread(target=self._client_stream_loop, args=(client_socket, stream_name), daemon=True).start()
+        
+        # Add client to this stream's client list
+        self.stream_clients[stream_name].append(client_socket)
 
         # Send HTTP response header once
         try:
-            client_socket.sendall(
-                b"HTTP/1.1 200 OK\r\n"
-                b"Content-Type: multipart/x-mixed-replace; boundary=frame\r\n\r\n"
+            headers = (
+                "HTTP/1.1 200 OK\r\n"
+                "Age: 0\r\n"
+                "Cache-Control: no-cache, private\r\n"
+                "Pragma: no-cache\r\n"
+                "Content-Type: multipart/x-mixed-replace; boundary=frame\r\n\r\n"
             )
+            client_socket.sendall(headers.encode('utf-8'))
         except (BrokenPipeError, ConnectionResetError, OSError):
+            self.stream_clients[stream_name].remove(client_socket)
             client_socket.close()  # Close the socket if an error occurs
 
-    def _client_stream_loop(self, client_socket, stream_name):
-        """Thread that waits for new frames and sends them to the client."""
-        while self.running:
-            with self.stream_conditions[stream_name]:  # Wait for new frames
-                self.stream_conditions[stream_name].wait()  # Block until update_stream() signals
-
-                frame = self.stream_frames[stream_name]
-                if frame is None:
-                    continue  # Skip if there's no frame yet
-
-                multipart_frame = (
-                    b"--frame\r\n"
-                    b"Content-Type: image/jpeg\r\n"
-                    + f"Content-Length: {len(frame)}\r\n\r\n".encode()
-                    + frame
-                )
-
-                try:
-                    client_socket.sendall(multipart_frame)
-                except (BrokenPipeError, ConnectionResetError, OSError):
-                    break  # Exit thread if client disconnects
-        client_socket.close()
-
-    def update_stream(self, stream_name, frame, encoded=False):
-        if stream_name not in self.stream_locks:
+    def update_stream(self, stream_name, frame):
+        if stream_name not in self.stream_names:
             return
 
-        # Encode frame if not already
-        if not encoded:
-            success, encoded_frame = cv2.imencode('.jpg', frame)
-            if success:
-                frame = encoded_frame.tobytes()
-            else:
-                print(f"Encoding failed for '{stream_name}'.")
-                return
-
-        # Store the latest frame safely and notify waiting clients
-        with self.stream_conditions[stream_name]:
-            self.stream_frames[stream_name] = frame
-            self.stream_conditions[stream_name].notify_all()  # Wake up client threads
+        # Send encoded frame to all stream clients
+        multipart_frame = (
+            b"--frame\r\n"
+            b"Content-Type: image/jpeg\r\n"
+            + f"Content-Length: {len(frame)}\r\n\r\n".encode()
+            + frame
+        )
+        for client_socket in self.stream_clients[stream_name]:
+            try:
+                #print(f"Sending {len(frame)} of {stream_name} to {client_socket}")
+                client_socket.sendall(multipart_frame)
+            except (BrokenPipeError, ConnectionResetError, OSError):
+                self.stream_clients[stream_name].remove(client_socket)
+                client_socket.close()
 
     def send_404(self, client_socket):
         response = b"HTTP/1.1 404 Not Found\r\nContent-Length: 0\r\n\r\n"
