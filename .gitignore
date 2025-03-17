@@ -1,6 +1,10 @@
 # Videos
 *.mkv
 
+# Student files and folders
+my*
+my*/
+
 # Build binaries
 bin/
 
