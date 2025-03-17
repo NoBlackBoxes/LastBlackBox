@@ -97,11 +97,13 @@ try:
             results = f"[{labels[index]}: {score:.3f}]"
             screen.addstr(i+1, 0, f"  {i}: {results}")
         
-        # Check for commands
-        if labels[top_3_indices[0]] == "turn_left":
-            ser.write(b'l')
-            time.sleep(1.0)
-            ser.write(b'x')
+        # Respond to commands
+        # ADD YOUR COMMAND RESPONSES AFTER HERE ------->
+        if labels[top_3_indices[0]] == "turn_left":  # If the "best" voice command detected is "turn_left"
+            ser.write(b'l')                          # Send the Arduino 'l' (the command to start turing left)  
+            time.sleep(1.0)                          # Wait (while moving) for 1 second
+            ser.write(b'x')                          # Send the Arduino 'x' (the command to stop)
+        # <------- ADD YOUR COMMAND BEFORE RESPONSES HERE
         
         # Wait a bit
         time.sleep(0.05)

@@ -16,3 +16,8 @@ alias Drone="python ${LBB}/boxes/vision/drone-NB3/drone.py"
 alias Listen="python ${LBB}/boxes/intelligence/NPU/listen-NB3/listen.py"
 alias Look="python ${LBB}/boxes/intelligence/NPU/look-NB3/look.py"
 alias Music="python ${LBB}/boxes/audio/python/output/play_wav.py ${LBB}/_tmp/sounds/Rose_Mars_APT.wav"
+
+# Student Aliases
+alias MyDrone="python ${LBB}/boxes/vision/drone-NB3/my_drone.py"
+alias MyListen="python ${LBB}/boxes/intelligence/NPU/listen-NB3/my_listen.py"
+alias MyLook="python ${LBB}/boxes/intelligence/NPU/look-NB3/my_look.py"
