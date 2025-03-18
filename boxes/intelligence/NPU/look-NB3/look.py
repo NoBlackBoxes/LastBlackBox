@@ -61,6 +61,18 @@ curses.cbreak()
 screen.keypad(True)
 screen.nodelay(True)
 
+# Face processing function
+def process_face(output_rect):
+    ul_x = output_rect[1] * camera.width         # Upper left corner (X)
+    ul_y = output_rect[0] * camera.height        # Upper left corner (Y)
+    lr_x = output_rect[3] * camera.width         # Lower right corner (X)
+    lr_y = output_rect[2] * camera.height        # Lower right corner (Y)
+    width = lr_x - ul_x                          # Width
+    height = lr_y - ul_y                         # Height
+    x = (output_rect[1] + output_rect[3]) / 2.0  # Centroid (X)
+    y = (output_rect[0] + output_rect[2]) / 2.0  # Centroid (Y)
+    return (ul_x, ul_y, width, height), x, y
+
 # Processing loop
 try:
     while True:
@@ -86,25 +98,57 @@ try:
         output_scores = interpreter.get_tensor(output_details[2]['index'])[0]
         output_num_faces = interpreter.get_tensor(output_details[3]['index'])[0]
 
-        # Process best detected face
-        screen.addstr(0, 0, 'Status: ...Looking for faces...             ')
-        if output_scores[0] > 0.1:
-            face_rect_x = output_rects[0][1] * camera.width
-            face_rect_y = output_rects[0][0] * camera.height
-            x2 = output_rects[0][3] * camera.width
-            y2 = output_rects[0][2] * camera.height
-            face_rect_width = x2 - face_rect_x
-            face_rect_height = y2 - face_rect_y
-            x_mid = (face_rect_x + face_rect_width) / 2.0
-            y_mid = (face_rect_y + face_rect_height) / 2.0
-            screen.addstr(1, 0, f" -  Face Detected: X: {x_mid:.1f}, Y: {y_mid:.1f}")
-            overlay.rectangle = (face_rect_x, face_rect_y, face_rect_width, face_rect_height)
-            #screen.addstr(2, 0, f"{output_scores[0]}, {output_scores[1]}, {output_scores[2]}")
-        else:
-            screen.addstr(1, 0, f"-NO-Face Detected")
-            overlay.rectangle = None
-            #screen.addstr(2, 0, f"- {output_scores[0]}, {output_scores[1]}, {output_scores[2]}")
-        #screen.addstr(3, 0, f"+ {np.mean(frame[:,:,0])}, {np.mean(frame[:,:,1])}, {np.mean(frame[:,:,2])}")
+        # Report default status
+        screen.addstr(0, 0, f"Status: ...Looking for faces...             ")
+
+        # Count number of detected faces (max = 2)
+        face_score_threshold = 0.3
+        face_indices = np.where(output_scores > face_score_threshold)[0]        
+        num_faces = min(len(face_indices), 2)
+
+        # Respond to faces
+        if num_faces == 0:          # If NO face detected
+            # ADD YOUR COMMAND RESPONSES AFTER HERE ------->
+            ser.write(b'x')                          # Send the Arduino 'x' (the command to stop)
+            # <------- ADD YOUR COMMAND BEFORE RESPONSES HERE
+
+            # Report NO faces
+            screen.addstr(1, 0, f"-NO-Face Detected              ")
+            screen.addstr(2, 0, f"                               ")
+            screen.addstr(3, 0, f"                               ")
+            overlay.rectangle1 = None
+            overlay.rectangle2 = None
+        elif num_faces == 1:        # If ONE face detected
+            # Process ONE face
+            rectangle, x, y = process_face(output_rects[0])
+
+            # ADD YOUR COMMAND RESPONSES AFTER HERE ------->
+            ser.write(b'x')                          # Send the Arduino 'x' (the command to stop)
+            # <------- ADD YOUR COMMAND BEFORE RESPONSES HERE
+
+            # Report ONE face
+            screen.addstr(1, 0, f" -  Face Detected: X: {x:.3f}, Y: {y:.3f} - Score: {output_scores[0]:.2f}")
+            screen.addstr(2, 0, f"                               ")
+            screen.addstr(3, 0, f"                               ")
+            overlay.rectangle1 = rectangle
+            overlay.rectangle2 = None
+        elif num_faces >= 2:         # If TWO (or more) faces detected
+            # Process TWO faces
+            rectangle1, x1, y1 = process_face(output_rects[0])
+            rectangle2, x2, y2 = process_face(output_rects[1])
+
+            # ADD YOUR COMMAND RESPONSES AFTER HERE ------->
+            ser.write(b'x')                          # Send the Arduino 'x' (the command to stop)
+            # <------- ADD YOUR COMMAND BEFORE RESPONSES HERE
+
+            # Report TWO faces
+            screen.addstr(1, 0, f" -  Face Detected: X: {x1:.3f}, Y: {y1:.3f} - Score: {output_scores[0]:.2f}")
+            screen.addstr(2, 0, f" -  Face Detected: X: {x2:.3f}, Y: {y2:.3f} - Score: {output_scores[1]:.2f}")
+            screen.addstr(3, 0, f"                               ")
+            overlay.rectangle1 = rectangle1
+            overlay.rectangle2 = rectangle2
+ 
+        # Add server instructions
         screen.addstr(4, 0, f"🌐 NB3 Server running at http://{server.ip_address}:{server.port}")
         screen.addstr(5, 0, f"    - Press 'q' to Quit")
         screen.addstr(7, 0, f"  ")
