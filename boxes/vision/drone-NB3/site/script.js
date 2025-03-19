@@ -43,3 +43,6 @@ setupButton("right", "right", "stop");
 
 // Add event listener to horn button
 document.getElementById("horn").addEventListener("click", () => sendCommand("play_sound"));
+
+// Add event listener to action button
+document.getElementById("action").addEventListener("click", () => sendCommand("do_action"));

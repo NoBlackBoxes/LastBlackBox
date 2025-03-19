@@ -56,6 +56,8 @@ elif num_faces >= 2:         # If TWO (or more) faces detected
 ```
 - If two faces are detected, then the robot is *AGAIN** told to stop moving. This is pretty boring...so it is up to you to decide how the robot responds when **two** faces are detected! You will have the positions of both faces (e.g. x1 and x2), but be aware...the neural network does not *recognise* faces it only tells you that there is a face (or two) in this part of the image, not who it is. Therefore, face #1 and face #2 might swap labels in the next image taken by the camera.
 
+***IMRPORTANT**: When you put your code into the **my_look.py** file, then it must follow the same indentation (i.e. spacing) as the other sections...otherwise Python will complain!
+
 ## Run *your* code version
 When you are in the same folder as your python code, then you can run the following command.
 ```bash

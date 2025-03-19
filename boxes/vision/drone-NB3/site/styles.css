@@ -136,3 +136,34 @@ html, body {
 .horn-button:active {
     background-color: rgba(255, 255, 127, 0.4);
 }
+
+/* Action button (Lower Right Corner) */
+.action-button {
+    position: absolute;
+    bottom: 5vw;
+    right: 5vw;
+    width: 16vw;
+    height: 16vw;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent */
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    font-size: 4vw;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    touch-action: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    font-weight: bold;
+    pointer-events: auto;
+}
+
+/* Action button press effect */
+.action-button:active {
+    background-color: rgba(255, 255, 127, 0.4);
+}

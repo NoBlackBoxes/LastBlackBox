@@ -19,28 +19,27 @@ username = os.getlogin()
 root = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/vision/drone-NB3/site"
 sound_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/vision/drone-NB3/sounds/horn.wav"
 
-# Define sound effect player
-def play_sound(wav_path):
-    speaker.play_wav(sound_path)
-    pass
-
 # Define command handler
 def command_handler(command):
-    if command == 'forward':
-       ser.write(b'f')
-    if command == 'backward':
-       ser.write(b'b')
-    if command == 'left':
-       ser.write(b'l')
-    if command == 'right':
-       ser.write(b'r')
-    if command == 'stop':
-       ser.write(b'x')
-    elif command == "play_sound":
-        play_sound(sound_path)
-        pass
-    else:
-        pass
+   if command == 'forward':
+      ser.write(b'f')
+   elif command == 'backward':
+      ser.write(b'b')
+   elif command == 'left':
+      ser.write(b'l')
+   elif command == 'right':
+      ser.write(b'r')
+   elif command == 'stop':
+      ser.write(b'x')
+   elif command == "play_sound":
+      speaker.play_wav(sound_path)
+   elif command == "do_action":
+      # ADD YOUR COMMAND RESPONSES AFTER HERE ------->
+      # - What action should your robot do when the "?" is pressed?
+      # <------- ADD YOUR COMMAND BEFORE RESPONSES HERE        
+      pass
+   else:
+      pass
 
 # Configure serial port
 ser = serial.Serial()

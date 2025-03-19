@@ -24,10 +24,29 @@ cp drone.py my_drone.py
 ## Edit *your* code version in VS Code
 - Navigate in VS Code's Explorer to boxes -> vision -> drone-NB3
 - Open the **my_drone.py** Python file in the Editor
-- ???
+- Add a new response, such as a sequence of movements, in the "do_action" section
 ```python
-???
+elif command == "do_action":
+  # ADD YOUR COMMAND RESPONSES AFTER HERE ------->
+  # - What action should your robot do when the "?" is pressed?
+  # <------- ADD YOUR COMMAND BEFORE RESPONSES HERE        
 ```
+- A new action sequence coulld look like this...
+```python
+elif command == "do_action":
+  # ADD YOUR COMMAND RESPONSES AFTER HERE ------->
+  ser.write(b'l')
+  time.sleep(0.1)
+  ser.write(b'r')
+  time.sleep(0.1)
+  ser.write(b'l')
+  time.sleep(0.1)
+  ser.write(b'r')
+  time.sleep(0.1)
+  ser.write(b'x')
+  # <------- ADD YOUR COMMAND BEFORE RESPONSES HERE        
+```
+***IMRPORTANT**: When you put your code into the **my_drone.py** file, then it must follow the same indentation (i.e. spacing) as the other sections...otherwise Python will complain!
 
 ## Run *your* code version
 When you are in the same folder as your python code, then you can run the following command.

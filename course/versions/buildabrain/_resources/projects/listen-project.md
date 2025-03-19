@@ -35,6 +35,8 @@ if best_voice_command == "turn_left":  # If the "best" voice command detected is
 ```
 - The "turn_left" response is provided as an example.
 
+***IMRPORTANT**: When you put your code into the **my_listen.py** file, then it must follow the same indentation (i.e. spacing) as the other sections...otherwise Python will complain!
+
 ## Run *your* code version
 When you are in the same folder as your python code, then you can run the following command.
 ```bash
