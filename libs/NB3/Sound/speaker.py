@@ -114,6 +114,12 @@ class Speaker:
         self.max_samples = max_samples
         return
 
+    # Clear sound output
+    def clear(self):
+        self.current_sample = 0
+        self.max_samples = 0
+        return
+
     # Reset sound output
     def reset(self):
         self.current_sample = 0

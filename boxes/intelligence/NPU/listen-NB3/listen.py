@@ -1,12 +1,11 @@
-# Import libraries
+# Imports
 import os
 import time
 import curses
 import serial
 import numpy as np
 import tflite_runtime.interpreter as tflite
-
-# Import modules
+import NB3.Sound.speaker as Speaker
 import NB3.Sound.microphone as Microphone
 import NB3.Sound.utilities as Utilities
 
@@ -25,6 +24,10 @@ ser.open()
 # Specify model and labels
 model_path = f"{npu_path}/listen-NB3/model/voice_commands_v0.8_edgetpu.tflite"
 labels_path = f"{npu_path}/listen-NB3/model/labels.txt"
+
+# Specify sound path(s)
+# CHANGE THIS SOUND PATH TO THE NAME OF YOUR FILE HERE ------->
+sound_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/_tmp/sounds/my_song.wav"
 
 # Load delegate (EdgeTPU)
 delegate = tflite.load_delegate(f"libedgetpu.so.1")
@@ -50,6 +53,10 @@ max_samples = int(sample_rate * 10)
 microphone = Microphone.Microphone(input_device, num_channels, 'int32', sample_rate, buffer_size, max_samples)
 microphone.gain = 100.0
 microphone.start()
+
+# Initialize speaker
+speaker = Speaker.Speaker(1, 2, 'int32', sample_rate, buffer_size)
+speaker.start()
 
 # Initialize interactive terminal
 screen = curses.initscr()
@@ -90,6 +97,7 @@ try:
         
         # Get indices of top 3 predictions
         top_3_indices = np.argsort(output_data)[-3:][::-1]
+        best_voice_command = labels[top_3_indices[0]]
 
         # Build a readable string for top 3 predictions
         for i, index in enumerate(top_3_indices):
@@ -99,26 +107,33 @@ try:
         
         # Respond to commands
         # ADD YOUR COMMAND RESPONSES AFTER HERE ------->
-        if labels[top_3_indices[0]] == "turn_left":  # If the "best" voice command detected is "turn_left"
-            ser.write(b'l')                          # Send the Arduino 'l' (the command to start turing left)  
-            time.sleep(1.0)                          # Wait (while moving) for 1 second
-            ser.write(b'x')                          # Send the Arduino 'x' (the command to stop)
+        if best_voice_command == "turn_left":  # If the "best" voice command detected is "turn_left"
+            ser.write(b'l')                    # Send the Arduino 'l' (the command to start turing left)  
+            time.sleep(1.0)                    # Wait (while moving) for 1 second
+            ser.write(b'x')                    # Send the Arduino 'x' (the command to stop)
         # <------- ADD YOUR COMMAND BEFORE RESPONSES HERE
         
+        # Add quit instructions
+        screen.addstr(5, 0, f"    - Press 'q' to Quit")
+        screen.addstr(6, 0, f"")
+
         # Wait a bit
         time.sleep(0.05)
 
 finally:
-    # Shutdown microphone
-    microphone.stop()
-
-    # Close serial port
-    ser.close()
-
     # Cleanup terminal
     curses.nocbreak()
     screen.keypad(0)
     curses.echo()
     curses.endwin()
+
+    # Shutdown microphone
+    microphone.stop()
+    
+    # Shutdown speaker
+    speaker.stop()
+
+    # Close serial port
+    ser.close()
 
 #FIN

@@ -2,13 +2,14 @@
 This project will use HTML and Python to build a new FPV interface for your NB3.
 
 ## Requirements
-- Connect to your NB3 via SSH using VS Code
-- Open the "LastBlackBox" folder in VS Code
-- Synchronize the local repository with GitHub
-```bash
-Sync
-```
-- Close and re-open the VS Code terminal
+1. [Connect to your NB3 via SSH using VS Code](/course/versions/buildabrain/_resources/ssh-with-vscode.md)
+2. [Open the "LastBlackBox" folder in VS Code](/course/versions/buildabrain/_resources/setup-vscode.md)
+3. Synchronize the local LBB repository with GitHub
+  - Open a terminal in VS code, run the "Sync" command to update the folder to newest version
+    ```bash
+    Sync
+    ```
+  - Close and re-open the VS Code terminal for the changes to take effect
 
 ## Create *your* copy of the example project code
 - Navigate to the example project folder
