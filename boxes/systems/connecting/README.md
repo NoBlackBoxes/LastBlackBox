@@ -39,7 +39,7 @@ If you have correctly entered the WiFi name (SSID) and passkey while creating th
 
 ### 4. Determining your NB3's IP address
 
-There are many different software programmes designed to map local networks. I recommend [NMAP](https://nmap.org/download.html), which you can download and install on Linuix, MacOS, and Windows. Please following the install instructions for your Host's OS.
+There are many different software programmes designed to map local networks. I recommend [NMAP](https://nmap.org/download.html), which you can download and install on Linux, MacOS, and Windows. Please follow the install instructions for your Host's OS.
 
 1. Determine the "local" IP address of your Host computer
 
@@ -69,7 +69,7 @@ There are many different software programmes designed to map local networks. I r
 <img src="resources/images/nmap_output.png" alt="NMAP Output" width="800" height="600">
 </p>
 
-3. *Alternative*: On MacOS (and some Linux distributions), the command "arp" is pre-installed and can acheive similar results to "nmap". If you have trouble installing NMAP, then try the following in your command terminal:
+3. *Alternative*: On MacOS (and some Linux distributions), the command "arp" is pre-installed and can achieve similar results to "nmap". If you have trouble installing NMAP, then try the following in your command terminal:
 
     ```bash
     arp -a
