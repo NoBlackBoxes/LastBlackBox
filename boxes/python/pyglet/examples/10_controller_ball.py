@@ -1,6 +1,5 @@
 import pyglet
 from pyglet import shapes
-from pyglet import math
 
 # List of all controllers
 controllers = pyglet.input.get_controllers()
@@ -26,7 +25,7 @@ x = width//2
 y = height//2
 circle = shapes.Circle(x, y, 11, color=(0, 0, 0), batch=batch)
 global speed
-speed = math.Vec2(0, 0)
+speed = [0, 0]
 
 # Define shape update function
 def update(dt):
@@ -92,7 +91,7 @@ def on_dpad_motion(controller, dpleft, dpright, dpup, dpdown):
             print("right (release)")
 
     # Set ball speed
-    speed = math.Vec2(dx, dy)
+    speed = [dx, dy]
 
 # Draw Graphics
 @window.event

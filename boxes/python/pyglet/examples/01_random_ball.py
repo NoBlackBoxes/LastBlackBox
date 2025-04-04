@@ -1,6 +1,5 @@
 import pyglet
 from pyglet import shapes
-from pyglet import math
 import random
 
 # Create (yellow) Window
@@ -14,7 +13,7 @@ batch = pyglet.graphics.Batch()
 x = width//2
 y = height//2
 circle = shapes.Circle(x, y, 11, color=(0, 0, 0), batch=batch)
-speed = math.Vec2(random.randint(-5,5), random.randint(-5,5))
+speed = [random.randint(-5,5), random.randint(-5,5)]
 
 # Define shape update function
 def update(dt):
