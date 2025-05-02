@@ -170,7 +170,7 @@ class Microphone:
 
         return mel_matrix
 
-    # Compue mel spectrograme
+    # Compute mel spectrogram
     def mel_spectrogram(self):
         # Check that we have sufficient valid samples recorded
         if self.valid_samples < self.mel_num_samples_required:
