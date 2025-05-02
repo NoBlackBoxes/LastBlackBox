@@ -63,7 +63,7 @@ def process_sound(sound, mel_matrix=None):
 username = os.getlogin()
 
 # Set base path
-base_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/intelligence/LiteRT"
+base_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/intelligence/LiteRT/listen-NB3"
 
 # Specify model and labels
 model_path = f"{base_path}/_tmp/custom.tflite"

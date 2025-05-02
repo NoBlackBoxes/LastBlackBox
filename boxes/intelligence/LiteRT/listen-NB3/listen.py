@@ -8,11 +8,66 @@ import tflite_runtime.interpreter as tflite
 import NB3.Sound.microphone as Microphone
 import NB3.Sound.utilities as Utilities
 
+# Generate mel matrix
+def generate_mel_matrix():
+    sample_rate = 16000
+    mel_fft_length = 512
+    mel_num_bins = 40
+
+    mel_matrix = np.zeros((mel_fft_length // 2 + 1, mel_num_bins))
+    freq_bins = np.linspace(0, sample_rate / 2, mel_fft_length // 2 + 1)
+    freq_bins_mel = 1127.0 * np.log(1.0 + freq_bins / 700.0)
+    mel_bins = np.linspace(1127.0 * np.log(1.0 + 60 / 700.0), 1127.0 * np.log(1.0 + 3800 / 700.0), mel_num_bins + 2)
+
+    for i in range(mel_num_bins):
+        lower = mel_bins[i]
+        center = mel_bins[i + 1]
+        upper = mel_bins[i + 2]
+        mel_matrix[:, i] = np.maximum(0, np.minimum((freq_bins_mel - lower) / (center - lower), (upper - freq_bins_mel) / (upper - center)))
+
+    return mel_matrix
+
+# Process sound
+def process_sound(sound, mel_matrix=None):
+    # Assumes 16000 samples at 16 kHz (1 second) of audio (1 channel)
+    # Float32, -1.0 to 1.0
+    num_samples = 16000
+    sample_rate = 16000
+
+    # Parameters
+    mel_window_length_samples = 640     # 40 ms
+    mel_hop_length_samples = 320        # 20 ms
+    mel_fft_length = 512
+    if mel_matrix is None:
+        mel_matrix = generate_mel_matrix()
+
+    # Compute spectrogram
+    frames = []
+    for i in range(0, 16000 - mel_window_length_samples + 1, mel_hop_length_samples):
+        frame = sound[i:i+mel_window_length_samples]
+        windowed = frame * np.hanning(mel_window_length_samples)
+        frames.append(np.abs(np.fft.rfft(windowed, mel_fft_length)))
+    spectrogram = np.stack(frames)
+
+    # Apply mel filters and take log
+    mel_spectrogram = np.dot(spectrogram, mel_matrix)
+    #log_mel_spectrogram = np.log(mel_spectrogram + 0.001)
+
+    # Normalise
+    mel_spectrogram -= np.mean(mel_spectrogram, axis=0, keepdims=True)
+    mel_spectrogram /= (3 * np.std(mel_spectrogram, axis=0, keepdims=True))
+
+    return np.float32(mel_spectrogram.T)
+
 # Get user name
 username = os.getlogin()
 
 # Set base path
-base_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/intelligence/LiteRT"
+base_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/intelligence/LiteRT/listen-NB3"
+
+# Specify model and labels
+model_path = f"{base_path}/_tmp/custom.tflite"
+labels_path = f"{base_path}/_tmp/labels.txt"
 
 # Configure serial port
 ser = serial.Serial()
@@ -20,17 +75,12 @@ ser.baudrate = 115200
 ser.port = '/dev/ttyUSB0'
 ser.open()
 
-# Specify model and labels
-model_path = f"{base_path}/listen-NB3/model/voice_commands_v0.8_edgetpu.tflite"
-labels_path = f"{base_path}/listen-NB3/model/labels.txt"
-
 # Create interpreter
 interpreter = tflite.Interpreter(model_path=model_path)
 interpreter.allocate_tensors()
 
 # Load labels
 labels = np.genfromtxt(labels_path, dtype=str)
-labels = np.insert(labels, 0, "-silence-")
 
 # Get input and output details
 input_details = interpreter.get_input_details()
@@ -62,7 +112,11 @@ try:
             break
 
         # Compute mel spectrogram
-        mel_spectrogram = microphone.mel_spectrogram()
+        latest = microphone.latest(sample_rate)[:,0]
+        if len(latest) < sample_rate:
+            continue
+        mel_spectrogram = process_sound(latest)
+        mel_spectrogram = np.expand_dims(mel_spectrogram, axis=0)
 
         # Clear screen
         screen.erase()
@@ -95,8 +149,8 @@ try:
         
         # Respond to commands
         # ADD YOUR COMMAND RESPONSES AFTER HERE ------->
-        if best_voice_command == "turn_left":  # If the "best" voice command detected is "turn_left"
-            ser.write(b'l')                    # Send the Arduino 'l' (the command to start turing left)  
+        if best_voice_command == "go":  # If the "best" voice command detected is "go"
+            ser.write(b'f')                    # Send the Arduino 'f' (the command to start moving forward)  
             time.sleep(1.0)                    # Wait (while moving) for 1 second
             ser.write(b'x')                    # Send the Arduino 'x' (the command to stop)
         # <------- ADD YOUR COMMAND BEFORE RESPONSES HERE
