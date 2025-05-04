@@ -93,4 +93,44 @@ def generate_frequency_sweep(duration, start_frequency, stop_frequency, sample_r
         sound = data
     return sound
 
+# Generate Mel Cepstral Coefficient Matrix
+def generate_mel_matrix(sample_rate, num_mfcc):
+    fft_length = 512
+    mel_matrix = np.zeros((fft_length // 2 + 1, num_mfcc))
+    freq_bins = np.linspace(0, sample_rate / 2, fft_length // 2 + 1)
+    freq_bins_mel = 1127.0 * np.log(1.0 + freq_bins / 700.0)
+    mel_bins = np.linspace(1127.0 * np.log(1.0 + 60 / 700.0), 1127.0 * np.log(1.0 + 3800 / 700.0), num_mfcc + 2)
+    for i in range(num_mfcc):
+        lower = mel_bins[i]
+        center = mel_bins[i + 1]
+        upper = mel_bins[i + 2]
+        mel_matrix[:, i] = np.maximum(0, np.minimum((freq_bins_mel - lower) / (center - lower), (upper - freq_bins_mel) / (upper - center)))
+    return mel_matrix
+
+# Compute Mel Spectrogram
+def compute_mel_spectrogram(sound, window_samples, hop_samples, mel_matrix=None):
+    fft_length = 512
+
+    # Compute spectrograms
+    frames = []
+    for i in range(0, len(sound) - window_samples + 1, hop_samples):
+        frame = sound[i:i+window_samples]
+        windowed = frame * np.hanning(window_samples)
+        frames.append(np.abs(np.fft.rfft(windowed, fft_length)))
+    spectrogram = np.stack(frames)
+
+    # Apply mel filters and take log
+    mel_spectrogram = np.dot(spectrogram, mel_matrix)
+    log_mel_spectrogram = np.log(mel_spectrogram + 0.001)
+
+    # Normalise and convert to unit8
+    log_mel_spectrogram -= np.mean(log_mel_spectrogram, axis=0, keepdims=True)
+    log_mel_spectrogram /= (3 * np.std(log_mel_spectrogram, axis=0, keepdims=True))
+    log_mel_spectrogram += 1
+    log_mel_spectrogram *= 127.5
+    log_mel_spectrogram = np.clip(log_mel_spectrogram, 0, 255).astype(np.uint8)
+
+    return log_mel_spectrogram
+
+
 # FIN
