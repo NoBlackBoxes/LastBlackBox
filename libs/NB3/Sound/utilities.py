@@ -108,7 +108,7 @@ def generate_mel_matrix(sample_rate, num_mfcc):
     return mel_matrix
 
 # Compute Mel Spectrogram
-def compute_mel_spectrogram(sound, window_samples, hop_samples, mel_matrix=None):
+def compute_mel_spectrogram(sound, window_samples, hop_samples, mel_matrix):
     fft_length = 512
 
     # Compute spectrograms

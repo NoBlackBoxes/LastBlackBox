@@ -17,7 +17,6 @@ class Microphone:
         self.max_samples = max_samples
         self.valid_samples = 0
         self.mutex = Lock()
-        self.freq_bins = np.fft.fftfreq(self.buffer_size_samples, 1.0/self.sample_rate)[1:]
 
         # Set format
         if format == 'int16':
@@ -37,15 +36,6 @@ class Microphone:
         self.channel_data = np.zeros((self.buffer_size_samples, self.num_channels), dtype=self.dtype)
         self.float_data = np.zeros((self.buffer_size_samples, self.num_channels), dtype=np.float32)
         self.sound = np.zeros((self.max_samples, self.num_channels), dtype=np.float32)
-
-        # Mel Spectrogram parameters
-        self.mel_window_length_samples = int(0.025 * self.sample_rate)
-        self.mel_hop_length_samples = int(0.010 * self.sample_rate)
-        self.mel_fft_length = 512
-        self.mel_num_bins = 32
-        self.mel_num_frames = 198
-        self.mel_num_samples_required = self.mel_window_length_samples + ((self.mel_num_frames - 1) * self.mel_hop_length_samples)
-        self.mel_matrix = self._generate_mel_matrix()
         
         # Profiling
         self.callback_count = 0

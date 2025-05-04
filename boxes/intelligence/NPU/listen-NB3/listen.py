@@ -65,6 +65,9 @@ curses.cbreak()
 screen.keypad(True)
 screen.nodelay(True)
 
+# Generate Mel Matrix (for audio processing)
+mel_matrix = Utilities.generate_mel_matrix(16000, 32) # 32 Mel Coeffs
+
 # Processing loop
 try:
     while True:
@@ -73,18 +76,21 @@ try:
         if char == ord('q'):
             break
 
-        # Compute mel spectrogram
-        mel_spectrogram = microphone.mel_spectrogram()
-
         # Clear screen
         screen.erase()
 
+        # Retrieve most recent sound samples
+        sound = microphone.latest(2 * sample_rate)[:,0]
+
         # Are we waiting for sufficient audio in the buffer?
-        if(mel_spectrogram is None):
-            screen.addstr(0, 0, 'Status: ...filling buffer...')       
+        if len(sound) < (2 * sample_rate):
+            screen.addstr(0, 0, f"Status: ...filling buffer...{len(sound)}")       
             time.sleep(0.1)
             continue
         screen.addstr(0, 0, 'Status: ...Listening...')       
+
+        # Compute mel spectrogram
+        mel_spectrogram = Utilities.compute_mel_spectrogram(sound, 400, 160, mel_matrix)
                 
         # Send to NPU
         interpreter.set_tensor(input_details[0]['index'], np.expand_dims(mel_spectrogram, axis=0))
