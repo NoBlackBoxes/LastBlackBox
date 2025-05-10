@@ -36,6 +36,7 @@ pip install --upgrade pip
 pip install numpy matplotlib
 pip install setuptools wheel
 pip install pyaudio wave
+pip install sshkeyboard
 ```
 
 ## Add local (LBB and NB3) libraries to Python paths
