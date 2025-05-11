@@ -130,7 +130,7 @@ def compute_mel_spectrogram(sound, window_samples, hop_samples, mel_matrix):
     log_mel_spectrogram *= 127.5
     log_mel_spectrogram = np.clip(log_mel_spectrogram, 0, 255).astype(np.uint8)
 
-    return log_mel_spectrogram
+    return log_mel_spectrogram.T # freq bins x times
 
 
 # FIN

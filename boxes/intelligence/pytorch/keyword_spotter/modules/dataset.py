@@ -1,9 +1,8 @@
 import os
-import numpy as np
 import torch
 import wave
 import random
-import matplotlib.pyplot as plt
+import numpy as np
 import NB3.Sound.utilities as Utilities
 
 # Set parameters
@@ -12,7 +11,7 @@ num_window_samples = 640
 num_hop_samples = 320
 num_mfcc = 40
 num_times = 49
-silence_reduction_factor = 0.01
+silence_magnitude = 0.0001
 noise_addition_factor = 0.1
 
 # Specify words
@@ -40,7 +39,7 @@ class custom(torch.utils.data.Dataset):
         # Load Sound (from WAV file or Noise/Silence)
         if target == 0: # Silence
             start_frame = random.randint(0, len(self.noise) - sample_rate)
-            sound = np.random.normal(0, 1e-4, sample_rate).astype(np.float32)
+            sound = np.random.normal(0, silence_magnitude, sample_rate).astype(np.float32)
         else:
             sound = load_wav(wav_path)
             if len(sound) < sample_rate:
@@ -91,29 +90,29 @@ def load_wav(path):
 # Load dataset
 def prepare(dataset_folder, split):
 
-    # Find all WAV folders
-    wav_folders = []
+    # Find all Class folders
+    class_folders = []
     for f in os.listdir(dataset_folder):
         if os.path.isdir(dataset_folder + '/' + f):
             if f != '_background_noise_':
-                wav_folders.append(dataset_folder + '/' + f)
+                class_folders.append(dataset_folder + '/' + f)
 
-    # Find all WAV files
+    # Find all WAV files for each Class
     wav_paths = []
     targets = []
-    for f in wav_folders:
-        paths = os.listdir(f)
-        print(f"{os.path.basename(f)}: {len(paths)} files") 
+    for class_folder in class_folders:
+        paths = os.listdir(class_folder)
+        print(f"{os.path.basename(class_folder)}: {len(paths)} files") 
         full_paths = []
         for path in paths:
-            full_paths.append(f + '/' + path)
+            full_paths.append(class_folder + '/' + path)
         random.shuffle(full_paths) 
         num_paths = len(full_paths)
-        if os.path.basename(f) in command_words:
+        if os.path.basename(class_folder) in command_words:
             wav_paths.extend(full_paths)
-            targets.extend([os.path.basename(f)] * num_paths)
+            targets.extend([os.path.basename(class_folder)] * num_paths)
         else:
-            # Add a subset of unknown examples (do not unbalance the dataset)
+            # Add a subset of unknown examples (do NOT unbalance the dataset)
             subset_paths = num_paths // 10
             wav_paths.extend(full_paths[:subset_paths])
             targets.extend(["unknown"] * subset_paths)
@@ -127,13 +126,13 @@ def prepare(dataset_folder, split):
             noise_arrays.append(sound)
     noise_data = np.concatenate(noise_arrays)
 
-    # Include samples for "Silence"
+    # Include examples for "Silence"
     num_random = int(len(wav_paths) / len(command_words))
     for i in range(num_random):
         wav_paths.append("silence")
         targets.append("silence")
 
-    # Determine targets
+    # Determine target class IDs
     target_list = []
     for t in targets:
         target_index = classes.index(t)

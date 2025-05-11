@@ -93,7 +93,7 @@ try:
         mel_spectrogram = Utilities.compute_mel_spectrogram(sound, 400, 160, mel_matrix)
                 
         # Send to NPU
-        interpreter.set_tensor(input_details[0]['index'], np.expand_dims(mel_spectrogram, axis=0))
+        interpreter.set_tensor(input_details[0]['index'], np.expand_dims(mel_spectrogram.T, axis=0))
 
         # Run inference
         interpreter.invoke()

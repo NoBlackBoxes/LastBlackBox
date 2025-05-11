@@ -4,7 +4,7 @@ import ai_edge_torch
 
 # Locals libs
 import dataset
-import model
+import model_dscnn as model
 
 # Get user name
 username = os.getlogin()

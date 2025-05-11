@@ -1,14 +1,15 @@
 import os
+import shutil
+import torch
 import numpy as np
 import matplotlib.pyplot as plt
-import torch
 from torchsummary import summary
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 from ptflops import get_model_complexity_info
 
 # Locals libs
 import dataset
-import model
+import model_dscnn as model
 
 # Reimport
 import importlib
@@ -19,14 +20,14 @@ importlib.reload(model)
 username = os.getlogin()
 
 # Specify paths
-# Specify paths
-repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
-project_path = repo_path + '/boxes/intelligence/pytorch/keyword_spotter'
-dataset_path = project_path + '/_tmp/dataset'
-output_path = project_path + '/_tmp'
+username = os.getlogin()
+LBB = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
+project_folder = LBB + '/boxes/intelligence/pytorch/keyword_spotter'
+dataset_folder = project_folder + '/_tmp/dataset'
+output_folder = project_folder + '/_tmp/validation'
 
 # Prepare datasets
-train_data, test_data, noise_data = dataset.prepare(dataset_path, 0.8)
+train_data, test_data, noise_data = dataset.prepare(dataset_folder, 0.8)
 target_distribution = np.histogram(train_data[1], bins=range(0,len(dataset.classes)+1))[0]
 print(target_distribution)
 
@@ -43,7 +44,7 @@ importlib.reload(model)
 custom_model = model.custom()
 
 # Reload saved model
-model_path = model_path = project_path + '/_tmp/custom.pt'
+model_path = model_path = project_folder + '/_tmp/interim.pt'
 custom_model = model.custom()
 custom_model.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))
 macs, params = get_model_complexity_info(custom_model, (1, dataset.num_mfcc, dataset.num_times), as_strings=True, print_per_layer_stat=True, verbose=True)
@@ -58,7 +59,7 @@ print(f"Using {device} device")
 custom_model.to(device)
 summary(custom_model, (1, dataset.num_mfcc, dataset.num_times))
 
-# Compute validation here...
+# Compute validation
 
 # Put model in eval mode
 custom_model.eval()
@@ -72,7 +73,6 @@ with torch.no_grad():
         inputs = inputs.to(device)
         outputs = custom_model(inputs)
         preds = torch.argmax(outputs, dim=1)
-
         y_true.extend(labels.cpu().numpy())
         y_pred.extend(preds.cpu().numpy())
 
@@ -82,11 +82,16 @@ cm = confusion_matrix(y_true, y_pred)
 # Get class labels (already defined in dataset.py as 'classes')
 labels = dataset.classes
 
+# Create (or clear if it exists) output folder
+if os.path.exists(output_folder):
+    shutil.rmtree(output_folder)
+os.makedirs(output_folder)
+
 # Plot confusion matrix
 fig, ax = plt.subplots(figsize=(10, 10))
 disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=labels)
 disp.plot(cmap=plt.cm.Blues, ax=ax, xticks_rotation=45)
 plt.title("Confusion Matrix (Test Set)")
-plt.savefig(f"{output_path}/confusion.png")
+plt.savefig(f"{output_folder}/confusion.png")
 
 # FIN
