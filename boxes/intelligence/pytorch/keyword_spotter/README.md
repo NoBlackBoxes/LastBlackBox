@@ -14,11 +14,11 @@ python -m venv AI
 source ./AI/bin/activate
 
 # Install required Python packages
-pip install numpy scipy matplotlib scikit-learn torch torchsummary ptflops
+pip install numpy scipy matplotlib scikit-learn pyaudio torch torchsummary ptflops
 
 # If you will only use the CPU for training, then you can save some download time with the following
 pip install torch --index-url https://download.pytorch.org/whl/cpu
-pip install numpy scipy matplotlib scikit-learn torchsummary ptflops
+pip install numpy scipy matplotlib scikit-learn pyaudio torchsummary ptflops
 
 # Add library paths to virtual environment
 LBB="/home/${USER}/NoBlackBoxes/LastBlackBox"
@@ -34,7 +34,7 @@ From the project folder, execute the following.
 ```bash
 cd _tmp
 mkdir -p dataset
-cd _tmp/dataset
+cd dataset
 wget http://download.tensorflow.org/data/speech_commands_v0.02.tar.gz
 tar xvf speech_commands_v0.02.tar.gz
 rm speech_commands_v0.02.tar.gz

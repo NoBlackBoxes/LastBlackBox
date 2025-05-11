@@ -1,8 +1,12 @@
 import torch.nn as nn
+from torch.quantization import QuantStub, DeQuantStub
 
 class custom(nn.Module):
     def __init__(self, num_classes=12):
         super(custom, self).__init__()
+
+        self.quant = QuantStub()
+        self.dequant = DeQuantStub()
 
         self.conv_block1 = nn.Sequential(
             nn.ZeroPad2d((1, 2, 4, 5)),  # (left, right, top, bottom)
@@ -57,6 +61,7 @@ class custom(nn.Module):
         )
 
     def forward(self, x):
+        x = self.quant(x)
         x = self.conv_block1(x)
         x = self.ds_conv_block1(x)
         x = self.ds_conv_block2(x)
@@ -65,4 +70,5 @@ class custom(nn.Module):
         x = self.ds_conv_block5(x)
         x = self.global_pool(x)
         x = self.classifier(x)
+        x = self.dequant(x)
         return x

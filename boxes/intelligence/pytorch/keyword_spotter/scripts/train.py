@@ -8,8 +8,8 @@ from ptflops import get_model_complexity_info
 # Locals libs
 import dataset
 #import model_dnn as model
-#import model_cnn as model
-import model_dscnn as model
+import model_cnn as model
+#import model_dscnn as model
 
 # Reimport
 import importlib
@@ -115,7 +115,7 @@ def test(_dataloader, _model, _loss_function):
 # -----------
 # TRAIN MODEL
 # -----------
-epochs = 50
+epochs = 30
 for t in range(epochs):
     print(f"Epoch {t+1}\n-------------------------------")
     train(train_dataloader, custom_model, loss_fn, optimizer, scheduler)

@@ -5,12 +5,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 from torchsummary import summary
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+from torch.quantization import prepare, convert, get_default_qconfig
 
 # Locals libs
 import dataset
-#import model_dnn as model
-import model_cnn as model
-#import model_dscnn as model
+#import model_dnn_q as model
+import model_cnn_q as model
+#import model_dscnn_q as model
 
 # Reimport
 import importlib
@@ -36,27 +37,29 @@ test_dataset = dataset.custom(wav_paths=test_data[0], targets=test_data[1], nois
 train_dataloader = torch.utils.data.DataLoader(train_dataset, batch_size=100, shuffle=True)
 test_dataloader = torch.utils.data.DataLoader(test_dataset, batch_size=100, shuffle=True)
 
-# Instantiate model
-importlib.reload(model)
+# Instantiate quantized model
 custom_model = model.custom()
+custom_model.eval()
+torch.backends.quantized.engine = "qnnpack"
+custom_model.qconfig = get_default_qconfig("qnnpack")
+prepared_model = prepare(custom_model)
+quantized_model = convert(prepared_model)
 
-# Reload saved model
-model_path = model_path = project_folder + '/_tmp/interim.pt'
-custom_model = model.custom()
-custom_model.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))
+# Reload saved quantized model
+model_path = model_path = project_folder + '/_tmp/quantized.pt'
+quantized_model.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))
 
-# Get cpu or gpu device for training
-device = "cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu"
+# Only use CPU when validating quantization
+device = "cpu"
 print(f"Using {device} device")
 
 # Move model to device
-custom_model.to(device)
-summary(custom_model, (1, dataset.num_mfcc, dataset.num_times))
+quantized_model.to(device)
 
 # Compute validation
 
 # Put model in eval mode
-custom_model.eval()
+quantized_model.eval()
 
 # Store true and predicted labels
 y_true = []
@@ -65,11 +68,10 @@ y_pred = []
 with torch.no_grad():
     for inputs, labels in test_dataloader:
         inputs = inputs.to(device)
-        outputs = custom_model(inputs)
+        outputs = quantized_model(inputs)
         preds = torch.argmax(outputs, dim=1)
         y_true.extend(labels.cpu().numpy())
         y_pred.extend(preds.cpu().numpy())
-
 
 # Compute accuracy
 y_true = np.array(y_true)
@@ -92,8 +94,8 @@ os.makedirs(output_folder)
 fig, ax = plt.subplots(figsize=(10, 10))
 disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=labels)
 disp.plot(cmap=plt.cm.Blues, ax=ax, xticks_rotation=45)
-plt.suptitle("Confusion Matrix (Test Set)")
+plt.suptitle("Confusion Matrix (Test Set) : Quantized Model")
 plt.title(f"Accuracy: {accuracy:.2f}%")
-plt.savefig(f"{output_folder}/confusion.png")
+plt.savefig(f"{output_folder}/confusion_quantized.png")
 
 # FIN
