@@ -39,6 +39,11 @@ test_dataset = dataset.custom(wav_paths=test_data[0], targets=test_data[1], nois
 train_dataloader = torch.utils.data.DataLoader(train_dataset, batch_size=100, shuffle=True)
 test_dataloader = torch.utils.data.DataLoader(test_dataset, batch_size=100, shuffle=True)
 
+# ----------------------
+# Validate Trained Model
+# ----------------------
+print("Validating trained model...")
+
 # Instantiate model
 importlib.reload(model)
 custom_model = model.custom()
@@ -73,7 +78,6 @@ with torch.no_grad():
         y_true.extend(labels.cpu().numpy())
         y_pred.extend(preds.cpu().numpy())
 
-
 # Compute accuracy
 y_true = np.array(y_true)
 y_pred = np.array(y_pred)
@@ -93,5 +97,49 @@ disp.plot(cmap=plt.cm.Blues, ax=ax, xticks_rotation=45)
 plt.suptitle("Confusion Matrix (Test Set)")
 plt.title(f"Accuracy: {accuracy:.2f}%")
 plt.savefig(f"{output_folder}/confusion.png")
+
+# ------------------------
+# Validate Quantized Model
+# ------------------------
+print("Validating quantized model...")
+
+# Load quantized/scripted model
+model_path = project_folder + '/_tmp/quantized/quantized.pt'
+quantized_model = torch.jit.load(model_path)
+quantized_model.to("cpu")
+quantized_model.eval()
+
+# Store true and predicted labels
+y_true = []
+y_pred = []
+
+with torch.no_grad():
+    for inputs, labels in test_dataloader:
+        inputs = inputs.to("cpu")
+        outputs = quantized_model(inputs)
+        preds = torch.argmax(outputs, dim=1)
+        y_true.extend(labels.cpu().numpy())
+        y_pred.extend(preds.cpu().numpy())
+
+# Compute accuracy
+y_true = np.array(y_true)
+y_pred = np.array(y_pred)
+correct = np.sum(y_true==y_pred)
+accuracy = 100.0 * (correct/len(y_true))
+
+# Compute confusion matrix
+cm = confusion_matrix(y_true, y_pred)
+
+# Get class labels (already defined in dataset.py as 'classes')
+labels = dataset.classes
+
+# Plot confusion matrix
+fig, ax = plt.subplots(figsize=(10, 10))
+disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=labels)
+disp.plot(cmap=plt.cm.Blues, ax=ax, xticks_rotation=45)
+plt.suptitle("Confusion Matrix (Test Set) : Quantized Model")
+plt.title(f"Accuracy: {accuracy:.2f}%")
+plt.savefig(f"{output_folder}/confusion_quantized.png")
+
 
 # FIN

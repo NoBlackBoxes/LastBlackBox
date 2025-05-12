@@ -102,7 +102,7 @@ def prepare(dataset_folder, split):
     targets = []
     for class_folder in class_folders:
         paths = os.listdir(class_folder)
-        print(f"{os.path.basename(class_folder)}: {len(paths)} files") 
+        #print(f"{os.path.basename(class_folder)}: {len(paths)} files") 
         full_paths = []
         for path in paths:
             full_paths.append(class_folder + '/' + path)
