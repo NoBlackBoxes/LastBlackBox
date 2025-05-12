@@ -14,6 +14,11 @@ project_folder = LBB + '/boxes/intelligence/pytorch/keyword_spotter'
 dataset_folder = project_folder + '/_tmp/dataset'
 output_folder = project_folder + '/_tmp/features'
 
+# Create (or clear if it exists) output folder
+if os.path.exists(output_folder):
+    shutil.rmtree(output_folder)
+os.makedirs(output_folder)
+
 # Feature plotting function
 def plot_feature(name, wav_path, output_path):
 
@@ -29,7 +34,7 @@ def plot_feature(name, wav_path, output_path):
     mel_matrix = Utilities.generate_mel_matrix(16000, 40) # 40 Mel Coeffs
 
     # Compute Mel Spectrogram
-    mel_spectrogram = Utilities.compute_mel_spectrogram(sound, 640, 320, mel_matrix)
+    mel_spectrogram = Utilities.compute_mel_spectrogram(sound_f, 640, 320, mel_matrix)
 
     # Display
     plt.subplot(2,1,1)
@@ -52,11 +57,6 @@ def plot_feature(name, wav_path, output_path):
 # ------------------------------------------------------
 # Plot features for one example of each class in dataset
 # ------------------------------------------------------
-
-# Create (or clear if it exists) output folder
-if os.path.exists(output_folder):
-    shutil.rmtree(output_folder)
-os.makedirs(output_folder)
 
 # Find all Class folders
 class_folders = []

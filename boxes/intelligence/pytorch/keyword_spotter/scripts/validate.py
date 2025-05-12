@@ -1,5 +1,4 @@
 import os
-import shutil
 import torch
 import numpy as np
 import matplotlib.pyplot as plt
@@ -23,6 +22,10 @@ LBB = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
 project_folder = LBB + '/boxes/intelligence/pytorch/keyword_spotter'
 dataset_folder = project_folder + '/_tmp/dataset'
 output_folder = project_folder + '/_tmp/validation'
+
+# Create output folder (if it does not exist)
+if not os.path.exists(output_folder):
+    os.makedirs(output_folder)
 
 # Prepare datasets
 train_data, test_data, noise_data = dataset.prepare(dataset_folder, 0.8)
@@ -82,11 +85,6 @@ cm = confusion_matrix(y_true, y_pred)
 
 # Get class labels (already defined in dataset.py as 'classes')
 labels = dataset.classes
-
-# Create (or clear if it exists) output folder
-if os.path.exists(output_folder):
-    shutil.rmtree(output_folder)
-os.makedirs(output_folder)
 
 # Plot confusion matrix
 fig, ax = plt.subplots(figsize=(10, 10))

@@ -1,6 +1,5 @@
-# Extract MEL features from audio snippets
+# Benchmark model performance
 import os
-import shutil
 import random
 import wave
 import numpy as np
@@ -13,6 +12,10 @@ LBB = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
 project_folder = LBB + '/boxes/intelligence/pytorch/keyword_spotter'
 dataset_folder = project_folder + '/_tmp/dataset'
 output_folder = project_folder + '/_tmp/benchmarks'
+
+# Create output folder (if it does not exist)
+if not os.path.exists(output_folder):
+    os.makedirs(output_folder)
 
 # Run model
 def run_model(name, wav_path):
@@ -29,7 +32,7 @@ def run_model(name, wav_path):
     mel_matrix = Utilities.generate_mel_matrix(16000, 40) # 40 Mel Coeffs
 
     # Compute Mel Spectrogram
-    mel_spectrogram = Utilities.compute_mel_spectrogram(sound, 640, 320, mel_matrix)
+    mel_spectrogram = Utilities.compute_mel_spectrogram(sound_f, 640, 320, mel_matrix)
 
     
 
@@ -46,11 +49,6 @@ def run_model(name, wav_path):
 # ---------------
 # Benchmark model
 # ---------------
-
-# Create (or clear if it exists) output folder
-if os.path.exists(output_folder):
-    shutil.rmtree(output_folder)
-os.makedirs(output_folder)
 
 # Find all Class folders
 class_folders = []
