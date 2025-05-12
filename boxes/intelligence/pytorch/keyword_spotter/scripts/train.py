@@ -8,8 +8,8 @@ from ptflops import get_model_complexity_info
 # Locals libs
 import dataset
 #import model_dnn as model
-import model_cnn as model
-#import model_dscnn as model
+#import model_cnn as model
+import model_dscnn as model
 
 # Reimport
 import importlib

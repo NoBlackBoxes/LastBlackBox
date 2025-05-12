@@ -13,9 +13,9 @@ torch.backends.quantized.engine = 'qnnpack'
 
 # Locals libs
 import dataset
-#import model_dnn_q as model
-import model_cnn_q as model
-#import model_dscnn_q as model
+#import model_dnn as model
+#import model_cnn as model
+import model_dscnn as model
 
 # Reimport
 import importlib
@@ -81,7 +81,7 @@ prepared_model = prepare(custom_model)
 quantized_model = convert(prepared_model)
 
 # Reload saved quantized model
-model_path = model_path = project_folder + '/_tmp/quantized.pt'
+model_path = model_path = project_folder + '/_tmp/quantized/quantized.pt'
 quantized_model.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))
 
 # Just-in-time Compile the model

@@ -1,4 +1,5 @@
 import torch.nn as nn
+from torch.quantization import fuse_modules
 
 class custom(nn.Module):
     def __init__(self, num_classes=12):
@@ -15,3 +16,6 @@ class custom(nn.Module):
     def forward(self, x):
         x = self.classifier(x)
         return x
+
+    def fuse_model(self):
+        return

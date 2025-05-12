@@ -1,5 +1,6 @@
 import os
 import torch
+import platform
 import numpy as np
 import matplotlib.pyplot as plt
 from torchsummary import summary
@@ -8,9 +9,9 @@ from torch.quantization import prepare, convert, get_default_qconfig
 
 # Locals libs
 import dataset
-#import model_dnn_q as model
-import model_cnn_q as model
-#import model_dscnn_q as model
+#import model_dnn as model
+#import model_cnn as model
+import model_dscnn as model
 
 # Reimport
 import importlib
@@ -28,6 +29,9 @@ output_folder = project_folder + '/_tmp/validation'
 if not os.path.exists(output_folder):
     os.makedirs(output_folder)
 
+# Detect machine architecture
+arch = platform.machine().lower()
+
 # Prepare datasets
 train_data, test_data, noise_data = dataset.prepare(dataset_folder, 0.8)
 target_distribution = np.histogram(train_data[1], bins=range(0,len(dataset.classes)+1))[0]
@@ -40,29 +44,18 @@ test_dataset = dataset.custom(wav_paths=test_data[0], targets=test_data[1], nois
 train_dataloader = torch.utils.data.DataLoader(train_dataset, batch_size=100, shuffle=True)
 test_dataloader = torch.utils.data.DataLoader(test_dataset, batch_size=100, shuffle=True)
 
-# Instantiate quantized model
-custom_model = model.custom()
-custom_model.eval()
-torch.backends.quantized.engine = "qnnpack"
-custom_model.qconfig = get_default_qconfig("qnnpack")
-prepared_model = prepare(custom_model)
-quantized_model = convert(prepared_model)
+# Select torch backend
+if 'arm' in arch or 'aarch64' in arch:
+    torch.backends.quantized.engine = 'qnnpack'
+else:
+    torch.backends.quantized.engine = 'fbgemm'
+print("Quantized backend set to:", torch.backends.quantized.engine)
 
-# Reload saved quantized model
-model_path = model_path = project_folder + '/_tmp/quantized.pt'
-quantized_model.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))
-
-# Only use CPU when validating quantization
-device = "cpu"
-print(f"Using {device} device")
-
-# Move model to device
-quantized_model.to(device)
-
-# Compute validation
-
-# Put model in eval mode
+# Load model
+model_path = project_folder + '/_tmp/quantized/quantized.pt'
+quantized_model = torch.jit.load(model_path)
 quantized_model.eval()
+quantized_model.to("cpu")
 
 # Store true and predicted labels
 y_true = []
@@ -70,7 +63,7 @@ y_pred = []
 
 with torch.no_grad():
     for inputs, labels in test_dataloader:
-        inputs = inputs.to(device)
+        inputs = inputs.to("cpu")
         outputs = quantized_model(inputs)
         preds = torch.argmax(outputs, dim=1)
         y_true.extend(labels.cpu().numpy())

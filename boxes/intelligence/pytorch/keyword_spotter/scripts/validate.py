@@ -8,8 +8,8 @@ from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 # Locals libs
 import dataset
 #import model_dnn as model
-import model_cnn as model
-#import model_dscnn as model
+#import model_cnn as model
+import model_dscnn as model
 
 # Reimport
 import importlib
@@ -44,7 +44,7 @@ importlib.reload(model)
 custom_model = model.custom()
 
 # Reload saved model
-model_path = model_path = project_folder + '/_tmp/interim.pt'
+model_path = model_path = project_folder + '/_tmp/training/interim.pt'
 custom_model = model.custom()
 custom_model.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))
 

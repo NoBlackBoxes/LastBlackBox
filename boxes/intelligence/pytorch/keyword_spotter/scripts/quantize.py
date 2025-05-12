@@ -5,9 +5,9 @@ from torch.quantization import prepare, convert, get_default_qconfig
 
 # Locals libs
 import dataset
-#import model_dnn_q as model
-import model_cnn_q as model
-#import model_dscnn_q as model
+#import model_dnn as model
+#import model_cnn as model
+import model_dscnn as model
 
 # Reimport
 import importlib
@@ -19,7 +19,7 @@ username = os.getlogin()
 LBB = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
 project_folder = LBB + '/boxes/intelligence/pytorch/keyword_spotter'
 dataset_folder = project_folder + '/_tmp/dataset'
-output_folder = project_folder + '/_tmp'
+output_folder = project_folder + '/_tmp/quantized'
 
 # Create output folder (if it does not exist)
 if not os.path.exists(output_folder):
@@ -40,12 +40,15 @@ test_dataloader = torch.utils.data.DataLoader(test_dataset, batch_size=100, shuf
 custom_model = model.custom()
 
 # Reload saved model
-model_path = model_path = project_folder + '/_tmp/interim.pt'
+model_path = model_path = project_folder + '/_tmp/training/interim.pt'
 custom_model = model.custom()
 custom_model.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))
+custom_model.eval()
+
+# Fuse modules
+custom_model.fuse_model()
 
 # Prepare for quantization
-custom_model.eval()
 torch.backends.quantized.engine = "qnnpack"
 custom_model.qconfig = get_default_qconfig("qnnpack")
 prepared_model = prepare(custom_model)
@@ -58,8 +61,9 @@ with torch.no_grad():
 # Convert to quantized model
 quantized_model = convert(prepared_model)
 
-# Save quantized model
-torch.save(quantized_model.state_dict(), f"{output_folder}/quantized.pt")
+# Save quantized model (TorchScript)
+scripted_model = torch.jit.script(quantized_model)
+scripted_model.save(f"{output_folder}/quantized.pt")
 
 # ---- Optional: inspect layers ----
 for name, module in quantized_model.named_modules():

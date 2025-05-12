@@ -1,4 +1,5 @@
 import torch.nn as nn
+from torch.quantization import fuse_modules
 
 class custom(nn.Module):
     def __init__(self, num_classes=12):
@@ -66,3 +67,13 @@ class custom(nn.Module):
         x = self.global_pool(x)
         x = self.classifier(x)
         return x
+
+    def fuse_model(self):
+        fuse_modules(self.conv_block1, [['1', '2', '3']], inplace=True)
+        fuse_modules(self.ds_conv_block1, [['1', '2', '3']], inplace=True)
+        fuse_modules(self.ds_conv_block2, [['1', '2', '3']], inplace=True)
+        fuse_modules(self.ds_conv_block3, [['1', '2', '3']], inplace=True)
+        fuse_modules(self.ds_conv_block4, [['1', '2', '3']], inplace=True)
+        fuse_modules(self.ds_conv_block5, [['1', '2', '3']], inplace=True)
+        return
+    
