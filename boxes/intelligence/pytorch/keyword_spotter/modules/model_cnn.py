@@ -1,9 +1,12 @@
 import torch.nn as nn
-from torch.quantization import fuse_modules
+from torch.quantization import QuantStub, DeQuantStub, fuse_modules
 
 class custom(nn.Module):
     def __init__(self, num_classes=12):
         super(custom, self).__init__()
+
+        self.quant = QuantStub()
+        self.dequant = DeQuantStub()
 
         self.conv_block1 = nn.Sequential(
             nn.Conv2d(1, 64, kernel_size=(20, 8), stride=1, padding=1),
@@ -34,11 +37,13 @@ class custom(nn.Module):
         )
 
     def forward(self, x):
+        x = self.quant(x)
         x = self.conv_block1(x)
         x = self.conv_block2(x)
         x = self.conv_block3(x)
         x = self.pool(x)
         x = self.classifier(x)
+        x = self.dequant(x)
         return x
     
     def fuse_model(self):

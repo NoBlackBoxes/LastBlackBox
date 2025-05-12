@@ -1,9 +1,12 @@
 import torch.nn as nn
-from torch.quantization import fuse_modules
+from torch.quantization import QuantStub, DeQuantStub, fuse_modules
 
 class custom(nn.Module):
     def __init__(self, num_classes=12):
         super(custom, self).__init__()
+
+        self.quant = QuantStub()
+        self.dequant = DeQuantStub()
 
         self.classifier = nn.Sequential(
             nn.Flatten(),
@@ -14,7 +17,9 @@ class custom(nn.Module):
         )
 
     def forward(self, x):
+        x = self.quant(x)
         x = self.classifier(x)
+        x = self.dequant(x)
         return x
 
     def fuse_model(self):
