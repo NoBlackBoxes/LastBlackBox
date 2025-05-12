@@ -41,3 +41,19 @@ rm speech_commands_v0.02.tar.gz
 ```
 
 ## Extract features from the dataset
+
+## Inference
+This you will run on your NB3. Therefore, the following setup must be done within your NB3's "LBB" Python environment.
+
+Navigate to the project folder (boxes/intelligence/pytroch/keyword_spotter)
+
+```bash
+mkdir _tmp
+pip install torch --index-url https://download.pytorch.org/whl/cpu
+
+# Add library paths to virtual environment
+LBB="/home/${USER}/NoBlackBoxes/LastBlackBox"
+PROJECT="${LBB}/boxes/intelligence/pytorch/keyword_spotter"
+PYTHON_VERSION=$(python -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')
+echo "${PROJECT}/modules" >> "${LBB}/_tmp/LBB/lib/python${PYTHON_VERSION}/site-packages/local.pth"
+```

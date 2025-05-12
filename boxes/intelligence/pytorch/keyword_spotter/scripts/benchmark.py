@@ -27,6 +27,7 @@ username = os.getlogin()
 LBB = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
 project_folder = LBB + '/boxes/intelligence/pytorch/keyword_spotter'
 dataset_folder = project_folder + '/_tmp/dataset'
+features_folder = project_folder + '/_tmp/features'
 output_folder = project_folder + '/_tmp/benchmarks'
 
 # Create output folder (if it does not exist)
@@ -92,22 +93,18 @@ quantized_model.to("cpu")
 # Put model in eval mode
 quantized_model.eval()
 
-# Find all Class folders
-class_folders = []
-for f in os.listdir(dataset_folder):
-    if os.path.isdir(dataset_folder + '/' + f):
-        if f != '_background_noise_':
-            class_folders.append(dataset_folder + '/' + f)
+# Limit CPU resources
+torch.set_num_threads(2)
+
+# Find all test files
+wav_paths = []
+for f in os.listdir(features_folder):
+    if f[-3:] == "wav":
+        wav_paths.append(f"{features_folder}/{f}")
 
 # Benchmark examples from each class
-for class_folder in class_folders:
-    class_name = os.path.basename(class_folder)
-    wav_names = os.listdir(class_folder)
-    wav_paths = []
-    for wav_name in wav_names:
-        wav_paths.append(class_folder + '/' + wav_name)
-    random.shuffle(wav_paths) 
-    wav_path = wav_paths[0]     # Select one random example from each class
+for wav_path in wav_paths:
+    class_name = wav_path.split('_')[0]
     output = run_model(quantized_model, class_name, wav_path)
 
 #FIN
