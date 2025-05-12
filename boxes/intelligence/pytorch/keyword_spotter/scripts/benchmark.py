@@ -1,6 +1,5 @@
 # Benchmark model performance
 import os
-import random
 import wave
 import time
 import numpy as np
@@ -8,7 +7,6 @@ import matplotlib.pyplot as plt
 import NB3.Sound.utilities as Utilities
 
 import torch
-from torch.quantization import prepare, convert, get_default_qconfig
 torch.backends.quantized.engine = 'qnnpack'
 
 # Locals libs
@@ -72,25 +70,9 @@ def run_model(model, name, wav_path):
 # Benchmark model
 # ---------------
 
-# Instantiate quantized model
-custom_model = model.custom()
-custom_model.eval()
-torch.backends.quantized.engine = "qnnpack"
-custom_model.qconfig = get_default_qconfig("qnnpack")
-prepared_model = prepare(custom_model)
-quantized_model = convert(prepared_model)
-
 # Reload saved quantized model
 model_path = model_path = project_folder + '/_tmp/quantized/quantized.pt'
-quantized_model.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))
-
-# Just-in-time Compile the model
-quantized_model = torch.jit.script(quantized_model)
-
-# Move model to device
-quantized_model.to("cpu")
-
-# Put model in eval mode
+quantized_model = torch.jit.load(model_path, map_location=torch.device('cpu'))
 quantized_model.eval()
 
 # Limit CPU resources

@@ -5,7 +5,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from torchsummary import summary
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
-from torch.quantization import prepare, convert, get_default_qconfig
 
 # Locals libs
 import dataset
@@ -54,8 +53,8 @@ print("Quantized backend set to:", torch.backends.quantized.engine)
 # Load model
 model_path = project_folder + '/_tmp/quantized/quantized.pt'
 quantized_model = torch.jit.load(model_path)
-quantized_model.eval()
 quantized_model.to("cpu")
+quantized_model.eval()
 
 # Store true and predicted labels
 y_true = []
