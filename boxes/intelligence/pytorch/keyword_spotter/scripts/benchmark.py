@@ -32,6 +32,9 @@ output_folder = project_folder + '/_tmp/benchmarks'
 if not os.path.exists(output_folder):
     os.makedirs(output_folder)
 
+# Generate Mel Matrix (for audio processing)
+mel_matrix = Utilities.generate_mel_matrix(16000, 40) # 40 Mel Coeffs
+
 # Run model
 def run_model(model, name, wav_path):
 
@@ -46,9 +49,6 @@ def run_model(model, name, wav_path):
     # Start timer
     start = time.perf_counter()
 
-    # Generate Mel Matrix (for audio processing)
-    mel_matrix = Utilities.generate_mel_matrix(16000, 40) # 40 Mel Coeffs
-
     # Compute Mel Spectrogram
     mel_spectrogram = Utilities.compute_mel_spectrogram(sound_f, 640, 320, mel_matrix)
 
@@ -60,6 +60,7 @@ def run_model(model, name, wav_path):
     # Run model
     pre = time.perf_counter()
     output = model(features_tensor)
+    print(output.detach().cpu().numpy()[0])
     end = time.perf_counter()
 
     total_time_ms = (end - start) * 1000

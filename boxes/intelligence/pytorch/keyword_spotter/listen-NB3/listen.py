@@ -3,17 +3,18 @@ import os
 import time
 import curses
 import serial
+import torch
 import numpy as np
-import tflite_runtime.interpreter as tflite
-import NB3.Sound.speaker as Speaker
 import NB3.Sound.microphone as Microphone
 import NB3.Sound.utilities as Utilities
 
-# Get user name
-username = os.getlogin()
-
 # Set base path
-npu_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/intelligence/NPU"
+username = os.getlogin()
+base_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/intelligence/pytorch/keyword_spotter"
+
+# Specify model and labels
+model_path = f"{base_path}/_tmp/quantized/quantized.pt"
+labels_path = f"{base_path}/labels.txt"
 
 # Configure serial port
 ser = serial.Serial()
@@ -21,28 +22,16 @@ ser.baudrate = 115200
 ser.port = '/dev/ttyUSB0'
 ser.open()
 
-# Specify model and labels
-model_path = f"{npu_path}/listen-NB3/model/voice_commands_v0.8_edgetpu.tflite"
-labels_path = f"{npu_path}/listen-NB3/model/labels.txt"
+# Reload saved quantized model
+torch.backends.quantized.engine = 'qnnpack'
+quantized_model = torch.jit.load(model_path, map_location=torch.device('cpu'))
+quantized_model.eval()
 
-# Specify sound path(s)
-# CHANGE THIS SOUND PATH TO THE NAME OF YOUR FILE HERE ------->
-sound_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/_tmp/sounds/my_song.wav"
-
-# Load delegate (EdgeTPU)
-delegate = tflite.load_delegate(f"libedgetpu.so.1")
-
-# Create interpreter
-interpreter = tflite.Interpreter(model_path=model_path, experimental_delegates=[delegate])
-interpreter.allocate_tensors()
+# Limit CPU resources
+torch.set_num_threads(2)
 
 # Load labels
 labels = np.genfromtxt(labels_path, dtype=str)
-labels = np.insert(labels, 0, "-silence-")
-
-# Get input and output details
-input_details = interpreter.get_input_details()
-output_details = interpreter.get_output_details()
 
 # Initialize microphone
 input_device = 1
@@ -54,9 +43,8 @@ microphone = Microphone.Microphone(input_device, num_channels, 'int32', sample_r
 microphone.gain = 100.0
 microphone.start()
 
-# Initialize speaker
-speaker = Speaker.Speaker(1, 2, 'int32', sample_rate, buffer_size)
-speaker.start()
+# Generate Mel Matrix (for audio processing)
+mel_matrix = Utilities.generate_mel_matrix(16000, 40) # 40 Mel Coeffs
 
 # Initialize interactive terminal
 screen = curses.initscr()
@@ -64,9 +52,6 @@ curses.noecho()
 curses.cbreak()
 screen.keypad(True)
 screen.nodelay(True)
-
-# Generate Mel Matrix (for audio processing)
-mel_matrix = Utilities.generate_mel_matrix(16000, 32) # 32 Mel Coeffs
 
 # Processing loop
 try:
@@ -76,39 +61,39 @@ try:
         if char == ord('q'):
             break
 
+        # Compute mel spectrogram
+        latest = microphone.latest(sample_rate)[:,0]
+        if len(latest) < sample_rate:
+            continue
+        mel_spectrogram = Utilities.compute_mel_spectrogram(latest, 640, 320, mel_matrix)
+
         # Clear screen
         screen.erase()
 
-        # Retrieve most recent sound samples
-        sound = microphone.latest(2 * sample_rate)[:,0]
-
         # Are we waiting for sufficient audio in the buffer?
-        if len(sound) < (2 * sample_rate):
-            screen.addstr(0, 0, f"Status: ...filling buffer...{len(sound)}")       
+        if(mel_spectrogram is None):
+            screen.addstr(0, 0, 'Status: ...filling buffer...')       
             time.sleep(0.1)
             continue
         screen.addstr(0, 0, 'Status: ...Listening...')       
 
-        # Compute mel spectrogram
-        mel_spectrogram = Utilities.compute_mel_spectrogram(sound, 400, 160, mel_matrix)
-                
-        # Send to NPU
-        interpreter.set_tensor(input_details[0]['index'], np.expand_dims(mel_spectrogram.T, axis=0))
+        # Convert ndarray to Tensor
+        features = np.expand_dims(mel_spectrogram, 0)
+        features_tensor = torch.from_numpy(features).to(dtype=torch.float32).unsqueeze(0)
+        features_tensor = features_tensor.to('cpu')
 
-        # Run inference
-        interpreter.invoke()
+        # Run model
+        output = quantized_model(features_tensor).detach().cpu().numpy()[0]
 
-        # Get output tensor
-        output_data = interpreter.get_tensor(output_details[0]['index'])[0]
-        
         # Get indices of top 3 predictions
-        top_3_indices = np.argsort(output_data)[-3:][::-1]
+        top_3_indices = np.argsort(output)[-3:][::-1]
         best_voice_command = labels[top_3_indices[0]]
 
         # Build a readable string for top 3 predictions
         for i, index in enumerate(top_3_indices):
-            score = output_data[index]
+            score = output[index]
             results = f"[{labels[index]}: {score:.3f}]"
+            screen.addstr(i+1, 0, f"  {i}: {results}")
             screen.addstr(i+1, 0, f"  {i}: {results}")
 
         # Add quit instructions
@@ -118,12 +103,12 @@ try:
 
         # Respond to commands
         # ADD YOUR COMMAND RESPONSES AFTER HERE ------->
-        if best_voice_command == "turn_left":  # If the "best" voice command detected is "turn_left"
-            ser.write(b'l')                    # Send the Arduino 'l' (the command to start turing left)  
+        if best_voice_command == "left":  # If the "best" voice command detected is "left"
+            ser.write(b'l')                    # Send the Arduino 'l' (the command to start turning left)  
             time.sleep(1.0)                    # Wait (while moving) for 1 second
             ser.write(b'x')                    # Send the Arduino 'x' (the command to stop)
         # <------- ADD YOUR COMMAND BEFORE RESPONSES HERE
-
+        
         # Wait a bit
         time.sleep(0.05)
 
@@ -137,9 +122,6 @@ finally:
     # Shutdown microphone
     microphone.stop()
     
-    # Shutdown speaker
-    speaker.stop()
-
     # Close serial port
     ser.close()
 
