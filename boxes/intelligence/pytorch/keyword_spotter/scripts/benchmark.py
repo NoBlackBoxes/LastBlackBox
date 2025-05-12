@@ -58,11 +58,13 @@ def run_model(model, name, wav_path):
     features_tensor = features_tensor.to('cpu')
 
     # Run model
+    pre = time.perf_counter()
     output = model(features_tensor)
     end = time.perf_counter()
 
-    inference_time_ms = (end - start) * 1000
-    print(f"Inference time: {inference_time_ms:.3f} ms")
+    total_time_ms = (end - start) * 1000
+    inference_time_ms = (end - pre) * 1000
+    print(f"Inference time: {inference_time_ms:.3f} ms ({total_time_ms:.3f} ms)")
 
     return output
 
