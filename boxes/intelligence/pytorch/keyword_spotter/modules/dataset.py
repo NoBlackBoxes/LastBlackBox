@@ -11,8 +11,8 @@ num_window_samples = 640
 num_hop_samples = 320
 num_mfcc = 40
 num_times = 49
-silence_magnitude = 0.0001
-noise_addition_factor = 0.1
+silence_magnitude = 0.01
+noise_addition_factor = 0.3
 
 # Specify words
 non_words = ["silence", "unknown"]
@@ -46,24 +46,24 @@ class custom(torch.utils.data.Dataset):
                 buffer = np.zeros(sample_rate - len(sound))
                 sound = np.concatenate([sound, buffer])
             
-            # Augment?
-            if self.augment:
-                # 1. Random noise addition
-                start_frame = random.randint(0, len(self.noise) - sample_rate)
-                noise = self.noise[start_frame:(start_frame+sample_rate)]
-                noise_multiplier = random.uniform(0.0, noise_addition_factor)
-                sound = sound + (noise_multiplier * noise)
+        # Augment?
+        if self.augment:
+            # 1. Random noise addition
+            start_frame = random.randint(0, len(self.noise) - sample_rate)
+            noise = self.noise[start_frame:(start_frame+sample_rate)]
+            noise_multiplier = random.uniform(0.0, noise_addition_factor)
+            sound = sound + (noise_multiplier * noise)
 
-                # 2. Random time shift
-                shift = random.randint(-int(0.1 * sample_rate), int(0.1 * sample_rate)) # shift up to +/- 10% of 1 second
-                if shift > 0:
-                    sound = np.pad(sound, (shift, 0), mode='constant')[:sample_rate]
-                elif shift < 0:
-                    sound = np.pad(sound, (0, -shift), mode='constant')[:sample_rate]
+            # 2. Random time shift
+            shift = random.randint(-int(0.1 * sample_rate), int(0.1 * sample_rate)) # shift up to +/- 10% of 1 second
+            if shift > 0:
+                sound = np.pad(sound, (shift, 0), mode='constant')[:sample_rate]
+            elif shift < 0:
+                sound = np.pad(sound, (0, -shift), mode='constant')[:sample_rate]
 
-                # 3. Random amplitude scaling
-                scale = random.uniform(0.8, 1.2)
-                sound = sound * scale
+            # 3. Random amplitude scaling
+            scale = random.uniform(0.8, 1.2)
+            sound = sound * scale
 
         # Compute Features
         mel_spectrogram = Utilities.compute_mel_spectrogram(sound, num_window_samples, num_hop_samples, self.mel_matrix)

@@ -53,7 +53,7 @@ print(f"Params: {params}")
 
 # Set optimizer
 optimizer = torch.optim.Adam(custom_model.parameters(), lr=0.0005)
-scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, milestones=[4000, 8000], gamma=0.2)
+scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, milestones=[4000, 8000, 12000], gamma=0.2)
 
 # Get cpu or gpu device for training
 device = "cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu"
@@ -119,7 +119,7 @@ def test(_dataloader, _model, _loss_function):
 # -----------
 # TRAIN MODEL
 # -----------
-epochs = 30
+epochs = 40
 for t in range(epochs):
     print(f"Epoch {t+1}\n-------------------------------")
     train(train_dataloader, custom_model, loss_fn, optimizer, scheduler)

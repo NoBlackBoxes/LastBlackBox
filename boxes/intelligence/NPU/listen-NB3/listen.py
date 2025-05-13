@@ -91,7 +91,12 @@ try:
 
         # Compute mel spectrogram
         mel_spectrogram = Utilities.compute_mel_spectrogram(sound, 400, 160, mel_matrix)
-                
+
+        # Convert to uint8
+        mel_spectrogram += 1
+        mel_spectrogram *= 127.5
+        mel_spectrogram = np.clip(mel_spectrogram, 0, 255).astype(np.uint8)
+
         # Send to NPU
         interpreter.set_tensor(input_details[0]['index'], np.expand_dims(mel_spectrogram.T, axis=0))
 

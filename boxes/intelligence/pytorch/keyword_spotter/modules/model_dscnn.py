@@ -44,9 +44,9 @@ class custom(nn.Module):
         )
 
         self.ds_conv_block5 = nn.Sequential(
-            nn.Conv2d(64, 64, kernel_size=3, padding=1, groups=64, bias=False),
-            nn.Conv2d(64, 64, kernel_size=1, bias=False),
-            nn.BatchNorm2d(64),
+            nn.Conv2d(64, 128, kernel_size=3, padding=1, groups=64, bias=False),
+            nn.Conv2d(128, 128, kernel_size=1, bias=False),
+            nn.BatchNorm2d(128),
             nn.ReLU(inplace=True)
         )
 
@@ -54,7 +54,7 @@ class custom(nn.Module):
 
         self.classifier = nn.Sequential(
             nn.Flatten(),
-            nn.Linear(64, 64),
+            nn.Linear(128, 64),
             nn.ReLU(),
             nn.Dropout(0.3),
             nn.Linear(64, num_classes),

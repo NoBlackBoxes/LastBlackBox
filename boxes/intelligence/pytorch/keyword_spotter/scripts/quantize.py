@@ -37,7 +37,7 @@ train_dataloader = torch.utils.data.DataLoader(train_dataset, batch_size=100, sh
 test_dataloader = torch.utils.data.DataLoader(test_dataset, batch_size=100, shuffle=True)
 
 # Reload saved model
-model_path = model_path = project_folder + '/_tmp/training/interim.pt'
+model_path = model_path = project_folder + '/_tmp/training/final.pt'
 custom_model = model.custom()
 custom_model.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))
 custom_model.eval()

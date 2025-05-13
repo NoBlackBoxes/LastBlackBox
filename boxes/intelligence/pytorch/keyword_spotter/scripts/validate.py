@@ -49,7 +49,7 @@ importlib.reload(model)
 custom_model = model.custom()
 
 # Reload saved model
-model_path = model_path = project_folder + '/_tmp/training/interim.pt'
+model_path = model_path = project_folder + '/_tmp/training/final.pt'
 custom_model = model.custom()
 custom_model.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))
 
@@ -65,6 +65,11 @@ summary(custom_model, (1, dataset.num_mfcc, dataset.num_times))
 
 # Put model in eval mode
 custom_model.eval()
+print(custom_model.classifier[3].training)  # Should print False
+for m in custom_model.modules():
+    if isinstance(m, torch.nn.BatchNorm2d):
+        print(m.running_mean.mean(), m.running_var.mean())
+
 
 # Store true and predicted labels
 y_true = []
