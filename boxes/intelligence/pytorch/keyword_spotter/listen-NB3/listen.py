@@ -83,15 +83,17 @@ try:
         features_tensor = features_tensor.to('cpu')
 
         # Run model
-        output = quantized_model(features_tensor).detach().cpu().numpy()[0]
+        output = quantized_model(features_tensor).detach().cpu()[0]
+        probabilities = torch.nn.functional.softmax(output, dim=0).numpy()
 
         # Get indices of top 3 predictions
-        top_3_indices = np.argsort(output)[-3:][::-1]
+        top_3_indices = np.argsort(probabilities)[-3:][::-1]
         best_voice_command = labels[top_3_indices[0]]
+        best_voice_score = probabilities[top_3_indices[0]]
 
         # Build a readable string for top 3 predictions
         for i, index in enumerate(top_3_indices):
-            score = output[index]
+            score = probabilities[index]
             results = f"[{labels[index]}: {score:.3f}]"
             screen.addstr(i+1, 0, f"  {i}: {results}")
             screen.addstr(i+1, 0, f"  {i}: {results}")
@@ -103,10 +105,11 @@ try:
 
         # Respond to commands
         # ADD YOUR COMMAND RESPONSES AFTER HERE ------->
-        if best_voice_command == "left":  # If the "best" voice command detected is "left"
-            ser.write(b'l')                    # Send the Arduino 'l' (the command to start turning left)  
-            time.sleep(1.0)                    # Wait (while moving) for 1 second
-            ser.write(b'x')                    # Send the Arduino 'x' (the command to stop)
+        if best_voice_score > 0.8:
+            if best_voice_command == "left":  # If the "best" voice command detected is "left"
+                ser.write(b'l')                    # Send the Arduino 'l' (the command to start turning left)  
+                time.sleep(1.0)                    # Wait (while moving) for 1 second
+                ser.write(b'x')                    # Send the Arduino 'x' (the command to stop)
         # <------- ADD YOUR COMMAND BEFORE RESPONSES HERE
         
         # Wait a bit
