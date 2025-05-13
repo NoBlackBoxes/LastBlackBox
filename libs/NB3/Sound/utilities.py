@@ -121,11 +121,12 @@ def compute_mel_spectrogram(sound, window_samples, hop_samples, mel_matrix):
 
     # Apply mel filters and take log
     mel_spectrogram = np.dot(spectrogram, mel_matrix)
-    log_mel_spectrogram = np.log(mel_spectrogram + 0.001)
+    log_mel_spectrogram = np.log(mel_spectrogram + 0.0001)
 
     # Normalise
     log_mel_spectrogram -= np.mean(log_mel_spectrogram, axis=0, keepdims=True)
     log_mel_spectrogram /= (3 * np.std(log_mel_spectrogram, axis=0, keepdims=True))
+    log_mel_spectrogram = np.clip(log_mel_spectrogram, -1.0, 1.0).astype(np.float32)
 
     return log_mel_spectrogram.T # freq bins x times
 

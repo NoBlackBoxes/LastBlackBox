@@ -68,6 +68,9 @@ class custom(torch.utils.data.Dataset):
         # Compute Features
         mel_spectrogram = Utilities.compute_mel_spectrogram(sound, num_window_samples, num_hop_samples, self.mel_matrix)
 
+        # Convert to int8 range (-127 to 127): appears to help with quantization
+        mel_spectrogram *= 127.0
+
         # Add channel dimension
         features = np.expand_dims(mel_spectrogram, 0)
 

@@ -62,11 +62,11 @@ quantized_model = convert(prepared_model)
 scripted_model = torch.jit.script(quantized_model)
 scripted_model.save(f"{output_folder}/quantized.pt")
 
-# ---- Optional: inspect layers ----
-for name, module in quantized_model.named_modules():
-    if isinstance(module, nn.quantized.Conv2d) or isinstance(module, nn.quantized.Linear):
-        print(f"{name} → {module.__class__.__name__}")
-        print(f"  Weight scale: {module.weight().q_scale()}")
-        print(f"  Zero point: {module.weight().q_zero_point()}")
+## ---- Optional: inspect layers ----
+#for name, module in quantized_model.named_modules():
+#    if isinstance(module, nn.quantized.Conv2d) or isinstance(module, nn.quantized.Linear):
+#        print(f"{name} → {module.__class__.__name__}")
+#        print(f"  Weight scale: {module.weight().q_scale()}")
+#        print(f"  Zero point: {module.weight().q_zero_point()}")
 
 # FIN

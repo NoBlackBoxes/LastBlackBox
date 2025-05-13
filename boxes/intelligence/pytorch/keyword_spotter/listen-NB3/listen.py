@@ -66,6 +66,7 @@ try:
         if len(latest) < sample_rate:
             continue
         mel_spectrogram = Utilities.compute_mel_spectrogram(latest, 640, 320, mel_matrix)
+        mel_spectrogram *= 127.0
 
         # Clear screen
         screen.erase()

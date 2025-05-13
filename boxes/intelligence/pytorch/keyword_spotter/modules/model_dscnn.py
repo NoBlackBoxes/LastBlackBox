@@ -10,13 +10,13 @@ class custom(nn.Module):
 
         self.conv_block1 = nn.Sequential(
             nn.ZeroPad2d((1, 2, 4, 5)),  # (left, right, top, bottom)
-            nn.Conv2d(1, 64, kernel_size=(10, 4), stride=(2, 2), padding=0, bias=False),
+            nn.Conv2d(1, 64, kernel_size=(20, 8), stride=(2, 2), padding=0, bias=False),
             nn.BatchNorm2d(64),
             nn.ReLU(inplace=True)
         )
 
         self.ds_conv_block1 = nn.Sequential(
-            nn.Conv2d(64, 64, kernel_size=3, padding=1, groups=64, bias=False),
+            nn.Conv2d(64, 64, kernel_size=(10, 4), padding=1, groups=64, bias=False),
             nn.Conv2d(64, 64, kernel_size=1, bias=False),
             nn.BatchNorm2d(64),
             nn.ReLU(inplace=True)

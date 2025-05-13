@@ -51,6 +51,7 @@ def run_model(model, name, wav_path):
 
     # Compute Mel Spectrogram
     mel_spectrogram = Utilities.compute_mel_spectrogram(sound_f, 640, 320, mel_matrix)
+    mel_spectrogram *= 127.0
 
     # Convert ndarray to Tensor
     features = np.expand_dims(mel_spectrogram, 0)
