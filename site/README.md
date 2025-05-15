@@ -1,10 +1,9 @@
 # The Last Black Box Site
-
 Instructions for building and maintaining the LBB site.
 
 ## Install Flask and Tools
 ```bash
-pip install numpy flask flask-login flask-mail python-dotenv 
+pip install numpy flask flask-login flask-mail python-dotenv
 ```
 
 ## Environment
