@@ -136,7 +136,7 @@ M2.5 standoff (30/PS)|01|30 mm long plug-to-socket M2.5 standoff|6|[-D-](/boxes/
 M2.5 standoff (30/SS)|01|30 mm long socket-to-socket M2.5 standoff|2|[-D-](/boxes/intelligence/)|[-L-](https://uk.farnell.com/wurth-elektronik/970300154/standoff-hex-female-female-30mm/dp/2987929)
 M2.5 standoff (25/PS)|01|25 mm long plug-to-socket M2.5 standoff|4|[-D-](/boxes/intelligence/)|[-L-](https://uk.farnell.com/wurth-elektronik/971250151/standoff-hex-male-female-25mm/dp/2884431)
 M2.5 standoff (25/SS)|01|25 mm long socket-to-socket M2.5 standoff|2|[-D-](/boxes/intelligence/)|[-L-](https://uk.farnell.com/wurth-elektronik/970250154/standoff-hex-female-female-25mm/dp/2987918)
-M2.5 standoff (12/SS)|01|12 mm long socket-to-socket M2.5 standoff|2|[-D-](/boxes/robotics/)|[-L-](https://uk.farnell.com/wurth-elektronik/970120151/standoff-hex-female-female-12mm/dp/2884528)
+M2.5 standoff (12/PS)|01|12 mm long socket-to-socket M2.5 standoff|2|[-D-](/boxes/robotics/)|[-L-](https://uk.farnell.com/wurth-elektronik/970120151/standoff-hex-female-female-12mm/dp/2884528)
 
 </p></details><hr>
 
