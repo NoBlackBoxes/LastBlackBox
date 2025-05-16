@@ -73,34 +73,3 @@ nb3-audio-module
 ```
 
 ***After this, power down your NB3 and complete the hardware installation.*** Follow the instructions [here](../README.md).
-
-## Testing
-
-If the driver (module) is installed and loaded, then you should be able to record audio. Check that a device is available:
-
-```bash
-arecord -l
-```
-
-Should output something like this...
-
-```txt
-**** List of CAPTURE Hardware Devices ****
-card 3: MAX98357A [MAX98357A], device 0: fe203000.i2s-HiFi HiFi-0 [fe203000.i2s-HiFi HiFi-0]
-  Subdevices: 1/1
-  Subdevice #0: subdevice #0
-```
-
-To make a test recording.
-
-```bash
-arecord -D plughw:3 -c2 -r 44100 -f S32 -t wav -V stereo -v file_stereo.wav
-```
-
-To test playback.
-
-```bash
-aplay -D plughw:3 -c2 -r 44100 -f S32 -t wav -V stereo -v file_stereo.wav
-```
-
-***NOTE***: The card number might change each reboot. If you notice a problem, then check the card number with "arecord -l or aplay -l"
