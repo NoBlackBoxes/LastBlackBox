@@ -14,6 +14,7 @@ Virtual environments are self-contained installations of Python. All of the pack
 mkdir _tmp
 cd _tmp
 python -m venv LBB --system-site-packages
+cd ..
 ```
 
 - Activate the virtual environment
