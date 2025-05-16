@@ -37,6 +37,7 @@ pip install numpy matplotlib
 pip install setuptools wheel
 pip install pyaudio wave
 pip install sshkeyboard
+pip install netifaces
 ```
 
 ## Add local (LBB and NB3) libraries to Python paths
