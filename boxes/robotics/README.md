@@ -88,6 +88,20 @@ void loop() {
 </details><hr>
 
 
+### NB3 : Ball Caster
+> Let's add a front wheel (ball caster) to keep your NB3 from dragging its face on the ground.
+
+<details><summary><weak>Guide</weak></summary>
+:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1034797327" target="_blank" rel="noopener noreferrer">here</a>.
+</details><hr>
+
+
+**TASK**: Mount caster (ball bearing) to the front of your NB3.
+<details><summary><strong>Target</strong></summary>
+    The ball caster mount should look like this.
+</details><hr>
+
+
 ### NB3 : Build a Braitenberg Vehicle
 > Here we create the first Braitenberg Vehicle, a simple sensory-motor feedback loop connecting two light sensors to the motion of two wheels.
 
@@ -105,21 +119,7 @@ void loop() {
 **TASK**: Measure two light sensors and *decide* how to activate the direction of your two wheels in response.
 - Some example code to get you started can be found here: [Braitenberg Vehicle (Arduino)](/boxes/robotics/programming/arduino/braitenberg_vehicle/braitenberg_vehicle.ino)
 <details><summary><strong>Target</strong></summary>
-    You should have created a robot that wither likes (turns toward) or avoids (turns away from) light.
-</details><hr>
-
-
-### NB3 : Ball Caster
-> Let's add a front wheel (ball caster) to keep your NB3 from dragging its face on the ground.
-
-<details><summary><weak>Guide</weak></summary>
-:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1034797327" target="_blank" rel="noopener noreferrer">here</a>.
-</details><hr>
-
-
-**TASK**: Mount caster (ball bearing) to the front of your NB3.
-<details><summary><strong>Target</strong></summary>
-    The ball caster mount should look like this.
+    You should have created a robot that either likes (turns toward) or avoids (turns away from) light.
 </details><hr>
 
 

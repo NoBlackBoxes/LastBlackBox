@@ -40,7 +40,7 @@ Periodic Table|01|Periodic Table business card|1|[-D-](/boxes/atoms/card)|[-L-](
 
 **TASK**: Draw your favorite atom in the "classical" style
 <details><summary><strong>Target</strong></summary>
-    You should have thr appropriate number fo electrons in each orbital.
+    You should have the appropriate number of electrons in each orbital.
 </details><hr>
 
 

@@ -112,7 +112,7 @@ void loop() {
 **TASK**: Measure two light sensors and *decide* how to activate the direction of your two wheels in response.
 - Some example code to get you started can be found here: [Braitenberg Vehicle (Arduino)](/boxes/robotics/programming/arduino/braitenberg_vehicle/braitenberg_vehicle.ino)
 <details><summary><strong>Target</strong></summary>
-    You should have created a robot that wither likes (turns toward) or avoids (turns away from) light.
+    You should have created a robot that either likes (turns toward) or avoids (turns away from) light.
 </details><hr>
 
 

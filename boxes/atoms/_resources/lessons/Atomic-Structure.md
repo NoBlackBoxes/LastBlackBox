@@ -22,4 +22,4 @@ A brief introduction to the physics of atoms, their parts (protons, neutrons, an
 
 ## Lesson
 + **TASK**: Draw your favorite atom in the "classical" style
-> You should have thr appropriate number fo electrons in each orbital.
+> You should have the appropriate number of electrons in each orbital.

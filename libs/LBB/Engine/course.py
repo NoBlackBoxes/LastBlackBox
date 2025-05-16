@@ -8,8 +8,8 @@ LBB : Engine : Course Class
 # Imports
 import glob
 import json
-import LBB.utilities as Utilities
 import LBB.config as Config
+import LBB.utilities as Utilities
 import LBB.Engine.session as Session
 
 # Course Class

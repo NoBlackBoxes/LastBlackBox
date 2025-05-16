@@ -6,10 +6,8 @@ Generate LBB Courses (session READMEs) from templates
 """
 
 # Imports
-import os
-import glob
-import LBB.utilities as Utilities
 import LBB.config as Config
+import LBB.utilities as Utilities
 import LBB.Engine.course as Course
 
 # Reload libraries
