@@ -10,10 +10,10 @@ import NB3.Sound.utilities as Utilities
 
 # Set base path
 username = os.getlogin()
-base_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/intelligence/pytorch/keyword_spotter"
+base_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/intelligence/pytorch/keyword_spotter/listen-NB3"
 
 # Specify model and labels
-model_path = f"{base_path}/_tmp/quantized/quantized.pt"
+model_path = f"{base_path}/model.pt"
 labels_path = f"{base_path}/labels.txt"
 
 # Configure serial port
@@ -70,13 +70,6 @@ try:
 
         # Clear screen
         screen.erase()
-
-        # Are we waiting for sufficient audio in the buffer?
-        if(mel_spectrogram is None):
-            screen.addstr(0, 0, 'Status: ...filling buffer...')       
-            time.sleep(0.1)
-            continue
-        screen.addstr(0, 0, 'Status: ...Listening...')       
 
         # Convert ndarray to Tensor
         features = np.expand_dims(mel_spectrogram, 0)
