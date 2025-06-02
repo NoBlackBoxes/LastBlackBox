@@ -1,8 +1,9 @@
-### Footprint positions - created on Fri Feb 23 15:52:23 2024 ###
-### Printed by KiCad version 7.0.10
+### Footprint positions - created on 2025-06-02T15:38:15+0100 ###
+### Printed by KiCad version 9.0.2
 ## Unit = mm, Angle = deg.
 ## Side : All
 # Ref     Val                           Package                                   PosX       PosY       Rot  Side
+G***      LOGO                          Logo_VK_15mm                            0.0000    27.0000  180.0000  bottom
 J1        Conn_02x05_Counter_Clockwise  PinSocket_2x05_P2.54mm_Vertical_SMD   -40.0000   185.0000   90.0000  top
 J2        Conn_02x05_Counter_Clockwise  PinSocket_2x05_P2.54mm_Vertical_SMD    40.0000   185.0000   90.0000  top
 J3        Conn_02x05_Counter_Clockwise  PinSocket_2x05_P2.54mm_Vertical_SMD   -49.0000   137.0000   90.0000  top
@@ -13,8 +14,9 @@ J7        Conn_02x07_Odd_Even           PinSocket_2x07_P2.54mm_Vertical_SMD   -8
 J8        Conn_02x07_Odd_Even           PinSocket_2x07_P2.54mm_Vertical_SMD    82.0000   105.0000    0.0000  top
 J9        Conn_02x07_Odd_Even           PinSocket_2x07_P2.54mm_Vertical_SMD     0.0000   192.0000   90.0000  top
 J10       JST_SH_4-way_Socket           Connector_S4B-PH-SM4-TB(LF)(SN)        34.0000   146.0000   90.0000  top
-J12       Conn_02x03_Top_Bottom         PinHeader_2x03_P2.54mm_Vertical_SMD   -77.0000    54.0000    0.0000  top
-J13       Conn_02x03_Top_Bottom         PinHeader_2x03_P2.54mm_Vertical_SMD    77.0000    54.0000    0.0000  top
+J11       JST_SH_4-way_Socket           Connector_S4B-PH-SM4-TB(LF)(SN)         0.0000   140.0000  180.0000  top
+J12       Conn_02x03_Top_Bottom         PinHeader_2x03_P2.54mm_Vertical       -78.2750    56.5250    0.0000  top
+J13       Conn_02x03_Top_Bottom         PinHeader_2x03_P2.54mm_Vertical        75.7100    56.5400    0.0000  top
 J14       Conn_02x05_Counter_Clockwise  PinSocket_2x05_P2.54mm_Vertical_SMD    34.0000   166.0000    0.0000  top
 J15       Conn_02x05_Counter_Clockwise  PinSocket_2x05_P2.54mm_Vertical_SMD    34.0000   126.0000    0.0000  top
 ## End
