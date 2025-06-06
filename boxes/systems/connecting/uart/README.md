@@ -12,6 +12,7 @@ Your RPi has the ability to communicate via an old-school serial console (UART).
     ```bash
     enable_uart=1
     ```
+    - *(Optional)* Edit the "cmdline.txt" file to remove the word "quiet", which will cause the display of additional messages during boot.
 6. Eject the SD card and insert it back into the RPi
 
 ## Connect your Hindbrain's USB-to-Serial converter to the Raspberry Pi UART
