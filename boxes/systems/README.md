@@ -18,7 +18,11 @@ Cable (Ethernet)|10|RJ45 cact5e ethernet patch cable (1 m)|1|[-D-](/boxes/system
 
 </p></details><hr>
 
-#### Watch this video: [Operating Systems](https://vimeo.com/1036096746)
+#### Watch this video: 
+<p align="center">
+<a href="https://vimeo.com/1036096746" title="Control+Click to watch in new tab"><img src="../../boxes/systems/_resources/lessons/thumbnails/Operating-Systems.gif" alt="Operating Systems" width="480"/></a>
+</p>
+
 > As computer hardware became much more capable, software was developed to manage this complexity and power. This software took responsibility for managing access to the computer's resources: processing, memory, and devices. These days, when we *operate* a computer, we rarely interact directly with the hardware. Instead, we talk to this control software, which we call an **operating system**.
 
 
@@ -29,11 +33,19 @@ Cable (Ethernet)|10|RJ45 cact5e ethernet patch cable (1 m)|1|[-D-](/boxes/system
 </details><hr>
 
 
-#### Watch this video: [Visual Studio Code](https://vimeo.com/1036716612)
+#### Watch this video: 
+<p align="center">
+<a href="https://vimeo.com/1036716612" title="Control+Click to watch in new tab"><img src="../../boxes/systems/_resources/lessons/thumbnails/Visual-Studio-Code.gif" alt="Visual Studio Code" width="480"/></a>
+</p>
+
 > We will be using Visual Studio Code (VS Code) as our tool for writing programs. VS Code is just a simple, *but really powerful*, text editor. It has extensions for all sorts of useful tools (Python, Git, etc.), and for connecting to a "remote" computer (our NB3's midbrain).
 
 
-#### Watch this video: [Multi-Tasking](https://vimeo.com/1036086160)
+#### Watch this video: 
+<p align="center">
+<a href="https://vimeo.com/1036086160" title="Control+Click to watch in new tab"><img src="../../boxes/systems/_resources/lessons/thumbnails/Multi-Tasking.gif" alt="Multi-Tasking" width="480"/></a>
+</p>
+
 > Back when computers were very expensive mainframes, some clever software engineers developed strategies to share the computer's resources between multiple users, running multiple different tasks, at the same time. These "scheduling" programs still form the basis of our modern **multi-tasking** operating systems.
 
 

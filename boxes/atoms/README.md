@@ -12,7 +12,11 @@ Periodic Table|01|Periodic Table business card|1|[-D-](/boxes/atoms/card)|[-L-](
 
 </p></details><hr>
 
-#### Watch this video: [The Periodic Table](https://vimeo.com/1028399080)
+#### Watch this video: 
+<p align="center">
+<a href="https://vimeo.com/1028399080" title="Control+Click to watch in new tab"><img src="../../boxes/atoms/_resources/lessons/thumbnails/The-Periodic-Table.gif" alt="The Periodic Table" width="480"/></a>
+</p>
+
 > Organizing the elements into a table reveals a regular pattern, which is linked to the fundamental chemical properties of each material.
 
 - When you need it *(and you will)*, then you can find a copy of the periodic table [here](/boxes/atoms/_resources/images/periodic_table.png).
@@ -30,11 +34,19 @@ Periodic Table|01|Periodic Table business card|1|[-D-](/boxes/atoms/card)|[-L-](
 > Wait. What's up with Hydrogen? Why no Neutrons? Oh...what about Helium? Why don't those Protons, with their positve charges, just fly apart?
 
 
-#### Watch this video: [Heat](https://vimeo.com/1029691491)
+#### Watch this video: 
+<p align="center">
+<a href="https://vimeo.com/1029691491" title="Control+Click to watch in new tab"><img src="../../boxes/atoms/_resources/lessons/thumbnails/Heat.gif" alt="Heat" width="480"/></a>
+</p>
+
 > Atoms in every material are always moving. This motion of atoms (their average kinetic energy) is heat.
 
 
-#### Watch this video: [Atomic Structure](https://vimeo.com/1000458082)
+#### Watch this video: 
+<p align="center">
+<a href="https://vimeo.com/1000458082" title="Control+Click to watch in new tab"><img src="../../boxes/atoms/_resources/lessons/thumbnails/Atomic-Structure.gif" alt="Atomic Structure" width="480"/></a>
+</p>
+
 > A brief introduction to the physics of atoms, their parts (protons, neutrons, and electrons), and their classical vs. quantum structure.
 
 

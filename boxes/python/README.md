@@ -11,7 +11,11 @@ Name|Depth|Description| # |Data|Link|
 
 </p></details><hr>
 
-#### Watch this video: [Virtual Environments](https://vimeo.com/1042637566)
+#### Watch this video: 
+<p align="center">
+<a href="https://vimeo.com/1042637566" title="Control+Click to watch in new tab"><img src="../../boxes/python/_resources/lessons/thumbnails/Virtual-Environments.gif" alt="Virtual Environments" width="480"/></a>
+</p>
+
 > We will next create a Python **virtual environment** on our NB3 that will isolate the specific Python packages we require for the course from the Python packages used by the Raspberry Pi's operating system.
 
 
@@ -31,7 +35,11 @@ Name|Depth|Description| # |Data|Link|
 </details><hr>
 
 
-#### Watch this video: [Introducing the Interpreter](https://vimeo.com/1042618092)
+#### Watch this video: 
+<p align="center">
+<a href="https://vimeo.com/1042618092" title="Control+Click to watch in new tab"><img src="../../boxes/python/_resources/lessons/thumbnails/Introducing-the-Interpreter.gif" alt="Introducing the Interpreter" width="480"/></a>
+</p>
+
 > What is Python? Where is it? How does it work? How can it work for you?
 
 

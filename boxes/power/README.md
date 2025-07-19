@@ -21,7 +21,11 @@ Velcro Patch|01|Velcro adhesive|1|[-D-](/boxes/power/)|[-L-](https://www.amazon.
 
 </p></details><hr>
 
-#### Watch this video: [DC-DC Converters](https://vimeo.com/1035304311)
+#### Watch this video: 
+<p align="center">
+<a href="https://vimeo.com/1035304311" title="Control+Click to watch in new tab"><img src="../../boxes/power/_resources/lessons/thumbnails/DC-DC-Converters.gif" alt="DC-DC Converters" width="480"/></a>
+</p>
+
 > How does efficient DC to DC conversion work? Buck and Boost.
 
 

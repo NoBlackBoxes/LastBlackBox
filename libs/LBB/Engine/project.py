@@ -21,9 +21,10 @@ class Project:
 
     Steps to complete a session project
     """
-    def __init__(self, _session, _depth, text=None, dictionary=None):
+    def __init__(self, _session, _box_name, _depth, text=None, dictionary=None):
         self.course = _session.course   # Project parent (course)
         self.session = _session         # Project parent (session)
+        self.box_name = _box_name            # Project box name
         self.index = None               # Project index
         self.name = None                # Project name
         self.slug = None                # Project slug
@@ -43,6 +44,7 @@ class Project:
             "index": self.index,
             "name": self.name,
             "slug": self.slug,
+            "box_name": self.box_name,
             "depth": self.depth,
             "description": self.description,
             "video": self.video.to_dict(),
@@ -55,6 +57,7 @@ class Project:
         self.index = dictionary.get("index")
         self.name = dictionary.get("name")
         self.slug = dictionary.get("slug")
+        self.box_name = dictionary.get("box_name")
         self.depth = dictionary.get("depth")
         self.description = dictionary.get("description")
         self.video = Video.Video(self.course, dictionary=dictionary.get("video"))
@@ -81,7 +84,7 @@ class Project:
         # Extract video
         video_url = text[line_count].split('(')[1][:-1]
         if video_url != '':
-            self.video = Video.Video(self.course, text=f"[{self.name}]({video_url})")
+            self.video = Video.Video(self.course, self.box_name, text=f"[{self.name}]({video_url})")
         line_count += 1
 
         # Find lesson section

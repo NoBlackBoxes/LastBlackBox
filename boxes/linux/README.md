@@ -11,11 +11,19 @@ Name|Depth|Description| # |Data|Link|
 
 </p></details><hr>
 
-#### Watch this video: [Package Managers](https://vimeo.com/1036834036)
+#### Watch this video: 
+<p align="center">
+<a href="https://vimeo.com/1036834036" title="Control+Click to watch in new tab"><img src="../../boxes/linux/_resources/lessons/thumbnails/Package-Managers.gif" alt="Package Managers" width="480"/></a>
+</p>
+
 > Installing and "managing" software can get complicated. Programs that help coordinate this process are called **package managers**.
 
 
-#### Watch this video: [Navigating the Command Line](https://vimeo.com/1036829527)
+#### Watch this video: 
+<p align="center">
+<a href="https://vimeo.com/1036829527" title="Control+Click to watch in new tab"><img src="../../boxes/linux/_resources/lessons/thumbnails/Navigating-the-Command-Line.gif" alt="Navigating the Command Line" width="480"/></a>
+</p>
+
 > The original user interfaces were entirely based on text. You typed commands as a line of text into your terminal console and received the result as a string of characters on the screen. Navigating this **command line** remains a useful skill, and a necessary one when working with remote machines.
 
 
@@ -25,7 +33,11 @@ Name|Depth|Description| # |Data|Link|
 </details><hr>
 
 
-#### Watch this video: [Git](https://vimeo.com/1036825331)
+#### Watch this video: 
+<p align="center">
+<a href="https://vimeo.com/1036825331" title="Control+Click to watch in new tab"><img src="../../boxes/linux/_resources/lessons/thumbnails/Git.gif" alt="Git" width="480"/></a>
+</p>
+
 > Git is a program that keeps track of changes to your files. It is very useful when developing code. This entire course is stored as a git "repository" on GitHub.
 
 

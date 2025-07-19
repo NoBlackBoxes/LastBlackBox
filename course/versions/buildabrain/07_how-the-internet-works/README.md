@@ -20,7 +20,11 @@ Cable (MiniUSB-20cm)|01|Short mini-USB to Type-A cable (20 cm)|1|[-D-](/boxes/ne
 > Sockets abstract the idea of a connection between computers. A socket communicates to another socket using either TCP or UDP packets. It has an address. It can listen for and request connections.
 
 
-#### Watch this video: [NB3 : Develop a Protocol](https://vimeo.com/1042782602)
+#### Watch this video: 
+<p align="center">
+<a href="https://vimeo.com/1042782602" title="Control+Click to watch in new tab"><img src="../../../../boxes/networks/_resources/lessons/thumbnails/NB3_:-Develop-a-Protocol.gif" alt="NB3 : Develop a Protocol" width="480"/></a>
+</p>
+
 > Let's develop a simple network protocol for communication between our NB3's midbrain computer and hindbrain microcontroller.
 
 - Decide on your command format (x,o)

@@ -13,11 +13,19 @@ Servo Wheel|01|Wheels (70x8mm) for servos|2|[-D-](/boxes/control/)|[-L-](https:/
 
 </p></details><hr>
 
-#### Watch this video: [PWM](https://vimeo.com/1033905955)
+#### Watch this video: 
+<p align="center">
+<a href="https://vimeo.com/1033905955" title="Control+Click to watch in new tab"><img src="../../../../boxes/control/_resources/lessons/thumbnails/PWM.gif" alt="PWM" width="480"/></a>
+</p>
+
 > We can control a "continuous" range of outputs with a binary digital signal (only 0s and 1s) by switching the output **ON** and **OFF** very quickly. Our "continuous" output is then the average of the percentage of time spent **ON** vs **OFF**. We cal this percentage the "duty cycle", and we call this output control method *pulse width modulation* or **PWM**.
 
 
-#### Watch this video: [Servo Loops](https://vimeo.com/1033963709)
+#### Watch this video: 
+<p align="center">
+<a href="https://vimeo.com/1033963709" title="Control+Click to watch in new tab"><img src="../../../../boxes/control/_resources/lessons/thumbnails/Servo-Loops.gif" alt="Servo Loops" width="480"/></a>
+</p>
+
 > A servo loop connects feedback from a sensor to the control signals sent to a motor.
 
 
@@ -36,7 +44,11 @@ Spacer|01|NB3 spacer 3 mm spacer for mounting ball caster|5|[-D-](/boxes/robotic
 
 </p></details><hr>
 
-#### Watch this video: [NB3 : Muscles (Servos)](https://vimeo.com/1034800702)
+#### Watch this video: 
+<p align="center">
+<a href="https://vimeo.com/1034800702" title="Control+Click to watch in new tab"><img src="../../../../boxes/robotics/_resources/lessons/thumbnails/NB3_:-Muscles-(Servos).gif" alt="NB3 : Muscles (Servos)" width="480"/></a>
+</p>
+
 > Let's build your robot's movement system (using servo motors).
 
 
@@ -88,7 +100,11 @@ void loop() {
 </details><hr>
 
 
-#### Watch this video: [NB3 : Ball Caster](https://vimeo.com/1034797327)
+#### Watch this video: 
+<p align="center">
+<a href="https://vimeo.com/1034797327" title="Control+Click to watch in new tab"><img src="../../../../boxes/robotics/_resources/lessons/thumbnails/NB3_:-Ball-Caster.gif" alt="NB3 : Ball Caster" width="480"/></a>
+</p>
+
 > Let's add a front wheel (ball caster) to keep your NB3 from dragging its face on the ground.
 
 

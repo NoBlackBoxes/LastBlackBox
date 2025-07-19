@@ -40,15 +40,13 @@ for box_name in Config.box_names:
 
         # Extract video name
         video_path = f"{video_folder}/{md_basename[:-3]}.mkv"
-        print(f"Video Name: {video_path}")
 
         # Extract thumbnail name
         png_path = f"{thumbnails_folder}/{md_basename[:-3]}.png"
-        print(f"PNG Name: {png_path}")
 
         # Specify GIF output path
         gif_path = f"{thumbnails_folder}/{md_basename[:-3]}.gif"
-        print(f"GIF Name: {gif_path}")
+        print(f"GIF Name: {box_name}:{os.path.basename(gif_path)}")
 
         # Specify GIF parameters
         target_size = (480, 270)
@@ -66,6 +64,8 @@ for box_name in Config.box_names:
         # Load video
         video = cv2.VideoCapture(video_path)
         num_frames = int(video.get(cv2.CAP_PROP_FRAME_COUNT))
+        if(num_frames < 100):
+            continue
         frame_indices = np.linspace(0, num_frames - 100, num=30, dtype=int)
         for idx in frame_indices:
             video.set(cv2.CAP_PROP_POS_FRAMES, idx)
@@ -82,8 +82,5 @@ for box_name in Config.box_names:
 
         # Generate GIF
         frames[0].save(gif_path, save_all=True, append_images=frames[1:], duration=durations, loop=0, optimize=True)
-
-        # DEBUG
-        exit()
 
 #FIN

@@ -14,7 +14,11 @@ Cable (MiniUSB-1m)|01|Mini-USB to Type-A cable (1 m)|1|[-D-](/boxes/computers/)|
 
 </p></details><hr>
 
-#### Watch this video: [Architecture](https://vimeo.com/1033601146)
+#### Watch this video: 
+<p align="center">
+<a href="https://vimeo.com/1033601146" title="Control+Click to watch in new tab"><img src="../../boxes/computers/_resources/lessons/thumbnails/Architecture.gif" alt="Architecture" width="480"/></a>
+</p>
+
 > The basic building blocks of a computer (memory, ALU, clock, bus, and IO) have a standard arrangement (architecture) in modern systems.
 
 

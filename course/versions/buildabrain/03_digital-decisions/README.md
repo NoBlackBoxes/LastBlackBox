@@ -18,11 +18,19 @@ Resistor (470)|01|470 &Omega;/0.25 W|2|[-D-](/boxes/electrons/_resources/datashe
 
 </p></details><hr>
 
-#### Watch this video: [Semiconductors](https://vimeo.com/1032460818)
+#### Watch this video: 
+<p align="center">
+<a href="https://vimeo.com/1032460818" title="Control+Click to watch in new tab"><img src="../../../../boxes/transistors/_resources/lessons/thumbnails/Semiconductors.gif" alt="Semiconductors" width="480"/></a>
+</p>
+
 > We can modify a pure crystal of certain elements (e.g. silicon) to change how well they conduct electricity.
 
 
-#### Watch this video: [Diodes](https://vimeo.com/1032443724)
+#### Watch this video: 
+<p align="center">
+<a href="https://vimeo.com/1032443724" title="Control+Click to watch in new tab"><img src="../../../../boxes/transistors/_resources/lessons/thumbnails/Diodes.gif" alt="Diodes" width="480"/></a>
+</p>
+
 > The chemical and electrical equilibrium between charge carriers creates a potential across the PN junction. This junction potential only permits current flow in one direction, which gives **diodes** there delightfully non-linear behavior.
 
 
@@ -32,11 +40,19 @@ Resistor (470)|01|470 &Omega;/0.25 W|2|[-D-](/boxes/electrons/_resources/datashe
 </details><hr>
 
 
-#### Watch this video: [NB3 : Testing Diodes](https://vimeo.com/1032458879)
+#### Watch this video: 
+<p align="center">
+<a href="https://vimeo.com/1032458879" title="Control+Click to watch in new tab"><img src="../../../../boxes/transistors/_resources/lessons/thumbnails/NB3_:-Testing-Diodes.gif" alt="NB3 : Testing Diodes" width="480"/></a>
+</p>
+
 > Diodes allow current to flow in only one direction...if you overcome the internal junction potential. Let's measure this...and also use an LED to emit some light.
 
 
-#### Watch this video: [Transistors (MOSFETs)](https://vimeo.com/1032452466)
+#### Watch this video: 
+<p align="center">
+<a href="https://vimeo.com/1032452466" title="Control+Click to watch in new tab"><img src="../../../../boxes/transistors/_resources/lessons/thumbnails/Transistors-(MOSFETs).gif" alt="Transistors (MOSFETs)" width="480"/></a>
+</p>
+
 > MOSFETs are the thing that humans have built more of than anything else. They must be useful! Let's discuss what they are and how they work.
 
 

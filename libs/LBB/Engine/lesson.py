@@ -81,7 +81,7 @@ class Lesson:
         # Extract video
         video_url = text[line_count].split('(')[1][:-1]
         if video_url != '':
-            self.video = Video.Video(self.course, f"[{self.name}]({video_url})")
+            self.video = Video.Video(self.course, self.box.slug, f"[{self.name}]({video_url})")
         line_count += 1
 
         # Find lesson section

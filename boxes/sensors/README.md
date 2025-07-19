@@ -14,7 +14,11 @@ Piezo|10|Piezo element|1|[-D-](/boxes/sensors/_resources/datasheets/piezo.pdf)|[
 
 </p></details><hr>
 
-#### Watch this video: [Transducers](https://vimeo.com/1031477896)
+#### Watch this video: 
+<p align="center">
+<a href="https://vimeo.com/1031477896" title="Control+Click to watch in new tab"><img src="../../boxes/sensors/_resources/lessons/thumbnails/Transducers.gif" alt="Transducers" width="480"/></a>
+</p>
+
 > A sensor converts (transduces) a physical quantity (light, heat, pressure, etc.) into an electrical signal (voltage, current, or resistance).
 
 

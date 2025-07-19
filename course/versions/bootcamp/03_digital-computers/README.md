@@ -11,7 +11,11 @@ Name|Depth|Description| # |Data|Link|
 
 </p></details><hr>
 
-#### Watch this video: [Logic Gates](https://vimeo.com/1033231995)
+#### Watch this video: 
+<p align="center">
+<a href="https://vimeo.com/1033231995" title="Control+Click to watch in new tab"><img src="../../../../boxes/logic/_resources/lessons/thumbnails/Logic-Gates.gif" alt="Logic Gates" width="480"/></a>
+</p>
+
 > The essential elements of computation (NOT, AND, OR, XOR, etc.) can be built from straight forward combinations of MOSFETs.
 
 
@@ -25,7 +29,11 @@ Name|Depth|Description| # |Data|Link|
 
 </p></details><hr>
 
-#### Watch this video: [Flash Memory](https://vimeo.com/1033230293)
+#### Watch this video: 
+<p align="center">
+<a href="https://vimeo.com/1033230293" title="Control+Click to watch in new tab"><img src="../../../../boxes/memory/_resources/lessons/thumbnails/Flash-Memory.gif" alt="Flash Memory" width="480"/></a>
+</p>
+
 > Storing much of your data requires *quantum mechanics*.
 
 
@@ -42,11 +50,19 @@ Cable (MiniUSB-1m)|01|Mini-USB to Type-A cable (1 m)|1|[-D-](/boxes/computers/)|
 
 </p></details><hr>
 
-#### Watch this video: [Architecture](https://vimeo.com/1033601146)
+#### Watch this video: 
+<p align="center">
+<a href="https://vimeo.com/1033601146" title="Control+Click to watch in new tab"><img src="../../../../boxes/computers/_resources/lessons/thumbnails/Architecture.gif" alt="Architecture" width="480"/></a>
+</p>
+
 > The basic building blocks of a computer (memory, ALU, clock, bus, and IO) have a standard arrangement (architecture) in modern systems.
 
 
-#### Watch this video: [NB3 : Hindbrain](https://vimeo.com/1033609727)
+#### Watch this video: 
+<p align="center">
+<a href="https://vimeo.com/1033609727" title="Control+Click to watch in new tab"><img src="../../../../boxes/computers/_resources/lessons/thumbnails/NB3_:-Hindbrain.gif" alt="NB3 : Hindbrain" width="480"/></a>
+</p>
+
 > We will now add a *computer* to our robot. We be using a simple microcontroller as our NB3's hindbrain. It will be responsible for controlling the "muscles" (motors) in response to commands from another (larger) computer that we will be adding later to the NB3's midbrain.
 
 
