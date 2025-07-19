@@ -50,28 +50,38 @@ for box_name in Config.box_names:
         gif_path = f"{thumbnails_folder}/{md_basename[:-3]}.gif"
         print(f"GIF Name: {gif_path}")
 
+        # Specify GIF parameters
+        target_size = (480, 270)
+        pause_duration_ms = 4000
+        animation_duration_ms = 250
+
         # Load thumbnail
+        thumbnail = Image.open(png_path).convert("RGB")
+        static_img = thumbnail.resize(target_size, Image.Resampling.LANCZOS)
+
+        # Create GIF stacks
+        frames = [static_img]
+        durations = [pause_duration_ms]
 
         # Load video
         video = cv2.VideoCapture(video_path)
         num_frames = int(video.get(cv2.CAP_PROP_FRAME_COUNT))
         frame_indices = np.linspace(0, num_frames - 100, num=30, dtype=int)
-        frames = []
-        target_size = (320, 180)
         for idx in frame_indices:
             video.set(cv2.CAP_PROP_POS_FRAMES, idx)
             success, frame = video.read()
             if success:
                 resized_frame = cv2.resize(frame, target_size, interpolation=cv2.INTER_AREA)
                 rgb_frame = cv2.cvtColor(resized_frame, cv2.COLOR_BGR2RGB)
-                frames.append(rgb_frame)
+                pil_frame = Image.fromarray(rgb_frame)
+                frames.append(pil_frame)
+                durations.append(animation_duration_ms)
             else:
                 print(f"Failed to read frame at index {idx}")
         video.release()
 
         # Generate GIF
-        pil_frames = [Image.fromarray(f) for f in frames]
-        pil_frames[0].save(gif_path, save_all=True, append_images=pil_frames[1:], duration=300, loop=0, optimize=True)
+        frames[0].save(gif_path, save_all=True, append_images=frames[1:], duration=durations, loop=0, optimize=True)
 
         # DEBUG
         exit()
