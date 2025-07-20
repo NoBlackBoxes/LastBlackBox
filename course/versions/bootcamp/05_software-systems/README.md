@@ -31,7 +31,7 @@ Velcro Patch|01|Velcro adhesive|1|[-D-](/boxes/power/)|[-L-](https://www.amazon.
 
 #### Watch this video: 
 <p align="center">
-<a href="https://vimeo.com/1035306761" title="Control+Click to watch in new tab"><img src="../../../../boxes/power/_resources/lessons/thumbnails/NB3_:-Power-Supply.gif" alt="NB3 : Power Supply" width="480"/></a>
+<a href="https://vimeo.com/1035306761" title="Control+Click to watch in new tab"><img src="../../../../boxes/power/_resources/lessons/thumbnails/NB3_Power-Supply.gif" alt="NB3 : Power Supply" width="480"/></a>
 </p>
 
 > Let's install a DC-DC power supply on our NB3.
@@ -76,7 +76,7 @@ M2.5 standoff (20/SS)|01|20 mm long socket-to-socket M2.5 standoff|4|[-D-](/boxe
 
 #### Watch this video: 
 <p align="center">
-<a href="https://vimeo.com/1036094397" title="Control+Click to watch in new tab"><img src="../../../../boxes/systems/_resources/lessons/thumbnails/NB3_:-Programming-Concurrency-(Arduino).gif" alt="NB3 : Programming Concurrency (Arduino)" width="480"/></a>
+<a href="https://vimeo.com/1036094397" title="Control+Click to watch in new tab"><img src="../../../../boxes/systems/_resources/lessons/thumbnails/NB3_Programming-Concurrency-(Arduino).gif" alt="NB3 : Programming Concurrency (Arduino)" width="480"/></a>
 </p>
 
 > Getting a microcontroller to perform two tasks (with very different timescales) at the same time is a fun programming challenge. You will develop new skills in organizing your programs and get a glimpse of the problems solved by the *kernel* of a modern operating system.
@@ -99,7 +99,7 @@ M2.5 standoff (20/SS)|01|20 mm long socket-to-socket M2.5 standoff|4|[-D-](/boxe
 
 #### Watch this video: 
 <p align="center">
-<a href="https://vimeo.com/1036089510" title="Control+Click to watch in new tab"><img src="../../../../boxes/systems/_resources/lessons/thumbnails/NB3_:-Midbrain.gif" alt="NB3 : Midbrain" width="480"/></a>
+<a href="https://vimeo.com/1036089510" title="Control+Click to watch in new tab"><img src="../../../../boxes/systems/_resources/lessons/thumbnails/NB3_Midbrain.gif" alt="NB3 : Midbrain" width="480"/></a>
 </p>
 
 > Now we will add a more powerful computer (Raspberry Pi) to your NB3's midbrain.
@@ -114,7 +114,7 @@ M2.5 standoff (20/SS)|01|20 mm long socket-to-socket M2.5 standoff|4|[-D-](/boxe
 
 #### Watch this video: 
 <p align="center">
-<a href="https://vimeo.com/1036095710" title="Control+Click to watch in new tab"><img src="../../../../boxes/systems/_resources/lessons/thumbnails/NB3_:-RPiOS.gif" alt="NB3 : RPiOS" width="480"/></a>
+<a href="https://vimeo.com/1036095710" title="Control+Click to watch in new tab"><img src="../../../../boxes/systems/_resources/lessons/thumbnails/NB3_RPiOS.gif" alt="NB3 : RPiOS" width="480"/></a>
 </p>
 
 > After mounting and wiring your NB3's midbrain computer, you must now give it some core software to run...an operating system.
@@ -129,7 +129,7 @@ M2.5 standoff (20/SS)|01|20 mm long socket-to-socket M2.5 standoff|4|[-D-](/boxe
 
 #### Watch this video: 
 <p align="center">
-<a href="https://vimeo.com/1036391512" title="Control+Click to watch in new tab"><img src="../../../../boxes/systems/_resources/lessons/thumbnails/NB3_:-Connecting-to-RPi.gif" alt="NB3 : Connecting to RPi" width="480"/></a>
+<a href="https://vimeo.com/1036391512" title="Control+Click to watch in new tab"><img src="../../../../boxes/systems/_resources/lessons/thumbnails/NB3_Connecting-to-RPi.gif" alt="NB3 : Connecting to RPi" width="480"/></a>
 </p>
 
 > When you have installed your NB3's operating system, then you can power it on and try to connect to it from your Host computer over WiFi or UART.

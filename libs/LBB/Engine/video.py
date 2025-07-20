@@ -56,7 +56,7 @@ class Video:
     def render(self, type):
         gif_name = self.name + ".gif"
         if gif_name.startswith("NB3"):
-            gif_name = gif_name[:3] + "_" + gif_name[4:]
+            gif_name = "NB3_" + gif_name[6:]
         gif_name = gif_name.replace(" ", "-")
         output = ''
         if type == "MD":

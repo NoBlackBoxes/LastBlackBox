@@ -42,7 +42,7 @@ Resistor (470)|01|470 &Omega;/0.25 W|2|[-D-](/boxes/electrons/_resources/datashe
 
 #### Watch this video: 
 <p align="center">
-<a href="https://vimeo.com/1032458879" title="Control+Click to watch in new tab"><img src="../../../../boxes/transistors/_resources/lessons/thumbnails/NB3_:-Testing-Diodes.gif" alt="NB3 : Testing Diodes" width="480"/></a>
+<a href="https://vimeo.com/1032458879" title="Control+Click to watch in new tab"><img src="../../../../boxes/transistors/_resources/lessons/thumbnails/NB3_Testing-Diodes.gif" alt="NB3 : Testing Diodes" width="480"/></a>
 </p>
 
 > Diodes allow current to flow in only one direction...if you overcome the internal junction potential. Let's measure this...and also use an LED to emit some light.

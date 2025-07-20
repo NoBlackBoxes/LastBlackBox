@@ -34,7 +34,7 @@ M2 nut|01|regular M2 nut|2|[-D-](/boxes/audio/)|[-L-](https://www.accu.co.uk/hex
 
 #### Watch this video: 
 <p align="center">
-<a href="https://vimeo.com/1042781850" title="Control+Click to watch in new tab"><img src="../../../../boxes/audio/_resources/lessons/thumbnails/NB3_:-Build-and-Install-the-Linux-I2S-Driver.gif" alt="NB3 : Build and Install the Linux I2S Driver" width="480"/></a>
+<a href="https://vimeo.com/1042781850" title="Control+Click to watch in new tab"><img src="../../../../boxes/audio/_resources/lessons/thumbnails/NB3_Build-and-Install-the-Linux-I2S-Driver.gif" alt="NB3 : Build and Install the Linux I2S Driver" width="480"/></a>
 </p>
 
 > Let's build (compile) and install the Linux device driver for our NB3's sound card. This software module is required to access the NB3's ears (microphone) and mouth (speaker).
@@ -42,7 +42,7 @@ M2 nut|01|regular M2 nut|2|[-D-](/boxes/audio/)|[-L-](https://www.accu.co.uk/hex
 
 #### Watch this video: 
 <p align="center">
-<a href="https://vimeo.com/1042943195" title="Control+Click to watch in new tab"><img src="../../../../boxes/audio/_resources/lessons/thumbnails/NB3_:-Install-the-Ears.gif" alt="NB3 : Install the Ears" width="480"/></a>
+<a href="https://vimeo.com/1042943195" title="Control+Click to watch in new tab"><img src="../../../../boxes/audio/_resources/lessons/thumbnails/NB3_Install-the-Ears.gif" alt="NB3 : Install the Ears" width="480"/></a>
 </p>
 
 > Let's add some ears to your NB3.
@@ -54,7 +54,7 @@ M2 nut|01|regular M2 nut|2|[-D-](/boxes/audio/)|[-L-](https://www.accu.co.uk/hex
 
 #### Watch this video: 
 <p align="center">
-<a href="https://vimeo.com/1042947561" title="Control+Click to watch in new tab"><img src="../../../../boxes/audio/_resources/lessons/thumbnails/NB3_:-Install-the-Mouth.gif" alt="NB3 : Install the Mouth" width="480"/></a>
+<a href="https://vimeo.com/1042947561" title="Control+Click to watch in new tab"><img src="../../../../boxes/audio/_resources/lessons/thumbnails/NB3_Install-the-Mouth.gif" alt="NB3 : Install the Mouth" width="480"/></a>
 </p>
 
 > Let's add a mouth to your NB3.
@@ -89,7 +89,7 @@ M2 nut|01|regular M2 nut|4|[-D-](/boxes/audio/)|[-L-](https://www.accu.co.uk/hex
 
 #### Watch this video: 
 <p align="center">
-<a href="https://vimeo.com/1042945461" title="Control+Click to watch in new tab"><img src="../../../../boxes/vision/_resources/lessons/thumbnails/NB3_:-Install-the-Eye.gif" alt="NB3 : Install the Eye" width="480"/></a>
+<a href="https://vimeo.com/1042945461" title="Control+Click to watch in new tab"><img src="../../../../boxes/vision/_resources/lessons/thumbnails/NB3_Install-the-Eye.gif" alt="NB3 : Install the Eye" width="480"/></a>
 </p>
 
 > Let's install a camera on your NB3.

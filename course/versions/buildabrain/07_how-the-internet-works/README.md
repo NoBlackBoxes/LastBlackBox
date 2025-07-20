@@ -22,7 +22,7 @@ Cable (MiniUSB-20cm)|01|Short mini-USB to Type-A cable (20 cm)|1|[-D-](/boxes/ne
 
 #### Watch this video: 
 <p align="center">
-<a href="https://vimeo.com/1042782602" title="Control+Click to watch in new tab"><img src="../../../../boxes/networks/_resources/lessons/thumbnails/NB3_:-Develop-a-Protocol.gif" alt="NB3 : Develop a Protocol" width="480"/></a>
+<a href="https://vimeo.com/1042782602" title="Control+Click to watch in new tab"><img src="../../../../boxes/networks/_resources/lessons/thumbnails/NB3_Develop-a-Protocol.gif" alt="NB3 : Develop a Protocol" width="480"/></a>
 </p>
 
 > Let's develop a simple network protocol for communication between our NB3's midbrain computer and hindbrain microcontroller.
