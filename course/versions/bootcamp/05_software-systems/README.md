@@ -21,7 +21,7 @@ Velcro Patch|01|Velcro adhesive|1|[-D-](/boxes/power/)|[-L-](https://www.amazon.
 
 </p></details><hr>
 
-#### Watch this video: 
+#### Watch this video: [DC-DC Converters](https://vimeo.com/1035304311)
 <p align="center">
 <a href="https://vimeo.com/1035304311" title="Control+Click to watch in new tab"><img src="../../../../boxes/power/_resources/lessons/thumbnails/DC-DC-Converters.gif" alt="DC-DC Converters" width="480"/></a>
 </p>
@@ -29,7 +29,7 @@ Velcro Patch|01|Velcro adhesive|1|[-D-](/boxes/power/)|[-L-](https://www.amazon.
 > How does efficient DC to DC conversion work? Buck and Boost.
 
 
-#### Watch this video: 
+#### Watch this video: [NB3 : Power Supply](https://vimeo.com/1035306761)
 <p align="center">
 <a href="https://vimeo.com/1035306761" title="Control+Click to watch in new tab"><img src="../../../../boxes/power/_resources/lessons/thumbnails/NB3_Power-Supply.gif" alt="NB3 : Power Supply" width="480"/></a>
 </p>
@@ -60,7 +60,7 @@ M2.5 standoff (20/SS)|01|20 mm long socket-to-socket M2.5 standoff|4|[-D-](/boxe
 
 </p></details><hr>
 
-#### Watch this video: 
+#### Watch this video: [Multi-Tasking](https://vimeo.com/1036086160)
 <p align="center">
 <a href="https://vimeo.com/1036086160" title="Control+Click to watch in new tab"><img src="../../../../boxes/systems/_resources/lessons/thumbnails/Multi-Tasking.gif" alt="Multi-Tasking" width="480"/></a>
 </p>
@@ -74,7 +74,7 @@ M2.5 standoff (20/SS)|01|20 mm long socket-to-socket M2.5 standoff|4|[-D-](/boxe
 </details><hr>
 
 
-#### Watch this video: 
+#### Watch this video: [NB3 : Programming Concurrency (Arduino)](https://vimeo.com/1036094397)
 <p align="center">
 <a href="https://vimeo.com/1036094397" title="Control+Click to watch in new tab"><img src="../../../../boxes/systems/_resources/lessons/thumbnails/NB3_Programming-Concurrency-(Arduino).gif" alt="NB3 : Programming Concurrency (Arduino)" width="480"/></a>
 </p>
@@ -82,7 +82,7 @@ M2.5 standoff (20/SS)|01|20 mm long socket-to-socket M2.5 standoff|4|[-D-](/boxe
 > Getting a microcontroller to perform two tasks (with very different timescales) at the same time is a fun programming challenge. You will develop new skills in organizing your programs and get a glimpse of the problems solved by the *kernel* of a modern operating system.
 
 
-#### Watch this video: 
+#### Watch this video: [Operating Systems](https://vimeo.com/1036096746)
 <p align="center">
 <a href="https://vimeo.com/1036096746" title="Control+Click to watch in new tab"><img src="../../../../boxes/systems/_resources/lessons/thumbnails/Operating-Systems.gif" alt="Operating Systems" width="480"/></a>
 </p>
@@ -97,7 +97,7 @@ M2.5 standoff (20/SS)|01|20 mm long socket-to-socket M2.5 standoff|4|[-D-](/boxe
 </details><hr>
 
 
-#### Watch this video: 
+#### Watch this video: [NB3 : Midbrain](https://vimeo.com/1036089510)
 <p align="center">
 <a href="https://vimeo.com/1036089510" title="Control+Click to watch in new tab"><img src="../../../../boxes/systems/_resources/lessons/thumbnails/NB3_Midbrain.gif" alt="NB3 : Midbrain" width="480"/></a>
 </p>
@@ -112,7 +112,7 @@ M2.5 standoff (20/SS)|01|20 mm long socket-to-socket M2.5 standoff|4|[-D-](/boxe
 </details><hr>
 
 
-#### Watch this video: 
+#### Watch this video: [NB3 : RPiOS](https://vimeo.com/1036095710)
 <p align="center">
 <a href="https://vimeo.com/1036095710" title="Control+Click to watch in new tab"><img src="../../../../boxes/systems/_resources/lessons/thumbnails/NB3_RPiOS.gif" alt="NB3 : RPiOS" width="480"/></a>
 </p>
@@ -127,7 +127,7 @@ M2.5 standoff (20/SS)|01|20 mm long socket-to-socket M2.5 standoff|4|[-D-](/boxe
 </details><hr>
 
 
-#### Watch this video: 
+#### Watch this video: [NB3 : Connecting to RPi](https://vimeo.com/1036391512)
 <p align="center">
 <a href="https://vimeo.com/1036391512" title="Control+Click to watch in new tab"><img src="../../../../boxes/systems/_resources/lessons/thumbnails/NB3_Connecting-to-RPi.gif" alt="NB3 : Connecting to RPi" width="480"/></a>
 </p>
@@ -142,7 +142,7 @@ M2.5 standoff (20/SS)|01|20 mm long socket-to-socket M2.5 standoff|4|[-D-](/boxe
 </details><hr>
 
 
-#### Watch this video: 
+#### Watch this video: [Visual Studio Code](https://vimeo.com/1036716612)
 <p align="center">
 <a href="https://vimeo.com/1036716612" title="Control+Click to watch in new tab"><img src="../../../../boxes/systems/_resources/lessons/thumbnails/Visual-Studio-Code.gif" alt="Visual Studio Code" width="480"/></a>
 </p>
@@ -160,7 +160,7 @@ Name|Depth|Description| # |Data|Link|
 
 </p></details><hr>
 
-#### Watch this video: 
+#### Watch this video: [Navigating the Command Line](https://vimeo.com/1036829527)
 <p align="center">
 <a href="https://vimeo.com/1036829527" title="Control+Click to watch in new tab"><img src="../../../../boxes/linux/_resources/lessons/thumbnails/Navigating-the-Command-Line.gif" alt="Navigating the Command Line" width="480"/></a>
 </p>
@@ -174,7 +174,7 @@ Name|Depth|Description| # |Data|Link|
 </details><hr>
 
 
-#### Watch this video: 
+#### Watch this video: [Git](https://vimeo.com/1036825331)
 <p align="center">
 <a href="https://vimeo.com/1036825331" title="Control+Click to watch in new tab"><img src="../../../../boxes/linux/_resources/lessons/thumbnails/Git.gif" alt="Git" width="480"/></a>
 </p>
@@ -197,7 +197,7 @@ git clone --depth 1 https://github.com/NoBlackBoxes/LastBlackBox
 </details><hr>
 
 
-#### Watch this video: 
+#### Watch this video: [Package Managers](https://vimeo.com/1036834036)
 <p align="center">
 <a href="https://vimeo.com/1036834036" title="Control+Click to watch in new tab"><img src="../../../../boxes/linux/_resources/lessons/thumbnails/Package-Managers.gif" alt="Package Managers" width="480"/></a>
 </p>
@@ -215,7 +215,7 @@ Name|Depth|Description| # |Data|Link|
 
 </p></details><hr>
 
-#### Watch this video: 
+#### Watch this video: [Introducing the Interpreter](https://vimeo.com/1042618092)
 <p align="center">
 <a href="https://vimeo.com/1042618092" title="Control+Click to watch in new tab"><img src="../../../../boxes/python/_resources/lessons/thumbnails/Introducing-the-Interpreter.gif" alt="Introducing the Interpreter" width="480"/></a>
 </p>
@@ -232,7 +232,7 @@ Name|Depth|Description| # |Data|Link|
 </details><hr>
 
 
-#### Watch this video: 
+#### Watch this video: [Virtual Environments](https://vimeo.com/1042637566)
 <p align="center">
 <a href="https://vimeo.com/1042637566" title="Control+Click to watch in new tab"><img src="../../../../boxes/python/_resources/lessons/thumbnails/Virtual-Environments.gif" alt="Virtual Environments" width="480"/></a>
 </p>

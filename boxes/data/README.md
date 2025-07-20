@@ -15,7 +15,7 @@ Resistor (330)|10|330 &Omega;/0.25 W|4|[-D-](/boxes/electrons/_resources/datashe
 
 </p></details><hr>
 
-#### Watch this video: 
+#### Watch this video: [Analog to Digital Converters](https://vimeo.com/1033223967)
 <p align="center">
 <a href="https://vimeo.com/1033223967" title="Control+Click to watch in new tab"><img src="../../boxes/data/_resources/lessons/thumbnails/Analog-to-Digital-Converters.gif" alt="Analog to Digital Converters" width="480"/></a>
 </p>
@@ -24,7 +24,7 @@ Resistor (330)|10|330 &Omega;/0.25 W|4|[-D-](/boxes/electrons/_resources/datashe
 
 - Build the input stage for a 2-bit ADC using the LM339/LM2901 comparator and a resistor ladder.
 
-#### Watch this video: 
+#### Watch this video: [Binary Numbers](https://vimeo.com/1033226788)
 <p align="center">
 <a href="https://vimeo.com/1033226788" title="Control+Click to watch in new tab"><img src="../../boxes/data/_resources/lessons/thumbnails/Binary-Numbers.gif" alt="Binary Numbers" width="480"/></a>
 </p>

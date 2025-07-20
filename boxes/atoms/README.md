@@ -12,7 +12,7 @@ Periodic Table|01|Periodic Table business card|1|[-D-](/boxes/atoms/card)|[-L-](
 
 </p></details><hr>
 
-#### Watch this video: 
+#### Watch this video: [The Periodic Table](https://vimeo.com/1028399080)
 <p align="center">
 <a href="https://vimeo.com/1028399080" title="Control+Click to watch in new tab"><img src="../../boxes/atoms/_resources/lessons/thumbnails/The-Periodic-Table.gif" alt="The Periodic Table" width="480"/></a>
 </p>
@@ -34,7 +34,7 @@ Periodic Table|01|Periodic Table business card|1|[-D-](/boxes/atoms/card)|[-L-](
 > Wait. What's up with Hydrogen? Why no Neutrons? Oh...what about Helium? Why don't those Protons, with their positve charges, just fly apart?
 
 
-#### Watch this video: 
+#### Watch this video: [Heat](https://vimeo.com/1029691491)
 <p align="center">
 <a href="https://vimeo.com/1029691491" title="Control+Click to watch in new tab"><img src="../../boxes/atoms/_resources/lessons/thumbnails/Heat.gif" alt="Heat" width="480"/></a>
 </p>
@@ -42,7 +42,7 @@ Periodic Table|01|Periodic Table business card|1|[-D-](/boxes/atoms/card)|[-L-](
 > Atoms in every material are always moving. This motion of atoms (their average kinetic energy) is heat.
 
 
-#### Watch this video: 
+#### Watch this video: [Atomic Structure](https://vimeo.com/1000458082)
 <p align="center">
 <a href="https://vimeo.com/1000458082" title="Control+Click to watch in new tab"><img src="../../boxes/atoms/_resources/lessons/thumbnails/Atomic-Structure.gif" alt="Atomic Structure" width="480"/></a>
 </p>

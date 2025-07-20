@@ -24,7 +24,7 @@ Lightbulb|10|Mini incandescent bulb (6 V)|1|[-D-](/boxes/light/_resources/datash
 > The fundamental equations of classical electromagnetism are surprisingly easy to understand...and measure.
 
 
-#### Watch this video: 
+#### Watch this video: [Electromagnetic Radiation](https://vimeo.com/1032447600)
 <p align="center">
 <a href="https://vimeo.com/1032447600" title="Control+Click to watch in new tab"><img src="../../boxes/light/_resources/lessons/thumbnails/Electromagnetic-Radiation.gif" alt="Electromagnetic Radiation" width="480"/></a>
 </p>

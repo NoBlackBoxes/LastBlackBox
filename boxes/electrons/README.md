@@ -28,7 +28,7 @@ Rubber feet|01|Adhesive rubber standoffs (1421T6CL)|4|[-D-](/boxes/electrons/_re
 
 </p></details><hr>
 
-#### Watch this video: 
+#### Watch this video: [Voltage Dividers](https://vimeo.com/1030787469)
 <p align="center">
 <a href="https://vimeo.com/1030787469" title="Control+Click to watch in new tab"><img src="../../boxes/electrons/_resources/lessons/thumbnails/Voltage-Dividers.gif" alt="Voltage Dividers" width="480"/></a>
 </p>
@@ -49,7 +49,7 @@ Rubber feet|01|Adhesive rubber standoffs (1421T6CL)|4|[-D-](/boxes/electrons/_re
 </details><hr>
 
 
-#### Watch this video: 
+#### Watch this video: [Electric Fields](https://vimeo.com/1032441712)
 <p align="center">
 <a href="https://vimeo.com/1032441712" title="Control+Click to watch in new tab"><img src="../../boxes/electrons/_resources/lessons/thumbnails/Electric-Fields.gif" alt="Electric Fields" width="480"/></a>
 </p>
@@ -58,7 +58,7 @@ Rubber feet|01|Adhesive rubber standoffs (1421T6CL)|4|[-D-](/boxes/electrons/_re
 
 - Draw the electric field around a negative charge and positive charge separated by a small distance. Use the following image as a starting point.
 
-#### Watch this video: 
+#### Watch this video: [Capacitors](https://vimeo.com/1035298931)
 <p align="center">
 <a href="https://vimeo.com/1035298931" title="Control+Click to watch in new tab"><img src="../../boxes/electrons/_resources/lessons/thumbnails/Capacitors.gif" alt="Capacitors" width="480"/></a>
 </p>
@@ -66,7 +66,7 @@ Rubber feet|01|Adhesive rubber standoffs (1421T6CL)|4|[-D-](/boxes/electrons/_re
 > Two conductors separated by an insulator (but in close proximity) can interact through the electric field. If we put an external voltage across these conductors, then they will gradually accumulate charge until their own voltage matches the external potential. We say that these devices have an intrinsic capacity for storing charge and we call them **capacitors**.
 
 
-#### Watch this video: 
+#### Watch this video: [Resistors](https://vimeo.com/1029696806)
 <p align="center">
 <a href="https://vimeo.com/1029696806" title="Control+Click to watch in new tab"><img src="../../boxes/electrons/_resources/lessons/thumbnails/Resistors.gif" alt="Resistors" width="480"/></a>
 </p>
@@ -81,7 +81,7 @@ Rubber feet|01|Adhesive rubber standoffs (1421T6CL)|4|[-D-](/boxes/electrons/_re
 </details><hr>
 
 
-#### Watch this video: 
+#### Watch this video: [Current](https://vimeo.com/1029334167)
 <p align="center">
 <a href="https://vimeo.com/1029334167" title="Control+Click to watch in new tab"><img src="../../boxes/electrons/_resources/lessons/thumbnails/Current.gif" alt="Current" width="480"/></a>
 </p>
@@ -89,7 +89,7 @@ Rubber feet|01|Adhesive rubber standoffs (1421T6CL)|4|[-D-](/boxes/electrons/_re
 > The rate at which electrons flow, measured as *#charges / second*, is called **current**. We use the unit *Amps* (A) and the circuit symbol **I**.
 
 
-#### Watch this video: 
+#### Watch this video: [Ohm's Law](https://vimeo.com/1029695302)
 <p align="center">
 <a href="https://vimeo.com/1029695302" title="Control+Click to watch in new tab"><img src="../../boxes/electrons/_resources/lessons/thumbnails/Ohm's-Law.gif" alt="Ohm's Law" width="480"/></a>
 </p>
@@ -103,7 +103,7 @@ Rubber feet|01|Adhesive rubber standoffs (1421T6CL)|4|[-D-](/boxes/electrons/_re
 </details><hr>
 
 
-#### Watch this video: 
+#### Watch this video: [Power](https://vimeo.com/1029693122)
 <p align="center">
 <a href="https://vimeo.com/1029693122" title="Control+Click to watch in new tab"><img src="../../boxes/electrons/_resources/lessons/thumbnails/Power.gif" alt="Power" width="480"/></a>
 </p>
@@ -111,7 +111,7 @@ Rubber feet|01|Adhesive rubber standoffs (1421T6CL)|4|[-D-](/boxes/electrons/_re
 > When electrons move through a circuit, they deliver power (some amount of energy in some amount of time). This power can be used to do useful things: make a motor move, light a lamp, or generate heat. If we deliver too little power, then our electronic device may not work as designed. If we deliver too much, then it may never work again. We measure power in Watts.
 
 
-#### Watch this video: 
+#### Watch this video: [Batteries](https://vimeo.com/1029278169)
 <p align="center">
 <a href="https://vimeo.com/1029278169" title="Control+Click to watch in new tab"><img src="../../boxes/electrons/_resources/lessons/thumbnails/Batteries.gif" alt="Batteries" width="480"/></a>
 </p>
@@ -135,7 +135,7 @@ Rubber feet|01|Adhesive rubber standoffs (1421T6CL)|4|[-D-](/boxes/electrons/_re
 </details><hr>
 
 
-#### Watch this video: 
+#### Watch this video: [Conductors](https://vimeo.com/1029337222)
 <p align="center">
 <a href="https://vimeo.com/1029337222" title="Control+Click to watch in new tab"><img src="../../boxes/electrons/_resources/lessons/thumbnails/Conductors.gif" alt="Conductors" width="480"/></a>
 </p>
@@ -143,7 +143,7 @@ Rubber feet|01|Adhesive rubber standoffs (1421T6CL)|4|[-D-](/boxes/electrons/_re
 > Some materials have electrons in their outer orbitals that are happy to jump between neighboring atomic nuclei (of the same element). These electrons are "free" to move around the material. If we place such a material between two locations with a *potential difference* (voltage), then electrons will flow from the **(-)** location to the **(+)** location; the material will **conduct** electricity.
 
 
-#### Watch this video: 
+#### Watch this video: [Voltage](https://vimeo.com/1000730032)
 <p align="center">
 <a href="https://vimeo.com/1000730032" title="Control+Click to watch in new tab"><img src="../../boxes/electrons/_resources/lessons/thumbnails/Voltage.gif" alt="Voltage" width="480"/></a>
 </p>

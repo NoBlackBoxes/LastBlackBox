@@ -18,7 +18,7 @@ Resistor (470)|01|470 &Omega;/0.25 W|2|[-D-](/boxes/electrons/_resources/datashe
 
 </p></details><hr>
 
-#### Watch this video: 
+#### Watch this video: [Semiconductors](https://vimeo.com/1032460818)
 <p align="center">
 <a href="https://vimeo.com/1032460818" title="Control+Click to watch in new tab"><img src="../../../../boxes/transistors/_resources/lessons/thumbnails/Semiconductors.gif" alt="Semiconductors" width="480"/></a>
 </p>
@@ -26,7 +26,7 @@ Resistor (470)|01|470 &Omega;/0.25 W|2|[-D-](/boxes/electrons/_resources/datashe
 > We can modify a pure crystal of certain elements (e.g. silicon) to change how well they conduct electricity.
 
 
-#### Watch this video: 
+#### Watch this video: [Diodes](https://vimeo.com/1032443724)
 <p align="center">
 <a href="https://vimeo.com/1032443724" title="Control+Click to watch in new tab"><img src="../../../../boxes/transistors/_resources/lessons/thumbnails/Diodes.gif" alt="Diodes" width="480"/></a>
 </p>
@@ -40,7 +40,7 @@ Resistor (470)|01|470 &Omega;/0.25 W|2|[-D-](/boxes/electrons/_resources/datashe
 </details><hr>
 
 
-#### Watch this video: 
+#### Watch this video: [NB3 : Testing Diodes](https://vimeo.com/1032458879)
 <p align="center">
 <a href="https://vimeo.com/1032458879" title="Control+Click to watch in new tab"><img src="../../../../boxes/transistors/_resources/lessons/thumbnails/NB3_Testing-Diodes.gif" alt="NB3 : Testing Diodes" width="480"/></a>
 </p>
@@ -48,7 +48,7 @@ Resistor (470)|01|470 &Omega;/0.25 W|2|[-D-](/boxes/electrons/_resources/datashe
 > Diodes allow current to flow in only one direction...if you overcome the internal junction potential. Let's measure this...and also use an LED to emit some light.
 
 
-#### Watch this video: 
+#### Watch this video: [Transistors (MOSFETs)](https://vimeo.com/1032452466)
 <p align="center">
 <a href="https://vimeo.com/1032452466" title="Control+Click to watch in new tab"><img src="../../../../boxes/transistors/_resources/lessons/thumbnails/Transistors-(MOSFETs).gif" alt="Transistors (MOSFETs)" width="480"/></a>
 </p>

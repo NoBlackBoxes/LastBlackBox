@@ -104,7 +104,8 @@ class Lesson:
         output = []
         if type == "MD":
             if self.video:
-                output.append(f"#### Watch this video: {self.video.render(type)}\n")
+                output.append(f"#### Watch this video: [{self.name}]({self.video.url})\n")
+                output.append(f"{self.video.render(type)}\n")
             else:
                 output.append(f"### {self.name}\n")
             output.append(f"> {self.description}\n\n")

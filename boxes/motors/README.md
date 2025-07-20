@@ -12,7 +12,7 @@ DC Brushed Motor|01|6V Brushed DC motor|1|[-D-](/boxes/motors/)|[-L-](https://ww
 
 </p></details><hr>
 
-#### Watch this video: 
+#### Watch this video: [DC Motors](https://vimeo.com/1031627739)
 <p align="center">
 <a href="https://vimeo.com/1031627739" title="Control+Click to watch in new tab"><img src="../../boxes/motors/_resources/lessons/thumbnails/DC-Motors.gif" alt="DC Motors" width="480"/></a>
 </p>

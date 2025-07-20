@@ -13,7 +13,7 @@ Servo Wheel|01|Wheels (70x8mm) for servos|2|[-D-](/boxes/control/)|[-L-](https:/
 
 </p></details><hr>
 
-#### Watch this video: 
+#### Watch this video: [Servo Loops](https://vimeo.com/1033963709)
 <p align="center">
 <a href="https://vimeo.com/1033963709" title="Control+Click to watch in new tab"><img src="../../../../boxes/control/_resources/lessons/thumbnails/Servo-Loops.gif" alt="Servo Loops" width="480"/></a>
 </p>
@@ -36,7 +36,7 @@ Spacer|01|NB3 spacer 3 mm spacer for mounting ball caster|5|[-D-](/boxes/robotic
 
 </p></details><hr>
 
-#### Watch this video: 
+#### Watch this video: [NB3 : Muscles (Servos)](https://vimeo.com/1034800702)
 <p align="center">
 <a href="https://vimeo.com/1034800702" title="Control+Click to watch in new tab"><img src="../../../../boxes/robotics/_resources/lessons/thumbnails/NB3_Muscles-(Servos).gif" alt="NB3 : Muscles (Servos)" width="480"/></a>
 </p>
@@ -92,7 +92,7 @@ void loop() {
 </details><hr>
 
 
-#### Watch this video: 
+#### Watch this video: [NB3 : Ball Caster](https://vimeo.com/1034797327)
 <p align="center">
 <a href="https://vimeo.com/1034797327" title="Control+Click to watch in new tab"><img src="../../../../boxes/robotics/_resources/lessons/thumbnails/NB3_Ball-Caster.gif" alt="NB3 : Ball Caster" width="480"/></a>
 </p>

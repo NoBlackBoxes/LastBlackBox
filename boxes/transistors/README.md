@@ -22,7 +22,7 @@ Resistor (470)|01|470 &Omega;/0.25 W|2|[-D-](/boxes/electrons/_resources/datashe
 
 </p></details><hr>
 
-#### Watch this video: 
+#### Watch this video: [Diodes](https://vimeo.com/1032443724)
 <p align="center">
 <a href="https://vimeo.com/1032443724" title="Control+Click to watch in new tab"><img src="../../boxes/transistors/_resources/lessons/thumbnails/Diodes.gif" alt="Diodes" width="480"/></a>
 </p>
@@ -36,7 +36,7 @@ Resistor (470)|01|470 &Omega;/0.25 W|2|[-D-](/boxes/electrons/_resources/datashe
 </details><hr>
 
 
-#### Watch this video: 
+#### Watch this video: [Semiconductors](https://vimeo.com/1032460818)
 <p align="center">
 <a href="https://vimeo.com/1032460818" title="Control+Click to watch in new tab"><img src="../../boxes/transistors/_resources/lessons/thumbnails/Semiconductors.gif" alt="Semiconductors" width="480"/></a>
 </p>
@@ -48,7 +48,7 @@ Resistor (470)|01|470 &Omega;/0.25 W|2|[-D-](/boxes/electrons/_resources/datashe
 > Bipolar junction transistors inject charge carriers to amplify the external *current* flowing. They are current controlled devices.
 
 
-#### Watch this video: 
+#### Watch this video: [Transistors (MOSFETs)](https://vimeo.com/1032452466)
 <p align="center">
 <a href="https://vimeo.com/1032452466" title="Control+Click to watch in new tab"><img src="../../boxes/transistors/_resources/lessons/thumbnails/Transistors-(MOSFETs).gif" alt="Transistors (MOSFETs)" width="480"/></a>
 </p>

@@ -15,7 +15,7 @@ Gate (XOR)|10|4xXOR gate|1|[-D-](/boxes/logic/_resources/datasheets/XOR_gates.pd
 
 </p></details><hr>
 
-#### Watch this video: 
+#### Watch this video: [Logic Gates](https://vimeo.com/1033231995)
 <p align="center">
 <a href="https://vimeo.com/1033231995" title="Control+Click to watch in new tab"><img src="../../boxes/logic/_resources/lessons/thumbnails/Logic-Gates.gif" alt="Logic Gates" width="480"/></a>
 </p>

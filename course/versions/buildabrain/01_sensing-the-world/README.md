@@ -12,7 +12,7 @@ Periodic Table|01|Periodic Table business card|1|[-D-](/boxes/atoms/card)|[-L-](
 
 </p></details><hr>
 
-#### Watch this video: 
+#### Watch this video: [Atomic Structure](https://vimeo.com/1000458082)
 <p align="center">
 <a href="https://vimeo.com/1000458082" title="Control+Click to watch in new tab"><img src="../../../../boxes/atoms/_resources/lessons/thumbnails/Atomic-Structure.gif" alt="Atomic Structure" width="480"/></a>
 </p>
@@ -20,7 +20,7 @@ Periodic Table|01|Periodic Table business card|1|[-D-](/boxes/atoms/card)|[-L-](
 > A brief introduction to the physics of atoms, their parts (protons, neutrons, and electrons), and their classical vs. quantum structure.
 
 
-#### Watch this video: 
+#### Watch this video: [The Periodic Table](https://vimeo.com/1028399080)
 <p align="center">
 <a href="https://vimeo.com/1028399080" title="Control+Click to watch in new tab"><img src="../../../../boxes/atoms/_resources/lessons/thumbnails/The-Periodic-Table.gif" alt="The Periodic Table" width="480"/></a>
 </p>
@@ -29,7 +29,7 @@ Periodic Table|01|Periodic Table business card|1|[-D-](/boxes/atoms/card)|[-L-](
 
 - When you need it *(and you will)*, then you can find a copy of the periodic table [here](/boxes/atoms/_resources/images/periodic_table.png).
 
-#### Watch this video: 
+#### Watch this video: [Heat](https://vimeo.com/1029691491)
 <p align="center">
 <a href="https://vimeo.com/1029691491" title="Control+Click to watch in new tab"><img src="../../../../boxes/atoms/_resources/lessons/thumbnails/Heat.gif" alt="Heat" width="480"/></a>
 </p>
@@ -60,7 +60,7 @@ Rubber feet|01|Adhesive rubber standoffs (1421T6CL)|4|[-D-](/boxes/electrons/_re
 
 </p></details><hr>
 
-#### Watch this video: 
+#### Watch this video: [Voltage](https://vimeo.com/1000730032)
 <p align="center">
 <a href="https://vimeo.com/1000730032" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/Voltage.gif" alt="Voltage" width="480"/></a>
 </p>
@@ -68,7 +68,7 @@ Rubber feet|01|Adhesive rubber standoffs (1421T6CL)|4|[-D-](/boxes/electrons/_re
 > When there is more negative or positive charge in one location vs. another there is a *potential difference* between these locations. This *potential difference* is called a **voltage** and it creates a pressure that pushes electrons from the location with more negative charge to the location with less.
 
 
-#### Watch this video: 
+#### Watch this video: [Conductors](https://vimeo.com/1029337222)
 <p align="center">
 <a href="https://vimeo.com/1029337222" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/Conductors.gif" alt="Conductors" width="480"/></a>
 </p>
@@ -76,7 +76,7 @@ Rubber feet|01|Adhesive rubber standoffs (1421T6CL)|4|[-D-](/boxes/electrons/_re
 > Some materials have electrons in their outer orbitals that are happy to jump between neighboring atomic nuclei (of the same element). These electrons are "free" to move around the material. If we place such a material between two locations with a *potential difference* (voltage), then electrons will flow from the **(-)** location to the **(+)** location; the material will **conduct** electricity.
 
 
-#### Watch this video: 
+#### Watch this video: [Batteries](https://vimeo.com/1029278169)
 <p align="center">
 <a href="https://vimeo.com/1029278169" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/Batteries.gif" alt="Batteries" width="480"/></a>
 </p>
@@ -100,7 +100,7 @@ Rubber feet|01|Adhesive rubber standoffs (1421T6CL)|4|[-D-](/boxes/electrons/_re
 </details><hr>
 
 
-#### Watch this video: 
+#### Watch this video: [Current](https://vimeo.com/1029334167)
 <p align="center">
 <a href="https://vimeo.com/1029334167" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/Current.gif" alt="Current" width="480"/></a>
 </p>
@@ -108,7 +108,7 @@ Rubber feet|01|Adhesive rubber standoffs (1421T6CL)|4|[-D-](/boxes/electrons/_re
 > The rate at which electrons flow, measured as *#charges / second*, is called **current**. We use the unit *Amps* (A) and the circuit symbol **I**.
 
 
-#### Watch this video: 
+#### Watch this video: [Resistors](https://vimeo.com/1029696806)
 <p align="center">
 <a href="https://vimeo.com/1029696806" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/Resistors.gif" alt="Resistors" width="480"/></a>
 </p>
@@ -123,7 +123,7 @@ Rubber feet|01|Adhesive rubber standoffs (1421T6CL)|4|[-D-](/boxes/electrons/_re
 </details><hr>
 
 
-#### Watch this video: 
+#### Watch this video: [NB3 : Body](https://vimeo.com/1030776673)
 <p align="center">
 <a href="https://vimeo.com/1030776673" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/NB3_Body.gif" alt="NB3 : Body" width="480"/></a>
 </p>
@@ -138,7 +138,7 @@ Rubber feet|01|Adhesive rubber standoffs (1421T6CL)|4|[-D-](/boxes/electrons/_re
 </details><hr>
 
 
-#### Watch this video: 
+#### Watch this video: [NB3 : Building Circuits](https://vimeo.com/1030783826)
 <p align="center">
 <a href="https://vimeo.com/1030783826" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/NB3_Building-Circuits.gif" alt="NB3 : Building Circuits" width="480"/></a>
 </p>
@@ -155,7 +155,7 @@ Rubber feet|01|Adhesive rubber standoffs (1421T6CL)|4|[-D-](/boxes/electrons/_re
 </details><hr>
 
 
-#### Watch this video: 
+#### Watch this video: [Ohm's Law](https://vimeo.com/1029695302)
 <p align="center">
 <a href="https://vimeo.com/1029695302" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/Ohm's-Law.gif" alt="Ohm's Law" width="480"/></a>
 </p>
@@ -169,7 +169,7 @@ Rubber feet|01|Adhesive rubber standoffs (1421T6CL)|4|[-D-](/boxes/electrons/_re
 </details><hr>
 
 
-#### Watch this video: 
+#### Watch this video: [Voltage Dividers](https://vimeo.com/1030787469)
 <p align="center">
 <a href="https://vimeo.com/1030787469" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/Voltage-Dividers.gif" alt="Voltage Dividers" width="480"/></a>
 </p>
@@ -201,7 +201,7 @@ Photoresistor (LDR)|01|Light-dependent resistor (GL5516 and GL5528)|4|[-D-](/box
 
 </p></details><hr>
 
-#### Watch this video: 
+#### Watch this video: [Transducers](https://vimeo.com/1031477896)
 <p align="center">
 <a href="https://vimeo.com/1031477896" title="Control+Click to watch in new tab"><img src="../../../../boxes/sensors/_resources/lessons/thumbnails/Transducers.gif" alt="Transducers" width="480"/></a>
 </p>

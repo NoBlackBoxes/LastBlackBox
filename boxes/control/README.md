@@ -15,7 +15,7 @@ DC Gearbox Motor|10|TT Gearbox DC Motor - 200RPM - 3 to 6VDC and wheel|2|[-D-](/
 
 </p></details><hr>
 
-#### Watch this video: 
+#### Watch this video: [PWM](https://vimeo.com/1033905955)
 <p align="center">
 <a href="https://vimeo.com/1033905955" title="Control+Click to watch in new tab"><img src="../../boxes/control/_resources/lessons/thumbnails/PWM.gif" alt="PWM" width="480"/></a>
 </p>
@@ -23,7 +23,7 @@ DC Gearbox Motor|10|TT Gearbox DC Motor - 200RPM - 3 to 6VDC and wheel|2|[-D-](/
 > We can control a "continuous" range of outputs with a binary digital signal (only 0s and 1s) by switching the output **ON** and **OFF** very quickly. Our "continuous" output is then the average of the percentage of time spent **ON** vs **OFF**. We cal this percentage the "duty cycle", and we call this output control method *pulse width modulation* or **PWM**.
 
 
-#### Watch this video: 
+#### Watch this video: [Servo Loops](https://vimeo.com/1033963709)
 <p align="center">
 <a href="https://vimeo.com/1033963709" title="Control+Click to watch in new tab"><img src="../../boxes/control/_resources/lessons/thumbnails/Servo-Loops.gif" alt="Servo Loops" width="480"/></a>
 </p>
@@ -31,7 +31,7 @@ DC Gearbox Motor|10|TT Gearbox DC Motor - 200RPM - 3 to 6VDC and wheel|2|[-D-](/
 > A servo loop connects feedback from a sensor to the control signals sent to a motor.
 
 
-#### Watch this video: 
+#### Watch this video: [H-Bridges](https://vimeo.com/1034209519)
 <p align="center">
 <a href="https://vimeo.com/1034209519" title="Control+Click to watch in new tab"><img src="../../boxes/control/_resources/lessons/thumbnails/H-Bridges.gif" alt="H-Bridges" width="480"/></a>
 </p>

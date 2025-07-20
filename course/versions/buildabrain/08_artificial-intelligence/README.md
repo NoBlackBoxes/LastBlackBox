@@ -32,7 +32,7 @@ M2 nut|01|regular M2 nut|2|[-D-](/boxes/audio/)|[-L-](https://www.accu.co.uk/hex
 > I2S is a fully-digital protocol used by modern CPUs to talk to audio devices over a small number of connections. It requires only a clock, LR select (for selecting which channel is being written/read), data in (for microphone input), and data out (for speaker output).
 
 
-#### Watch this video: 
+#### Watch this video: [NB3 : Build and Install the Linux I2S Driver](https://vimeo.com/1042781850)
 <p align="center">
 <a href="https://vimeo.com/1042781850" title="Control+Click to watch in new tab"><img src="../../../../boxes/audio/_resources/lessons/thumbnails/NB3_Build-and-Install-the-Linux-I2S-Driver.gif" alt="NB3 : Build and Install the Linux I2S Driver" width="480"/></a>
 </p>
@@ -40,7 +40,7 @@ M2 nut|01|regular M2 nut|2|[-D-](/boxes/audio/)|[-L-](https://www.accu.co.uk/hex
 > Let's build (compile) and install the Linux device driver for our NB3's sound card. This software module is required to access the NB3's ears (microphone) and mouth (speaker).
 
 
-#### Watch this video: 
+#### Watch this video: [NB3 : Install the Ears](https://vimeo.com/1042943195)
 <p align="center">
 <a href="https://vimeo.com/1042943195" title="Control+Click to watch in new tab"><img src="../../../../boxes/audio/_resources/lessons/thumbnails/NB3_Install-the-Ears.gif" alt="NB3 : Install the Ears" width="480"/></a>
 </p>
@@ -52,7 +52,7 @@ M2 nut|01|regular M2 nut|2|[-D-](/boxes/audio/)|[-L-](https://www.accu.co.uk/hex
 > Better sounding speakers.
 
 
-#### Watch this video: 
+#### Watch this video: [NB3 : Install the Mouth](https://vimeo.com/1042947561)
 <p align="center">
 <a href="https://vimeo.com/1042947561" title="Control+Click to watch in new tab"><img src="../../../../boxes/audio/_resources/lessons/thumbnails/NB3_Install-the-Mouth.gif" alt="NB3 : Install the Mouth" width="480"/></a>
 </p>
@@ -87,7 +87,7 @@ M2 nut|01|regular M2 nut|4|[-D-](/boxes/audio/)|[-L-](https://www.accu.co.uk/hex
 > From CCDs to CMOS.
 
 
-#### Watch this video: 
+#### Watch this video: [NB3 : Install the Eye](https://vimeo.com/1042945461)
 <p align="center">
 <a href="https://vimeo.com/1042945461" title="Control+Click to watch in new tab"><img src="../../../../boxes/vision/_resources/lessons/thumbnails/NB3_Install-the-Eye.gif" alt="NB3 : Install the Eye" width="480"/></a>
 </p>

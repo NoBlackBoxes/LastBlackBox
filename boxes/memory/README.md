@@ -12,7 +12,7 @@ Gate (NAND)|10|4xNAND gate|2|[-D-](/boxes/memory/_resources/datasheets/NAND_gate
 
 </p></details><hr>
 
-#### Watch this video: 
+#### Watch this video: [Flash Memory](https://vimeo.com/1033230293)
 <p align="center">
 <a href="https://vimeo.com/1033230293" title="Control+Click to watch in new tab"><img src="../../boxes/memory/_resources/lessons/thumbnails/Flash-Memory.gif" alt="Flash Memory" width="480"/></a>
 </p>
@@ -25,7 +25,7 @@ Gate (NAND)|10|4xNAND gate|2|[-D-](/boxes/memory/_resources/datasheets/NAND_gate
 
 - Build an D Flip Flop
 
-#### Watch this video: 
+#### Watch this video: [SR Latch](https://vimeo.com/1033238234)
 <p align="center">
 <a href="https://vimeo.com/1033238234" title="Control+Click to watch in new tab"><img src="../../boxes/memory/_resources/lessons/thumbnails/SR-Latch.gif" alt="SR Latch" width="480"/></a>
 </p>

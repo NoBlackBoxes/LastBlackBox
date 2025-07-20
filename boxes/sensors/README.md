@@ -14,7 +14,7 @@ Piezo|10|Piezo element|1|[-D-](/boxes/sensors/_resources/datasheets/piezo.pdf)|[
 
 </p></details><hr>
 
-#### Watch this video: 
+#### Watch this video: [Transducers](https://vimeo.com/1031477896)
 <p align="center">
 <a href="https://vimeo.com/1031477896" title="Control+Click to watch in new tab"><img src="../../boxes/sensors/_resources/lessons/thumbnails/Transducers.gif" alt="Transducers" width="480"/></a>
 </p>

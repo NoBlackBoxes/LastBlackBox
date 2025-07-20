@@ -60,7 +60,7 @@ class Video:
         gif_name = gif_name.replace(" ", "-")
         output = ''
         if type == "MD":
-            output = f"\n<p align=\"center\">\n<a href=\"{self.url}\" title=\"Control+Click to watch in new tab\"><img src=\"{self.course.image_prefix}/boxes/{self.box_name}/_resources/lessons/thumbnails/{gif_name}\" alt=\"{self.name}\" width=\"480\"/></a>\n</p>\n"
+            output = f"<p align=\"center\">\n<a href=\"{self.url}\" title=\"Control+Click to watch in new tab\"><img src=\"{self.course.image_prefix}/boxes/{self.box_name}/_resources/lessons/thumbnails/{gif_name}\" alt=\"{self.name}\" width=\"480\"/></a>\n</p>\n"
         elif type == "HTML":
             embed_string = f"<iframe id=\"video_player\" src=\"https://player.vimeo.com/video/{self.id}?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\" width=\"640\" height=\"360\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture; clipboard-write\" title=\"{self.name}\"></iframe>"
             output = f"<p align=\"center\">\n{embed_string}\n</p>\n"

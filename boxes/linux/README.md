@@ -11,7 +11,7 @@ Name|Depth|Description| # |Data|Link|
 
 </p></details><hr>
 
-#### Watch this video: 
+#### Watch this video: [Package Managers](https://vimeo.com/1036834036)
 <p align="center">
 <a href="https://vimeo.com/1036834036" title="Control+Click to watch in new tab"><img src="../../boxes/linux/_resources/lessons/thumbnails/Package-Managers.gif" alt="Package Managers" width="480"/></a>
 </p>
@@ -19,7 +19,7 @@ Name|Depth|Description| # |Data|Link|
 > Installing and "managing" software can get complicated. Programs that help coordinate this process are called **package managers**.
 
 
-#### Watch this video: 
+#### Watch this video: [Navigating the Command Line](https://vimeo.com/1036829527)
 <p align="center">
 <a href="https://vimeo.com/1036829527" title="Control+Click to watch in new tab"><img src="../../boxes/linux/_resources/lessons/thumbnails/Navigating-the-Command-Line.gif" alt="Navigating the Command Line" width="480"/></a>
 </p>
@@ -33,7 +33,7 @@ Name|Depth|Description| # |Data|Link|
 </details><hr>
 
 
-#### Watch this video: 
+#### Watch this video: [Git](https://vimeo.com/1036825331)
 <p align="center">
 <a href="https://vimeo.com/1036825331" title="Control+Click to watch in new tab"><img src="../../boxes/linux/_resources/lessons/thumbnails/Git.gif" alt="Git" width="480"/></a>
 </p>

@@ -11,7 +11,7 @@ Name|Depth|Description| # |Data|Link|
 
 </p></details><hr>
 
-#### Watch this video: 
+#### Watch this video: [Logic Gates](https://vimeo.com/1033231995)
 <p align="center">
 <a href="https://vimeo.com/1033231995" title="Control+Click to watch in new tab"><img src="../../../../boxes/logic/_resources/lessons/thumbnails/Logic-Gates.gif" alt="Logic Gates" width="480"/></a>
 </p>
@@ -29,7 +29,7 @@ Name|Depth|Description| # |Data|Link|
 
 </p></details><hr>
 
-#### Watch this video: 
+#### Watch this video: [Flash Memory](https://vimeo.com/1033230293)
 <p align="center">
 <a href="https://vimeo.com/1033230293" title="Control+Click to watch in new tab"><img src="../../../../boxes/memory/_resources/lessons/thumbnails/Flash-Memory.gif" alt="Flash Memory" width="480"/></a>
 </p>
@@ -50,7 +50,7 @@ Cable (MiniUSB-1m)|01|Mini-USB to Type-A cable (1 m)|1|[-D-](/boxes/computers/)|
 
 </p></details><hr>
 
-#### Watch this video: 
+#### Watch this video: [Architecture](https://vimeo.com/1033601146)
 <p align="center">
 <a href="https://vimeo.com/1033601146" title="Control+Click to watch in new tab"><img src="../../../../boxes/computers/_resources/lessons/thumbnails/Architecture.gif" alt="Architecture" width="480"/></a>
 </p>
@@ -58,7 +58,7 @@ Cable (MiniUSB-1m)|01|Mini-USB to Type-A cable (1 m)|1|[-D-](/boxes/computers/)|
 > The basic building blocks of a computer (memory, ALU, clock, bus, and IO) have a standard arrangement (architecture) in modern systems.
 
 
-#### Watch this video: 
+#### Watch this video: [NB3 : Hindbrain](https://vimeo.com/1033609727)
 <p align="center">
 <a href="https://vimeo.com/1033609727" title="Control+Click to watch in new tab"><img src="../../../../boxes/computers/_resources/lessons/thumbnails/NB3_Hindbrain.gif" alt="NB3 : Hindbrain" width="480"/></a>
 </p>

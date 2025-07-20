@@ -11,7 +11,7 @@ Name|Depth|Description| # |Data|Link|
 
 </p></details><hr>
 
-#### Watch this video: 
+#### Watch this video: [Virtual Environments](https://vimeo.com/1042637566)
 <p align="center">
 <a href="https://vimeo.com/1042637566" title="Control+Click to watch in new tab"><img src="../../boxes/python/_resources/lessons/thumbnails/Virtual-Environments.gif" alt="Virtual Environments" width="480"/></a>
 </p>
@@ -35,7 +35,7 @@ Name|Depth|Description| # |Data|Link|
 </details><hr>
 
 
-#### Watch this video: 
+#### Watch this video: [Introducing the Interpreter](https://vimeo.com/1042618092)
 <p align="center">
 <a href="https://vimeo.com/1042618092" title="Control+Click to watch in new tab"><img src="../../boxes/python/_resources/lessons/thumbnails/Introducing-the-Interpreter.gif" alt="Introducing the Interpreter" width="480"/></a>
 </p>
