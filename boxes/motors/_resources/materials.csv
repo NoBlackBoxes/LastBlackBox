@@ -1,1 +1,2 @@
-DC Brushed Motor,01,6V Brushed DC motor,1,/boxes/motors/,https://www.amazon.co.uk/Gikfun-1V-6V-Hobby-Arduino-EK1894/dp/B07BHHP2BT,Loose,20,40,15,2.5,1.25
+name,slug,depth,description,quantity,datasheet,supplier,package,x,y,z,unit_price,bulk_price,new,used
+DC Brushed Motor,DC_Brushed_Motor,01,6V Brushed DC motor,1,/boxes/motors/,https://www.amazon.co.uk/Gikfun-1V-6V-Hobby-Arduino-EK1894/dp/B07BHHP2BT,Loose,20,40,15,2.5,1.25,0,0

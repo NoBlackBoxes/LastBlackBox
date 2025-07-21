@@ -1,7 +1,8 @@
-Computer (RPi4),01,Raspberry Pi 4b with 2 GB RAM,1,/boxes/systems/_resources/datasheets/rpi4b.pdf,https://uk.farnell.com/raspberry-pi/rpi4-modbp-2gb/raspberry-pi-4-model-b-2gb/dp/3051886,Loose,95,70,26,42.852,42.852
-Heatsinks,01,Heatsinks for RPi 4b chips,1,/boxes/systems/_resources/datasheets/rpi4b_heatsinks.jpg,https://www.amazon.co.uk/gp/product/B07VRNT3HX,Loose,40,20,10,3.5,2.0
-SD Card,01,16 GB micro SD card,1,/boxes/systems/_resources/datasheets/SanDisk-SDSQUAR-016G-GN6MA-datasheet.pdf,https://uk.farnell.com/integral/inmsdh16g-100v10/16gb-microsdhc-v10-uhs-i-u1/dp/3498606,Loose,100,50,3,5.652,5.652
-USB SD Card IO,01,SD card reader/writer,1,/boxes/systems/,https://www.amazon.co.uk/Beikell-High-speed-Adapter-Supports-MMC-Compatible-Windows/dp/B07L9VT8YY,Loose,70,40,15,4.07,4.07
-M2.5 bolt (6),01,6 mm long M2.5 bolt,8,/boxes/robotics/,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2,Hardware,5,5,6,0.15,0.04
-M2.5 standoff (20/SS),01,20 mm long socket-to-socket M2.5 standoff,4,/boxes/systems/,https://uk.farnell.com/wurth-elektronik/970200154/standoff-hex-female-female-20mm/dp/2987903,Hardware,5,5,20,0.7368,0.54
-Cable (Ethernet),10,RJ45 cact5e ethernet patch cable (1 m),1,/boxes/systems/_resources/datasheets/ethernet_cable_1m.pdf,https://uk.farnell.com/pro-signal/ps11074/lead-patch-cat-5e-1-00m-black/dp/1734943,Cables,100,50,10,0.8448,0.6936
+name,slug,depth,description,quantity,datasheet,supplier,package,x,y,z,unit_price,bulk_price,new,used
+Computer (RPi4),Computer__RPi4_,01,Raspberry Pi 4b with 2 GB RAM,1,/boxes/systems/_resources/datasheets/rpi4b.pdf,https://uk.farnell.com/raspberry-pi/rpi4-modbp-2gb/raspberry-pi-4-model-b-2gb/dp/3051886,Loose,95,70,26,42.852,42.852,0,0
+Heatsinks,Heatsinks,01,Heatsinks for RPi 4b chips,1,/boxes/systems/_resources/datasheets/rpi4b_heatsinks.jpg,https://www.amazon.co.uk/gp/product/B07VRNT3HX,Loose,40,20,10,3.5,2.0,0,0
+SD Card,SD_Card,01,16 GB micro SD card,1,/boxes/systems/_resources/datasheets/SanDisk-SDSQUAR-016G-GN6MA-datasheet.pdf,https://uk.farnell.com/integral/inmsdh16g-100v10/16gb-microsdhc-v10-uhs-i-u1/dp/3498606,Loose,100,50,3,5.652,5.652,0,0
+USB SD Card IO,USB_SD_Card_IO,01,SD card reader/writer,1,/boxes/systems/,https://www.amazon.co.uk/Beikell-High-speed-Adapter-Supports-MMC-Compatible-Windows/dp/B07L9VT8YY,Loose,70,40,15,4.07,4.07,0,0
+M2.5 bolt (6),M2_5_bolt__6_,01,6 mm long M2.5 bolt,8,/boxes/robotics/,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2,Hardware,5,5,6,0.15,0.04,0,0
+M2.5 standoff (20/SS),M2_5_standoff__20_SS_,01,20 mm long socket-to-socket M2.5 standoff,4,/boxes/systems/,https://uk.farnell.com/wurth-elektronik/970200154/standoff-hex-female-female-20mm/dp/2987903,Hardware,5,5,20,0.7368,0.54,0,0
+Cable (Ethernet),Cable__Ethernet_,10,RJ45 cact5e ethernet patch cable (1 m),1,/boxes/systems/_resources/datasheets/ethernet_cable_1m.pdf,https://uk.farnell.com/pro-signal/ps11074/lead-patch-cat-5e-1-00m-black/dp/1734943,Cables,100,50,10,0.8448,0.6936,0,0

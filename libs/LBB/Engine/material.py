@@ -30,6 +30,8 @@ class Material:
         self.z = None                   # Material z dimension (mm)
         self.unit_price = None          # Material unit price (£)
         self.bulk_price = None          # Material bulk price (£)
+        self.new = None                 # Material new stock
+        self.used = None                # Material used stock
         if text:
             self.parse(text)            # Parse material from "materials.csv" text
         elif dictionary:
@@ -51,7 +53,9 @@ class Material:
             "y": self.y,
             "z": self.z,
             "unit_price": self.unit_price,
-            "bulk_price": self.bulk_price
+            "bulk_price": self.bulk_price,
+            "new": self.new,
+            "used": self.used
         }
         return dictionary
 
@@ -69,26 +73,29 @@ class Material:
         self.y = dictionary.get("y")
         self.z = dictionary.get("z")
         self.unit_price = dictionary.get("unit_price"),
-        self.bulk_price = dictionary.get("bulk_price")
+        self.bulk_price = dictionary.get("bulk_price"),
+        self.new = dictionary.get("new"),
+        self.used = dictionary.get("used")
         return
     
     # Parse material string
     def parse(self, text):
         fields = text.split(",")
         self.name = fields[0].strip()
-        self.slug = re.sub(r'[^\w]', '_', self.name)
-        self.depth = fields[1].strip()
-        self.description = fields[2].strip()
-        self.quantity = int(fields[3].strip())
-        self.datasheet = fields[4].strip()
-        self.supplier = fields[5].strip()
-        self.package = fields[6].strip()
-        self.x = int(fields[7].strip())
-        self.y = int(fields[8].strip())
-        self.z = int(fields[9].strip())
-        if len(fields) > 10: #DEBUG
-            self.unit_price = fields[10].strip()
-            self.bulk_price = fields[11].strip()
+        self.slug = fields[1].strip()
+        self.depth = fields[2].strip()
+        self.description = fields[3].strip()
+        self.quantity = int(fields[4].strip())
+        self.datasheet = fields[5].strip()
+        self.supplier = fields[6].strip()
+        self.package = fields[7].strip()
+        self.x = int(fields[8].strip())
+        self.y = int(fields[9].strip())
+        self.z = int(fields[10].strip())
+        self.unit_price = fields[11].strip()
+        self.bulk_price = fields[12].strip()
+        self.new = fields[13].strip()
+        self.used = fields[14].strip()
         return
 
     # Load material object from JSON

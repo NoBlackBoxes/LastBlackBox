@@ -1,17 +1,18 @@
-NB3 Body,01,NB3 robot base PCB,1,/boxes/electrons/NB3_body,VK,Loose,200,200,11,30.0,20.0
-Resistor (330),10,330 &Omega;/0.25 W,2,/boxes/electrons/_resources/datasheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-330r/res-330r-1-250mw-axial-metal-film/dp/9341730,Passive,50,2,2,0.0696,0.0504
-Resistor (470),01,470 &Omega;/0.25 W,2,/boxes/electrons/_resources/datasheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943,Passive,50,2,2,0.0685,0.0498
-Resistor (1k),01,1 k&Omega;/0.25 W,2,/boxes/electrons/_resources/datasheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-1k/res-1k-1-250mw-axial-metal-film/dp/9341102,Passive,50,2,2,0.0702,0.051
-Resistor (10k),01,10 k&Omega;/0.25 W,2,/boxes/electrons/_resources/datasheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-10k/res-10k-1-250mw-axial-metal-film/dp/9341110,Passive,50,2,2,0.0696,0.0504
-Capacitor (small),10,0.1 uF ceramic capacitor,1,/boxes/electrons/_resources/datasheets/capacitor_ceramic.pdf,https://uk.farnell.com/kemet/c322c104k1r5ta/cap-0-1-f-100v-10-x7r/dp/1457685,Passive,50,2,2,0.3732,0.3012
-Capacitor (large),10,100 uF aluminum electrolytic capacitor,1,/boxes/electrons/_resources/datasheets/capacitor_electrolytic.pdf,https://uk.farnell.com/rubycon/16zlh100mefc5x11/cap-100-f-16v-20/dp/8126283,Passive,50,4,4,0.09,0.0504
-Button,10,Tactile switch,2,/boxes/electrons/_resources/datasheets/button.pdf,https://uk.farnell.com/omron/b3f-1000/switch-spno-0-05a-24v-tht-0-98n/dp/176432,Passive,5,5,3,0.2148,0.1788
-Potentiometer,01,2.2 k&Omega; variable resistor,2,/boxes/electrons/_resources/datasheets/pot_2k2.pdf,https://uk.farnell.com/bourns/3362p-1-222lf/trimmer-pot-2-2kohm-10-1turn-th/dp/2328599,Passive,5,5,3,0.9708,0.72
-Breadboard (400),01,400-tie solderless breadboard,1,/boxes/electrons/_resources/datasheets/breadboard_400.pdf,https://www.amazon.co.uk/gp/product/B0739XRX8F,Loose,85,60,10,4.0,2.3
-Breadboards (170),01,170-tie solderless breadboard,4,/boxes/electrons/_resources/datasheets/breadboard_170.pdf,https://www.amazon.co.uk/ELEGOO-tie-points-Breadboard-Breadboards-Electronic/dp/B01N0YWIR7,Loose,35,50,10,2.0,1.0
-Batteries (AA),01,AA 1.5 V alkaline battery,4,/boxes/electrons/,https://www.amazon.co.uk/Duracell-Optimum-Alkaline-Batteries-MX1500/dp/B093Q5XY66,Loose,60,15,15,5.75,3.0
-Battery holder,01,4xAA battery holder with ON-OFF switch,1,/boxes/electrons/,https://www.amazon.co.uk/gp/product/B0814ZH68F,Loose,65,70,20,3.0,2.0
-Jumper Kit,01,Kit of multi-length 22 AWG breadboard jumpers,1,/boxes/electrons/_resources/datasheets/jumper_kit.pdf,https://uk.farnell.com/multicomp/mc001810/hard-jumper-wire-22awg-140pc/dp/2770338,Loose,170,55,15,5.976,4.296
-Jumper Wires,01,Assorted 22 AWG jumper wire leads (male/female),1,/boxes/electrons/_resources/datasheets/jumper_wires.pdf,https://www.amazon.co.uk/gp/product/B09KR7Z4PF,Cables,200,40,10,4.0,3.75
-Test Lead,01,Alligator clip to 0.64 mm pin (20 cm),2,/boxes/electrons/,https://www.amazon.co.uk/gp/product/B096JR15JW,Cables,220,20,10,1.5,0.85
-Rubber feet,01,Adhesive rubber standoffs (1421T6CL),4,/boxes/electrons/_resources/datasheets/rubber_feet.pdf,https://uk.farnell.com/hammond/1421t6cl/feet-stick-on-pk24/dp/1876522,Passive,20,20,4,0.2965,0.229
+name,slug,depth,description,quantity,datasheet,supplier,package,x,y,z,unit_price,bulk_price,new,used
+NB3 Body,NB3_Body,01,NB3 robot base PCB,1,/boxes/electrons/NB3_body,VK,Loose,200,200,11,30.0,20.0,0,0
+Resistor (330),Resistor__330_,10,330 &Omega;/0.25 W,2,/boxes/electrons/_resources/datasheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-330r/res-330r-1-250mw-axial-metal-film/dp/9341730,Passive,50,2,2,0.0696,0.0504,0,0
+Resistor (470),Resistor__470_,01,470 &Omega;/0.25 W,2,/boxes/electrons/_resources/datasheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943,Passive,50,2,2,0.0685,0.0498,0,0
+Resistor (1k),Resistor__1k_,01,1 k&Omega;/0.25 W,2,/boxes/electrons/_resources/datasheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-1k/res-1k-1-250mw-axial-metal-film/dp/9341102,Passive,50,2,2,0.0702,0.051,0,0
+Resistor (10k),Resistor__10k_,01,10 k&Omega;/0.25 W,2,/boxes/electrons/_resources/datasheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-10k/res-10k-1-250mw-axial-metal-film/dp/9341110,Passive,50,2,2,0.0696,0.0504,0,0
+Capacitor (small),Capacitor__small_,10,0.1 uF ceramic capacitor,1,/boxes/electrons/_resources/datasheets/capacitor_ceramic.pdf,https://uk.farnell.com/kemet/c322c104k1r5ta/cap-0-1-f-100v-10-x7r/dp/1457685,Passive,50,2,2,0.3732,0.3012,0,0
+Capacitor (large),Capacitor__large_,10,100 uF aluminum electrolytic capacitor,1,/boxes/electrons/_resources/datasheets/capacitor_electrolytic.pdf,https://uk.farnell.com/rubycon/16zlh100mefc5x11/cap-100-f-16v-20/dp/8126283,Passive,50,4,4,0.09,0.0504,0,0
+Button,Button,10,Tactile switch,2,/boxes/electrons/_resources/datasheets/button.pdf,https://uk.farnell.com/omron/b3f-1000/switch-spno-0-05a-24v-tht-0-98n/dp/176432,Passive,5,5,3,0.2148,0.1788,0,0
+Potentiometer,Potentiometer,01,2.2 k&Omega; variable resistor,2,/boxes/electrons/_resources/datasheets/pot_2k2.pdf,https://uk.farnell.com/bourns/3362p-1-222lf/trimmer-pot-2-2kohm-10-1turn-th/dp/2328599,Passive,5,5,3,0.9708,0.72,0,0
+Breadboard (400),Breadboard__400_,01,400-tie solderless breadboard,1,/boxes/electrons/_resources/datasheets/breadboard_400.pdf,https://www.amazon.co.uk/gp/product/B0739XRX8F,Loose,85,60,10,4.0,2.3,0,0
+Breadboards (170),Breadboards__170_,01,170-tie solderless breadboard,4,/boxes/electrons/_resources/datasheets/breadboard_170.pdf,https://www.amazon.co.uk/ELEGOO-tie-points-Breadboard-Breadboards-Electronic/dp/B01N0YWIR7,Loose,35,50,10,2.0,1.0,0,0
+Batteries (AA),Batteries__AA_,01,AA 1.5 V alkaline battery,4,/boxes/electrons/,https://www.amazon.co.uk/Duracell-Optimum-Alkaline-Batteries-MX1500/dp/B093Q5XY66,Loose,60,15,15,5.75,3.0,0,0
+Battery holder,Battery_holder,01,4xAA battery holder with ON-OFF switch,1,/boxes/electrons/,https://www.amazon.co.uk/gp/product/B0814ZH68F,Loose,65,70,20,3.0,2.0,0,0
+Jumper Kit,Jumper_Kit,01,Kit of multi-length 22 AWG breadboard jumpers,1,/boxes/electrons/_resources/datasheets/jumper_kit.pdf,https://uk.farnell.com/multicomp/mc001810/hard-jumper-wire-22awg-140pc/dp/2770338,Loose,170,55,15,5.976,4.296,0,0
+Jumper Wires,Jumper_Wires,01,Assorted 22 AWG jumper wire leads (male/female),1,/boxes/electrons/_resources/datasheets/jumper_wires.pdf,https://www.amazon.co.uk/gp/product/B09KR7Z4PF,Cables,200,40,10,4.0,3.75,0,0
+Test Lead,Test_Lead,01,Alligator clip to 0.64 mm pin (20 cm),2,/boxes/electrons/,https://www.amazon.co.uk/gp/product/B096JR15JW,Cables,220,20,10,1.5,0.85,0,0
+Rubber feet,Rubber_feet,01,Adhesive rubber standoffs (1421T6CL),4,/boxes/electrons/_resources/datasheets/rubber_feet.pdf,https://uk.farnell.com/hammond/1421t6cl/feet-stick-on-pk24/dp/1876522,Passive,20,20,4,0.2965,0.229,0,0

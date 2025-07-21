@@ -1,1 +1,2 @@
-Secret Message,10,A SHA256 encrypted message (in HEX),1,/boxes/security/,,Loose,100,60,1,0.0,0.0
+name,slug,depth,description,quantity,datasheet,supplier,package,x,y,z,unit_price,bulk_price,new,used
+Secret Message,Secret_Message,10,A SHA256 encrypted message (in HEX),1,/boxes/security/,,Loose,100,60,1,0.0,0.0,0,0

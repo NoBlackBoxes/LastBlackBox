@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Update datasheet, supplier, and pricing from BOM in local material.csv files
+Update datasheet, supplier, pricing and inventory from BOM in local material.csv files
 
 @author: kampff
 """
@@ -33,10 +33,11 @@ for session in course.sessions:
         m.supplier = bom.at[BOM_row, 'supplier']
         m.unit_price = bom.at[BOM_row, 'unit_price']
         m.bulk_price = bom.at[BOM_row, 'bulk_price']
+        m.new = bom.at[BOM_row, 'new']
+        m.used = bom.at[BOM_row, 'used']
     # Write updated materials.csv
     materials_path = f"{Config.boxes_root}/{session.boxes[0].slug}/_resources/materials.csv"
     dataframe = pd.DataFrame([m.to_dict() for m in materials])
-    exclude_columns = ['slug']
-    dataframe.drop(columns=exclude_columns).to_csv(materials_path, index=False, header=False)
+    dataframe.to_csv(materials_path, index=False, header=True)
 
 # FIN

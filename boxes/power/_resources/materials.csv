@@ -1,10 +1,11 @@
-NB3 Power Board,01,Regulated DC-DC power supply (5 Volts - 4 Amps),1,/boxes/power/NB3_power,VK,Power,50,50,15,30.0,20.0
-Power Cable,01,Custom 4 pin NB3 power connector cable,1,/boxes/power/,VK,Power,50,10,5,5.0,3.0
-M2.5 standoff (7/PS),01,7 mm long plug-to-socket M2.5 standoff,4,/boxes/power/,https://uk.farnell.com/wurth-elektronik/971070151/standoff-hex-male-female-7mm-m2/dp/2884371,Hardware,5,5,7,0.4836,0.3792
-M2.5 bolt (6),01,6 mm long M2.5 bolt,4,/boxes/robotics/,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2,Hardware,5,5,6,0.15,0.04
-M2.5 nut,01,regular M2.5 nut,4,/boxes/power/-,https://www.accu.co.uk/hexagon-nuts/456430-HPN-M2-5-C8-Z,Hardware,5,5,3,0.14,0.03
-12V DC Power Supply,01,12 V AC-DC transformer (UK/EU/USA plugs),1,/boxes/power/,https://www.amazon.co.uk/gp/product/B09QG4R1R4,Loose,100,100,80,12.99,12.99
-Battery,01,NiMH 9.6V 8-cell 2000 mAh battery,1,/boxes/power/,https://www.amazon.co.uk/dp/B091H9ZFSF,Loose,100,60,15,16.99,16.99
-Battery Cable,01,Barrel Jack to Tamiya Plug,1,/boxes/power/,VK,Loose,100,15,15,5.0,2.0
-Battery Charger,01,NiMH battery charger (UK plug),1,/boxes/power/,https://www.amazon.co.uk/dp/B089VRXKWY,Loose,90,90,70,15.99,15.99
-Velcro Patch,01,Velcro adhesive,1,/boxes/power/,https://www.amazon.co.uk/50mmx100mm-Adhesive-Strips%EF%BC%8CExtra-Mounting-Organizing/dp/B0CKVNM69R,Loose,50,75,4,2.0,0.5
+name,slug,depth,description,quantity,datasheet,supplier,package,x,y,z,unit_price,bulk_price,new,used
+NB3 Power Board,NB3_Power_Board,01,Regulated DC-DC power supply (5 Volts - 4 Amps),1,/boxes/power/NB3_power,VK,Power,50,50,15,30.0,20.0,0,0
+Power Cable,Power_Cable,01,Custom 4 pin NB3 power connector cable,1,/boxes/power/,VK,Power,50,10,5,5.0,3.0,0,0
+M2.5 standoff (7/PS),M2_5_standoff__7_PS_,01,7 mm long plug-to-socket M2.5 standoff,4,/boxes/power/,https://uk.farnell.com/wurth-elektronik/971070151/standoff-hex-male-female-7mm-m2/dp/2884371,Hardware,5,5,7,0.4836,0.3792,0,0
+M2.5 bolt (6),M2_5_bolt__6_,01,6 mm long M2.5 bolt,4,/boxes/robotics/,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2,Hardware,5,5,6,0.15,0.04,0,0
+M2.5 nut,M2_5_nut,01,regular M2.5 nut,4,/boxes/power/-,https://www.accu.co.uk/hexagon-nuts/456430-HPN-M2-5-C8-Z,Hardware,5,5,3,0.14,0.03,0,0
+12V DC Power Supply,12V_DC_Power_Supply,01,12 V AC-DC transformer (UK/EU/USA plugs),1,/boxes/power/,https://www.amazon.co.uk/gp/product/B09QG4R1R4,Loose,100,100,80,12.99,12.99,0,0
+Battery,Battery,01,NiMH 9.6V 8-cell 2000 mAh battery,1,/boxes/power/,https://www.amazon.co.uk/dp/B091H9ZFSF,Loose,100,60,15,16.99,16.99,0,0
+Battery Cable,Battery_Cable,01,Barrel Jack to Tamiya Plug,1,/boxes/power/,VK,Loose,100,15,15,5.0,2.0,0,0
+Battery Charger,Battery_Charger,01,NiMH battery charger (UK plug),1,/boxes/power/,https://www.amazon.co.uk/dp/B089VRXKWY,Loose,90,90,70,15.99,15.99,0,0
+Velcro Patch,Velcro_Patch,01,Velcro adhesive,1,/boxes/power/,https://www.amazon.co.uk/50mmx100mm-Adhesive-Strips%EF%BC%8CExtra-Mounting-Organizing/dp/B0CKVNM69R,Loose,50,75,4,2.0,0.5,0,0

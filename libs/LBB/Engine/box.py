@@ -87,7 +87,9 @@ class Box:
         materials_text = Utilities.read_clean_text(materials_path)
         materials = []
         for material_text in materials_text:
-            material_depth = material_text.split(",")[1]
+            if material_text[0].startswith("name"):
+                continue
+            material_depth = material_text.split(",")[2]
             if material_depth in depths:
                 material = Material.Material(text=material_text)
                 materials.append(material)

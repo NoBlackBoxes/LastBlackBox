@@ -38,6 +38,7 @@ for course_name in course_names:
     # Combine (aggregate) duplicates
     aggregations = {
         'name': 'first',            # First value
+        'slug': 'first',            # First value
         'depth': 'first',           # First value
         'description': 'first',     # First value
         'quantity': 'sum',          # Sum the quantities
@@ -49,6 +50,8 @@ for course_name in course_names:
         'z': 'first',               # First value
         'unit_price': 'first',      # First value
         'bulk_price': 'first',      # First value
+        'new': 'first',             # First value
+        'used': 'first',            # First value
     }
     combined = filtered.groupby('name', as_index=False).agg(aggregations)
 

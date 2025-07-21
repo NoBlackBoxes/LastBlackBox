@@ -1,1 +1,2 @@
-Periodic Table,01,Periodic Table business card,1,/boxes/atoms/card,VK,Loose,40,60,1,1.0,0.1
+name,slug,depth,description,quantity,datasheet,supplier,package,x,y,z,unit_price,bulk_price,new,used
+Periodic Table,Periodic_Table,01,Periodic Table business card,1,/boxes/atoms/card,VK,Loose,40,60,1,1.0,0.1,0,0

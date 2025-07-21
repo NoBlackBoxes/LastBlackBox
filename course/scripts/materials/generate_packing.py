@@ -24,11 +24,11 @@ for course_name in course_names:
     bom = pd.read_csv(BOM_path)
 
     # Insert additional fields
-    bom.insert(4, '#kits', int(num_kits))
-    bom.insert(5, '#required', num_kits*bom['quantity'].astype(int))
-    bom.insert(6, '#available', 0)
-    bom.insert(7, '#order', 0)
-    bom.insert(8, '#ordered', 0)
+    bom.insert(5, '#kits', int(num_kits))
+    bom.insert(6, '#required', num_kits*bom['quantity'].astype(int))
+    bom.insert(7, '#available', 0)
+    bom.insert(8, '#order', 0)
+    bom.insert(9, '#ordered', 0)
 
     # Save to packing file
     packing_path = f"{Config.course_root}/_resources/materials/packing/{course.slug}_packing_list.csv"
