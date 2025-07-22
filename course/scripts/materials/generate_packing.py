@@ -32,7 +32,7 @@ for course_name in course_names:
 
     # Save to packing file
     packing_path = f"{Config.course_root}/_resources/materials/packing/{course.slug}_packing_list.csv"
-    bom.to_csv(packing_path, index=False)  # Set index=False if you don't want to include the index in the CSV
+    bom.to_csv(packing_path, index=False, encoding="utf-8")  # Set index=False if you don't want to include the index in the CSV
 
     # Group packages
     grouped = bom.groupby('package')

@@ -1,2 +1,2 @@
 name,slug,depth,description,quantity,datasheet,supplier,package,x,y,z,unit_price,bulk_price,new,used
-Lightbulb,Lightbulb,10,Mini incandescent bulb (6 V),1,/boxes/light/_resources/datasheets/lamp_G501.pdf,https://uk.farnell.com/cml-innovative-technologies/g501/lamp-mes-g3-1-2-6-5v-1-95w/dp/1139207,Active,25,10,5,0.8004,0.6288,0,0
+Lightbulb,Lightbulb,10,Mini incandescent bulb (6 V),1,/boxes/light/_resources/datasheets/lamp_G501.pdf,https://uk.farnell.com/cml-innovative-technologies/g501/lamp-mes-g3-1-2-6-5v-1-95w/dp/1139207,Active,25,10,5,0.8004,0.6288,10,0

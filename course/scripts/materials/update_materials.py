@@ -38,6 +38,6 @@ for session in course.sessions:
     # Write updated materials.csv
     materials_path = f"{Config.boxes_root}/{session.boxes[0].slug}/_resources/materials.csv"
     dataframe = pd.DataFrame([m.to_dict() for m in materials])
-    dataframe.to_csv(materials_path, index=False, header=True)
+    dataframe.to_csv(materials_path, index=False, header=True, encoding="utf-8")
 
 # FIN
