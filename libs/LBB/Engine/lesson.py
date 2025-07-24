@@ -57,7 +57,7 @@ class Lesson:
         self.slug = dictionary.get("slug")
         self.depth = dictionary.get("depth")
         self.description = dictionary.get("description")
-        self.video = Video.Video(self, dictionary=dictionary.get("video"))
+        self.video = Video.Video(self.box, dictionary=dictionary.get("video"))
         self.steps = Utilities.extract_steps_from_dict(dictionary)
         return
 
@@ -81,7 +81,7 @@ class Lesson:
         # Extract video
         video_url = text[line_count].split('(')[1][:-1]
         if video_url != '':
-            self.video = Video.Video(self.course, self.box.slug, f"[{self.name}]({video_url})")
+            self.video = Video.Video(self.box, f"[{self.name}]({video_url})")
         line_count += 1
 
         # Find lesson section
