@@ -24,7 +24,7 @@ PCB design and fabrication for NB3 mouth, a mono i2s DAC and Amplifier
 - Service: Turnkey Assembly
 - Board type: Panelized PCBs
 - Assembly: Both Sides
-- Quantity: *80*
+- Quantity: *200*
 
 ##### Other Parameters
 - Number of unique Parts: 6
@@ -34,7 +34,7 @@ PCB design and fabrication for NB3 mouth, a mono i2s DAC and Amplifier
 			
 #### PCB Specifications
 - Board type: Panel by PCBWay
-- Panel requirements: Panel in 2*4, total 20 panels=total 160 individual boards.
+- Panel requirements: Panel in 2*4, total 25 panels=total 200 individual boards.
 - Route Process: Panel as Tab Route
 - X-out Allowance in Panel: Accept
 - Different design in panel: 1
