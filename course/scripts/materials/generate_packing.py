@@ -14,7 +14,7 @@ import LBB.utilities as Utilities
 import LBB.Engine.course as Course
 
 # Specify Number of Kits
-num_kits = 15
+num_kits = 40
 
 # List courses
 course_names = ["The Last Black Box", "Bootcamp", "Build a Brain"]
