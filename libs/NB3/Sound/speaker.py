@@ -138,11 +138,11 @@ class Speaker:
 
         # Validate WAV file
         if wav_num_channels != self.num_channels:
-            print("WAV file has inconsistent number of channels for output device.")
+            print(f"WAV file has inconsistent number of channels {wav_num_channels} for output device {self.num_channels}.")
         if wav_sample_rate != self.sample_rate:
-            print("WAV file has inconsistent sample rate for output device.{0}".format(wav_sample_rate))
+            print(f"WAV file has inconsistent sample rate {wav_sample_rate} for output device {self.sample_rate}.")
         if wav_sample_width != 2:
-            print("WAV file has inconsistent sample width for output device.")
+            print(f"WAV file has inconsistent sample width {wav_sample_width} for output device {2}.")
 
         # Set number of frames
         wav_num_samples = wav_num_samples - (wav_num_samples % self.buffer_size_samples)
