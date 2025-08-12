@@ -6,9 +6,9 @@ Things started getting really interesting when organisms began to interact with 
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
-Cable (MiniUSB-20cm)|01|Short mini-USB to Type-A cable (20 cm)|1|[-D-](/boxes/networks/)|[-L-](https://www.amazon.co.uk/LINDY-0-2-Type-Mini-B-Cable/dp/B01IZ4VFCO)
+Cable (MiniUSB-20cm)|01|Short mini-USB to Type-A cable (20 cm)|1|[-D-](/boxes/networks/)|[-L-](https://www.amazon.co.uk/gp/product/B07FW69HNT)
 
 </p></details><hr>
 
@@ -21,6 +21,10 @@ Cable (MiniUSB-20cm)|01|Short mini-USB to Type-A cable (20 cm)|1|[-D-](/boxes/ne
 
 
 #### Watch this video: [NB3 : Develop a Protocol](https://vimeo.com/1042782602)
+<p align="center">
+<a href="https://vimeo.com/1042782602" title="Control+Click to watch in new tab"><img src="../../../../boxes/networks/_resources/lessons/thumbnails/NB3_Develop-a-Protocol.gif" alt="NB3 : Develop a Protocol" width="480"/></a>
+</p>
+
 > Let's develop a simple network protocol for communication between our NB3's midbrain computer and hindbrain microcontroller.
 
 - Decide on your command format (x,o)
@@ -32,7 +36,7 @@ Creating a website, from simple to complex.
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 
 </p></details><hr>
@@ -58,7 +62,7 @@ Serving HTML files to who ever requests them (via HTTP).
 
 <details><summary><i>Materials</i></summary><p>
 
-Contents|Depth|Description| # |Data|Link|
+Name|Depth|Description| # |Data|Link|
 :-------|:---:|:----------|:-:|:--:|:--:|
 
 </p></details><hr>
@@ -76,23 +80,18 @@ Contents|Depth|Description| # |Data|Link|
 > Let's remotely control our NB3 using a simple text-based user interface (TUI). We will detect a keypress in the terminal and send the appropriate command to our hindbrain motor controller.
 
 <details><summary><weak>Guide</weak></summary>
-:-:-: A video guide to completing this project can be viewed <a href="TUI)" target="_blank" rel="noopener noreferrer">here</a>.
+:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1042784651" target="_blank" rel="noopener noreferrer">here</a>.
 </details><hr>
 
 - Expand your hindbrain command repertoire
 - Detect a key press in Python (on your midbrain)
 - Send a command to your hindbrain using the serial connection
-- Your goal is to press a key on your "host" computer and have your NB3 respond. If you detect different keys, then you can have your NB3 respond with different behaviors/directions.
+- Your goal is to press a key on your PC and have your NB3 respond. If you detect different keys, then you can have your NB3 respond with different behaviors/directions.
 - This is a ***creative*** task with lots of different solutions. However, to get you started, I have created the example code described below.
-- SSH connection from your "host" computer to your NB3.
-- Code to detect keypresses with your NB3's Raspberry Pi (keypresses are sent via SSH whenever you type in the terminal window)
-- Python example code for detecting keypresses: [python keyboard](/boxes/python/remote-NB3/keyboard/keyboard.py)
-- Code to send "serial" commands from your NB3's midbrain (RPi) to hindbrain (Arduino)
-- Python example code to send serial commands: [python serial](/boxes/python/remote-NB3/serial/serial_write.py)
-- Code to run on your NB3's hindbrain (Arduino) that listens for serial commands and responds with behaviour
-- Arduino example code to respond to a single serial command with LED: [arduino serial server](/boxes/python/remote-NB3/arduino/serial_server/)
-- Arduino example code to respond to a multiple serial command with different servo movements: [arduino serial controller](/boxes/python/remote-NB3/arduino/serial_controller/)
-- Code that combines detecting keypresses and sending serial commands
-- Python example code that combines keypress detection and serial command writing: [python kerial](/boxes/python/remote-NB3/kerial/kerial.py)
-- Python example code that combines keypress detection (using a more capable library, **sshkeyboard**, that also detects when a key is held down) and serial command writing: [python drive](/boxes/python/remote-NB3/drive/drive.py)
+- Python example code for detecting keypresses: [python keyboard](/boxes/networks/remote-NB3/python/keyboard/keyboard.py)
+- Python example code to send serial commands: [python serial](/boxes/networks/serial_protocol/python/serial_blink/serial_blink.py)
+- Arduino example code to respond to a single serial command with LED: [arduino serial server](/boxes/networks/serial_protocol/arduino/serial_server/serial_server.ino)
+- Arduino example code to respond to a multiple serial command with different servo movements: [arduino serial controller](/boxes/networks/remote-NB3/arduino/serial_controller/serial_controller.ino)
+- Python example code that combines keypress detection and serial command writing: [python kerial](/boxes/networks/remote-NB3/python/kerial/kerial.py)
+- Python example code that combines keypress detection (using a more capable library, **sshkeyboard**, that also detects when a key is held down) and serial command writing: [python drive](/boxes/networks/remote-NB3/python/drive/drive.py)
 

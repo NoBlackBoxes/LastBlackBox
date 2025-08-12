@@ -100,6 +100,8 @@ def get_slug_from_name(name):
         slug = "course"
     elif name == "Bootcamp":
         slug = "bootcamp"
+    elif name == "Braitenberg":
+        slug = "braitenberg"
     elif name == "Build a Brain":
         slug = "buildabrain"
     else:

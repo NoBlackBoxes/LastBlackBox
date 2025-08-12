@@ -180,10 +180,10 @@ def extract_lesson_name_and_slug(line):
     sections = line.split(':')
     if len(sections) == 3:
         name = f"NB3 : {sections[2].strip()}"
-        slug = f"NB3_{sections[2].strip().lower().replace(' ', '-')}"
+        slug = f"NB3_{sections[2].strip().lower().replace(' ', '-').replace('(', '').replace(')', '')}"
     else:
         name = sections[1].strip()
-        slug = name.lower().replace(' ', '-')
+        slug = name.lower().replace(' ', '-').replace('(', '').replace(')', '')
     return name, slug
 
 #FIN

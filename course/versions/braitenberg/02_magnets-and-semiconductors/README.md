@@ -1,4 +1,4 @@
-# Bootcamp : Magnets and Semiconductors
+# Braitenberg : Magnets and Semiconductors
 Here we will learn about electromagnetism, motors, and transistors.
 
 ## Magnets

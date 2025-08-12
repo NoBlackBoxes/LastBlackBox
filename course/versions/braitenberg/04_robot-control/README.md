@@ -1,4 +1,4 @@
-# Bootcamp : Robot Control
+# Braitenberg : Robot Control
 Here we will combine our sensors, motors, and a computer hindbrain to create a simple robot with complex behaviour.
 
 ## Control

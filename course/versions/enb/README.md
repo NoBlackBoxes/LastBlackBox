@@ -1,6 +1,6 @@
-# The Last Black Box : *Bootcamp*
+# The Last Black Box : *Experimental Neuroscience Bootcamp*
 
-> **LBB-102**: A one-week ***Bootcamp Version*** of the Last Black Box course
+> **LBB-103**: A one-week ***Bootcamp Version*** of the Last Black Box course for Neuroscience researchers
 
 <p align="center">
 <img src="../../_resources/designs/layout/png/layout_bootcamp.png" alt="LBB bootcamp layout" width="800">

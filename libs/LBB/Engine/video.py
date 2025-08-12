@@ -54,6 +54,7 @@ class Video:
     # Render video in Markdown or HTML
     def render(self, type):
         gif_name = self.name + ".gif"
+        gif_name = gif_name.replace('(', '').replace(')', '')
         if gif_name.startswith("NB3"):
             gif_name = "NB3_" + gif_name[6:]
         gif_name = gif_name.replace(" ", "-")

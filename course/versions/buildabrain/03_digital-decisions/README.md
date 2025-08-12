@@ -50,7 +50,7 @@ Resistor (470)|01|470 &Omega;/0.25 W|2|[-D-](/boxes/electrons/_resources/datashe
 
 #### Watch this video: [Transistors (MOSFETs)](https://vimeo.com/1032452466)
 <p align="center">
-<a href="https://vimeo.com/1032452466" title="Control+Click to watch in new tab"><img src="../../../../boxes/transistors/_resources/lessons/thumbnails/Transistors-(MOSFETs).gif" alt="Transistors (MOSFETs)" width="480"/></a>
+<a href="https://vimeo.com/1032452466" title="Control+Click to watch in new tab"><img src="../../../../boxes/transistors/_resources/lessons/thumbnails/Transistors-MOSFETs.gif" alt="Transistors (MOSFETs)" width="480"/></a>
 </p>
 
 > MOSFETs are the thing that humans have built more of than anything else. They must be useful! Let's discuss what they are and how they work.

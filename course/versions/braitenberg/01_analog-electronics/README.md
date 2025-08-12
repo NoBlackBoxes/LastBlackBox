@@ -1,4 +1,4 @@
-# Bootcamp : Analog Electronics
+# Braitenberg : Analog Electronics
 Here we will learn where electricity comes from, how we can measure it, and what we can do with it.
 
 ## Atoms

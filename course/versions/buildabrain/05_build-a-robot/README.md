@@ -46,7 +46,7 @@ Spacer|01|NB3 spacer 3 mm spacer for mounting ball caster|5|[-D-](/boxes/robotic
 
 #### Watch this video: [NB3 : Muscles (Servos)](https://vimeo.com/1034800702)
 <p align="center">
-<a href="https://vimeo.com/1034800702" title="Control+Click to watch in new tab"><img src="../../../../boxes/robotics/_resources/lessons/thumbnails/NB3_Muscles-(Servos).gif" alt="NB3 : Muscles (Servos)" width="480"/></a>
+<a href="https://vimeo.com/1034800702" title="Control+Click to watch in new tab"><img src="../../../../boxes/robotics/_resources/lessons/thumbnails/NB3_Muscles-Servos.gif" alt="NB3 : Muscles (Servos)" width="480"/></a>
 </p>
 
 > Let's build your robot's movement system (using servo motors).

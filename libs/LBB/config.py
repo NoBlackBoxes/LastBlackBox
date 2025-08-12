@@ -18,7 +18,7 @@ course_root = repo_root + "/course"
 site_root = repo_root + "/site"
 
 # Store course version names
-course_names = ["The Last Black Box", "Bootcamp", "Build a Brain"]
+course_names = ["The Last Black Box", "Bootcamp", "Braitenberg", "Build a Brain"]
 
 # Store box names (and order)
 box_names = [
@@ -89,6 +89,22 @@ bootcamp_box_names = [
     'Servers',
     'Audio',
     'Vision'
+]
+
+# Store box names (and order) - Braitenberg
+braitenberg_box_names = [
+    'Atoms',
+    'Electrons',
+    'Magnets',
+    'Sensors',
+    'Motors',
+    'Transistors',
+    'Data',
+    'Logic',
+    'Memory',
+    'Computers',
+    'Control',
+    'Robotics'
 ]
 
 # Store box names (and order) - Build a Brain
