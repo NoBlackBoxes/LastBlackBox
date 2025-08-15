@@ -1,4 +1,4 @@
 name,slug,depth,description,quantity,datasheet,supplier,package,x,y,z,unit_price,bulk_price,new,used
-Microcontroller,Microcontroller,01,Arduino Nano (rev.3),1,/boxes/computers/_resources/datasheets/arduino_nano_rev3.pdf,https://uk.farnell.com/arduino/a000005/arduino-nano-evaluation-board/dp/1848691,Loose,82,60,25,18.516,18.516,3,6
-Piezo Buzzer,Piezo_Buzzer,01,Piezoelectric speaker/transducer,1,/boxes/computers/_resources/datasheets/piezo_buzzer.pdf,https://uk.farnell.com/tdk/ps1240p02bt/piezoelectric-buzzer-4khz-70dba/dp/3267212,Passive,30,30,1,0.4296,0.3576,3,0
+Microcontroller,Microcontroller,01,Arduino Nano (rev.3),1,/boxes/computers/_resources/datasheets/arduino_nano_rev3.pdf,https://uk.farnell.com/arduino/a000005/arduino-nano-evaluation-board/dp/1848691,Loose,82,60,25,18.516,18.516,0,6
+Piezo Buzzer,Piezo_Buzzer,01,Piezoelectric speaker/transducer,1,/boxes/computers/_resources/datasheets/piezo_buzzer.pdf,https://uk.farnell.com/tdk/ps1240p02bt/piezoelectric-buzzer-4khz-70dba/dp/3267212,Passive,30,30,1,0.4296,0.3576,63,0
 Cable (MiniUSB-1m),Cable__MiniUSB_1m_,01,Mini-USB to Type-A cable (1 m),1,/boxes/computers/,https://www.amazon.co.uk/gp/product/B07FWF2KBF,Cables,100,50,15,3.24,1.94,0,0

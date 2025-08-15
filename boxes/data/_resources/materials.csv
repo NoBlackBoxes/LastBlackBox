@@ -1,5 +1,5 @@
 name,slug,depth,description,quantity,datasheet,supplier,package,x,y,z,unit_price,bulk_price,new,used
 Comparator,Comparator,10,LM339 (DIP-14),2,/boxes/data/_resources/datasheets/lm2901.pdf,https://uk.farnell.com/texas-instruments/lm2901n/ic-comparator-quad-2901-dip14/dp/3118410,Active,7,6,5,0.8568,0.5568,83,0
-LED (Red),LED__Red_,10,3 mm/2 mA red LED,2,/boxes/transistors/_resources/datasheets/led_HLMP.pdf,https://uk.farnell.com/broadcom-limited/hlmp-1700/led-3mm-red-2-1mcd-626nm/dp/1003207,Active,50,5,3,0.6036,0.1812,65,0
-LED (Green),LED__Green_,10,3 mm/2 mA green LED,2,/boxes/transistors/_resources/datasheets/led_HLMP.pdf,https://uk.farnell.com/broadcom-limited/hlmp-1790/led-3mm-green-2-3mcd-569nm/dp/1003209,Active,50,5,3,0.6948,0.2208,40,0
+LED (Red),LED__Red_,10,3 mm/2 mA red LED,2,/boxes/transistors/_resources/datasheets/led_HLMP.pdf,https://uk.farnell.com/broadcom-limited/hlmp-1700/led-3mm-red-2-1mcd-626nm/dp/1003207,Active,50,5,3,0.6036,0.1812,185,0
+LED (Green),LED__Green_,10,3 mm/2 mA green LED,2,/boxes/transistors/_resources/datasheets/led_HLMP.pdf,https://uk.farnell.com/broadcom-limited/hlmp-1790/led-3mm-green-2-3mcd-569nm/dp/1003209,Active,50,5,3,0.6948,0.2208,120,0
 Resistor (330),Resistor__330_,10,330 &Omega;/0.25 W,4,/boxes/electrons/_resources/datasheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-330r/res-330r-1-250mw-axial-metal-film/dp/9341730,Passive,50,5,3,0.0696,0.0504,0,0

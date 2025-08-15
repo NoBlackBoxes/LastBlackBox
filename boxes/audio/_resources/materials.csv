@@ -2,10 +2,10 @@ name,slug,depth,description,quantity,datasheet,supplier,package,x,y,z,unit_price
 NB3 Ear,NB3_Ear,01,I2S mems microphone breakout board,2,/boxes/audio/NB3_ear,VK,Audio,20,20,20,7.0,5.0,184,0
 NB3 Mouth,NB3_Mouth,01,I2S DAC-AMP breakout board,1,/boxes/audio/NB3_mouth,VK,Audio,20,20,20,7.0,5.0,16,3
 Speaker,Speaker,01,3 Watt 4 Ohm with Dupont 2.54 mm socket,1,/boxes/audio/_resources/datasheets/CQR0508.jpg,https://www.amazon.co.uk/dp/B09JJ28D6R,Loose,70,30,15,4.0,2.0,15,10
-Speaker (Hi-Fi),Speaker__Hi_Fi_,01,3 Watt 4 Ohm with Dupont 2.54 mm socket (High Fidelity: 2831/3128),1,/boxes/audio/_resources/datasheets/3128_3W_4Ohm.jpg,https://www.amazon.co.uk/gp/product/B0D9QXW5FF,Loose,44,30,15,4.79,2.0,26,0
+Speaker (Hi-Fi),Speaker__Hi_Fi_,01,3 Watt 4 Ohm with Dupont 2.54 mm socket (High Fidelity: 2831/3128),1,/boxes/audio/_resources/datasheets/3128_3W_4Ohm.jpg,https://www.amazon.co.uk/gp/product/B0D9QXW5FF,Loose,44,30,15,4.79,2.0,16,0
 Speaker Mount,Speaker_Mount,01,Custom laser cut mount for speaker,1,/boxes/audio/-,VK,Mounts,75,20,5,3.0,1.0,0,0
 Speaker Frame,Speaker_Frame,01,Custom laser cut frame for speaker,1,/boxes/audio/-,VK,Mounts,75,50,5,3.0,1.0,0,0
-M3 standoff (15/PS),M3_standoff__15_PS_,01,15 mm long plug-to-socket M3 standoff,2,/boxes/audio/-,https://uk.farnell.com/ettinger/05-13-151/spacer-m3x15-vzk/dp/1466726,Hardware,5,5,15,0.3924,0.3444,62,0
+M3 standoff (15/PS),M3_standoff__15_PS_,01,15 mm long plug-to-socket M3 standoff,2,/boxes/audio/-,https://uk.farnell.com/ettinger/05-13-151/spacer-m3x15-vzk/dp/1466726,Hardware,5,5,15,0.3924,0.3444,182,0
 M3 nut (square),M3_nut__square_,01,square M3 nut 1.8 mm thick,2,/boxes/audio/-,https://www.accu.co.uk/flat-square-nuts/21326-HFSN-M3-A2,Hardware,5,5,3,0.16,0.05,480,0
 M3 bolt (6),M3_bolt__6_,01,6 mm long M3 bolt,2,/boxes/audio/-,https://www.accu.co.uk/pozi-pan-head-screws/500113-SPP-M3-6-ST-BZP,Hardware,5,5,6,0.14,0.03,663,0
 M2.5 bolt (6),M2_5_bolt__6_,01,6 mm long M2.5 bolt,2,/boxes/robotics/,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2,Hardware,5,5,6,0.15,0.04,2000,0

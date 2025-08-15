@@ -1,4 +1,4 @@
 name,slug,depth,description,quantity,datasheet,supplier,package,x,y,z,unit_price,bulk_price,new,used
 Thermistor,Thermistor,10,Temperature sensitive resistor,2,/boxes/sensors/_resources/datasheets/thermistor.pdf,https://uk.farnell.com/epcos/b57891m0103k000/thermistor-ntc-radial-leaded/dp/2285471,Passive,50,10,3,0.6456,0.5376,0,0
-Photoresistor (LDR),Photoresistor__LDR_,01,Light-dependent resistor (GL5516 and GL5528),4,/boxes/sensors/,https://uk.farnell.com/advanced-photonix/nsl-19m51/light-dependent-resistor-550nm/dp/3168335,Passive,50,10,3,1.14,0.7584,0,0
+Photoresistor (LDR),Photoresistor__LDR_,01,Light-dependent resistor (GL5516 and GL5528),4,/boxes/sensors/,https://uk.farnell.com/advanced-photonix/nsl-19m51/light-dependent-resistor-550nm/dp/3168335,Passive,50,10,3,1.14,0.7584,120,0
 Piezo,Piezo,10,Piezo element,1,/boxes/sensors/_resources/datasheets/piezo.pdf,https://uk.farnell.com/multicomp/mcabt-455-rc/audio-element-piezo-2-8khz-35mm/dp/2433035,Passive,50,50,3,1.932,1.644,0,0
