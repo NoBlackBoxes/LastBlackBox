@@ -183,7 +183,7 @@ def extract_lesson_name_and_slug(line):
         slug = f"NB3_{sections[2].strip().lower().replace(' ', '-').replace('(', '').replace(')', '')}"
     else:
         name = sections[1].strip()
-        slug = name.lower().replace(' ', '-').replace('(', '').replace(')', '')
+        slug = name.lower().replace(' ', '-').replace('(', '').replace(')', '').replace('\'', '')
     return name, slug
 
 #FIN

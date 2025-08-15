@@ -91,7 +91,7 @@ Rubber feet|01|Adhesive rubber standoffs (1421T6CL)|4|[-D-](/boxes/electrons/_re
 
 #### Watch this video: [Ohm's Law](https://vimeo.com/1029695302)
 <p align="center">
-<a href="https://vimeo.com/1029695302" title="Control+Click to watch in new tab"><img src="../../boxes/electrons/_resources/lessons/thumbnails/Ohm's-Law.gif" alt="Ohm's Law" width="480"/></a>
+<a href="https://vimeo.com/1029695302" title="Control+Click to watch in new tab"><img src="../../boxes/electrons/_resources/lessons/thumbnails/Ohms-Law.gif" alt="Ohm's Law" width="480"/></a>
 </p>
 
 > Ohm's Law describes the relationship between Voltage, Current, and Resistance. It is not complicated, but it is very useful.
