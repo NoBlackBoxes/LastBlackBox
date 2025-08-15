@@ -6,9 +6,9 @@ There are many ways to store information.
 
 <details><summary><i>Materials</i></summary><p>
 
-Name|Depth|Description| # |Data|Link|
-:-------|:---:|:----------|:-:|:--:|:--:|
-Gate (NAND)|10|4xNAND gate|2|[-D-](/boxes/memory/_resources/datasheets/NAND_gates.pdf)|[-L-](https://uk.farnell.com/texas-instruments/cd4011be/ic-4000-cmos-4011-dip14-18v/dp/3120113)
+Name|Depth|Description| # |Package|Data|Link|
+:-------|:---:|:----------|:-----:|:-:|:--:|:--:|
+Gate (NAND)|10|4xNAND gate|2|Active Electronics|[-D-](/boxes/memory/_resources/datasheets/NAND_gates.pdf)|[-L-](https://uk.farnell.com/texas-instruments/cd4011be/ic-4000-cmos-4011-dip14-18v/dp/3120113)
 
 </p></details><hr>
 

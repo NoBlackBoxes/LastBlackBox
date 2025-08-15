@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Update datasheet, supplier, pricing and inventory from BOM in local material.csv files
+Update packaging, datasheet, supplier, pricing and inventory from BOM in local material.csv files
 
 @author: kampff
 """
@@ -29,6 +29,7 @@ for session in course.sessions:
     for m in materials:
         # Update datasheet, supplier, and prices for this material
         BOM_row = bom[bom['name'] == m.name].index[0]
+        m.package = bom.at[BOM_row, 'package']
         m.datasheet = bom.at[BOM_row, 'datasheet']
         m.supplier = bom.at[BOM_row, 'supplier']
         m.unit_price = bom.at[BOM_row, 'unit_price']

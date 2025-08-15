@@ -6,10 +6,10 @@ The signals arriving from the environment are often too small to measure reliabl
 
 <details><summary><i>Materials</i></summary><p>
 
-Name|Depth|Description| # |Data|Link|
-:-------|:---:|:----------|:-:|:--:|:--:|
-LM741|10|OpAmp|1|[-D-](/boxes/amplifiers/_resources/datasheets/LM741.pdf)|[-L-](https://uk.farnell.com/texas-instruments/lm741cn-nopb/op-amp-single-pdip-8-0-to-70deg/dp/3117118)
-LM386|10|Audio-Amp|2|[-D-](/boxes/amplifiers/_resources/datasheets/LM386.pdf)|[-L-](https://uk.farnell.com/texas-instruments/lm386n-4-nopb/audio-power-amplifier-class-ab/dp/3116866)
+Name|Depth|Description| # |Package|Data|Link|
+:-------|:---:|:----------|:-----:|:-:|:--:|:--:|
+LM741|10|OpAmp|1|Active Electronics|[-D-](/boxes/amplifiers/_resources/datasheets/LM741.pdf)|[-L-](https://uk.farnell.com/texas-instruments/lm741cn-nopb/op-amp-single-pdip-8-0-to-70deg/dp/3117118)
+LM386|10|Audio-Amp|2|Active Electronics|[-D-](/boxes/amplifiers/_resources/datasheets/LM386.pdf)|[-L-](https://uk.farnell.com/texas-instruments/lm386n-4-nopb/audio-power-amplifier-class-ab/dp/3116866)
 
 </p></details><hr>
 

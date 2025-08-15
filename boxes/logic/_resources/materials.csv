@@ -1,5 +1,5 @@
 name,slug,depth,description,quantity,datasheet,supplier,package,x,y,z,unit_price,bulk_price,new,used
-Gate (AND),Gate__AND_,10,4xAND gate,1,/boxes/logic/_resources/datasheets/AND_gates.pdf,https://uk.farnell.com/texas-instruments/cd4081be/ic-4000-cmos-4081-dip14-18v/dp/3120147,Active,10,20,8,1.356,0.9984,7,0
-Gate (OR),Gate__OR_,10,4xOR gate,1,/boxes/logic/_resources/datasheets/OR_gates.pdf,https://uk.farnell.com/texas-instruments/cd4072be/ic-gate/dp/3120138,Active,10,20,8,1.68,1.0884,11,0
-Gate (NOR),Gate__NOR_,10,4xNOR gate,1,/boxes/logic/_resources/datasheets/NOR_gates.pdf,https://uk.farnell.com/texas-instruments/cd4001be/ic-nor-quad-4000-cmos-14dip/dp/3120100,Active,10,20,8,0.7788,0.4284,8,0
-Gate (XOR),Gate__XOR_,10,4xXOR gate,1,/boxes/logic/_resources/datasheets/XOR_gates.pdf,https://uk.farnell.com/texas-instruments/cd4070be/ic-4000-cmos-4070-dip14-18v/dp/3120134,Active,10,20,8,0.8784,0.4788,9,0
+Gate (AND),Gate__AND_,10,4xAND gate,1,/boxes/logic/_resources/datasheets/AND_gates.pdf,https://uk.farnell.com/texas-instruments/cd4081be/ic-4000-cmos-4081-dip14-18v/dp/3120147,Active Electronics,10,20,8,1.356,0.9984,7,0
+Gate (OR),Gate__OR_,10,4xOR gate,1,/boxes/logic/_resources/datasheets/OR_gates.pdf,https://uk.farnell.com/texas-instruments/cd4072be/ic-gate/dp/3120138,Active Electronics,10,20,8,1.68,1.0884,11,0
+Gate (NOR),Gate__NOR_,10,4xNOR gate,1,/boxes/logic/_resources/datasheets/NOR_gates.pdf,https://uk.farnell.com/texas-instruments/cd4001be/ic-nor-quad-4000-cmos-14dip/dp/3120100,Active Electronics,10,20,8,0.7788,0.4284,8,0
+Gate (XOR),Gate__XOR_,10,4xXOR gate,1,/boxes/logic/_resources/datasheets/XOR_gates.pdf,https://uk.farnell.com/texas-instruments/cd4070be/ic-4000-cmos-4070-dip14-18v/dp/3120134,Active Electronics,10,20,8,0.8784,0.4788,9,0

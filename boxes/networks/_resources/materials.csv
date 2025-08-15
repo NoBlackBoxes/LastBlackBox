@@ -1,3 +1,3 @@
 name,slug,depth,description,quantity,datasheet,supplier,package,x,y,z,unit_price,bulk_price,new,used
-Cable (MiniUSB-20cm),Cable__MiniUSB_20cm_,01,Short mini-USB to Type-A cable (20 cm),1,/boxes/networks/,https://www.amazon.co.uk/gp/product/B07FW69HNT,Cables,100,25,10,3.02,1.58,0,0
-Cable (MicroUSB-20cm),Cable__MicroUSB_20cm_,10,Short micro-USB to Type-A cable (20 cm),1,/boxes/networks/,https://www.amazon.co.uk/gp/product/B07GBS2QZ1,Cables,100,50,10,3.1,1.62,0,0
+Cable (MiniUSB-20cm),Cable__MiniUSB_20cm_,01,Short mini-USB to Type-A cable (20 cm),1,/boxes/networks/,https://www.amazon.co.uk/gp/product/B07FW69HNT,Cables (001),100,25,10,3.02,1.58,0,0
+Cable (MicroUSB-20cm),Cable__MicroUSB_20cm_,10,Short micro-USB to Type-A cable (20 cm),1,/boxes/networks/,https://www.amazon.co.uk/gp/product/B07GBS2QZ1,Cables (001),100,50,10,3.1,1.62,0,0

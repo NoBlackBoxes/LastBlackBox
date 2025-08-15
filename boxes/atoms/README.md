@@ -6,9 +6,9 @@ In this box, you will learn about atoms...
 
 <details><summary><i>Materials</i></summary><p>
 
-Name|Depth|Description| # |Data|Link|
-:-------|:---:|:----------|:-:|:--:|:--:|
-Periodic Table|01|Periodic Table business card|1|[-D-](/boxes/atoms/card)|[-L-](VK)
+Name|Depth|Description| # |Package|Data|Link|
+:-------|:---:|:----------|:-----:|:-:|:--:|:--:|
+Periodic Table|01|Periodic Table business card|1|Body (000)|[-D-](/boxes/atoms/card)|[-L-](VK)
 
 </p></details><hr>
 

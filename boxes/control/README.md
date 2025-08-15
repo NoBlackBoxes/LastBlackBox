@@ -6,12 +6,12 @@ Getting a motor to move precisely how you want it to (direction and speed) is ve
 
 <details><summary><i>Materials</i></summary><p>
 
-Name|Depth|Description| # |Data|Link|
-:-------|:---:|:----------|:-:|:--:|:--:|
-Servo Motor|01|FT90R Digital Micro Continuous Rotation Servo|2|[-D-](/boxes/control/)|[-L-](https://www.pololu.com/product/2817)
-Servo Wheel|01|Wheels (70x8mm) for servos|2|[-D-](/boxes/control/)|[-L-](https://www.pololu.com/product/4925)
-H-bridge|10|H-bridge motor driver (SN754410NE)|2|[-D-](/boxes/control/_resources/datasheets/sn754410.pdf)|[-L-](https://www.mouser.co.uk/ProductDetail/Texas-Instruments/SN754410NE)
-DC Gearbox Motor|10|TT Gearbox DC Motor - 200RPM - 3 to 6VDC and wheel|2|[-D-](/boxes/control/)|[-L-](https://www.amazon.co.uk/AEDIKO-Motor-Gearbox-Shaft-200RPM/dp/B09V7QH1S8)
+Name|Depth|Description| # |Package|Data|Link|
+:-------|:---:|:----------|:-----:|:-:|:--:|:--:|
+Servo Motor|01|FT90R Digital Micro Continuous Rotation Servo|2|Large (100)|[-D-](/boxes/control/)|[-L-](https://www.pololu.com/product/2817)
+Servo Wheel|01|Wheels (70x8mm) for servos|2|Large (100)|[-D-](/boxes/control/)|[-L-](https://www.pololu.com/product/4925)
+H-bridge|10|H-bridge motor driver (SN754410NE)|2|Active Electronics|[-D-](/boxes/control/_resources/datasheets/sn754410.pdf)|[-L-](https://www.mouser.co.uk/ProductDetail/Texas-Instruments/SN754410NE)
+DC Gearbox Motor|10|TT Gearbox DC Motor - 200RPM - 3 to 6VDC and wheel|2|Large (100)|[-D-](/boxes/control/)|[-L-](https://www.amazon.co.uk/AEDIKO-Motor-Gearbox-Shaft-200RPM/dp/B09V7QH1S8)
 
 </p></details><hr>
 

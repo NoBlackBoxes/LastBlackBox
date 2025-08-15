@@ -6,9 +6,9 @@ What is light? How do we measure it? How to **create** it?
 
 <details><summary><i>Materials</i></summary><p>
 
-Name|Depth|Description| # |Data|Link|
-:-------|:---:|:----------|:-:|:--:|:--:|
-Lightbulb|10|Mini incandescent bulb (6 V)|1|[-D-](/boxes/light/_resources/datasheets/lamp_G501.pdf)|[-L-](https://uk.farnell.com/cml-innovative-technologies/g501/lamp-mes-g3-1-2-6-5v-1-95w/dp/1139207)
+Name|Depth|Description| # |Package|Data|Link|
+:-------|:---:|:----------|:-----:|:-:|:--:|:--:|
+Lightbulb|10|Mini incandescent bulb (6 V)|1|Active Electronics|[-D-](/boxes/light/_resources/datasheets/lamp_G501.pdf)|[-L-](https://uk.farnell.com/cml-innovative-technologies/g501/lamp-mes-g3-1-2-6-5v-1-95w/dp/1139207)
 
 </p></details><hr>
 
