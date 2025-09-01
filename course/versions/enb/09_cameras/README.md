@@ -62,40 +62,16 @@ For taking a single photo you could for example use:
 This records a video that you can easily access and preview on Visual Studio Code. As always, look in the folder that you run the script.
 Using Visual Studio Code, you can transfer files via drag&drop or right click --> download.
 
-Task 4: Live stream the camera feed
+Task 3: Live stream the camera feed
 -----------------------------------
 
->Note: There is a version called cameraStream2.py - this is recommended for newer RaspPis and OS-versions!
-Ensure you have picamera2 installed (follow these instructions: https://github.com/raspberrypi/picamera2)
+We prepared a file called `cameraStream2025.py` that does the following:
 
-*The following can be deprecated, try the cameraStream2.py first! However, the main idea, live streaming the camera per web-browser is the same!*
-
-I prepared a file called cameraStream.py – this is based on the basic
-streaming example of **picamera**
-(<https://picamera.readthedocs.io/en/release-1.13/recipes2.html#web-streaming>)
-and a little bit adjusted for the afternoon tasks. It consists of an
-http server allowing to stream dynamically an image that changes over
-time (the file stream.mjpg). I further added some libraries for image
-processing, namely numpy[^1] and OpenCV[^2]. It is necessary to install
-both libraries. Here’s how you do it:
-
-    pip3 install opencv-contrib-python
-
-    sudo apt-get install -y libatlas-base-dev libhdf5-dev libhdf5-serial-dev libatlas-base-dev libjasper-dev libqtgui4 libqt4-test
-
-    pip3 install numpy --upgrade
-
-If you have any issues here, let us know. 
-Also, if you are using the **headless Lite OS**, it may happen that you need to install a couple of more libraries: 
-
-    sudo apt-get install python3-opencv
-    sudo apt-get install python3-pip
-    sudo apt-get install python3-picamera
-
-Next, transfer the `cameraStream.py` file somewhere on your Raspberry Pi, e.g. in
-`/home/pi/Documents`. You can then execute it using the following command (starting with `python`):
-
-    \~$ python3 Documents/cameraStream.py
+- Creates a small web server to show a live image
+- Connects to the camera
+- Reads a camera image
+- Then we can do whatever magic we like to do (in the course, e.g. background subtraction or thresholding, in your behavior experiment e.g. detect if a mouse is on the "test side" of the cage)
+- Show the camera image
 
 On your computer or cell phone that is in the same network as your
 Raspberry Pi, go to an internet browser (Firefox, Chrome, …), type in
@@ -107,17 +83,13 @@ and now you should see a live stream of your Raspberry Pi’s camera.
 
 *Stop the stream by `Ctrl+C`*
 
-Task 5: Transfer and open a photo
+Task 4: Transfer photos
 ---------------------------------
 
-The last task for the morning is to transfer a photo from your Raspberry
-Pi to your computer. Use either Jupyter notebooks or a Python script
-inside of Visual Studio Code to visualize the image (see paragraphs below). Try to work with
-the image, for example crop it, or resize it, etc. This knowledge is
-important for the afternoon and tomorrow.
+The last task for the morning is to transfer some photos from your Raspberry
+Pi to your computer. You may would like to take some photos of yourself (ca. 100), 
+such that you can create a small dataset that we can use in the afternoon to detect you (and maybe not someone else).
 
-I am assuming that you have either Anaconda installed on your machine (PC!) or 
-any other Python version that has Juptyter installed.
 
 Results
 -------
@@ -133,7 +105,7 @@ And this is your camera stream
 cameraStream.py
 ---------------
 
-Here’s a quick overview of the file `cameraStream.py`:
+Here’s a quick overview of the file `cameraStream.py`, a simpler but not state-of-the-art version anymore, but good for explaining some concepts:
 
 First, we important libraries important for camera interaction and
 live-streaming:
