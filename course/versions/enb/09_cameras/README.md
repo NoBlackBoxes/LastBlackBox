@@ -32,83 +32,38 @@ how to attach the camera with the flat ribbon cable to the Raspberry Pi
 
 If you attached the camera, you need to place the camera on the provided
 camera holders in order to mount everything on the robot (see also Video
-from Adam regarding camera installation and mounting). Next, you need to
-enable the camera in your Raspberry Pi 4 with SSH.
+from Adam regarding camera installation and mounting). 
 
-Remember, you can SSH on your raspberry pi using PuTTY or KiTTY using
-your set username/password (by default pi and raspberry, respectively).
-Next, use the raspi-config (`sudo raspi-config`) to enable the camera:
+> [!NOTE]  
+> The PyCamera should now be enabled by default, life becomes easier with every NB3 generation.
 
 ![](./media/image1.png)
 
 Task 2: Take a first photo and video
 ------------------------------------
 
-Using SSH, you can interact with the camera using raspistill and
-raspivid. A full explanation about the settings of these two commands is
+Using SSH (either Putty or via Visual Studio Code), you can interact with the camera using `rpicam-jpeg` (formerly `raspistill`) and
+`rpicam-vid`. A full explanation about the settings of these two commands is
 here:
 
-<https://blog.robertelder.org/commands-raspberry-pi-camera/>
+[https://blog.robertelder.org/commands-raspberry-pi-camera/](https://www.raspberrypi.com/documentation/computers/camera_software.html)
 
 The files are saved in the same folder as your currently in (e.g. your
 home folder), but you can specify the path.
 
 For taking a single photo you could for example use:
 
-    raspistill -w 640 -h 480 -q 75 -vf -o test_image.jpg
+    rpicam-jpeg -w 640 -h 480 -q 75 -vf -o test_image.jpg
     (image with 640x480 pixel, vertically flipped, saved as test_image.jpg with a quality of 75 (lower worse))
 
-    raspivid -o test_vid.h264 -t 5000 -fps 24
-    (video with default 1920x1080 px (full HD), saved as test_vid.h264 and
-    records at 24 frames per second for 5 s (5000 ms))
+    rpicam-vid -t 5s --codec libav -o test.mp4
+    (video with default camera settings, saved as test.mp4, and recorded footage lasted for 5 seconds)
 
-This records RAW h264 footage, and is not contained in a container file.
-The most common container file is the MP4 format. If the raw footage is
-not in a container, VLC or other players will refuse to play it,
-however, you can still open these videos via Python and e.g. imageio.
-Using *MP4Box* or FFMPEG you can easily add an MP4 container, though.
-
-First, install MP4Box if it is not pre-installed:
-
-    sudo apt-get install gpac
-
-Next, use the following command to convert the raw video file to an mp4
-container.
-
-    MP4Box -add test_vid.h264 test_vid.mp4
-
-Task 3: Transfer them to your computer
---------------------------------------
-
-**NOTE:** If you have already a connection with Visual Studio Code via SSH to your computer, you can use this to transfer the files or look at them. If you would like to have another convenient way to transfer files, you may would like to checkout FileZilla:
-
-You can use for example FileZilla
-([www.filezilla-project.org](https://filezilla-project.org/download.php?show_all=1)) to transfer files
-easily.
-
-Setup your connection the following way by adding a new “Server”:
-
-![](./media/image2.png)
-
-
-I know it is in German, but you just click “New Server”, use the
-protocol SFTP, add the IP address of your Raspberry Pi (In the
-screenshot is MY IP-Address, which is not necessarily yours!), set the **port to 22** and add
-the username/password for connection. Next, click on “Connect”, and you
-will see something like this (the port is missing though):
-
-![](./media/image3.png)
-
-On the left is your PC, on the right is your Rapsberry Pi. By using
-drag&drop, you can move files from your PC to the Raspberry Pi and vice
-versa. For example, you can now navigate to the folder, where you saved
-your videos (e.g. `/home/pi/…`) and transfer them to your computer. Try to
-open the files and watch the video (check both, h264 – that shouldn’t
-work, and mp4 – that should work).
+This records a video that you can easily access and preview on Visual Studio Code. As always, look in the folder that you run the script.
+Using Visual Studio Code, you can transfer files via drag&drop or right click --> download.
 
 Task 4: Live stream the camera feed
 -----------------------------------
-
 
 >Note: There is a version called cameraStream2.py - this is recommended for newer RaspPis and OS-versions!
 Ensure you have picamera2 installed (follow these instructions: https://github.com/raspberrypi/picamera2)
