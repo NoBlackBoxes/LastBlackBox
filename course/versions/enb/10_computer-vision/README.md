@@ -6,7 +6,7 @@ Afternoon session
 You need
 --------
 
--   The working cameraStream.py from the morning session
+-   The working [cameraStream2025.py](https://github.com/NoBlackBoxes/LastBlackBox/blob/master/course/versions/enb/09_cameras/_resources/cameraStream2025.py) from the morning session
 
 -   Your computer and SSH connection to Raspberry Pi 4
 
@@ -24,8 +24,8 @@ Task 1: Incorporate the face detection algorithm
 I prepared a little script called `faceDetection.py` that contains all
 the code of the face detection algorithm. Ensure you understand what
 each line of code is doing. Run it locally on your computer to see if it
-works in general. Your aim is it to incorporate this code into the
-cameraStream.py file to allow live face recognition with your robot.
+works in general. Your aim is to incorporate this code into the
+cameraStream2025.py file to allow live face recognition with your robot.
 
 Please ensure that you download also the *XML FILE* and put it in the very same folder :-)
 
@@ -48,7 +48,7 @@ interact with the environment. For example, let an LED light up or make
 some noise using the speaker. Use the serial connection introduced yesterday
 to connect to your Arduino. 
 
-Ideally, try to move the robotor as such that the face gets centered in the image view (you can move left, right, so the face should be centered left/right).
+Ideally, try to move the robot as such that the face gets centered in the image view (you can move left, right, so the face should be centered left/right).
 
 Task 4: Be creative!
 -----------------------
@@ -56,10 +56,10 @@ Task 4: Be creative!
 Now it is your time: you can combine different streams, such as 1D signals and 2D images and make something special! What can the robot do for you? 
 
 
-Pro-Task 1: Incorporate background subtraction to your live stream
+Pro-Task 1: Incorporate background subtraction into your live stream
 ------------------------------------------------------------------
 
-Use a temporary variable that stores the information of the background.
+Use a temporary variable that stores the information about the background.
 You have to define it below the class, similar to this one. Think about
 it, what does this mean?
 
@@ -71,15 +71,13 @@ to it as `self.bg`, similar to `self.frame_i`.
 If you want to replace image 0, you can write `self.bg[0] = …`
 
 Ensure that you are cycling through your background images and always
-keep the five latest background images! Then subtract the average
-background from your camera frame. Be aware of the live lecture!
+keep the e.g. five latest background images! Then subtract the average
+background from your camera frame, using something like `cv2.absdiff` function to avoid overflow in the integer domain.
 
 ![](./media/image12.png)
 
-Pro-Task 2: Threshold the background substracted frame
+Pro-Task 2: Integrate a deep neural network to perform object detection
 ------------------------------------------------------
 
-Use thresholding to generate a black/white image. Problems you may run
-into: OpenCV wants uint8 images. Is there an OpenCV Thresholding
-function? Which threshold is good?
+The Raspberry Pi 4 is powerful enough to run small deep neural networks. You can for example follow [this guide](https://docs.pytorch.org/tutorials/intermediate/realtime_rpi.html#image-preprocessing) for image classification. I also added a code snippet that can be used to do object detection using a pre-trained neural network, drawing boxes of the found objects directly on the preview. You need to use the `detect_and_draw` function and put the code at the right position(s) in the main `cameraStreaming2025.py` script.
 
