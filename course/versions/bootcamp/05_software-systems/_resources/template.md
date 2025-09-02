@@ -7,7 +7,6 @@ We will now add a more powerful computer (which will require more electrical *po
 
 ## Systems{01}
 {Multi-Tasking}
-{NB3_Programming-Concurrency-Arduino}
 {Operating-Systems}
 {NB3_Midbrain}
 {NB3_RPiOS}

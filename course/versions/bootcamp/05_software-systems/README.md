@@ -74,14 +74,6 @@ M2.5 standoff (20/SS)|01|20 mm long socket-to-socket M2.5 standoff|4|Mounting Ha
 </details><hr>
 
 
-#### Watch this video: [NB3 : Programming Concurrency (Arduino)](https://vimeo.com/1036094397)
-<p align="center">
-<a href="https://vimeo.com/1036094397" title="Control+Click to watch in new tab"><img src="../../../../boxes/systems/_resources/lessons/thumbnails/NB3_Programming-Concurrency-Arduino.gif" alt="NB3 : Programming Concurrency (Arduino)" width="480"/></a>
-</p>
-
-> Getting a microcontroller to perform two tasks (with very different timescales) at the same time is a fun programming challenge. You will develop new skills in organizing your programs and get a glimpse of the problems solved by the *kernel* of a modern operating system.
-
-
 #### Watch this video: [Operating Systems](https://vimeo.com/1036096746)
 <p align="center">
 <a href="https://vimeo.com/1036096746" title="Control+Click to watch in new tab"><img src="../../../../boxes/systems/_resources/lessons/thumbnails/Operating-Systems.gif" alt="Operating Systems" width="480"/></a>
