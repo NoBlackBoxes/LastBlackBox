@@ -3,8 +3,8 @@ import socket
 import serial
 import time
 
-# Load home page data (index.html)
-path = "index.html"
+# Load home page data (index_drive.html)
+path = "index_drive.html"
 file = open(path,"r")
 html = file.read()
 file.close()
@@ -56,7 +56,6 @@ try:
         if(len(fields) < 2):
             continue
         target = fields[1]
-        print(fields)
 
         # Respond to target
         if(target == '/'): # The default target, serve 'index.html'
@@ -70,7 +69,6 @@ try:
             client_connection.sendall(response)
 
         elif(target.startswith('/control')):
-            print(target)
             path, query = target.split("?", 1)
             if query.startswith("direction="):
                 direction = query.split("=", 1)[1]
@@ -80,23 +78,23 @@ try:
             if direction == "stop":
                 ser.write(b'x')
                 time.sleep(0.05)
-                print("Stop")
+                print(f"- Stop, [From: {client_address}]")
             elif direction == "forward":
                 ser.write(b'f')
                 time.sleep(0.05)
-                print("Forward")
+                print(f"- Forward, [From: {client_address}]")
             elif direction == "backward":
                 ser.write(b'b')
                 time.sleep(0.05)
-                print("Backward")
+                print(f"- Backward, [From: {client_address}]")
             elif direction == "left":
                 ser.write(b'l')
                 time.sleep(0.05)
-                print("Left")
+                print(f"- Left, [From: {client_address}]")
             elif direction == "right":
                 ser.write(b'r')
                 time.sleep(0.05)
-                print("Right")
+                print(f"- Right, [From: {client_address}]")
         else:
             header = "HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n"
             body = "404 Not Found"
