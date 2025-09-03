@@ -59,20 +59,27 @@ For Linux/Mac:
 There you have to look for the IP address of the network interface you are using to connect to the robot. It should be
 something like `192.168.XXX.XXX`.
 
-After you changed the IP address, you can run the script on your raspberry pi by executing the following command:
+After you changed the IP address, you can run the script on your Raspberry Pi by executing the following command:
 
     python3 raspberry_pi/receive_and_send_sensor_data.py
 
+Depending on the version, it might just be
+
+    /bin/python raspberry_pi/receive_and_send_sensor_data.py
 
 Task 4: Receive the data at your host computer
 -----------------------------------
-You need to have python3 installed on your host computer. If you do not have it installed, we recommend to use
-Anaconda to install python3. You can find the installation instructions here: https://www.anaconda.com/products/individual
-After you installed Anaconda, you can run the script by executing the following command:
+You need to have Python installed on your host computer. If you do not have it installed, we recommend using
+Anaconda to install Python. You can find the installation instructions here: https://www.anaconda.com/products/individual
+After you install Anaconda, you can run the script by executing the following command:
 
     python host_pc/receive_sensor_data_host.py
 
-Note: You probably need to install the following packages:
+You can start the command by running the script also in your Visual Studio Code environment on your **host** computer.
+If you are in the  (base)  environment, the most important packages should be already installed. If not, you might follow the next steps.
+
+>[!NOTE]
+>The next steps may be needed if you are running into issues
 
     pip install numpy
     pip install matplotlib
@@ -110,7 +117,7 @@ arecord -D plughw:1 -c2 -r 48000 -f S32_LE -t wav -V stereo -v file_stereo.wav
 
 Task 3: Load it on your host computer and plot it
 ---------------------------------
-Transfer the recorded file to your host computer and plot it using matplotlib. For file transfer, you can use the commands as introduced before, or any other tool, such as WinSCP or FileZilla. 
+Transfer the recorded file to your host computer and plot it using matplotlib. For file transfer, you can use the commands or Visual Studio Code as introduced before, or any other tool, such as WinSCP or FileZilla for SSH-based file transer. 
 
 
 Task 4: Record a whistling sound
