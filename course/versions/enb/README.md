@@ -39,8 +39,8 @@ You will be building a brain for your robot. The robot's physical layout mimics 
 
 ### Day 4 - Audio
 
-- [Morning](07_microphone-and-speakers/): Audio input and output hardware
-- [Afternoon](08_signal-processing/): Signal processing (1-D data)
+- [Morning](07_microphones-and-speakers/): Audio input and output hardware
+- [Afternoon](08_signal_processing/): Signal processing (1-D data)
 
 ### Day 5 - Images
 
