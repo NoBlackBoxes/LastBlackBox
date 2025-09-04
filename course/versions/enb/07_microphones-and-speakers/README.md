@@ -105,7 +105,7 @@ this on your host computer:
 # Audio Data
 Task 1: Follow the microphone installation instructions
 ---------------------------------
-To install the microphone, please follow the instructions provided in the following link: [Microphone Installation Instructions](https://github.com/NoBlackBoxes/LastBlackBox/tree/master/boxes/audio/i2s)
+To install the microphone, please follow the instructions provided in the following link: [Microphone Installation Instructions](https://github.com/NoBlackBoxes/LastBlackBox/tree/master/boxes/audio)
 
 Task 2: Record audio data
 ---------------------------------
