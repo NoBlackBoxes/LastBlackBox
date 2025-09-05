@@ -30,6 +30,10 @@ how to attach the camera with the flat ribbon cable to the Raspberry Pi
 
 <https://www.raspberrypi.com/documentation/accessories/camera.html>
 
+and one for mounting the camera on the NB3:
+
+<https://github.com/NoBlackBoxes/LastBlackBox/tree/master/boxes/vision>
+
 If you attached the camera, you need to place the camera on the provided
 camera holders in order to mount everything on the robot (see also Video
 from Adam regarding camera installation and mounting). 
@@ -87,7 +91,7 @@ Task 4: Transfer photos
 ---------------------------------
 
 The last task for the morning is to transfer some photos from your Raspberry
-Pi to your computer. You may would like to take some photos of yourself (ca. 100), 
+Pi to your computer. You may like to take some photos of yourself (ca. 100), 
 such that you can create a small dataset that we can use in the afternoon to detect you (and maybe not someone else).
 
 
@@ -105,7 +109,7 @@ And this is your camera stream
 cameraStream.py
 ---------------
 
-Here’s a quick overview of the file `cameraStream.py`, a simpler but not state-of-the-art version anymore, but good for explaining some concepts:
+Here’s a quick overview of the file `cameraStream.py`, a simpler but not state-of-the-art version anymore (we use `cameraStream2025.py`), but good for explaining some concepts:
 
 First, we important libraries important for camera interaction and
 live-streaming:
