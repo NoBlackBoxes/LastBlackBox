@@ -17,17 +17,17 @@ for i in range(10):
         command = f"r:{r:03d}\n"
         ser.write(command.encode())
         #print(command.encode())
-        time.sleep(0.01)
+        time.sleep(0.02)
     for g in intensities:
         command = f"g:{g:03d}\n"
         #print(command.encode())
         ser.write(command.encode())
-        time.sleep(0.01)
+        time.sleep(0.02)
     for b in intensities:
         command = f"b:{b:03d}\n"
         #print(command.encode())
         ser.write(command.encode())
-        time.sleep(0.01)
+        time.sleep(0.02)
 
 # Close serial port
 ser.close()
