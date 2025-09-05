@@ -41,8 +41,6 @@ from Adam regarding camera installation and mounting).
 > [!NOTE]  
 > The PyCamera should now be enabled by default, life becomes easier with every NB3 generation.
 
-![](./media/image1.png)
-
 Task 2: Take a first photo and video
 ------------------------------------
 
@@ -100,11 +98,11 @@ Results
 
 This is how your robot should look like:
 
-![](./media/image3a.png)
+![](./_resources/media/nb3_with_camera.png)
 
 And this is your camera stream
 
-![](./media/image4.png)
+![](./_resources/media/nb3_camera_stream.png)
 
 cameraStream.py
 ---------------
@@ -115,18 +113,18 @@ First, we important libraries important for camera interaction and
 live-streaming:
 
 ![Ein Bild, das Text enthält. Automatisch generierte
-Beschreibung](./media/image5.png)
+Beschreibung](./_resources/media/image5.png)
 
 Next, we import libraries for dealing with the images:
 
-![](./media/image6.png)
+![](./_resources/media/image6.png)
 
 (These are the libraries you just installed)
 
 Then, there is a lot of stuff related to the webserver, the real
 important things are going on here:
 
-![](./media/image7.png)
+![](./_resources/media/image7.png)
 
 Between both decoding and encoding steps, you are able to do anything to
 the image ( afternoon tasks), here introduced as variable frame.
@@ -182,7 +180,7 @@ images](https://scikit-image.org/docs/dev/user_guide/numpy_images.html)”.
 
 How to open a Jupyter notebook after installing Anaconda:
 
-![](./media/image8.png)
+![](./_resources/media/image8.png)
 
 [^1]: Numpy is a nice package for dealing with mathematics and arrays.
     <https://numpy.org/> and look at their Nature paper:
