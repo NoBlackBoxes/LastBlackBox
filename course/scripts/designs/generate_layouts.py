@@ -30,6 +30,16 @@ svg.draw(svg_path)
 png_path = f"{output_folder}/png/{svg.name}.png"
 PNG.PNG(svg.name, dpi=600).convert(svg_path, png_path)
 
+# --------------
+# LBB (portrait)
+# --------------
+layout = Layout.Layout("LBB", 7, 4, Config.box_names, 13.0, 0.125, 1.25, 1.25, "#000000", "#FFFFFF", 2.00, True, True)
+svg = SVG.SVG("layout_LBB_portrait", None, 98.75, 56.0, "0 0 98.75 56.0", layout.boxes, _with_profile=False, _with_title=False, _with_labels=True)
+svg_path = f"{output_folder}/svg/{svg.name}.svg"
+svg.draw(svg_path)
+png_path = f"{output_folder}/png/{svg.name}.png"
+PNG.PNG(svg.name, dpi=600).convert(svg_path, png_path)
+
 # --------
 # Bootcamp
 # --------
