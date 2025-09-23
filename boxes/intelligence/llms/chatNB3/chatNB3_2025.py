@@ -23,6 +23,20 @@ camera = Camera.Camera(width=800, height=600)
 camera.start()
 time.sleep(1.0)
 
+# Specify params
+output_device = 1
+num_channels = 2
+sample_rate = 48000
+buffer_size = int(sample_rate / 10)
+max_samples = int(sample_rate * 10)
+
+# List available sound devices
+Utilities.list_devices()
+
+# Initialize speaker
+speaker = Speaker.Speaker(output_device, num_channels, 'int32', sample_rate, buffer_size)
+speaker.start()
+
 # Specify model
 client = openai.OpenAI(api_key=OPENAI_API_KEY)
 VISION_MODEL = "gpt-4o-mini"
@@ -50,5 +64,16 @@ resp = client.responses.create(
 )
 print("Model reply:", resp.output_text)
 
+
+## Play WAV file
+#speaker.play_wav(wav_path)
+#
+## Wait for finish
+#while speaker.is_playing():
+#    time.sleep(0.1)
+
 # Shutdown camera
 camera.stop()
+
+# Shutdown speaker
+speaker.stop()
