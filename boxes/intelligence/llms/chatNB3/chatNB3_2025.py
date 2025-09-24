@@ -1,6 +1,7 @@
 import os
 import time
 import base64
+import numpy as np
 import openai
 from dotenv import load_dotenv
 import NB3.Vision.camera as Camera
@@ -44,13 +45,12 @@ VISION_MODEL = "gpt-4o-mini"
 # Acquire Frame (jpeg)
 frame = camera.mjpeg()
 
-
 # Encode frame (JPEG bytes) into a data URI
 img_b64 = base64.b64encode(frame).decode("utf-8")
 img_data_uri = f"data:image/jpeg;base64,{img_b64}"
 
 # Ask a question about the image
-question = "What do you see in this picture?"
+question = "What do you see in this picture? Please give a one sentence reply."
 
 resp = client.responses.create(
     model=VISION_MODEL,
@@ -64,13 +64,35 @@ resp = client.responses.create(
 )
 print("Model reply:", resp.output_text)
 
+# Turn the reply text into audio (WAV bytes)
+VOICE = "shimmer"
 
-## Play WAV file
-#speaker.play_wav(wav_path)
-#
-## Wait for finish
-#while speaker.is_playing():
-#    time.sleep(0.1)
+tts = client.audio.speech.create(
+    model="gpt-4o-mini-tts",        # text-to-speech model
+    voice=VOICE,
+    response_format="pcm",          # or "pcm" for raw 16-bit little-endian (24 kHz)
+    input=resp.output_text,
+)
+
+# The SDK usually exposes .read() for the byte stream
+pcm_bytes = tts.read() if hasattr(tts, "read") else bytes(tts)
+
+# Convert bytes -> int16 -> float32 [-1, 1)
+pcm16 = np.frombuffer(pcm_bytes, dtype=np.int16)
+audio_f32 = pcm16.astype(np.float32) / 32768.0
+audio_f32 = np.vstack((audio_f32, audio_f32)).T
+audio_48k = np.repeat(audio_f32, 2, axis=0)
+print(audio_48k.shape)
+print(audio_48k)
+speaker.volume = 0.75
+
+# Play sound data
+speaker.write(audio_48k)
+
+# Wait for finish
+while speaker.is_playing():
+    time.sleep(0.1)
+    print(f"{speaker.current_sample} of {speaker.max_samples}")
 
 # Shutdown camera
 camera.stop()
