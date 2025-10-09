@@ -13,15 +13,30 @@ Cable (MicroUSB-20cm)|10|Short micro-USB to Type-A cable (20 cm)|1|Cables (001)|
 
 </p></details><hr>
 
-### Sockets
-> Sockets abstract the idea of a connection between computers. A socket communicates to another socket using either TCP or UDP packets. It has an address. It can listen for and request connections.
-
-
 ### Physical Layers
 > Connections must be made between computers in order for them to communicate. These can be wires carrying electrical signals (from two wires for serial connections to many wires for parallel connections) or wireless that most often uses light (radio waves). This is the physical layer of the network...and a message may traverse many different types of physical connections on its path from the sender to the receiver.
 
 
+### Architectures
+> The arrangement of connections between computers (nodes) defines the network's *architecture*. These can be simple 1-to-1 connections or much more complex. Here we will introduce the architecture of our most important network, **the internet**.
+
+
+### Sockets
+> Sockets abstract the idea of a connection between computers. A socket communicates to another socket using either TCP or UDP packets. It has an address. It can listen for and request connections.
+
+
 # Project
+### NB3 : Develop a Protocol
+> Let's develop a simple network protocol for communication between our NB3's midbrain computer and hindbrain microcontroller.
+
+<details><summary><weak>Guide</weak></summary>
+:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1042782602" target="_blank" rel="noopener noreferrer">here</a>.
+</details><hr>
+
+- Decide on your command format (x,o)
+- Run command server on your hindbrain
+- Send commands from your midbrain
+
 ### NB3 : Remote Control NB3 (TUI)
 > Let's remotely control our NB3 using a simple text-based user interface (TUI). We will detect a keypress in the terminal and send the appropriate command to our hindbrain motor controller.
 
@@ -40,15 +55,4 @@ Cable (MicroUSB-20cm)|10|Short micro-USB to Type-A cable (20 cm)|1|Cables (001)|
 - Arduino example code to respond to a multiple serial command with different servo movements: [arduino serial controller](/boxes/networks/remote-NB3/arduino/serial_controller/serial_controller.ino)
 - Python example code that combines keypress detection and serial command writing: [python kerial](/boxes/networks/remote-NB3/python/kerial/kerial.py)
 - Python example code that combines keypress detection (using a more capable library, **sshkeyboard**, that also detects when a key is held down) and serial command writing: [python drive](/boxes/networks/remote-NB3/python/drive/drive.py)
-
-### NB3 : Develop a Protocol
-> Let's develop a simple network protocol for communication between our NB3's midbrain computer and hindbrain microcontroller.
-
-<details><summary><weak>Guide</weak></summary>
-:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1042782602" target="_blank" rel="noopener noreferrer">here</a>.
-</details><hr>
-
-- Decide on your command format (x,o)
-- Run command server on your hindbrain
-- Send commands from your midbrain
 
