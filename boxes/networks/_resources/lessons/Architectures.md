@@ -4,6 +4,9 @@ The arrangement of connections between computers (nodes) defines the network's *
 ## [Video]()
 
 ## Concepts
+ - one to one (serial)
+ - LAN (router): IP Address
+ - WAN (internet): Network-of-Networks, DNS, public IP
 
 ## Connections
 

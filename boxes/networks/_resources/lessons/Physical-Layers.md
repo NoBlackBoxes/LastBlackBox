@@ -4,6 +4,10 @@ Connections must be made between computers in order for them to communicate. The
 ## [Video]()
 
 ## Concepts
+ - serial connections (simplex/duplex?, synchronous (with clock, e.g. SPI (with chip select...master/slave)) or asynchronous (UART, Rx/Tx, frames), baud-rate (BPS))
+ - twisted-pair, deal with noise - differential signalling
+ - Ethernet (four twisted-pairs: RJ45)
+ - WiFi
 
 ## Connections
 
