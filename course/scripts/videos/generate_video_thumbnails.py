@@ -11,6 +11,9 @@ import LBB.Design.png as PNG
 # Specify paths
 resources_folder = f"{Config.course_root}/_resources/videos"
 
+# Specify overwrite (re-do thumbnail generation)
+overwrite = False
+
 # Read templates
 LBB_template_path = resources_folder + "/templates/LBB_title.svg"
 with open(LBB_template_path, 'r') as file:
@@ -31,14 +34,19 @@ for box_name in Config.box_names:
     # Specify lessons folder
     lessons_folder = box_folder + "/_resources/lessons"
 
-    # Create/Clear thumbnails folder
+    # Confirm thumbnails folder
     thumbnails_folder = lessons_folder + "/thumbnails"
-    Utilities.clear_folder(thumbnails_folder)
+    Utilities.confirm_folder(thumbnails_folder)
 
     # Find all *.md files in each box's lessons folder
     md_files = glob.glob(lessons_folder + '/*.md')
     for md_file in md_files:
         md_basename = os.path.basename(md_file)
+
+        # Check for existing thumbnail (if it exists and not overwriting, skip)
+        thumbnail_path = f"{thumbnails_folder}/{md_basename[:-3]}.svg"
+        if not overwrite and os.path.exists(thumbnail_path):
+            continue
 
         # Extract lesson type and name
         with open(md_file) as f:

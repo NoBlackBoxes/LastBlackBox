@@ -8,6 +8,9 @@ from PIL import Image
 import numpy as np
 import LBB.config as Config
 
+# Specify overwrite (re-do GIF generation)
+overwrite = False
+
 # Find all boxes at "boxes_path"
 box_folders = [f for f in glob.glob(Config.boxes_root + '/*') if os.path.isdir(f)]
 
@@ -26,6 +29,11 @@ for box_name in Config.box_names:
     md_files = glob.glob(lessons_folder + '/*.md')
     for md_file in md_files:
         md_basename = os.path.basename(md_file)
+
+        # Check for existing GIF (if it exists and not overwriting, skip)
+        thumbnail_path = f"{thumbnails_folder}/{md_basename[:-3]}.gif"
+        if not overwrite and os.path.exists(thumbnail_path):
+            continue
 
         # Extract lesson type and name
         with open(md_file) as f:
