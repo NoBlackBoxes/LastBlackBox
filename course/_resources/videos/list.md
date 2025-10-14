@@ -125,7 +125,7 @@
 - [x] [Virtual Environments](https://vimeo.com/1042637566)
 
 ## Networks
-- [ ] [Physical Layers]()
+- [x] [Physical Layers](https://vimeo.com/1127178041)
 - [ ] [Architectures]()
 - [ ] [Sockets]()
 - [x] [NB3 : Develop a Protocol](https://vimeo.com/1042782602)

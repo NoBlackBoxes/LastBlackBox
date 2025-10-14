@@ -13,8 +13,12 @@ Cable (MicroUSB-20cm)|10|Short micro-USB to Type-A cable (20 cm)|1|Cables (001)|
 
 </p></details><hr>
 
-### Physical Layers
-> Connections must be made between computers in order for them to communicate. These can be wires carrying electrical signals (from two wires for serial connections to many wires for parallel connections) or wireless that most often uses light (radio waves). This is the physical layer of the network...and a message may traverse many different types of physical connections on its path from the sender to the receiver.
+#### Watch this video: [Physical Layers](https://vimeo.com/1127178041)
+<p align="center">
+<a href="https://vimeo.com/1127178041" title="Control+Click to watch in new tab"><img src="../../boxes/networks/_resources/lessons/thumbnails/Physical-Layers.gif" alt="Physical Layers" width="480"/></a>
+</p>
+
+> Connections must be made between computers in order for them to communicate. These can be wires carrying electrical signals (from just two wires for serial connections to many wires for parallel connections) or wireless, which most often use light (radio waves). This is the physical layer of the network...and a message may traverse many different types of physical connections on its path from the sender to the receiver.
 
 
 ### Architectures
