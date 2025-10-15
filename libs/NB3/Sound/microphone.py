@@ -48,7 +48,7 @@ class Microphone:
             # Profiling
             start_time = time.clock_gettime(time.CLOCK_REALTIME)
 
-            # Seperate channel data
+            # Separate channel data
             self.channel_data = np.reshape(np.frombuffer(input_data, dtype=self.dtype).transpose(), (-1,self.num_channels))
 
             # Convert to float
