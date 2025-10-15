@@ -1,25 +1,25 @@
 # Teaching Guide
 
 ## Topics
-- Basic electronics (voltage, current, and resistance)
-- Measuring with a multimeter
-- Ohm's Law
-- Circuit schematics
-- Voltage-Divider
-- Transducer (sensor) using a light-dependent resistor
+(Students will have an RPi, Camera, and Mounting Hardware (that tilts))
+- Cameras (what is a picture?)
+- Segmentation (classical)
+ - Thresholding
+ - Edges
+ - Color (HSV)
+ - Tracking (contours)
+- AI
+ - Why use learning?
+  - Run face detection network
+  - Gather dataset using NB3
+  - Train a network (transfer learning)
+
+TO DO:
+ - Update overlay library, more shapes and sprites
 
 ## Goal
-Build a light sensing circuit that changes its output voltage in response to changes in light.
-- Assemble the NB3's body (prototyping base)
-- Learn how to use a multimeter to measure voltage and resistance (maybe current)
-- Learn how a solderless breadboard works
-- Learn to read and draw circuit diagrams (schematics)
-- Build simple circuits (voltage divider) and measure
-- Use an LDR to build a light sensor
 
 ## Tools
-- Balloons (voltage)
-- Periodic Table (conductors)
 
 ## Steps
 > lecture - **practical** - *optional*
