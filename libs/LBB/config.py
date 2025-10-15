@@ -18,7 +18,7 @@ course_root = repo_root + "/course"
 site_root = repo_root + "/site"
 
 # Store course version names
-course_names = ["The Last Black Box", "Bootcamp", "Braitenberg", "Build a Brain"]
+course_names = ["The Last Black Box", "Bootcamp", "Braitenberg", "Build a Brain", "AI-Workshops"]
 
 # Store box names (and order)
 box_names = [
