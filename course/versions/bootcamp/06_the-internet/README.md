@@ -17,10 +17,14 @@ Cable (MiniUSB-20cm)|01|Short mini-USB to Type-A cable (20 cm)|1|Cables (001)|[-
 <a href="https://vimeo.com/1127178041" title="Control+Click to watch in new tab"><img src="../../../../boxes/networks/_resources/lessons/thumbnails/Physical-Layers.gif" alt="Physical Layers" width="480"/></a>
 </p>
 
-> Connections must be made between computers in order for them to communicate. These can be wires carrying electrical signals (from just two wires for serial connections to many wires for parallel connections) or wireless, which most often use light (radio waves). This is the physical layer of the network...and a message may traverse many different types of physical connections on its path from the sender to the receiver.
+> Connections must be made between computers in order for them to communicate. These can be wires carrying electrical signals (from just one or two wires for serial connections to many wires for parallel connections) or wireless (most often using light, i.e. radio waves). This is the physical layer of the network...and a message may traverse many different types of physical connections on its path from the sender to the receiver.
 
 
-### Architectures
+#### Watch this video: [Architectures](https://vimeo.com/manage/videos/1127222969)
+<p align="center">
+<a href="https://vimeo.com/manage/videos/1127222969" title="Control+Click to watch in new tab"><img src="../../../../boxes/networks/_resources/lessons/thumbnails/Architectures.gif" alt="Architectures" width="480"/></a>
+</p>
+
 > The arrangement of connections between computers (nodes) defines the network's *architecture*. These can be simple 1-to-1 connections or much more complex. Here we will introduce the architecture of our most important network, **the internet**.
 
 
