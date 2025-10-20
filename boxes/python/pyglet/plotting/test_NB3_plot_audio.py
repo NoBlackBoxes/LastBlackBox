@@ -5,7 +5,7 @@ import NB3.Sound.utilities as Utilities
 import NB3.Plot.line as Line
 
 # Specify params
-input_device = 3
+input_device = 0
 num_channels = 1
 sample_rate = 48000
 buffer_size = int(sample_rate / 100)
