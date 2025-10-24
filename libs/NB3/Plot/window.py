@@ -16,36 +16,41 @@ class Window:
         self.height = int(height)
         self.title = title
         self.batch = None
-        self.window = None
+        self.handle = None
 
     def open(self):
-        self.window = pyglet.window.Window(self.width, self.height, caption=self.title, vsync=True, resizable=True)
-        self.window.switch_to()  # ensure GL context is current
+        self.handle = pyglet.window.Window(self.width, self.height, caption=self.title, vsync=True, resizable=True)
+        self.handle.switch_to()  # ensure GL context is current
         gl.glEnable(gl.GL_BLEND)
         gl.glBlendFunc(gl.GL_SRC_ALPHA, gl.GL_ONE_MINUS_SRC_ALPHA)
         gl.glLineWidth(1.0)
 
         self.batch = pyglet.graphics.Batch()
 
-        @self.window.event
+        @self.handle.event
         def on_resize(width, height):
             self.width, self.height = width, height
             return pyglet.event.EVENT_HANDLED
 
+        @self.handle.event
+        def on_close():
+            self.handle.close()
+            self.handle = None
+            return pyglet.event.EVENT_HANDLED
+
     def process_events(self):
-        if self.window:
-            self.window.dispatch_events()
+        if self.handle:
+            self.handle.dispatch_events()
 
     def render(self):
-        """Draw the current frame NOW (no scheduling)."""
-        if self.window:
-            self.window.clear()
+        if self.handle:
+            self.handle.clear()
             self.batch.draw()
-            self.window.flip()
+            self.handle.flip()
 
     def close(self):
-        if self.window:
-            self.window.close()
-            self.window = None
+        if self.handle:
+            self.handle.close()
+            self.handle = None
 
 # FIN

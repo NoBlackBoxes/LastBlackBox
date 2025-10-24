@@ -3,7 +3,7 @@ import numpy as np
 import NB3.Plot.window as Window
 
 # Open line plot
-window = Window.Window(width=512, height=512)
+window = Window.Window()
 window.open()
 
 # your blocking loop (e.g., socket recv in same thread)

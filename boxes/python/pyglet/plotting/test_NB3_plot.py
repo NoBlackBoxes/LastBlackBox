@@ -3,15 +3,15 @@ import numpy as np
 import NB3.Plot.line as Line
 
 # Open line plot
-line = Line.Line(512, 256, 512, 0, num_samples=255)
+line = Line.Line(min=50, max=210, num_samples=600)
 line.open()
 
-# your blocking loop (e.g., socket recv in same thread)
+# Plotting loop
 while True:
     try:
         # Generate random data
-        data = np.random.randint(120, 135, 512)
-        line.draw_data(data)      # push data
+        data = np.random.randint(120, 140, 16)
+        line.plot(data)           # push data
         line.process_events()     # handle window events
         line.render()             # draw immediately
         time.sleep(0.02)
