@@ -1,10 +1,9 @@
 import time
-import numpy as np
-import NB3.Plot.window as Window
+import NB3.Plot.axes as Axes
 
-# Open line plot
-window = Window.Window()
-window.open()
+# Open plot axes
+axes = Axes.Axes()
+axes.open()
 
 # your blocking loop (e.g., socket recv in same thread)
 while True:
@@ -14,6 +13,6 @@ while True:
         break
 
 # Cleanup
-window.close()
+axes.close()
 
 # FIN

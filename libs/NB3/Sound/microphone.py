@@ -16,6 +16,7 @@ class Microphone:
         self.buffer_size_samples = buffer_size_samples
         self.max_samples = max_samples
         self.valid_samples = 0
+        self.new_samples = 0
         self.mutex = Lock()
 
         # Set format
@@ -59,14 +60,14 @@ class Microphone:
 
             # Lock thread
             with self.mutex:
-
                 # Fill buffer...and then concat
                 if self.valid_samples < self.max_samples:
                     self.sound[self.valid_samples:(self.valid_samples + self.buffer_size_samples), :] = self.float_data
-                    self.valid_samples = self.valid_samples + self.buffer_size_samples
+                    self.valid_samples += self.buffer_size_samples
                 else:
                     self.sound = np.vstack([self.sound[self.buffer_size_samples:, :], self.float_data])
                     self.valid_samples = self.max_samples
+                self.new_samples += self.buffer_size_samples
 
             # Profiling
             stop_time = time.clock_gettime(time.CLOCK_REALTIME)
@@ -99,14 +100,18 @@ class Microphone:
     def reset(self):
         self.sound = np.zeros((self.max_samples, self.num_channels), dtype=np.float32)
         self.valid_samples = 0
+        self.new_samples = 0
         return
 
     # Copy latest sound data
     def latest(self, num_samples):
-        if num_samples < self.valid_samples:
+        if num_samples == -1: # Return only new samples
+            latest = np.copy(self.sound[(self.valid_samples - self.new_samples):self.valid_samples, :])
+        elif num_samples < self.valid_samples:
             latest = np.copy(self.sound[(self.valid_samples-num_samples):self.valid_samples, :])
         else:
             latest = np.copy(self.sound[0:self.valid_samples, :])
+        self.new_samples = 0
         return latest
 
     # Start saving WAV

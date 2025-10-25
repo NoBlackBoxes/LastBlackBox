@@ -19,34 +19,30 @@ microphone = Microphone.Microphone(input_device, num_channels, 'int32', sample_r
 microphone.gain = 1.0
 microphone.start()
 
-# Open line plot
-line = Line.Line(-2.0, 2.0, num_samples=sample_rate)
+# Open line plotter
+line = Line.Line(-1.1, 1.1, num_samples=buffer_size*100)
 line.open()
 
-# your blocking loop (e.g., socket recv in same thread)
-try:
-    start_time = time.time()
-    prev = np.zeros(buffer_size, np.float32)
-    while True:
-        latest = microphone.latest(buffer_size)
-        if len(latest) < buffer_size:
-            print(len(latest))
-            continue
-        data = latest[:,0]
-        line.plot(data)      # push data
-        line.process_events()     # handle window events
-        line.render()             # draw immediately
-        time.sleep(0.02)
-        end_time = time.time()
-#        print(end_time - start_time)
-        volume = np.mean(np.max(data))
- #       print("{0:.2f}".format(volume))
-        start_time = end_time
-        prev = np.copy(data)
-        print("Profiling:\n- Avg (Max) Callback Duration (us): {0:.2f} ({1:.2f})".format(microphone.callback_accum/microphone.callback_count*1000000.0, microphone.callback_max*1000000.0))
+# Acquisition loop
+while True:
+    try:
+        start_time = time.time()
+        latest = microphone.latest(-1) # Grab latest "new" samples
+        data = latest[:,0]             # Only take Channel 0
+        line.plot(data)                # Plot data
 
-finally:
-    microphone.stop()
-    line.close()
+        # Profiling
+        end_time = time.time()
+        volume = np.mean(np.max(data))
+        start_time = end_time
+        #print("Profiling:\n- Avg (Max) Callback Duration (us): {0:.2f} ({1:.2f})".format(microphone.callback_accum/microphone.callback_count*1000000.0, microphone.callback_max*1000000.0))
+        time.sleep(0.05)
+
+    except KeyboardInterrupt:
+        break
+
+# Cleanup
+microphone.stop()
+line.close()
 
 # FIN

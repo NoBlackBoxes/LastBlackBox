@@ -12,8 +12,6 @@ while True:
         # Generate random data
         data = np.random.randint(120, 140, 16)
         line.plot(data)           # push data
-        line.process_events()     # handle window events
-        line.render()             # draw immediately
         time.sleep(0.02)
     except KeyboardInterrupt:
         break
