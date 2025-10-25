@@ -1,7 +1,8 @@
 import os
 import time
 import cv2
-import NB3.Vision.camera as Camera
+#import NB3.Vision.camera as Camera
+import NB3.Vision.webcam as Camera
 import NB3.Vision.overlay as Overlay
 import NB3.Server.server as Server
 

@@ -17,11 +17,12 @@ import NB3.Vision.output as Output
 
 # Camera Class
 class Camera:
-    def __init__(self, width, height, lores_width=None, lores_height=None):
+    def __init__(self, width, height, lores_width=None, lores_height=None, index=0):
         self.width = width
         self.height = height
         self.lores_width = lores_width if lores_width else width
         self.lores_height = lores_height if lores_height else height
+        self.index = index
         self.num_channels = 3
         self.handle = Picamera2()
         self.mutex = Lock()

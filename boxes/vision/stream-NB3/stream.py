@@ -1,6 +1,7 @@
 import os
 import time
 import NB3.Vision.camera as Camera
+#import NB3.Vision.webcam as Camera
 import NB3.Server.server as Server
 
 # Get user name
