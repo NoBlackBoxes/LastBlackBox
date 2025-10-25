@@ -2,15 +2,13 @@ import os
 import time
 import cv2
 import numpy as np
-import NB3.Vision.camera as Camera
-#import NB3.Vision.webcam as Camera
+#import NB3.Vision.camera as Camera
+import NB3.Vision.webcam as Camera
 import NB3.Vision.overlay as Overlay
 import NB3.Server.server as Server
 
-# Get user name
-username = os.getlogin()
-
 # Specify site root
+username = os.getlogin()
 root = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/vision/image_processing/python/site"
 
 # Setup Camera
@@ -49,12 +47,11 @@ try:
         if contours:
             # Find the largest contour based on area
             largest_contour = max(contours, key=cv2.contourArea)
-
-            # Draw the largest contour on the original frame
-            bgr = cv2.drawContours(rgb, [largest_contour], -1, (0, 255, 0), 3)  # Green contour
+            x, y, w, h = cv2.boundingRect(largest_contour)
+            overlay.rectangle1 = (x, y, w, h)
 
         # Convert mask to RGB so the output remains 3-channel
-        rgb = cv2.cvtColor(bgr, cv2.COLOR_BGR2RGB)
+        rgb = cv2.cvtColor(mask, cv2.COLOR_BGR2RGB)
         _, encoded = cv2.imencode('.jpg', rgb, [cv2.IMWRITE_JPEG_QUALITY, 70])
         display = encoded.tobytes()
 

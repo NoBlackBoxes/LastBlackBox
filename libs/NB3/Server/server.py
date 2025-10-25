@@ -15,7 +15,7 @@ import netifaces
 import threading
 
 class Server:
-    def __init__(self, root, port=1234, interface="wlan0", command_handler=None):
+    def __init__(self, root, port=1234, interface="wlan0", command_handler=None, autostart=False):
         self.root = os.path.abspath(root)                                                # Site root folder
         self.port = port                                                                 # Server port
         self.ip_address = netifaces.ifaddresses(interface)[netifaces.AF_INET][0]['addr'] # Get IP address for interface
@@ -27,6 +27,9 @@ class Server:
             self.stream_clients[stream_name] = []
         self.running = False
         self.server_thread = None
+        if autostart:
+            self.start()
+            self.status()
     
     def start(self):
         self.running = True
@@ -53,6 +56,7 @@ class Server:
     def status(self):
         if self.running:
             print(f"\n🌐 NB3 Server running at http://{self.ip_address}:{self.port}")
+            print(f"    - \"Control + C\" to Quit -")
         else:
             print("\n🌐 NB3 Server not running")
 

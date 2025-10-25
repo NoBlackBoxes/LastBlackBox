@@ -36,7 +36,7 @@ class Camera:
         self.handle.configure(config)
         self.encoder = MJPEGEncoder(bitrate=self._set_bitrate())
         self.output = Output.Output()
-        self.handle.pre_callback = self.pre_callback
+        self.handle.pre_callback = self._pre_callback
 
     def start(self):
         self.handle.start()
@@ -75,7 +75,15 @@ class Camera:
             cv2.imwrite(filename, frame)
             return
 
-    def pre_callback(self, request):
+    def display(self, frame, server, stream, jpeg=False):
+        if not jpeg:
+            rgb = cv2.cvtColor(frame, cv2.COLOR_GRAY2RGB)
+            _, encoded = cv2.imencode('.jpg', rgb, [cv2.IMWRITE_JPEG_QUALITY, 70])
+            frame = encoded.tobytes()
+        server.update_stream(stream, frame)
+        return
+
+    def _pre_callback(self, request):
         if self.overlay:
             with MappedArray(request, "main") as m:
                 self.overlay.draw(m.array)

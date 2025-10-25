@@ -10,7 +10,7 @@ import time
 import cv2
 import numpy as np
 from threading import Lock, Condition
-import NB3.Vision.output as Output
+import NB3.Vision.overlay as Overlay
 
 # Webcam (Camera) Class
 class Camera:
@@ -25,7 +25,7 @@ class Camera:
         self.mutex = Lock()
         self.overlay = None
         self.encoder = None
-        self.output = Output.Output()
+        self.overlay = Overlay.Overlay()
 
     def start(self):
         self.handle = cv2.VideoCapture(self.index)
@@ -50,7 +50,8 @@ class Camera:
             if gray:
                 frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
             if self.overlay:
-                self.overlay.draw(frame)
+                pass
+                #self.overlay.draw(frame)
             return frame  # Return decoded frame
 
     def mjpeg(self):
@@ -67,6 +68,15 @@ class Camera:
             ret, frame = self.handle.read()
             cv2.imwrite(filename, frame)
             return
+
+    def display(self, frame, server, stream, jpeg=False, gray=False):
+        if not jpeg:
+            if gray: # Convert Grayscale to RGB
+                frame = cv2.cvtColor(frame, cv2.COLOR_GRAY2RGB)
+            _, encoded = cv2.imencode('.jpg', frame, [cv2.IMWRITE_JPEG_QUALITY, 70])
+            frame = encoded.tobytes()
+        server.update_stream(stream, frame)
+        return
         
     def _set_bitrate(self):
         pass

@@ -3,49 +3,47 @@ import time
 import cv2
 #import NB3.Vision.camera as Camera
 import NB3.Vision.webcam as Camera
-import NB3.Vision.overlay as Overlay
 import NB3.Server.server as Server
 
-# Get user name
-username = os.getlogin()
-
 # Specify site root
-root = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/vision/image_processing/python/site"
+username = os.getlogin()
+root = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/vision/image_processing/python/slider"
 
 # Setup Camera
 camera = Camera.Camera(width=800, height=600, lores_width=640, lores_height=480)
 camera.start()
+camera.overlay.timestamp = True
+threshold_level = 127
 
-# Add Overlay
-overlay = Overlay.Overlay()
-overlay.timestamp = True
-camera.overlay = overlay
+# Define command handler
+def command_handler(command):
+   global threshold_level
+   if command == 'decrease':
+      threshold_level -= 10
+   elif command == 'increase':
+      threshold_level += 10
+   else:
+      pass
 
 # Start Server (for streaming)
 interface = Server.get_wifi_interface()
-server = Server.Server(root=root, interface=interface)
-server.start()
-server.status()
+server = Server.Server(root=root, interface=interface, command_handler=command_handler, autostart=True)
 
+# Processing Loop
 try:
-    print(f"    - \"Control + C\" to Quit -")
     while True:
         # Capture frame
         gray = camera.capture(lores=True, gray=True)
 
-        # Apply binary thresholding
-        _, binary = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY)
+        # Apply binary threshold
+        _, binary = cv2.threshold(gray, threshold_level, 255, cv2.THRESH_BINARY)
 
-        # Convert back to RGB so the output remains 3-channel
-        rgb = cv2.cvtColor(binary, cv2.COLOR_GRAY2RGB)
-        _, encoded = cv2.imencode('.jpg', rgb, [cv2.IMWRITE_JPEG_QUALITY, 70])
-        display = encoded.tobytes()
-
-        # Update streams
-        frame = camera.mjpeg()
-        server.update_stream("camera", frame)
-        server.update_stream("display", display)
-        time.sleep(0.0333) # (Optional) Slow down stream to 30 FPS
+        # Display raw and processed frame
+        camera.display(gray, server, "camera", jpeg=False, gray=True)
+        camera.display(binary, server, "display", jpeg=False)
+        
+        # Delay
+        time.sleep(0.033) # Slow to 30 FPS
 
 except KeyboardInterrupt:
     server.stop()
