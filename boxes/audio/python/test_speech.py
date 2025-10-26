@@ -50,4 +50,4 @@ microphone.stop()
 # Report
 print("Profiling:\n- Avg (Max) Callback Duration (us): {0:.2f} ({1:.2f})".format(microphone.callback_accum/microphone.callback_count*1000000.0, microphone.callback_max*1000000.0))
 
-# FIN
+#FIN

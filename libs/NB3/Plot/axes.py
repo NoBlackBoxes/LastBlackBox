@@ -63,4 +63,4 @@ class Axes:
         self.x_axis = shapes.Line(0, y0, self.width, y0, thickness=2, color=(64, 64, 64), batch=self.batch)
         self.y_axis = shapes.Line(x0, 0, x0, self.height, thickness=2, color=(64, 64, 64), batch=self.batch)
 
-# FIN
+#FIN

@@ -126,4 +126,4 @@ rm -f ${tmpcardpart}
 rm -f ${tmpcardimg}
 rm -f ${tmpcfg}
 
-# FIN
+#FIN

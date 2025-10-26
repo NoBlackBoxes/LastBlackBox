@@ -69,4 +69,4 @@ scripted_model.save(f"{output_folder}/quantized.pt")
 #        print(f"  Weight scale: {module.weight().q_scale()}")
 #        print(f"  Zero point: {module.weight().q_zero_point()}")
 
-# FIN
+#FIN

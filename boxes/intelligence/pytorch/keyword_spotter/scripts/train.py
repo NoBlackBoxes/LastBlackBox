@@ -132,4 +132,4 @@ print("Done training!")
 # Save model
 torch.save(custom_model.state_dict(), output_folder + '/final.pt')
 
-# FIN
+#FIN

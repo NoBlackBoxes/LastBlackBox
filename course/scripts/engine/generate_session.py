@@ -43,4 +43,4 @@ README_path = f"{Config.course_root}/{course_session_basename}/README.md"
 with open(README_path, 'w', encoding='utf8') as f:
     f.writelines(README_text)    
 
-# FIN
+#FIN

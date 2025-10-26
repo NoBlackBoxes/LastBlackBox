@@ -10,10 +10,11 @@ import time
 import cv2
 import numpy as np
 from threading import Lock, Condition
-from picamera2 import Picamera2, MappedArray
+from picamera2 import Picamera2
 from picamera2.encoders import MJPEGEncoder
 from picamera2.outputs import FileOutput
 import NB3.Vision.output as Output
+import NB3.Vision.overlay as Overlay
 
 # Camera Class
 class Camera:
@@ -25,8 +26,8 @@ class Camera:
         self.index = index
         self.num_channels = 3
         self.handle = Picamera2()
+        self.overlay = Overlay.Overlay()
         self.mutex = Lock()
-        self.overlay = None
 
         # Configure camera (main and low resolution images)
         config = self.handle.create_video_configuration(
@@ -73,18 +74,20 @@ class Camera:
             cv2.imwrite(filename, frame)
             return
 
-    def display(self, frame, server, stream, jpeg=False, gray=False):
+    def display(self, frame, server, stream, overlay=False, jpeg=False, gray=False):
         if not jpeg:
-            rgb = cv2.cvtColor(frame, cv2.COLOR_GRAY2RGB)
-            _, encoded = cv2.imencode('.jpg', rgb, [cv2.IMWRITE_JPEG_QUALITY, 70])
+            if gray: # Convert Grayscale to RGB
+                frame = cv2.cvtColor(frame, cv2.COLOR_GRAY2RGB)
+            if overlay:
+                self.overlay.draw(frame)
+            _, encoded = cv2.imencode('.jpg', frame, [cv2.IMWRITE_JPEG_QUALITY, 70])
             frame = encoded.tobytes()
+        else:
+            if overlay:
+                frame = cv2.imdecode(np.frombuffer(frame, dtype=np.uint8), cv2.IMREAD_COLOR)
+                self.overlay.draw(frame)
+                _, frame = cv2.imencode('.jpg', frame, [cv2.IMWRITE_JPEG_QUALITY, 70])
         server.update_stream(stream, frame)
-        return
-
-    def _pre_callback(self, request):
-        if self.overlay:
-            with MappedArray(request, "main") as m:
-                self.overlay.draw(m.array)
         return
 
     def _set_bitrate(self):

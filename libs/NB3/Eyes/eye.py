@@ -149,4 +149,4 @@ class Eye:
         #print("Closing SPI connection.")
         self.spi.close()
 
-# FIN
+#FIN

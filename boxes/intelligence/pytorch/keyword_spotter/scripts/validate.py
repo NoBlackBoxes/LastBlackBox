@@ -147,4 +147,4 @@ plt.title(f"Accuracy: {accuracy:.2f}%")
 plt.savefig(f"{output_folder}/confusion_quantized.png")
 
 
-# FIN
+#FIN

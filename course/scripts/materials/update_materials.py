@@ -41,4 +41,4 @@ for session in course.sessions:
     dataframe = pd.DataFrame([m.to_dict() for m in materials])
     dataframe.to_csv(materials_path, index=False, header=True, encoding="utf-8")
 
-# FIN
+#FIN

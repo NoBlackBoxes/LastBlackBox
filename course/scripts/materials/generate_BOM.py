@@ -62,4 +62,4 @@ for course_name in course_names:
     BOM_path = f"{Config.course_root}/_resources/materials/BOM/{course.slug}_BOM.csv"
     sorted.to_csv(BOM_path, index=False, encoding="utf-8")  # Set index=False if you don't want to include the index in the CSV
 
-# FIN
+#FIN

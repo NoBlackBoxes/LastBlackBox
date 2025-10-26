@@ -36,4 +36,4 @@ for course_name in Config.course_names:
                     count += 1
     print(f"{count} CAD materials generated for {course_name}")
 
-# FIN
+#FIN

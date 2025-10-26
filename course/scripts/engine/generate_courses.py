@@ -32,4 +32,4 @@ for course_name in Config.course_names:
         with open(README_path, 'w', encoding='utf8') as f:
             f.writelines(README_text)    
 
-# FIN
+#FIN

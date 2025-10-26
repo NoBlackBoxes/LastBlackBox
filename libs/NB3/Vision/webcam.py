@@ -22,10 +22,8 @@ class Camera:
         self.index = index
         self.num_channels = 3
         self.handle = None
-        self.mutex = Lock()
-        self.overlay = None
-        self.encoder = None
         self.overlay = Overlay.Overlay()
+        self.mutex = Lock()
 
     def start(self):
         self.handle = cv2.VideoCapture(self.index)
@@ -42,32 +40,35 @@ class Camera:
 
     def capture(self, mjpeg=False, lores=False, gray=False):
         with self.mutex:
+            ret, jpeg_buffer = self.handle.read()
             if mjpeg:
-                ret, jpeg_buffer = self.handle.read()
-                if self.overlay:
-                    frame = cv2.imdecode(np.frombuffer(jpeg_buffer, dtype=np.uint8), cv2.IMREAD_COLOR)
-                    self.overlay.draw(frame)
-                    _, jpeg_buffer = cv2.imencode('.jpg', frame, [cv2.IMWRITE_JPEG_QUALITY, 70])
                 return jpeg_buffer.tobytes()
             else:
-                ret, jpeg_buffer = self.handle.read()
                 frame = cv2.imdecode(np.frombuffer(jpeg_buffer, dtype=np.uint8), cv2.IMREAD_COLOR)
                 if gray:
                     frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-            return frame  # Return (encoded or decoded) frame
+            return frame
 
     def save(self, filename):
         with self.mutex:
-            ret, frame = self.handle.read()
+            ret, jpeg_buffer = self.handle.read()
+            frame = cv2.imdecode(np.frombuffer(jpeg_buffer, dtype=np.uint8), cv2.IMREAD_COLOR)
             cv2.imwrite(filename, frame)
             return
 
-    def display(self, frame, server, stream, jpeg=False, gray=False):
+    def display(self, frame, server, stream, overlay=False, jpeg=False, gray=False):
         if not jpeg:
             if gray: # Convert Grayscale to RGB
                 frame = cv2.cvtColor(frame, cv2.COLOR_GRAY2RGB)
+            if overlay:
+                self.overlay.draw(frame)
             _, encoded = cv2.imencode('.jpg', frame, [cv2.IMWRITE_JPEG_QUALITY, 70])
             frame = encoded.tobytes()
+        else:
+            if overlay:
+                frame = cv2.imdecode(np.frombuffer(frame, dtype=np.uint8), cv2.IMREAD_COLOR)
+                self.overlay.draw(frame)
+                _, frame = cv2.imencode('.jpg', frame, [cv2.IMWRITE_JPEG_QUALITY, 70])
         server.update_stream(stream, frame)
         return
         

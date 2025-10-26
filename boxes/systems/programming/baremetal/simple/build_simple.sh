@@ -21,4 +21,4 @@ CFLAGS+=" -mcpu=cortex-a72"
 # Compile
 ${ARM_TOOLCHAIN}gcc ${CFLAGS} simple.c -o bin/kernel.elf
 
-# FIN
+#FIN

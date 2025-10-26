@@ -20,7 +20,7 @@ server = Server.Server(root=root, interface=interface, autostart=True)
 try:
     while True:
         frame = camera.capture(mjpeg=True)
-        server.update_stream("camera", frame)
+        camera.display(frame, server, "camera", jpeg=True)
         time.sleep(0.0333) # (Optional) Limit stream to 30 FPS
 
 except KeyboardInterrupt:

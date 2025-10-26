@@ -71,4 +71,4 @@ plt.plot(recording)
 save_path = wav_path.replace("wav", "png")
 plt.savefig(f"{save_path}")
 
-# FIN
+#FIN

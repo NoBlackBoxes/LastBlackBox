@@ -31,4 +31,4 @@ for box_name in Config.box_names:
             if lesson_name.startswith("NB3"):
                 file.write(f"{{{box_name}:{lesson_name}}}\n")
 
-# FIN
+#FIN

@@ -61,4 +61,4 @@ probabilities =probabilities.detach().numpy()
 plt.plot(probabilities)
 plt.show()
 
-# FIN
+#FIN

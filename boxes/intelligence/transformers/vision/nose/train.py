@@ -169,4 +169,4 @@ plt.savefig(output_path + '/result.png')
 # Save model
 torch.save(custom_model.state_dict(), output_path + '/custom.pt')
 
-# FIN
+#FIN
