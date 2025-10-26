@@ -4,24 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>NB3 FPV</title>
+    <title>NB3 Interactive Image</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon"> <!-- Favicon added -->
 </head>
 
 <body>
+    <!-- Slider Control -->
+    <div class="control-panel">
+        <div class="slider-container">
+            <label for="threshold" class="slider-label">Threshold: 
+                <span id="threshold-value">127</span>
+            </label>
+            <input type="range" min="0" max="255" value="127" class="slider" id="threshold">
+        </div>
+    </div>
+    
     <!-- Camera Stream -->
     <div class="stream-container">
         <div class="container"><img src="/stream/camera.mjpg" /></div>
         <div class="container"><img src="/stream/display.mjpg" /></div>
-    </div>
-
-    <!-- HUD Control Panel -->
-    <div class="control-panel">
-        <div class="button-container">
-            <button id="left">◀</button>
-            <button id="right">▶</button>
-        </div>
     </div>
 
     <script src="script.js"></script>

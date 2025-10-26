@@ -20,10 +20,8 @@ threshold_level = 127
 # Define command handler
 def command_handler(command):
    global threshold_level
-   if command == 'decrease':
-      threshold_level -= 10
-   elif command == 'increase':
-      threshold_level += 10
+   if command.startswith('threshold'):
+      threshold_level = int(command.split('-')[1])
    else:
       pass
 
