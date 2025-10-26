@@ -66,7 +66,7 @@ server.status()
 try:
     print(f"    - \"Control + C\" to Quit -")
     while True:
-        frame = camera.mjpeg()
+        frame = camera.capture(mjpeg=True)
         server.update_stream("camera", frame)
         time.sleep(0.0333) # (Optional) Slow down stream to 30 FPS
 except KeyboardInterrupt:

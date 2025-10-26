@@ -49,9 +49,11 @@ class Camera:
         self.handle.stop()
         return
 
-    def capture(self, lores=False, gray=False):
+    def capture(self, mjpeg=False, lores=False, gray=False):
         with self.mutex:
-            if lores:
+            if mjpeg:
+                return self.output.get_frame()
+            elif lores:
                 if gray:
                     frame = self.handle.capture_array("lores")[:self.lores_height,:]
                 else:
@@ -65,17 +67,13 @@ class Camera:
                     frame = self.handle.capture_array("main")
             return frame
 
-    def mjpeg(self):
-        with self.mutex:
-            return self.output.get_frame()
-
     def save(self, filename):
         with self.mutex:
             frame = self.handle.capture_array("main")
             cv2.imwrite(filename, frame)
             return
 
-    def display(self, frame, server, stream, jpeg=False):
+    def display(self, frame, server, stream, jpeg=False, gray=False):
         if not jpeg:
             rgb = cv2.cvtColor(frame, cv2.COLOR_GRAY2RGB)
             _, encoded = cv2.imencode('.jpg', rgb, [cv2.IMWRITE_JPEG_QUALITY, 70])

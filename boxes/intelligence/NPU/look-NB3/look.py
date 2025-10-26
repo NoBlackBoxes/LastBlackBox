@@ -154,7 +154,7 @@ try:
         screen.addstr(7, 0, f"  ")
 
         # Update stream
-        frame = camera.mjpeg()
+        frame = camera.capture(mjpeg=True)
         server.update_stream("camera", frame)
 
 finally:

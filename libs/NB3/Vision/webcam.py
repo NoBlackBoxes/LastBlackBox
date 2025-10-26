@@ -40,28 +40,21 @@ class Camera:
         self.handle.release()
         return
 
-    def capture(self, lores=False, gray=False):
+    def capture(self, mjpeg=False, lores=False, gray=False):
         with self.mutex:
-            ret, jpeg_buffer = self.handle.read() # Read raw MJPG frame
-            if not ret or jpeg_buffer is None:
-                print("Error: Failed to capture MJPEG frame!")
-                return None
-            frame = cv2.imdecode(np.frombuffer(jpeg_buffer, dtype=np.uint8), cv2.IMREAD_COLOR)
-            if gray:
-                frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-            if self.overlay:
-                pass
-                #self.overlay.draw(frame)
-            return frame  # Return decoded frame
-
-    def mjpeg(self):
-        with self.mutex:
-            ret, jpeg_buffer = self.handle.read()
-            if self.overlay:
+            if mjpeg:
+                ret, jpeg_buffer = self.handle.read()
+                if self.overlay:
+                    frame = cv2.imdecode(np.frombuffer(jpeg_buffer, dtype=np.uint8), cv2.IMREAD_COLOR)
+                    self.overlay.draw(frame)
+                    _, jpeg_buffer = cv2.imencode('.jpg', frame, [cv2.IMWRITE_JPEG_QUALITY, 70])
+                return jpeg_buffer.tobytes()
+            else:
+                ret, jpeg_buffer = self.handle.read()
                 frame = cv2.imdecode(np.frombuffer(jpeg_buffer, dtype=np.uint8), cv2.IMREAD_COLOR)
-                self.overlay.draw(frame)
-                _, jpeg_buffer = cv2.imencode('.jpg', frame, [cv2.IMWRITE_JPEG_QUALITY, 70])
-            return jpeg_buffer.tobytes()
+                if gray:
+                    frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+            return frame  # Return (encoded or decoded) frame
 
     def save(self, filename):
         with self.mutex:

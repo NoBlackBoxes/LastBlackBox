@@ -43,7 +43,7 @@ client = openai.OpenAI(api_key=OPENAI_API_KEY)
 VISION_MODEL = "gpt-4o-mini"
 
 # Acquire Frame (jpeg)
-frame = camera.mjpeg()
+frame = camera.capture(mjpeg=True)
 
 # Encode frame (JPEG bytes) into a data URI
 img_b64 = base64.b64encode(frame).decode("utf-8")

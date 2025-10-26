@@ -38,7 +38,7 @@ try:
         start_time = time.time()
 
         # Update streams
-        frame = camera.mjpeg()
+        frame = camera.capture(mjpeg=True)
         frame_size = len(frame)
         server.update_stream("camera", frame)
         time.sleep(0.0333) # (Optional) Slow down stream to 30 FPS
