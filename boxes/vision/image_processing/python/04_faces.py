@@ -4,7 +4,6 @@ import cv2
 import numpy as np
 #import NB3.Vision.camera as Camera         # NB3 Camera
 import NB3.Vision.webcam as Camera          # Webcam
-import NB3.Vision.overlay as Overlay
 import NB3.Server.server as Server
 
 # Specify site root
