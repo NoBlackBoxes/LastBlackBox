@@ -1,21 +1,24 @@
-# Simple Socket HTTP Server
+# Simple HTTP Server
 import socket
+import netifaces
 
-# Load your HTML page (index.html)
+# Load your HTML page (index.html) in memory
 path = 'index.html'
 file = open(path,"r")
 html = file.read()
 file.close()
 
-# Set host address (your NB3's IP) and an unused port (1234)
-HOST, PORT = '', 1234
+# Specify IP address and port to use for the socket
+ip_address = '' # Leaving this empty means listen on all available interfaces (IP address)
+port = 1234
 
 # Open a "listening" socket (waits for external connections)
 listen_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 listen_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-listen_socket.bind((HOST, PORT))
+listen_socket.bind((ip_address, port))
 listen_socket.listen(1)
-print(f'Serving HTTP on port {PORT} ...')
+print(f"\n🌐 HTTP Server running at http://localhost:{port}")
+print(f"    - \"Control + C\" to Quit -")
 
 # Serve incoming connections
 while True:
@@ -28,9 +31,9 @@ while True:
     print(f"{len(request)} bytes received:\n{request_text}")
 
     # (Optional) parse request
-    #   - if you want to serve different files based on the request
+    #   - if you want to serve different files based on the content of the request
 
-    # Respond to target (send the bytes of your HTML file)
+    # Respond to target (send the bytes of your HTML file after a "success" header)
     header = "HTTP/1.1 200 OK\n" 
     response = bytes(header+html, 'utf-8')
     client_connection.sendall(response)

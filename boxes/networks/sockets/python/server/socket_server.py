@@ -1,6 +1,6 @@
 # Socket Server
-#  This program should run on your NB3. It will listen for a connection, and (when connected to)
-#  will "serve" data gathered from the serial port to whomever connected.
+#  This program should run on your NB3. It will listen for a connection, and then
+#  "serve" data gathered from the serial port to whomever connected.
 import socket
 import netifaces
 import serial
@@ -29,7 +29,7 @@ try:
         print(f"Connected to by {addr}")
 
         try:
-            while True:                     # Stream forever until the client disconnects
+            while True:                     # Stream until the client disconnects
                 data = ser.read(16)         # Read 16 samples from the serial port (unsigned bytes) at a time
                 conn.sendall(data)          # Send data to socket
                 # DEBUG: print(f"Sent {len(data)} bytes to the client")

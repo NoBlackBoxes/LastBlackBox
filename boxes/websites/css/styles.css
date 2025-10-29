@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.viewport {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.page {
+    width: 80%;
+}
+
+.title {
+    text-align: center;
+    background: lightblue;
+}
+
+.container {
+    overflow: hidden;
+}
+
+.sidebar {
+    background: yellow;
+    float: left;
+    width: 25%;
+    height: 300px;
+}
+
+.content {
+    background: lime;
+    float: left;
+    width: 75%;
+    height: 300px;
+}

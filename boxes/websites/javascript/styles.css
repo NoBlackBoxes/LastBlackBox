@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background-color: #f4f1ec;
+    color: #333;
+}
+
+.viewport {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.page {
+    width: 80%;
+}
+
+.title {
+    text-align: center;
+    background: linear-gradient(to bottom, #e6e0d8, #d9d2ca);
+    border: 1px solid #c8c0b8;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    color: #3c3a37;
+}
+
+.title h1 {
+    margin: 0;
+    font-weight: 700;
+}
+
+button {
+    background-color: #bfa98a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #a88e71;
+}
+
+.container {
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.container.sidebar-hidden .content {
+    width: 100%;
+    margin-left: 0;
+}
+
+.sidebar {
+    background: linear-gradient(to bottom right, #eae7e2, #dcd8d3);
+    border: 2px solid #c7c2bc;
+    border-radius: 3px;
+    float: left;
+    width: 20%;
+    height: 500px;
+}
+
+.sidebar:hover {
+    background: linear-gradient(to bottom right, #e2dfda, #d2cdc7);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 10px;
+}
+
+.sidebar li {
+    margin: 8px 0;
+}
+
+.content {
+    background: linear-gradient(to bottom right, #f1eeea, #e3dfda);
+    border: 1px solid #cbc5bf;
+    border-radius: 8px;
+    float: right;
+    width: 75%;
+    height: 500px;
+    text-align: center;
+}
+
+.content:hover {
+    background: linear-gradient(to bottom right, #e8e4de, #dcd6cf);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.clock {
+    font: 600 2.2rem/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.date {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* Make content full width when sidebar hidden (works with the toggle) */
+.container.sidebar-hidden .content {
+    width: 100%;
+    margin-left: 0;
+}
