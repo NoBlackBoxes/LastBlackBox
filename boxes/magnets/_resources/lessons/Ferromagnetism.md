@@ -22,4 +22,6 @@ A mysterious force found in certain types of "magical" materials, ferromagnetism
 
 ## Connections
 
+## Additional Required Materials
+
 ## Lesson
