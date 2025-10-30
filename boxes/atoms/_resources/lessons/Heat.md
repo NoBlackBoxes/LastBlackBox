@@ -11,4 +11,6 @@ Atoms in every material are always moving. This motion of atoms (their average k
 
 ## Connections
 
+## Additional Required Materials
+
 ## Lesson

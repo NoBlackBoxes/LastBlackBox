@@ -7,4 +7,6 @@ Not all Nuclei are stable, sometimes they can fall apart (fission). What if two 
 
 ## Connections
 
+## Additional Required Materials
+
 ## Lesson

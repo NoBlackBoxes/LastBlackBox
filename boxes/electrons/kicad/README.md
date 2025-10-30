@@ -1,4 +1,4 @@
-# Electrons : KiCac
+# Electrons : KiCAD
 KiCad is an open-course, highly capable, Python-based printed circuit board (PCB) design software
 
 ## JLC to KICAD

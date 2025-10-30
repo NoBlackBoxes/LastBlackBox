@@ -7,4 +7,6 @@ Atoms with incomplete outer (valence) orbitals will try to complete their set of
 
 ## Connections
 
+## Additional Required Materials
+
 ## Lesson
