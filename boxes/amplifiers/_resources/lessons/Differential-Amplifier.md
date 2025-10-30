@@ -3,13 +3,13 @@ Signals often have noise. However, this noise is often the same in many places a
 
 ## [Video]()
 
-## Additional Materials
-
 ## Concepts
 - Paired arms
 - Long tail
 - Transistor implementation
 
 ## Connections
+
+## Additional Materials
 
 ## Lesson
