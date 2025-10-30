@@ -1,7 +1,7 @@
 # The Last Black Box : Motors
 In this box, you will learn about motors...
 
-## Motors{11}
+## Motors
 {DC-Motors}
 
-# Projects{11}
+# Projects

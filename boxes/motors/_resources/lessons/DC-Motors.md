@@ -25,6 +25,8 @@ An electric motor converts current into rotation using electromagnets that are t
 
 ## Connections
 
+## Additional Materials
+
 ## Lesson
 
 - **TASK**: Play with your brushed DC motor. Spin it forwards *and* backwards...
