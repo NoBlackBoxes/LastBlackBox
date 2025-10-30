@@ -1,9 +1,9 @@
 # The Last Black Box : Data
 In this box, you will learn about data...
 
-## Data{11}
-{Analog-to-Digital-Converters}
+## Data
 {Binary-Numbers}
+{Analog-to-Digital-Converters}
 
-# Projects{11}
+# Projects
 {Data:NB3_Build-an-ADC-input}

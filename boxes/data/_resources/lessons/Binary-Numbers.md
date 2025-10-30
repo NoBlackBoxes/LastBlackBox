@@ -14,6 +14,8 @@ All you need is 0 and 1. Here we will learn how to represent *anything* in binar
 
 ## Connections
 
+## Additional Materials
+
 ## Lesson
 
 - Write your name in binary (using the ASCII table) in either Hex or Decimal notation.
