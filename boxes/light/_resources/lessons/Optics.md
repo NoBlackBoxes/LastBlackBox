@@ -7,4 +7,6 @@ When light interacts with matter funny, but useful, things happen.
 
 ## Connections
 
+## Additional Required Materials
+
 ## Lesson

@@ -7,4 +7,6 @@ The fundamental equations of classical electromagnetism are surprisingly easy to
 
 ## Connections
 
+## Additional Required Materials
+
 ## Lesson

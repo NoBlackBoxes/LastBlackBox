@@ -12,5 +12,5 @@ Let's build some radios.
 
 ## LC Tanks
 
-- Easy to measure with an osciliscope. Send a square wave through a small inductor (from Arduino?) and place nearby the LC circuit. Measure voltage "induced" across the cap.
+- Easy to measure with an oscilloscope. Send a square wave through a small inductor (from Arduino?) and place nearby the LC circuit. Measure voltage "induced" across the cap.
 

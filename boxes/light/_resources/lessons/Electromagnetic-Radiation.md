@@ -35,4 +35,6 @@ When an electric charge is accelerated something surprising happens. This accele
 
 ## Connections
 
+## Additional Required Materials
+
 ## Lesson
