@@ -7,6 +7,8 @@ Logic gates with feedback can hold onto their values...they can remember.
 
 ## Connections
 
+## Additional Materials
+
 ## Lesson
 
-- Build an SR latch
+- Understand the role of feedback in an SR latch
