@@ -10,6 +10,8 @@ A very useful, and quite simple, depiction of the lines of force surrounding cha
 
 ## Connections
 
+## Additional Required Materials
+
 ## Lesson
 
 - Draw the electric field around a negative charge and positive charge separated by a small distance. Use the following image as a starting point.

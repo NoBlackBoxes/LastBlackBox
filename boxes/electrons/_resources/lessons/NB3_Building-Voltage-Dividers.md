@@ -11,4 +11,6 @@ Step-by-step guide to building and testing voltage dividers with discrete resist
 
 ## Connections
 
+## Additional Required Materials
+
 ## Lesson

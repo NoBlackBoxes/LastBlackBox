@@ -10,4 +10,6 @@ The rate at which electrons flow, measured as *#charges / second*, is called **c
 
 ## Connections
 
+## Additional Required Materials
+
 ## Lesson

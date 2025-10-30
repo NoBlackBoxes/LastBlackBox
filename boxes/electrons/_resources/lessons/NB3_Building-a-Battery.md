@@ -20,6 +20,8 @@ Let's build a version of the *first* battery, and use it to power an LED.
 
 ## Connections
 
+## Additional Required Materials
+
 ## Lesson
 
 - **TASK**: Build a simple battery

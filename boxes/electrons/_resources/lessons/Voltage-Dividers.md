@@ -27,6 +27,8 @@ Controlling the level of voltage at different places in a circuit is critical to
 
 ## Connections
 
+## Additional Required Materials
+
 ## Lesson
 
 - **TASK**: Build a voltage divider using two resistors of the same value. Measure the intermediate voltage (between the resistors).

@@ -7,4 +7,6 @@ What is KiCAD and how can we use it to design (and manufacture) PCBs?
 
 ## Connections
 
+## Additional Required Materials
+
 ## Lesson

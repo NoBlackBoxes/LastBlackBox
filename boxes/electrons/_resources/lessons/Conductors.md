@@ -13,4 +13,6 @@ Some materials have electrons in their outer orbitals that are happy to jump bet
 
 ## Connections
 
+## Additional Required Materials
+
 ## Lesson

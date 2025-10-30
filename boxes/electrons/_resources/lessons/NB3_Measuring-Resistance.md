@@ -10,4 +10,6 @@ How to measure resistance with a digital multimeter.
 
 ## Connections
 
+## Additional Required Materials
+
 ## Lesson

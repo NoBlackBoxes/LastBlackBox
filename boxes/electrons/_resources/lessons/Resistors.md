@@ -20,6 +20,8 @@ Many materials hold onto their outer electrons and resist their movement. We can
 
 ## Connections
 
+## Additional Required Materials
+
 ## Lesson
 
 - **TASK**: Measure the resistance of your resistors.

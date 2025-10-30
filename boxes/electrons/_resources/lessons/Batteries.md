@@ -26,6 +26,8 @@ Generating a stable voltage requires a renewable source of electrons to maintain
 
 ## Connections
 
+## Additional Required Materials
+
 ## Lesson
 
 - **TASK**: Measure the voltage of a AA battery using your multimeter.

@@ -10,4 +10,6 @@ When there is more negative or positive charge in one location vs. another there
 
 ## Connections
 
+## Additional Required Materials
+
 ## Lesson

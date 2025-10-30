@@ -14,4 +14,6 @@ An overview of digital multimeters for beginners. What can it measure? What feat
 
 ## Connections
 
+## Additional Required Materials
+
 ## Lesson

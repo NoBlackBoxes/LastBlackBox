@@ -13,4 +13,6 @@ How to measure voltage with a digital multimeter.
 
 ## Connections
 
+## Additional Required Materials
+
 ## Lesson

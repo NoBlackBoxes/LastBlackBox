@@ -16,6 +16,8 @@ With a voltage source (battery) and resistors, then we can start building "circu
 
 ## Connections
 
+## Additional Required Materials
+
 ## Lesson
 
 - *Note*: This is *weird*. Electrons are the things moving. Shouldn't we say that current "flows" from the **(-)** area to the **(+)** area? Unfortunately, current was described before anyone knew about electrons and we are stuck with the following awkward convention: **Current is defined to flow from (+) to (-)**...even though we now know that electrons are moving the opposite direction.
