@@ -1,8 +1,8 @@
 # The Last Black Box : Logic
 In this box, you will learn about logic...
 
-## Logic{11}
+## Logic
 {Logic-Gates}
 
-# Projects{11}
+# Projects
 {Logic:NB3_Build-an-ADC-output}
