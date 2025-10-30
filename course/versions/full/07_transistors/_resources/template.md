@@ -1,12 +1,12 @@
 # The Last Black Box : Transistors
 In this box, you will learn about transistors...
 
-## Transistors{11}
+## Transistors
 {Diodes}
 {Semiconductors}
 {Transistors-BJTs}
 {Transistors-MOSFETs}
 
-# Projects{11}
-{Transistors:NB3_Building-a-Light-Sensitive-Motor}
+# Projects
 {Transistors:NB3_Testing-Diodes}
+{Transistors:NB3_Building-a-Light-Sensitive-Motor}

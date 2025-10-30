@@ -1,6 +1,6 @@
 name,slug,description,quantity,datasheet,supplier,package,x,y,z,unit_price,bulk_price,new,used
 NB3 Body,NB3_Body,NB3 robot base PCB,1,/boxes/electrons/NB3_body,VK,Body (000),200,200,11,30.0,20.0,60,5
-Resistor (470),Resistor_470,470 &Omega;/0.25 W,4,/boxes/electrons/_resources/datasheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943,Passive Electronics,50,2,2,0.0685,0.0498,0,0
+Resistor (470),Resistor_470,470 &Omega;/0.25 W,2,/boxes/electrons/_resources/datasheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943,Passive Electronics,50,2,2,0.0685,0.0498,0,0
 Resistor (1k),Resistor_1k,1 k&Omega;/0.25 W,2,/boxes/electrons/_resources/datasheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-1k/res-1k-1-250mw-axial-metal-film/dp/9341102,Passive Electronics,50,2,2,0.0702,0.051,0,0
 Resistor (10k),Resistor_10k,10 k&Omega;/0.25 W,2,/boxes/electrons/_resources/datasheets/resistor.pdf,https://uk.farnell.com/multicomp/mf25-10k/res-10k-1-250mw-axial-metal-film/dp/9341110,Passive Electronics,50,2,2,0.0696,0.0504,0,0
 Button,Button,Tactile switch,2,/boxes/electrons/_resources/datasheets/button.pdf,https://uk.farnell.com/omron/b3f-1000/switch-spno-0-05a-24v-tht-0-98n/dp/176432,Passive Electronics,5,5,3,0.2148,0.1788,0,0

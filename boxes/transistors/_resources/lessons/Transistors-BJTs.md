@@ -11,4 +11,6 @@ Bipolar junction transistors inject charge carriers to amplify the external *cur
 
 ## Connections
 
+## Additional Materials
+
 ## Lesson

@@ -22,8 +22,10 @@ MOSFETs are the thing that humans have built more of than anything else. They mu
 
 ## Connections
 
+## Additional Materials
+
 ## Lesson
 
 - **TASK**: Measure the threshold voltage that opens your MOSFET gate. Compare it to the "expected" range listed in the 
-    - The datasheet for your MOSFETs can be found here [IRF510](/boxes/transistors/_resources/datasheets/IRF510.pdf) and here [IRL510](/boxes/transistors/_resources/datasheets/IRL510.pdf)
-> The threshold for when current starts to flow through your MOSFET ("Gate-Source Threshold Voltage") should be between 2 to 4 Volts for the IRF510 and 1 to 3 vols for the IRL510. However, the amount of current it allows will rise rapidly up to (and beyond) 10 Volts for the IRF510 and 5 Volts for the IRL510. Check the datasheets (Figure 3). 
+    - The datasheet for your MOSFET here [IRL510](/boxes/transistors/_resources/datasheets/IRL510.pdf)
+> The threshold for when current starts to flow through your MOSFET ("Gate-Source Threshold Voltage") should be between 1 to 3 vols for the IRL510. However, the amount of current it allows will rise rapidly up to (and beyond) 5 Volts for the IRL510. Check the datasheet (Figure 3). 

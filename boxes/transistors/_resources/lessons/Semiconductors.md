@@ -19,4 +19,6 @@ We can modify a pure crystal of certain elements (e.g. silicon) to change how we
 
 ## Connections
 
+## Additional Materials
+
 ## Lesson
