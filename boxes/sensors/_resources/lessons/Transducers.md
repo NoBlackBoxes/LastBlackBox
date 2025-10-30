@@ -17,5 +17,7 @@ A sensor converts (transduces) a physical quantity (light, heat, pressure, etc.)
 
 ## Connections
 
+## Additional Materials
+
 ## Lesson
 
