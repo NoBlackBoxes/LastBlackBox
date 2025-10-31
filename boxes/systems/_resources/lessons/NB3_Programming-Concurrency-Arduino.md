@@ -8,8 +8,6 @@ Getting a microcontroller to perform two tasks (with very different timescales) 
 - Demo one solution
 - Can you generalize?
 
-## Connections
-
 ## Lesson
 
 

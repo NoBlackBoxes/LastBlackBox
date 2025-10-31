@@ -8,8 +8,6 @@ After mounting and wiring your NB3's midbrain computer, you must now give it som
 - Settings
 - Testing
 
-## Connections
-
 ## Lesson
 
 - **TASK**: Install the Linux-based Raspberry Pi OS on your NB3

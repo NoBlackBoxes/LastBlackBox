@@ -13,8 +13,6 @@ As computer hardware became much more capable, software was developed to manage 
 - Services: Convenient tools used by applications to access computer resources (user interface, utility programs (shell), system calls)
 - Examples: Windows, MacOS, Android, ChromeOS, and Linux
 
-## Connections
-
 ## Lesson
 
 - **TASK**: Install the Linux-based Raspberry Pi OS on your NB3

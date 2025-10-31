@@ -12,6 +12,4 @@ We will be using Visual Studio Code (VS Code) as our tool for writing programs. 
 - Extensions
 - Remote-SSH
 
-## Connections
-
 ## Lesson

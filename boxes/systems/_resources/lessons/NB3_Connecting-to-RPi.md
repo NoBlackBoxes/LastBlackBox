@@ -5,8 +5,6 @@ When you have installed your NB3's operating system, then you can power it on an
 
 ## Concepts
 
-## Connections
-
 ## Lesson
 
 - **TASK**: Connect to your NB3 via WiFi

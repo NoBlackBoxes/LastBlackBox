@@ -11,8 +11,6 @@ Back when computers were very expensive mainframes, some clever software enginee
 - Security issues
 - Cons: No timing guarantees
 
-## Connections
-
 ## Lesson
 
 - **TASK**: Develop a multi-tasking "scheduling" program for your microcontroller.

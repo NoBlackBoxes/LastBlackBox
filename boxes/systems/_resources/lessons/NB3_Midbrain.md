@@ -9,8 +9,6 @@ Now we will add a more powerful computer (Raspberry Pi) to your NB3's midbrain.
 - Mount Midbrain
 - Attach heatsinks
 
-## Connections
-
 ## Lesson
 
 - **TASK**: Mount a Raspberry Pi on your robot (and connect its power inputs using your *shortest* jumper cables, 2x5V and 2x0V from the NB3, to the correct GPIO pins on the RPi...please *double-check* the pin numbers)
