@@ -1,11 +1,11 @@
 # The Last Black Box : Computers
 In this box, you will learn about computers...
 
-## Computers{11}
+## Computers
 {Architecture}
 {Low-Level-Programming}
 
-# Projects{11}
+# Projects
 {Computers:NB3_Hindbrain}
-{Computers:NB3_Building-a-Theremin}
 {Computers:NB3_Programming-Arduino}
+{Computers:NB3_Building-a-Theremin}

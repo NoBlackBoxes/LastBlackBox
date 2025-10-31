@@ -8,6 +8,8 @@ An introduction to programming an Arduino microcontroller.
 
 ## Connections
 
+## Additional Materials
+
 ## Lesson
 - You will now write programs that interact with the input and output pins of your Arduino. This "pin diagram" will help you find the correct locations. ***The Arduino on your NB3 is mounted upside down relative to this diagram...adjust accordingly!*** 
 - ![Arduino Nano Pin Diagram:500](/boxes/computers/_resources/images/pinout_arduino_nano.png)

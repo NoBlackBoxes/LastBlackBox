@@ -7,4 +7,6 @@ We can control a computer by loading a list of instructions ("operations") into 
 
 ## Connections
 
+## Additional Materials
+
 ## Lesson

@@ -12,6 +12,8 @@ We will now add a *computer* to our robot. We be using a simple microcontroller 
 
 ## Connections
 
+## Additional Materials
+
 ## Lesson
 - **TASK**: Mount and power your Arduino-based hindbrain (connect the mini-USB cable)
 > The built-in LED on the board should be blinking at 1 Hz.

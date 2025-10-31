@@ -21,4 +21,6 @@ The basic building blocks of a computer (memory, ALU, clock, bus, and IO) have a
 
 ## Connections
 
+## Additional Materials
+
 ## Lesson
