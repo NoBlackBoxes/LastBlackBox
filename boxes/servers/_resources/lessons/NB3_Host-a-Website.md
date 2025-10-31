@@ -5,6 +5,4 @@ Host a simple website on your NB3!
 
 ## Concepts
 
-## Connections
-
 ## Lesson

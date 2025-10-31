@@ -1,10 +1,10 @@
 # The Last Black Box : Servers
 In this box, you will learn about servers...
 
-## Servers{11}
-{Flask}
+## Servers
 {HTTP}
+{Flask}
 
-# Projects{11}
-{Servers:NB3_Remote-Control-NB3-GUI}
+# Projects
 {Servers:NB3_Host-a-Website}
+{Servers:NB3_Remote-Control-NB3-GUI}

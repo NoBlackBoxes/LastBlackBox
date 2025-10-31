@@ -5,6 +5,4 @@ The common language of the internet is HTTP...the Hyper Text Transfer Protocol, 
 
 ## Concepts
 
-## Connections
-
 ## Lesson

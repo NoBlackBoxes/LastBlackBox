@@ -5,6 +5,4 @@ Let's remotely control our NB3 using a simple graphical user interface (GUI) tha
 
 ## Concepts
 
-## Connections
-
 ## Lesson
