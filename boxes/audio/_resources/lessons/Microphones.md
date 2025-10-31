@@ -5,6 +5,4 @@ MEMs mics and beyond.
 
 ## Concepts
 
-## Connections
-
 ## Lesson

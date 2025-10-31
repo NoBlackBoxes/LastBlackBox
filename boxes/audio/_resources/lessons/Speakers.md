@@ -5,6 +5,4 @@ Better sounding speakers.
 
 ## Concepts
 
-## Connections
-
 ## Lesson

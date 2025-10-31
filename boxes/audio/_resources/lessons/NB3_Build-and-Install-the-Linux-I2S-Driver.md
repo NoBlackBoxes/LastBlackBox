@@ -5,6 +5,4 @@ Let's build (compile) and install the Linux device driver for our NB3's sound ca
 
 ## Concepts
 
-## Connections
-
 ## Lesson

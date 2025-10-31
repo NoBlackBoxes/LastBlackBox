@@ -5,6 +5,4 @@ Let's add a mouth to your NB3.
 
 ## Concepts
 
-## Connections
-
 ## Lesson

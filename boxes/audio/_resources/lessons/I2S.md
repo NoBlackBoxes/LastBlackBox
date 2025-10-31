@@ -5,6 +5,4 @@ I2S is a fully-digital protocol used by modern CPUs to talk to audio devices ove
 
 ## Concepts
 
-## Connections
-
 ## Lesson

@@ -5,6 +5,4 @@ Digital signal processing is a set of techniques for processing one-dimensional 
 
 ## Concepts
 
-## Connections
-
 ## Lesson

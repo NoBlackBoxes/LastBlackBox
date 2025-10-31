@@ -5,6 +5,4 @@ Let's add some ears to your NB3.
 
 ## Concepts
 
-## Connections
-
 ## Lesson
