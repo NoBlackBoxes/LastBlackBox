@@ -15,8 +15,6 @@ What is Python? Where is it? How does it work? How can it work for you?
 - The Python extension for VS code can help make it easier to write (and view) Python code by highlighting the syntax
 - It is a *good* idea to keep the packages you use separate from those used by your operating system. You can do this by creating a **virtual environment**.
 
-## Connections
-
 ## Lesson
 
 - **TASK**: Say "hello world" in Python

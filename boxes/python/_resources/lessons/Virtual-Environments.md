@@ -13,8 +13,6 @@ We will next create a Python **virtual environment** on our NB3 that will isolat
 - We can view the installed packages (within our current environment) using: pip list
 - We may sometimes need to install specific versions of a package, you can do this as well
 
-## Connections
-
 ## Lesson
 
 - **TASK**: Create a "virtual environment" called LBB

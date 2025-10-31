@@ -1,9 +1,9 @@
 # The Last Black Box : Python
 In this box, you will learn about python...
 
-## Python{11}
-{Virtual-Environments}
+## Python
 {Introducing-the-Interpreter}
+{Virtual-Environments}
 
-# Projects{11}
+# Projects
 {Python:NB3_Playing-With-Python}
