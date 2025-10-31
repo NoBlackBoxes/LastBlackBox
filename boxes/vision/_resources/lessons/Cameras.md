@@ -5,6 +5,4 @@ From CCDs to CMOS.
 
 ## Concepts
 
-## Connections
-
 ## Lesson

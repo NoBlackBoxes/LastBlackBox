@@ -5,6 +5,4 @@ Let's stream live images from your NB3's camera to any web browser.
 
 ## Concepts
 
-## Connections
-
 ## Lesson

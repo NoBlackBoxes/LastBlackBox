@@ -5,8 +5,6 @@ Let's install a camera on your NB3.
 
 ## Concepts
 
-## Connections
-
 ## Lesson
 - Test your camera with the following command
 - *code*

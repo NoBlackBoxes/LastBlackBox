@@ -1,10 +1,10 @@
 # The Last Black Box : Vision
 In this box, you will learn about vision...
 
-## Vision{11}
+## Vision
 {Cameras}
 {Image-Processing}
 
-# Projects{11}
-{Vision:NB3_Streaming-Images}
+# Projects
 {Vision:NB3_Install-the-Eye}
+{Vision:NB3_Streaming-Images}

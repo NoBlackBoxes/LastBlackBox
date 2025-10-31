@@ -5,8 +5,6 @@ Old-school (classical) techniques for processing two-dimensional data (2D).
 
 ## Concepts
 
-## Connections
-
 ## Lesson
 
 - Install python opencv
