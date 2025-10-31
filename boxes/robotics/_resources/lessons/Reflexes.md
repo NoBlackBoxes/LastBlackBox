@@ -5,6 +5,4 @@ Simple sensory-motor loops that underlie essential behaviour.
 
 ## Concepts
 
-## Connections
-
 ## Lesson

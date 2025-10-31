@@ -2,6 +2,8 @@
 Here we create the first Braitenberg Vehicle, a simple sensory-motor feedback loop connecting two light sensors to the motion of two wheels.
 
 ## [Video](https://vimeo.com/1034798460)
+
+## Concepts
 - Describe Braitenberg Vehicles
 - Design overview of system
 - Add two light sensors using NB3 body connections
@@ -9,11 +11,8 @@ Here we create the first Braitenberg Vehicle, a simple sensory-motor feedback lo
 - Create behavior loop
 - Test
 
-## Concepts
-
-## Connections
-
 ## Lesson
+
 - A Braitenberg Vehicle can show complex behaviour, appearing to seek out light and avoid shadows, but the underlying control circuit is extremely simple.
 - ![Braitenberg Vehicle:600](/boxes/robotics/_resources/images/braitenberg_vehicle.png)
 - A small change to the control circuit can completely change how your NB£ "vehicle" responds to light.

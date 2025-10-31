@@ -7,8 +7,6 @@ Let's build your robot's movement system (using servo motors).
 - Add servos as muscles
 - Test servos
 
-## Connections
-
 ## Lesson
 
 - **TASK**: Mount the servo motors and wheels to your NB3.
