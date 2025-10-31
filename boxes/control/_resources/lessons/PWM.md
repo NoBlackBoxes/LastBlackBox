@@ -9,6 +9,4 @@ We can control a "continuous" range of outputs with a binary digital signal (onl
 - The duty cycle now determines are "average" output.
 - Many microcontrollers have dedicated pins for generating PWM signals.
 
-## Connections
-
 ## Lesson

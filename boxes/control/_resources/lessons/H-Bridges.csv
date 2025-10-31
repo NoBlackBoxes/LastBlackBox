@@ -1,0 +1,2 @@
+name,slug,description,quantity,datasheet,supplier,package,x,y,z,unit_price,bulk_price,new,used
+H-bridge,H_bridge,H-bridge motor driver (SN754410NE),2,/boxes/control/_resources/datasheets/sn754410.pdf,https://www.mouser.co.uk/ProductDetail/Texas-Instruments/SN754410NE,Active Electronics,8,25,6,2.05,1.25,123,0

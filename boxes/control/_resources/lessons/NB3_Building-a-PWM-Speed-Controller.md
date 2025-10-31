@@ -7,6 +7,4 @@ We can use a digital (binary) signal and a MOSFET to turn a motor **ON** and **O
 - Build a PWM circuit
 - Test the code
 
-## Connections
-
 ## Lesson
