@@ -9,7 +9,5 @@ Installing and "managing" software can get complicated. Programs that help coord
 - apt
 - install something (pacman4console)
 
-## Connections
-
 ## Lesson
 

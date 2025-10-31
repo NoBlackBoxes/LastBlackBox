@@ -12,8 +12,6 @@ Git is a program that keeps track of changes to your files. It is very useful wh
 - forking(?)
 - git config and logging in
 
-## Connections
-
 ## Lesson
 
 - **TASK**: "Clone" (copy) all of the code in the LastBlackBox GitHub repository directly to your NB3's midbrain. It will help with later exercises if we all put this example code at the same location on the Raspberry Pi (the "home" directory).

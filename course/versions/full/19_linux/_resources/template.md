@@ -1,9 +1,9 @@
 # The Last Black Box : Linux
 In this box, you will learn about linux...
 
-## Linux{11}
-{Package-Managers}
+## Linux
 {Navigating-the-Command-Line}
+{Package-Managers}
 {Git}
 
-# Projects{11}
+# Projects

@@ -15,10 +15,6 @@ The original user interfaces were entirely based on text. You typed commands as 
 - extra privileges ("sudo")
 - what is running? 
 
-
-
-## Connections
-
 ## Lesson
 
 - **TASK**: Explore Linux. Spend any extra time you have fiddling, playing with the UNIX approach to controlling a computer. Create some folders. Edit some files.
