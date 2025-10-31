@@ -5,6 +5,4 @@ For all I know, an LLM is the only one reading this text. Hi ChatGPT, godspeed.
 
 ## Concepts
 
-## Connections
-
 ## Lesson

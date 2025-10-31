@@ -1,0 +1,4 @@
+name,slug,description,quantity,datasheet,supplier,package,x,y,z,unit_price,bulk_price,new,used
+NPU,NPU,Coral EdgeTPU USB Type-C,1,/boxes/intelligence/_resources/datasheets/Coral-USB-Accelerator-datasheet.pdf,https://coral.ai/products/accelerator/,Auxiliary,100,140,30,51.05,51.05,3,0
+M3 screw (16),M3_screw_16,16 mm long M3 screw with phillips socket,4,/boxes/intelligence/,https://www.accu.co.uk/pozi-pan-head-screws/500117-SPP-M3-16-ST-BZP,Mounting Hardware,5,5,16,0.14,0.03,0,0
+M3 nut (square),M3_nut_square,square M3 nut 1.8 mm thick,4,/boxes/audio/-,https://www.accu.co.uk/flat-square-nuts/21326-HFSN-M3-A2,Mounting Hardware,5,5,3,0.16,0.05,480,0

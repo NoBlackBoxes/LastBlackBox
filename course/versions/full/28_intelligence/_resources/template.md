@@ -1,8 +1,9 @@
 # The Last Black Box : Intelligence
 In this box, you will learn about intelligence...
 
-## Intelligence{11}
+## Intelligence
 {Large-Language-Models}
 
-# Projects{11}
+# Projects
 {Intelligence:NB3_Install-the-Forebrain-NPU}
+{Intelligence:NB3_Install-the-Skull}
