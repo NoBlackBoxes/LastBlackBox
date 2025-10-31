@@ -5,8 +5,6 @@ Let's develop a simple network protocol for communication between our NB3's midb
 
 ## Concepts
 
-## Connections
-
 ## Lesson
 - Decide on your command format (x,o)
 - Run command server on your hindbrain

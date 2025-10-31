@@ -9,6 +9,4 @@ Connections must be made between computers in order for them to communicate. The
  - Ethernet (four twisted-pairs: RJ45)
  - WiFi
 
-## Connections
-
 ## Lesson

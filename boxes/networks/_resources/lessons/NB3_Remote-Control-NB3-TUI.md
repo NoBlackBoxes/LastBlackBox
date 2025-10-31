@@ -5,8 +5,6 @@ Let's remotely control our NB3 using a simple text-based user interface (TUI). W
 
 ## Concepts
 
-## Connections
-
 ## Lesson
 - Expand your hindbrain command repertoire
 

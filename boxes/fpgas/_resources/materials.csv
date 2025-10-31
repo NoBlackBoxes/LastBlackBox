@@ -1,3 +1,4 @@
 name,slug,description,quantity,datasheet,supplier,package,x,y,z,unit_price,bulk_price,new,used
 NB3 Hindbrain,NB3_Hindbrain,ICE40UP5K dev board with ADC/DAC,1,/boxes/fpgas/NB3_hindbrain,VK,Circuit Boards,60,30,20,50.0,35.0,2,0
 Cable (MicroUSB-1m),Cable_MicroUSB_1m,Micro-USB to Type-A cable (1 m),1,/boxes/fpgas/,https://www.amazon.co.uk/gp/product/B07GBCKX49,Cables (001),100,50,15,3.15,1.83,0,0
+Cable (MicroUSB-20cm),Cable_MicroUSB_20cm,Short micro-USB to Type-A cable (20 cm),1,/boxes/networks/,https://www.amazon.co.uk/gp/product/B07GBS2QZ1,Cables (001),100,50,10,3.1,1.62,0,0

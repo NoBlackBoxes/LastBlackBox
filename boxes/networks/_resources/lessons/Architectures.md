@@ -8,6 +8,4 @@ The arrangement of connections between computers (nodes) defines the network's *
  - LAN (router): Star pattern/hub, Addresses (IP)
  - WAN (internet): Network-of-Networks, DNS, public IP
 
-## Connections
-
 ## Lesson
