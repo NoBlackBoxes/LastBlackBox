@@ -5,6 +5,4 @@ The browser's programming (scripting) language. Has very little to do with Java.
 
 ## Concepts
 
-## Connections
-
 ## Lesson

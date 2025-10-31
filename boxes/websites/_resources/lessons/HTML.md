@@ -5,6 +5,4 @@ Hyper-text markup language.
 
 ## Concepts
 
-## Connections
-
 ## Lesson

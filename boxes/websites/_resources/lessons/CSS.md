@@ -5,6 +5,4 @@ Cascading Style Sheets.
 
 ## Concepts
 
-## Connections
-
 ## Lesson

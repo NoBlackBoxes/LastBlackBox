@@ -1,10 +1,10 @@
 # The Last Black Box : Websites
 In this box, you will learn about websites...
 
-## Websites{11}
+## Websites
 {HTML}
 {CSS}
 {Javascript}
 
-# Projects{11}
+# Projects
 {Websites:NB3_Build-a-Website}
