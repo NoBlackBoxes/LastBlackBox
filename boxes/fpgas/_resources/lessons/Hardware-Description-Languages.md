@@ -7,4 +7,6 @@ Describing hardware layouts is very different than describing software algorithm
 
 ## Connections
 
+## Additional Materials
+
 ## Lesson
