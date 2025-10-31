@@ -1,0 +1,2 @@
+name,slug,description,quantity,datasheet,supplier,package,x,y,z,unit_price,bulk_price,new,used
+Secret Message,Secret_Message,A SHA256 encrypted message (in HEX),1,/boxes/security/,,Auxiliary,100,60,1,0.0,0.0,0,0

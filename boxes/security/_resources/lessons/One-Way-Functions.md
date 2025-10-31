@@ -5,6 +5,4 @@ Easy to compute, hard to inverse.
 
 ## Concepts
 
-## Connections
-
 ## Lesson

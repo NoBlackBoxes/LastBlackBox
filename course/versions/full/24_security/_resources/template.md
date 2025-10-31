@@ -1,7 +1,7 @@
 # The Last Black Box : Security
 In this box, you will learn about security...
 
-## Security{11}
+## Security
 {One-Way-Functions}
 
-# Projects{11}
+# Projects
