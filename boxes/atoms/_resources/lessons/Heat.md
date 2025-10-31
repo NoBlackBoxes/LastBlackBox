@@ -9,8 +9,4 @@ Atoms in every material are always moving. This motion of atoms (their average k
 - If we do something to make atoms move faster, then the material will "warm up".
 - If we cool the material as much as possible, to absolute zero (-273 degrees Celsius), then the atoms will stop moving.
 
-## Connections
-
-## Additional Required Materials
-
 ## Lesson

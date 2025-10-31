@@ -8,8 +8,4 @@ Storing much of your data requires *quantum mechanics*.
 - Quantum tunneling to turn on or off for a long time
 - Must be maintained
 
-## Connections
-
-## Additional Materials
-
 ## Lesson

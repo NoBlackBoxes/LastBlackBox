@@ -14,13 +14,10 @@ Organizing the elements into a table reveals a regular pattern, which is linked 
 - Chemical properties determined by column
 - Material properties also apparent in table position (metals = shiny = free electrons)
 - Unstable/radioactive Nuclei are the larger ones
-
-## Connections
 - Iron is (by Mass) the most common element on Earth
 - Iron is the last element produced in a star
 
-## Additional Required Materials
-
 ## Lesson
+
 - When you need it *(and you will)*, then you can find a copy of the periodic table [here](/boxes/atoms/_resources/images/periodic_table.png).
 - The electron configuration (assignments to specific orbitals) of each atomic element can be viewed [here](https://en.wikipedia.org/wiki/Electron_configurations_of_the_elements_(data_page)).

@@ -18,10 +18,6 @@ Many materials hold onto their outer electrons and resist their movement. We can
 - Resistor color codes
 - Power ratings (1/4 Watt)
 
-## Connections
-
-## Additional Required Materials
-
 ## Lesson
 
 - **TASK**: Measure the resistance of your resistors.

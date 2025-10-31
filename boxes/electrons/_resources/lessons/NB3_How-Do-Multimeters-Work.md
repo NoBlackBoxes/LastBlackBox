@@ -5,8 +5,4 @@ Learn how multimeters actually work
 
 ## Concepts
 
-## Connections
-
-## Additional Required Materials
-
 ## Lesson

@@ -8,8 +8,4 @@ How to measure resistance with a digital multimeter.
 - Must pass current from the multimeter through the resistor being measured
 - Normally necessary to remove the resistor from the circuit (but there are some exceptions, e.g. an un-powered simple circuit).
 
-## Connections
-
-## Additional Required Materials
-
 ## Lesson

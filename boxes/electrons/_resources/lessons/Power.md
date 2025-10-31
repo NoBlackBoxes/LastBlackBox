@@ -14,8 +14,4 @@ When electrons move through a circuit, they deliver power (some amount of energy
 - Knowing the amount of power your device "can handle" is important (to prevent damage).
 - A demo, with a 1/4 Watt resistor. (0.25 = 6V^2 / R).
 
-## Connections
-
-## Additional Required Materials
-
 ## Lesson

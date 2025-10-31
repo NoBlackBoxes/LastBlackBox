@@ -9,10 +9,6 @@ Moving signals from the analog world to the digital world requires converting a 
 - A priority encoder to produce a binary value.
 - This is called a Flash ADC.
 
-## Connections
-
-## Additional Materials
-
 ## Lesson
 
 - Build the input stage for a 2-bit ADC using the LM339/LM2901 comparator and a resistor ladder.

@@ -12,8 +12,4 @@ An overview of digital multimeters for beginners. What can it measure? What feat
 - Auto-ranging vs. manual range
 - Other features (light, hold)
 
-## Connections
-
-## Additional Required Materials
-
 ## Lesson

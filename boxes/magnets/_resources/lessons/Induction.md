@@ -10,9 +10,4 @@ A *changing* magnetic field **induces** an electromotive force on charged partic
 - It is also useful to build time-varying electrical circuits, such as filters and oscillators.
 - Demo a simple inductor circuit with LED.
 
-## Connections
-
-## Additional Required Materials
-Inductor,Inductor,1 mH toroidal inductor,1,/boxes/magnets/_resources/datasheets/inductor_toroidal.pdf,https://uk.farnell.com/bourns/2124-v-rc/inductor-1000uh-15-1-3a-toroid/dp/1929753,Passive Electronics,30,30,15,3.06,1.776,0,0
-
 ## Lesson

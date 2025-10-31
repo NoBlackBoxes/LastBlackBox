@@ -20,8 +20,4 @@ A mysterious force found in certain types of "magical" materials, ferromagnetism
 - More recently, scientists started looking further out in the table...to the Lanthanides, which like Iron have many unpaired electrons.
 - They found ways to make stable crystals, using other alloys, which is how the super strong "rare earth" neodymium magnets included in your kit are made.
 
-## Connections
-
-## Additional Required Materials
-
 ## Lesson

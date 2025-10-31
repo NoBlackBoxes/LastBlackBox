@@ -5,10 +5,6 @@ If we add a clock to our memory, then we can synchronize the operation of our lo
 
 ## Concepts
 
-## Connections
-
-## Additional Materials
-
 ## Lesson
 
 - Build an D Flip Flop

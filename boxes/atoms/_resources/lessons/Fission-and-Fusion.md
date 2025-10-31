@@ -5,8 +5,4 @@ Not all Nuclei are stable, sometimes they can fall apart (fission). What if two 
 
 ## Concepts
 
-## Connections
-
-## Additional Required Materials
-
 ## Lesson

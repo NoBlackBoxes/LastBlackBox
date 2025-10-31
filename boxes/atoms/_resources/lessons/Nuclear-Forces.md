@@ -5,8 +5,4 @@ Wait. What's up with Hydrogen? Why no Neutrons? Oh...what about Helium? Why don'
 
 ## Concepts
 
-## Connections
-
-## Additional Required Materials
-
 ## Lesson

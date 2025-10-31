@@ -9,10 +9,6 @@ Combine *high gain differential amplification* with *negative feedback* to build
 - (Negative) feedback
 - The *ideal* op amp
 
-## Connections
-- Negative feedback is everywhere...especially when we require stability.
-
-## Additional Materials
-
 ## Lesson
+
 - Use an OpAmp to make your DIY speaker louder!

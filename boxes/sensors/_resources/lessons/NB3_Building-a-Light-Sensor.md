@@ -10,10 +10,6 @@ Your NB3 will use LDRs to convert light into voltage. Here you will build and te
 - Construct
 - Test
 
-## Connections
-
-## Additional Materials
-
 ## Lesson
 
 - **TASK**: Build a light sensor

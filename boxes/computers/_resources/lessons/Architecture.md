@@ -19,8 +19,4 @@ The basic building blocks of a computer (memory, ALU, clock, bus, and IO) have a
   - Interrupts?
   - Better drawings...or cut models...
 
-## Connections
-
-## Additional Materials
-
 ## Lesson

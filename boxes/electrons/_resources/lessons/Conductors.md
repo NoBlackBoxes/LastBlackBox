@@ -11,8 +11,4 @@ Some materials have electrons in their outer orbitals that are happy to jump bet
 - We call these materials **conductors**.
 - A common misconception is that the electron that hops into the conductor at one end is the same one that comes out the other. This is not the case. The conductor is filled with electrons and by pushing one in, we poop one out the other end. This is much, much faster.
 
-## Connections
-
-## Additional Required Materials
-
 ## Lesson

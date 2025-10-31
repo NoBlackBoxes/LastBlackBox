@@ -17,8 +17,4 @@ We can modify a pure crystal of certain elements (e.g. silicon) to change how we
 - Doped silicon with - charge carries we call N-type..with + charge carriers we call P-type.
 - Thus far we have created very expensive resistors....wait until until we bring these two types of silicon together.
 
-## Connections
-
-## Additional Materials
-
 ## Lesson

@@ -22,12 +22,6 @@ Generating a stable voltage requires a renewable source of electrons to maintain
 - We will use an 8 cell pack of NiMH batteries to power our NB3, which can deliver up to 9.6 Volts.
 - We will also use 4xAA batteries placed in a holder that connects each battery in series. It delivers 1.6x4 volts, or roughly 6.4 volts.
 
-## Connections
-
-## Connections
-
-## Additional Required Materials
-
 ## Lesson
 
 - **TASK**: Measure the voltage of a AA battery using your multimeter.

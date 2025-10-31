@@ -10,11 +10,8 @@ Building a light-to-sound feedback loop musical instrument (theremin) using an A
 - Test the input (analog serial read)
 - Combine!
 
-## Connections
-
-## Additional Materials
-
 ## Lesson
+
 - **TASK**: Build a Theremin
 - *Hint*: What if you used the analog voltage signal measured from your light sensor to change the frequency of the "tone" playing on your buzzer? Hmm...
 > You should here a sound that varies with your hand motion (in front of a light)

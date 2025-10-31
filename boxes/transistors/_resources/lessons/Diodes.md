@@ -4,8 +4,6 @@ The chemical and electrical equilibrium between charge carriers creates a potent
 ## [Video](https://vimeo.com/1032443724)
 
 ## Concepts
-
-## Connections
 - When we place P and N type piece of Silicon next to one another, something very interesting occurs.
 - The charge carriers, electrons and holes, diffuse from where there are many to where there are fewer.
 - However, when they leave, the electrons leave behind a net positive charge...and the holes a net negative. This voltage works against the diffusion until a balance is reached.

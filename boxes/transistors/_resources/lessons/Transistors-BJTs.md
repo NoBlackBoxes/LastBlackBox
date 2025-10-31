@@ -9,8 +9,4 @@ Bipolar junction transistors inject charge carriers to amplify the external *cur
 - Different doping.
 - Usage.
 
-## Connections
-
-## Additional Materials
-
 ## Lesson

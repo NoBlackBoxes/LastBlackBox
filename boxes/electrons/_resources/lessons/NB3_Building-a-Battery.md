@@ -16,12 +16,6 @@ Let's build a version of the *first* battery, and use it to power an LED.
 - We can stack Zn-Cu cells into a pile to create more voltage. This connects the cells in series.
 - If we get sufficient voltage, then we power something useful...such as an LED.
 
-## Connections
-
-## Connections
-
-## Additional Required Materials
-
 ## Lesson
 
 - **TASK**: Build a simple battery

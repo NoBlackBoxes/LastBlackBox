@@ -23,10 +23,6 @@ An electric motor converts current into rotation using electromagnets that are t
 - This inertial EMF, and the current it can generate can also be useful. This is similar to how an electrical generator works, and how some electric cars recharge their batteries while braking.
 - You can see this effect by connecting one motor to another...and using one as a generator to move the other.
 
-## Connections
-
-## Additional Materials
-
 ## Lesson
 
 - **TASK**: Play with your brushed DC motor. Spin it forwards *and* backwards...

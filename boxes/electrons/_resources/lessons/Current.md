@@ -8,8 +8,4 @@ The rate at which electrons flow, measured as *#charges / second*, is called **c
 - The unit of current is Amps, which equals Coulombs (a unit of charge) per second.
 - In electronics, we mostly just care about electrons moving, but current was described *before* we knew electrons existed. Therefore, "conventional current" is defined to flow the opposite way, from **(+)** to **(-)**, even though we know it is electrons moving from **(-)** to **(+)**.
 
-## Connections
-
-## Additional Required Materials
-
 ## Lesson

@@ -10,10 +10,6 @@ Ohm's Law describes the relationship between Voltage, Current, and Resistance. I
 - This is a linear relationship...if every device behaves appropriately.
 - Draw an IV curve. Current on Y, voltage on X.
 
-## Connections
-
-## Additional Required Materials
-
 ## Lesson
 
 - **TASK**: Does Ohm's Law hold? You know the voltage of the batteries (V) and the resistance of the resistor (R). Measure the current flowing (I) for different resistors and confirm that V = I*R.

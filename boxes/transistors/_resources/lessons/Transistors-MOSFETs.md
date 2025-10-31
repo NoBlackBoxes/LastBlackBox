@@ -20,10 +20,6 @@ MOSFETs are the thing that humans have built more of than anything else. They mu
 - They come in two flavours. N-channel (NPN) and P-channel (PNP). N-channel turn on with a positive voltage and P-channel with a negative voltage.
 - There symbol is this.
 
-## Connections
-
-## Additional Materials
-
 ## Lesson
 
 - **TASK**: Measure the threshold voltage that opens your MOSFET gate. Compare it to the "expected" range listed in the 

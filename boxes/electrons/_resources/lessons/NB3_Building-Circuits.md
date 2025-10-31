@@ -14,10 +14,6 @@ With a voltage source (battery) and resistors, then we can start building "circu
 - They consist of many small holes where you can insert rigid pins, such as the ends of resistor or jumper cable.
 - Hint, sometimes it is hard to insert the pins. Using the jumper cable pins, which are more rigid than some of the other devices we will be connecting, can open the hole and make it easier to insert a flimsy resistor lead.
 
-## Connections
-
-## Additional Required Materials
-
 ## Lesson
 
 - *Note*: This is *weird*. Electrons are the things moving. Shouldn't we say that current "flows" from the **(-)** area to the **(+)** area? Unfortunately, current was described before anyone knew about electrons and we are stuck with the following awkward convention: **Current is defined to flow from (+) to (-)**...even though we now know that electrons are moving the opposite direction.

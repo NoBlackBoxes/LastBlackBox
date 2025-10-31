@@ -11,8 +11,4 @@ How to measure voltage with a digital multimeter.
 - Example circuit (3 resistor voltage divider)
 - More complex example (PCB)
 
-## Connections
-
-## Additional Required Materials
-
 ## Lesson

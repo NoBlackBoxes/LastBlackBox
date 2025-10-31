@@ -11,10 +11,6 @@ The essential elements of computation (NOT, AND, OR, XOR, etc.) can be built fro
 - Addition
 - XOR?
 
-## Connections
-
-## Additional Materials
-
 ## Lesson
 + Design an XOR gate
 + Build an addition circuit (2-bit adder)

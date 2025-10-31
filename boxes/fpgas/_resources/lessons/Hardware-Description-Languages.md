@@ -5,8 +5,4 @@ Describing hardware layouts is very different than describing software algorithm
 
 ## Concepts
 
-## Connections
-
-## Additional Materials
-
 ## Lesson

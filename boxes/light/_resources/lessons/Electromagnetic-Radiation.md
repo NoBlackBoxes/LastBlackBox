@@ -33,8 +33,4 @@ When an electric charge is accelerated something surprising happens. This accele
 - All of the energy of the wiggle appeared to be delivered in one discrete packet, one quanta. We call this a photon.
 - Normally, we are wiggling so many electrons, that our classical wave description of light is perfectly adequate, but the quantum mechanical picture is "more true".
 
-## Connections
-
-## Additional Required Materials
-
 ## Lesson

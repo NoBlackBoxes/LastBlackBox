@@ -5,6 +5,4 @@ Let's make some light, send it across the room, and decode it into a useful sign
 
 ## Concepts
 
-## Connections
-
 ## Lesson

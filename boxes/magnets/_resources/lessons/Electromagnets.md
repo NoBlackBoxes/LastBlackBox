@@ -12,8 +12,4 @@ When electrons move they create a (weak) magnetic field. With clever geometry we
 - It is very weak.
 - We can arrange (bend) the conductor ot make it much, much stronger.
 
-## Connections
-
-## Additional Required Materials
-
 ## Lesson

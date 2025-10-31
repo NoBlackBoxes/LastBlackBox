@@ -8,8 +8,4 @@ When there is more negative or positive charge in one location vs. another there
 - Static electricity
 - Differences in charge concentration create "electric pressure" (potential difference): voltage
 
-## Connections
-
-## Additional Required Materials
-
 ## Lesson

@@ -9,8 +9,4 @@ Step-by-step guide to building and testing voltage dividers with discrete resist
 - Explain potentiometer installation and use.
 - How potentiometers fail...as variable resistors.
 
-## Connections
-
-## Additional Required Materials
-
 ## Lesson

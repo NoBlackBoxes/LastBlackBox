@@ -15,9 +15,5 @@ A sensor converts (transduces) a physical quantity (light, heat, pressure, etc.)
 - ...a voltage divider.
 - We simply replace one of our resistors with this sensor material, such as a thermistor...or this device, an LDR, which changes its internal resistance in response to light!
 
-## Connections
-
-## Additional Materials
-
 ## Lesson
 

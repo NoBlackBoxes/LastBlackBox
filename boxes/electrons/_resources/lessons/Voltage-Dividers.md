@@ -25,10 +25,6 @@ Controlling the level of voltage at different places in a circuit is critical to
 - We can vary the position of pin 2. We can change the ratio of R1 and R2, and thus we can change the output voltage on pin 2.
 - Potentiometers are often found underneath the knobs you turn on electronic devices...for example, when you change the volume on the stereo.
 
-## Connections
-
-## Additional Required Materials
-
 ## Lesson
 
 - **TASK**: Build a voltage divider using two resistors of the same value. Measure the intermediate voltage (between the resistors).

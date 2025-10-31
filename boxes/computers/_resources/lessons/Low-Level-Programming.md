@@ -5,8 +5,4 @@ We can control a computer by loading a list of instructions ("operations") into 
 
 ## Concepts
 
-## Connections
-
-## Additional Materials
-
 ## Lesson

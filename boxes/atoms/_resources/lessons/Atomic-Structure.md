@@ -16,12 +16,7 @@ A brief introduction to the physics of atoms, their parts (protons, neutrons, an
 - Water
 - Chemistry
 
-## Connections
-- Why don't protons in the nucleus fly apart? They are both positively charged?
-- Happy Atoms (Noble Gases)
-
-## Additional Required Materials
-
 ## Lesson
-+ **TASK**: Draw your favorite atom in the "classical" style
+
+- **TASK**: Draw your favorite atom in the "classical" style
 > You should have the appropriate number of electrons in each orbital.
