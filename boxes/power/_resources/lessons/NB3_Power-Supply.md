@@ -7,8 +7,6 @@ Let's install a DC-DC power supply on our NB3.
 - Add NB3 power supply
 - Test
 
-## Connections
-
 ## Lesson
 
 - **TASK**: Add a (regulated) 5 volt power supply to your robot, which you can use while debugging to save your AA batteries and to provide enough power for the Raspberry Pi computer.

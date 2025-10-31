@@ -8,8 +8,6 @@ Let's install a rechargeable NiMH battery pack on our NB3.
 - Add battery pack
 - Test
 
-## Connections
-
 ## Lesson
 
 - **TASK**: Add a NiMH rechargeable 9.6 volt battery pack to your NB3.

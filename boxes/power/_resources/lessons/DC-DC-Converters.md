@@ -10,6 +10,4 @@ How does efficient DC to DC conversion work? Buck and Boost.
 - Buck vs Boost
 - Synchronous Buck (no diode)
 
-## Connections
-
 ## Lesson
