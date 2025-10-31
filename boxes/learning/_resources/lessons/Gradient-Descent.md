@@ -5,6 +5,4 @@ If it gets better, then keep going!
 
 ## Concepts
 
-## Connections
-
 ## Lesson

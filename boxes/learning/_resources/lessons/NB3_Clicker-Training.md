@@ -5,6 +5,4 @@ If a *click* is reinforcing, then training complex behaviour becomes far simpler
 
 ## Concepts
 
-## Connections
-
 ## Lesson
