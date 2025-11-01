@@ -118,7 +118,6 @@ class Session:
             # Does project require additional materials?
             project_materials_path = f"{project_path[:-3]}.csv"
             if os.path.exists(project_materials_path):
-                print(project_materials_path)
                 project_materials_text = Utilities.read_clean_text(project_materials_path)
                 for material_text in project_materials_text:
                     if material_text.startswith("name"):

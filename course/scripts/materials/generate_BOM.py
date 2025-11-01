@@ -39,7 +39,6 @@ for course_name in course_names:
     aggregations = {
         'name': 'first',            # First value
         'slug': 'first',            # First value
-        'depth': 'first',           # First value
         'description': 'first',     # First value
         'quantity': 'sum',          # Sum the quantities
         'package': 'first',         # First value
