@@ -94,7 +94,6 @@ class Session:
     
         # Load project(s)
         line_count = Utilities.find_line(text, "# Project")
-        project_depth = text[line_count].split("{")[1][0:2]
         line_count += 1
         self.projects = []
         project_count = 0
@@ -111,7 +110,7 @@ class Session:
             project_lesson = project_basename.split(":")[1]
             project_path = f"{Config.boxes_root}/{project_box.slug}/_resources/lessons/{project_lesson}.md"
             project_text = Utilities.read_clean_text(project_path)
-            project = Project.Project(project_box, project_depth, text=project_text)
+            project = Project.Project(project_box, text=project_text)
             project.index = project_count
             self.projects.append(project)
             project_count += 1

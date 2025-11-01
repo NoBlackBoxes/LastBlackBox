@@ -1,17 +1,17 @@
 # Bootcamp : Magnets and Semiconductors
 Here we will learn about electromagnetism, motors, and transistors.
 
-## Magnets{01}
+## Magnets
 {Ferromagnetism}
 {Electromagnets}
 
-## Motors{01}
+## Motors
 {DC-Motors}
 
-## Transistors{01}
+## Transistors
 {Semiconductors}
 {Diodes}
 {Transistors-MOSFETs}
 
-# Project{01}
+# Project
 {Transistors:NB3_Building-a-Light-Sensitive-Motor}

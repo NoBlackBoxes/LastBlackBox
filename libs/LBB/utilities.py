@@ -21,7 +21,7 @@ def confirm_folder(folder_path):
         os.makedirs(folder_path, exist_ok=True)
     return
 
-# Clear a folder (or create)
+# Clear folder (or create)
 def clear_folder(folder_path):
     if os.path.exists(folder_path):
         shutil.rmtree(folder_path)
@@ -36,32 +36,6 @@ def list_subfolder_names(folder_path):
         if os.path.isdir(path):
             subfolder_names.append(name)
     return subfolder_names
-
-# Get depth from symbol
-def get_depth_from_symbol(symbol):
-    if symbol == '-':
-        depth = "01"
-    elif symbol == '+':
-        depth = "10"
-    elif symbol == '*':
-        depth = "11"
-    else:
-        print(f"Unrecognized depth symbol ({symbol}) in lesson text.")
-        depth = -1
-    return depth
-
-# Get depths list
-def get_depths(depth):
-    depths = []
-    if depth == "01":
-        depths.append("01")
-    elif depth == "10":
-        depths.extend(["01", "10"])
-    elif depth == "11":
-        depths.extend(["01", "10", "11"])
-    else:
-        print(f"Invalid Box Depth Level: {depth}")
-    return depths
 
 # Read text file, strip whitespace (including newline), and remove empty lines
 def read_clean_text(path):
@@ -111,10 +85,6 @@ def replace_link(match):
 # Extract step from template text
 def extract_step_from_text(course, text, line_count):
     step = None
-    step_depth = get_depth_from_symbol(text[line_count].strip()[0])
-    if step_depth == -1:
-        print(f"Line: {line_count} - Error in {text}")
-        exit(-1)
     step_text = text[line_count][2:].strip()
     if step_text.startswith("**TASK**"):    # Task
         task_text = []
@@ -126,11 +96,9 @@ def extract_step_from_text(course, text, line_count):
             line_count += 1
         task_text.append(text[line_count])
         task = Task.Task(course, text=task_text)
-        task.depth = step_depth
         step = task
     elif step_text.startswith("!["):        # Image
         image = Image.Image(course, text=step_text)
-        image.depth = step_depth
         step = image
     elif step_text.startswith("*code*"):     # Code
         code_text = []
@@ -142,7 +110,6 @@ def extract_step_from_text(course, text, line_count):
             line_count += 1
         code_text.append(text[line_count])
         code = Code.Code(course, text=code_text)
-        code.depth = step_depth
         step = code
     elif step_text.startswith("```"):       # Debug
         print(text[:line_count])
@@ -151,7 +118,6 @@ def extract_step_from_text(course, text, line_count):
         exit(-1)
     else:                                   # Instruction
         instruction = Instruction.Instruction(course, text=step_text)
-        instruction.depth = step_depth
         step = instruction
     line_count += 1
     return line_count, step
@@ -173,7 +139,6 @@ def extract_steps_from_dict(course, dictionary):
             exit(-1)
         steps.append(step)
     return steps
-
 
 # Extract name and slug
 def extract_lesson_name_and_slug(line):

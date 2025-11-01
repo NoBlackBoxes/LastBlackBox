@@ -1,11 +1,11 @@
 # Build a Brain : Digital Decisions
 The building blocks of our digital world.
 
-## Transistors{01}
+## Transistors
 {Semiconductors}
 {Diodes}
 {NB3_Testing-Diodes}
 {Transistors-MOSFETs}
 
-# Project{01}
+# Project
 {Transistors:NB3_Building-a-Light-Sensitive-Motor}

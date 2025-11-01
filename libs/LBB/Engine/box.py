@@ -18,7 +18,6 @@ class Box:
     LBB Box Class
 
     Stores a list of lessons and materials required to open this black box
-    - Each box has a "depth" (01, 10, 11) indicating the degree of difficulty
     """
     def __init__(self, _session, text=None, dictionary=None):
         self.course = _session.course   # Box parent (course)
@@ -26,7 +25,6 @@ class Box:
         self.index = None               # Box index
         self.name = None                # Box name
         self.slug = None                # Box slug (URL)
-        self.depth = None               # Box depth
         self.description = None         # Box description
         self.materials = None           # Box materials
         self.lessons = None             # Box lessons
@@ -42,7 +40,6 @@ class Box:
             "index": self.index,
             "name": self.name,
             "slug": self.slug,
-            "depth": self.depth,
             "description": self.description,
             "materials": [material.to_dict() for material in self.materials],
             "lessons": [lesson.to_dict() for lesson in self.lessons]
@@ -54,7 +51,6 @@ class Box:
         self.index = dictionary.get("index")
         self.name = dictionary.get("name")
         self.slug = dictionary.get("slug")
-        self.depth = dictionary.get("depth")
         self.description = dictionary.get("description")
         self.materials = [Material.Material(dictionary=material_dictionary) for material_dictionary in dictionary.get("materials", [])]
         self.lessons = [Lesson.Lesson(self, dictionary=lesson_dictionary) for lesson_dictionary in dictionary.get("lessons", [])]
@@ -66,11 +62,10 @@ class Box:
         line_count = 0
         max_count = len(text)
         
-        # Extract name, slug, and depth
+        # Extract name and slug
         title = text[0][2:].strip()
         self.name = title.split("{")[0]
         self.slug = self.name.lower()
-        self.depth = title.split("{")[1][:2]
         line_count += 1
 
         # Load description
@@ -79,20 +74,15 @@ class Box:
         description_line = Utilities.find_line(info_text, "## Description") + 1
         self.description = info_text[description_line]
 
-        # List box depths
-        depths = Utilities.get_depths(self.depth)
-
         # Load materials
         materials_path = f"{Config.boxes_root}/{self.slug}/_resources/materials.csv"
         materials_text = Utilities.read_clean_text(materials_path)
         materials = []
         for material_text in materials_text:
-            if material_text[0].startswith("name"):
+            if material_text.startswith("name"):
                 continue
-            material_depth = material_text.split(",")[2]
-            if material_depth in depths:
-                material = Material.Material(text=material_text)
-                materials.append(material)
+            material = Material.Material(text=material_text)
+            materials.append(material)
         self.materials = materials
 
         # Load lessons
@@ -105,7 +95,7 @@ class Box:
             lesson_basename = text[line_count].split("{")[1][:-1]
             lesson_path = f"{Config.boxes_root}/{self.slug}/_resources/lessons/{lesson_basename}.md"
             lesson_text = Utilities.read_clean_text(lesson_path)
-            lesson = Lesson.Lesson(self, self.depth, text=lesson_text)
+            lesson = Lesson.Lesson(self, text=lesson_text)
             lesson.index = lesson_count
             self.lessons.append(lesson)
             lesson_count += 1
@@ -119,10 +109,10 @@ class Box:
             output.append(f"## {self.name}\n")
             output.append(f"{self.description}\n\n")
             output.append(f"<details><summary><i>Materials</i></summary><p>\n\n")
-            output.append("Name|Depth|Description| # |Package|Data|Link|\n")
-            output.append(":-------|:---:|:----------|:-----:|:-:|:--:|:--:|\n")
+            output.append("Name|Description| # |Package|Data|Link|\n")
+            output.append(":-------|:----------|:-----:|:-:|:--:|:--:|\n")
             for m in self.materials:
-                output.append(f"{m.name}|{m.depth}|{m.description}|{m.quantity}|{m.package}|[-D-]({m.datasheet})|[-L-]({m.supplier})\n")
+                output.append(f"{m.name}|{m.description}|{m.quantity}|{m.package}|[-D-]({m.datasheet})|[-L-]({m.supplier})\n")
             output.append(f"\n</p></details><hr>\n\n")
 
         elif type == "HTML":

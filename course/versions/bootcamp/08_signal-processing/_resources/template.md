@@ -1,8 +1,8 @@
 # Bootcamp : Signal Processing
 Let's learn how to process one-dimensional time series data...like audio waveforms.
 
-## Audio{01}
+## Audio
 {Signal-Processing}
 
-# Project{01}
+# Project
 {Audio:Signal-Processing}

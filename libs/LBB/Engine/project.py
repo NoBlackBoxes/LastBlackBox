@@ -21,14 +21,13 @@ class Project:
 
     Steps to complete a session project
     """
-    def __init__(self, _box, _depth, text=None, dictionary=None):
+    def __init__(self, _box, text=None, dictionary=None):
         self.course = _box.course       # Project parent (course)
         self.session = _box.session     # Project parent (session)
         self.box = _box                 # Project parent (box)
         self.index = None               # Project index
         self.name = None                # Project name
         self.slug = None                # Project slug
-        self.depth = _depth             # Project depth
         self.description = None         # Project description
         self.video = None               # Project video
         self.steps = None               # Project steps
@@ -44,7 +43,6 @@ class Project:
             "index": self.index,
             "name": self.name,
             "slug": self.slug,
-            "depth": self.depth,
             "description": self.description,
             "video": self.video.to_dict(),
             "steps": [step.to_dict() for step in self.steps]
@@ -56,7 +54,6 @@ class Project:
         self.index = dictionary.get("index")
         self.name = dictionary.get("name")
         self.slug = dictionary.get("slug")
-        self.depth = dictionary.get("depth")
         self.description = dictionary.get("description")
         self.video = Video.Video(self.box, dictionary=dictionary.get("video"))
         self.steps = Utilities.extract_steps_from_dict(dictionary)
@@ -76,9 +73,6 @@ class Project:
         self.description = text[line_count]
         line_count += 1
 
-        # List project depths
-        depths = Utilities.get_depths(self.depth)
-
         # Extract video
         video_url = text[line_count].split('(')[1][:-1]
         if video_url != '':
@@ -94,10 +88,9 @@ class Project:
         step_count = 0
         while line_count < max_count:
             line_count, step = Utilities.extract_step_from_text(self.course, text, line_count)
-            if step.depth in depths:
-                step.index = step_count
-                self.steps.append(step)
-                step_count += 1
+            step.index = step_count
+            self.steps.append(step)
+            step_count += 1
         return
 
     # Render project object as Markdown or HTML

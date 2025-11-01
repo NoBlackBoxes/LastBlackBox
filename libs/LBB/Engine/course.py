@@ -22,7 +22,6 @@ class Course:
     def __init__(self, name=None, path=None):
         self.name = None         # Course name
         self.slug = None         # Course slug (URL)
-        self.image_prefix = None # Course image prefix
         self.sessions = None     # Course sessions
         if name:
             self.build(name)     # Build course from repository
@@ -35,7 +34,6 @@ class Course:
         dictionary = {
             "name": self.name,
             "slug": self.slug,
-            "image_prefix": self.image_prefix,
             "sessions": [session.to_dict() for session in self.sessions]
         }
         return dictionary
@@ -44,7 +42,6 @@ class Course:
     def from_dict(self, dictionary):
         self.name = dictionary.get("name")
         self.slug = dictionary.get("slug")
-        self.image_prefix = dictionary.get("image_prefix")
         self.sessions = [Session.Session(dictionary=session_dictionary) for session_dictionary in dictionary.get("sessions", [])]
         return
     
@@ -56,17 +53,10 @@ class Course:
         # Set course parameters
         self.name = name
         self.slug = get_slug_from_name(name)
-        self.image_prefix = "../.." if name == "The Last Black Box" else "../../../.."
-        
+
         # List session folders
-        if self.slug == "course": # Full course
-            session_folders = []
-            for box_name in Config.box_names:
-                session_folder = f"{Config.boxes_root}/{box_name.lower()}"
-                session_folders.append(session_folder)
-        else:
-            course_folder = f"{Config.course_root}/versions/{self.slug}"
-            session_folders = sorted(glob.glob(f"{course_folder}/[0-9][0-9]_*"))
+        course_folder = f"{Config.course_root}/versions/{self.slug}"
+        session_folders = sorted(glob.glob(f"{course_folder}/[0-9][0-9]_*"))
 
         # Load sessions from templates
         self.sessions = []
@@ -97,7 +87,7 @@ class Course:
 # Get course slug from name
 def get_slug_from_name(name):
     if name == "The Last Black Box":
-        slug = "course"
+        slug = "full"
     elif name == "Bootcamp":
         slug = "bootcamp"
     elif name == "Braitenberg":

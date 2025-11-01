@@ -20,14 +20,13 @@ class Lesson:
 
     Stores a link to a video tutorial (optional) and a list of steps to complete the lesson
     """ 
-    def __init__(self, _box, _depth, text=None, dictionary=None):
+    def __init__(self, _box, text=None, dictionary=None):
         self.course = _box.course       # Lesson parent (course)
         self.session = _box.session     # Lesson parent (session)
         self.box = _box                 # Lesson parent (box)
         self.index = None               # Lesson index
         self.name = None                # Lesson name
         self.slug = None                # Lesson slug
-        self.depth = _depth             # Lesson depth
         self.description = None         # Lesson description
         self.video = None               # Lesson video
         self.steps = None               # Lesson steps
@@ -43,7 +42,6 @@ class Lesson:
             "index": self.index,
             "name": self.name,
             "slug": self.slug,
-            "depth": self.depth,
             "description": self.description,
             "video": self.video.to_dict(),
             "steps": [step.to_dict() for step in self.steps]
@@ -55,7 +53,6 @@ class Lesson:
         self.index = dictionary.get("index")
         self.name = dictionary.get("name")
         self.slug = dictionary.get("slug")
-        self.depth = dictionary.get("depth")
         self.description = dictionary.get("description")
         self.video = Video.Video(self.box, dictionary=dictionary.get("video"))
         self.steps = Utilities.extract_steps_from_dict(dictionary)
@@ -75,9 +72,6 @@ class Lesson:
         self.description = text[line_count]
         line_count += 1
 
-        # List lesson depths
-        depths = Utilities.get_depths(self.depth)
-
         # Extract video
         video_url = text[line_count].split('(')[1][:-1]
         if video_url != '':
@@ -93,10 +87,9 @@ class Lesson:
         step_count = 0
         while line_count < max_count:
             line_count, step = Utilities.extract_step_from_text(self.course, text, line_count)
-            if step.depth in depths:
-                step.index = step_count
-                self.steps.append(step)
-                step_count += 1
+            step.index = step_count
+            self.steps.append(step)
+            step_count += 1
         return
 
     # Render lesson object as Markdown or HTML

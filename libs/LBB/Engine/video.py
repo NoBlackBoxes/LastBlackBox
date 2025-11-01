@@ -53,12 +53,13 @@ class Video:
 
     # Render video in Markdown or HTML
     def render(self, type):
+        image_prefix = "../../../.."
         gif_name = self.name + ".gif"
         gif_name = gif_name.replace('(', '').replace(')', '').replace('\'', '')
         if gif_name.startswith("NB3"):
             gif_name = "NB3_" + gif_name[6:]
         gif_name = gif_name.replace(" ", "-")
-        output = f"<p align=\"center\">\n<a href=\"{self.url}\" title=\"Control+Click to watch in new tab\"><img src=\"{self.course.image_prefix}/boxes/{self.box.slug}/_resources/lessons/thumbnails/{gif_name}\" alt=\"{self.name}\" width=\"480\"/></a>\n</p>\n"
+        output = f"<p align=\"center\">\n<a href=\"{self.url}\" title=\"Control+Click to watch in new tab\"><img src=\"{image_prefix}/boxes/{self.box.slug}/_resources/lessons/thumbnails/{gif_name}\" alt=\"{self.name}\" width=\"480\"/></a>\n</p>\n"
         return output
 
 #FIN

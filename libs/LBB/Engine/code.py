@@ -15,7 +15,6 @@ class Code:
         self.course = _course           # Code parent (course)
         self.index = None               # Step index
         self.type = "code"              # Step type
-        self.depth = None               # Step depth
         self.syntax = None              # Code syntax
         self.content = None             # Code content
         if text:
@@ -29,7 +28,6 @@ class Code:
         dictionary = {
             "index": self.index,
             "type": self.type,
-            "depth": self.depth,
             "syntax": self.syntax,
             "content": self.content
         }
@@ -39,7 +37,6 @@ class Code:
     def from_dict(self, dictionary):
         self.index = dictionary.get("index")
         self.type = dictionary.get("type")
-        self.depth = dictionary.get("depth")
         self.syntax = dictionary.get("syntax")
         self.content = dictionary.get("content")
         return

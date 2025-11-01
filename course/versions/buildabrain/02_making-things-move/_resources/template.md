@@ -1,12 +1,12 @@
 # Build a Brain : Making Things Move
 "The reason we evolved a brain is that we need it to generate adaptive and complex movement...movement is the only way we have to affect the world around us" - D. Wolpert
 
-## Magnets{01}
+## Magnets
 {Ferromagnetism}
 {Electromagnets}
 
-## Motors{01}
+## Motors
 {DC-Motors}
 
-# Project{01}
+# Project
 {Magnets:NB3_Building-a-Speaker}

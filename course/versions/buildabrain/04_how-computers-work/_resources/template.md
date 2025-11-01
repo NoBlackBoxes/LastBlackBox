@@ -1,16 +1,16 @@
 # Build a Brain : How Computers Work
 Logic + Memory = Computer
 
-## Logic{01}
+## Logic
 {Logic-Gates}
 
-## Memory{01}
+## Memory
 {Flash-Memory}
 
-## Computers{01}
+## Computers
 {Architecture}
 {NB3_Hindbrain}
 
-# Project{01}
+# Project
 {Computers:NB3_Programming-Arduino}
 {Computers:NB3_Building-a-Theremin}

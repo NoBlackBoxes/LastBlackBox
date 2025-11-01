@@ -6,9 +6,9 @@ Things started getting really interesting when organisms began to interact with 
 
 <details><summary><i>Materials</i></summary><p>
 
-Name|Depth|Description| # |Package|Data|Link|
-:-------|:---:|:----------|:-----:|:-:|:--:|:--:|
-Cable (MiniUSB-20cm)|01|Short mini-USB to Type-A cable (20 cm)|1|Cables (001)|[-D-](/boxes/networks/)|[-L-](https://www.amazon.co.uk/gp/product/B07FW69HNT)
+Name|Description| # |Package|Data|Link|
+:-------|:----------|:-----:|:-:|:--:|:--:|
+Cable (MiniUSB-20cm)|Short mini-USB to Type-A cable (20 cm)|1|Cables (001)|[-D-](/boxes/networks/)|[-L-](https://www.amazon.co.uk/gp/product/B07FW69HNT)
 
 </p></details><hr>
 
@@ -40,8 +40,8 @@ Creating a website, from simple to complex.
 
 <details><summary><i>Materials</i></summary><p>
 
-Name|Depth|Description| # |Package|Data|Link|
-:-------|:---:|:----------|:-----:|:-:|:--:|:--:|
+Name|Description| # |Package|Data|Link|
+:-------|:----------|:-----:|:-:|:--:|:--:|
 
 </p></details><hr>
 
@@ -66,8 +66,8 @@ Serving HTML files to who ever requests them (via HTTP).
 
 <details><summary><i>Materials</i></summary><p>
 
-Name|Depth|Description| # |Package|Data|Link|
-:-------|:---:|:----------|:-----:|:-:|:--:|:--:|
+Name|Description| # |Package|Data|Link|
+:-------|:----------|:-----:|:-:|:--:|:--:|
 
 </p></details><hr>
 

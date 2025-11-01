@@ -17,7 +17,6 @@ class Task:
         self.course = _course           # Task parent (course)
         self.index = None               # Step index
         self.type = "task"              # Step type
-        self.depth = None               # Step depth
         self.description = None         # Task description
         self.steps = None               # Task steps
         self.target = None              # Task target
@@ -32,7 +31,6 @@ class Task:
         dictionary = {
             "index": self.index,
             "type": self.type,
-            "depth": self.depth,
             "description": self.description,
             "steps": [step.to_dict() for step in self.steps],
             "target": self.target
@@ -43,7 +41,6 @@ class Task:
     def from_dict(self, dictionary):
         self.index = dictionary.get("index")
         self.type = dictionary.get("type")
-        self.depth = dictionary.get("depth")
         self.description = dictionary.get("description")
         self.steps = Utilities.extract_steps_from_dict(self.course, dictionary)
         self.target = dictionary.get("target")

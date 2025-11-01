@@ -1,10 +1,10 @@
 # AI-Workshops : Vision
 We will learn about classical and ML approaches to modern computer vision. 
 
-## Vision{01}
+## Vision
 {Cameras}
 {NB3_Install-the-Eye}
-{Image-processing}
+{Image-Processing}
 
-# Project{01}
+# Project
 {Vision:NB3_Streaming-Images}

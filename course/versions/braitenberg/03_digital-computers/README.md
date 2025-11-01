@@ -6,8 +6,8 @@ Boole was coole.
 
 <details><summary><i>Materials</i></summary><p>
 
-Name|Depth|Description| # |Package|Data|Link|
-:-------|:---:|:----------|:-----:|:-:|:--:|:--:|
+Name|Description| # |Package|Data|Link|
+:-------|:----------|:-----:|:-:|:--:|:--:|
 
 </p></details><hr>
 
@@ -18,14 +18,17 @@ Name|Depth|Description| # |Package|Data|Link|
 
 > The essential elements of computation (NOT, AND, OR, XOR, etc.) can be built from straight forward combinations of MOSFETs.
 
+- Design an XOR gate
+- Build an addition circuit (2-bit adder)
+- Build a priority encoder for your 2-bit ADC
 
 ## Memory
 There are many ways to store information.
 
 <details><summary><i>Materials</i></summary><p>
 
-Name|Depth|Description| # |Package|Data|Link|
-:-------|:---:|:----------|:-----:|:-:|:--:|:--:|
+Name|Description| # |Package|Data|Link|
+:-------|:----------|:-----:|:-:|:--:|:--:|
 
 </p></details><hr>
 
@@ -42,11 +45,11 @@ It may not yet seem believable, but you can build a **computer** by combining tr
 
 <details><summary><i>Materials</i></summary><p>
 
-Name|Depth|Description| # |Package|Data|Link|
-:-------|:---:|:----------|:-----:|:-:|:--:|:--:|
-Microcontroller|01|Arduino Nano (rev.3)|1|Medium (011)|[-D-](/boxes/computers/_resources/datasheets/arduino_nano_rev3.pdf)|[-L-](https://uk.farnell.com/arduino/a000005/arduino-nano-evaluation-board/dp/1848691)
-Piezo Buzzer|01|Piezoelectric speaker/transducer|1|Passive Electronics|[-D-](/boxes/computers/_resources/datasheets/piezo_buzzer.pdf)|[-L-](https://uk.farnell.com/tdk/ps1240p02bt/piezoelectric-buzzer-4khz-70dba/dp/3267212)
-Cable (MiniUSB-1m)|01|Mini-USB to Type-A cable (1 m)|1|Cables (001)|[-D-](/boxes/computers/)|[-L-](https://www.amazon.co.uk/gp/product/B07FWF2KBF)
+Name|Description| # |Package|Data|Link|
+:-------|:----------|:-----:|:-:|:--:|:--:|
+Microcontroller|Arduino Nano (rev.3)|1|Medium (011)|[-D-](/boxes/computers/_resources/datasheets/arduino_nano_rev3.pdf)|[-L-](https://uk.farnell.com/arduino/a000005/arduino-nano-evaluation-board/dp/1848691)
+Piezo Buzzer|Piezoelectric speaker/transducer|1|Passive Electronics|[-D-](/boxes/computers/_resources/datasheets/piezo_buzzer.pdf)|[-L-](https://uk.farnell.com/tdk/ps1240p02bt/piezoelectric-buzzer-4khz-70dba/dp/3267212)
+Cable (MiniUSB-1m)|Mini-USB to Type-A cable (1 m)|1|Cables (001)|[-D-](/boxes/computers/)|[-L-](https://www.amazon.co.uk/gp/product/B07FWF2KBF)
 
 </p></details><hr>
 

@@ -1,10 +1,8 @@
-# The Last Black Box : Vision
+# The Last Black Box : Learning
 In this box, you will learn about vision...
 
-## Vision
-{Cameras}
-{Image-Processing}
+## Learning
+{Gradient-Descent}
 
 # Projects
-{Vision:NB3_Install-the-Eye}
-{Vision:NB3_Streaming-Images}
+{Learning:NB3_Clicker-Training}

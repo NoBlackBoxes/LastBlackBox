@@ -6,9 +6,9 @@ We will start by learning how electricity is used to create "sensors", which wil
 
 <details><summary><i>Materials</i></summary><p>
 
-Name|Depth|Description| # |Package|Data|Link|
-:-------|:---:|:----------|:-----:|:-:|:--:|:--:|
-Periodic Table|01|Periodic Table business card|1|Body (000)|[-D-](/boxes/atoms/card)|[-L-](VK)
+Name|Description| # |Package|Data|Link|
+:-------|:----------|:-----:|:-:|:--:|:--:|
+Periodic Table|Periodic Table Card|1|Body (000)|[-D-](/boxes/atoms/card)|[-L-](VK)
 
 </p></details><hr>
 
@@ -20,6 +20,12 @@ Periodic Table|01|Periodic Table business card|1|Body (000)|[-D-](/boxes/atoms/c
 > A brief introduction to the physics of atoms, their parts (protons, neutrons, and electrons), and their classical vs. quantum structure.
 
 
+**TASK**: Draw your favorite atom in the "classical" style
+<details><summary><strong>Target</strong></summary>
+    You should have the appropriate number of electrons in each orbital.
+</details><hr>
+
+
 #### Watch this video: [The Periodic Table](https://vimeo.com/1028399080)
 <p align="center">
 <a href="https://vimeo.com/1028399080" title="Control+Click to watch in new tab"><img src="../../../../boxes/atoms/_resources/lessons/thumbnails/The-Periodic-Table.gif" alt="The Periodic Table" width="480"/></a>
@@ -28,6 +34,7 @@ Periodic Table|01|Periodic Table business card|1|Body (000)|[-D-](/boxes/atoms/c
 > Organizing the elements into a table reveals a regular pattern, which is linked to the fundamental chemical properties of each material.
 
 - When you need it *(and you will)*, then you can find a copy of the periodic table [here](/boxes/atoms/_resources/images/periodic_table.png).
+- The electron configuration (assignments to specific orbitals) of each atomic element can be viewed [here](https://en.wikipedia.org/wiki/Electron_configurations_of_the_elements_(data_page)).
 
 #### Watch this video: [Heat](https://vimeo.com/1029691491)
 <p align="center">
@@ -42,21 +49,22 @@ Electrons are the sub-atomic particles that underlie *electricity*. Controlling 
 
 <details><summary><i>Materials</i></summary><p>
 
-Name|Depth|Description| # |Package|Data|Link|
-:-------|:---:|:----------|:-----:|:-:|:--:|:--:|
-NB3 Body|01|NB3 robot base PCB|1|Body (000)|[-D-](/boxes/electrons/NB3_body)|[-L-](VK)
-Resistor (470)|01|470 &Omega;/0.25 W|2|Passive Electronics|[-D-](/boxes/electrons/_resources/datasheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943)
-Resistor (1k)|01|1 k&Omega;/0.25 W|2|Passive Electronics|[-D-](/boxes/electrons/_resources/datasheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-1k/res-1k-1-250mw-axial-metal-film/dp/9341102)
-Resistor (10k)|01|10 k&Omega;/0.25 W|2|Passive Electronics|[-D-](/boxes/electrons/_resources/datasheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-10k/res-10k-1-250mw-axial-metal-film/dp/9341110)
-Potentiometer|01|2.2 k&Omega; variable resistor|2|Passive Electronics|[-D-](/boxes/electrons/_resources/datasheets/pot_2k2.pdf)|[-L-](https://uk.farnell.com/bourns/3362p-1-222lf/trimmer-pot-2-2kohm-10-1turn-th/dp/2328599)
-Breadboard (400)|01|400-tie solderless breadboard|1|Small (010)|[-D-](/boxes/electrons/_resources/datasheets/breadboard_400.pdf)|[-L-](https://www.amazon.co.uk/gp/product/B0739XRX8F)
-Breadboards (170)|01|170-tie solderless breadboard|4|Small (010)|[-D-](/boxes/electrons/_resources/datasheets/breadboard_170.pdf)|[-L-](https://www.amazon.co.uk/ELEGOO-tie-points-Breadboard-Breadboards-Electronic/dp/B01N0YWIR7)
-Batteries (AA)|01|AA 1.5 V alkaline battery|4|Auxiliary|[-D-](/boxes/electrons/)|[-L-](https://www.amazon.co.uk/Duracell-Optimum-Alkaline-Batteries-MX1500/dp/B093Q5XY66)
-Battery holder|01|4xAA battery holder with ON-OFF switch|1|Small (010)|[-D-](/boxes/electrons/)|[-L-](https://www.amazon.co.uk/gp/product/B0814ZH68F)
-Jumper Kit|01|Kit of multi-length 22 AWG breadboard jumpers|1|Large (100)|[-D-](/boxes/electrons/_resources/datasheets/jumper_kit.pdf)|[-L-](https://uk.farnell.com/multicomp/mc001810/hard-jumper-wire-22awg-140pc/dp/2770338)
-Jumper Wires|01|Assorted 22 AWG jumper wire leads (male/female)|1|Cables (001)|[-D-](/boxes/electrons/_resources/datasheets/jumper_wires.pdf)|[-L-](https://www.amazon.co.uk/gp/product/B09KR7Z4PF)
-Test Lead|01|Alligator clip to 0.64 mm pin (20 cm)|2|Cables (001)|[-D-](/boxes/electrons/)|[-L-](https://www.amazon.co.uk/gp/product/B096JR15JW)
-Rubber feet|01|Adhesive rubber standoffs (1421T6CL)|4|Passive Electronics|[-D-](/boxes/electrons/_resources/datasheets/rubber_feet.pdf)|[-L-](https://uk.farnell.com/hammond/1421t6cl/feet-stick-on-pk24/dp/1876522)
+Name|Description| # |Package|Data|Link|
+:-------|:----------|:-----:|:-:|:--:|:--:|
+NB3 Body|NB3 robot base PCB|1|Body (000)|[-D-](/boxes/electrons/NB3_body)|[-L-](VK)
+Resistor (470)|470 &Omega;/0.25 W|2|Passive Electronics|[-D-](/boxes/electrons/_resources/datasheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943)
+Resistor (1k)|1 k&Omega;/0.25 W|2|Passive Electronics|[-D-](/boxes/electrons/_resources/datasheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-1k/res-1k-1-250mw-axial-metal-film/dp/9341102)
+Resistor (10k)|10 k&Omega;/0.25 W|2|Passive Electronics|[-D-](/boxes/electrons/_resources/datasheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-10k/res-10k-1-250mw-axial-metal-film/dp/9341110)
+Button|Tactile switch|2|Passive Electronics|[-D-](/boxes/electrons/_resources/datasheets/button.pdf)|[-L-](https://uk.farnell.com/omron/b3f-1000/switch-spno-0-05a-24v-tht-0-98n/dp/176432)
+Potentiometer|2.2 k&Omega; variable resistor|2|Passive Electronics|[-D-](/boxes/electrons/_resources/datasheets/pot_2k2.pdf)|[-L-](https://uk.farnell.com/bourns/3362p-1-222lf/trimmer-pot-2-2kohm-10-1turn-th/dp/2328599)
+Breadboard (400)|400-tie solderless breadboard|1|Small (010)|[-D-](/boxes/electrons/_resources/datasheets/breadboard_400.pdf)|[-L-](https://www.amazon.co.uk/gp/product/B0739XRX8F)
+Breadboards (170)|170-tie solderless breadboard|4|Small (010)|[-D-](/boxes/electrons/_resources/datasheets/breadboard_170.pdf)|[-L-](https://www.amazon.co.uk/ELEGOO-tie-points-Breadboard-Breadboards-Electronic/dp/B01N0YWIR7)
+Batteries (AA)|AA 1.5 V alkaline battery|4|Auxiliary|[-D-](/boxes/electrons/)|[-L-](https://www.amazon.co.uk/Duracell-Optimum-Alkaline-Batteries-MX1500/dp/B093Q5XY66)
+Battery holder|4xAA battery holder with ON-OFF switch|1|Small (010)|[-D-](/boxes/electrons/)|[-L-](https://www.amazon.co.uk/gp/product/B0814ZH68F)
+Jumper Kit|Kit of multi-length 22 AWG breadboard jumpers|1|Large (100)|[-D-](/boxes/electrons/_resources/datasheets/jumper_kit.pdf)|[-L-](https://uk.farnell.com/multicomp/mc001810/hard-jumper-wire-22awg-140pc/dp/2770338)
+Jumper Wires|Assorted 22 AWG jumper wire leads (male/female)|1|Cables (001)|[-D-](/boxes/electrons/_resources/datasheets/jumper_wires.pdf)|[-L-](https://www.amazon.co.uk/gp/product/B09KR7Z4PF)
+Test Lead|Alligator clip to 0.64 mm pin (20 cm)|2|Cables (001)|[-D-](/boxes/electrons/)|[-L-](https://www.amazon.co.uk/gp/product/B096JR15JW)
+Rubber feet|Adhesive rubber standoffs (1421T6CL)|4|Passive Electronics|[-D-](/boxes/electrons/_resources/datasheets/rubber_feet.pdf)|[-L-](https://uk.farnell.com/hammond/1421t6cl/feet-stick-on-pk24/dp/1876522)
 
 </p></details><hr>
 
@@ -195,9 +203,9 @@ Computers and brains work with electrical signals. In order for either to unders
 
 <details><summary><i>Materials</i></summary><p>
 
-Name|Depth|Description| # |Package|Data|Link|
-:-------|:---:|:----------|:-----:|:-:|:--:|:--:|
-Photoresistor (LDR)|01|Light-dependent resistor (GL5516 and GL5528)|4|Passive Electronics|[-D-](/boxes/sensors/)|[-L-](https://uk.farnell.com/advanced-photonix/nsl-19m51/light-dependent-resistor-550nm/dp/3168335)
+Name|Description| # |Package|Data|Link|
+:-------|:----------|:-----:|:-:|:--:|:--:|
+Photoresistor (LDR)|Light-dependent resistor (GL5516 and GL5528)|2|Passive Electronics|[-D-](/boxes/sensors/)|[-L-](https://uk.farnell.com/advanced-photonix/nsl-19m51/light-dependent-resistor-550nm/dp/3168335)
 
 </p></details><hr>
 

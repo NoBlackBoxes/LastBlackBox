@@ -15,7 +15,6 @@ class Instruction:
         self.course = _course           # Instruction parent (course)
         self.index = None               # Step index
         self.type = "instruction"       # Step type
-        self.depth = None               # Step depth
         self.content = None             # Instruction content
         if text:
             self.parse(text)            # Parse instruction from README text
@@ -28,7 +27,6 @@ class Instruction:
         dictionary = {
             "index": self.index,
             "type": self.type,
-            "depth": self.depth,
             "content": self.content
         }
         return dictionary
@@ -37,7 +35,6 @@ class Instruction:
     def from_dict(self, dictionary):
         self.index = dictionary.get("index")
         self.type = dictionary.get("type")
-        self.depth = dictionary.get("depth")
         self.content = dictionary.get("content")
         return
 

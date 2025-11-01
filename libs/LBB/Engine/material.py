@@ -19,7 +19,6 @@ class Material:
     def __init__(self, text=None, dictionary=None):
         self.name = None                # Material name
         self.slug = None                # Material slug
-        self.depth = None               # Material depth
         self.description = None         # Material description
         self.quantity = None            # Material quantity
         self.datasheet = None           # Material datasheet (link)
@@ -43,7 +42,6 @@ class Material:
         dictionary = {
             "name": self.name,
             "slug": self.slug,
-            "depth": self.depth,
             "description": self.description,
             "quantity": self.quantity,
             "datasheet": self.datasheet,
@@ -63,7 +61,6 @@ class Material:
     def from_dict(self, dictionary):
         self.name = dictionary.get("name")
         self.slug = dictionary.get("slug")
-        self.depth = dictionary.get("depth")
         self.description = dictionary.get("description")
         self.quantity = dictionary.get("quantity")
         self.datasheet = dictionary.get("datasheet")
@@ -83,19 +80,18 @@ class Material:
         fields = text.split(",")
         self.name = fields[0].strip()
         self.slug = fields[1].strip()
-        self.depth = fields[2].strip()
-        self.description = fields[3].strip()
-        self.quantity = int(fields[4].strip())
-        self.datasheet = fields[5].strip()
-        self.supplier = fields[6].strip()
-        self.package = fields[7].strip()
-        self.x = int(fields[8].strip())
-        self.y = int(fields[9].strip())
-        self.z = int(fields[10].strip())
-        self.unit_price = fields[11].strip()
-        self.bulk_price = fields[12].strip()
-        self.new = fields[13].strip()
-        self.used = fields[14].strip()
+        self.description = fields[2].strip()
+        self.quantity = int(fields[3].strip())
+        self.datasheet = fields[4].strip()
+        self.supplier = fields[5].strip()
+        self.package = fields[6].strip()
+        self.x = int(fields[7].strip())
+        self.y = int(fields[8].strip())
+        self.z = int(fields[9].strip())
+        self.unit_price = fields[10].strip()
+        self.bulk_price = fields[11].strip()
+        self.new = fields[12].strip()
+        self.used = fields[13].strip()
         return
 
     # Load material object from JSON

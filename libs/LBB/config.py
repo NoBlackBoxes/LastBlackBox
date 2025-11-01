@@ -15,7 +15,6 @@ username = os.getlogin()
 repo_root = f"/home/{username}/NoBlackBoxes/LastBlackBox"
 boxes_root = repo_root + "/boxes"
 course_root = repo_root + "/course"
-site_root = repo_root + "/site"
 
 # Store course version names
 course_names = ["The Last Black Box", "Bootcamp", "Braitenberg", "Build a Brain", "AI-Workshops"]

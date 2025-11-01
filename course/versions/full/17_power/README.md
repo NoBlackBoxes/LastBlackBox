@@ -1,0 +1,57 @@
+# The Last Black Box : Power
+In this box, you will learn about power...
+
+## Power
+Running more capable software requires a faster computer, which requires more electrical power. We will now explore how power supplies work and then install one on your NB3.
+
+<details><summary><i>Materials</i></summary><p>
+
+Name|Description| # |Package|Data|Link|
+:-------|:----------|:-----:|:-:|:--:|:--:|
+NB3 Power Board|Regulated DC-DC power supply (5 Volts - 4 Amps)|1|Circuit Boards|[-D-](/boxes/power/NB3_power)|[-L-](VK)
+Power Cable|Custom 4 pin NB3 power connector cable|1|Circuit Boards|[-D-](/boxes/power/)|[-L-](VK)
+M2.5 standoff (7/PS)|7 mm long plug-to-socket M2.5 standoff|4|Mounting Hardware|[-D-](/boxes/power/)|[-L-](https://uk.farnell.com/wurth-elektronik/971070151/standoff-hex-male-female-7mm-m2/dp/2884371)
+M2.5 bolt (6)|6 mm long M2.5 bolt|4|Mounting Hardware|[-D-](/boxes/robotics/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2)
+M2.5 nut|regular M2.5 nut|4|Mounting Hardware|[-D-](/boxes/power/-)|[-L-](https://www.accu.co.uk/hexagon-nuts/456430-HPN-M2-5-C8-Z)
+12V DC Power Supply|12 V AC-DC transformer (UK/EU/USA plugs)|1|Large (100)|[-D-](/boxes/power/)|[-L-](https://www.amazon.co.uk/gp/product/B09QG4R1R4)
+
+</p></details><hr>
+
+#### Watch this video: [DC-DC Converters](https://vimeo.com/1035304311)
+<p align="center">
+<a href="https://vimeo.com/1035304311" title="Control+Click to watch in new tab"><img src="../../../../boxes/power/_resources/lessons/thumbnails/DC-DC-Converters.gif" alt="DC-DC Converters" width="480"/></a>
+</p>
+
+> How does efficient DC to DC conversion work? Buck and Boost.
+
+
+# Project
+### NB3 : Power Supply
+> Let's install a DC-DC power supply on our NB3.
+
+<details><summary><weak>Guide</weak></summary>
+:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1035306761" target="_blank" rel="noopener noreferrer">here</a>.
+</details><hr>
+
+
+**TASK**: Add a (regulated) 5 volt power supply to your robot, which you can use while debugging to save your AA batteries and to provide enough power for the Raspberry Pi computer.
+- - *NOTE*: Your NB3_power board cable *might* have inverted colors (black to +5V, red to 0V) relative to that shown in the assembly video. This doesn't matter, as the plugs will only work in one orientation and the correct voltage is conveyed to the correct position on the body.
+<details><summary><strong>Target</strong></summary>
+    Your NB3 should now look like this: [NB3 power wiring](/boxes/power/_resources/images/NB3_power_wiring.png)
+</details><hr>
+
+
+### NB3 : Battery Pack
+> Let's install a rechargeable NiMH battery pack on our NB3.
+
+<details><summary><weak>Guide</weak></summary>
+:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1042781111" target="_blank" rel="noopener noreferrer">here</a>.
+</details><hr>
+
+
+**TASK**: Add a NiMH rechargeable 9.6 volt battery pack to your NB3.
+<details><summary><strong>Target</strong></summary>
+    You should now be able to power and control your NB3 autonomously (without any cables).
+</details><hr>
+
+
