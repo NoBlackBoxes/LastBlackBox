@@ -6,11 +6,13 @@ LBB : Engine : Session Class
 """
 
 # Imports
+import os
 import json
 import LBB.config as Config
 import LBB.utilities as Utilities
 import LBB.Engine.box as Box
 import LBB.Engine.project as Project
+import LBB.Engine.material as Material
 
 # Session Class
 class Session:
@@ -113,6 +115,16 @@ class Session:
             project = Project.Project(project_box, text=project_text)
             project.index = project_count
             self.projects.append(project)
+            # Does project require additional materials?
+            project_materials_path = f"{project_path[:-3]}.csv"
+            if os.path.exists(project_materials_path):
+                print(project_materials_path)
+                project_materials_text = Utilities.read_clean_text(project_materials_path)
+                for material_text in project_materials_text:
+                    if material_text.startswith("name"):
+                        continue
+                    material = Material.Material(text=material_text)
+                    project_box.materials.append(material)
             project_count += 1
             line_count += 1
         return

@@ -6,6 +6,7 @@ LBB : Engine : Box Class
 """
 
 # Imports
+import os
 import json
 import LBB.utilities as Utilities
 import LBB.config as Config
@@ -98,6 +99,15 @@ class Box:
             lesson = Lesson.Lesson(self, text=lesson_text)
             lesson.index = lesson_count
             self.lessons.append(lesson)
+            # Does lesson require additional materials?
+            lesson_materials_path = f"{lesson_path[:-3]}.csv"
+            if os.path.exists(lesson_materials_path):
+                lesson_materials_text = Utilities.read_clean_text(lesson_materials_path)
+                for material_text in lesson_materials_text:
+                    if material_text.startswith("name"):
+                        continue
+                    material = Material.Material(text=material_text)
+                    self.materials.append(material)
             lesson_count += 1
             line_count += 1
         return

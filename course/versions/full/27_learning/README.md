@@ -8,6 +8,7 @@ Supervised, unsupervised, and reinforcement learning
 
 Name|Description| # |Package|Data|Link|
 :-------|:----------|:-----:|:-:|:--:|:--:|
+Clicker|Loud sound maker (and whistle)|1|Auxiliary|[-D-](/boxes/learning/)|[-L-](https://www.amazon.co.uk/Clicker-Multi-Color-Diyife-Training-Wrist/dp/B076LZ4XGK)
 
 </p></details><hr>
 

@@ -9,6 +9,8 @@ Computers and brains work with electrical signals. In order for either to unders
 Name|Description| # |Package|Data|Link|
 :-------|:----------|:-----:|:-:|:--:|:--:|
 Photoresistor (LDR)|Light-dependent resistor (GL5516 and GL5528)|2|Passive Electronics|[-D-](/boxes/sensors/)|[-L-](https://uk.farnell.com/advanced-photonix/nsl-19m51/light-dependent-resistor-550nm/dp/3168335)
+Thermistor|Temperature sensitive resistor|1|Passive Electronics|[-D-](/boxes/sensors/_resources/datasheets/thermistor.pdf)|[-L-](https://uk.farnell.com/epcos/b57891m0103k000/thermistor-ntc-radial-leaded/dp/2285471)
+Piezo|Piezo element|1|Passive Electronics|[-D-](/boxes/sensors/_resources/datasheets/piezo.pdf)|[-L-](https://uk.farnell.com/multicomp/mcabt-455-rc/audio-element-piezo-2-8khz-35mm/dp/2433035)
 
 </p></details><hr>
 

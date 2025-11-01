@@ -14,6 +14,10 @@ M2.5 standoff (7/PS)|7 mm long plug-to-socket M2.5 standoff|4|Mounting Hardware|
 M2.5 bolt (6)|6 mm long M2.5 bolt|4|Mounting Hardware|[-D-](/boxes/robotics/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2)
 M2.5 nut|regular M2.5 nut|4|Mounting Hardware|[-D-](/boxes/power/-)|[-L-](https://www.accu.co.uk/hexagon-nuts/456430-HPN-M2-5-C8-Z)
 12V DC Power Supply|12 V AC-DC transformer (UK/EU/USA plugs)|1|Large (100)|[-D-](/boxes/power/)|[-L-](https://www.amazon.co.uk/gp/product/B09QG4R1R4)
+Battery|NiMH 9.6V 8-cell 2000 mAh battery|1|Auxiliary|[-D-](/boxes/power/)|[-L-](https://www.amazon.co.uk/dp/B091H9ZFSF)
+Battery Cable|Barrel Jack to Tamiya Plug|1|Cables (001)|[-D-](/boxes/power/)|[-L-](VK)
+Battery Charger|NiMH battery charger (UK plug)|1|Auxiliary|[-D-](/boxes/power/)|[-L-](https://www.amazon.co.uk/dp/B089VRXKWY)
+Velcro Patch|Velcro adhesive|1|Medium (011)|[-D-](/boxes/power/)|[-L-](https://www.amazon.co.uk/50mmx100mm-Adhesive-Strips%EF%BC%8CExtra-Mounting-Organizing/dp/B0CKVNM69R)
 
 </p></details><hr>
 

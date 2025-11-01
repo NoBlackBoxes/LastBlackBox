@@ -14,6 +14,10 @@ LED (Red)|3 mm/2 mA red LED|2|Active Electronics|[-D-](/boxes/transistors/_resou
 LED (Yellow)|3 mm/2 mA yellow LED|2|Active Electronics|[-D-](/boxes/transistors/_resources/datasheets/led_HLMP.pdf)|[-L-](https://uk.farnell.com/broadcom-limited/hlmp-1719/led-3mm-yellow-2-1mcd-585nm/dp/1003208)
 LED (Green)|3 mm/2 mA green LED|2|Active Electronics|[-D-](/boxes/transistors/_resources/datasheets/led_HLMP.pdf)|[-L-](https://uk.farnell.com/broadcom-limited/hlmp-1790/led-3mm-green-2-3mcd-569nm/dp/1003209)
 Resistor (470)|470 &Omega;/0.25 W|4|Passive Electronics|[-D-](/boxes/electrons/_resources/datasheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943)
+Photodiode (Visible)|Visible (broadband) photodiode|2|Active Electronics|[-D-](/boxes/transistors/)|[-L-](https://uk.farnell.com/vishay/tefd4300/photodiode-950nm-3mm/dp/2251271)
+Photodiode (IR)|IR sensitive photodiode|2|Active Electronics|[-D-](/boxes/transistors/)|[-L-](https://uk.farnell.com/osram-opto-semiconductors/sfh203-fa/photodiode-ir-filtered/dp/1212743)
+LED (Blue)|Low power blue light emitting diode|2|Active Electronics|[-D-](/boxes/transistors/)|[-L-](https://uk.farnell.com/broadcom-limited/hlmp-ka45-e0000/led-3mm-blue-85mcd-470nm/dp/1863182)
+LED (IR)|Low power IR light emitting diode|2|Active Electronics|[-D-](/boxes/transistors/)|[-L-](https://uk.farnell.com/vishay/tsal6100/infrared-emitter-940nm-t-1-3-4/dp/1328299)
 
 </p></details><hr>
 

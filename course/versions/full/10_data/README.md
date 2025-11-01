@@ -8,6 +8,7 @@ What is a data...for computers? for brains? How can machines decide what to do b
 
 Name|Description| # |Package|Data|Link|
 :-------|:----------|:-----:|:-:|:--:|:--:|
+Comparator|LM339 (DIP-14)|2|Active Electronics|[-D-](/boxes/data/_resources/datasheets/lm2901.pdf)|[-L-](https://uk.farnell.com/texas-instruments/lm2901n/ic-comparator-quad-2901-dip14/dp/3118410)
 
 </p></details><hr>
 
