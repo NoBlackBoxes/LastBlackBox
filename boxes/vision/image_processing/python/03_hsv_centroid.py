@@ -2,8 +2,8 @@ import os
 import time
 import cv2
 import numpy as np
-#import NB3.Vision.camera as Camera         # NB3 Camera
-import NB3.Vision.webcam as Camera          # Webcam
+import NB3.Vision.camera as Camera         # NB3 Camera
+#import NB3.Vision.webcam as Camera        # Webcam (PC)
 import NB3.Server.server as Server
 
 # Specify site root
@@ -26,7 +26,7 @@ upper_green = np.array([85, 255, 255]) # Upper bound (H, S, V)
 try:
     while True:
         # Capture frame (RGB)
-        rgb = camera.capture(mjpeg=False, lores=True, gray=False)
+        rgb = camera.capture(mjpeg=False, lores=False, gray=False)
 
         # Convert to HSV
         hsv = cv2.cvtColor(rgb, cv2.COLOR_RGB2HSV)

@@ -37,7 +37,6 @@ class Camera:
         self.handle.configure(config)
         self.encoder = MJPEGEncoder(bitrate=self._set_bitrate())
         self.output = Output.Output()
-        self.handle.pre_callback = self._pre_callback
 
     def start(self):
         self.handle.start()

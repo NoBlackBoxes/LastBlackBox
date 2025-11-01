@@ -1,8 +1,8 @@
 import os
 import time
 import cv2
-#import NB3.Vision.camera as Camera         # NB3 Camera
-import NB3.Vision.webcam as Camera          # Webcam
+import NB3.Vision.camera as Camera         # NB3 Camera
+#import NB3.Vision.webcam as Camera          # Webcam (PC)
 import NB3.Server.server as Server
 
 # Specify site root
