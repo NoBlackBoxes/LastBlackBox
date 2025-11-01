@@ -34,7 +34,6 @@ while True:
             print("No data received, waiting...")  # Log when no data is received
             continue  # Keep the connection alive
         data = np.frombuffer(buffer, dtype=np.uint8)
-        print(data)
         line.plot(data)
     except KeyboardInterrupt:
         break
