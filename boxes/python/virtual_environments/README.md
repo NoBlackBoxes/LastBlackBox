@@ -19,12 +19,11 @@ cd ..
 ```
 
 - Activate the virtual environment
-  - *Note*: You will have to do this each time you want to use your custom Python installation. However, you can get VSCode to automatically activate it for you each time you try to run python.
-
 ```bash
 cd /home/${USER}/NoBlackBoxes/LastBlackBox  # Navigate to repository root
 source _tmp/LBB/bin/activate
 ```
+  - *Note*: You will have to do this each time you want to use your custom Python installation. However, you can setup a Linux "alias" to create a simple shortcut command to *Activate* your LBB environment from anywhere in the terminal folder system. See instructions [here](/boxes/linux/shell/README.md).
 
 ## Install useful packages
 

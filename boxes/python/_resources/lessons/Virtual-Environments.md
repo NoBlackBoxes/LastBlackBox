@@ -19,6 +19,16 @@ We will next create a Python **virtual environment** on our NB3 that will isolat
     - Follow the instructions here: [virtual environments](/boxes/python/virtual_environments/README.md)
 > You should now have a virtual environment activated (and installed in the folder "_tmp/LBB").
 
+- **TASK**: Add an "Alias" to make it easy to activate your "virtual environment" from the terminal.
+- *code*
+```bash
+cd ${HOME}/NoBlackBoxes/LastBlackBox/boxes/linux/shell
+cp .bashrc ${HOME}/.
+source ${HOME}/.bashrc
+```
+- Follow the complete explanation here: [Linux Shell](/boxes/linux/shell/README.md)
+> You should now be able to activate the LBB environment by typing "Activate" from anywhere in the terminal.
+
 - **TASK**: Install some useful packages using PIP
     - Install numpy
     - Install matplotlib

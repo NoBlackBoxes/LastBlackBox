@@ -48,6 +48,8 @@ Modern computers combine a huge number of different technologies into a function
 Name|Description| # |Package|Data|Link|
 :-------|:----------|:-----:|:-:|:--:|:--:|
 Computer (RPi4)|Raspberry Pi 4b with 2 GB RAM|1|Medium (011)|[-D-](/boxes/systems/_resources/datasheets/rpi4b.pdf)|[-L-](https://uk.farnell.com/raspberry-pi/rpi4-modbp-2gb/raspberry-pi-4-model-b-2gb/dp/3051886)
+Power Jumper (Red)|Thick gauge (22 AWG) jumper wire (red insulation) 1Px2 to 2S|1|Cables (001)|[-D-](/boxes/systems/)|[-L-](VK)
+Power Jumper (Black)|Thick gauge (22 AWG) jumper wire (black insulation) 1P to 1S|2|Cables (001)|[-D-](/boxes/systems/)|[-L-](VK)
 Heatsinks|Heatsinks for RPi 4b chips|1|Large (100)|[-D-](/boxes/systems/_resources/datasheets/rpi4b_heatsinks.jpg)|[-L-](https://www.amazon.co.uk/gp/product/B07VRNT3HX)
 SD Card|16 GB micro SD card|1|Large (100)|[-D-](/boxes/systems/_resources/datasheets/SanDisk-SDSQUAR-016G-GN6MA-datasheet.pdf)|[-L-](https://uk.farnell.com/integral/inmsdh16g-100v10/16gb-microsdhc-v10-uhs-i-u1/dp/3498606)
 M2.5 bolt (6)|6 mm long M2.5 bolt|8|Mounting Hardware|[-D-](/boxes/robotics/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2)
@@ -124,6 +126,7 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 
 **TASK**: Connect to your NB3 via WiFi
 - - Follow these instruction [Connecting to RPi](/boxes/systems/connecting/README.md)
+- - We currently recommend setting up a UART connection to your RPi for debugging when things go wrong. It is a few extra steps, but it can save you days! [Connecting to RPi via UART](/boxes/systems/connecting/uart/README.md)
 <details><summary><strong>Target</strong></summary>
     Connected!
 </details><hr>
@@ -169,7 +172,7 @@ Name|Description| # |Package|Data|Link|
 > Git is a program that keeps track of changes to your files. It is very useful when developing code. This entire course is stored as a git "repository" on GitHub.
 
 
-**TASK**: "Clone" (copy) all of the code in the LastBlackBox GitHub repository directly to your NB3's midbrain. It will help with later exercises if we all put this example code at the same location on the Raspberry Pi (the "home" directory).
+**TASK**: "Clone" (copy) all of the code in the LastBlackBox GitHub repository directly to your NB3's midbrain. It will help with later exercises if we all put this example code at the **same location** on the Raspberry Pi (the "home" directory).
 ```bash
 cd ~                # Navigate to "home" directory
 mkdir NoBlackBoxes  # Create NoBlackBoxes directory
@@ -231,6 +234,19 @@ Name|Description| # |Package|Data|Link|
 - - Follow the instructions here: [virtual environments](/boxes/python/virtual_environments/README.md)
 <details><summary><strong>Target</strong></summary>
     You should now have a virtual environment activated (and installed in the folder "_tmp/LBB").
+</details><hr>
+
+
+**TASK**: Add an "Alias" to make it easy to activate your "virtual environment" from the terminal.
+```bash
+cd ${HOME}/NoBlackBoxes/LastBlackBox/boxes/linux/shell
+cp .bashrc ${HOME}/.
+source ${HOME}/.bashrc
+```
+
+- Follow the complete explanation here: [Linux Shell](/boxes/linux/shell/README.md)
+<details><summary><strong>Target</strong></summary>
+    You should now be able to activate the LBB environment by typing "Activate" from anywhere in the terminal.
 </details><hr>
 
 

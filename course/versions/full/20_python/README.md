@@ -43,6 +43,19 @@ Name|Description| # |Package|Data|Link|
 </details><hr>
 
 
+**TASK**: Add an "Alias" to make it easy to activate your "virtual environment" from the terminal.
+```bash
+cd ${HOME}/NoBlackBoxes/LastBlackBox/boxes/linux/shell
+cp .bashrc ${HOME}/.
+source ${HOME}/.bashrc
+```
+
+- Follow the complete explanation here: [Linux Shell](/boxes/linux/shell/README.md)
+<details><summary><strong>Target</strong></summary>
+    You should now be able to activate the LBB environment by typing "Activate" from anywhere in the terminal.
+</details><hr>
+
+
 **TASK**: Install some useful packages using PIP
 - - Install numpy
 - - Install matplotlib

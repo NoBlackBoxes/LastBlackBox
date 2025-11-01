@@ -9,4 +9,5 @@ When you have installed your NB3's operating system, then you can power it on an
 
 - **TASK**: Connect to your NB3 via WiFi
     - Follow these instruction [Connecting to RPi](/boxes/systems/connecting/README.md)
+    - We currently recommend setting up a UART connection to your RPi for debugging when things go wrong. It is a few extra steps, but it can save you days! [Connecting to RPi via UART](/boxes/systems/connecting/uart/README.md)
 > Connected!

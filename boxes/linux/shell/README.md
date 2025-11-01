@@ -6,7 +6,7 @@ Typing long commands can be tedious and error prone. There are many built-in sho
 Linux shells allow adding custom *variables* and creating short *aliases* that allow you to run your most common long complex commands with just a few keystrokes.
 
 ## Creating a custom Shell
-Custom variables and commands can be placed in a file called **.bashrc**. The "rc" stands for "run commands" and simply lists the commands the shell will run every time you open a new terminal window.
+Custom variables and commands can be placed in a file called **.bashrc**. The "rc" stands for "run commands" and simply lists the commands the shell will run for you every time you open a new terminal window.
 
 ```bash
 # Default Commands
@@ -20,6 +20,8 @@ PS1='[\u@\h \W]\$ '
 # LBB Environment Variables
 # -------------------------
 export LBB="${HOME}/NoBlackBoxes/LastBlackBox"
+# This creates a variable named LBB that you can use to access the root directory of the repo
+# from anywhere via the command line: e.g. "cd $LBB"
 
 # LBB Aliases
 # -----------

@@ -41,7 +41,7 @@ Name|Description| # |Package|Data|Link|
 > Git is a program that keeps track of changes to your files. It is very useful when developing code. This entire course is stored as a git "repository" on GitHub.
 
 
-**TASK**: "Clone" (copy) all of the code in the LastBlackBox GitHub repository directly to your NB3's midbrain. It will help with later exercises if we all put this example code at the same location on the Raspberry Pi (the "home" directory).
+**TASK**: "Clone" (copy) all of the code in the LastBlackBox GitHub repository directly to your NB3's midbrain. It will help with later exercises if we all put this example code at the **same location** on the Raspberry Pi (the "home" directory).
 ```bash
 cd ~                # Navigate to "home" directory
 mkdir NoBlackBoxes  # Create NoBlackBoxes directory

@@ -3,8 +3,10 @@ Computers talking to other computers forms a **network**. Networks talking to ot
 
 ## Networks
 {Physical-Layers}
-{Sockets}
+{Architectures}
 {NB3_Develop-a-Protocol}
+{Sockets}
+{NB3_Remote-Control-NB3-TUI}
 
 ## Websites
 {HTML}
@@ -14,7 +16,7 @@ Computers talking to other computers forms a **network**. Networks talking to ot
 
 ## Servers
 {HTTP}
-{NB3_Host-a-Website}
 
 # Project
-{Networks:NB3_Remote-Control-NB3-TUI}
+{Servers:NB3_Host-a-Website}
+

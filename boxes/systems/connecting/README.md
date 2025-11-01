@@ -23,7 +23,7 @@ If you have correctly entered the WiFi name (SSID) and passkey while creating th
 
 - **Switching WiFi Networks**: If you previously connected your NB3 to a WiFi network, then you can try to connect to a *new* network by creating a "mobile hotspot" with the same WiFi name (SSID) and passkey as the *previous* network. Your NB3 should connect and be assigned an IP address that you can use in the subsequent steps. *Make sure that your Host is also connected to the same hotspot.*
 
-- **UART Console**: Your RPi has the ability to communicate via an old-school serial console. We can use the USB-to-Serial converter on your microcontroller (hindbrain) to talk directly to the RPi via a terminal emulator (minicom, PuTTY, etc.). This trick requires enabling the serial console on your RPi and connecting some jumper cables between your microcontroller and RPi's GPIO pins. You can find details of this *last resot* (but very reliably) connection strategy here: [Connecting via UART](uart/README.md)
+- **UART Console**: Your RPi has the ability to communicate via an old-school serial console. We can use the USB-to-Serial converter on your microcontroller (hindbrain) to talk directly to the RPi via a terminal emulator (minicom, PuTTY, etc.). This trick requires enabling the serial console on your RPi and connecting some jumper cables between your microcontroller and RPi's GPIO pins. You can find details of this *last resort* (but very reliable) connection strategy here: [Connecting via UART](uart/README.md)
 
 ### 2. Connecting your Host to your LAN
 

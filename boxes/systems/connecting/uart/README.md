@@ -46,3 +46,6 @@ screen /dev/ttyUSB0 115200
 2. Check the boot messages as they appear
 3. Login with your username and password
 4. **Connected!**
+
+## Disconnect
+You can leave the long Arduino-to-RPi connection wires in-place, **BUT** remember to disconnect the Arduino's reset pin (RST) from Ground (0V) when you want to use the Arduino for something else (like moving your NB3!).

@@ -10,7 +10,7 @@ It's time to learn how transistors can perform logic, store information, and wor
 ## Computers
 {Architecture}
 {NB3_Hindbrain}
-{Low-Level-Programming}
+{NB3_Programming-Arduino}
 
 # Project
 {Computers:NB3_Building-a-Theremin}
