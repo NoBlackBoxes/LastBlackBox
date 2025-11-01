@@ -51,20 +51,6 @@ box_names = [
     'Intelligence'
 ]
 
-# Store package names
-package_names = [
-    'Active',
-    'Audio',
-    'Cables',
-    'Hardware',
-    'Hindbrain',
-    'Loose',
-    'Magnets',
-    'Mounts',
-    'Passive',
-    'Power'
-]
-
 # Store box names (and order) - Bootcamp
 bootcamp_box_names = [
     'Atoms',

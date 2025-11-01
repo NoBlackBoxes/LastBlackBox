@@ -1,5 +1,5 @@
 # The Last Black Box: Course: Scripts: Videos
-Generate the LBB video list (with links) and thumbnail frames
+Generate the LBB video list (with links), thumbnail frames, and GIF summary clips
 
 ## Normalize Audio
 Use FFMPEG's loudnorm filter (via a Python wrapper: https://github.com/slhck/ffmpeg-normalize/tree/master)
