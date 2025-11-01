@@ -23,15 +23,16 @@ sock.listen() # Start listening for connections
 print(f"Socket Server listening on {ip_address}:{port}")
 
 # The Socket Server Loop(s)
+samples_per_buffer = 16
 try:
     while True:                             # This loop will keep checking for a connection
         conn, addr = sock.accept()          # Accept a connection request (waits until one is received)
         print(f"Connected to by {addr}")
 
         try:
-            while True:                     # Stream until the client disconnects
-                data = ser.read(16)         # Read 16 samples from the serial port (unsigned bytes) at a time
-                conn.sendall(data)          # Send data to socket
+            while True:                             # Stream until the client disconnects
+                data = ser.read(samples_per_buffer) # Read N samples from the serial port (unsigned bytes) at a time
+                conn.sendall(data)                  # Send data to socket
                 # DEBUG: print(f"Sent {len(data)} bytes to the client")
                 # DEBUG: print(f"Bytes Waiting: {ser.in_waiting}")
 
