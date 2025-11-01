@@ -6,7 +6,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Specify host IP address and port to use for the socket.
-ip_address = '192.168.1.80'  # Use the IP of your NB3 (the server)
+ip_address = '192.168.1.70'  # Use the IP of your NB3 (the server)
 port = 1234  # Use the same port as specified in the socket_server
 
 # Create a Socket that establish the server connection
@@ -31,24 +31,30 @@ ax.set_ylabel("value (uint8)")
 ax.set_title("Analog Input 0")
 
 # The Socket Client Loop
+samples_per_buffer = 16
 try:
-    while True: # Receive 16 bytes of data
-        bytes = sock.recv(16)
-        if not bytes:
+    while True:
+        # Receive N bytes of data in each socket buffer
+        buffer = bytearray()
+        while len(buffer) < samples_per_buffer:
+            chunk = sock.recv(samples_per_buffer - len(buffer))
+            if not chunk:
+                raise ConnectionError("socket closed")
+            buffer += chunk
+        if not buffer: # If buffer empty?
             print("No data received, waiting...")  # Log when no data is received
             continue  # Keep the connection alive
-        data = np.frombuffer(bytes, dtype=np.uint8)
-        n = len(data)
+        data = np.frombuffer(buffer, dtype=np.uint8) # Convert to a numpy array
 
         # Write data into circular buffer
-        end = write_pos + n
+        end = write_pos + samples_per_buffer
         if end <= num_samples_to_plot:
             plot_buffer[write_pos:end] = data
         else:
             k = num_samples_to_plot - write_pos
             plot_buffer[write_pos:] = data[:k]
             plot_buffer[:end - num_samples_to_plot] = data[k:]
-        write_pos = (write_pos + n) % num_samples_to_plot
+        write_pos = (write_pos + samples_per_buffer) % num_samples_to_plot
 
         # Plot data
         line.set_ydata(plot_buffer)
