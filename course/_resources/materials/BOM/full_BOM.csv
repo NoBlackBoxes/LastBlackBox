@@ -41,6 +41,8 @@ Cable (MicroUSB-20cm),Cable_MicroUSB_20cm,Short micro-USB to Type-A cable (20 cm
 Cable (MiniUSB-1m),Cable_MiniUSB_1m,Mini-USB to Type-A cable (1 m),1,Cables (001),/boxes/computers/,https://www.amazon.co.uk/gp/product/B07FWF2KBF,100,50,15,3.24,1.94,0,0
 Cable (MiniUSB-20cm),Cable_MiniUSB_20cm,Short mini-USB to Type-A cable (20 cm),1,Cables (001),/boxes/networks/,https://www.amazon.co.uk/gp/product/B07FW69HNT,100,25,10,3.02,1.58,0,0
 Jumper Wires,Jumper_Wires,Assorted 22 AWG jumper wire leads (male/female),1,Cables (001),/boxes/electrons/_resources/datasheets/jumper_wires.pdf,https://www.amazon.co.uk/gp/product/B09KR7Z4PF,200,40,10,4.0,3.75,50,20
+Power Jumper (Black),Power_Jumpers_Black,Thick gauge (22 AWG) jumper wire (black insulation) 1P to 1S,2,Cables (001),/boxes/systems/,VK,50,1,1,1.0,1.0,0,0
+Power Jumper (Red),Power_Jumpers_Red,Thick gauge (22 AWG) jumper wire (red insulation) 1Px2 to 2S,1,Cables (001),/boxes/systems/,VK,50,1,1,1.0,1.0,0,0
 Test Lead,Test_Lead,Alligator clip to 0.64 mm pin (20 cm),2,Cables (001),/boxes/electrons/,https://www.amazon.co.uk/gp/product/B096JR15JW,220,20,10,1.5,0.85,132,1
 NB3 Ear,NB3_Ear,I2S mems microphone breakout board,2,Circuit Boards,/boxes/audio/NB3_ear,VK,20,20,20,7.0,5.0,184,0
 NB3 Hindbrain,NB3_Hindbrain,ICE40UP5K dev board with ADC/DAC,1,Circuit Boards,/boxes/fpgas/NB3_hindbrain,VK,60,30,20,50.0,35.0,2,0

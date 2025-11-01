@@ -4,6 +4,7 @@ Modern computing relies on many layers of software to coordinate increasingly po
 ## Power
 {DC-DC-Converters}
 {NB3_Power-Supply}
+{NB3_Battery-Pack}
 
 ## Systems
 {Operating-Systems}

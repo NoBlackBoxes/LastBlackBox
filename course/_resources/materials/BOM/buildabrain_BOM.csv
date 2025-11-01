@@ -15,6 +15,8 @@ MOSFET (5V),MOSFET__5V_,Power MOSFET/N-channel (IRL510),1,Active Electronics,/bo
 Photodiode (IR),Photodiode_IR,IR sensitive photodiode,2,Active Electronics,/boxes/transistors/,https://uk.farnell.com/osram-opto-semiconductors/sfh203-fa/photodiode-ir-filtered/dp/1212743,40,5,3,0.684,0.3552,38,0
 Photodiode (Visible),Photodiode_Visible,Visible (broadband) photodiode,2,Active Electronics,/boxes/transistors/,https://uk.farnell.com/vishay/tefd4300/photodiode-950nm-3mm/dp/2251271,40,5,3,0.6972,0.258,20,0
 Batteries (AA),Batteries_AA,AA 1.5 V alkaline battery,4,Auxiliary,/boxes/electrons/,https://www.amazon.co.uk/Duracell-Optimum-Alkaline-Batteries-MX1500/dp/B093Q5XY66,60,15,15,5.75,3.0,0,0
+Battery,Battery,NiMH 9.6V 8-cell 2000 mAh battery,1,Auxiliary,/boxes/power/,https://www.amazon.co.uk/dp/B091H9ZFSF,100,60,15,16.99,16.99,1,0
+Battery Charger,Battery_Charger,NiMH battery charger (UK plug),1,Auxiliary,/boxes/power/,https://www.amazon.co.uk/dp/B089VRXKWY,90,90,70,15.99,15.99,0,0
 Clicker,Clicker,Loud sound maker (and whistle),1,Auxiliary,/boxes/learning/,https://www.amazon.co.uk/Clicker-Multi-Color-Diyife-Training-Wrist/dp/B076LZ4XGK,70,20,30,2.5,1.5,0,0
 Magnet,Magnet,Neodymium disc (8 mm x 3 mm),4,Auxiliary,/boxes/magnets/,https://uk.farnell.com/duratool/d01766/magnets-rare-earth-8-x-3mm-pk10/dp/1888095,20,20,5,0.5136,0.4416,0,0
 NPU,NPU,Coral EdgeTPU USB Type-C,1,Auxiliary,/boxes/intelligence/_resources/datasheets/Coral-USB-Accelerator-datasheet.pdf,https://coral.ai/products/accelerator/,100,140,30,51.05,51.05,3,0
@@ -22,9 +24,12 @@ Stereo Plug Terminal,Stereo_Plug_Terminal,3.5 mm plug to screw terminal,2,Auxili
 USB Sound Card,USB_Sound_Card,USB to 3.5 mm Audio out/in,1,Auxiliary,/boxes/magnets/,https://www.amazon.co.uk/UGREEN-USB-C-3-5mm-Female-Adapter-dp-B08TR7LWQH/dp/B08TR7LWQH,150,90,15,8.98,8.98,6,7
 NB3 Body,NB3_Body,NB3 robot base PCB,1,Body (000),/boxes/electrons/NB3_body,VK,200,200,11,30.0,20.0,60,5
 Periodic Table,Periodic_Table,Periodic Table Card,1,Body (000),/boxes/atoms/card,VK,40,60,1,1.0,0.1,0,0
+Battery Cable,Battery_Cable,Barrel Jack to Tamiya Plug,1,Cables (001),/boxes/power/,VK,100,15,15,5.0,2.0,14,0
 Cable (MiniUSB-1m),Cable_MiniUSB_1m,Mini-USB to Type-A cable (1 m),1,Cables (001),/boxes/computers/,https://www.amazon.co.uk/gp/product/B07FWF2KBF,100,50,15,3.24,1.94,0,0
 Cable (MiniUSB-20cm),Cable_MiniUSB_20cm,Short mini-USB to Type-A cable (20 cm),1,Cables (001),/boxes/networks/,https://www.amazon.co.uk/gp/product/B07FW69HNT,100,25,10,3.02,1.58,0,0
 Jumper Wires,Jumper_Wires,Assorted 22 AWG jumper wire leads (male/female),1,Cables (001),/boxes/electrons/_resources/datasheets/jumper_wires.pdf,https://www.amazon.co.uk/gp/product/B09KR7Z4PF,200,40,10,4.0,3.75,50,20
+Power Jumper (Black),Power_Jumpers_Black,Thick gauge (22 AWG) jumper wire (black insulation) 1P to 1S,2,Cables (001),/boxes/systems/,VK,50,1,1,1.0,1.0,0,0
+Power Jumper (Red),Power_Jumpers_Red,Thick gauge (22 AWG) jumper wire (red insulation) 1Px2 to 2S,1,Cables (001),/boxes/systems/,VK,50,1,1,1.0,1.0,0,0
 Test Lead,Test_Lead,Alligator clip to 0.64 mm pin (20 cm),2,Cables (001),/boxes/electrons/,https://www.amazon.co.uk/gp/product/B096JR15JW,220,20,10,1.5,0.85,132,1
 NB3 Ear,NB3_Ear,I2S mems microphone breakout board,2,Circuit Boards,/boxes/audio/NB3_ear,VK,20,20,20,7.0,5.0,184,0
 NB3 Mouth,NB3_Mouth,I2S DAC-AMP breakout board,1,Circuit Boards,/boxes/audio/NB3_mouth,VK,20,20,20,7.0,5.0,16,3
@@ -42,6 +47,7 @@ Speaker (Hi-Fi),Speaker_Hi_Fi,3 Watt 4 Ohm with Dupont 2.54 mm socket (High Fide
 Camera (RPi v3),Camera_RPi_v3,RPi color camera with auto-focus (version 3),1,Medium (011),/boxes/vision/_resources/datasheets/rpi_camera_v3.pdf,https://uk.farnell.com/raspberry-pi/sc0872/rpi-camera-mod-3-standard-lens/dp/4132318,120,75,23,23.808,23.808,1,0
 Computer (RPi4),Computer_RPi4,Raspberry Pi 4b with 2 GB RAM,1,Medium (011),/boxes/systems/_resources/datasheets/rpi4b.pdf,https://uk.farnell.com/raspberry-pi/rpi4-modbp-2gb/raspberry-pi-4-model-b-2gb/dp/3051886,95,70,26,42.852,42.852,0,8
 Microcontroller,Microcontroller,Arduino Nano (rev.3),1,Medium (011),/boxes/computers/_resources/datasheets/arduino_nano_rev3.pdf,https://uk.farnell.com/arduino/a000005/arduino-nano-evaluation-board/dp/1848691,82,60,25,18.516,18.516,0,6
+Velcro Patch,Velcro_Patch,Velcro adhesive,1,Medium (011),/boxes/power/,https://www.amazon.co.uk/50mmx100mm-Adhesive-Strips%EF%BC%8CExtra-Mounting-Organizing/dp/B0CKVNM69R,50,75,4,2.0,0.5,25,0
 M2 bolt (8),M2_bolt_8,8 mm long M2 bolt,6,Mounting Hardware,/boxes/audio/,https://www.accu.co.uk/pozi-pan-head-screws/500101-SPP-M2-8-ST-BZP,5,5,8,0.14,0.03,280,0
 M2 nut,M2_nut,regular M2 nut,6,Mounting Hardware,/boxes/audio/,https://www.accu.co.uk/hexagon-nuts/456429-HPN-M2-C8-Z,5,5,3,0.14,0.03,720,0
 M2.5 bolt (6),M2_5_bolt_6,6 mm long M2.5 bolt,26,Mounting Hardware,/boxes/robotics/,https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2,5,5,6,0.15,0.04,2000,0
