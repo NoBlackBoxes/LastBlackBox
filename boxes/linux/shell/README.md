@@ -26,6 +26,10 @@ export LBB="${HOME}/NoBlackBoxes/LastBlackBox"
 # LBB Aliases
 # -----------
 alias Activate="source ${LBB}/_tmp/LBB/bin/activate" # Activate LBB python virtual environment
+
+# Cosmetics
+# ---------
+PS1='\[\e[1;32m\]\u@\[\e[0;33m\]\h\[\e[0m\]:\[\e[1;34m\]\w\[\e[0m\]\$ ' # Fancy colored prompt
 ```
 
 ## Installing a custom Shell profile
