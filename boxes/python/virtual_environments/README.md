@@ -35,6 +35,7 @@ sudo apt install portaudio19-dev # required for 64-bit pyaudio build
 # Python (PIP)
 pip install --upgrade pip     # Upgrade pip
 pip install numpy             # Numerical processing
+pip install scipy             # Scientific algorithms
 pip install matplotlib        # Mathematical plots
 pip install setuptools        # Tools for working with Python packages
 pip install wheel             # Extracting (and compressing) "wheels" (package downloads)
