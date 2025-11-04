@@ -13,20 +13,22 @@ void setup() {
 }
 
 void loop() {
+
   // Analog Stream
   int value = analogRead(A0);             // Measure (0–1023)
   uint8_t scaled = value >> 2;            // Convert to 0–255
   Serial.write(scaled);                   // Send one raw byte
   delayMicroseconds(1000);                // Limit sample rate (~1 ms per sample)
 
-  // Heartbeat?
+  // Heartbeat
   if (counter < count_per_pulse)
   {
-    counter++;
+    counter++;                            // Increment counter
   }
   else
   {
     pulse_state = !pulse_state;           // Toggle pulse state
-    digitalWrite(13, pulse_state);        // Toggle LED          
+    digitalWrite(13, pulse_state);        // Toggle LED
+    counter = 0;                          // Reset counter 
   }
 }
