@@ -73,3 +73,16 @@ nb3-audio-module
 ```
 
 ***After this, power down your NB3 and complete the hardware installation.*** Follow the instructions [here](../README.md).
+
+### ALTERNATE Kernel Header Install
+```bash
+# Navigate to the i2s/driver folder
+cd ~/NoBlackBoxes/LastBlackBox/boxes/audio/i2s/driver
+
+# Alternative: Install rpi-source. This may be required after the Kernel version is recently updated
+sudo apt install git bc bison flex libssl-dev make libncurses5-dev
+sudo wget https://raw.githubusercontent.com/jgartrel/rpi-source/master/rpi-source -O /usr/bin/rpi-source
+sudo chmod +x /usr/bin/rpi-source
+rpi-source --tag-update
+rpi-source --default-config
+```

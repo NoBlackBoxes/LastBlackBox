@@ -40,7 +40,7 @@ os.system('cls' if os.name == 'nt' else 'clear')
 # Wait to save recording
 input("Press <Enter> to start 5 second recording...")
 
-# Live volume processing
+# Live processing
 for i in range(50): # 50 buffers (10 per second)
     latest = microphone.latest(buffer_size)
     if num_channels == 2:
@@ -55,21 +55,32 @@ for i in range(50): # 50 buffers (10 per second)
 # Store recording
 recording = np.copy(microphone.sound)
 
-# Compute volume
-volume = np.abs(recording)
+# Compute FFT
+n = len(recording)
+freqs = np.fft.fftfreq(n, d=1/sample_rate)[:n // 2]
+fft_left = np.fft.fft(recording[:,0])           # FFT left channel
+fft_left = np.abs(fft_left[:n // 2])            # Take the positive frequencies
+fft_right = np.fft.fft(recording[:,1])          # FFT right channel
+fft_right = np.abs(fft_right[:n // 2])          # Take the positive frequencies
+
+# Normalize FFT
+fft_left = fft_left / np.max(fft_left)
+fft_right = fft_right / np.max(fft_right)
 
 # Shutdown microphone
 microphone.stop()
 
-# Plot volume recording
-plt.figure()
-plt.subplot(2,1,1)
-plt.plot(volume[:,0])
-plt.subplot(2,1,2)
-plt.plot(volume[:,1])
+# Plot frequency spectrum
+plt.plot(freqs, fft_left)
+plt.plot(freqs, fft_right)
+plt.title("Frequency Spectrum")
+plt.xlabel("Frequency (Hz)")
+plt.ylabel("Normalized Amplitude")
+plt.xlim(10, 10_000)   # <-- Limit plot to 0–10 kHz
+plt.grid(True)
 
-# Save volume recording
-save_path = f"{project_path}/my_volume_measurement.png"
+# Save frequency spectrum
+save_path = f"{project_path}/my_frequency_measurement.png"
 plt.savefig(f"{save_path}")
 
 #FIN
