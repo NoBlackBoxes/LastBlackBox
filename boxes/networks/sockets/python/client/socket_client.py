@@ -14,17 +14,21 @@ sock.settimeout(60)  # Timeout after 60 seconds of inactivity
 sock.connect((ip_address, port))
 print(f"Connected to server at {ip_address}:{port}")
 
+# Define receive buffer function (guarantee receipt of complete buffers)
+def recv_buffer(buffer_size):
+    buffer = bytearray()
+    while len(buffer) < buffer_size:
+        chunk = sock.recv(buffer_size - len(buffer))
+        if not chunk:
+            raise ConnectionError("socket closed")
+        buffer += chunk
+    return buffer
+
 # The Socket Client Loop
 samples_per_buffer = 16
 try:
     while True:
-        # Receive N bytes of data in each socket buffer
-        buffer = bytearray()
-        while len(buffer) < samples_per_buffer:
-            chunk = sock.recv(samples_per_buffer - len(buffer))
-            if not chunk:
-                raise ConnectionError("socket closed")
-            buffer += chunk
+        buffer = recv_buffer(samples_per_buffer)
         if not buffer: # If buffer empty?
             print("No data received, waiting...")  # Log when no data is received
             continue  # Keep the connection alive
