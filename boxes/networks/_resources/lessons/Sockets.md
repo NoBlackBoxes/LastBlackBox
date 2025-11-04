@@ -5,8 +5,9 @@ Sockets abstract the idea of a connection between computers. A socket communicat
 
 ## Concepts
 - Abstraction
+- Connection
 - Protocol:IP:Port
 - TCP/IP and UDP
-- Python example (need robot)
+- Python example
 
 ## Lesson
