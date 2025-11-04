@@ -74,7 +74,7 @@ class Line:
             self.current_sample = (new_samples + self.current_sample) % self.num_samples # Wrap-around
         self.vertices[1::2] = self.buffer
         self.vertex_list.position[:] = self.vertices
-        self.axes.cursor = (self.current_sample / self.num_samples)
+        self.axes.cursor_position = (self.current_sample / self.num_samples)
 
         # Update plot
         self.axes.process_events()

@@ -20,7 +20,8 @@ class Axes:
         self.window = None
         self.x_axis = None
         self.y_axis = None
-        self.cursor = 0.0
+        self.cursor = None
+        self.cursor_position = 0.0
 
     def open(self):
         self.window = pyglet.window.Window(self.width, self.height, caption=self.title, vsync=True, resizable=True)
@@ -30,13 +31,11 @@ class Axes:
         gl.glLineWidth(1.0)
         self.batch = pyglet.graphics.Batch()
         self._draw_coords()
-        self._draw_cursor()
 
         @self.window.event
         def on_resize(width, height):
             self.width, self.height = width, height
             self._draw_coords()
-            self._draw_cursor()
             return pyglet.event.EVENT_HANDLED
 
         @self.window.event
@@ -52,8 +51,8 @@ class Axes:
     def render(self):
         if self.window:
             self.window.clear()
-            self.batch.draw()
             self._draw_cursor()
+            self.batch.draw()
             self.window.flip()
 
     def close(self):
@@ -64,13 +63,13 @@ class Axes:
     def _draw_coords(self):
         x0 = self.width/2.0
         y0 = self.height/2.0
-        self.x_axis = shapes.Line(0, y0, self.width, y0, thickness=2, color=(64, 64, 64), batch=self.batch)
-        self.y_axis = shapes.Line(x0, 0, x0, self.height, thickness=2, color=(64, 64, 64), batch=self.batch)
+        self.x_axis = shapes.Line(0, y0, self.width, y0, thickness=8, color=(16, 128, 128), batch=self.batch)
+        self.y_axis = shapes.Line(x0, 0, x0, self.height, thickness=8, color=(16, 128, 128), batch=self.batch)
 
     def _draw_cursor(self):
-        x0 = self.cursor * self.width
+        x0 = self.cursor_position * self.width
         y0 = 0.0
         y1 = self.height
-        self.y_axis = shapes.Line(x0, 0, x0, self.height, thickness=4, color=(196, 0, 0), batch=self.batch)
+        self.cursor = shapes.Line(x0, 0, x0, self.height, thickness=10, color=(196, 0, 0), batch=self.batch)
 
 #FIN
