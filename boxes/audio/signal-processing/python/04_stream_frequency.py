@@ -3,7 +3,6 @@ import time
 import socket
 import netifaces
 import numpy as np
-import matplotlib.pyplot as plt
 
 # Locals libs
 import NB3.Sound.microphone as Microphone
@@ -51,9 +50,10 @@ sock.listen() # Start listening for connections
 print(f"Socket Server listening on {ip_address}:{port}")
 
 # The Socket Server Loop(s)
-freqs = np.fft.fftfreq(buffer_size, d=1/sample_rate)[:buffer_size // 2]
+freqs = np.fft.fftfreq(buffer_size, d=1/sample_rate)[:buffer_size // 2] # Get a list of frequencies that will result from FFT (in steps of 10 Hz)
+freqs = freqs[5:500] # Only look at frequencies between 50 Hz and 5 kHz
 samples_per_buffer = len(freqs)
-#print(samples_per_buffer)
+print(f"Samples in each streamed buffer: {samples_per_buffer}")
 try:
     while True:                             # This loop will keep checking for a connection
         conn, addr = sock.accept()          # Accept a connection request (waits until one is received)
@@ -64,7 +64,7 @@ try:
                 latest = microphone.latest(buffer_size)     # Get latest sound input
                 channel = latest[:,0]                       # Only use LEFT channel
                 fft = np.fft.fft(channel)                   # FFT
-                fft = np.abs(fft[:buffer_size // 2])        # Take the positive frequencies
+                fft = np.abs(fft[5:500])                    # Positive frequencies from 50 HZ to 5 kHz
                 fft = fft / np.max(fft)                     # Normalize
                 fft = fft.astype(np.float32)                # Convert to Float32
                 conn.sendall(fft)                           # Send data to socket
