@@ -10,7 +10,7 @@ ip_address = '192.168.1.70'  # Use the IP of your NB3 (the server)
 port = 1234  # Use the same port as specified in the socket_server
 
 # Open line plot
-line = Line.Line(min=-0.1, max=1.1, num_samples=2400)
+line = Line.Line(min=-0.1, max=1.1, num_samples=495, show_cursor=False, show_label=True)
 line.open()
 
 # Create a Socket that establish the server connection
@@ -30,20 +30,32 @@ def recv_buffer(buffer_size):
     return buffer
 
 # The Socket Client Loop
-samples_per_buffer = 2400 * 4   # Samples * 4-bytes per Float32
-while True:
-    try:
-        buffer = recv_buffer(samples_per_buffer)
-        if not buffer: # If buffer empty?
-            print("No data received, waiting...")  # Log when no data is received
-            continue  # Keep the connection alive
-        data = np.frombuffer(buffer, dtype=np.float32)
-        line.plot(data)
-    except KeyboardInterrupt:
-        break
+samples_per_buffer = 495 # Samples
+bytes_per_buffer = samples_per_buffer * 4 # 4-bytes per Float32
+try:
+    while True:
+        try:
+            buffer = recv_buffer(bytes_per_buffer)
+            if not buffer: # If buffer empty?
+                print("No data received, waiting...")  # Log when no data is received
+                continue  # Keep the connection alive
+            data = np.frombuffer(buffer, dtype=np.float32)
 
-# Cleanup
-line.close()
-sock.close()
+            # Find peak frequency (in range 50 Hz to 5 kHz)
+            peak_freq = (np.argmax(data) * 10) + 50
+
+            # Place a label on the line plot at the peak frequency
+            line.axes.label_position = peak_freq / (samples_per_buffer * 10) # Scale to range 0.0 to 1.0 for plot window
+            line.axes.label_text = f"{peak_freq} Hz"
+
+            # Plot the data
+            line.plot(data)
+
+        except KeyboardInterrupt:
+            break
+finally:
+    # Cleanup
+    line.close()
+    sock.close()
 
 #FIN

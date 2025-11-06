@@ -29,7 +29,7 @@ void main(){ fragColor = vec4(1,1,0,0.5);
 
 # Line Class
 class Line:
-    def __init__(self, min, max, num_samples):
+    def __init__(self, min, max, num_samples, show_cursor=True, show_label=False):
         self.axes = None
         self.program = None
         self.group = None
@@ -40,9 +40,11 @@ class Line:
         self.num_samples = int(num_samples)
         self.buffer = np.zeros(self.num_samples, dtype=np.float32)
         self.current_sample = 0
+        self.show_cursor = show_cursor
+        self.show_label = show_label
 
     def open(self):
-        self.axes = Axes.Axes() # Create Axes
+        self.axes = Axes.Axes(show_cursor=self.show_cursor, show_label=self.show_label) # Create Axes
         self.axes.open()
         self.program = ShaderProgram(Shader(vs, "vertex"), Shader(fs, "fragment")) # Load Shaders
         self.group = ShaderGroup(self.program) # Create shader groups
@@ -74,7 +76,8 @@ class Line:
             self.current_sample = (new_samples + self.current_sample) % self.num_samples # Wrap-around
         self.vertices[1::2] = self.buffer
         self.vertex_list.position[:] = self.vertices
-        self.axes.cursor_position = (self.current_sample / self.num_samples)
+        if self.show_cursor:
+            self.axes.cursor_position = (self.current_sample / self.num_samples)
 
         # Update plot
         self.axes.process_events()
