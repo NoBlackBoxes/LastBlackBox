@@ -133,7 +133,6 @@
 - [x] [NB3 : Remote Control NB3 (TUI)](https://vimeo.com/1042784651)
 
 ## Websites
-- [ ] [NB3 : Build-a-Website]()
 - [ ] [CSS]()
 - [ ] [HTML]()
 - [ ] [Javascript]()
