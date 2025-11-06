@@ -46,7 +46,7 @@ except KeyboardInterrupt:
     print("\nShutting down...")
 
 finally:
-        sock.close()
-        ser.close()
+    sock.close()
+    ser.close()
 
 #FIN

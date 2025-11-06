@@ -1,0 +1,120 @@
+/* Reset styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+}
+
+/* Control Panel (HUD-style) */
+.control-panel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none; /* Allows interaction only with buttons */
+}
+
+/* Button container (adjusts to screen size) */
+.button-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 5vw;
+    position: absolute;
+    width: 50vw; /* Relative size for responsiveness */
+    height: 50vw;
+    max-width: 250px;
+    max-height: 250px;
+    pointer-events: none; /* Ensures only buttons capture events */
+}
+
+/* Individual buttons */
+.control-panel button {
+    width: 20vw;
+    height: 20vw;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    font-size: 4vw;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    touch-action: none; /* Prevents mobile long-press context menu */
+    pointer-events: auto; /* Allows button clicks */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    font-weight: bold;
+}
+
+/* Button active effect */
+.control-panel button:active {
+    background-color: rgba(255, 255, 127, 0.4);
+}
+
+/* Button Layout (D-Pad style) */
+#forward { grid-column: 2; grid-row: 1; }
+#backward { grid-column: 2; grid-row: 3; }
+#left { grid-column: 1; grid-row: 2; }
+#right { grid-column: 3; grid-row: 2; }
+
+/* Portrait mode adjustments */
+@media screen and (orientation: portrait) {
+    .button-container {
+        width: 60vw;
+        height: 60vw;
+        max-width: 300px;
+        max-height: 300px;
+    }
+
+    .control-panel button {
+        width: 18vw;
+        height: 18vw;
+        max-width: 70px;
+        max-height: 70px;
+        font-size: 5vw;
+    }
+}
+
+/* Action button (Lower Right Corner) */
+.action-button {
+    position: absolute;
+    bottom: 5vw;
+    right: 5vw;
+    width: 16vw;
+    height: 16vw;
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent */
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    font-size: 4vw;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    touch-action: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    font-weight: bold;
+    pointer-events: auto;
+}
+
+/* Action button press effect */
+.action-button:active {
+    background-color: rgba(255, 255, 127, 0.4);
+}
