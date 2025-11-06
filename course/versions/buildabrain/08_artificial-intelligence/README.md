@@ -60,8 +60,13 @@ M2 nut|regular M2 nut|2|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 
 
 ### Signal Processing
-> Digital signal processing is a set of techniques for processing one-dimensional data (1D).
+> One-dimensional (1D) signals are common in the world. They often arise as time series (a sequence of measurements made a regular "sample rate"). Here we will explore techniques to process one of these 1D signals...**sound**. We will measure sound amplitude (volume), timing of sound arrival at two different microphones (ears), and the frequency content of different sound types.
 
+- Measure volume
+- - Measure inter-ear timing
+- Measure frequency (FFT)
+- Measure spectrogram
+- Distinguish Go vs Stop (?)
 
 ## Vision
 Look at everyone.

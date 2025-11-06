@@ -1,7 +1,7 @@
 # Networks : Sockets
 Sockets abstract the idea of a connection between computers. A socket communicates to another socket using either TCP or UDP packets. It has an address. It can listen for and request connections.
 
-## [Video]()
+## [Video](https://vimeo.com/1134201413)
 
 ## Concepts
 - Abstraction (software) of connection between 2 computers on a network

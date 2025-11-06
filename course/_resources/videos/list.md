@@ -43,6 +43,7 @@
 ## Sensors
 - [x] [NB3 : Building a Light Sensor](https://vimeo.com/1031479533)
 - [x] [Transducers](https://vimeo.com/1031477896)
+- [ ] [NB3 : Sensory Systems]()
 
 ## Motors
 - [x] [DC Motors](https://vimeo.com/1031627739)
@@ -126,8 +127,8 @@
 
 ## Networks
 - [x] [Physical Layers](https://vimeo.com/1127178041)
-- [ ] [Architectures]()
-- [ ] [Sockets]()
+- [x] [Architectures](https://vimeo.com/manage/videos/1127222969)
+- [x] [Sockets](https://vimeo.com/1134201413)
 - [x] [NB3 : Develop a Protocol](https://vimeo.com/1042782602)
 - [x] [NB3 : Remote Control NB3 (TUI)](https://vimeo.com/1042784651)
 
@@ -166,6 +167,7 @@
 - [ ] [Gradient Descent]()
 
 ## Intelligence
+- [ ] [NB3 : Install the Skull]()
 - [ ] [Large Language Models]()
 - [x] [NB3 : Install the Forebrain (NPU)](https://vimeo.com/1043159124)
 
