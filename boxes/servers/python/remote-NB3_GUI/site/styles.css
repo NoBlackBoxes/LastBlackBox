@@ -11,6 +11,16 @@ html, body {
     background: black;
 }
 
+/* Heading */
+.heading {
+    color: yellow;
+    font-weight: bold;
+    font-size: 4vw;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
+
 /* Control Panel (HUD-style) */
 .control-panel {
     position: absolute;

@@ -1,4 +1,4 @@
-# Vision : Drone NB3
-Stream live camera images from the NB3 camera and provide web form input controls for driving the NB£ with a first-person view (FPV).
+# Servers : Python : Remote NB3 (Graphical User Interface)
+Control your NB3 from a graphical user interface (GUI) implemented as an interactive website. You can access this website (served by your NB3) from anywhere on your local network...including your phone.
 
 

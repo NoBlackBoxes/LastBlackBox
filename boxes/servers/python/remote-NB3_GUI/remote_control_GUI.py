@@ -8,7 +8,7 @@ import NB3.Server.server as Server
 username = os.getlogin()
 
 # Specify site root
-site_root = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/servers/remote-NB3_GUI/site"
+site_root = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/servers/python/remote-NB3_GUI/site"
 
 # Define command handler
 def command_handler(command):
@@ -25,6 +25,7 @@ def command_handler(command):
    elif command == "do_action":
       # ADD YOUR COMMAND RESPONSES AFTER HERE ------->
       # - What action should your robot do when the "?" is pressed?
+      print("Action Triggered!")
       # <------- ADD YOUR COMMAND BEFORE RESPONSES HERE        
       pass
    else:
@@ -45,7 +46,6 @@ server.status()
 
 # Run "NB3 Remote Control Website" Server
 try:
-    print(f"    - \"Control + C\" to Quit -")
     while True:
         time.sleep(1.0)
 except KeyboardInterrupt:
