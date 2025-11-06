@@ -27,7 +27,11 @@ Name|Description| # |Package|Data|Link|
 - Make your site look cool, and *consistent* across different pages.
 
 ### Javascript
-> The browser's programming (scripting) language. Has very little to do with Java.
+> Javascript is the internet browser's programming (scripting) language. It has very little to do with Java, but it is the main way to add "interaction" to websites. Everyone should know a little bit of Javascript.
 
+- Add some (Javascript) code to your website to make it more interactive.
+- Here is an example to respond to a "button press" by hiding/revealing the navigation bar in a simple website: [Button Response](/boxes/websites/javascript/alternates/toggle.js)
+- Here is another example to gets the current time and updates a live clock page: [Live Clock](/boxes/websites/javascript/alternates/clock.js)
+- There is way more you can do with Javascript. Have fun exploring and learning!
 
 # Project
