@@ -1,7 +1,7 @@
 # Websites : CSS
-Cascading Style Sheets.
+Webpages often have a consistent "style" across an entire website. It is possible to create and maintain this style by directly including the same style tags (colors, fonts, margins, etc.) in every HTML page, but this is difficult to maintain and tedious to update. Cascading Style Sheets (CSS) allow you to put all of your "styling" into a single file that can be included on the pages that need it, giving you one place to make tweaks to the styling of your entire website.
 
-## [Video]()
+## [Video](https://vimeo.com/1134720724)
 
 ## Concepts
 - Websites often have a particular "look-and-feel"...a *style*: similar fonts, color schemes, etc.

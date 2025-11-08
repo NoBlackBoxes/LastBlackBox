@@ -1,7 +1,7 @@
 # Websites : HTML
-Hyper-text markup language.
+Hyper-text markup language (HTML) is the data format of the world-wide-web. When you "visit a website" you are simply asking for an HTML file. What is an HTML file? It is just a text file with some special "<tags>" that control how the contents of the file should be displayed. The program you use to request these and display these files is called a *web browser*.
 
-## [Video]()
+## [Video](https://vimeo.com/1134724080)
 
 ## Concepts
 - HTML is just...a text file (with special tags, i.e. markup, to control formatting)

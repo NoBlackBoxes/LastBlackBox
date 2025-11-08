@@ -1,7 +1,7 @@
 # Websites : Javascript
-Javascript is the internet browser's programming (scripting) language. It has very little to do with Java, but it is the main way to add "interaction" to websites. Everyone should know a little bit of Javascript.
+Javascript is the web browser's programming (scripting) language. It has very little to do with Java, but it is the main way to add "interaction" to websites. Everyone should know a little bit of Javascript. Also, given that everyone has access to a web browser, it is one of the easiest programming environments to setup and start playing around.
 
-## [Video]()
+## [Video](https://vimeo.com/1134729863)
 
 ## Concepts
 - HTML and CSS can be used to make pretty websites.
