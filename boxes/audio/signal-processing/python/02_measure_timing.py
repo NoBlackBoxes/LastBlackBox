@@ -1,5 +1,5 @@
-# Measure the frequencies contained in sound recorded by the microphone
-#  with a Fast Fourier Transform (FFT)
+# Measure the timing of volume peaks detected on the left vs. right channel
+# - This timing can contain information about where the sound is coming from
 import os
 import time
 import numpy as np
@@ -12,7 +12,7 @@ username = os.getlogin()
 repo_path = f"/home/{username}/NoBlackBoxes/LastBlackBox"
 project_path = f"{repo_path}/boxes/audio/signal-processing/python"
 
-# Specify params
+# Specify microphone params
 input_device = 1
 num_channels = 2
 sample_rate = 48000
@@ -41,46 +41,38 @@ for i in range(50):                             # Process 50 buffers (10 per sec
     print("{0:.2f} {1:.2f}".format(left_volume, right_volume)) # Print volume level to terminal screen
     time.sleep(0.1) # Wait a bit
 
-# Store recording
+# Store full sound recording
 recording = np.copy(microphone.sound)
 
 # Shutdown microphone
 microphone.stop()
 
-# Determine frequency output range of FFT
-n = len(recording)                                  # Number of Samples recorded
-freqs = np.fft.fftfreq(n, d=1/sample_rate)          # Compute the frequency bins based on sample rate (48 kHz) and length of buffer (5 sec)
-max_freq = sample_rate / 2                          # Max frequency is 24 kHz (Nyquist Criteria)
-frequency_range = (freqs >= 50) * (freqs <= 5000)   # Only consider frequencies between 50 Hz and 5 kHz
-freqs = freqs[frequency_range]                      # Keep only that frequency range
+# Compute volume
+volume = np.abs(recording)
 
-# Compute FFT
-fft_left = np.fft.fft(recording[:,0])           # FFT left channel
-fft_left = np.abs(fft_left[frequency_range])    # Keep frequencies from 50 HZ to 5 kHz
-fft_right = np.fft.fft(recording[:,1])          # FFT right channel
-fft_right = np.abs(fft_right[frequency_range])  # Keep frequencies from 50 HZ to 5 kHz
+# Find volume peaks
+left_peak = np.argmax(volume[:,0])      # Get sample with largest value (left channel)
+right_peak = np.argmax(volume[:,1])     # Get sample with largest value (right channel)
+print(left_peak, right_peak)
 
-# Normalize FFT
-fft_left = fft_left / np.max(fft_left)
-fft_right = fft_right / np.max(fft_right)
-
-# Plot frequency spectrum
+# Plot volume peak
+padding = 1000
 plt.figure()
 plt.tight_layout()
 
 plt.subplot(2,1,1)
-plt.plot(freqs, fft_left)
-plt.ylabel("Power (Left)")
+plt.plot(volume[(left_peak-padding):(left_peak+padding),0])
+plt.ylabel("Volume Peak (Left)")
 plt.grid(True)
 
 plt.subplot(2,1,2)
-plt.plot(freqs, fft_right)
-plt.xlabel("Frequency (Hz)")
-plt.ylabel("Power (Right)")
+plt.plot(volume[(right_peak-padding):(right_peak+padding),1])
+plt.xlabel("Sample Number")
+plt.ylabel("Volume Peak (Right)")
 plt.grid(True)
 
-# Save frequency spectrum plot
-save_path = f"{project_path}/my_frequency_measurement.png"
+# Save volume peak timing plot
+save_path = f"{project_path}/my_timing_measurement.png"
 plt.savefig(f"{save_path}")
 
 #FIN

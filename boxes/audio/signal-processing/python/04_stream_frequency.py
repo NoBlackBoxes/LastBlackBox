@@ -1,22 +1,14 @@
+# Stream the frequency spectrum measured for a short sound buffer using a network socket
 import os
 import time
 import socket
 import netifaces
 import numpy as np
-
-# Locals libs
 import NB3.Sound.microphone as Microphone
 import NB3.Sound.utilities as Utilities
 
-# Reimport
-import importlib
-importlib.reload(Microphone)
-importlib.reload(Utilities)
-
-# Get user name
-username = os.getlogin()
-
 # Specify paths
+username = os.getlogin()
 repo_path = f"/home/{username}/NoBlackBoxes/LastBlackBox"
 project_path = f"{repo_path}/boxes/audio/signal-processing/python"
 
@@ -49,11 +41,15 @@ sock.bind((ip_address, port)) # Bind the new socket to the specified IP address 
 sock.listen() # Start listening for connections
 print(f"Socket Server listening on {ip_address}:{port}")
 
+# Determine frequency output range of FFT
+freqs = np.fft.fftfreq(buffer_size, d=1/sample_rate) # Compute the frequency bins based on sample rate (48 kHz) and length of buffer (100 ms)
+max_freq = sample_rate / 2                           # Max frequency is 24 kHz (Nyquist Criteria)
+frequency_range = (freqs >= 50) * (freqs <= 5000)    # Only consider frequencies between 50 Hz and 5 kHz
+freqs = freqs[frequency_range]                       # Keep only that frequency range
+print(f"Samples in each spectrum: {len(freqs)}")     # Report number of samples per spectrum
+
 # The Socket Server Loop(s)
-freqs = np.fft.fftfreq(buffer_size, d=1/sample_rate)[:buffer_size // 2] # Get a list of frequencies that will result from FFT (in steps of 10 Hz)
-freqs = freqs[5:500] # Only look at frequencies between 50 Hz and 5 kHz
 samples_per_buffer = len(freqs)
-print(f"Samples in each streamed buffer: {samples_per_buffer}")
 try:
     while True:                             # This loop will keep checking for a connection
         conn, addr = sock.accept()          # Accept a connection request (waits until one is received)
@@ -62,9 +58,9 @@ try:
         try:
             while True:
                 latest = microphone.latest(buffer_size)     # Get latest sound input
-                channel = latest[:,0]                       # Only use LEFT channel
+                channel = latest[:,0]                       # Only keep the LEFT channel
                 fft = np.fft.fft(channel)                   # FFT
-                fft = np.abs(fft[5:500])                    # Positive frequencies from 50 HZ to 5 kHz
+                fft = np.abs(fft[frequency_range])          # Keep frequencies from 50 HZ to 5 kHz
                 fft = fft / np.max(fft)                     # Normalize
                 fft = fft.astype(np.float32)                # Convert to Float32
                 conn.sendall(fft)                           # Send data to socket
