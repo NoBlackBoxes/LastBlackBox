@@ -30,7 +30,7 @@ def recv_buffer(buffer_size):
     return buffer
 
 # The Socket Client Loop
-samples_per_buffer = 495 # Samples
+samples_per_buffer = 496 # Samples per buffer (FFT spectrum)
 bytes_per_buffer = samples_per_buffer * 4 # 4-bytes per Float32
 try:
     while True:
