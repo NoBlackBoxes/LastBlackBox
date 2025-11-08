@@ -48,11 +48,18 @@ recording = np.copy(microphone.sound)
 microphone.stop()
 
 # Compute volume
-volume = np.abs(recording)
+left_volume = np.abs(recording[:,0])
+right_volume = np.abs(recording[:,1])
 
+# Smooth the volume signal
+window_len = 100
+window = np.ones(window_len) / window_len
+left_smooth = np.convolve(left_volume, window, mode='same')
+right_smooth = np.convolve(right_volume, window, mode='same')
+ 
 # Find volume peaks
-left_peak = np.argmax(volume[:,0])      # Get sample with largest value (left channel)
-right_peak = np.argmax(volume[:,1])     # Get sample with largest value (right channel)
+left_peak = np.argmax(left_smooth)      # Get sample with largest value (left channel - smoothed)
+right_peak = np.argmax(right_smooth)    # Get sample with largest value (right channel - smoothed)
 print(left_peak, right_peak)
 
 # Plot volume peak
@@ -61,12 +68,14 @@ plt.figure()
 plt.tight_layout()
 
 plt.subplot(2,1,1)
-plt.plot(volume[(left_peak-padding):(left_peak+padding),0])
+plt.plot(left_volume[(left_peak-padding):(left_peak+padding)], 'b')
+plt.plot(left_smooth[(left_peak-padding):(left_peak+padding)], 'r')
 plt.ylabel("Volume Peak (Left)")
 plt.grid(True)
 
 plt.subplot(2,1,2)
-plt.plot(volume[(right_peak-padding):(right_peak+padding),1])
+plt.plot(right_volume[(right_peak-padding):(right_peak+padding)], 'b')
+plt.plot(right_smooth[(right_peak-padding):(right_peak+padding)], 'r')
 plt.xlabel("Sample Number")
 plt.ylabel("Volume Peak (Right)")
 plt.grid(True)
