@@ -35,12 +35,14 @@ os.system('cls' if os.name == 'nt' else 'clear')
 input("Press <Enter> to start 5 second recording...")
 
 # Live volume processing
-for i in range(50):                             # Process 50 buffers (10 per second)
-    latest = microphone.latest(buffer_size)     # Get the latest audio buffer
-    left_volume = np.mean(np.abs(latest[:,0]))  # Extract left channel volume (abs value of audio signal)
-    right_volume = np.mean(np.abs(latest[:,1])) # Extract right channel volume (abs value of audio signal)
-    print("{0:.2f} {1:.2f}".format(left_volume, right_volume)) # Print volume level to terminal screen
+Utilities.meter_start()
+for i in range(50):                                     # Process 50 buffers (10 per second)
+    latest = microphone.latest(buffer_size)             # Get the latest audio buffer
+    left_volume = np.mean(np.abs(latest[:,0]))          # Extract left channel volume (abs value of audio signal)
+    right_volume = np.mean(np.abs(latest[:,1]))         # Extract right channel volume (abs value of audio signal)
+    Utilities.meter_update(left_volume, right_volume)   # Update volume meter
     time.sleep(0.1) # Wait a bit
+Utilities.meter_stop()
 
 # Store full sound recording
 recording = np.copy(microphone.sound)
@@ -61,7 +63,6 @@ right_smooth = np.convolve(right_volume, window, mode='same')
 # Find volume peaks
 left_peak = np.argmax(left_smooth)      # Get sample with largest value (left channel - smoothed)
 right_peak = np.argmax(right_smooth)    # Get sample with largest value (right channel - smoothed)
-print(left_peak, right_peak)
 
 # Extract window around peak
 padding = 2400

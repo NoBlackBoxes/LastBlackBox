@@ -34,12 +34,14 @@ os.system('cls' if os.name == 'nt' else 'clear')
 input("Press <Enter> to start 5 second recording...")
 
 # Live volume processing
-for i in range(50):                             # Process 50 buffers (10 per second)
-    latest = microphone.latest(buffer_size)     # Get the latest audio buffer
-    left_volume = np.mean(np.abs(latest[:,0]))  # Extract left channel volume (abs value of audio signal)
-    right_volume = np.mean(np.abs(latest[:,1])) # Extract right channel volume (abs value of audio signal)
-    print("{0:.2f} {1:.2f}".format(left_volume, right_volume)) # Print volume level to terminal screen
+Utilities.meter_start()
+for i in range(50):                                         # Process 50 buffers (10 per second)
+    latest = microphone.latest(buffer_size)                 # Get the latest audio buffer
+    left_volume = np.mean(np.abs(latest[:,0]))              # Extract left channel volume (abs value of audio signal)
+    right_volume = np.mean(np.abs(latest[:,1]))             # Extract right channel volume (abs value of audio signal)
+    Utilities.meter_update(left_volume, right_volume)       # Update volume meter
     time.sleep(0.1) # Wait a bit
+Utilities.meter_stop()
 
 # Store recording
 recording = np.copy(microphone.sound)

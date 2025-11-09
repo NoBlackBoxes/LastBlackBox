@@ -1,3 +1,4 @@
+import sys
 import pyaudio
 import numpy as np
 import scipy.signal as signal
@@ -130,5 +131,29 @@ def compute_mel_spectrogram(sound, window_samples, hop_samples, mel_matrix):
 
     return log_mel_spectrogram.T # freq bins x times
 
+def meter_start():
+    print("\n\n")                   # reserve two lines
+    sys.stdout.write("\x1b[?25l")   # hide cursor
+    sys.stdout.flush()
 
+def meter_update(left, right, width=50, gain=10):
+    left = max(0.0, min(1.0, float(left)))
+    right = max(0.0, min(1.0, float(right)))
+
+    # Draw meter bar
+    def bar(label, level):
+        filled = int(level * width * gain)
+        bar = "█" * filled + " " * (width - filled)
+        return f"{label:>5} |{bar}| {level*100:5.1f}%"
+
+    # Move cursor up 2 lines, redraw
+    sys.stdout.write("\x1b[2A")  # move up two lines
+    sys.stdout.write("\x1b[2K" + bar("Left", left) + "\n")
+    sys.stdout.write("\x1b[2K" + bar("Right", right) + "\n")
+    sys.stdout.flush()
+
+def meter_stop():
+    sys.stdout.write("\x1b[?25h\n")  # show cursor again
+    sys.stdout.flush()
+ 
 #FIN
