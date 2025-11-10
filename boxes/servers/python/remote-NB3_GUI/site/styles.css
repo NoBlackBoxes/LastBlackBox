@@ -9,16 +9,26 @@ html, body {
     justify-content: center;
     align-items: center;
     background: black;
+
+    /* Background image settings */
+    background-image: url("images/NB3_render.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #000;
+    position: relative;
 }
 
-/* Heading */
-.heading {
-    color: yellow;
-    font-weight: bold;
-    font-size: 4vw;
+/* Add a dark overlay */
+body::before {
+    content: "";
     position: absolute;
-    top: 5px;
-    left: 10px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.60);
+    z-index: 0;
 }
 
 /* Control Panel (HUD-style) */
@@ -38,11 +48,7 @@ html, body {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 5vw;
-    position: absolute;
-    width: 50vw; /* Relative size for responsiveness */
-    height: 50vw;
-    max-width: 250px;
-    max-height: 250px;
+    place-items: center;
     pointer-events: none; /* Ensures only buttons capture events */
 }
 
@@ -80,6 +86,12 @@ html, body {
 #left { grid-column: 1; grid-row: 2; }
 #right { grid-column: 3; grid-row: 2; }
 
+/* ✅ Action button now centered inside the grid */
+#action {
+    grid-column: 2;
+    grid-row: 2;
+}
+
 /* Portrait mode adjustments */
 @media screen and (orientation: portrait) {
     .button-container {
@@ -96,35 +108,4 @@ html, body {
         max-height: 70px;
         font-size: 5vw;
     }
-}
-
-/* Action button (Lower Right Corner) */
-.action-button {
-    position: absolute;
-    bottom: 5vw;
-    right: 5vw;
-    width: 16vw;
-    height: 16vw;
-    max-width: 80px;
-    max-height: 80px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent */
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(5px);
-    font-size: 4vw;
-    color: white;
-    text-align: center;
-    cursor: pointer;
-    touch-action: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    user-select: none;
-    font-weight: bold;
-    pointer-events: auto;
-}
-
-/* Action button press effect */
-.action-button:active {
-    background-color: rgba(255, 255, 127, 0.4);
 }
