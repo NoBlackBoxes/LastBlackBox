@@ -1,6 +1,5 @@
-# Simple HTTP Server
-# - This server parses the HTTP request to find the "requested resource", and if availabe, it sends that to the client
-# - ...otherwise it just sends "index.html"
+# Simplest HTTP Server
+# - This server responds to every HTTP request by sending the same (index.html) file
 import socket
 import netifaces
 
@@ -30,22 +29,14 @@ try:
         print(f"Connected to by {addr}")
 
         try:
-            # When a connection arrives, retrieve/decode HTTP request
+            # When a connection arrives, retrieve/decode HTTP request and print the content to the terminal
             request = conn.recv(1024)
             request_text = request.decode('utf-8')
+            print(f"{len(request)} bytes received:\n{request_text}")
 
-            # Parse the HTTP request serve different resources (files) based on the requested content
-            first_request_line = request_text.split('\n')[0]            # The first line contains the request type amd resource name
-            request_type = first_request_line.split(' ')[0]             # Extract request type, GET, PUT, etc.
-            requested_resource = first_request_line.split(' ')[1][1:]   # Extract resource name (removes the leading '/')
-            print(f"Request Type: {request_type}\nRequested Resource: {requested_resource}\n")
-
-            # Respond to request (send the bytes of requested HTML file after a "success" header)
+            # Respond to request (send the bytes of your HTML file after a "success" header)
             header = "HTTP/1.1 200 OK\n"
-            if (requested_resource.endswith("html")):
-                html = load_html(requested_resource)
-            else:
-                html = load_html("index.html")
+            html = load_html("index.html")
             response = bytes(header+html, 'utf-8')
             conn.sendall(response)
 
