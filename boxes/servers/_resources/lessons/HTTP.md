@@ -1,5 +1,5 @@
 # Servers : HTTP
-The common language of the internet is HTTP...the Hyper Text Transfer Protocol, which delivers the HTML files to your browser.
+The fundamental protocol of the internet is HTTP...the Hyper Text Transfer Protocol, which delivers the HTML files (and more) to your browser.
 
 ## [Video]()
 
