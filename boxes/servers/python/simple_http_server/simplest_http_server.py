@@ -1,7 +1,6 @@
 # Simplest HTTP Server
 # - This server responds to every HTTP request by sending the same (index.html) file
 import socket
-import netifaces
 
 # Helper function to load an HTML page into memory
 def load_html(path):

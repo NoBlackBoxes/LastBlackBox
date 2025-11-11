@@ -2,7 +2,6 @@
 # - This server parses the HTTP request to find the "requested resource", and if availabe, it sends that to the client
 # - ...otherwise it just sends "index.html"
 import socket
-import netifaces
 
 # Helper function to load an HTML page into memory
 def load_html(path):
