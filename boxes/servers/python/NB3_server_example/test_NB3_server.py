@@ -2,10 +2,8 @@ import os
 import time
 import NB3.Server.server as Server
 
-# Get user name
-username = os.getlogin()
-
 # Specify site root
+username = os.getlogin()
 site_root = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/servers/python/NB3_server_example/site"
 
 # Serve
@@ -19,3 +17,5 @@ try:
         time.sleep(1)
 except KeyboardInterrupt:
     server.stop()
+
+# FIN
