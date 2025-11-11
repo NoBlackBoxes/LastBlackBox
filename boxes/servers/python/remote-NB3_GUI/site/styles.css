@@ -85,8 +85,6 @@ body::before {
 #backward { grid-column: 2; grid-row: 3; }
 #left { grid-column: 1; grid-row: 2; }
 #right { grid-column: 3; grid-row: 2; }
-
-/* ✅ Action button now centered inside the grid */
 #action {
     grid-column: 2;
     grid-row: 2;
