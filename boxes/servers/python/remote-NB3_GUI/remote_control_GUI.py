@@ -4,10 +4,8 @@ import time
 import serial
 import NB3.Server.server as Server
 
-# Get user name
-username = os.getlogin()
-
 # Specify site root
+username = os.getlogin()
 site_root = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/servers/python/remote-NB3_GUI/site"
 
 # Define command handler
