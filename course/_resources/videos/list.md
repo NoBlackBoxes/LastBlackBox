@@ -138,10 +138,9 @@
 - [x] [CSS](https://vimeo.com/1134720724)
 
 ## Servers
-- [ ] [NB3 : Remote Control NB3 (GUI)]()
-- [ ] [NB3 : Host a Website]()
-- [ ] [Flask]()
-- [ ] [HTTP]()
+- [x] [NB3 : Remote Control NB3 (GUI)](https://vimeo.com/1135870296)
+- [x] [NB3 : Host a Website](https://vimeo.com/1135859914)
+- [x] [HTTP](https://vimeo.com/1135853103)
 
 ## Security
 - [ ] [One Way Functions]()
