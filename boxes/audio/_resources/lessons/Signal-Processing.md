@@ -1,14 +1,14 @@
 # Audio : Signal Processing
-One-dimensional (1D) signals are common in the world. They often arise as time series (a sequence of measurements made a regular "sample rate"). Here we will explore techniques to process one of these 1D signals...**sound**. We will measure sound amplitude (volume), timing of sound arrival at two different microphones (ears), and the frequency content of different sound types. 
+One-dimensional (1D) signals are common in the world. They often arise as time series (a sequence of measurements made at a regular "sample rate"). Here we will explore techniques to process a common 1D signal...**sound**. We will measure a sound's amplitude (volume), frequency content, and visualize the "spectrogram" of different spoken words (e.g. "Go" vs "Stop").
 
 ## [Video]()
 
 ## Concepts
 
 ## Lesson
-
+- Record and plot a sound waveform
 - Measure volume
-    - Measure inter-ear timing
+  - Explore inter-ear (aural) level difference (ILD)
 - Measure frequency (FFT)
 - Measure spectrogram
-- Distinguish Go vs Stop (?)
+  - Visually distinguish Go vs Stop (?)

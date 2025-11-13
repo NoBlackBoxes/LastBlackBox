@@ -136,13 +136,13 @@ def meter_start():
     sys.stdout.write("\x1b[?25l")   # hide cursor
     sys.stdout.flush()
 
-def meter_update(left, right, width=50, gain=10):
-    left = max(0.0, min(1.0, float(left)))
-    right = max(0.0, min(1.0, float(right)))
+def meter_update(left, right, width=50):
+    left = max(0.0, min(1.0, float(left)))      # Clamp range 0 to 1.0
+    right = max(0.0, min(1.0, float(right)))    # Clamp range 0 to 1.0
 
     # Draw meter bar
     def bar(label, level):
-        filled = int(level * width * gain)
+        filled = int(level * width)
         bar = "█" * filled + " " * (width - filled)
         return f"{label:>5} |{bar}| {level*100:5.1f}%"
 
