@@ -23,12 +23,12 @@ M2 nut|regular M2 nut|2|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 
 </p></details><hr>
 
-### Microphones
-> MEMs mics and beyond.
+#### Watch this video: [Microphones, Speakers, and I2S](https://vimeo.com/1136576333)
+<p align="center">
+<a href="https://vimeo.com/1136576333" title="Control+Click to watch in new tab"><img src="../../../../boxes/audio/_resources/lessons/thumbnails/Microphones-Speakers-and-I2S.gif" alt="Microphones, Speakers, and I2S" width="480"/></a>
+</p>
 
-
-### I2S
-> I2S is a fully-digital protocol used by modern CPUs to talk to audio devices over a small number of connections. It requires only a clock, LR select (for selecting which channel is being written/read), data in (for microphone input), and data out (for speaker output).
+> Here we introduce the NB3's audio system: MEMs-based stereo microphones (Ears), a Class D digital amplifier connected to a "Hi-Fi" speaker (Mouth), and a sound communication standard called I2S (Inter-integrated Circuit Sound) that the Raspberry Pi will use to talk to these audio devices.
 
 
 #### Watch this video: [NB3 : Build and Install the Linux I2S Driver](https://vimeo.com/1042781850)
@@ -47,10 +47,6 @@ M2 nut|regular M2 nut|2|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 > Let's add some ears to your NB3.
 
 
-### Speakers
-> Better sounding speakers.
-
-
 #### Watch this video: [NB3 : Install the Mouth](https://vimeo.com/1042947561)
 <p align="center">
 <a href="https://vimeo.com/1042947561" title="Control+Click to watch in new tab"><img src="../../../../boxes/audio/_resources/lessons/thumbnails/NB3_Install-the-Mouth.gif" alt="NB3 : Install the Mouth" width="480"/></a>
@@ -59,14 +55,19 @@ M2 nut|regular M2 nut|2|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 > Let's add a mouth to your NB3.
 
 
-### Signal Processing
-> One-dimensional (1D) signals are common in the world. They often arise as time series (a sequence of measurements made a regular "sample rate"). Here we will explore techniques to process one of these 1D signals...**sound**. We will measure sound amplitude (volume), timing of sound arrival at two different microphones (ears), and the frequency content of different sound types.
+### Signal Generation
+> Let's make some noise!
 
+
+### Signal Processing
+> One-dimensional (1D) signals are common in the world. They often arise as time series (a sequence of measurements made at a regular "sample rate"). Here we will explore techniques to process a common 1D signal...**sound**. We will measure a sound's amplitude (volume), frequency content, and visualize the "spectrogram" of different spoken words (e.g. "Go" vs "Stop").
+
+- Record and plot a sound waveform
 - Measure volume
-- - Measure inter-ear timing
+- - Explore inter-ear (aural) level difference (ILD)
 - Measure frequency (FFT)
 - Measure spectrogram
-- Distinguish Go vs Stop (?)
+- - Visually distinguish Go vs Stop (?)
 
 ## Vision
 Look at everyone.

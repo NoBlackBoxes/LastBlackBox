@@ -55,7 +55,7 @@ class Video:
     def render(self, type):
         image_prefix = "../../../.."
         gif_name = self.name + ".gif"
-        gif_name = gif_name.replace('(', '').replace(')', '').replace('\'', '')
+        gif_name = gif_name.replace('(', '').replace(')', '').replace('\'', '').replace(',', '')
         if gif_name.startswith("NB3"):
             gif_name = "NB3_" + gif_name[6:]
         gif_name = gif_name.replace(" ", "-")

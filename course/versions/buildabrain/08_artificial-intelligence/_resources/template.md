@@ -2,12 +2,11 @@
 What is intelligence? Can we create it in a machine? Can you create it in your **NB3**?
 
 ## Audio
-{Microphones}
-{I2S}
+{Microphones-Speakers-and-I2S}
 {NB3_Build-and-Install-the-Linux-I2S-Driver}
 {NB3_Install-the-Ears}
-{Speakers}
 {NB3_Install-the-Mouth}
+{Signal-Generation}
 {Signal-Processing}
 
 ## Vision

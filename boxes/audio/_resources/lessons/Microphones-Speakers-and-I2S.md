@@ -1,7 +1,7 @@
 # Audio : Microphones, Speakers, and I2S
 Here we introduce the NB3's audio system: MEMs-based stereo microphones (Ears), a Class D digital amplifier connected to a "Hi-Fi" speaker (Mouth), and a sound communication standard called I2S (Inter-integrated Circuit Sound) that the Raspberry Pi will use to talk to these audio devices.
 
-## [Video]()
+## [Video](https://vimeo.com/1136576333)
 
 ## Concepts
 - MEMs mics and beyond.

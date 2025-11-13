@@ -149,10 +149,9 @@
 - [x] [NB3 : Install the Mouth](https://vimeo.com/1042947561)
 - [x] [NB3 : Install the Ears](https://vimeo.com/1042943195)
 - [x] [NB3 : Build and Install the Linux I2S Driver](https://vimeo.com/1042781850)
-- [ ] [Speakers]()
-- [ ] [I2S]()
+- [ ] [Signal Generation]()
+- [x] [Microphones, Speakers, and I2S](https://vimeo.com/1136576333)
 - [ ] [Signal Processing]()
-- [ ] [Microphones]()
 
 ## Vision
 - [ ] [Cameras]()
