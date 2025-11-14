@@ -6,3 +6,5 @@ Let's make some noise!
 ## Concepts
 
 ## Lesson
+- Let's play a pure tone, a sawtooth, a square wave, and some noise.
+  - Plot their spectrums, note the frequency content

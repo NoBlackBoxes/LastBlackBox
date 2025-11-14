@@ -108,6 +108,8 @@ class Speaker:
     def write(self, sound):
         num_samples = np.shape(sound)[0]
         max_samples = num_samples - (num_samples % self.buffer_size_samples)
+        if sound.ndim == 1: # If mono and 1D, make it (N, 1)
+            sound = sound[:, np.newaxis]
         self.sound = np.zeros((max_samples, self.num_channels), dtype=np.float32)
         self.sound = np.copy(sound[:max_samples,:]) * self.volume
         self.current_sample = 0
