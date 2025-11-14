@@ -13,9 +13,9 @@ echo "Python version is $PYTHON_VERSION"
 echo "/home/${USER}/NoBlackBoxes/LastBlackBox/libs" > "/home/${USER}/NoBlackBoxes/LastBlackBox/_tmp/LBB/lib/python${PYTHON_VERSION}/site-packages/local.pth"
 echo "LastBlackBox python libraries (libs) folder added to search path (as local.pth)"
 
-# Copy .bash_aliases to home directory
-echo "Copying .bash_aliases..."
-cp ${LBB}/course/versions/buildabrain/_resources/demo-NB3/.bash_aliases ${HOME}/.
+# Copy custom .bashrc to home directory
+echo "Copying custom .bashrc..."
+cp ${LBB}/course/versions/buildabrain/_resources/demo-NB3/.bashrc ${HOME}/.
 
 # Sourcing .bashrc
 echo "Sourcing .bashrc..."
