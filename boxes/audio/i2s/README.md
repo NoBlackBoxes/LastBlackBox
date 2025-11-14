@@ -1,6 +1,5 @@
-# Audio : i2s
-
-i2s is a digital sound protocol used by many compute platforms.
+# Audio : I2S
+I2S is a digital sound protocol used by many compute platforms.
 
 ## Installation
 
@@ -39,5 +38,4 @@ aplay -D plughw:3 -c2 -r 44100 -f S16_LE -t wav -V stereo -v ~/NoBlackBoxes/Last
 ```
 
 ## Usage
-
-The i2s hardware and software interfaces with Linux's ALSA (advanced linux sound architecture). Therefore, ALSA commands, and any programs that use ALSA, should "just work". We have also included a Python sound library (NB3.Sound) that you can use the record from the microphones and output sound to the speaker. The library (and examples) can be found here: [Python Audio Examples](../python)
+The i2s hardware and software interfaces with Linux's ALSA (advanced linux sound architecture). Therefore, ALSA commands, and any programs that use ALSA, should "just work". We have also included a Python sound library [NB3.Sound](/libs/NB3/Sound/) that you can use the record from the microphones and output sound to the speaker. The library (and examples) can be found here: [Python Audio Examples](/boxes/audio/i2s/python/)

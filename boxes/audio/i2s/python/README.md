@@ -1,5 +1,7 @@
-# Audio : python
+# Audio : I2S : python
+Python scripts to test the newly installed I2S driver and audio hardware.
 
+## Requirements
 ```bash
 pip install --upgrade pip setuptools wheel
 sudo apt install python3-dev build-essential

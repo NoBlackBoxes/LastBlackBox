@@ -34,7 +34,7 @@ Use Python to play a music file.
 
 ```bash
 # Play some music
-python $LBB/boxes/audio/python/output/play_wav.py $LBB/_tmp/sounds/Rose_Mars_APT.wav
+python $LBB/boxes/audio/i2s/python/output/play_wav.py $LBB/_tmp/sounds/Rose_Mars_APT.wav
 # - Press "q" to stop the playback
 ```
 
@@ -65,6 +65,6 @@ Play your downloaded song using Python.
 
 ```bash
 # Play some music
-python $LBB/boxes/audio/python/output/play_wav.py my_song.wav
+python $LBB/boxes/audio/i2s/python/output/play_wav.py my_song.wav
 # - Press "q" to stop the playback
 ```
