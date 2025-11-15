@@ -143,7 +143,7 @@ class Speaker:
             print(f"WAV file has inconsistent number of channels {wav_num_channels} for output device {self.num_channels}.")
         if wav_sample_rate != self.sample_rate:
             print(f"WAV file has inconsistent sample rate {wav_sample_rate} for output device {self.sample_rate}.")
-        if wav_sample_width != 2:
+        if wav_sample_width != self.sample_width:
             print(f"WAV file has inconsistent sample width {wav_sample_width} for output device {2}.")
 
         # Set number of frames
@@ -169,7 +169,7 @@ class Speaker:
         self.current_sample = 0
         self.max_samples = wav_num_samples
 
-        return
+        return self.sound
     
     # Check if for sound output is finished
     def is_playing(self):

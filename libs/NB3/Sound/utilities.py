@@ -118,7 +118,7 @@ def generate_note(duration, fundamental, sample_rate, num_channels=1, num_harmon
         frequency = n * fundamental
         if frequency > nyquist:
             break  # stop if harmonic frequency exceeds Nyquist
-        tone = generate_pure_tone(duration, frequency, sample_rate, num_channels=1)
+        tone = generate_pure_tone(duration, frequency, sample_rate, num_channels=1)[:num_samples]
         note += amplitudes[n - 1] * tone
     max_val = np.max(np.abs(note))
     if max_val > 0:
@@ -208,6 +208,25 @@ def compute_spectrum(sound, sample_rate, min_freq=10, max_freq=10000, normalize=
 
     return freqs, magnitudes
 
+def compute_spectrogram(sound, sample_rate, min_freq=10, max_freq=10000, normalize=True):
+    # Ensure single channel (Mono)
+    if sound.ndim > 1:
+        sound = np.mean(sound, axis=1)
+
+    # Compute spectrogram
+    frequencies, times, Sxx = signal.spectrogram(
+        sound,              # Audio signal (one channel)
+        fs=sample_rate,     # Sample rate (Hz) of audio signal
+        window='hann',      # Window applied to each audio segment before FFT (prevents edge effects)
+        nperseg=1024,       # Number of samples per segment (measure FFT spectrum every on 1024 samples, best if power of 2)
+        noverlap=512,       # Overlapping samples between each audio segment (the next segment overlaps a bit with the previous, improves time resolution)
+        scaling='density',  # Output in power spectral density (PSD), units: V²/Hz
+        mode='magnitude'    # Compute the magnitude (easiest to visualize)
+    )
+    magnitudes_db = 20 * np.log10(Sxx + 1e-12)
+
+    return times, frequencies, magnitudes_db
+
 def find_peaks(x, y, min_prominence=0.1, min_separation=10):
     dx = np.abs(x[1] - x[0])
     min_separation_bins = int(min_separation / dx)
@@ -285,7 +304,10 @@ NOTE_FREQS = {
     "A7": 3520.00, "A#7": 3729.31, "Bb7": 3729.31, "B7": 3951.07,
 
     # Octave 8
-    "C8": 4186.01
+    "C8": 4186.01,
+
+    # Silence
+    "S": 0.0
 }
 
 #FIN

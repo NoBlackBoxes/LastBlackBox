@@ -19,8 +19,12 @@ repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
 box_path = repo_path + '/boxes/audio'
 wav_path = box_path + '/_resources/sounds/Bach_prelude_C_major.wav'
 
+# Get output device
+output_device = Utilities.get_output_device_by_name("HD-Audio Generic: ALC295 Analog")
+#output_device = Utilities.get_output_device_by_name("MAX")
+#output_device = Utilities.get_output_device_by_name("default")
+
 # Specify params
-output_device = 1
 num_channels = 2
 sample_rate = 48000
 buffer_size = int(sample_rate / 10)
@@ -37,7 +41,7 @@ speaker.start()
 os.system('cls' if os.name == 'nt' else 'clear')
 
 # Play WAV file
-speaker.play_wav(wav_path)
+sound = speaker.play_wav(wav_path)
 
 # Wait for finish
 while speaker.is_playing():

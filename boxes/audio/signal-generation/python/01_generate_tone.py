@@ -23,7 +23,6 @@ output_device = Utilities.get_output_device_by_name("HD-Audio Generic: ALC295 An
 num_channels = 2
 sample_rate = 48000
 buffer_size = int(sample_rate / 10)
-max_samples = int(sample_rate * 10)
 
 # Initialize speaker
 speaker = Speaker.Speaker(output_device, num_channels, 'int32', sample_rate, buffer_size)
@@ -44,11 +43,11 @@ input("Press <Enter> to start generation...")
 speaker.write(tone)
 
 # Wait for sound output to finish
-while speaker.is_playing():
-    time.sleep(0.01)
-
-# Shutdown
-speaker.stop()
+try:
+    while speaker.is_playing():
+        time.sleep(0.01)
+finally:
+    speaker.stop()
 
 # ---------------------------------
 # Plot spectrum (using FFT) of tone

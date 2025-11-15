@@ -23,7 +23,6 @@ output_device = Utilities.get_output_device_by_name("HD-Audio Generic: ALC295 An
 num_channels = 2
 sample_rate = 48000
 buffer_size = int(sample_rate / 10)
-max_samples = int(sample_rate * 10)
 
 # Initialize speaker
 speaker = Speaker.Speaker(output_device, num_channels, 'int32', sample_rate, buffer_size)
@@ -32,33 +31,63 @@ speaker.start()
 # Clear error ALSA/JACK messages from terminal
 os.system('cls' if os.name == 'nt' else 'clear')
 
-# Generate song from a list of notes/chords
+# Specify standard note durations
+tempo = 60          # Beats per minute (Bach)
+#tempo = 120         # Beats per minute (Axel)
+beat = 60.0/tempo   # Beat duration (seconds)
+sb = 4.0*beat       # Whole note (semibreve)
+mi = 2.0*beat       # Half note (minim)
+dc = 1.5*beat       # Dotted quarter note (dotted crotchet)
+cr = beat           # Quarter note (crotchet)
+dq = (3.0*beat)/4.0 # Dotted 8th note (dotted quaver)
+qu = beat/2.0       # 8th note (quaver)
+sq = beat/4.0       # 16th note (semi-quaver)
+
+# List song notes and durations
 bach_prelude_c_major_intro = [
-    # Bar 1 (C major)
-    ('C4',0.25), ('E4',0.25), ('G4',0.25), ('C5',0.25),
-    ('E5',0.25), ('G4',0.25), ('C5',0.25), ('E5',0.25),
+    # Bar 1/2 (C major)
+    ('C4',sq), ('E4',sq), ('G4',sq), ('C5',sq),
+    ('E5',sq), ('G4',sq), ('C5',sq), ('E5',sq),
+    ('C4',sq), ('E4',sq), ('G4',sq), ('C5',sq),
+    ('E5',sq), ('G4',sq), ('C5',sq), ('E5',sq),
 
-    # Bar 2 (D minor)
-    ('D4',0.25), ('F4',0.25), ('A4',0.25), ('D5',0.25),
-    ('F5',0.25), ('A4',0.25), ('D5',0.25), ('F5',0.25),
+    # Bar 3/4 (D minor)
+    ('D4',sq), ('F4',sq), ('A4',sq), ('D5',sq),
+    ('F5',sq), ('A4',sq), ('D5',sq), ('F5',sq),
+    ('D4',sq), ('F4',sq), ('A4',sq), ('D5',sq),
+    ('F5',sq), ('A4',sq), ('D5',sq), ('F5',sq),
 
-    # Bar 3 (G major7 flavor)
-    ('G3',0.25), ('B3',0.25), ('D4',0.25), ('G4',0.25),
-    ('B4',0.25), ('D4',0.25), ('G4',0.25), ('B4',0.25),
+    # Bar 5/6 (G major7 flavor)
+    ('G3',sq), ('B3',sq), ('D4',sq), ('G4',sq),
+    ('B4',sq), ('D4',sq), ('G4',sq), ('B4',sq),
+    ('G3',sq), ('B3',sq), ('D4',sq), ('G4',sq),
+    ('B4',sq), ('D4',sq), ('G4',sq), ('B4',sq),
 
-    # Bar 4 (C major)
-    ('C4',0.25), ('E4',0.25), ('G4',0.25), ('C5',0.25),
-    ('E5',0.25), ('G4',0.25), ('C5',0.25), ('E5',0.25),
+    # Bar 7/8 (C major)
+    ('C4',sq), ('E4',sq), ('G4',sq), ('C5',sq),
+    ('E5',sq), ('G4',sq), ('C5',sq), ('E5',sq),
+    ('C4',sq), ('E4',sq), ('G4',sq), ('C5',sq),
+    ('E5',sq), ('G4',sq), ('C5',sq), ('E5',sq),
 ]
-space = np.zeros((buffer_size, num_channels), dtype=np.float32)
+axel_f_intro = [
+    ('D4', cr), ('F4', dq), ('D4', qu), ('D4', sq), ('G4', qu),  ('D4', qu), ('C4', qu),
+    ('D4', cr), ('A4', dq), ('D4', qu), ('D4', sq), ('Bb4', qu), ('A4', qu), ('F4', qu), 
+    ('D4', qu), ('A4', qu), ('D5', qu), ('D4', sq), ('C4', qu),  ('C4', sq), ('A3', qu), 
+    ('E4', qu), ('D4', mi)
+]
+
+# Build song
+song_notes = bach_prelude_c_major_intro
+#song_notes = axel_f_intro
 parts = []
-for name, duration in bach_prelude_c_major_intro:
+for name, duration in song_notes:
     freq = Utilities.NOTE_FREQS[name]
-    #note = Utilities.generate_note(duration, freq, sample_rate, num_channels=num_channels, num_harmonics=5)
-    note = Utilities.generate_pure_tone(duration, freq, sample_rate, num_channels=num_channels)
+    #note = Utilities.generate_pure_tone(duration, freq, sample_rate, num_channels=num_channels)
+    #note = Utilities.generate_square_wave(duration, freq, sample_rate, num_channels=num_channels)
+    note = Utilities.generate_note(duration, freq, sample_rate, num_channels=num_channels, num_harmonics=5)
     parts.append(note)
-    parts.append(space)  # silence between notes
 song = np.vstack(parts)
+print(f"Song Duration: {song.shape[0]/sample_rate} seconds")
 
 # Wait to save recording
 input("Press <Enter> to start generation...")
@@ -70,11 +99,30 @@ speaker.write(song)
 try:
     while speaker.is_playing():
         time.sleep(0.01)
+except KeyboardInterrupt:
+    print("\nShutting down...")
 finally:
     speaker.stop()
 
 # ------------------------
 # Plot spectrogram of song
 # ------------------------
+
+# Compute spectrogram
+times, frequencies, magnitudes_db = Utilities.compute_spectrogram(song, sample_rate)
+
+# Plot
+plt.figure(figsize=(8, 4))
+plt.pcolormesh(times, frequencies, magnitudes_db, shading='gouraud', cmap='plasma')
+plt.ylim(10, 10000) # Limit plot range to 10 Hz → 10 kHz
+plt.ylabel('Frequency [Hz]')
+plt.xlabel('Time [s]')
+plt.title('Spectrogram (10 Hz to 10 kHz)')
+plt.colorbar(label='Magnitude [dB]')
+plt.tight_layout()
+
+# Save frequency spectrum plot
+save_path = f"{project_path}/my_song_spectrogram_measurement.png"
+plt.savefig(f"{save_path}")
 
 #FIN
