@@ -1,4 +1,6 @@
 import time
+import subprocess
+import io
 import numpy as np
 import pyaudio
 import wave
@@ -93,7 +95,6 @@ class Speaker:
         # Open audio output stream (from default device)
         self.stream = self.pya.open(output_device_index=device, format=self.format, channels=num_channels, rate=sample_rate, input=False, output=True, frames_per_buffer=buffer_size_samples, start=False, stream_callback=callback)
 
-
     # Start streaming
     def start(self):
         self.stream.start_stream()
@@ -146,7 +147,7 @@ class Speaker:
         if wav_sample_width != self.sample_width:
             print(f"WAV file has inconsistent sample width {wav_sample_width} for output device {2}.")
 
-        # Set number of frames
+        # Limit number of frames to complete buffers
         wav_num_samples = wav_num_samples - (wav_num_samples % self.buffer_size_samples)
 
         # Read WAV file
@@ -163,14 +164,54 @@ class Speaker:
         else:
             print("(NB3.Sound) Unsupported WAV output sample format")
             exit(-1)
-        self.sound = np.copy(float_data) * self.volume
 
-        # Start playing
-        self.current_sample = 0
-        self.max_samples = wav_num_samples
+        # Write WAV data to speaker
+        self.write(float_data)
 
-        return self.sound
+        return np.copy(self.sound)
     
+    # Generate speech using classic Text-to-Speech (TTS) engine (espeak)
+    def speak(self, text, voice="en-gb", wpm=140, amp=100, gap=0, pitch=50):
+        # Generate speech (send to stdout)
+        cmd = ["espeak-ng", "--stdout", f"-v{voice}", f"-s{wpm}", f"-a{amp}", f"-g{gap}", f"-p{pitch}", text]
+        proc = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        wav_bytes = proc.stdout
+
+        # Parse WAV bytes into header + data from memory
+        with wave.open(io.BytesIO(wav_bytes), "rb") as wav_file:
+            wav_num_channels = wav_file.getnchannels()
+            wav_sample_rate = wav_file.getframerate()
+            wav_sample_width = wav_file.getsampwidth()
+            wav_num_samples =  wav_file.getnframes()
+
+            # Limit number of frames to complete buffers
+            wav_num_samples = wav_num_samples - (wav_num_samples % self.buffer_size_samples)
+
+            # Extract WAV data
+            wav_data = wav_file.readframes(wav_num_samples)
+        
+        # Convert WAV data to float32
+        mono_int16 = np.frombuffer(wav_data, dtype=np.int16)
+        mono = mono_int16.astype(np.float32) * 3.0517578125e-05
+        
+        # Resample data to speaker sample rate
+        ratio = self.sample_rate / wav_sample_rate
+        num_out = int(len(mono) * ratio)
+        t_src = np.linspace(0, len(mono)/wav_sample_rate, len(mono), endpoint=False)
+        t_dst = np.linspace(0, len(mono)/wav_sample_rate, num_out, endpoint=False)
+        mono_data = np.interp(t_dst, t_src, mono).astype(np.float32)
+
+        # Format channels for speaker: mono or stereo, etc.
+        if self.num_channels == 2:
+            data = np.column_stack((mono_data, mono_data))
+        else:
+            data = mono_data
+
+        # Write WAV data to speaker
+        self.write(data)
+
+        return np.copy(self.sound)
+
     # Check if for sound output is finished
     def is_playing(self):
         if self.current_sample < self.max_samples:
