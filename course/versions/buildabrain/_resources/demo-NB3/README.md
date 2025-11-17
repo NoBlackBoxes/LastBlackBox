@@ -45,3 +45,9 @@ sudo dd if=/dev/sda of=~/Downloads/NB3-card.img bs=1M status=progress
 sudo pishrink NB3-card.img NB3-card-shrunk.img
 ```
 Install pishrink befroe running the command
+
+After you have extraceted the image disk of the SD card with the dd command, we are using the "Etcher" programme or equivalent to copy this card ot many other SD cards as you want. 
+
+1. Put the SD card in a reader
+2. Open it on a linux machine
+3. Edit hostname. 
