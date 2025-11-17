@@ -40,3 +40,8 @@ pip install --upgrade pip setuptools wheel pip install numpy==1.26.4 scipy matpl
 sudo dd if=/dev/sda of=~/Downloads/NB3-card.img bs=1M status=progress
 ```
 - Then use "pishrink" to create an auto-decompressing smaller image
+
+```bash
+sudo pishrink NB3-card.img NB3-card-shrunk.img
+```
+Install pishrink befroe running the command
