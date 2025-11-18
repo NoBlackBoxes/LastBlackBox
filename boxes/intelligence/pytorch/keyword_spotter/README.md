@@ -21,7 +21,7 @@ pip install torch --index-url https://download.pytorch.org/whl/cpu
 pip install numpy scipy matplotlib scikit-learn pyaudio torchsummary ptflops
 
 # Add library paths to virtual environment
-LBB="/home/${USER}/NoBlackBoxes/LastBlackBox"
+LBB="$HOME/NoBlackBoxes/LastBlackBox"
 PROJECT="${LBB}/boxes/intelligence/pytorch/keyword_spotter"
 PYTHON_VERSION=$(python -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')
 echo "${LBB}/libs" > "${PROJECT}/_tmp/AI/lib/python${PYTHON_VERSION}/site-packages/local.pth"
@@ -52,7 +52,7 @@ mkdir _tmp
 pip install torch --index-url https://download.pytorch.org/whl/cpu
 
 # Add library paths to virtual environment
-LBB="/home/${USER}/NoBlackBoxes/LastBlackBox"
+LBB="$HOME/NoBlackBoxes/LastBlackBox"
 PROJECT="${LBB}/boxes/intelligence/pytorch/keyword_spotter"
 PYTHON_VERSION=$(python -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')
 echo "${PROJECT}/modules" >> "${LBB}/_tmp/LBB/lib/python${PYTHON_VERSION}/site-packages/local.pth"

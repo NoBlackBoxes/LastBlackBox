@@ -14,7 +14,7 @@ This project will use Python to control how your NB3 responds to detected faces.
 ## Create *your* copy of the example project code
 - Navigate to the example project folder
 ```bash
-cd /home/$USER/NoBlackBoxes/LastBlackBox/boxes/intelligence/NPU/look-NB3
+cd $HOME/NoBlackBoxes/LastBlackBox/boxes/intelligence/NPU/look-NB3
 ```
 - Copy the example project Python code to a "my..." version
 ```bash

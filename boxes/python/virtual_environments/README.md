@@ -11,16 +11,15 @@ Virtual environments are self-contained installations of Python. All of the pack
   - If working on your NB3, then include the "--system-site-packages" flag to use libraries (packages) already installed within your RPi (NB3's) OS.
 
 ```bash
-cd /home/${USER}/NoBlackBoxes/LastBlackBox  # Navigate to repository root
-mkdir _tmp
-cd _tmp
-python -m venv LBB --system-site-packages
-cd ..
+cd $HOME/NoBlackBoxes/LastBlackBox        # Navigate to repository root
+mkdir _tmp                                # Create a temporary folder
+cd _tmp                                   # Change to temporary folder
+python -m venv LBB --system-site-packages # On your NB3
 ```
 
 - Activate the virtual environment
 ```bash
-cd /home/${USER}/NoBlackBoxes/LastBlackBox  # Navigate to repository root
+cd $HOME/NoBlackBoxes/LastBlackBox  # Navigate to repository root
 source _tmp/LBB/bin/activate
 ```
   - *Note*: You will have to do this each time you want to use your custom Python installation. However, you can setup a Linux "alias" to create a simple shortcut command to *Activate* your LBB environment from anywhere in the terminal folder system. See instructions [here](/boxes/linux/shell/README.md).
@@ -54,8 +53,6 @@ PYTHON_VERSION=$(python -c 'import sys; print(".".join(map(str, sys.version_info
 echo "Python version is $PYTHON_VERSION"
 
 # Insert the local libraries path (libs) into (>) a *.pth file contained in your LBB virtual environment
-echo "/home/${USER}/NoBlackBoxes/LastBlackBox/libs" > "/home/${USER}/NoBlackBoxes/LastBlackBox/_tmp/LBB/lib/python${PYTHON_VERSION}/site-packages/local.pth"
+echo "$HOME/NoBlackBoxes/LastBlackBox/libs" > "$HOME/NoBlackBoxes/LastBlackBox/_tmp/LBB/lib/python${PYTHON_VERSION}/site-packages/local.pth"
 echo "LastBlackBox python libraries (libs) folder added to search path (as local.pth)"
 ```
-
----

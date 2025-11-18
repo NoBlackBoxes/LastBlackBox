@@ -14,7 +14,7 @@ This project will use HTML and Python to build a new FPV interface for your NB3.
 ## Create *your* copy of the example project code
 - Navigate to the example project folder
 ```bash
-cd /home/$USER/NoBlackBoxes/LastBlackBox/boxes/vision/drone-NB3
+cd $HOME/NoBlackBoxes/LastBlackBox/boxes/vision/drone-NB3
 ```
 - Copy the example project Python code to a "my..." version
 ```bash

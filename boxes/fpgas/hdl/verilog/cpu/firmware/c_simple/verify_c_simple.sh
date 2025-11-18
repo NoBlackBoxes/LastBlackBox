@@ -2,7 +2,7 @@
 set -eu
 
 # Set Root
-NBB_ROOT="/home/${USER}/NoBlackBoxes"
+NBB_ROOT="$HOME/NoBlackBoxes"
 
 # Set toolchain
 RISCV_TOOLCHAIN=$NBB_ROOT"/tools/rv32i-toolchain/bin"

@@ -14,7 +14,7 @@ This project will use Python to expand the repertoire of commands that your NB3 
 ## Create *your* copy of the example project code
 - Navigate to the example project folder
 ```bash
-cd /home/$USER/NoBlackBoxes/LastBlackBox/boxes/intelligence/NPU/listen-NB3
+cd $HOME/NoBlackBoxes/LastBlackBox/boxes/intelligence/NPU/listen-NB3
 ```
 - Copy the example project Python code to a "my..." version
 ```bash

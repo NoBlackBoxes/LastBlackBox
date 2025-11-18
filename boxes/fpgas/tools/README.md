@@ -1,15 +1,15 @@
-# fpgas : tools
+# FPGAs : tools
 
 Instaling tools to synthesize and upload to an FPGA
 
 ## Create/activate python virtual environment
 ```bash
-export NBB_ROOT=/home/${USER}/NoBlackBoxes/
+export NBB_ROOT=$HOME/NoBlackBoxes/
 cd $NBB_ROOT/tools/environments
 python -m venv nbb-python
 source nbb-python/bin/activate
 
-export NBB_ROOT=/home/${USER}/NoBlackBoxes/
+export NBB_ROOT=$HOME/NoBlackBoxes/
 source $NBB_ROOT/tools/environments/nbb-python/bin/activate
 
 ```

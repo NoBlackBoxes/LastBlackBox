@@ -5,6 +5,6 @@
 
 ```bash
 mkdir build; cd build
-../configure --with-arch=rv32i --prefix=/home/${USER}/NoBlackBoxes/tools/rv32i-toolchain
+../configure --with-arch=rv32i --prefix=$HOME/NoBlackBoxes/tools/rv32i-toolchain
 make -j4
 ```

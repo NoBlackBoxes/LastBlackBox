@@ -182,10 +182,10 @@ LIBEDGETPU_LDFLAGS := \
 - Build
 ```bash
 cd libedgetpu/makefile_build
-TFROOT=/home/${USER}/Repos/tensorflow make -j2 libedgetpu
+TFROOT=$HOME/Repos/tensorflow make -j2 libedgetpu
 ```
 
 - Install
 ```bash
-sudo cp /home/${USER}/Repos/libedgetpu/out/direct/k8/libedgetpu.so.1.0 /usr/lib/aarch64-linux-gnu/libedgetpu.so.1.0
+sudo cp $HOME/Repos/libedgetpu/out/direct/k8/libedgetpu.so.1.0 /usr/lib/aarch64-linux-gnu/libedgetpu.so.1.0
 ```

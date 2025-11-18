@@ -2,7 +2,7 @@
 set -eu
 
 # Set Roots
-NBB_ROOT="/home/${USER}/NoBlackBoxes"
+NBB_ROOT="$HOME/NoBlackBoxes"
 LBB_ROOT=$NBB_ROOT"/LastBlackBox"
 
 # Set CPU and Modules folder

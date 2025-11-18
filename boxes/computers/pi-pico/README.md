@@ -12,10 +12,10 @@ sudo apt install cmake python3 build-essential gcc-arm-none-eabi libnewlib-arm-n
 - Add UDEV rules for user device access
 ```bash
 # Ubuntu/Debian
-sudo cp /home/${USER}/NoBlackBoxes/LastBlackBox/boxes/computers/pi-pico/_resources/udev/99-pico_debian.rules/etc/udev/rules.d/.
+sudo cp $HOME/NoBlackBoxes/LastBlackBox/boxes/computers/pi-pico/_resources/udev/99-pico_debian.rules/etc/udev/rules.d/.
 
 # Arch
-sudo cp /home/${USER}/NoBlackBoxes/LastBlackBox/boxes/computers/pi-pico/_resources/udev/99-pico_arch.rules /etc/udev/rules.d/.
+sudo cp $HOME/NoBlackBoxes/LastBlackBox/boxes/computers/pi-pico/_resources/udev/99-pico_arch.rules /etc/udev/rules.d/.
 
 # Reload UDEV rule
 sudo udevadm control --reload-rules
@@ -70,7 +70,7 @@ cd picotool
 ```bash
 mkdir build
 cd build
-cmake -DPICO_SDK_PATH="/home/${USER}/NoBlackBoxes/LastBlackBox/_tmp/pico/pico-sdk" ..
+cmake -DPICO_SDK_PATH="$HOME/NoBlackBoxes/LastBlackBox/_tmp/pico/pico-sdk" ..
 make
 ```
 - Install picotool for use by system

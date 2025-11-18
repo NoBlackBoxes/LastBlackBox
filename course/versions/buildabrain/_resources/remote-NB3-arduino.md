@@ -109,7 +109,7 @@ If you connect to your NB3's Raspberry Pi via SSH, then you can run commands on 
 
 To run this code, you can navigate to the folder containing the file and run it with Python.
 ```bash
-cd /home/${USER}/NoBlackBoxes/LastBlackBox/boxes/networks/remote-NB3/python/drive
+cd $HOME/NoBlackBoxes/LastBlackBox/boxes/networks/remote-NB3/python/drive
 python drive.py
 ```
 

@@ -10,7 +10,7 @@ PYTHON_VERSION=$(python -c 'import sys; print(".".join(map(str, sys.version_info
 echo "Python version is $PYTHON_VERSION"
 
 # Insert the local libraries path (libs) into (>) a *.pth file contained in your LBB virtual environment
-echo "/home/${USER}/NoBlackBoxes/LastBlackBox/libs" > "/home/${USER}/NoBlackBoxes/LastBlackBox/_tmp/LBB/lib/python${PYTHON_VERSION}/site-packages/local.pth"
+echo "$HOME/NoBlackBoxes/LastBlackBox/libs" > "$HOME/NoBlackBoxes/LastBlackBox/_tmp/LBB/lib/python${PYTHON_VERSION}/site-packages/local.pth"
 echo "LastBlackBox python libraries (libs) folder added to search path (as local.pth)"
 
 # Copy custom .bashrc to home directory

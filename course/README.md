@@ -18,10 +18,11 @@ You will be building a brain for your robot. The robot's physical layout mimics 
 </p>
 
 ## Repository
-The course is based on the documentation and code in this repo (LBB). Many of the course exercises assume that you have "cloned" this repo to your Host computer. In much of the example code, there is an additional assumption that the LBB repo is in a folder called "NoBlackBoxes" in your home/user directory. You can setup everything (on Linux...and your NB3) with the following commands.
+The course is based on the documentation and code in this repo (LBB). You will first work through the material on GitHub.com, but when you manage to connect to your Raspberry Pi via SSH, then you will be asked to clone this repo to your NB3. **It is very important that you clone the LBB repo to a specific folder ("NoBlackBoxes") in your NB3's home directory**.
+> *Why?* Most of the code examples assume that the repo is stored in this location. If you prefer to put it somewhere else, then you must be comfortable modifying the "repo root" path used in the examples.
 
 ```bash
-# ...from your "home" directory
+cd $HOME            # Navigate to your "Home" directory
 mkdir NoBlackBoxes  # Create NoBlackBoxes directory
 cd NoBlackBoxes     # Change to NoBlackBoxes directory
 

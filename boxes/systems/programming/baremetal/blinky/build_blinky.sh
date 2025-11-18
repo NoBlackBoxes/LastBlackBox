@@ -2,7 +2,7 @@
 set -eu
 
 # Set Root
-NBB_ROOT="/home/${USER}/NoBlackBoxes"
+NBB_ROOT="$HOME/NoBlackBoxes"
 LBB_ROOT=$NBB_ROOT"/LastBlackBox"
 
 # Set ARM toolchain
