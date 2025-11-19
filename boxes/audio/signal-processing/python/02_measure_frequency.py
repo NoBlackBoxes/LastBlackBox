@@ -50,36 +50,26 @@ recording = np.copy(microphone.sound)
 # Shutdown microphone
 microphone.stop()
 
-# Determine frequency output range of FFT
-n = len(recording)                                  # Number of Samples recorded
-freqs = np.fft.fftfreq(n, d=1/sample_rate)          # Compute the frequency bins based on sample rate (48 kHz) and length of buffer (5 sec)
-max_freq = sample_rate / 2                          # Max frequency is 24 kHz (Nyquist Criteria)
-frequency_range = (freqs >= 50) * (freqs <= 5000)   # Only consider frequencies between 50 Hz and 5 kHz
-freqs = freqs[frequency_range]                      # Keep only that frequency range
+# Convert single channel (Mono)
+if recording.ndim > 1:
+    sound = np.mean(recording, axis=1)
 
-# Compute FFT
-fft_left = np.fft.fft(recording[:,0])           # FFT left channel
-fft_left = np.abs(fft_left[frequency_range])    # Keep frequencies from 50 HZ to 5 kHz
-fft_right = np.fft.fft(recording[:,1])          # FFT right channel
-fft_right = np.abs(fft_right[frequency_range])  # Keep frequencies from 50 HZ to 5 kHz
+# Compute frequency spectrum
+freqs, mags = Utilities.compute_spectrum(sound, sample_rate, min_freq=10, max_freq=10000)
 
-# Normalize FFT
-fft_left = fft_left / np.max(fft_left)
-fft_right = fft_right / np.max(fft_right)
+# Find peaks
+peaks_x, peaks_y = Utilities.find_peaks(freqs, mags, min_prominence=0.2)
 
 # Plot frequency spectrum
 plt.figure()
 plt.tight_layout()
-
-plt.subplot(2,1,1)
-plt.plot(freqs, fft_left)
-plt.ylabel("Power (Left)")
-plt.grid(True)
-
-plt.subplot(2,1,2)
-plt.plot(freqs, fft_right)
+plt.plot(freqs, mags)
+for px, py in zip(peaks_x, peaks_y):
+    plt.plot(px, py, 'ro')
+    plt.text(px + 150.0, py, f"{px:.1f} Hz", ha='left', va='center', fontsize=6)
+plt.title(f"Frequency Spectrum")
 plt.xlabel("Frequency (Hz)")
-plt.ylabel("Power (Right)")
+plt.ylabel("Magnitude")
 plt.grid(True)
 
 # Save frequency spectrum plot

@@ -51,32 +51,24 @@ recording = np.copy(microphone.sound)
 # Shutdown microphone
 microphone.stop()
 
-# Compute spectrogram using SciPy signal library
-mono = np.mean(recording, axis=1)                   # Convert stereo to mono (average left and right channel)
-frequencies, times, Sxx = sp.signal.spectrogram(
-    mono,               # Audio signal (one channel)
-    fs=sample_rate,     # Sample rate (Hz) of audio signal
-    window='hann',      # Window applied to each audio segment before FFT (prevents edge effects)
-    nperseg=1024,       # Number of samples per segment (measure FFT spectrum every on 1024 samples, best if power of 2)
-    noverlap=512,       # Overlapping samples between each audio segment (the next segment overlaps a bit with the previous, improves time resolution)
-    scaling='density',  # Output in power spectral density (PSD), units: V²/Hz
-    mode='magnitude'    # Compute the magnitude (easiest to visualize)
-)
+# Convert single channel (Mono)
+if recording.ndim > 1:
+    sound = np.mean(recording, axis=1)
 
-# Convert to dB
-Sxx_db = 20 * np.log10(Sxx + 1e-12)
+# Compute spectrogram
+times, frequencies, magnitudes_db = Utilities.compute_spectrogram(sound, sample_rate)
 
 # Plot
 plt.figure(figsize=(8, 4))
-plt.pcolormesh(times, frequencies, Sxx_db, shading='gouraud', cmap='plasma')
-plt.ylim(20, 20000) # Limit plot range to 20 Hz → 20 kHz (typical human)
+plt.pcolormesh(times, frequencies, magnitudes_db, shading='gouraud', cmap='plasma')
+plt.ylim(10, 10000) # Limit plot range to 10 Hz → 10 kHz
 plt.ylabel('Frequency [Hz]')
 plt.xlabel('Time [s]')
-plt.title('Spectrogram (20 Hz to 20 kHz)')
+plt.title('Spectrogram (10 Hz to 10 kHz)')
 plt.colorbar(label='Magnitude [dB]')
 plt.tight_layout()
 
-# Save frequency spectrum plot
+# Save spectrogram
 save_path = f"{project_path}/my_spectrogram_measurement.png"
 plt.savefig(f"{save_path}")
 

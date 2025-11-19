@@ -63,7 +63,7 @@ plt.tight_layout()
 plt.plot(freqs, mags)
 for px, py in zip(peaks_x, peaks_y):
     plt.plot(px, py, 'ro')
-    plt.text(px + 150.0, py, f"{px:.1f} Hz", ha='left', va='center', fontsize=8)
+    plt.text(px + 150.0, py, f"{px:.1f} Hz", ha='left', va='center', fontsize=6)
 plt.title("Square Wave Spectrum")
 plt.xlabel("Frequency (Hz)")
 plt.ylabel("Magnitude")

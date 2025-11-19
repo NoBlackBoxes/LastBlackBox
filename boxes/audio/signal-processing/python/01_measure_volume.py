@@ -50,22 +50,26 @@ recording = np.copy(microphone.sound)
 # Shutdown microphone
 microphone.stop()
 
+# Convert single channel (Mono)
+if recording.ndim > 1:
+    sound = np.mean(recording, axis=1)
+
 # Compute volume
-volume = np.abs(recording)
+volume = np.abs(sound)
 
 # Plot volume recording
 plt.figure()
 plt.tight_layout()
 
 plt.subplot(2,1,1)
-plt.plot(volume[:,0])
-plt.ylabel("Volume (Left)")
+plt.plot(sound)
+plt.ylabel("Sound Waveform")
 plt.grid(True)
 
 plt.subplot(2,1,2)
-plt.plot(volume[:,1])
+plt.plot(volume)
 plt.xlabel("Sample Number")
-plt.ylabel("Volume (Right)")
+plt.ylabel("Volume")
 plt.grid(True)
 
 # Save volume plot

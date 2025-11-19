@@ -63,7 +63,7 @@ plt.title('Spectrogram (10 Hz to 10 kHz)')
 plt.colorbar(label='Magnitude [dB]')
 plt.tight_layout()
 
-# Save frequency spectrum plot
+# Save spectrogram
 save_path = f"{project_path}/my_wav_spectrogram_measurement.png"
 plt.savefig(f"{save_path}")
 
