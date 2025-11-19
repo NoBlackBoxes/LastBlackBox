@@ -1,13 +1,12 @@
-import os
-import time
+import os, pathlib, time
 import cv2
 import NB3.Vision.camera as Camera         # NB3 Camera
 #import NB3.Vision.webcam as Camera        # Webcam (PC)
 import NB3.Server.server as Server
 
 # Specify site root
-username = os.getlogin()
-root = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/vision/image_processing/python/sites/slider"
+repo_path = f"{pathlib.Path.home()}/NoBlackBoxes/LastBlackBox"
+site_root = f"{repo_path}/boxes/vision/image_processing/python/sites/slider"
 
 # Setup Camera
 camera = Camera.Camera(width=800, height=600, lores_width=640, lores_height=480)

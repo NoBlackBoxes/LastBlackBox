@@ -6,13 +6,10 @@ LBB : Config
 """
 
 # Imports
-import os
-
-# Get username
-username = os.getlogin()
+import pathlib
 
 # Load LBB configuration variables
-repo_root = f"/home/{username}/NoBlackBoxes/LastBlackBox"
+repo_root = f"{pathlib.Path.home()}/NoBlackBoxes/LastBlackBox"
 boxes_root = repo_root + "/boxes"
 course_root = repo_root + "/course"
 

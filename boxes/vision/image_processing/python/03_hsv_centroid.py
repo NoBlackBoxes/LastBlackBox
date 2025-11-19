@@ -1,14 +1,13 @@
-import os
-import time
+import os, pathlib, time
 import cv2
 import numpy as np
-import NB3.Vision.camera as Camera         # NB3 Camera
-#import NB3.Vision.webcam as Camera        # Webcam (PC)
+#import NB3.Vision.camera as Camera         # NB3 Camera
+import NB3.Vision.webcam as Camera        # Webcam (PC)
 import NB3.Server.server as Server
 
 # Specify site root
-username = os.getlogin()
-root = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/vision/image_processing/python/sites/split"
+repo_path = f"{pathlib.Path.home()}/NoBlackBoxes/LastBlackBox"
+site_root = f"{repo_path}/boxes/vision/image_processing/python/sites/split"
 
 # Setup Camera
 camera = Camera.Camera(width=800, height=600, lores_width=640, lores_height=480)
@@ -17,7 +16,7 @@ camera.start()
 
 # Start Server (for streaming)
 interface = Server.get_wifi_interface()
-server = Server.Server(root=root, interface=interface, autostart=True)
+server = Server.Server(root=site_root, interface=interface, autostart=True)
 
 # Define HSV range for green color
 lower_green = np.array([35, 90, 70])   # Lower bound (H, S, V)

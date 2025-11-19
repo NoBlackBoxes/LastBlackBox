@@ -1,12 +1,11 @@
 # Imports
-import os
-import time
+import os, pathlib, time
 import serial
 import NB3.Server.server as Server
 
 # Specify site root
-username = os.getlogin()
-site_root = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/servers/python/remote-NB3_GUI/site"
+repo_path = f"{pathlib.Path.home()}/NoBlackBoxes/LastBlackBox"
+site_root = f"{repo_path}/boxes/servers/python/remote-NB3_GUI/site"
 
 # Define command handler
 def command_handler(command):

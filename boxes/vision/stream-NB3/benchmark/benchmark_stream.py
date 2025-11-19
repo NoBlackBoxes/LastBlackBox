@@ -1,17 +1,12 @@
-# Impots
-import os
-import cv2
-import time
+import os, pathlib, time
 import psutil
-import numpy as np
 import NB3.Vision.camera as Camera
+#import NB3.Vision.webcam as Camera
 import NB3.Server.server as Server
 
-# Get user name
-username = os.getlogin()
-
-# Specify site root
-root = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/vision/stream-NB3/site"
+# Specify streaming website root
+repo_path = f"{pathlib.Path.home()}/NoBlackBoxes/LastBlackBox"
+site_root = f"{repo_path}/boxes/vision/stream-NB3/site"
 
 # Setup Camera
 camera = Camera.Camera(width=800, height=600)

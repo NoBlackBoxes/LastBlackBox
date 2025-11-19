@@ -1,23 +1,15 @@
-# Imports
-import os
-import io
-import cv2
-import time
+# Control your NB3 while streaming the live camera image
+import os, pathlib, time
 import serial
-import socket
-import threading
-import netifaces
 import numpy as np
 import NB3.Sound.speaker as Speaker
 import NB3.Vision.camera as Camera
 import NB3.Server.server as Server
 
-# Get user name
-username = os.getlogin()
-
-# Specify site root
-root = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/vision/drone-NB3/site"
-sound_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/vision/drone-NB3/sounds/horn.wav"
+# Specify paths
+repo_path = f"{pathlib.Path.home()}/NoBlackBoxes/LastBlackBox"
+site_root = f"{repo_path}/boxes/vision/drone-NB3/site"
+sound_path = f"{repo_path}/boxes/vision/drone-NB3/sounds/horn.wav"
 
 # Define command handler
 def command_handler(command):
@@ -58,7 +50,7 @@ camera.start()
 
 # Start Server (for streaming)
 interface = Server.get_wifi_interface()
-server = Server.Server(root=root, interface=interface, command_handler=command_handler)
+server = Server.Server(root=site_root, interface=interface, command_handler=command_handler)
 server.start()
 server.status()
 

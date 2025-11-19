@@ -1,14 +1,13 @@
-import os
-import time
+import os, pathlib, time
 import cv2
 import numpy as np
-import NB3.Vision.camera as Camera         # NB3 Camera
-#import NB3.Vision.webcam as Camera        # Webcam (PC)
+#import NB3.Vision.camera as Camera         # NB3 Camera
+import NB3.Vision.webcam as Camera        # Webcam (PC)
 import NB3.Server.server as Server
 
 # Specify site root
-username = os.getlogin()
-root = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/vision/image_processing/python/sites/single"
+repo_path = f"{pathlib.Path.home()}/NoBlackBoxes/LastBlackBox"
+site_root = f"{repo_path}/boxes/vision/image_processing/python/sites/single"
 
 # Setup Camera
 camera = Camera.Camera(width=640, height=480, lores_width=640, lores_height=480)
@@ -19,7 +18,7 @@ det = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 
 # Start Server (for streaming)
 interface = Server.get_wifi_interface()
-server = Server.Server(root=root, interface=interface, autostart=True)
+server = Server.Server(root=site_root, interface=interface, autostart=True)
 
 # Face processing function
 def process_face(output_rect):

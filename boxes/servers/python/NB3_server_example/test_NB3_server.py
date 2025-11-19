@@ -1,10 +1,10 @@
-import os
+import os, pathlib, time
 import time
 import NB3.Server.server as Server
 
 # Specify site root
-username = os.getlogin()
-site_root = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/servers/python/NB3_server_example/site"
+repo_path = f"{pathlib.Path.home()}/NoBlackBoxes/LastBlackBox"
+site_root = f"{repo_path}/boxes/servers/python/NB3_server_example/site"
 
 # Serve
 interface = Server.get_wifi_interface()

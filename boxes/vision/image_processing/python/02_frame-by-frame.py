@@ -1,17 +1,14 @@
-import os
-import time
+import os, pathlib, time
 import cv2
 import numpy as np
-import NB3.Vision.camera as Camera         # NB3 Camera
-#import NB3.Vision.webcam as Camera        # Webcam (PC)
+#import NB3.Vision.camera as Camera         # NB3 Camera
+import NB3.Vision.webcam as Camera        # Webcam (PC)
 import NB3.Vision.overlay as Overlay
 import NB3.Server.server as Server
 
-# Get user name
-username = os.getlogin()
-
 # Specify site root
-root = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/vision/image_processing/python/site"
+repo_path = f"{pathlib.Path.home()}/NoBlackBoxes/LastBlackBox"
+site_root = f"{repo_path}/boxes/vision/image_processing/python/sites/split"
 
 # Setup Camera
 camera = Camera.Camera(width=800, height=600, lores_width=640, lores_height=480)
@@ -24,7 +21,7 @@ camera.overlay = overlay
 
 # Start Server (for streaming)
 interface = Server.get_wifi_interface()
-server = Server.Server(root=root, interface=interface)
+server = Server.Server(root=site_root, interface=interface)
 server.start()
 server.status()
 
@@ -32,7 +29,6 @@ server.status()
 previous = np.zeros((480,640), dtype=np.uint8)
 
 try:
-    print(f"    - \"Control + C\" to Quit -")
     while True:
         # Capture frame
         gray = camera.capture(lores=True, gray=True)

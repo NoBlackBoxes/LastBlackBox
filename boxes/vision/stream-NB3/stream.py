@@ -1,12 +1,12 @@
-import os
-import time
+# Stream live camera images
+import os, pathlib, time
 #import NB3.Vision.camera as Camera
 import NB3.Vision.webcam as Camera
 import NB3.Server.server as Server
 
-# Specify streaming website root
-username = os.getlogin()
-root = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/vision/stream-NB3/site"
+# Specify paths
+repo_path = f"{pathlib.Path.home()}/NoBlackBoxes/LastBlackBox"
+site_root = f"{repo_path}/boxes/vision/stream-NB3/site"
 
 # Setup Camera
 camera = Camera.Camera(width=800, height=600)
@@ -14,7 +14,7 @@ camera.start()
 
 # Start Server (for streaming)
 interface = Server.get_wifi_interface()
-server = Server.Server(root=root, interface=interface, autostart=True)
+server = Server.Server(root=site_root, interface=interface, autostart=True)
 
 # Stream camera images
 try:

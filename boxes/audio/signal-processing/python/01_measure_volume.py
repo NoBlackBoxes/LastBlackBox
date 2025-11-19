@@ -1,25 +1,27 @@
 # Measure the volume of sound recorded by the microphone
-import os
-import time
+import os, pathlib, time
 import numpy as np
 import matplotlib.pyplot as plt
 import NB3.Sound.microphone as Microphone
 import NB3.Sound.utilities as Utilities
 
 # Specify paths
-username = os.getlogin()
-repo_path = f"/home/{username}/NoBlackBoxes/LastBlackBox"
+repo_path = f"{pathlib.Path.home()}/NoBlackBoxes/LastBlackBox"
 project_path = f"{repo_path}/boxes/audio/signal-processing/python"
 
+# List available sound devices
+Utilities.list_devices()
+
+# Get microphone device by name (NB3: "MAX", PC: select based on listed input devices)
+input_device = Utilities.get_input_device_by_name("HD-Audio")
+if input_device == -1:
+    exit("Input device not found")
+
 # Specify microphone params
-input_device = 1
 num_channels = 2
 sample_rate = 48000
 buffer_size = int(sample_rate / 10)
 max_samples = int(sample_rate * 5)
-
-# List available sound devices
-Utilities.list_devices()
 
 # Initialize microphone
 microphone = Microphone.Microphone(input_device, num_channels, 'int32', sample_rate, buffer_size, max_samples)

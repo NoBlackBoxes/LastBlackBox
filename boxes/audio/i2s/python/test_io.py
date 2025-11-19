@@ -1,23 +1,11 @@
-import os
-import time
+import os, pathlib, time
 import numpy as np
-
-# Locals libs
 import NB3.Sound.microphone as Microphone
 import NB3.Sound.speaker as Speaker
 import NB3.Sound.utilities as Utilities
 
-# Reimport
-import importlib
-importlib.reload(Microphone)
-importlib.reload(Speaker)
-importlib.reload(Utilities)
-
-# Get user name
-username = os.getlogin()
-
 # Specify paths
-repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
+repo_path = f"{pathlib.Path.home()}/NoBlackBoxes/LastBlackBox"
 box_path = repo_path + '/boxes/audio'
 wav_path = repo_path + '/_tmp/test.wav'
 

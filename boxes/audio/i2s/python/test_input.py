@@ -1,34 +1,27 @@
-import os
-import time
+import os, pathlib, time
 import numpy as np
 import matplotlib.pyplot as plt
-
-# Locals libs
 import NB3.Sound.microphone as Microphone
 import NB3.Sound.utilities as Utilities
 
-# Reimport
-import importlib
-importlib.reload(Microphone)
-importlib.reload(Utilities)
-
-# Get user name
-username = os.getlogin()
-
 # Specify paths
-repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
+repo_path = f"{pathlib.Path.home()}/NoBlackBoxes/LastBlackBox"
 tmp_path = repo_path + '/_tmp/sounds'
 wav_path = tmp_path + '/test.wav'
 
-# Specify params
-input_device = 1
+# List available sound devices
+Utilities.list_devices()
+
+# Get microphone device by name (NB3: "MAX", PC: select based on listed input devices)
+input_device = Utilities.get_input_device_by_name("HD-Audio")
+if input_device == -1:
+    exit("Input device not found")
+
+# Specify microphone params
 num_channels = 2
 sample_rate = 48000
 buffer_size = int(sample_rate / 10)
-max_samples = int(sample_rate * 10)
-
-# List available sound devices
-Utilities.list_devices()
+max_samples = int(sample_rate * 5)
 
 # Initialize microphone
 microphone = Microphone.Microphone(input_device, num_channels, 'int32', sample_rate, buffer_size, max_samples)
@@ -39,24 +32,22 @@ microphone.start()
 os.system('cls' if os.name == 'nt' else 'clear')
 
 # Wait to save recording
-input("Press Enter to save recording...")
+input("Press <Enter> to start 5 second recording...")
+
+# Live volume processing
+Utilities.meter_start()
+for i in range(50):                                     # Process 50 buffers (10 per second)
+    latest = microphone.latest(buffer_size)             # Get the latest audio buffer
+    left_volume = np.mean(np.abs(latest[:,0]))          # Extract left channel volume (abs value of audio signal)
+    right_volume = np.mean(np.abs(latest[:,1]))         # Extract right channel volume (abs value of audio signal)
+    Utilities.meter_update(left_volume, right_volume)   # Update volume meter
+    time.sleep(0.1) # Wait a bit
+Utilities.meter_stop()
 
 # Save recording
 microphone.save_wav(wav_path, sample_rate*3)
 
-# Live processing
-for i in range(100):
-    latest = microphone.latest(buffer_size)
-    if num_channels == 2:
-        left_volume = np.mean(np.max(latest[:,0]))
-        right_volume = np.mean(np.max(latest[:,1]))
-        print("{0:.2f} {1:.2f}".format(left_volume, right_volume))
-    else:
-        volume = np.mean(np.max(latest[:]))
-        print("{0:.2f}".format(volume))
-    time.sleep(0.1)
-
-# Store recording
+# Store full sound recording
 recording = np.copy(microphone.sound)
 
 # Shutdown microphone

@@ -1,14 +1,12 @@
 # Playback a song stored in a WAV file 
-import os
-import time
+import os, pathlib, time
 import numpy as np
 import matplotlib.pyplot as plt
 import NB3.Sound.speaker as Speaker
 import NB3.Sound.utilities as Utilities
 
 # Specify paths
-username = os.getlogin()
-repo_path = f"/home/{username}/NoBlackBoxes/LastBlackBox"
+repo_path = f"{pathlib.Path.home()}/NoBlackBoxes/LastBlackBox"
 project_path = f"{repo_path}/boxes/audio/signal-generation/python"
 song_path = f"{repo_path}/boxes/audio/_resources/sounds/Bach_prelude_C_major.wav"
 #song_path = f"{repo_path}/boxes/audio/_resources/sounds/Axel_F.wav"
@@ -16,10 +14,10 @@ song_path = f"{repo_path}/boxes/audio/_resources/sounds/Bach_prelude_C_major.wav
 # List available sound devices
 Utilities.list_devices()
 
-# Get output device
-output_device = Utilities.get_output_device_by_name("HD-Audio Generic: ALC295 Analog")
-#output_device = Utilities.get_output_device_by_name("MAX")
-#output_device = Utilities.get_output_device_by_name("default")
+# Get speaker device by name (NB3: "MAX", PC: select based on listed output devices)
+output_device = Utilities.get_output_device_by_name("HD-Audio")
+if output_device == -1:
+    exit("Output device not found")
 
 # Specify speaker params
 num_channels = 2
