@@ -14,7 +14,7 @@ song_path = f"{Config.repo_path}/boxes/audio/_resources/sounds/Bach_prelude_C_ma
 Utilities.list_devices()
 
 # Get speaker device by name (NB3: "MAX", PC: select based on listed output devices)
-output_device = Utilities.get_output_device_by_name("HD-Audio")
+output_device = Utilities.get_output_device_by_name("MAX")
 if output_device == -1:
     exit("Output device not found")
 

@@ -20,10 +20,10 @@ project_path = f"{Config.repo_path}/boxes/audio/i2s/python/test_speakers"
 Utilities.list_devices()
 
 # Get output device
-output_device = Utilities.get_output_device_by_name("HD-Audio")
+output_device = Utilities.get_output_device_by_name("MAX")
 
 # Get input device
-input_device = Utilities.get_input_device_by_name("HD-Audio")
+input_device = Utilities.get_input_device_by_name("MAX")
 
 # Specify speaker params
 speaker_num_channels = 2

@@ -13,7 +13,7 @@ project_path = f"{Config.repo_path}/boxes/audio/signal-processing/python/measure
 Utilities.list_devices()
 
 # Get microphone device by name (NB3: "MAX", PC: select based on listed input devices)
-input_device = Utilities.get_input_device_by_name("HD-Audio")
+input_device = Utilities.get_input_device_by_name("MAX")
 if input_device == -1:
     exit("Input device not found")
 

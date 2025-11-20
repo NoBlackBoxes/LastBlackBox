@@ -9,7 +9,7 @@ box_path = repo_path + '/boxes/audio'
 wav_path = box_path + '/_resources/sounds/Bach_prelude_C_major.wav'
 
 # Get speaker device by name (NB3: "MAX", PC: select based on listed output devices)
-output_device = Utilities.get_output_device_by_name("HD-Audio")
+output_device = Utilities.get_output_device_by_name("MAX")
 if output_device == -1:
     exit("Output device not found")
 
