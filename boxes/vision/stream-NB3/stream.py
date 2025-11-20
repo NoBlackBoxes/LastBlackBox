@@ -1,12 +1,15 @@
 # Stream live camera images
-import os, pathlib, time
-#import NB3.Vision.camera as Camera
-import NB3.Vision.webcam as Camera
+import time, cv2
+import LBB.config as Config
+import importlib.util
+if importlib.util.find_spec("picamera2") is not None:   # Is picamera available (only on NB3)?
+    import NB3.Vision.camera as Camera                  # NB3 Camera
+else:
+    import NB3.Vision.webcam as Camera                  # Webcam (PC)
 import NB3.Server.server as Server
 
-# Specify paths
-repo_path = f"{pathlib.Path.home()}/NoBlackBoxes/LastBlackBox"
-site_root = f"{repo_path}/boxes/vision/stream-NB3/site"
+# Specify site root
+site_root = f"{Config.repo_path}/boxes/vision/stream-NB3/site"
 
 # Setup Camera
 camera = Camera.Camera(width=800, height=600)

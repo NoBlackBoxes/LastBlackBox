@@ -1,15 +1,19 @@
 # Control your NB3 while streaming the live camera image
-import os, pathlib, time
-import serial
+import time, cv2, serial
 import numpy as np
-import NB3.Sound.speaker as Speaker
-import NB3.Vision.camera as Camera
+import LBB.config as Config
+import importlib.util
+if importlib.util.find_spec("picamera2") is not None:   # Is picamera available (only on NB3)?
+    import NB3.Vision.camera as Camera                  # NB3 Camera
+else:
+    import NB3.Vision.webcam as Camera                  # Webcam (PC)
 import NB3.Server.server as Server
+import NB3.Sound.speaker as Speaker
+import NB3.Sound.utilities as Utilities
 
 # Specify paths
-repo_path = f"{pathlib.Path.home()}/NoBlackBoxes/LastBlackBox"
-site_root = f"{repo_path}/boxes/vision/drone-NB3/site"
-sound_path = f"{repo_path}/boxes/vision/drone-NB3/sounds/horn.wav"
+site_root = f"{Config.repo_path}/boxes/vision/drone-NB3/site"
+sound_path = f"{Config.repo_path}/boxes/vision/drone-NB3/sounds/horn.wav"
 
 # Define command handler
 def command_handler(command):
@@ -37,8 +41,16 @@ def command_handler(command):
 ser = serial.Serial(port='/dev/ttyUSB0', baudrate = 115200)
 time.sleep(1.00)
 
+# List available sound devices
+Utilities.list_devices()
+
+# Get speaker device by name (NB3: "MAX", PC: select based on listed output devices)
+output_device = Utilities.get_output_device_by_name("MAX")
+if output_device == -1:
+    exit("Output device (Audio) not found")
+
 # Setup speaker
-speaker = Speaker.Speaker(1, 2, 'int32', 48000, int(48000 / 10))
+speaker = Speaker.Speaker(output_device, 2, 'int32', 48000, int(48000 / 10))
 speaker.start()
 
 # Setup Camera
@@ -47,13 +59,10 @@ camera.start()
 
 # Start Server (for streaming)
 interface = Server.get_wifi_interface()
-server = Server.Server(root=site_root, interface=interface, command_handler=command_handler)
-server.start()
-server.status()
+server = Server.Server(root=site_root, interface=interface, command_handler=command_handler, autostart=True)
 
 # Run Drone
 try:
-    print(f"    - \"Control + C\" to Quit -")
     while True:
         frame = camera.capture(mjpeg=True)
         server.update_stream("camera", frame)
