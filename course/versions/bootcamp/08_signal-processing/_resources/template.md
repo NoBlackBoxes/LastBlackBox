@@ -2,7 +2,6 @@
 Let's learn how to process one-dimensional time series data...like audio waveforms.
 
 ## Audio
-{Signal-Generation}
+{Signal-Processing}
 
 # Project
-{Audio:Signal-Processing}

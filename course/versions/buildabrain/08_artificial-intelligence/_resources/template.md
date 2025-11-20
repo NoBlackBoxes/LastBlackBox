@@ -6,7 +6,6 @@ What is intelligence? Can we create it in a machine? Can you create it in your *
 {NB3_Build-and-Install-the-Linux-I2S-Driver}
 {NB3_Install-the-Ears}
 {NB3_Install-the-Mouth}
-{Signal-Generation}
 {Signal-Processing}
 
 ## Vision
