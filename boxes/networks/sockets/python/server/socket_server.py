@@ -5,11 +5,8 @@ import socket
 import netifaces
 import serial
 
-# Configure and open serial port
-ser = serial.Serial()
-ser.baudrate = 115200
-ser.port = '/dev/ttyUSB0'
-ser.open()
+# Open serial port
+ser = serial.Serial(port='/dev/ttyUSB0', baudrate=115200)
 
 # Specify IP address and port to use for the socket
 ip_address = netifaces.ifaddresses("wlan0")[netifaces.AF_INET][0]['addr'] # Get IP address for WiFi interface

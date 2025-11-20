@@ -33,11 +33,8 @@ def command_handler(command):
    else:
       pass
 
-# Configure serial port
-ser = serial.Serial()
-ser.baudrate = 115200
-ser.port = '/dev/ttyUSB0'
-ser.open()
+# Open serial port
+ser = serial.Serial(port='/dev/ttyUSB0', baudrate = 115200)
 time.sleep(1.00)
 
 # Setup speaker

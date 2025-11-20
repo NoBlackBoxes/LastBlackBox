@@ -1,32 +1,24 @@
 # Imports
-import os
-import time
-import curses
-import serial
+import time, curses, serial
 import numpy as np
 import tflite_runtime.interpreter as tflite
+import LBB.config as Config
 import NB3.Vision.camera as Camera
 import NB3.Vision.overlay as Overlay
 import NB3.Server.server as Server
 
-# Get user name
-username = os.getlogin()
-
-# Set base path
-npu_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/intelligence/NPU"
+# Specify paths
+project_path = f"{Config.repo_path}/boxes/intelligence/NPU/look-NB3"
 
 # Specify site root
 root = f"{npu_path}/look-NB3/site"
 
-# Configure serial port
-ser = serial.Serial()
-ser.baudrate = 115200
-ser.port = '/dev/ttyUSB0'
-ser.open()
+# Open serial port
+ser = serial.Serial(port='/dev/ttyUSB0', baudrate = 115200)
 
 # Specify model and labels
-model_path = f"{npu_path}/look-NB3/model/ssd_mobilenet_v2_face_quant_postprocess_edgetpu.tflite"
-#model_path = f"{npu_path}/look-NB3/model/movenet_single_pose_thunder_ptq_edgetpu.tflite"
+model_path = f"{project_path}/look-NB3/model/ssd_mobilenet_v2_face_quant_postprocess_edgetpu.tflite"
+#model_path = f"{project_path}/look-NB3/model/movenet_single_pose_thunder_ptq_edgetpu.tflite"
 
 # Load delegate (EdgeTPU)
 delegate = tflite.load_delegate('libedgetpu.so.1')

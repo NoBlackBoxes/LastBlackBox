@@ -5,41 +5,25 @@
 # Import libraries
 import os
 import time
-import importlib
 import numpy as np
 import matplotlib.pyplot as plt
 import scipy.signal as signal
-
-# Import modules
+import LBB.config as Config
 import NB3.Sound.utilities as Utilities
 import NB3.Sound.speaker as Speaker
 import NB3.Sound.microphone as Microphone
 
-# Reload modules
-importlib.reload(Microphone)
-importlib.reload(Speaker)
-importlib.reload(Utilities)
-
-# Get user name
-username = os.getlogin()
-
-# Specify the output folder
-output_folder = f"/home/{username}/NoBlackBoxes/LastBlackBox/_tmp/sounds/speakers"
-if not os.path.exists(output_folder):
-    os.makedirs(output_folder)
+# Specify paths
+project_path = f"{Config.repo_path}/boxes/audio/i2s/python/test_speakers"
 
 # List available sound devices
 Utilities.list_devices()
 
 # Get output device
-#output_device = Utilities.get_output_device_by_name("HD-Audio Generic: ALC295 Analog")
-output_device = Utilities.get_output_device_by_name("MAX")
-#output_device = Utilities.get_output_device_by_name("default")
+output_device = Utilities.get_output_device_by_name("HD-Audio")
 
 # Get input device
-#input_device = Utilities.get_input_device_by_name("HD-Audio Generic: ALC295 Analog")
-input_device = Utilities.get_input_device_by_name("MAX")
-#input_device = Utilities.get_input_device_by_name("Blue Snowball")
+input_device = Utilities.get_input_device_by_name("HD-Audio")
 
 # Specify speaker params
 speaker_num_channels = 2
@@ -83,7 +67,7 @@ time.sleep(10.00)
 
 # Store noise recording
 noise_recording = np.copy(microphone.latest(microphone.valid_samples))
-microphone.save_wav(f"{output_folder}/noise_recording.wav", microphone.valid_samples)
+microphone.save_wav(f"{project_path}/my_noise_recording.wav", microphone.valid_samples)
 
 # ------------------------------
 # Sweep
@@ -101,7 +85,7 @@ while speaker.is_playing():
 
 # Store sweep recording
 sweep_recording = np.copy(microphone.latest(microphone.valid_samples))
-microphone.save_wav(f"{output_folder}/sweep_recording.wav", microphone.valid_samples)
+microphone.save_wav(f"{project_path}/my_sweep_recording.wav", microphone.valid_samples)
 
 # ------------------------------
 # Sweep
@@ -119,7 +103,7 @@ while speaker.is_playing():
 
 # Store tone recording
 tone_recording = np.copy(microphone.latest(microphone.valid_samples))
-microphone.save_wav(f"{output_folder}/tone_recording.wav", microphone.valid_samples)
+microphone.save_wav(f"{project_path}/my_tone_recording.wav", microphone.valid_samples)
 
 # Shutdown
 speaker.stop()
@@ -163,7 +147,7 @@ plt.xlabel("Time [s]")
 plt.ylabel("Frequency [Hz]")
 plt.ylim(0, speaker_sample_rate / 2)  # Limit y-axis to Nyquist frequency
 plt.tight_layout()
-plt.savefig(f"{output_folder}/sweep_spectrogram.png", dpi=300, bbox_inches="tight")
+plt.savefig(f"{project_path}/my_sweep_spectrogram.png", dpi=300, bbox_inches="tight")
 
 # Remove background noise
 spectrogram = Sxx - noise_Sxx
@@ -184,7 +168,7 @@ plt.grid(which="both", linestyle="--", linewidth=0.5)  # Grid for both major/min
 plt.xlim(20, speaker_sample_rate / 2)  # Limit x-axis to relevant range
 plt.tight_layout()
 plt.legend()
-plt.savefig(f"{output_folder}/sweep_response.png", dpi=300, bbox_inches="tight")
+plt.savefig(f"{project_path}/my_sweep_response.png", dpi=300, bbox_inches="tight")
 
 # ------------------------------
 # Process Tone
@@ -204,7 +188,7 @@ plt.xlabel("Time [s]")
 plt.ylabel("Frequency [Hz]")
 plt.ylim(0, speaker_sample_rate / 10)
 plt.tight_layout()
-plt.savefig(f"{output_folder}/tone_spectrogram.png", dpi=300, bbox_inches="tight")
+plt.savefig(f"{project_path}/my_tone_spectrogram.png", dpi=300, bbox_inches="tight")
 
 # Remove background noise
 spectrogram = Sxx - noise_Sxx
@@ -248,6 +232,6 @@ plt.grid(which="both", linestyle="--", linewidth=0.5)  # Grid for both major/min
 plt.xlim(20, speaker_sample_rate / 2)  # Limit x-axis to relevant range
 plt.tight_layout()
 plt.legend()
-plt.savefig(f"{output_folder}/tone_response.png", dpi=300, bbox_inches="tight")
+plt.savefig(f"{project_path}/my_tone_response.png", dpi=300, bbox_inches="tight")
 
 #FIN

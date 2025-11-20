@@ -11,13 +11,8 @@ os.system("stty -echo")
 quit = False
 moving = False
 
-# Configure serial port
-ser = serial.Serial()
-ser.baudrate = 115200
-ser.port = '/dev/ttyUSB0'
-
 # Open serial port
-ser.open()
+ser = serial.Serial(port='/dev/ttyUSB0', baudrate=115200)
 time.sleep(2.00) # Wait for connection before sending any data
 
 # Start key listening thread

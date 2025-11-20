@@ -1,33 +1,22 @@
 # Imports
-import os
-import time
-import curses
-import serial
+import time, curses, serial
 import numpy as np
 import tflite_runtime.interpreter as tflite
+import LBB.config as Config
 import NB3.Sound.speaker as Speaker
 import NB3.Sound.microphone as Microphone
 import NB3.Sound.utilities as Utilities
 
-# Get user name
-username = os.getlogin()
+# Specify paths
+project_path = f"{Config.repo_path}/boxes/intelligence/NPU/listen-NB3"
+sound_path = f"{project_path}/_tmp/sounds/my_song.wav"
 
-# Set base path
-npu_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/intelligence/NPU"
-
-# Configure serial port
-ser = serial.Serial()
-ser.baudrate = 115200
-ser.port = '/dev/ttyUSB0'
-ser.open()
+# Open serial port
+ser = serial.Serial(port='/dev/ttyUSB0', baudrate=115200)
 
 # Specify model and labels
-model_path = f"{npu_path}/listen-NB3/model/voice_commands_v0.8_edgetpu.tflite"
-labels_path = f"{npu_path}/listen-NB3/model/labels.txt"
-
-# Specify sound path(s)
-# CHANGE THIS SOUND PATH TO THE NAME OF YOUR FILE HERE ------->
-sound_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/_tmp/sounds/my_song.wav"
+model_path = f"{project_path}/model/voice_commands_v0.8_edgetpu.tflite"
+labels_path = f"{project_path}/model/labels.txt"
 
 # Load delegate (EdgeTPU)
 delegate = tflite.load_delegate(f"libedgetpu.so.1")

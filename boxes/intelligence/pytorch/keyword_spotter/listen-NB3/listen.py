@@ -1,26 +1,20 @@
 # Imports
-import os
-import time
-import curses
-import serial
+import time, curses, serial
 import torch
 import numpy as np
+import LBB.config as Config
 import NB3.Sound.microphone as Microphone
 import NB3.Sound.utilities as Utilities
 
-# Set base path
-username = os.getlogin()
-base_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/intelligence/pytorch/keyword_spotter/listen-NB3"
+# Specify paths
+project_path = f"{Config.repo_path}/boxes/intelligence/pytorch/keyword_spotter/listen-NB3"
 
 # Specify model and labels
-model_path = f"{base_path}/model.pt"
-labels_path = f"{base_path}/labels.txt"
+model_path = f"{project_path}/model.pt"
+labels_path = f"{project_path}/labels.txt"
 
-# Configure serial port
-ser = serial.Serial()
-ser.baudrate = 115200
-ser.port = '/dev/ttyUSB0'
-ser.open()
+# Open serial port
+ser = serial.Serial(port='/dev/ttyUSB0', baudrate=115200)
 
 # Reload saved quantized model
 torch.backends.quantized.engine = 'qnnpack'

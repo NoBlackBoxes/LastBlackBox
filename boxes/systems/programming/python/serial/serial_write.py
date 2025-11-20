@@ -1,13 +1,8 @@
 import serial
 import time
 
-# Configure serial port
-ser = serial.Serial()
-ser.baudrate = 19200
-ser.port = '/dev/ttyUSB0'
-
 # Open serial port
-ser.open()
+ser = serial.Serial(port='/dev/ttyUSB0', baudrate=115200)
 time.sleep(2.00) # Wait for connection before sending any data
 
 # Send a character

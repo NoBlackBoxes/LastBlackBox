@@ -1,11 +1,10 @@
 # Imports
-import os, pathlib, time
-import serial
+import time, serial
+import LBB.config as Config
 import NB3.Server.server as Server
 
 # Specify site root
-repo_path = f"{pathlib.Path.home()}/NoBlackBoxes/LastBlackBox"
-site_root = f"{repo_path}/boxes/servers/python/remote-NB3_GUI/site"
+site_root = f"{Config.repo_path}/boxes/servers/python/remote-NB3_GUI/site"
 
 # Define command handler
 def command_handler(command):
@@ -28,11 +27,8 @@ def command_handler(command):
    else:
       pass
 
-# Configure serial port
-ser = serial.Serial()
-ser.baudrate = 115200
-ser.port = '/dev/ttyUSB0'
-ser.open()
+# Open serial port
+ser = serial.Serial(port='/dev/ttyUSB0', baudrate=115200)
 time.sleep(1.00)
 
 # Start Server (for streaming)
