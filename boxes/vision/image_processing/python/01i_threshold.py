@@ -1,12 +1,16 @@
-import os, pathlib, time
-import cv2
-import NB3.Vision.camera as Camera         # NB3 Camera
-#import NB3.Vision.webcam as Camera        # Webcam (PC)
+# Apply binary threshold to a grayscale image and stream result via web server
+# - Include interactive slider on streaming page to adjust threshold level
+import time, cv2
+import LBB.config as Config
+import importlib.util
+if importlib.util.find_spec("picamera2") is not None:   # Is picamera available (only on NB3)?
+    import NB3.Vision.camera as Camera                  # NB3 Camera
+else:
+    import NB3.Vision.webcam as Camera                  # Webcam (PC)
 import NB3.Server.server as Server
 
 # Specify site root
-repo_path = f"{pathlib.Path.home()}/NoBlackBoxes/LastBlackBox"
-site_root = f"{repo_path}/boxes/vision/image_processing/python/sites/slider"
+site_root = f"{Config.repo_path}/boxes/vision/image_processing/python/sites/slider"
 
 # Setup Camera
 camera = Camera.Camera(width=800, height=600, lores_width=640, lores_height=480)
@@ -26,7 +30,7 @@ def command_handler(command):
 
 # Start Server (for streaming)
 interface = Server.get_wifi_interface()
-server = Server.Server(root=root, interface=interface, command_handler=command_handler, autostart=True)
+server = Server.Server(root=site_root, interface=interface, command_handler=command_handler, autostart=True)
 
 # Processing Loop
 try:

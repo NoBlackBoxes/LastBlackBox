@@ -36,8 +36,12 @@ class Overlay:
         self.palette = color_palette_16
         self.timestamp = False
         self.timestamp_color = color_palette_16[3] # Yellow
+        self.labels = []
         self.rectangles = []
         self.circles = []
+
+    def add_label(self, x, y, text):
+        self.labels.append((x, y, text))
 
     def add_rectangle(self, x, y, w, h):
         self.rectangles.append((x, y, w, h))
@@ -46,6 +50,7 @@ class Overlay:
         self.circles.append((x, y, radius))
 
     def clear(self):
+        self.labels = []
         self.rectangles = []
         self.circles = []
 
@@ -54,6 +59,10 @@ class Overlay:
             r, g, b = self.timestamp_color
             timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]
             cv2.putText(array, timestamp, (20, 40), cv2.FONT_HERSHEY_SIMPLEX, 1, (b,g,r), 2, cv2.LINE_AA)
+        for i, label in enumerate(self.labels):
+            x, y, text = label
+            r, g, b = self.palette[i % 16]
+            cv2.putText(array, text, (int(x), int(y)), cv2.FONT_HERSHEY_DUPLEX, 1, (b,g,r), 2, cv2.LINE_AA)
         for i, rectangle in enumerate(self.rectangles):
             x, y, w, h = rectangle
             r, g, b = self.palette[i % 16]

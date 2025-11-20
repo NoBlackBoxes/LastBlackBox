@@ -1,13 +1,17 @@
-import os, pathlib, time
-import cv2
+# Color threshold a Huw, Sat, and Value image to isolate a specific color
+# - Find the largest binary "blob" of isolated pixels
+import time, cv2
 import numpy as np
-#import NB3.Vision.camera as Camera         # NB3 Camera
-import NB3.Vision.webcam as Camera        # Webcam (PC)
+import LBB.config as Config
+import importlib.util
+if importlib.util.find_spec("picamera2") is not None:   # Is picamera available (only on NB3)?
+    import NB3.Vision.camera as Camera                  # NB3 Camera
+else:
+    import NB3.Vision.webcam as Camera                  # Webcam (PC)
 import NB3.Server.server as Server
 
 # Specify site root
-repo_path = f"{pathlib.Path.home()}/NoBlackBoxes/LastBlackBox"
-site_root = f"{repo_path}/boxes/vision/image_processing/python/sites/split"
+site_root = f"{Config.repo_path}/boxes/vision/image_processing/python/sites/split"
 
 # Setup Camera
 camera = Camera.Camera(width=800, height=600, lores_width=640, lores_height=480)
@@ -41,6 +45,7 @@ try:
             largest_contour = max(contours, key=cv2.contourArea)
             x, y, w, h = cv2.boundingRect(largest_contour)
             camera.overlay.add_rectangle(x, y, w, h)
+            camera.overlay.add_label(x, y, f"X: {x:.1f}, Y: {y:.1f}")
 
         # Display raw and processed frames
         camera.display(rgb, server, "camera", overlay=True, jpeg=False)

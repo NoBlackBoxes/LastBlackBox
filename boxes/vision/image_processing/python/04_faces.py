@@ -1,13 +1,16 @@
-import os, pathlib, time
-import cv2
+# Detect faces using classical methods (Viola-Jones Haar Cascade)
+import time, cv2
 import numpy as np
-#import NB3.Vision.camera as Camera         # NB3 Camera
-import NB3.Vision.webcam as Camera        # Webcam (PC)
+import LBB.config as Config
+import importlib.util
+if importlib.util.find_spec("picamera2") is not None:   # Is picamera available (only on NB3)?
+    import NB3.Vision.camera as Camera                  # NB3 Camera
+else:
+    import NB3.Vision.webcam as Camera                  # Webcam (PC)
 import NB3.Server.server as Server
 
 # Specify site root
-repo_path = f"{pathlib.Path.home()}/NoBlackBoxes/LastBlackBox"
-site_root = f"{repo_path}/boxes/vision/image_processing/python/sites/single"
+site_root = f"{Config.repo_path}/boxes/vision/image_processing/python/sites/single"
 
 # Setup Camera
 camera = Camera.Camera(width=640, height=480, lores_width=640, lores_height=480)
