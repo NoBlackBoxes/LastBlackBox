@@ -1,13 +1,12 @@
-# Generate a square wave
-import os, pathlib, time
-import numpy as np
+# Generate a note (a fundamental tone + harmonics) 
+import os, time
 import matplotlib.pyplot as plt
+import LBB.config as Config
 import NB3.Sound.speaker as Speaker
 import NB3.Sound.utilities as Utilities
 
 # Specify paths
-repo_path = f"{pathlib.Path.home()}/NoBlackBoxes/LastBlackBox"
-project_path = f"{repo_path}/boxes/audio/signal-generation/python"
+project_path = f"{Config.repo_path}/boxes/audio/signal-processing/python/generation"
 
 # List available sound devices
 Utilities.list_devices()
@@ -29,16 +28,21 @@ speaker.start()
 # Clear error ALSA/JACK messages from terminal
 os.system('cls' if os.name == 'nt' else 'clear')
 
-# Generate square wave
+# Generate a note (a fundamental frequency with harmonics falling off in amplitude)
 duration = 2.0
-frequency = 440.0
-square = Utilities.generate_square_wave(duration, frequency, sample_rate, num_channels, duty_cycle=0.5)
+C4 = 261.63
+D4 = 293.66
+E4 = 329.63
+G4 = 392.0
+A4 = 440.0
+fundamental = D4
+note = Utilities.generate_note(duration, fundamental, sample_rate, num_channels=2, num_harmonics=10)
 
 # Wait to save recording
 input("Press <Enter> to start generation...")
 
 # Send sound to speaker
-speaker.write(square)
+speaker.write(note)
 
 # Wait for sound output to finish
 try:
@@ -47,15 +51,15 @@ try:
 finally:
     speaker.stop()
 
-# ----------------------------------------
-# Plot spectrum (using FFT) of square wave
-# ----------------------------------------
+# ---------------------------------
+# Plot spectrum (using FFT) of tone
+# ---------------------------------
 
 # Compute frequency spectrum
-freqs, mags = Utilities.compute_spectrum(square, sample_rate, min_freq=10, max_freq=10000)
+freqs, mags = Utilities.compute_spectrum(note, sample_rate, min_freq=10, max_freq=10000)
 
 # Find peaks
-peaks_x, peaks_y = Utilities.find_peaks(freqs, mags, min_prominence=0.05)
+peaks_x, peaks_y = Utilities.find_peaks(freqs, mags)
 
 # Plot frequency spectrum
 plt.figure()
@@ -64,13 +68,13 @@ plt.plot(freqs, mags)
 for px, py in zip(peaks_x, peaks_y):
     plt.plot(px, py, 'ro')
     plt.text(px + 150.0, py, f"{px:.1f} Hz", ha='left', va='center', fontsize=6)
-plt.title("Square Wave Spectrum")
+plt.title(f"Note ({fundamental} Hz) with Harmonics Spectrum")
 plt.xlabel("Frequency (Hz)")
 plt.ylabel("Magnitude")
 plt.grid(True)
 
 # Save frequency spectrum plot
-save_path = f"{project_path}/my_square_wave_frequency_spectrum.png"
+save_path = f"{project_path}/my_note_frequency_spectrum.png"
 plt.savefig(f"{save_path}")
 
 #FIN

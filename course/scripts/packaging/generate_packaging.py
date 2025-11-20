@@ -25,14 +25,14 @@ packages.append(Package.Package("Small",  "ECMA A55.20.01.01", "external", 3*uni
 packages.append(Package.Package("Cables", "ECMA A20.20.03.01", "external", 3*unit, 1*unit, 7*unit,   "GSM 300", thin_wall,  0.5, "down"))
 
 # Save package descriptions
-description_path = f"{Config.course_root}/_resources/packaging/package_dimensions.txt"
+description_path = f"{Config.course_path}/_resources/packaging/package_dimensions.txt"
 with open(description_path, "w") as file:
     for package in packages:
         dim = package.print_dimensions()
         file.write(dim)
 
 # Save package models
-model_folder = f"{Config.course_root}/_resources/packaging/CAD/boxes"
+model_folder = f"{Config.course_path}/_resources/packaging/CAD/boxes"
 Utilities.clear_folder(model_folder)
 for package in packages:
     model_path = f"{model_folder}/{package.name}.step"
@@ -40,7 +40,7 @@ for package in packages:
     Package.save_STEP(model_path, package.name, model)
 
 # Save package designs (printing)
-design_folder = f"{Config.course_root}/_resources/packaging/designs"
+design_folder = f"{Config.course_path}/_resources/packaging/designs"
 Utilities.clear_folder(design_folder)
 packages[2].store_designs(unit, 2.00, 1.1, Config.large_box_names, design_folder)
 packages[3].store_designs(unit, 2.00, 1.1, Config.medium_box_names, design_folder)

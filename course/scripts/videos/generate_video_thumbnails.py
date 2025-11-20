@@ -9,7 +9,7 @@ import LBB.utilities as Utilities
 import LBB.Design.png as PNG
 
 # Specify paths
-resources_folder = f"{Config.course_root}/_resources/videos"
+resources_folder = f"{Config.course_path}/_resources/videos"
 
 # Specify overwrite (re-do thumbnail generation)
 overwrite = False
@@ -23,13 +23,13 @@ with open(NB3_template_path, 'r') as file:
     NB3_template_text = file.read()
 
 # Find all boxes at "boxes_path"
-box_folders = [f for f in glob.glob(Config.boxes_root + '/*') if os.path.isdir(f)]
+box_folders = [f for f in glob.glob(Config.boxes_path + '/*') if os.path.isdir(f)]
 
 # Process each video's *.md file 
 for box_name in Config.box_names:
 
     # Determine box folder
-    box_folder = f"{Config.boxes_root}/{box_name.lower()}"
+    box_folder = f"{Config.boxes_path}/{box_name.lower()}"
 
     # Specify lessons folder
     lessons_folder = box_folder + "/_resources/lessons"

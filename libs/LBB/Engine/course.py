@@ -55,7 +55,7 @@ class Course:
         self.slug = get_slug_from_name(name)
 
         # List session folders
-        course_folder = f"{Config.course_root}/versions/{self.slug}"
+        course_folder = f"{Config.course_path}/versions/{self.slug}"
         session_folders = sorted(glob.glob(f"{course_folder}/[0-9][0-9]_*"))
 
         # Load sessions from templates

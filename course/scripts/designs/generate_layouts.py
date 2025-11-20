@@ -9,7 +9,7 @@ import LBB.Design.svg as SVG
 import LBB.Design.png as PNG
 
 # Specify output folders
-resources_folder = f"{Config.course_root}/_resources/designs"
+resources_folder = f"{Config.course_path}/_resources/designs"
 output_folder = f"{resources_folder}/layout"
 svg_folder = f"{output_folder}/svg"
 png_folder = f"{output_folder}/png"

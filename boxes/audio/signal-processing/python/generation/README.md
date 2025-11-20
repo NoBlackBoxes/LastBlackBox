@@ -1,4 +1,4 @@
-# Audio : Signal Generation
+# Audio : Signal Processing : Python : Generation
 Here we learn about sound by generating audio signals in code, listening to them, and visualizing their spectra/spectrograms.
 
 ## Requirements

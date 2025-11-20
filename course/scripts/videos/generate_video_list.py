@@ -11,7 +11,7 @@ import glob
 import LBB.config as Config
 
 # Specify paths
-video_list_path = Config.course_root + "/_resources/videos/list.md"
+video_list_path = Config.course_path + "/_resources/videos/list.md"
 
 # Open video list file
 video_list_file = open(video_list_path, 'w')
@@ -22,7 +22,7 @@ todo = 0
 for box_name in Config.box_names:
 
     # Determine box folder
-    box_folder = f"{Config.boxes_root}/{box_name.lower()}"
+    box_folder = f"{Config.boxes_path}/{box_name.lower()}"
 
     # Write box header to video list
     video_list_file.write(f"## {box_name}\n")

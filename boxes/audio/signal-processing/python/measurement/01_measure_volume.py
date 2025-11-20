@@ -1,14 +1,13 @@
-# Measure and plot the spectrogram (frequency vs time) of a sound recorded by the microphone
-import os, pathlib, time
+# Measure the volume of sound recorded by the microphone
+import os, time
 import numpy as np
-import scipy as sp
 import matplotlib.pyplot as plt
+import LBB.config as Config
 import NB3.Sound.microphone as Microphone
 import NB3.Sound.utilities as Utilities
 
 # Specify paths
-repo_path = f"{pathlib.Path.home()}/NoBlackBoxes/LastBlackBox"
-project_path = f"{repo_path}/boxes/audio/signal-processing/python"
+project_path = f"{Config.repo_path}/boxes/audio/signal-processing/python/measurement"
 
 # List available sound devices
 Utilities.list_devices()
@@ -45,7 +44,7 @@ for i in range(50):                                     # Process 50 buffers (10
     time.sleep(0.1) # Wait a bit
 Utilities.meter_stop()
 
-# Store recording
+# Store full sound recording
 recording = np.copy(microphone.sound)
 
 # Shutdown microphone
@@ -55,21 +54,26 @@ microphone.stop()
 if recording.ndim > 1:
     sound = np.mean(recording, axis=1)
 
-# Compute spectrogram
-times, frequencies, magnitudes_db = Utilities.compute_spectrogram(sound, sample_rate)
+# Compute volume
+volume = np.abs(sound)
 
-# Plot
-plt.figure(figsize=(8, 4))
-plt.pcolormesh(times, frequencies, magnitudes_db, shading='gouraud', cmap='plasma')
-plt.ylim(10, 10000) # Limit plot range to 10 Hz → 10 kHz
-plt.ylabel('Frequency [Hz]')
-plt.xlabel('Time [s]')
-plt.title('Spectrogram (10 Hz to 10 kHz)')
-plt.colorbar(label='Magnitude [dB]')
+# Plot volume recording
+plt.figure()
 plt.tight_layout()
 
-# Save spectrogram
-save_path = f"{project_path}/my_spectrogram_measurement.png"
+plt.subplot(2,1,1)
+plt.plot(sound)
+plt.ylabel("Sound Waveform")
+plt.grid(True)
+
+plt.subplot(2,1,2)
+plt.plot(volume)
+plt.xlabel("Sample Number")
+plt.ylabel("Volume")
+plt.grid(True)
+
+# Save volume plot
+save_path = f"{project_path}/my_volume_measurement.png"
 plt.savefig(f"{save_path}")
 
 #FIN

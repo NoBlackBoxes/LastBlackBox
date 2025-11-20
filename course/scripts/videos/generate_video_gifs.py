@@ -12,13 +12,13 @@ import LBB.config as Config
 overwrite = False
 
 # Find all boxes at "boxes_path"
-box_folders = [f for f in glob.glob(Config.boxes_root + '/*') if os.path.isdir(f)]
+box_folders = [f for f in glob.glob(Config.boxes_path + '/*') if os.path.isdir(f)]
 
 # Process each video's *.md file 
 for box_name in Config.box_names:
 
     # Determine box folder
-    box_folder = f"{Config.boxes_root}/{box_name.lower()}"
+    box_folder = f"{Config.boxes_path}/{box_name.lower()}"
 
     # Specify folders
     lessons_folder = box_folder + "/_resources/lessons"

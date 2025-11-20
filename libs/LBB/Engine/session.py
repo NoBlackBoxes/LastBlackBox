@@ -110,7 +110,7 @@ class Session:
             project_box_name = project_basename.split(":")[0].lower()
             project_box = next((b for b in self.boxes if b.slug == project_box_name), None)
             project_lesson = project_basename.split(":")[1]
-            project_path = f"{Config.boxes_root}/{project_box.slug}/_resources/lessons/{project_lesson}.md"
+            project_path = f"{Config.boxes_path}/{project_box.slug}/_resources/lessons/{project_lesson}.md"
             project_text = Utilities.read_clean_text(project_path)
             project = Project.Project(project_box, text=project_text)
             project.index = project_count

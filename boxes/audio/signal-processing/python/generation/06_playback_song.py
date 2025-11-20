@@ -1,15 +1,14 @@
 # Playback a song stored in a WAV file 
-import os, pathlib, time
-import numpy as np
+import os, time
 import matplotlib.pyplot as plt
+import LBB.config as Config
 import NB3.Sound.speaker as Speaker
 import NB3.Sound.utilities as Utilities
 
 # Specify paths
-repo_path = f"{pathlib.Path.home()}/NoBlackBoxes/LastBlackBox"
-project_path = f"{repo_path}/boxes/audio/signal-generation/python"
-song_path = f"{repo_path}/boxes/audio/_resources/sounds/Bach_prelude_C_major.wav"
-#song_path = f"{repo_path}/boxes/audio/_resources/sounds/Axel_F.wav"
+project_path = f"{Config.repo_path}/boxes/audio/signal-processing/python/generation"
+song_path = f"{Config.repo_path}/boxes/audio/_resources/sounds/Bach_prelude_C_major.wav"
+#song_path = f"{Config.repo_path}/boxes/audio/_resources/sounds/Axel_F.wav"
 
 # List available sound devices
 Utilities.list_devices()

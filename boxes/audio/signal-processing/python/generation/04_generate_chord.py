@@ -1,13 +1,13 @@
-# Generate a note (a fundamental tone + harmonics) 
-import os, pathlib, time
+# Generate a chord (a combination of tones) 
+import os, time
 import numpy as np
 import matplotlib.pyplot as plt
+import LBB.config as Config
 import NB3.Sound.speaker as Speaker
 import NB3.Sound.utilities as Utilities
 
 # Specify paths
-repo_path = f"{pathlib.Path.home()}/NoBlackBoxes/LastBlackBox"
-project_path = f"{repo_path}/boxes/audio/signal-generation/python"
+project_path = f"{Config.repo_path}/boxes/audio/signal-processing/python/generation"
 
 # List available sound devices
 Utilities.list_devices()
@@ -29,21 +29,26 @@ speaker.start()
 # Clear error ALSA/JACK messages from terminal
 os.system('cls' if os.name == 'nt' else 'clear')
 
-# Generate a note (a fundamental frequency with harmonics falling off in amplitude)
+# Generate chord from a list of notes
 duration = 2.0
-C4 = 261.63
-D4 = 293.66
-E4 = 329.63
-G4 = 392.0
-A4 = 440.0
-fundamental = D4
-note = Utilities.generate_note(duration, fundamental, sample_rate, num_channels=2, num_harmonics=10)
+c_major = ['C4', 'E4', 'G4']
+e_minor = ['E4', 'G4', 'B4']
+c_major7 = ['C4', 'E4', 'G4', 'B4']
+names = c_major
+notes = []
+for name in names:
+    freq = Utilities.NOTE_FREQS[name]
+    note = Utilities.generate_note(duration, freq, sample_rate, num_channels=num_channels, num_harmonics=5)
+    notes.append(note)
+notes = np.array(notes)
+chord = np.sum(notes, axis=0)
+chord = chord / np.max(np.abs(chord)) # Avoid clipping
 
 # Wait to save recording
 input("Press <Enter> to start generation...")
 
 # Send sound to speaker
-speaker.write(note)
+speaker.write(chord)
 
 # Wait for sound output to finish
 try:
@@ -57,7 +62,7 @@ finally:
 # ---------------------------------
 
 # Compute frequency spectrum
-freqs, mags = Utilities.compute_spectrum(note, sample_rate, min_freq=10, max_freq=10000)
+freqs, mags = Utilities.compute_spectrum(chord, sample_rate, min_freq=10, max_freq=10000)
 
 # Find peaks
 peaks_x, peaks_y = Utilities.find_peaks(freqs, mags)
@@ -69,13 +74,13 @@ plt.plot(freqs, mags)
 for px, py in zip(peaks_x, peaks_y):
     plt.plot(px, py, 'ro')
     plt.text(px + 150.0, py, f"{px:.1f} Hz", ha='left', va='center', fontsize=6)
-plt.title(f"Note ({fundamental} Hz) with Harmonics Spectrum")
+plt.title(f"Chord Spectrum")
 plt.xlabel("Frequency (Hz)")
 plt.ylabel("Magnitude")
 plt.grid(True)
 
 # Save frequency spectrum plot
-save_path = f"{project_path}/my_note_frequency_spectrum.png"
+save_path = f"{project_path}/my_chord_frequency_spectrum.png"
 plt.savefig(f"{save_path}")
 
 #FIN

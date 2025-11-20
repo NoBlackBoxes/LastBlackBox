@@ -1,13 +1,13 @@
 # Stream the frequency spectrum measured for a short sound buffer using a network socket
-import os, pathlib, time
+import os, time
 import socket, netifaces
 import numpy as np
+import LBB.config as Config
 import NB3.Sound.microphone as Microphone
 import NB3.Sound.utilities as Utilities
 
 # Specify paths
-repo_path = f"{pathlib.Path.home()}/NoBlackBoxes/LastBlackBox"
-project_path = f"{repo_path}/boxes/audio/signal-processing/python"
+project_path = f"{Config.repo_path}/boxes/audio/signal-processing/python/measurement"
 
 # List available sound devices
 Utilities.list_devices()

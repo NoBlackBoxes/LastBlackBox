@@ -70,13 +70,13 @@ class Box:
         line_count += 1
 
         # Load description
-        info_path = f"{Config.boxes_root}/{self.slug}/_resources/info.md"
+        info_path = f"{Config.boxes_path}/{self.slug}/_resources/info.md"
         info_text = Utilities.read_clean_text(info_path)
         description_line = Utilities.find_line(info_text, "## Description") + 1
         self.description = info_text[description_line]
 
         # Load materials
-        materials_path = f"{Config.boxes_root}/{self.slug}/_resources/materials.csv"
+        materials_path = f"{Config.boxes_path}/{self.slug}/_resources/materials.csv"
         materials_text = Utilities.read_clean_text(materials_path)
         materials = []
         for material_text in materials_text:
@@ -94,7 +94,7 @@ class Box:
                 print(f"Invalid Lesson Tag: {text[line_count]}")
                 exit(-1)
             lesson_basename = text[line_count].split("{")[1][:-1]
-            lesson_path = f"{Config.boxes_root}/{self.slug}/_resources/lessons/{lesson_basename}.md"
+            lesson_path = f"{Config.boxes_path}/{self.slug}/_resources/lessons/{lesson_basename}.md"
             lesson_text = Utilities.read_clean_text(lesson_path)
             lesson = Lesson.Lesson(self, text=lesson_text)
             lesson.index = lesson_count
