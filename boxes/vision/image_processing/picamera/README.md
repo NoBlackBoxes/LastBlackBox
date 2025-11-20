@@ -1,4 +1,4 @@
-# Vision : cameras : picamera
+# Vision : Image Processing : picamera
 
 Using the picamera(2) library, which uses libcamera
 
