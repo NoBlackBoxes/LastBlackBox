@@ -6,7 +6,7 @@ import numpy as np
 import NB3.Plot.line as Line
 
 # Specify host IP address and port to use for the socket.
-ip_address = '192.168.1.70'  # Use the IP of your NB3 (the server)
+ip_address = '10.12.73.92'  # Use the IP of your NB3 (the server)
 port = 1234  # Use the same port as specified in the socket_server
 
 # Open line plot
