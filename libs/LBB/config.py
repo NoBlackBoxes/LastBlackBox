@@ -9,9 +9,10 @@ LBB : Config
 import pathlib
 
 # Load LBB configuration variables
-repo_root = f"{pathlib.Path.home()}/NoBlackBoxes/LastBlackBox"
-boxes_root = repo_root + "/boxes"
-course_root = repo_root + "/course"
+repo_path = f"{pathlib.Path.home()}/NoBlackBoxes/LastBlackBox"
+boxes_path = repo_path + "/boxes"
+course_path = repo_path + "/course"
+libs_path = repo_path + "/libs"
 
 # Store course version names
 course_names = ["The Last Black Box", "Bootcamp", "Braitenberg", "Build a Brain", "AI-Workshops"]
