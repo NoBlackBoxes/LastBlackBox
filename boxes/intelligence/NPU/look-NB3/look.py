@@ -9,16 +9,14 @@ import NB3.Server.server as Server
 
 # Specify paths
 project_path = f"{Config.repo_path}/boxes/intelligence/NPU/look-NB3"
-
-# Specify site root
-root = f"{npu_path}/look-NB3/site"
+site_root = f"{project_path}/site"
 
 # Open serial port
 ser = serial.Serial(port='/dev/ttyUSB0', baudrate = 115200)
 
 # Specify model and labels
-model_path = f"{project_path}/look-NB3/model/ssd_mobilenet_v2_face_quant_postprocess_edgetpu.tflite"
-#model_path = f"{project_path}/look-NB3/model/movenet_single_pose_thunder_ptq_edgetpu.tflite"
+model_path = f"{project_path}/model/ssd_mobilenet_v2_face_quant_postprocess_edgetpu.tflite"
+#model_path = f"{project_path}/model/movenet_single_pose_thunder_ptq_edgetpu.tflite"
 
 # Load delegate (EdgeTPU)
 delegate = tflite.load_delegate('libedgetpu.so.1')
@@ -43,7 +41,7 @@ camera.overlay = overlay
 
 # Start Server (for streaming)
 interface = Server.get_wifi_interface()
-server = Server.Server(root=root, interface=interface)
+server = Server.Server(root=site_root, interface=interface)
 server.start()
 
 # Initialize interactive terminal
