@@ -4,6 +4,7 @@ import io
 import numpy as np
 import pyaudio
 import wave
+import soundfile
 from threading import Lock
 
 #
@@ -132,12 +133,26 @@ class Speaker:
     def play_wav(self, wav_path):
         self.wav_path = wav_path
 
-        # Read a WAV file
-        wav_file = wave.open(wav_path, 'rb')
-        wav_num_channels = wav_file.getnchannels()
-        wav_sample_rate = wav_file.getframerate()
-        wav_sample_width = wav_file.getsampwidth()
-        wav_num_samples =  wav_file.getnframes()
+        # Get WAV info (works with WAVE_EXTENSIBLE etc.)
+        info = soundfile.info(wav_path)
+        wav_num_channels = info.channels
+        wav_sample_rate = info.samplerate
+        wav_num_samples = info.frames
+
+        # Try to infer "sample width" in bytes from subtype (for your validation print)
+        subtype = info.subtype  # e.g. 'PCM_16', 'PCM_24', 'PCM_32', 'FLOAT', 'DOUBLE'
+        if subtype in ("PCM_U8", "PCM_S8"):
+            wav_sample_width = 1
+        elif subtype == "PCM_16":
+            wav_sample_width = 2
+        elif subtype == "PCM_24":
+            wav_sample_width = 3
+        elif subtype in ("PCM_32", "FLOAT"):
+            wav_sample_width = 4
+        elif subtype == "DOUBLE":
+            wav_sample_width = 8
+        else:
+            wav_sample_width = None  # unknown / exotic
 
         # Validate WAV file
         if wav_num_channels != self.num_channels:
@@ -147,28 +162,19 @@ class Speaker:
         if wav_sample_width != self.sample_width:
             print(f"WAV file has inconsistent sample width {wav_sample_width} for output device {2}.")
 
+        # Read WAV data as float32; always_2d gives shape (frames, channels)
+        float_data, sr = soundfile.read(wav_path, dtype="float32", always_2d=True)
+
         # Limit number of frames to complete buffers
         wav_num_samples = wav_num_samples - (wav_num_samples % self.buffer_size_samples)
 
-        # Read WAV file
-        wav_data = wav_file.readframes(wav_num_samples)
-        wav_file.close()
-
-        # Separate channel data and convert to float
-        if wav_sample_width == 2:
-            channel_data = np.reshape(np.frombuffer(wav_data, dtype=np.int16).transpose(), (-1,self.num_channels))
-            float_data = np.float32(channel_data) * 3.0517578125e-05
-        elif wav_sample_width == 4:
-            channel_data = np.reshape(np.frombuffer(wav_data, dtype=np.int32).transpose(), (-1,self.num_channels))
-            float_data = np.float32(channel_data) * 4.656612873077393e-10
-        else:
-            print("(NB3.Sound) Unsupported WAV output sample format")
-            exit(-1)
+        # Truncate to whole buffers
+        float_data = float_data[:wav_num_samples, :]
 
         # Write WAV data to speaker
         self.write(float_data)
 
-        return np.copy(self.sound)
+        return
     
     # Generate speech using classic Text-to-Speech (TTS) engine (espeak)
     def speak(self, text, voice="en-gb", wpm=140, amp=100, gap=0, pitch=50):
@@ -210,7 +216,7 @@ class Speaker:
         # Write WAV data to speaker
         self.write(data)
 
-        return np.copy(self.sound)
+        return
 
     # Check if for sound output is finished
     def is_playing(self):

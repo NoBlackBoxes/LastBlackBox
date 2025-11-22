@@ -39,7 +39,8 @@ pip install matplotlib        # Mathematical plots
 pip install setuptools        # Tools for working with Python packages
 pip install wheel             # Extracting (and compressing) "wheels" (package downloads)
 pip install pyaudio           # Python audio library
-pip install wave              # Wave (sound) file tools
+pip install wave              # Wave file tools
+pip install soundfile         # Sound file tools (support additional sound formats)
 pip install sshkeyboard       # Key press and release detection via SSH 
 pip install netifaces         # Discover network interface names and addresses
 ```

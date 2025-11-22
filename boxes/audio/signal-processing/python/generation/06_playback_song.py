@@ -34,7 +34,8 @@ os.system('cls' if os.name == 'nt' else 'clear')
 input("Press <Enter> to start playback...")
 
 # Play WAV file
-song = speaker.play_wav(song_path)
+speaker.play_wav(song_path)
+song = speaker.sound
 
 # Wait for sound output to finish
 try:

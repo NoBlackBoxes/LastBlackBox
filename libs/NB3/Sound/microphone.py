@@ -1,7 +1,7 @@
 import time
 import numpy as np
 import pyaudio
-import wave
+import soundfile
 from threading import Lock
 
 #
@@ -115,13 +115,7 @@ class Microphone:
         return latest
 
     # Start saving WAV
-    def save_wav(self, wav_path, wav_max_samples):
-
-        # Prepare WAV file
-        wav_file = wave.open(wav_path, 'wb')
-        wav_file.setnchannels(self.num_channels)
-        wav_file.setsampwidth(2)    # int16 WAV
-        wav_file.setframerate(self.sample_rate)
+    def save_wav(self, wav_path, wav_max_samples, subtype="PCM_32"):
 
         # Determine WAV range (in samples)
         if wav_max_samples < self.valid_samples:
@@ -131,17 +125,18 @@ class Microphone:
             wav_start_sample = 0
             wav_stop_sample = self.valid_samples
 
-        # Convert to integer (16-bit)
-        integer_data = np.int16(self.sound[wav_start_sample:wav_stop_sample,:] * 2**15)
+        # Slice the recorded sound: shape (samples, channels)
+        data = self.sound[wav_start_sample:wav_stop_sample, :]
 
-        # Convert sound to frame data
-        frames = np.reshape(integer_data, -1)
+        # Ensure [-1, 1] range, float32 for soundfile
+        data = np.clip(data, -1.0, 1.0).astype(np.float32)
 
-        # Write to WAV
-        wav_file.writeframes(frames)
+        # For mono: flatten from (N,1) -> (N,)
+        if self.num_channels == 1 and data.ndim == 2:
+            data = data[:, 0]
 
-        # Close WAV file
-        wav_file.close()
+        # Write 32-bit signed PCM WAV
+        soundfile.write(wav_path, data, self.sample_rate, subtype=subtype)
 
         return
 

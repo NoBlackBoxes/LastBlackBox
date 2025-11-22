@@ -32,7 +32,8 @@ os.system('cls' if os.name == 'nt' else 'clear')
 input("Press <Enter> to start speech generation...")
 
 # Generate speech and send to speaker
-speech = speaker.speak("Go, Stop, Go, Stop!")
+speaker.speak("Go, Stop, Go, Stop!")
+speech = speaker.sound
 
 # Wait for sound output to finish
 try:
