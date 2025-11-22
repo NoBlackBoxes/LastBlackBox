@@ -208,7 +208,7 @@ def compute_spectrum(sound, sample_rate, min_freq=10, max_freq=10000, normalize=
 
     return freqs, magnitudes
 
-def compute_spectrogram(sound, sample_rate, min_freq=10, max_freq=10000, normalize=True):
+def compute_spectrogram(sound, sample_rate, min_freq=10, max_freq=10000, dynamic_range=100):
     # Ensure single channel (Mono)
     if sound.ndim > 1:
         sound = np.mean(sound, axis=1)
@@ -224,6 +224,8 @@ def compute_spectrogram(sound, sample_rate, min_freq=10, max_freq=10000, normali
         mode='magnitude'    # Compute the magnitude (easiest to visualize)
     )
     magnitudes_db = 20 * np.log10(Sxx + 1e-12)
+    max_val = magnitudes_db.max()
+    magnitudes_db = np.clip(magnitudes_db, max_val - dynamic_range, max_val)
 
     return times, frequencies, magnitudes_db
 
