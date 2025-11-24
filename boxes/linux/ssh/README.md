@@ -1,9 +1,7 @@
 # Linux : SSH
-
 Secure shell.
 
 ## SSH Tunnel Server
-
 You will need a virtual private server (VPS) in the cloud, basically a computer you can use that has a public IP address.
 
 Connect to your VPS and check that your sshd config has "AllowTcpForwarding yes" and "GatewayPorts clientspecified".
