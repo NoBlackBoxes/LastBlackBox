@@ -1,5 +1,4 @@
 # computers : programming : arduino
-
 Here we will use the Arduino language and libraries, which were designed to make programming an Arduino board easier.
 
 ## Prerequisites

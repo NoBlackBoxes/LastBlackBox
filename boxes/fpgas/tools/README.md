@@ -1,6 +1,5 @@
 # FPGAs : tools
-
-Instaling tools to synthesize and upload to an FPGA
+Installing tools to synthesize and upload to an FPGA
 
 ## Create/activate python virtual environment
 ```bash

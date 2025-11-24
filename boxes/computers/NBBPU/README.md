@@ -1,9 +1,7 @@
 # computers : NBBPU
-
 The No Black Box Processing Unit
 
 ## Overview
-
 A custom CPU loosely based on the MOS 6502 (and the RISC-V/AVR ISAs)
 
 ## Requirements
