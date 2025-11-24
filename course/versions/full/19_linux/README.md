@@ -41,19 +41,21 @@ Name|Description| # |Package|Data|Link|
 > Git is a program that keeps track of changes to your files. It is very useful when developing code. This entire course is stored as a git "repository" on GitHub.
 
 
-**TASK**: "Clone" (copy) all of the code in the LastBlackBox GitHub repository directly to your NB3's midbrain. It will help with later exercises if we all put this example code at the **same location** on the Raspberry Pi (the "home" directory).
+**TASK**: "Clone" (copy) all of the contents in the LastBlackBox GitHub repository directly to your NB3's midbrain. **It is very important that you clone the LBB repo to a specific folder ("NoBlackBoxes") in your NB3's home directory**.
+<details><summary><strong>Target</strong></summary>
+    *Why?* Most of the code examples assume that the repo is stored in this location. If you prefer to put it somewhere else, then you must be comfortable modifying the "repo root" path used in the examples.
+</details><hr>
+
 ```bash
-cd ~                # Navigate to "home" directory
+cd $HOME            # Navigate to your "Home" directory
 mkdir NoBlackBoxes  # Create NoBlackBoxes directory
 cd NoBlackBoxes     # Change to NoBlackBoxes directory
+
 
 # Clone LBB repo (only the most recent version)
 git clone --depth 1 https://github.com/NoBlackBoxes/LastBlackBox
 ```
 
-<details><summary><strong>Target</strong></summary>
-    You should now have a complete copy of the LBB repo on your NB3.
-</details><hr>
-
+- You should now have a complete copy of the LBB repo on your NB3.
 
 # Project

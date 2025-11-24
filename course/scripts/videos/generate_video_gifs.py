@@ -58,8 +58,8 @@ for box_name in Config.box_names:
 
         # Specify GIF parameters
         target_size = (480, 270)
-        pause_duration_ms = 4000
-        animation_duration_ms = 250
+        pause_duration_ms = 5000
+        animation_duration_ms = 3000
 
         # Load thumbnail
         thumbnail = Image.open(png_path).convert("RGB")

@@ -8,5 +8,4 @@ In this box, you will learn about audio...
 {NB3_Install-the-Mouth}
 
 # Projects
-{Audio:Signal-Generation}
 {Audio:Signal-Processing}
