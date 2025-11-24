@@ -1,4 +1,4 @@
-# course : scripts : packaging
+# course : tools : packaging
 Generate packaging for LBB course kits
 
 ## CAD generation for course material models

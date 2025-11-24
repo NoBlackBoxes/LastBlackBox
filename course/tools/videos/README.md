@@ -1,4 +1,4 @@
-# The Last Black Box: Course: Scripts: Videos
+# course : tools : videos
 Generate the LBB video list (with links), thumbnail frames, and GIF summary clips
 
 ## Normalize Audio

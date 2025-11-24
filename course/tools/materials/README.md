@@ -1,4 +1,4 @@
-# course : scripts : materials
+# course : tools : materials
 Generate BOM and packing lists
 
 ### Materials Format
