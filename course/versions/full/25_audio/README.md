@@ -59,6 +59,10 @@ M2 nut|regular M2 nut|2|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 ### Signal Processing
 > One-dimensional (1D) signals are common in the world. They often arise as time series (a sequence of measurements made at a regular "sample rate"). Here we will explore techniques to process a common 1D signal...**sound**. We will both measure and generate different sounds. We will develop tools in Python to compare their amplitude (volume), frequency content, and visualize the "spectrogram" of different spoken words (e.g. "Go" vs "Stop").
 
+<details><summary><weak>Guide</weak></summary>
+:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/manage/videos/1139975157" target="_blank" rel="noopener noreferrer">here</a>.
+</details><hr>
+
 - Explore, test, and expand upon these Python examples for processing signals measured from the NB3's microphones (ears): [Measurement](/boxes/audio/signal-processing/python/measurement/)
 - - Stream the live frequency spectrum from your NB3 to your PC.
 - - Run the [server](/boxes/audio/signal-processing/python/measurement/03_stream_frequency.py) on your NB3 (via SSH)
