@@ -6,10 +6,7 @@ NB3 : Server : Server Class
 """
 
 # Imports
-import os
-import re
-import time
-import serial
+import os, re
 import socket
 import netifaces
 import threading

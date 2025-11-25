@@ -21,11 +21,7 @@ M2 nut|regular M2 nut|2|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 </p></details><hr>
 
 ## Audio
-### NB3 : Streaming Sound
-> Let's stream live audio from your NB3's camera to any web browser.
-
-
-# Project
+We will continue our explanation of sound measurement and generation by exploring "signal processing" in Python.
 #### Watch this video: [Signal Processing](https://vimeo.com/manage/videos/1139975157)
 <p align="center">
 <a href="https://vimeo.com/manage/videos/1139975157" title="Control+Click to watch in new tab"><img src="../../../../boxes/audio/_resources/lessons/thumbnails/Signal-Processing.gif" alt="Signal Processing" width="480"/></a>
@@ -44,3 +40,9 @@ M2 nut|regular M2 nut|2|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 sudo apt install espeak-ng
 ```
 
+# Project
+You should now have all the skills required to make your NB3 "respond" to sound!
+  - This could be as simple as detecting a loud ***clap*** and turning on an LED.
+  - You could tell NB3 to turn left or right based on the most prominent frequency measured by its ears.
+  - Respond to commands, like "Go" and "Stop"...tricky...but doable.
+    - *Note*: We will revisit this when we start learning about learning.
