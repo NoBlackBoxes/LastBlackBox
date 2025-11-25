@@ -36,6 +36,7 @@ class Overlay:
         self.palette = color_palette_16
         self.timestamp = False
         self.timestamp_color = color_palette_16[3] # Yellow
+        self.timestamp_position = (20,40)
         self.labels = []
         self.rectangles = []
         self.circles = []
@@ -58,7 +59,7 @@ class Overlay:
         if self.timestamp:
             r, g, b = self.timestamp_color
             timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]
-            cv2.putText(array, timestamp, (20, 40), cv2.FONT_HERSHEY_SIMPLEX, 1, (b,g,r), 2, cv2.LINE_AA)
+            cv2.putText(array, timestamp, self.timestamp_position, cv2.FONT_HERSHEY_SIMPLEX, 1, (b,g,r), 2, cv2.LINE_AA)
         for i, label in enumerate(self.labels):
             x, y, text = label
             r, g, b = self.palette[i % 16]

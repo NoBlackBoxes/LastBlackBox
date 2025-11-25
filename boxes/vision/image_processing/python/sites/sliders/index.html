@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>NB3 Interactive Image (HSV Sliders)</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon"> <!-- Favicon added -->
+</head>
+
+<body>
+    <!-- Slider Control -->
+    <div class="control-panel">
+        <div class="slider-container">
+            <label for="hue" class="slider-label">Hue: 
+                <span id="hue-value">60</span>
+            </label>
+            <input type="range" min="0" max="179" value="60" class="slider" id="hue">
+        </div>
+        <div class="slider-container">
+            <label for="sat" class="slider-label">Sat: 
+                <span id="sat-value">90</span>
+            </label>
+            <input type="range" min="0" max="255" value="90" class="slider" id="sat">
+        </div>
+        <div class="slider-container">
+            <label for="val" class="slider-label">Val: 
+                <span id="val-value">70</span>
+            </label>
+            <input type="range" min="0" max="255" value="70" class="slider" id="val">
+        </div>
+    </div>
+    
+    <!-- Camera Stream -->
+    <div class="stream-container">
+        <div class="container"><img src="/stream/camera.mjpg" /></div>
+        <div class="container"><img src="/stream/display.mjpg" /></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

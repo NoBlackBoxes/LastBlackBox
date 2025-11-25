@@ -1,5 +1,5 @@
 # Apply binary threshold to a grayscale image and stream result via web server
-# - Include interactive slider on streaming page to adjust threshold level
+# - Include interactive slider on the streaming page to adjust threshold level
 import time, cv2
 import LBB.config as Config
 import importlib.util

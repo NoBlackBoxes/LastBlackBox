@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    color: white;
+    font-family: sans-serif;
+}
+
+/* Stream layout */
+.stream-container {
+    display: flex;
+    height: 100vh;
+}
+
+.container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Slider panel */
+.control-panel {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.slider-label {
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+.slider {
+    width: 300px;
+    vertical-align: middle;
+}
+
+#hue {
+    -webkit-appearance: none;
+    height: 12px;
+    border-radius: 6px;
+
+    /* 0–179 mirrored around 60, using key stops */
+    background: linear-gradient(
+        to right,
+        hsl(240, 100%, 50%) 0%,     /* s=0   -> blue    */
+        hsl(180, 100%, 50%) 16.8%,  /* s=30  -> cyan    */
+        hsl(120, 100%, 50%) 33.5%,  /* s=60  -> green   */
+        hsl(60,  100%, 50%) 50.3%,  /* s=90  -> yellow  */
+        hsl(0,   100%, 50%) 67.0%,  /* s=120 -> red     */
+        hsl(300, 100%, 50%) 83.8%,  /* s=150 -> magenta */
+        hsl(240, 100%, 50%) 100%    /* s=179 -> blue-ish*/
+    );
+}
+
+/* Thumb */
+#hue::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #000;
+    cu
+
+
