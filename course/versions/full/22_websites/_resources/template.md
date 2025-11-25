@@ -2,8 +2,8 @@
 In this box, you will learn about websites...
 
 ## Websites
-{HTML}
-{CSS}
-{Javascript}
+{Websites:HTML}
+{Websites:CSS}
+{Websites:Javascript}
 
 # Projects

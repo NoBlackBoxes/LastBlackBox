@@ -7,7 +7,6 @@ LBB : Engine : Course Class
 
 # Imports
 import glob
-import json
 import LBB.config as Config
 import LBB.utilities as Utilities
 import LBB.Engine.session as Session
@@ -17,38 +16,19 @@ class Course:
     """
     LBB Course Class
 
-    Stores a list course sessions and boxes
+    Stores a list course sessions
     """
-    def __init__(self, name=None, path=None):
-        self.name = None         # Course name
-        self.slug = None         # Course slug (URL)
-        self.sessions = None     # Course sessions
-        if name:
-            self.build(name)     # Build course from repository
-        elif path:
-            self.load(path)      # Load course from JSON file
-        return
-
-    # Convert course object to dictionary
-    def to_dict(self):
-        dictionary = {
-            "name": self.name,
-            "slug": self.slug,
-            "sessions": [session.to_dict() for session in self.sessions]
-        }
-        return dictionary
-    
-    # Convert dictionary to course object
-    def from_dict(self, dictionary):
-        self.name = dictionary.get("name")
-        self.slug = dictionary.get("slug")
-        self.sessions = [Session.Session(dictionary=session_dictionary) for session_dictionary in dictionary.get("sessions", [])]
+    def __init__(self, name):
+        self.name = None        # Course name
+        self.slug = None        # Course slug
+        self.sessions = None    # Course sessions
+        self.build(name)        # Build course from repository
         return
     
     # Build course object from repository
     def build(self, name):
         """
-        Build a version of the LBB course from the repository resources
+        Build a version of an LBB course from the repository resources
         """
         # Set course parameters
         self.name = name
@@ -57,7 +37,7 @@ class Course:
         # List session folders
         course_folder = f"{Config.course_path}/versions/{self.slug}"
         session_folders = sorted(glob.glob(f"{course_folder}/[0-9][0-9]_*"))
-
+        
         # Load sessions from templates
         self.sessions = []
         for session_index, session_folder in enumerate(session_folders):
@@ -66,18 +46,6 @@ class Course:
             session = Session.Session(self, text=session_text)
             session.index = session_index
             self.sessions.append(session)
-        return
-
-    # Load course object from JSON
-    def load(self, path):
-        with open(path, "r") as file:
-            self.from_dict(json.load(file))
-        return
-
-    # Store course object in JSON file
-    def store(self, path):
-        with open(path, "w") as file:
-            json.dump(self.to_dict(), file, indent=4)
         return
 
 # --------------

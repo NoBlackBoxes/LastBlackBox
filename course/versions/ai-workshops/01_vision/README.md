@@ -1,9 +1,6 @@
 # AI-Workshops : Vision
 We will learn about classical and ML approaches to modern computer vision.
 
-## Vision
-Look at everyone.
-
 <details><summary><i>Materials</i></summary><p>
 
 Name|Description| # |Package|Data|Link|
@@ -20,6 +17,7 @@ M2 nut|regular M2 nut|4|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 
 </p></details><hr>
 
+## Vision
 ### Cameras
 > From CCDs to CMOS.
 
@@ -32,32 +30,29 @@ M2 nut|regular M2 nut|4|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 > Let's install a camera on your NB3.
 
 - Test your camera with the following command
+- *code*
 ```bash
 # Navigate to LBB root
 cd ~/NoBlackBoxes/LastBlackBox
 
-
 # Create folder for images in the temporary folder
 mkdir _tmp/images
 
-
 # Navigate to the temporary image folder
 cd _tmp/images
-
 
 # Capture a still image and save it to a file
 libcamera-still -o test.png
 ```
 
-
 ### Image-Processing
 > Old-school (classical) techniques for processing two-dimensional data (2D).
 
 - Install python opencv
+- *code*
 ```bash
 pip install opencv-python
 ```
-
 
 # Project
 ### NB3 : Streaming Images

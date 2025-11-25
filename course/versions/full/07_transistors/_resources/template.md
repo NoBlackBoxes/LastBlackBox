@@ -2,10 +2,10 @@
 In this box, you will learn about transistors...
 
 ## Transistors
-{Diodes}
-{Semiconductors}
-{Transistors-BJTs}
-{Transistors-MOSFETs}
+{Transistors:Diodes}
+{Transistors:Semiconductors}
+{Transistors:Transistors-BJTs}
+{Transistors:Transistors-MOSFETs}
 
 # Projects
 {Transistors:NB3_Testing-Diodes}

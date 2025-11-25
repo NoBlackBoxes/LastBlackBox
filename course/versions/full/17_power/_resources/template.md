@@ -2,7 +2,7 @@
 In this box, you will learn about power...
 
 ## Power
-{DC-DC-Converters}
+{Power:DC-DC-Converters}
 
 # Projects
 {Power:NB3_Power-Supply}

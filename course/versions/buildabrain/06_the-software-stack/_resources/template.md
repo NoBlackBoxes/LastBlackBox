@@ -2,25 +2,25 @@
 Modern computing relies on many layers of software to coordinate increasingly powerful hardware. Today we wil dive into this "software stack" by installing a powerful open-source **operating system** called **Linux** onto a powerful mini-computer (Raspberry Pi) in your NB3's midbrain.
 
 ## Power
-{DC-DC-Converters}
-{NB3_Power-Supply}
-{NB3_Battery-Pack}
+{Power:DC-DC-Converters}
+{Power:NB3_Power-Supply}
+{Power:NB3_Battery-Pack}
 
 ## Systems
-{Operating-Systems}
-{NB3_Midbrain}
-{NB3_RPiOS}
-{NB3_Connecting-to-RPi}
-{Visual-Studio-Code}
+{Systems:Operating-Systems}
+{Systems:NB3_Midbrain}
+{Systems:NB3_RPiOS}
+{Systems:NB3_Connecting-to-RPi}
+{Systems:Visual-Studio-Code}
 
 ## Linux
-{Navigating-the-Command-Line}
-{Git}
-{Package-Managers}
+{Linux:Navigating-the-Command-Line}
+{Linux:Git}
+{Linux:Package-Managers}
 
 ## Python
-{Introducing-the-Interpreter}
-{Virtual-Environments}
+{Python:Introducing-the-Interpreter}
+{Python:Virtual-Environments}
 
 # Project
 {Python:NB3_Playing-With-Python}

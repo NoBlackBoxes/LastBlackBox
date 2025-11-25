@@ -1,9 +1,6 @@
 # The Last Black Box : Atoms
 In this box, you will learn about atoms...
 
-## Atoms
-*"Let's start at the very beginning, a very good place to start"*. - R&H
-
 <details><summary><i>Materials</i></summary><p>
 
 Name|Description| # |Package|Data|Link|
@@ -12,6 +9,7 @@ Periodic Table|Periodic Table Card|1|Body (000)|[-D-](/boxes/atoms/card)|[-L-](V
 
 </p></details><hr>
 
+## Atoms
 #### Watch this video: [Atomic Structure](https://vimeo.com/1000458082)
 <p align="center">
 <a href="https://vimeo.com/1000458082" title="Control+Click to watch in new tab"><img src="../../../../boxes/atoms/_resources/lessons/thumbnails/Atomic-Structure.gif" alt="Atomic Structure" width="480"/></a>
@@ -19,12 +17,8 @@ Periodic Table|Periodic Table Card|1|Body (000)|[-D-](/boxes/atoms/card)|[-L-](V
 
 > A brief introduction to the physics of atoms, their parts (protons, neutrons, and electrons), and their classical vs. quantum structure.
 
-
-**TASK**: Draw your favorite atom in the "classical" style
-<details><summary><strong>Target</strong></summary>
-    You should have the appropriate number of electrons in each orbital.
-</details><hr>
-
+- **TASK**: Draw your favorite atom in the "classical" style
+> You should have the appropriate number of electrons in each orbital.
 
 #### Watch this video: [The Periodic Table](https://vimeo.com/1028399080)
 <p align="center">
@@ -56,4 +50,4 @@ Periodic Table|Periodic Table Card|1|Body (000)|[-D-](/boxes/atoms/card)|[-L-](V
 > Not all Nuclei are stable, sometimes they can fall apart (fission). What if two atoms get *sooooo* close to one another that their Nuclei connect (fuse)? Lots of energy is released...and a new element forms.
 
 
-# Project
+# Projects

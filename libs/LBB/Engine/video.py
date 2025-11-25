@@ -14,35 +14,16 @@ class Video:
 
     Stores a link to a video tutorial
     """ 
-    def __init__(self, _box, text=None, dictionary=None):
-        self.course = _box.course       # Video parent (course)
-        self.session = _box.session     # Video parent (session)
-        self.box = _box                 # Video parent (box)
-        self.name = None                # Video name
-        self.url = None                 # Video url
-        self.id = None                  # Video id
-        if text:
-            self.parse(text)            # Parse video from README text
-        elif dictionary:
-            self.from_dict(dictionary)  # Load lesson from dictionary
+    def __init__(self, _lesson, text):
+        self.course = _lesson.course        # Video parent (course)
+        self.session = _lesson.session      # Video parent (session)
+        self.box = _lesson.box              # Video box
+        self.name = None                    # Video name
+        self.url = None                     # Video url
+        self.id = None                      # Video id
+        self.parse(text)                    # Parse video from Markdown text
         return
     
-    # Convert video object to dictionary
-    def to_dict(self):
-        dictionary = {
-            "name": self.name,
-            "url": self.url,
-            "id": self.id
-        }
-        return dictionary
-
-    # Convert dictionary to video object
-    def from_dict(self, dictionary):
-        self.name = dictionary.get("name")
-        self.url = dictionary.get("url")
-        self.id = dictionary.get("id")
-        return
-
     # Parse video string
     def parse(self, text):
         split_line = text.split(']') 
@@ -51,15 +32,15 @@ class Video:
         self.id = self.url.split('/')[-1]
         return
 
-    # Render video in Markdown or HTML
-    def render(self, type):
+    # Render video object as Markdown
+    def render(self):
         image_prefix = "../../../.."
         gif_name = self.name + ".gif"
         gif_name = gif_name.replace('(', '').replace(')', '').replace('\'', '').replace(',', '')
         if gif_name.startswith("NB3"):
             gif_name = "NB3_" + gif_name[6:]
         gif_name = gif_name.replace(" ", "-")
-        output = f"<p align=\"center\">\n<a href=\"{self.url}\" title=\"Control+Click to watch in new tab\"><img src=\"{image_prefix}/boxes/{self.box.slug}/_resources/lessons/thumbnails/{gif_name}\" alt=\"{self.name}\" width=\"480\"/></a>\n</p>\n"
+        output = f"<p align=\"center\">\n<a href=\"{self.url}\" title=\"Control+Click to watch in new tab\"><img src=\"{image_prefix}/boxes/{self.box}/_resources/lessons/thumbnails/{gif_name}\" alt=\"{self.name}\" width=\"480\"/></a>\n</p>\n"
         return output
 
 #FIN

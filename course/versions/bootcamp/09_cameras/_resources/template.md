@@ -1,8 +1,8 @@
 # Bootcamp : Cameras
-Let's add a camera (ryr) to your NB3.
+Let's add a camera (eye) to your NB3.
 
 ## Vision
-{Cameras}
+{Vision:Cameras}
 
 # Project
 {Vision:NB3_Install-the-Eye}

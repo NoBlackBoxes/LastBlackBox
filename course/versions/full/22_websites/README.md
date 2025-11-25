@@ -1,9 +1,6 @@
 # The Last Black Box : Websites
 In this box, you will learn about websites...
 
-## Websites
-Creating a website, from simple to complex.
-
 <details><summary><i>Materials</i></summary><p>
 
 Name|Description| # |Package|Data|Link|
@@ -11,6 +8,7 @@ Name|Description| # |Package|Data|Link|
 
 </p></details><hr>
 
+## Websites
 #### Watch this video: [HTML](https://vimeo.com/1134724080)
 <p align="center">
 <a href="https://vimeo.com/1134724080" title="Control+Click to watch in new tab"><img src="../../../../boxes/websites/_resources/lessons/thumbnails/HTML.gif" alt="HTML" width="480"/></a>
@@ -19,7 +17,7 @@ Name|Description| # |Package|Data|Link|
 > Hyper-text markup language (HTML) is the data format of the world-wide-web. When you "visit a website" you are simply asking for an HTML file. What is an HTML file? It is just a text file with some special "<tags>" that control how the contents of the file should be displayed. The program you use to request these and display these files is called a *web browser*.
 
 - Create an HTML file. You can start from the simple template here: [HTML (simple)](/boxes/websites/html/simple.html)
-- - You should do this on your PC (not NB3) in a VS Code window (or any text editor)
+  - You should do this on your PC (not NB3) in a VS Code window (or any text editor)
 - Open your HTML file in a browser on your PC. Do you see your awesome website?
 - Add some more complex layout to your website. Here is an example: [HTML (layout)](/boxes/websites/html/layout.html)
 - Find a cool website on the internet. Use the developer tools in your internet browser to "explore" the mess of HTML that underlies this website...and maybe make some creative changes.
@@ -46,4 +44,4 @@ Name|Description| # |Package|Data|Link|
 - Here is another example to gets the current time and updates a live clock page: [Live Clock](/boxes/websites/javascript/alternates/clock.js)
 - There is way more you can do with Javascript. Have fun exploring and learning!
 
-# Project
+# Projects

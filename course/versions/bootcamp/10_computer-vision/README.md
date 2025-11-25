@@ -1,9 +1,6 @@
 # Bootcamp : Computer Vision
 Let's learn how ot process two-dimensional data (images).
 
-## Vision
-Look at everyone.
-
 <details><summary><i>Materials</i></summary><p>
 
 Name|Description| # |Package|Data|Link|
@@ -20,17 +17,18 @@ M2 nut|regular M2 nut|4|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 
 </p></details><hr>
 
+## Vision
+### NB3 : Streaming Images
+> Let's stream live images from your NB3's camera to any web browser.
+
+
+# Project
 ### Image-Processing
 > Old-school (classical) techniques for processing two-dimensional data (2D).
 
 - Install python opencv
+- *code*
 ```bash
 pip install opencv-python
 ```
-
-
-# Project
-### NB3 : Streaming Images
-> Let's stream live images from your NB3's camera to any web browser.
-
 

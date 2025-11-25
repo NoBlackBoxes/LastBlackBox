@@ -1,9 +1,6 @@
 # Bootcamp : Signal Processing
 Let's learn how to process one-dimensional time series data...like audio waveforms.
 
-## Audio
-Listen up, speak up.
-
 <details><summary><i>Materials</i></summary><p>
 
 Name|Description| # |Package|Data|Link|
@@ -23,6 +20,12 @@ M2 nut|regular M2 nut|2|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 
 </p></details><hr>
 
+## Audio
+### NB3 : Streaming Sound
+> Let's stream live audio from your NB3's camera to any web browser.
+
+
+# Project
 #### Watch this video: [Signal Processing](https://vimeo.com/manage/videos/1139975157)
 <p align="center">
 <a href="https://vimeo.com/manage/videos/1139975157" title="Control+Click to watch in new tab"><img src="../../../../boxes/audio/_resources/lessons/thumbnails/Signal-Processing.gif" alt="Signal Processing" width="480"/></a>
@@ -31,14 +34,13 @@ M2 nut|regular M2 nut|2|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 > One-dimensional (1D) signals are common in the world. They often arise as time series (a sequence of measurements made at a regular "sample rate"). Here we will explore techniques to process a common 1D signal...**sound**. We will both measure and generate different sounds. We will develop tools in Python to compare their amplitude (volume), frequency content, and visualize the "spectrogram" of different spoken words (e.g. "Go" vs "Stop").
 
 - Explore, test, and expand upon these Python examples for processing signals measured from the NB3's microphones (ears): [Measurement](/boxes/audio/signal-processing/python/measurement/)
-- - Stream the live frequency spectrum from your NB3 to your PC.
-- - Run the [server](/boxes/audio/signal-processing/python/measurement/03_stream_frequency.py) on your NB3 (via SSH)
-- - Run the [client](/boxes/audio/signal-processing/python/measurement/clients/live_plot_frequency_client_pyglet.py) on your PC (in a separate VS Code window)
+    - Stream the live frequency spectrum from your NB3 to your PC.
+        - Run the [server](/boxes/audio/signal-processing/python/measurement/03_stream_frequency.py) on your NB3 (via SSH)
+        - Run the [client](/boxes/audio/signal-processing/python/measurement/clients/live_plot_frequency_client_pyglet.py) on your PC (in a separate VS Code window)
 - Explore, test, and expand upon these Python examples for processing signals generated and output to the NB3's speaker (mouth): [Generation](/boxes/audio/signal-processing/python/generation/)
-- - *Note*: For text-to-speech synthesis you will need to install the Linux espeak package:
+    - *Note*: For text-to-speech synthesis you will need to install the Linux espeak package:
+- *code*
 ```bash
 sudo apt install espeak-ng
 ```
 
-
-# Project

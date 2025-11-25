@@ -1,9 +1,6 @@
 # The Last Black Box : Systems
 In this box, you will learn about systems...
 
-## Systems
-Modern computers combine a huge number of different technologies into a functional "system". They still need a core CPU and memory (RAM), but also a graphics processor, a network connection (wired and wireless), and other specialized hardware. All of these hardware devices are coordinated by a sophisticated (and complex) piece of software called an *operating system*.
-
 <details><summary><i>Materials</i></summary><p>
 
 Name|Description| # |Package|Data|Link|
@@ -18,6 +15,7 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 
 </p></details><hr>
 
+## Systems
 #### Watch this video: [Multi-Tasking](https://vimeo.com/1036086160)
 <p align="center">
 <a href="https://vimeo.com/1036086160" title="Control+Click to watch in new tab"><img src="../../../../boxes/systems/_resources/lessons/thumbnails/Multi-Tasking.gif" alt="Multi-Tasking" width="480"/></a>
@@ -25,12 +23,8 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 
 > Back when computers were very expensive mainframes, some clever software engineers developed strategies to share the computer's resources between multiple users, running multiple different tasks, at the same time. These "scheduling" programs still form the basis of our modern **multi-tasking** operating systems.
 
-
-**TASK**: Develop a multi-tasking "scheduling" program for your microcontroller.
-<details><summary><strong>Target</strong></summary>
-    Changing the timescale of one task should not affect the other.
-</details><hr>
-
+- **TASK**: Develop a multi-tasking "scheduling" program for your microcontroller.
+> Changing the timescale of one task should not affect the other.
 
 #### Watch this video: [Operating Systems](https://vimeo.com/1036096746)
 <p align="center">
@@ -39,13 +33,9 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 
 > As computer hardware became much more capable, software was developed to manage this complexity and power. This software took responsibility for managing access to the computer's resources: processing, memory, and devices. These days, when we *operate* a computer, we rarely interact directly with the hardware. Instead, we talk to this control software, which we call an **operating system**.
 
-
-**TASK**: Install the Linux-based Raspberry Pi OS on your NB3
-- - Follow these [RPiOS installation instructions](/boxes/systems/rpios/README.md)
-<details><summary><strong>Target</strong></summary>
-    Booted!
-</details><hr>
-
+- **TASK**: Install the Linux-based Raspberry Pi OS on your NB3
+    - Follow these [RPiOS installation instructions](/boxes/systems/rpios/README.md)
+> Booted!
 
 #### Watch this video: [NB3 : Midbrain](https://vimeo.com/1036089510)
 <p align="center">
@@ -54,13 +44,9 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 
 > Now we will add a more powerful computer (Raspberry Pi) to your NB3's midbrain.
 
-
-**TASK**: Mount a Raspberry Pi on your robot (and connect its power inputs using your *shortest* jumper cables, 2x5V and 2x0V from the NB3, to the correct GPIO pins on the RPi...please *double-check* the pin numbers)
-- - This pinout of the Raspberry Pi GPIO might be useful: [Raspberry Pi GPIO](/boxes/systems/_resources/images/rpi_GPIO_pinout.png)
-<details><summary><strong>Target</strong></summary>
-    A powered and blinking RPi midbrain.
-</details><hr>
-
+- **TASK**: Mount a Raspberry Pi on your robot (and connect its power inputs using your *shortest* jumper cables, 2x5V and 2x0V from the NB3, to the correct GPIO pins on the RPi...please *double-check* the pin numbers)
+    - This pinout of the Raspberry Pi GPIO might be useful: [Raspberry Pi GPIO](/boxes/systems/_resources/images/rpi_GPIO_pinout.png)
+> A powered and blinking RPi midbrain.
 
 #### Watch this video: [NB3 : RPiOS](https://vimeo.com/1036095710)
 <p align="center">
@@ -69,13 +55,9 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 
 > After mounting and wiring your NB3's midbrain computer, you must now give it some core software to run...an operating system.
 
-
-**TASK**: Install the Linux-based Raspberry Pi OS on your NB3
-- - Follow these [RPiOS installation instructions](/boxes/systems/rpios/README.md)
-<details><summary><strong>Target</strong></summary>
-    Booted!
-</details><hr>
-
+- **TASK**: Install the Linux-based Raspberry Pi OS on your NB3
+    - Follow these [RPiOS installation instructions](/boxes/systems/rpios/README.md)
+> Booted!
 
 #### Watch this video: [NB3 : Connecting to RPi](https://vimeo.com/1036391512)
 <p align="center">
@@ -84,14 +66,10 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 
 > When you have installed your NB3's operating system, then you can power it on and try to connect to it from your Host computer over WiFi or UART.
 
-
-**TASK**: Connect to your NB3 via WiFi
-- - Follow these instruction [Connecting to RPi](/boxes/systems/connecting/README.md)
-- - We currently recommend setting up a UART connection to your RPi for debugging when things go wrong. It is a few extra steps, but it can save you days! [Connecting to RPi via UART](/boxes/systems/connecting/uart/README.md)
-<details><summary><strong>Target</strong></summary>
-    Connected!
-</details><hr>
-
+- **TASK**: Connect to your NB3 via WiFi
+    - Follow these instruction [Connecting to RPi](/boxes/systems/connecting/README.md)
+    - We currently recommend setting up a UART connection to your RPi for debugging when things go wrong. It is a few extra steps, but it can save you days! [Connecting to RPi via UART](/boxes/systems/connecting/uart/README.md)
+> Connected!
 
 #### Watch this video: [Visual Studio Code](https://vimeo.com/1036716612)
 <p align="center">
@@ -101,12 +79,12 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 > We will be using Visual Studio Code (VS Code) as our tool for writing programs. VS Code is just a simple, *but really powerful*, text editor. It has extensions for all sorts of useful tools (Python, Git, etc.), and for connecting to a "remote" computer (our NB3's midbrain).
 
 
-# Project
-### NB3 : Programming Concurrency (Arduino)
-> Getting a microcontroller to perform two tasks (with very different timescales) at the same time is a fun programming challenge. You will develop new skills in organizing your programs and get a glimpse of the problems solved by the *kernel* of a modern operating system.
+# Projects
+#### Watch this video: [NB3 : Programming Concurrency (Arduino)](https://vimeo.com/1036094397)
+<p align="center">
+<a href="https://vimeo.com/1036094397" title="Control+Click to watch in new tab"><img src="../../../../boxes/systems/_resources/lessons/thumbnails/NB3_Programming-Concurrency-Arduino.gif" alt="NB3 : Programming Concurrency (Arduino)" width="480"/></a>
+</p>
 
-<details><summary><weak>Guide</weak></summary>
-:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1036094397" target="_blank" rel="noopener noreferrer">here</a>.
-</details><hr>
+> Getting a microcontroller to perform two tasks (with very different timescales) at the same time is a fun programming challenge. You will develop new skills in organizing your programs and get a glimpse of the problems solved by the *kernel* of a modern operating system.
 
 

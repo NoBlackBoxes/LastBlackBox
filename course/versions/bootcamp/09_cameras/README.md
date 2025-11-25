@@ -1,8 +1,5 @@
 # Bootcamp : Cameras
-Let's add a camera (ryr) to your NB3.
-
-## Vision
-Look at everyone.
+Let's add a camera (eye) to your NB3.
 
 <details><summary><i>Materials</i></summary><p>
 
@@ -20,34 +17,32 @@ M2 nut|regular M2 nut|4|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 
 </p></details><hr>
 
+## Vision
 ### Cameras
 > From CCDs to CMOS.
 
 
 # Project
-### NB3 : Install the Eye
+#### Watch this video: [NB3 : Install the Eye](https://vimeo.com/1042945461)
+<p align="center">
+<a href="https://vimeo.com/1042945461" title="Control+Click to watch in new tab"><img src="../../../../boxes/vision/_resources/lessons/thumbnails/NB3_Install-the-Eye.gif" alt="NB3 : Install the Eye" width="480"/></a>
+</p>
+
 > Let's install a camera on your NB3.
 
-<details><summary><weak>Guide</weak></summary>
-:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1042945461" target="_blank" rel="noopener noreferrer">here</a>.
-</details><hr>
-
 - Test your camera with the following command
+- *code*
 ```bash
 # Navigate to LBB root
 cd ~/NoBlackBoxes/LastBlackBox
 
-
 # Create folder for images in the temporary folder
 mkdir _tmp/images
-
 
 # Navigate to the temporary image folder
 cd _tmp/images
 
-
 # Capture a still image and save it to a file
 libcamera-still -o test.png
 ```
-
 

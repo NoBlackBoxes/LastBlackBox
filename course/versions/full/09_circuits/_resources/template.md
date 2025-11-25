@@ -2,6 +2,6 @@
 In this box, you will learn about circuits...
 
 ## Circuits
-{Radios}
+{Circuits:Radios}
 
 # Projects

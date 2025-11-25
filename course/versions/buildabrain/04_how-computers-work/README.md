@@ -1,16 +1,17 @@
 # Build a Brain : How Computers Work
 Logic + Memory = Computer
 
-## Logic
-Boole was coole.
-
 <details><summary><i>Materials</i></summary><p>
 
 Name|Description| # |Package|Data|Link|
 :-------|:----------|:-----:|:-:|:--:|:--:|
+Microcontroller|Arduino Nano (rev.3)|1|Medium (011)|[-D-](/boxes/computers/_resources/datasheets/arduino_nano_rev3.pdf)|[-L-](https://uk.farnell.com/arduino/a000005/arduino-nano-evaluation-board/dp/1848691)
+Piezo Buzzer|Piezoelectric speaker/transducer|1|Passive Electronics|[-D-](/boxes/computers/_resources/datasheets/piezo_buzzer.pdf)|[-L-](https://uk.farnell.com/tdk/ps1240p02bt/piezoelectric-buzzer-4khz-70dba/dp/3267212)
+Cable (MiniUSB-1m)|Mini-USB to Type-A cable (1 m)|1|Cables (001)|[-D-](/boxes/computers/)|[-L-](https://www.amazon.co.uk/gp/product/B07FWF2KBF)
 
 </p></details><hr>
 
+## Logic
 #### Watch this video: [Logic Gates](https://vimeo.com/1033231995)
 <p align="center">
 <a href="https://vimeo.com/1033231995" title="Control+Click to watch in new tab"><img src="../../../../boxes/logic/_resources/lessons/thumbnails/Logic-Gates.gif" alt="Logic Gates" width="480"/></a>
@@ -23,15 +24,6 @@ Name|Description| # |Package|Data|Link|
 - Build a priority encoder for your 2-bit ADC
 
 ## Memory
-There are many ways to store information.
-
-<details><summary><i>Materials</i></summary><p>
-
-Name|Description| # |Package|Data|Link|
-:-------|:----------|:-----:|:-:|:--:|:--:|
-
-</p></details><hr>
-
 #### Watch this video: [Flash Memory](https://vimeo.com/1033230293)
 <p align="center">
 <a href="https://vimeo.com/1033230293" title="Control+Click to watch in new tab"><img src="../../../../boxes/memory/_resources/lessons/thumbnails/Flash-Memory.gif" alt="Flash Memory" width="480"/></a>
@@ -41,18 +33,6 @@ Name|Description| # |Package|Data|Link|
 
 
 ## Computers
-It may not yet seem believable, but you can build a **computer** by combining transistors in a clever way. **Let's learn how!**
-
-<details><summary><i>Materials</i></summary><p>
-
-Name|Description| # |Package|Data|Link|
-:-------|:----------|:-----:|:-:|:--:|:--:|
-Microcontroller|Arduino Nano (rev.3)|1|Medium (011)|[-D-](/boxes/computers/_resources/datasheets/arduino_nano_rev3.pdf)|[-L-](https://uk.farnell.com/arduino/a000005/arduino-nano-evaluation-board/dp/1848691)
-Piezo Buzzer|Piezoelectric speaker/transducer|1|Passive Electronics|[-D-](/boxes/computers/_resources/datasheets/piezo_buzzer.pdf)|[-L-](https://uk.farnell.com/tdk/ps1240p02bt/piezoelectric-buzzer-4khz-70dba/dp/3267212)
-Cable (MiniUSB-1m)|Mini-USB to Type-A cable (1 m)|1|Cables (001)|[-D-](/boxes/computers/)|[-L-](https://www.amazon.co.uk/gp/product/B07FWF2KBF)
-
-</p></details><hr>
-
 #### Watch this video: [Architecture](https://vimeo.com/1033601146)
 <p align="center">
 <a href="https://vimeo.com/1033601146" title="Control+Click to watch in new tab"><img src="../../../../boxes/computers/_resources/lessons/thumbnails/Architecture.gif" alt="Architecture" width="480"/></a>
@@ -68,39 +48,30 @@ Cable (MiniUSB-1m)|Mini-USB to Type-A cable (1 m)|1|Cables (001)|[-D-](/boxes/co
 
 > We will now add a *computer* to our robot. We be using a simple microcontroller as our NB3's hindbrain. It will be responsible for controlling the "muscles" (motors) in response to commands from another (larger) computer that we will be adding later to the NB3's midbrain.
 
-
 **TASK**: Mount and power your Arduino-based hindbrain (connect the mini-USB cable)
-<details><summary><strong>Target</strong></summary>
-    The built-in LED on the board should be blinking at 1 Hz.
-</details><hr>
-
-
+> The built-in LED on the board should be blinking at 1 Hz.
 **TASK**: Download and install the Arduino IDE (integrated development environment).
-- Follow the instructions for your "host" computer's operating system here: [Arduino IDE](https://www.arduino.cc/en/software)
-- Open the "Blink" Example: File -> Examples -> Basic -> Blink
-- Upload this example to your board
-- ***IMPORTANT***: If you have trouble connecting to the Arduino from your Laptop, then it may be necessary to install the "latest" driver from FTDI for the chip that communicates over the USB cable. This is not always necessary, so please try the normal installation first. However, if you are stuck, then please checkout these [FTDI driver installation instructions](https://support.arduino.cc/hc/en-us/articles/4411305694610-Install-or-update-FTDI-drivers).
-<details><summary><strong>Target</strong></summary>
-    You should be able to successfully compile and upload the "Blink" example (with no errors).
-</details><hr>
-
+  - Follow the instructions for your "host" computer's operating system here: [Arduino IDE](https://www.arduino.cc/en/software)
+  - Open the "Blink" Example: File -> Examples -> Basic -> Blink
+  - Upload this example to your board
+  - ***IMPORTANT***: If you have trouble connecting to the Arduino from your Laptop, then it may be necessary to install the "latest" driver from FTDI for the chip that communicates over the USB cable. This is not always necessary, so please try the normal installation first. However, if you are stuck, then please checkout these [FTDI driver installation instructions](https://support.arduino.cc/hc/en-us/articles/4411305694610-Install-or-update-FTDI-drivers).
+> You should be able to successfully compile and upload the "Blink" example (with no errors).
 
 # Project
-### NB3 : Programming Arduino
+#### Watch this video: [NB3 : Programming Arduino](https://vimeo.com/1033810807)
+<p align="center">
+<a href="https://vimeo.com/1033810807" title="Control+Click to watch in new tab"><img src="../../../../boxes/computers/_resources/lessons/thumbnails/NB3_Programming-Arduino.gif" alt="NB3 : Programming Arduino" width="480"/></a>
+</p>
+
 > An introduction to programming an Arduino microcontroller.
 
-<details><summary><weak>Guide</weak></summary>
-:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1033810807" target="_blank" rel="noopener noreferrer">here</a>.
-</details><hr>
-
-- You will now write programs that interact with the input and output pins of your Arduino. This "pin diagram" will help you find the correct locations. ***The Arduino on your NB3 is mounted upside down relative to this diagram...adjust accordingly!***
+- You will now write programs that interact with the input and output pins of your Arduino. This "pin diagram" will help you find the correct locations. ***The Arduino on your NB3 is mounted "upside down" relative to this diagram...adjust accordingly!***
 <p align="center">
 <img src="../../../../boxes/computers/_resources/images/pinout_arduino_nano.png" alt="Arduino Nano Pin Diagram" width="500">
 </p>
 
-
-**TASK**: Blink an *external* LED
-- Change the following example code (the classic "[Blinky](/boxes/computers/arduino/ide/blink/blink.ino)" example) to make the LED blink at a different frequency.
+**TASK**: Blink an *internal* LED
+  - Change the following example code (the classic "[Blinky](/boxes/computers/arduino/ide/blink/blink.ino)" example) to make the internal LED blink at a different frequency.
 ```c
 /*
   Blink
@@ -125,33 +96,24 @@ void loop() {
   delay(1000);              // Wait for a second
 }
 ```
-
-<details><summary><strong>Target</strong></summary>
-    Your external LED should now be blinking faster or slower than 1 Hz (once per second).
-</details><hr>
-
-
+> Your internal LED should now be blinking faster or slower than 1 Hz (once per second).
 **TASK**: Blink an *external* LED
-- *Hint*: Connect an LED to digital pin 13, but don't forget your current limiting resistor!
+  - *Hint*: Connect one of your LEDs to digital pin 13, but don't forget your current limiting resistor!
 <p align="center">
 <img src="../../../../boxes/computers/_resources/images/LED_driver_circuit.png" alt="LED Driver" width="400">
 </p>
 
-<details><summary><strong>Target</strong></summary>
-    Your external LED should now be blinking at the same time as the built-in LED (both are connected to pin 13).
-</details><hr>
-
-
+> Your external LED should now be blinking at the same time as the built-in LED (if both are connected to pin 13).
 **TASK**: Generate a *pulsing* signal for your piezo buzzer
-- This is a piezo buzzer:
+  - This is a piezo buzzer:
 <p align="center">
 <img src="../../../../boxes/computers/_resources/images/piezo_buzzer.png" alt="Piezo Buzzer" width="300">
 </p>
 
-- The piezo buzzer will expand and contract as you switch the voltage applied across it from 0V to 5V. This expansion and contraction forces air into and out of the plastic case. If you switch it ON/OFF fast enough, then you can *hear it*!
-- Connect one leg of the piezo to pin 11 and the other to Ground.
-- You could use the "Blink" example to toggle pin 11 with a much shorter delay between the ON/OFF "blinks". However, it is much easier to use a function (command) called "tone()" that will allow you generate pulses at specific frequencies.
-- Upload this [code](/boxes/computers/arduino/ide/tone/tone.ino) to your Arduino.
+  - The piezo buzzer will expand and contract as you switch the voltage applied across it from 0V to 5V. This expansion and contraction forces air into and out of the plastic case. If you switch it ON/OFF fast enough, then you can *hear it*!
+  - Connect one leg of the piezo to pin 11 and the other to Ground.
+  - *Note:*: You could use the "Blink" example to toggle pin 11 with a much shorter delay between the ON/OFF "blinks". However, it is much easier to use a function called "tone()" that will allow you to generate pulses at very specific frequencies.
+  - Upload this [code](/boxes/computers/arduino/ide/tone/tone.ino) to your Arduino (just the paste the following into a new sketch on your IDE and "upload").
 ```c
 /*
   Tone
@@ -187,17 +149,12 @@ void loop() {
   delay(1500);
 }
 ```
-
-- **Challenge**: Try to add some more notes to play a recognizable melody!
-<details><summary><strong>Target</strong></summary>
-    You should here a (somewhat unpleasant) sound from the piezo buzzer
-</details><hr>
-
-
+  - **Challenge**: Try to add some more notes and play a recognizable melody!
+> You should here a (somewhat unpleasant) sound from the piezo buzzer
 **TASK**: Measure an **analog** signal from your LDR light sensor circuit and send the measured values to your host computer via the USB (serial) connection.
-- *Hint*: Connect the output voltage of your light sensor (the "middle" of the divider) to an analog input pin (the example below uses pin A0).
-- *Note*: In order to see what values are measured, the following program sends the analog values as text characters over the USB serial connection to your laptop. Your can watch these values arrive by opening the Arduino IDE's "Serial Monitor" (an icon in the upper-right corner of the main window).
-- Upload this [code](/boxes/computers/arduino/ide/tone/tone.ino) to your Arduino.
+  - *Hint*: Connect the output voltage of your light sensor (the "middle" of the divider) to an analog input pin (the example below uses pin A0).
+  - *Note*: In order to see what values are measured, the following program sends the analog values as text characters over the USB serial connection to your laptop. Your can watch these values arrive by opening the Arduino IDE's "Serial Monitor" (an icon in the upper-right corner of the main window).
+  - Upload this [code](/boxes/computers/arduino/ide/tone/tone.ino) to your Arduino.
 ```c
 /*
   Analog
@@ -221,32 +178,23 @@ void loop() {
   delay(1); // Wait briefly (1 ms) between reads for stability
 }
 ```
+  - *Challenge*: Write a program that will turn on your LED when the light signal is above (or below) some threshold value.
+> You should see values on your host laptop and they should change along with changing light levels.
 
-- *Challenge*: Write a program that will turn on your LED when the light signal is above (or below) some threshold value.
-<details><summary><strong>Target</strong></summary>
-    You should see values on your host laptop and they should change along with changing light levels.
-</details><hr>
+#### Watch this video: [NB3 : Building a Theremin](https://vimeo.com/1033896646)
+<p align="center">
+<a href="https://vimeo.com/1033896646" title="Control+Click to watch in new tab"><img src="../../../../boxes/computers/_resources/lessons/thumbnails/NB3_Building-a-Theremin.gif" alt="NB3 : Building a Theremin" width="480"/></a>
+</p>
 
-
-### NB3 : Building a Theremin
 > Building a light-to-sound feedback loop musical instrument (theremin) using an Arduino, an LDR, and a Piezo buzzer.
 
-<details><summary><weak>Guide</weak></summary>
-:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1033896646" target="_blank" rel="noopener noreferrer">here</a>.
-</details><hr>
-
-
-**TASK**: Build a Theremin
+- **TASK**: Build a Theremin
 - *Hint*: What if you used the analog voltage signal measured from your light sensor to change the frequency of the "tone" playing on your buzzer? Hmm...
-<details><summary><strong>Target</strong></summary>
-    You should here a sound that varies with your hand motion (in front of a light)
-</details><hr>
+> You should here a sound that varies with your hand motion (in front of a light)
+- **TASK**: ***Have fun!*** (Make something cool)
+<p align="center">
+<img src="../../../../boxes/computers/_resources/images/pinout_arduino_nano.png" alt="Arduino Pinout" width="480">
+</p>
 
-
-**TASK**: ***Have fun!*** (Make something cool)
-- This diagram of the Arduino "pins" will definitely be useful: ![Arduino Pinout](/boxes/computers/_resources/images/pinout_arduino_nano.png)
-<details><summary><strong>Target</strong></summary>
-    You should have fun!
-</details><hr>
-
+> You should have fun!
 

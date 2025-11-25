@@ -2,15 +2,15 @@
 It's time to learn how transistors can perform logic, store information, and work together in a circuit that *computes*.
 
 ## Logic
-{Logic-Gates}
+{Logic:Logic-Gates}
 
 ## Memory
-{Flash-Memory}
+{Memory:Flash-Memory}
 
 ## Computers
-{Architecture}
-{NB3_Hindbrain}
-{Low-Level-Programming}
+{Computers:Architecture}
+{Computers:NB3_Hindbrain}
+{Computers:NB3_Programming-Arduino}
 
 # Project
 {Computers:NB3_Building-a-Theremin}

@@ -16,7 +16,7 @@ class Material:
 
     Describes a hardware material used to open a box in LBB
     """
-    def __init__(self, text=None, dictionary=None):
+    def __init__(self, text):
         self.name = None                # Material name
         self.slug = None                # Material slug
         self.description = None         # Material description
@@ -31,48 +31,7 @@ class Material:
         self.bulk_price = None          # Material bulk price (£)
         self.new = None                 # Material new stock
         self.used = None                # Material used stock
-        if text:
-            self.parse(text)            # Parse material from "materials.csv" text
-        elif dictionary:
-            self.from_dict(dictionary)  # Load material from dictionary
-        return
-
-    # Convert material object to dictionary
-    def to_dict(self):
-        dictionary = {
-            "name": self.name,
-            "slug": self.slug,
-            "description": self.description,
-            "quantity": self.quantity,
-            "datasheet": self.datasheet,
-            "supplier": self.supplier,
-            "package": self.package,
-            "x": self.x,
-            "y": self.y,
-            "z": self.z,
-            "unit_price": self.unit_price,
-            "bulk_price": self.bulk_price,
-            "new": self.new,
-            "used": self.used
-        }
-        return dictionary
-
-    # Convert dictionary to material object
-    def from_dict(self, dictionary):
-        self.name = dictionary.get("name")
-        self.slug = dictionary.get("slug")
-        self.description = dictionary.get("description")
-        self.quantity = dictionary.get("quantity")
-        self.datasheet = dictionary.get("datasheet")
-        self.supplier = dictionary.get("supplier")
-        self.package = dictionary.get("package")
-        self.x = dictionary.get("x")
-        self.y = dictionary.get("y")
-        self.z = dictionary.get("z")
-        self.unit_price = dictionary.get("unit_price"),
-        self.bulk_price = dictionary.get("bulk_price"),
-        self.new = dictionary.get("new"),
-        self.used = dictionary.get("used")
+        self.parse(text)                # Parse material from "materials.csv" text
         return
     
     # Parse material string
@@ -94,15 +53,4 @@ class Material:
         self.used = fields[13].strip()
         return
 
-    # Load material object from JSON
-    def load(self, path):
-        with open(path, "r") as file:
-            self.from_dict(json.load(file))
-        return
-
-    # Store material object in JSON file
-    def store(self, path):
-        with open(path, "w") as file:
-            json.dump(self.to_dict(), file, indent=4)
-        return
 #FIN

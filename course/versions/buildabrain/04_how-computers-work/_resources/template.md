@@ -2,14 +2,14 @@
 Logic + Memory = Computer
 
 ## Logic
-{Logic-Gates}
+{Logic:Logic-Gates}
 
 ## Memory
-{Flash-Memory}
+{Memory:Flash-Memory}
 
 ## Computers
-{Architecture}
-{NB3_Hindbrain}
+{Computers:Architecture}
+{Computers:NB3_Hindbrain}
 
 # Project
 {Computers:NB3_Programming-Arduino}

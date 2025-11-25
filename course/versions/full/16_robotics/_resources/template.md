@@ -2,7 +2,7 @@
 In this box, you will learn about robotics...
 
 ## Robotics
-{Reflexes}
+{Robotics:Reflexes}
 
 # Projects
 {Robotics:NB3_Muscles-Servos}

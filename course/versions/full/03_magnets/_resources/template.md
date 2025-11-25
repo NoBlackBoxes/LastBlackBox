@@ -2,9 +2,9 @@
 In this box, you will learn about magnets...
 
 ## Magnets
-{Ferromagnetism}
-{Electromagnets}
-{Induction}
+{Magnets:Ferromagnetism}
+{Magnets:Electromagnets}
+{Magnets:Induction}
 
 # Projects
 {Magnets:NB3_Building-a-Speaker}

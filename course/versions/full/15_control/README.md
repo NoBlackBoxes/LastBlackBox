@@ -1,9 +1,6 @@
 # The Last Black Box : Control
 In this box, you will learn about control...
 
-## Control
-Getting a motor to move precisely how you want it to (direction and speed) is very important for *controlling* the behaviour of your robot. A number of very clever strategies have been developed to help you take **control** of your motor.
-
 <details><summary><i>Materials</i></summary><p>
 
 Name|Description| # |Package|Data|Link|
@@ -12,6 +9,7 @@ H-bridge|H-bridge motor driver (SN754410NE)|2|Active Electronics|[-D-](/boxes/co
 
 </p></details><hr>
 
+## Control
 #### Watch this video: [PWM](https://vimeo.com/1033905955)
 <p align="center">
 <a href="https://vimeo.com/1033905955" title="Control+Click to watch in new tab"><img src="../../../../boxes/control/_resources/lessons/thumbnails/PWM.gif" alt="PWM" width="480"/></a>
@@ -36,12 +34,12 @@ H-bridge|H-bridge motor driver (SN754410NE)|2|Active Electronics|[-D-](/boxes/co
 > An H-Bridge allows sending current through a motor in both directions, and thus drive forwards *and* backwards.
 
 
-# Project
-### NB3 : Building a PWM Speed Controller
-> We can use a digital (binary) signal and a MOSFET to turn a motor **ON** and **OFF**. We can use PWM to change the motor's speed.
+# Projects
+#### Watch this video: [NB3 : Building a PWM Speed Controller](https://vimeo.com/1033891821)
+<p align="center">
+<a href="https://vimeo.com/1033891821" title="Control+Click to watch in new tab"><img src="../../../../boxes/control/_resources/lessons/thumbnails/NB3_Building-a-PWM-Speed-Controller.gif" alt="NB3 : Building a PWM Speed Controller" width="480"/></a>
+</p>
 
-<details><summary><weak>Guide</weak></summary>
-:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1033891821" target="_blank" rel="noopener noreferrer">here</a>.
-</details><hr>
+> We can use a digital (binary) signal and a MOSFET to turn a motor **ON** and **OFF**. We can use PWM to change the motor's speed.
 
 

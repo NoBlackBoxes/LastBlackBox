@@ -1,9 +1,6 @@
 # The Last Black Box : Magnets
 In this box, you will learn about magnets...
 
-## Magnets
-Magnets were known about (and useful) long before we understood electricity. However, the connection between electricity and magnetism is one of the most important discoveries of science. It has major implications for your everyday life (and your NB3).
-
 <details><summary><i>Materials</i></summary><p>
 
 Name|Description| # |Package|Data|Link|
@@ -16,6 +13,7 @@ Stereo Plug Terminal|3.5 mm plug to screw terminal|2|Auxiliary|[-D-](/boxes/magn
 
 </p></details><hr>
 
+## Magnets
 #### Watch this video: [Ferromagnetism](https://vimeo.com/1031272573)
 <p align="center">
 <a href="https://vimeo.com/1031272573" title="Control+Click to watch in new tab"><img src="../../../../boxes/magnets/_resources/lessons/thumbnails/Ferromagnetism.gif" alt="Ferromagnetism" width="480"/></a>
@@ -40,12 +38,12 @@ Stereo Plug Terminal|3.5 mm plug to screw terminal|2|Auxiliary|[-D-](/boxes/magn
 > A *changing* magnetic field **induces** an electromotive force on charged particles (and current in a complete conducting circuit). This electromagnetic induction is key to building time-dependent electronic circuits (such as filters) and generating the electricity we use in our homes.
 
 
-# Project
-### NB3 : Building a Speaker
-> Oscillating current in a coil creates a dynamic magnetic field. Let's turn these oscillations into sound.
+# Projects
+#### Watch this video: [NB3 : Building a Speaker](https://vimeo.com/1031277112)
+<p align="center">
+<a href="https://vimeo.com/1031277112" title="Control+Click to watch in new tab"><img src="../../../../boxes/magnets/_resources/lessons/thumbnails/NB3_Building-a-Speaker.gif" alt="NB3 : Building a Speaker" width="480"/></a>
+</p>
 
-<details><summary><weak>Guide</weak></summary>
-:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1031277112" target="_blank" rel="noopener noreferrer">here</a>.
-</details><hr>
+> Oscillating current in a coil creates a dynamic magnetic field. Let's turn these oscillations into sound.
 
 

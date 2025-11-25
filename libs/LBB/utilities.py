@@ -6,14 +6,7 @@ LBB : Utilities
 """
 
 # Imports
-import os
-import glob
-import shutil
-import re
-import LBB.Engine.instruction as Instruction
-import LBB.Engine.image as Image
-import LBB.Engine.task as Task
-import LBB.Engine.code as Code
+import os, shutil, re
 
 # Confirm folder (create if it does not exist)
 def confirm_folder(folder_path):
@@ -63,82 +56,18 @@ def find_line(text, pattern):
         count += 1
     return count
 
-# Find and convert all markdown emphasis tags
-def convert_emphasis_tags(text):
-    text = re.sub(r'\*\*\*(.*?)\*\*\*', r'<strong><em>\1</em></strong>', text)
-    text = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', text)
-    text = re.sub(r'\*(.*?)\*', r'<em>\1</em>', text)
-    return text
+# Find lesson tags
+def find_lesson_tags(text):
+    tags = []
+    for line in text:
+        tags += re.findall(r'\{[^}]+\}', line)
+    return tags
 
-# Find and convert all markdown links in the format [text](url)
-def convert_markdown_links(text):
-    return re.sub(r'\[(.*?)\]\((.*?)\)', replace_link, text)
-
-# Replace matched links (and convert internal repo links)
-def replace_link(match):
-    link_text, link_url = match.groups()
-    if not link_url.startswith("http"):
-        link_url = re.sub(r'^(?:\.\./)+', '', link_url)
-        link_url = f"https://github.com/NoBlackBoxes/LastBlackBox/tree/master/{link_url}"
-    return f'<a id="link" href="{link_url}" target="_blank">{link_text}</a>'
-
-# Extract step from template text
-def extract_step_from_text(course, text, line_count):
-    step = None
-    step_text = text[line_count][2:].strip()
-    if step_text.startswith("**TASK**"):    # Task
-        task_text = []
-        task_text.append(step_text)
-        line_count += 1
-        # Extract task steps
-        while not text[line_count].startswith(">"):
-            task_text.append(text[line_count])
-            line_count += 1
-        task_text.append(text[line_count])
-        task = Task.Task(course, text=task_text)
-        step = task
-    elif step_text.startswith("!["):        # Image
-        image = Image.Image(course, text=step_text)
-        step = image
-    elif step_text.startswith("*code*"):     # Code
-        code_text = []
-        line_count += 1
-        code_text.append(text[line_count])
-        line_count += 1
-        while not text[line_count].startswith("```"):
-            code_text.append(text[line_count])
-            line_count += 1
-        code_text.append(text[line_count])
-        code = Code.Code(course, text=code_text)
-        step = code
-    elif step_text.startswith("```"):       # Debug
-        print(text[:line_count])
-        print(text[line_count])
-        print("ERROR")
-        exit(-1)
-    else:                                   # Instruction
-        instruction = Instruction.Instruction(course, text=step_text)
-        step = instruction
-    line_count += 1
-    return line_count, step
-
-# Extract steps from dictionary
-def extract_steps_from_dict(course, dictionary):
-    steps = []
-    for step_dictionary in dictionary.get("steps"):
-        if step_dictionary.get("type") == "instruction":
-            step = Instruction.Instruction(course, dictionary=step_dictionary)
-        elif step_dictionary.get("type") == "image":
-            step = Image.Image(course, dictionary=step_dictionary)
-        elif step_dictionary.get("type") == "task":
-            step = Task.Task(course, dictionary=step_dictionary)
-        elif step_dictionary.get("type") == "code":
-            step = Code.Code(course, dictionary=step_dictionary)
-        else:
-            print(f"Unknown step type in dictionary")
-            exit(-1)
-        steps.append(step)
-    return steps
+# Extract markdown image link
+def extract_markdown_image_link(line):
+    pattern = r'!\[[^\]]*\]\([^\)]*\)'
+    match = re.search(pattern, line)
+    return match.group(0) if match else None
 
 # Extract name and slug
 def extract_lesson_name_and_slug(line):

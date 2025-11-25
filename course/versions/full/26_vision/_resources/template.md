@@ -2,8 +2,8 @@
 In this box, you will learn about vision...
 
 ## Vision
-{Cameras}
-{Image-Processing}
+{Vision:Cameras}
+{Vision:Image-Processing}
 
 # Projects
 {Vision:NB3_Install-the-Eye}

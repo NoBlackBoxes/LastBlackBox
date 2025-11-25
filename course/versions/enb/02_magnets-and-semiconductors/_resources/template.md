@@ -2,16 +2,16 @@
 Here we will learn about electromagnetism, motors, and transistors.
 
 ## Magnets
-{Ferromagnetism}
-{Electromagnets}
+{Magnets:Ferromagnetism}
+{Magnets:Electromagnets}
 
 ## Motors
-{DC-Motors}
+{Motors:DC-Motors}
 
 ## Transistors
-{Semiconductors}
-{Diodes}
-{Transistors-MOSFETs}
+{Transistors:Semiconductors}
+{Transistors:Diodes}
+{Transistors:Transistors-MOSFETs}
 
 # Project
 {Transistors:NB3_Building-a-Light-Sensitive-Motor}

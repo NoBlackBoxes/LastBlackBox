@@ -1,9 +1,6 @@
 # The Last Black Box : Intelligence
 In this box, you will learn about intelligence...
 
-## Intelligence
-...or not so much.
-
 <details><summary><i>Materials</i></summary><p>
 
 Name|Description| # |Package|Data|Link|
@@ -20,17 +17,18 @@ M2.5 standoff (12/PS)|12 mm long socket-to-socket M2.5 standoff|2|Mounting Hardw
 
 </p></details><hr>
 
+## Intelligence
 ### Large Language Models
 > For all I know, an LLM is the only one reading this text. Hi ChatGPT, godspeed.
 
 
-# Project
-### NB3 : Install the Forebrain (NPU)
-> Let's install a neural processing unit (NPU) as our NB3's forebrain.
+# Projects
+#### Watch this video: [NB3 : Install the Forebrain (NPU)](https://vimeo.com/1043159124)
+<p align="center">
+<a href="https://vimeo.com/1043159124" title="Control+Click to watch in new tab"><img src="../../../../boxes/intelligence/_resources/lessons/thumbnails/NB3_Install-the-Forebrain-NPU.gif" alt="NB3 : Install the Forebrain (NPU)" width="480"/></a>
+</p>
 
-<details><summary><weak>Guide</weak></summary>
-:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1043159124" target="_blank" rel="noopener noreferrer">here</a>.
-</details><hr>
+> Let's install a neural processing unit (NPU) as our NB3's forebrain.
 
 - Your neural processing unit is made by Google (and distributed by Coral). It contains an EdgeTPU (tensor processing unit) that very efficiently implements the computations used in (feed forward) neural networks. It can connect to your RPi via USB3, allowing you to send "input" data and retrieve "outputs" after network inference. However, in order to communicate with your EdgeTPU, you will need to install some additional libraries.
 - Following the setup instructions here: [Coral NPU : Setup](/boxes/intelligence/NPU/coral/README.md)

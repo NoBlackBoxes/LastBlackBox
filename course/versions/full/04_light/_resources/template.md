@@ -2,9 +2,9 @@
 In this box, you will learn about light...
 
 ## Light
-{The-EM-Spectrum}
-{Optics}
-{Maxwells-Equations}
-{Electromagnetic-Radiation}
+{Light:The-EM-Spectrum}
+{Light:Optics}
+{Light:Maxwells-Equations}
+{Light:Electromagnetic-Radiation}
 
 # Projects

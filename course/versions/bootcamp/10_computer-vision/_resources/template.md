@@ -2,7 +2,7 @@
 Let's learn how ot process two-dimensional data (images).
 
 ## Vision
-{Image-Processing}
+{Vision:NB3_Streaming-Images}
 
 # Project
-{Vision:NB3_Streaming-Images}
+{Vision:Image-Processing}

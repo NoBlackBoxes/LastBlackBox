@@ -1,9 +1,6 @@
 # The Last Black Box : Amplifiers
 In this box, you will learn about amplifiers...
 
-## Amplifiers
-The signals arriving from the environment are often too small to measure reliably with a computer (or brain). We need to make them bigger. Making tiny voltage or current signals larger is called *amplification*, and the things that can do this are ***amplifiers***.
-
 <details><summary><i>Materials</i></summary><p>
 
 Name|Description| # |Package|Data|Link|
@@ -13,6 +10,7 @@ LM386|Audio-Amp|2|Active Electronics|[-D-](/boxes/amplifiers/_resources/datashee
 
 </p></details><hr>
 
+## Amplifiers
 ### Differential Amplifier
 > Signals often have noise. However, this noise is often the same in many places around our circuit. What if we could reject (subtract out) this common noise? A differential amplifier allows us to selectively amplify the difference between a signal (with noise) and background (just noise). They are *very* useful.
 
@@ -22,4 +20,4 @@ LM386|Audio-Amp|2|Active Electronics|[-D-](/boxes/amplifiers/_resources/datashee
 
 - Use an OpAmp to make your DIY speaker louder!
 
-# Project
+# Projects

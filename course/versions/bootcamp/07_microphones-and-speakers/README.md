@@ -1,9 +1,6 @@
 # Bootcamp : Microphones and Speakers
 Now we will add a speaker (mouth) and microphones (ears) to your NB3.
 
-## Audio
-Listen up, speak up.
-
 <details><summary><i>Materials</i></summary><p>
 
 Name|Description| # |Package|Data|Link|
@@ -23,6 +20,7 @@ M2 nut|regular M2 nut|2|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 
 </p></details><hr>
 
+## Audio
 #### Watch this video: [Microphones, Speakers, and I2S](https://vimeo.com/1136576333)
 <p align="center">
 <a href="https://vimeo.com/1136576333" title="Control+Click to watch in new tab"><img src="../../../../boxes/audio/_resources/lessons/thumbnails/Microphones-Speakers-and-I2S.gif" alt="Microphones, Speakers, and I2S" width="480"/></a>
@@ -32,27 +30,27 @@ M2 nut|regular M2 nut|2|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 
 
 # Project
-### NB3 : Build and Install the Linux I2S Driver
+#### Watch this video: [NB3 : Build and Install the Linux I2S Driver](https://vimeo.com/1042781850)
+<p align="center">
+<a href="https://vimeo.com/1042781850" title="Control+Click to watch in new tab"><img src="../../../../boxes/audio/_resources/lessons/thumbnails/NB3_Build-and-Install-the-Linux-I2S-Driver.gif" alt="NB3 : Build and Install the Linux I2S Driver" width="480"/></a>
+</p>
+
 > Let's build (compile) and install the Linux device driver for our NB3's sound card. This software module is required to access the NB3's ears (microphone) and mouth (speaker).
 
-<details><summary><weak>Guide</weak></summary>
-:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1042781850" target="_blank" rel="noopener noreferrer">here</a>.
-</details><hr>
 
+#### Watch this video: [NB3 : Install the Ears](https://vimeo.com/1042943195)
+<p align="center">
+<a href="https://vimeo.com/1042943195" title="Control+Click to watch in new tab"><img src="../../../../boxes/audio/_resources/lessons/thumbnails/NB3_Install-the-Ears.gif" alt="NB3 : Install the Ears" width="480"/></a>
+</p>
 
-### NB3 : Install the Ears
 > Let's add some ears to your NB3.
 
-<details><summary><weak>Guide</weak></summary>
-:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1042943195" target="_blank" rel="noopener noreferrer">here</a>.
-</details><hr>
 
+#### Watch this video: [NB3 : Install the Mouth](https://vimeo.com/1042947561)
+<p align="center">
+<a href="https://vimeo.com/1042947561" title="Control+Click to watch in new tab"><img src="../../../../boxes/audio/_resources/lessons/thumbnails/NB3_Install-the-Mouth.gif" alt="NB3 : Install the Mouth" width="480"/></a>
+</p>
 
-### NB3 : Install the Mouth
 > Let's add a mouth to your NB3.
-
-<details><summary><weak>Guide</weak></summary>
-:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1042947561" target="_blank" rel="noopener noreferrer">here</a>.
-</details><hr>
 
 

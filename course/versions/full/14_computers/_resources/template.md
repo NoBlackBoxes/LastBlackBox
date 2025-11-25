@@ -2,8 +2,8 @@
 In this box, you will learn about computers...
 
 ## Computers
-{Architecture}
-{Low-Level-Programming}
+{Computers:Architecture}
+{Computers:Low-Level-Programming}
 
 # Projects
 {Computers:NB3_Hindbrain}

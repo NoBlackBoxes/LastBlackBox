@@ -2,7 +2,7 @@
 In this box, you will learn about amplifiers...
 
 ## Amplifiers
-{Differential-Amplifier}
-{Op-Amps}
+{Amplifiers:Differential-Amplifier}
+{Amplifiers:Op-Amps}
 
 # Projects

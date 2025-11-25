@@ -2,6 +2,6 @@
 In this box, you will learn about security...
 
 ## Security
-{One-Way-Functions}
+{Security:One-Way-Functions}
 
 # Projects

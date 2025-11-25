@@ -2,9 +2,9 @@
 In this box, you will learn about memory...
 
 ## Memory
-{Flash-Memory}
-{SR-Latch}
-{Flip-Flop}
+{Memory:Flash-Memory}
+{Memory:SR-Latch}
+{Memory:Flip-Flop}
 
 # Projects
 {Memory:NB3_Building-an-SR-Latch}

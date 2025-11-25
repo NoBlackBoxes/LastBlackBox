@@ -1,9 +1,6 @@
 # The Last Black Box : Light
 In this box, you will learn about light...
 
-## Light
-What is light? How do we measure it? How to **create** it?
-
 <details><summary><i>Materials</i></summary><p>
 
 Name|Description| # |Package|Data|Link|
@@ -12,6 +9,7 @@ Lightbulb|Mini incandescent bulb (6 V)|1|Active Electronics|[-D-](/boxes/light/_
 
 </p></details><hr>
 
+## Light
 ### The EM Spectrum
 > Light comes in many shapes in sizes...well, wavelengths. This wavelength determines how much energy the light particles carry, how they interact with materials, and whether or not we can see them.
 
@@ -32,4 +30,4 @@ Lightbulb|Mini incandescent bulb (6 V)|1|Active Electronics|[-D-](/boxes/light/_
 > When an electric charge is accelerated something surprising happens. This acceleration creates a ripple in the electric field (which induces a magnetic field). This ripple propagates away from the accelerated charge at the speed of light. It is light.
 
 
-# Project
+# Projects

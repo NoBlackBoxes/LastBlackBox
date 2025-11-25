@@ -2,6 +2,6 @@
 In this box, you will learn about motors...
 
 ## Motors
-{DC-Motors}
+{Motors:DC-Motors}
 
 # Projects

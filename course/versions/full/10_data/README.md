@@ -1,9 +1,6 @@
 # The Last Black Box : Data
 In this box, you will learn about data...
 
-## Data
-What is a data...for computers? for brains? How can machines decide what to do based on their inputs? A key concept in decision-making is threshold functions. If an input value goes above a threshold, a decision is triggered. How can we make such a trigger out of electronic circuit elements?
-
 <details><summary><i>Materials</i></summary><p>
 
 Name|Description| # |Package|Data|Link|
@@ -12,6 +9,7 @@ Comparator|LM339 (DIP-14)|2|Active Electronics|[-D-](/boxes/data/_resources/data
 
 </p></details><hr>
 
+## Data
 #### Watch this video: [Binary Numbers](https://vimeo.com/1033226788)
 <p align="center">
 <a href="https://vimeo.com/1033226788" title="Control+Click to watch in new tab"><img src="../../../../boxes/data/_resources/lessons/thumbnails/Binary-Numbers.gif" alt="Binary Numbers" width="480"/></a>
@@ -30,12 +28,12 @@ Comparator|LM339 (DIP-14)|2|Active Electronics|[-D-](/boxes/data/_resources/data
 
 - Build the input stage for a 2-bit ADC using the LM339/LM2901 comparator and a resistor ladder.
 
-# Project
-### NB3 : Build an ADC (input)
-> Use a comparator to convert analog values into discrete levels.
+# Projects
+#### Watch this video: [NB3 : Build an ADC (input)](https://vimeo.com/1034767170)
+<p align="center">
+<a href="https://vimeo.com/1034767170" title="Control+Click to watch in new tab"><img src="../../../../boxes/data/_resources/lessons/thumbnails/NB3_Build-an-ADC-input.gif" alt="NB3 : Build an ADC (input)" width="480"/></a>
+</p>
 
-<details><summary><weak>Guide</weak></summary>
-:-:-: A video guide to completing this project can be viewed <a href="https://vimeo.com/1034767170" target="_blank" rel="noopener noreferrer">here</a>.
-</details><hr>
+> Use a comparator to convert analog values into discrete levels.
 
 

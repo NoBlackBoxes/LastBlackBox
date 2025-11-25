@@ -2,9 +2,9 @@
 In this box, you will learn about networks...
 
 ## Networks
-{Physical-Layers}
-{Architectures}
-{Sockets}
+{Networks:Physical-Layers}
+{Networks:Architectures}
+{Networks:Sockets}
 
 # Projects
 {Networks:NB3_Develop-a-Protocol}

@@ -2,7 +2,7 @@
 In this box, you will learn about sensors...
 
 ## Sensors
-{Transducers}
+{Sensors:Transducers}
 
 # Projects
 {Sensors:NB3_Building-a-Light-Sensor}

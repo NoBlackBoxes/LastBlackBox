@@ -2,7 +2,7 @@
 In this box, you will learn about servers...
 
 ## Servers
-{HTTP}
+{Servers:HTTP}
 
 # Projects
 {Servers:NB3_Host-a-Website}
