@@ -1,16 +1,16 @@
+# Train a perceptron to reproduce the underlying function for complex (nonlinear) data
+import os
 import numpy as np
 import matplotlib.pyplot as plt
 import jax.numpy as jnp
-from jax import grad, jit, nn
-
-# Get user name
-import os
-username = os.getlogin()
+from jax import grad, jit
+import LBB.config as Config
 
 # Specify paths
-repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
-box_path = repo_path + '/boxes/learning'
-data_path = box_path + '/supervised/_resources/complex.csv'
+box_path = f"{Config.repo_path}/boxes/learning"
+data_path = f"{box_path}/supervised/_data/complex.csv"
+this_path = os.path.basename(__file__)
+output_path = f"{box_path}/supervised/my_{this_path[:-3]}.png"
 
 # Load data
 data = np.genfromtxt(data_path, delimiter=',')
@@ -23,8 +23,8 @@ y = np.expand_dims(y,1) # Add dimension
 num_neurons = 10
 
 # Initialize weights and biases
-weights = np.random.rand(num_neurons) - 0.5
-biases = np.random.rand(num_neurons) - 0.5
+weights = np.random.randn(num_neurons)
+biases = np.random.randn(num_neurons)
 weights = np.expand_dims(weights,0) # Add dimension
 biases = np.expand_dims(biases,0)   # Add dimension
         
@@ -74,15 +74,22 @@ for i in range(num_steps):
     # Report?
     if((i % report_interval) == 0):
         np.set_printoptions(precision=3)
-        print("MSE: {0:.2f}, Params: {1}".format(final_loss, weights))
+        print("{0}: MSE: {1:.2f}, Weights: {2}".format(i, final_loss, weights))
 
 # Compare prediction to data
 prediction = func(x, weights, biases)
+
+plt.figure(figsize=(8,4), dpi=150)
+plt.suptitle(f"{this_path[3:-3]}")
 plt.subplot(1,2,1)
 plt.plot(x, y, 'b.', markersize=1)              # Plot data
 plt.plot(x, prediction, 'r.', markersize=1)     # Plot prediction
+plt.xlabel("X (input)")
+plt.ylabel("Y (output)")
 plt.subplot(1,2,2)
-plt.plot(np.array(losses))                      # Plot loss over training
-plt.show()
+plt.plot(np.log(np.array(losses)))              # Plot log loss over training
+plt.xlabel("X (input)")
+plt.ylabel("Loss (log)")
+plt.savefig(output_path)
 
 #FIN

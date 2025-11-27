@@ -1,15 +1,14 @@
+# Small steps down analytically computed gradient to find model for simple data
+import os
 import numpy as np
 import matplotlib.pyplot as plt
-import time
-
-# Get user name
-import os
-username = os.getlogin()
+import LBB.config as Config
 
 # Specify paths
-repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
-box_path = repo_path + '/boxes/learning'
-data_path = box_path + '/supervised/_resources/simple.csv'
+box_path = f"{Config.repo_path}/boxes/learning"
+data_path = f"{box_path}/supervised/_data/simple.csv"
+this_path = os.path.basename(__file__)
+output_path = f"{box_path}/supervised/my_{this_path[:-3]}.png"
 
 # Load data
 data = np.genfromtxt(data_path, delimiter=',')
@@ -22,9 +21,9 @@ def func(x, params):
     B = params[1] 
     return (A * x) + B
 
-# Inital guesses
-A = np.random.rand(1)[0] - 0.5
-B = np.random.rand(1)[0] - 0.5
+# Initial guesses for params (mean=0, sigma=1)
+A = np.random.randn(1)[0]
+B = np.random.randn(1)[0]
 params = np.array([A,B])
 num_params = len(params)
     
@@ -34,7 +33,7 @@ def loss(x, y, params):
     err = y - guess
     return np.mean(err*err)
 
-# Define gradient
+# Define gradient (how does error change w.r.t. param A or B?)
 def grad(x, y, params):
     A = params[0]
     B = params[1] 
@@ -43,14 +42,14 @@ def grad(x, y, params):
     return np.array([dE_dA, dE_dB])
 
 # Train
-alpha = .001                        # Learning rate
+alpha = .001                            # Learning rate
 num_steps = 20000
-report_interval = 100
+report_interval = 1000
 initial_loss = loss(x, y, params)
 losses = [initial_loss]
 for i in range(num_steps):
-    gradients = grad(x, y, params)      # Compute gradients for each paramter
-    params -= (gradients * alpha)       # Update parameters
+    gradients = grad(x, y, params)      # Compute gradients for each parameter
+    params -= (gradients * alpha)       # Update parameters (based on learning rate)
 
     # Store loss
     final_loss = loss(x, y, params)     # Compute loss
@@ -59,15 +58,22 @@ for i in range(num_steps):
     # Report?
     if((i % report_interval) == 0):
         np.set_printoptions(precision=3)
-        print("MSE: {0:.2f}, Params: {1}".format(final_loss, params))
+        print("{0}: MSE: {1:.2f}, Params: {2}".format(i, final_loss, params))
 
 # Compare prediction to data
 prediction = func(x, params)
+
+plt.figure(figsize=(8,4), dpi=150)
+plt.suptitle(f"{this_path[3:-3]}")
 plt.subplot(1,2,1)
 plt.plot(x, y, 'b.', markersize=1)              # Plot data
 plt.plot(x, prediction, 'r.', markersize=1)     # Plot prediction
+plt.xlabel("X (input)")
+plt.ylabel("Y (output)")
 plt.subplot(1,2,2)
 plt.plot(np.array(losses))                      # Plot loss over training
-plt.show()
+plt.xlabel("X (input)")
+plt.ylabel("Loss")
+plt.savefig(output_path)
 
 #FIN

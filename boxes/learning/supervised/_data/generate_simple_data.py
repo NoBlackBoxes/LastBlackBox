@@ -1,42 +1,35 @@
+# Generate Simple Data
 import numpy as np
 import matplotlib.pyplot as plt
-
-# Get user name
-import os
-username = os.getlogin()
+import LBB.config as Config
 
 # Specify paths
-repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
-box_path = repo_path + '/boxes/learning'
-data_path = box_path + '/supervised/_resources/simple.csv'
+box_path = f"{Config.repo_path}/boxes/learning"
+data_path = f"{box_path}/supervised/_data/simple.csv"
 
-# Generate X
+# Generate X (inputs)
 extent = 7
 num_samples = 1000
 x = (np.random.rand(num_samples) * extent) - (extent/2)
 
-# Inital guesses
-A = 1.75
-B = -4.22
+# Hidden parameters
+A = 1.75            # Slope
+B = -4.22           # Y-intercept
 params = np.array([A, B])
 num_params = len(params)
 
-# Define function
+# Define function (which we will try to learn/discover)
 def func(x, params):
     A = params[0]
     B = params[1]
     return A * x + B
 
-# Compute Y
+# Compute Y (outputs)
 y = func(x, params)
 
-# Add noise
-noise = (np.random.randn(num_samples) - 0.5) * 1
+# Add noise ("normally distributed", mean=0, sigma=1.5)
+noise = np.random.randn(num_samples) * 1.5
 y = y + noise
-
-# Plot
-plt.plot(x,y, '.', markersize=1)
-plt.show()
 
 # Save
 data = np.vstack((x, y)).T
