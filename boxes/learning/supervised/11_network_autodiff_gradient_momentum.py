@@ -20,7 +20,7 @@ x = np.expand_dims(x,1) # Add dimension
 y = np.expand_dims(y,1) # Add dimension
 
 # Define network (size of hidden layer)
-num_hidden_neurons = 2
+num_hidden_neurons = 10
 
 # Initialize hidden layer (size: num_hidden_neurons)
 W1 = np.random.rand(num_hidden_neurons)
@@ -61,7 +61,7 @@ deltas_W1 = np.zeros(num_hidden_neurons)
 deltas_B1 = np.zeros(num_hidden_neurons)
 deltas_W2 = np.zeros(num_hidden_neurons)
 deltas_B2 = np.zeros(num_hidden_neurons)
-report_interval = 100
+report_interval = 1000
 num_steps = 10000
 initial_loss = loss(x, y, W1, B1, W2, B2)
 losses = [initial_loss]
@@ -92,7 +92,7 @@ for i in range(num_steps):
     # Report?
     if((i % report_interval) == 0):
         np.set_printoptions(precision=3)
-        print("{0}: MSE: {1:.2f}, Weights: {2}".format(i, final_loss, W1))
+        print("{0}: MSE: {1:.2f}".format(i, final_loss))
 
 # Compare prediction to data
 prediction = func(x, W1, B1, W2, B2)
