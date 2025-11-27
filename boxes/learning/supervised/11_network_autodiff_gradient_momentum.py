@@ -23,14 +23,14 @@ y = np.expand_dims(y,1) # Add dimension
 num_hidden_neurons = 10
 
 # Initialize hidden layer (size: num_hidden_neurons)
-W1 = np.random.rand(num_hidden_neurons)
-B1 = np.random.rand(num_hidden_neurons)
+W1 = np.random.randn(num_hidden_neurons)
+B1 = np.random.randn(num_hidden_neurons)
 W1 = np.expand_dims(W1,0)
 B1 = np.expand_dims(B1,0)
 
 # Initialize output layer (size: num_hidden_neurons)
-W2 = np.random.rand(num_hidden_neurons)
-B2 = np.random.rand(num_hidden_neurons)
+W2 = np.random.randn(num_hidden_neurons)
+B2 = np.random.randn(num_hidden_neurons)
 W2 = np.expand_dims(W2,0)
 B2 = np.expand_dims(B2,0)
 
