@@ -27,6 +27,11 @@ for course_name in Config.course_names:
         README_text = session.render()
         README_path = f"{session_folder}/README.md"
         with open(README_path, 'w', encoding='utf8') as f:
-            f.writelines(README_text)    
+            f.writelines(README_text)
+        # Render README for each box
+        if course_name == "The Last Black Box":
+            README_path = f"{Config.boxes_path}/{session.slug}/README.md"
+            with open(README_path, 'w', encoding='utf8') as f:
+                f.writelines(README_text)
 
 #FIN
