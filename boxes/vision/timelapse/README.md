@@ -16,5 +16,5 @@ ffmpeg -r 30 -f image2 -pattern_type glob -i '*.jpg' -s 1920x1080 -vcodec libx26
 
 ## For VK0 (long exposure)
 ```bash
-libcamera-still --camera 1 --datetime --shutter 20000000 --gain 8 --awbgains 2,1.81 --immediate --denoise cdn_hq
+rpicam-still --camera 1 --datetime --shutter 20000000 --gain 8 --awbgains 2,1.81 --immediate --denoise cdn_hq
 ```

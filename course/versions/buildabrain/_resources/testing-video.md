@@ -11,7 +11,7 @@ The following command should be entered into the (Linux) terminal window. It wil
 
 ```bash
 # Capture a still image and save it to a file
-libcamera-still -o test.png
+rpicam-still -o test.png
 ```
 
 You should see a new file created in the VS Code "file explorer". If you select this file, then you will be able to view it on your own computer.
