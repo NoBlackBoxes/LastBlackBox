@@ -1,4 +1,4 @@
-# Stream live camera images
+# Stream live camera images from your NB3
 import time, cv2
 import LBB.config as Config
 import importlib.util
@@ -29,3 +29,5 @@ try:
 except KeyboardInterrupt:
     camera.stop()
     server.stop()
+
+#FIN
