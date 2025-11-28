@@ -9,7 +9,7 @@ What is intelligence? Can we create it in a machine? Can you create it in your *
 {Audio:Signal-Processing}
 
 ## Vision
-{Vision:Cameras}
+{Vision:Light-Cameras-Noise}
 {Vision:NB3_Install-the-Eye}
 {Vision:NB3_Streaming-Images}
 {Vision:Image-Processing}

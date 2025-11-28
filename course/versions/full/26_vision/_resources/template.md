@@ -2,7 +2,7 @@
 In this box, you will learn about vision...
 
 ## Vision
-{Vision:Cameras}
+{Vision:Light-Cameras-Noise}
 {Vision:Image-Processing}
 
 # Projects

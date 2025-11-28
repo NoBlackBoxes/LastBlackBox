@@ -153,8 +153,8 @@
 - [x] [Signal Processing](https://vimeo.com/manage/videos/1139975157)
 
 ## Vision
-- [ ] [Cameras]()
 - [ ] [NB3 : Streaming Images]()
+- [x] [Light, Cameras, Noise](https://vimeo.com/manage/videos/1141367902)
 - [ ] [Image-Processing]()
 - [x] [NB3 : Install the Eye](https://vimeo.com/1042945461)
 

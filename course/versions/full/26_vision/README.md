@@ -18,8 +18,12 @@ M2 nut|regular M2 nut|4|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 </p></details><hr>
 
 ## Vision
-### Cameras
-> From CCDs to CMOS.
+#### Watch this video: [Light, Cameras, Noise](https://vimeo.com/manage/videos/1141367902)
+<p align="center">
+<a href="https://vimeo.com/manage/videos/1141367902" title="Control+Click to watch in new tab"><img src="../../../../boxes/vision/_resources/lessons/thumbnails/Light-Cameras-Noise.gif" alt="Light, Cameras, Noise" width="480"/></a>
+</p>
+
+> We start with a recap about light, measuring analog signals with computers, and then describe how a modern camera sensor is built. We then introduce the NB3's Eye and conclude with a discussion of the sources of noise that all cameras encounter when trying to *image* the real world.
 
 
 ### Image-Processing
@@ -42,17 +46,10 @@ pip install opencv-python
 - Test your camera with the following command
 - *code*
 ```bash
-# Navigate to LBB root
-cd ~/NoBlackBoxes/LastBlackBox
-
-# Create folder for images in the temporary folder
-mkdir _tmp/images
-
-# Navigate to the temporary image folder
-cd _tmp/images
-
 # Capture a still image and save it to a file
-libcamera-still -o test.png
+libcamera-still -o my_test.png
+
+# The image will appear in the same folder where the command was run
 ```
 
 ### NB3 : Streaming Images
