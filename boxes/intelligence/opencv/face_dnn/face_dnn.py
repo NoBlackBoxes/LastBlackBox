@@ -1,14 +1,16 @@
-import os
-import time
-import cv2
+# Use a DNN to find faces in a RGB image and stream result via web server
+import time, cv2
 import numpy as np
-import NB3.Vision.camera as Camera         # NB3 Camera
-#import NB3.Vision.webcam as Camera          # Webcam (PC)
+import LBB.config as Config
+import importlib.util
+if importlib.util.find_spec("picamera2") is not None:
+    import NB3.Vision.camera as Camera                  # NB3 Camera
+else:
+    import NB3.Vision.webcam as Camera                  # Webcam (PC)
 import NB3.Server.server as Server
 
 # Specify Paths
-username = os.getlogin()
-box_root = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/intelligence"
+box_root = f"{Config.boxes_path}/intelligence"
 project_root = f"{box_root}/opencv"
 site_root = f"{project_root}/sites/single"
 model_path = f"{project_root}/_tmp/models/face_detection_yunet_2023mar.onnx"

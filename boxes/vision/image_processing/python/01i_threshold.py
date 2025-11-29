@@ -3,7 +3,7 @@
 import time, cv2
 import LBB.config as Config
 import importlib.util
-if importlib.util.find_spec("picamera2") is not None:   # Is picamera available (only on NB3)?
+if importlib.util.find_spec("picamera2") is not None:
     import NB3.Vision.camera as Camera                  # NB3 Camera
 else:
     import NB3.Vision.webcam as Camera                  # Webcam (PC)
