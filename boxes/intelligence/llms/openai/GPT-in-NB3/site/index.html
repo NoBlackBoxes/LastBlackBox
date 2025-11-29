@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>GPT in NB3</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon"> <!-- Favicon added -->
+</head>
+
+<body>
+    <!-- Camera Stream -->
+    <div class="stream-container">
+        <img src="/stream/camera.mjpg" alt="Camera Stream">
+    </div>
+
+    <!-- HUD Control Panel -->
+    <div class="control-panel">
+        <div class="button-container">
+            <button id="forward">▲</button>
+            <button id="backward">▼</button>
+            <button id="left">◀</button>
+            <button id="right">▶</button>
+        </div>
+        <button id="horn" class="horn-button">🔊</button>
+        <button id="action" class="action-button">?</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

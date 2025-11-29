@@ -1,22 +1,22 @@
-import os
-import time
-import base64
+import os, time, base64, openai
 import numpy as np
-import openai
-from dotenv import load_dotenv
-import NB3.Vision.camera as Camera
+import LBB.config as Config
+import dotenv
+import importlib.util
+if importlib.util.find_spec("picamera2") is not None:
+    import NB3.Vision.camera as Camera                  # NB3 Camera
+else:
+    import NB3.Vision.webcam as Camera                  # Webcam (PC)
 import NB3.Sound.microphone as Microphone
 import NB3.Sound.speaker as Speaker
 import NB3.Sound.utilities as Utilities
 
-# Get user name
-username = os.getlogin()
-
-# Set base path
-base_path = f"/home/{username}/NoBlackBoxes/LastBlackBox/boxes/intelligence/llms/chatNB3"
+# Specify Paths
+box_root = f"{Config.boxes_path}/intelligence"
+project_root = f"{box_root}/llms/chatNB3"
 
 # Load OpenAI API Key
-load_dotenv(f"{base_path}/.env")
+dotenv.load_dotenv(f"{project_root}/.env")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # Open camera, start, and wait for it to settle
@@ -24,15 +24,19 @@ camera = Camera.Camera(width=800, height=600)
 camera.start()
 time.sleep(1.0)
 
+# List available sound devices
+Utilities.list_devices()
+
+# Get speaker device by name (NB3: "MAX", PC: select based on listed output devices)
+output_device = Utilities.get_output_device_by_name("HD")
+if output_device == -1:
+    exit("Output device not found")
+
 # Specify params
-output_device = 1
 num_channels = 2
 sample_rate = 48000
 buffer_size = int(sample_rate / 10)
 max_samples = int(sample_rate * 10)
-
-# List available sound devices
-Utilities.list_devices()
 
 # Initialize speaker
 speaker = Speaker.Speaker(output_device, num_channels, 'int32', sample_rate, buffer_size)

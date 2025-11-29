@@ -72,3 +72,5 @@ except KeyboardInterrupt:
     speaker.stop()
     server.stop()
     ser.close()
+
+#FIN
