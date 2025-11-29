@@ -25,7 +25,7 @@ DC Gearbox Motor|TT Gearbox DC Motor - 200RPM - 3 to 6VDC and wheel|2|Large (100
 # Projects
 #### Watch this video: [NB3 : Muscles (Servos)](https://vimeo.com/1034800702)
 <p align="center">
-<a href="https://vimeo.com/1034800702" title="Control+Click to watch in new tab"><img src="../../../../boxes/robotics/_resources/lessons/thumbnails/NB3_Muscles-Servos.gif" alt="NB3 : Muscles (Servos)" width="480"/></a>
+<a href="https://vimeo.com/1034800702" title="Control+Click to watch in new tab"><img src="../../boxes/robotics/_resources/lessons/thumbnails/NB3_Muscles-Servos.gif" alt="NB3 : Muscles (Servos)" width="480"/></a>
 </p>
 
 > Let's build your robot's movement system (using servo motors).
@@ -79,7 +79,7 @@ void loop() {
 
 #### Watch this video: [NB3 : Ball Caster](https://vimeo.com/1034797327)
 <p align="center">
-<a href="https://vimeo.com/1034797327" title="Control+Click to watch in new tab"><img src="../../../../boxes/robotics/_resources/lessons/thumbnails/NB3_Ball-Caster.gif" alt="NB3 : Ball Caster" width="480"/></a>
+<a href="https://vimeo.com/1034797327" title="Control+Click to watch in new tab"><img src="../../boxes/robotics/_resources/lessons/thumbnails/NB3_Ball-Caster.gif" alt="NB3 : Ball Caster" width="480"/></a>
 </p>
 
 > Let's add a front wheel (ball caster) to keep your NB3 from dragging its face on the ground.
@@ -89,14 +89,14 @@ void loop() {
 
 #### Watch this video: [NB3 : Build a Braitenberg Vehicle](https://vimeo.com/1034798460)
 <p align="center">
-<a href="https://vimeo.com/1034798460" title="Control+Click to watch in new tab"><img src="../../../../boxes/robotics/_resources/lessons/thumbnails/NB3_Build-a-Braitenberg-Vehicle.gif" alt="NB3 : Build a Braitenberg Vehicle" width="480"/></a>
+<a href="https://vimeo.com/1034798460" title="Control+Click to watch in new tab"><img src="../../boxes/robotics/_resources/lessons/thumbnails/NB3_Build-a-Braitenberg-Vehicle.gif" alt="NB3 : Build a Braitenberg Vehicle" width="480"/></a>
 </p>
 
 > Here we create the first Braitenberg Vehicle, a simple sensory-motor feedback loop connecting two light sensors to the motion of two wheels.
 
 - A Braitenberg Vehicle can show complex behaviour, appearing to seek out light and avoid shadows, but the underlying control circuit is extremely simple.
 <p align="center">
-<img src="../../../../boxes/robotics/_resources/images/braitenberg_vehicle.png" alt="Braitenberg Vehicle" width="600">
+<img src="../../boxes/robotics/_resources/images/braitenberg_vehicle.png" alt="Braitenberg Vehicle" width="600">
 </p>
 
 - A small change to the control circuit can completely change how your NB£ "vehicle" responds to light.

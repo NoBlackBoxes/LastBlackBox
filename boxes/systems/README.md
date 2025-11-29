@@ -18,7 +18,7 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 ## Systems
 #### Watch this video: [Multi-Tasking](https://vimeo.com/1036086160)
 <p align="center">
-<a href="https://vimeo.com/1036086160" title="Control+Click to watch in new tab"><img src="../../../../boxes/systems/_resources/lessons/thumbnails/Multi-Tasking.gif" alt="Multi-Tasking" width="480"/></a>
+<a href="https://vimeo.com/1036086160" title="Control+Click to watch in new tab"><img src="../../boxes/systems/_resources/lessons/thumbnails/Multi-Tasking.gif" alt="Multi-Tasking" width="480"/></a>
 </p>
 
 > Back when computers were very expensive mainframes, some clever software engineers developed strategies to share the computer's resources between multiple users, running multiple different tasks, at the same time. These "scheduling" programs still form the basis of our modern **multi-tasking** operating systems.
@@ -28,7 +28,7 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 
 #### Watch this video: [Operating Systems](https://vimeo.com/1036096746)
 <p align="center">
-<a href="https://vimeo.com/1036096746" title="Control+Click to watch in new tab"><img src="../../../../boxes/systems/_resources/lessons/thumbnails/Operating-Systems.gif" alt="Operating Systems" width="480"/></a>
+<a href="https://vimeo.com/1036096746" title="Control+Click to watch in new tab"><img src="../../boxes/systems/_resources/lessons/thumbnails/Operating-Systems.gif" alt="Operating Systems" width="480"/></a>
 </p>
 
 > As computer hardware became much more capable, software was developed to manage this complexity and power. This software took responsibility for managing access to the computer's resources: processing, memory, and devices. These days, when we *operate* a computer, we rarely interact directly with the hardware. Instead, we talk to this control software, which we call an **operating system**.
@@ -39,7 +39,7 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 
 #### Watch this video: [NB3 : Midbrain](https://vimeo.com/1036089510)
 <p align="center">
-<a href="https://vimeo.com/1036089510" title="Control+Click to watch in new tab"><img src="../../../../boxes/systems/_resources/lessons/thumbnails/NB3_Midbrain.gif" alt="NB3 : Midbrain" width="480"/></a>
+<a href="https://vimeo.com/1036089510" title="Control+Click to watch in new tab"><img src="../../boxes/systems/_resources/lessons/thumbnails/NB3_Midbrain.gif" alt="NB3 : Midbrain" width="480"/></a>
 </p>
 
 > Now we will add a more powerful computer (Raspberry Pi) to your NB3's midbrain.
@@ -50,7 +50,7 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 
 #### Watch this video: [NB3 : RPiOS](https://vimeo.com/1036095710)
 <p align="center">
-<a href="https://vimeo.com/1036095710" title="Control+Click to watch in new tab"><img src="../../../../boxes/systems/_resources/lessons/thumbnails/NB3_RPiOS.gif" alt="NB3 : RPiOS" width="480"/></a>
+<a href="https://vimeo.com/1036095710" title="Control+Click to watch in new tab"><img src="../../boxes/systems/_resources/lessons/thumbnails/NB3_RPiOS.gif" alt="NB3 : RPiOS" width="480"/></a>
 </p>
 
 > After mounting and wiring your NB3's midbrain computer, you must now give it some core software to run...an operating system.
@@ -61,7 +61,7 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 
 #### Watch this video: [NB3 : Connecting to RPi](https://vimeo.com/1036391512)
 <p align="center">
-<a href="https://vimeo.com/1036391512" title="Control+Click to watch in new tab"><img src="../../../../boxes/systems/_resources/lessons/thumbnails/NB3_Connecting-to-RPi.gif" alt="NB3 : Connecting to RPi" width="480"/></a>
+<a href="https://vimeo.com/1036391512" title="Control+Click to watch in new tab"><img src="../../boxes/systems/_resources/lessons/thumbnails/NB3_Connecting-to-RPi.gif" alt="NB3 : Connecting to RPi" width="480"/></a>
 </p>
 
 > When you have installed your NB3's operating system, then you can power it on and try to connect to it from your Host computer over WiFi or UART.
@@ -73,7 +73,7 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 
 #### Watch this video: [Visual Studio Code](https://vimeo.com/1036716612)
 <p align="center">
-<a href="https://vimeo.com/1036716612" title="Control+Click to watch in new tab"><img src="../../../../boxes/systems/_resources/lessons/thumbnails/Visual-Studio-Code.gif" alt="Visual Studio Code" width="480"/></a>
+<a href="https://vimeo.com/1036716612" title="Control+Click to watch in new tab"><img src="../../boxes/systems/_resources/lessons/thumbnails/Visual-Studio-Code.gif" alt="Visual Studio Code" width="480"/></a>
 </p>
 
 > We will be using Visual Studio Code (VS Code) as our tool for writing programs. VS Code is just a simple, *but really powerful*, text editor. It has extensions for all sorts of useful tools (Python, Git, etc.), and for connecting to a "remote" computer (our NB3's midbrain).
@@ -82,7 +82,7 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 # Projects
 #### Watch this video: [NB3 : Programming Concurrency (Arduino)](https://vimeo.com/1036094397)
 <p align="center">
-<a href="https://vimeo.com/1036094397" title="Control+Click to watch in new tab"><img src="../../../../boxes/systems/_resources/lessons/thumbnails/NB3_Programming-Concurrency-Arduino.gif" alt="NB3 : Programming Concurrency (Arduino)" width="480"/></a>
+<a href="https://vimeo.com/1036094397" title="Control+Click to watch in new tab"><img src="../../boxes/systems/_resources/lessons/thumbnails/NB3_Programming-Concurrency-Arduino.gif" alt="NB3 : Programming Concurrency (Arduino)" width="480"/></a>
 </p>
 
 > Getting a microcontroller to perform two tasks (with very different timescales) at the same time is a fun programming challenge. You will develop new skills in organizing your programs and get a glimpse of the problems solved by the *kernel* of a modern operating system.

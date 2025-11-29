@@ -14,7 +14,7 @@ Piezo|Piezo element|1|Passive Electronics|[-D-](/boxes/sensors/_resources/datash
 ## Sensors
 #### Watch this video: [Transducers](https://vimeo.com/1031477896)
 <p align="center">
-<a href="https://vimeo.com/1031477896" title="Control+Click to watch in new tab"><img src="../../../../boxes/sensors/_resources/lessons/thumbnails/Transducers.gif" alt="Transducers" width="480"/></a>
+<a href="https://vimeo.com/1031477896" title="Control+Click to watch in new tab"><img src="../../boxes/sensors/_resources/lessons/thumbnails/Transducers.gif" alt="Transducers" width="480"/></a>
 </p>
 
 > A sensor converts (transduces) a physical quantity (light, heat, pressure, etc.) into an electrical signal (voltage, current, or resistance).
@@ -23,7 +23,7 @@ Piezo|Piezo element|1|Passive Electronics|[-D-](/boxes/sensors/_resources/datash
 # Projects
 #### Watch this video: [NB3 : Building a Light Sensor](https://vimeo.com/1031479533)
 <p align="center">
-<a href="https://vimeo.com/1031479533" title="Control+Click to watch in new tab"><img src="../../../../boxes/sensors/_resources/lessons/thumbnails/NB3_Building-a-Light-Sensor.gif" alt="NB3 : Building a Light Sensor" width="480"/></a>
+<a href="https://vimeo.com/1031479533" title="Control+Click to watch in new tab"><img src="../../boxes/sensors/_resources/lessons/thumbnails/NB3_Building-a-Light-Sensor.gif" alt="NB3 : Building a Light Sensor" width="480"/></a>
 </p>
 
 > Your NB3 will use LDRs to convert light into voltage. Here you will build and test this light sensing circuit.

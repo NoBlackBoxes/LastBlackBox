@@ -6,6 +6,7 @@ LBB : Engine : Video Class
 """
 
 # Imports
+import LBB.config as Config
 
 # Video Class
 class Video:
@@ -34,7 +35,7 @@ class Video:
 
     # Render video object as Markdown
     def render(self):
-        image_prefix = "../../../.."
+        image_prefix = Config.image_prefix
         gif_name = self.name + ".gif"
         gif_name = gif_name.replace('(', '').replace(')', '').replace('\'', '').replace(',', '')
         if gif_name.startswith("NB3"):

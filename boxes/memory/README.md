@@ -12,7 +12,7 @@ Gate (NAND)|4xNAND gate|2|Active Electronics|[-D-](/boxes/memory/_resources/data
 ## Memory
 #### Watch this video: [Flash Memory](https://vimeo.com/1033230293)
 <p align="center">
-<a href="https://vimeo.com/1033230293" title="Control+Click to watch in new tab"><img src="../../../../boxes/memory/_resources/lessons/thumbnails/Flash-Memory.gif" alt="Flash Memory" width="480"/></a>
+<a href="https://vimeo.com/1033230293" title="Control+Click to watch in new tab"><img src="../../boxes/memory/_resources/lessons/thumbnails/Flash-Memory.gif" alt="Flash Memory" width="480"/></a>
 </p>
 
 > Storing much of your data requires *quantum mechanics*.
@@ -20,7 +20,7 @@ Gate (NAND)|4xNAND gate|2|Active Electronics|[-D-](/boxes/memory/_resources/data
 
 #### Watch this video: [SR Latch](https://vimeo.com/1033238234)
 <p align="center">
-<a href="https://vimeo.com/1033238234" title="Control+Click to watch in new tab"><img src="../../../../boxes/memory/_resources/lessons/thumbnails/SR-Latch.gif" alt="SR Latch" width="480"/></a>
+<a href="https://vimeo.com/1033238234" title="Control+Click to watch in new tab"><img src="../../boxes/memory/_resources/lessons/thumbnails/SR-Latch.gif" alt="SR Latch" width="480"/></a>
 </p>
 
 > Logic gates with feedback can hold onto their values...they can remember.
@@ -35,7 +35,7 @@ Gate (NAND)|4xNAND gate|2|Active Electronics|[-D-](/boxes/memory/_resources/data
 # Projects
 #### Watch this video: [NB3 : Building an SR Latch](https://vimeo.com/1033234541)
 <p align="center">
-<a href="https://vimeo.com/1033234541" title="Control+Click to watch in new tab"><img src="../../../../boxes/memory/_resources/lessons/thumbnails/NB3_Building-an-SR-Latch.gif" alt="NB3 : Building an SR Latch" width="480"/></a>
+<a href="https://vimeo.com/1033234541" title="Control+Click to watch in new tab"><img src="../../boxes/memory/_resources/lessons/thumbnails/NB3_Building-an-SR-Latch.gif" alt="NB3 : Building an SR Latch" width="480"/></a>
 </p>
 
 > Let's build and test an SR latch from NAND gates.

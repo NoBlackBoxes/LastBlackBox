@@ -12,7 +12,7 @@ DC Brushed Motor|6V Brushed DC motor|1|Large (100)|[-D-](/boxes/motors/)|[-L-](h
 ## Motors
 #### Watch this video: [DC Motors](https://vimeo.com/1031627739)
 <p align="center">
-<a href="https://vimeo.com/1031627739" title="Control+Click to watch in new tab"><img src="../../../../boxes/motors/_resources/lessons/thumbnails/DC-Motors.gif" alt="DC Motors" width="480"/></a>
+<a href="https://vimeo.com/1031627739" title="Control+Click to watch in new tab"><img src="../../boxes/motors/_resources/lessons/thumbnails/DC-Motors.gif" alt="DC Motors" width="480"/></a>
 </p>
 
 > An electric motor converts current into rotation using electromagnets that are turned on and off in a coordinated pattern. Different types of motors (stepper, brushed, or brushless) use different strategies (circuits) for this coordination.

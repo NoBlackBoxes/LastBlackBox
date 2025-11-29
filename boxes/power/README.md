@@ -21,7 +21,7 @@ Velcro Patch|Velcro adhesive|1|Medium (011)|[-D-](/boxes/power/)|[-L-](https://w
 ## Power
 #### Watch this video: [DC-DC Converters](https://vimeo.com/1035304311)
 <p align="center">
-<a href="https://vimeo.com/1035304311" title="Control+Click to watch in new tab"><img src="../../../../boxes/power/_resources/lessons/thumbnails/DC-DC-Converters.gif" alt="DC-DC Converters" width="480"/></a>
+<a href="https://vimeo.com/1035304311" title="Control+Click to watch in new tab"><img src="../../boxes/power/_resources/lessons/thumbnails/DC-DC-Converters.gif" alt="DC-DC Converters" width="480"/></a>
 </p>
 
 > How does efficient DC to DC conversion work? Buck and Boost.
@@ -30,7 +30,7 @@ Velcro Patch|Velcro adhesive|1|Medium (011)|[-D-](/boxes/power/)|[-L-](https://w
 # Projects
 #### Watch this video: [NB3 : Power Supply](https://vimeo.com/1035306761)
 <p align="center">
-<a href="https://vimeo.com/1035306761" title="Control+Click to watch in new tab"><img src="../../../../boxes/power/_resources/lessons/thumbnails/NB3_Power-Supply.gif" alt="NB3 : Power Supply" width="480"/></a>
+<a href="https://vimeo.com/1035306761" title="Control+Click to watch in new tab"><img src="../../boxes/power/_resources/lessons/thumbnails/NB3_Power-Supply.gif" alt="NB3 : Power Supply" width="480"/></a>
 </p>
 
 > Let's install a DC-DC power supply on our NB3.
@@ -41,7 +41,7 @@ Velcro Patch|Velcro adhesive|1|Medium (011)|[-D-](/boxes/power/)|[-L-](https://w
 
 #### Watch this video: [NB3 : Battery Pack](https://vimeo.com/1042781111)
 <p align="center">
-<a href="https://vimeo.com/1042781111" title="Control+Click to watch in new tab"><img src="../../../../boxes/power/_resources/lessons/thumbnails/NB3_Battery-Pack.gif" alt="NB3 : Battery Pack" width="480"/></a>
+<a href="https://vimeo.com/1042781111" title="Control+Click to watch in new tab"><img src="../../boxes/power/_resources/lessons/thumbnails/NB3_Battery-Pack.gif" alt="NB3 : Battery Pack" width="480"/></a>
 </p>
 
 > Let's install a rechargeable NiMH battery pack on our NB3.

@@ -24,7 +24,7 @@ Lightbulb|Mini incandescent bulb (6 V)|1|Active Electronics|[-D-](/boxes/light/_
 
 #### Watch this video: [Electromagnetic Radiation](https://vimeo.com/1032447600)
 <p align="center">
-<a href="https://vimeo.com/1032447600" title="Control+Click to watch in new tab"><img src="../../../../boxes/light/_resources/lessons/thumbnails/Electromagnetic-Radiation.gif" alt="Electromagnetic Radiation" width="480"/></a>
+<a href="https://vimeo.com/1032447600" title="Control+Click to watch in new tab"><img src="../../boxes/light/_resources/lessons/thumbnails/Electromagnetic-Radiation.gif" alt="Electromagnetic Radiation" width="480"/></a>
 </p>
 
 > When an electric charge is accelerated something surprising happens. This acceleration creates a ripple in the electric field (which induces a magnetic field). This ripple propagates away from the accelerated charge at the speed of light. It is light.

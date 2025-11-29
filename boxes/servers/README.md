@@ -11,7 +11,7 @@ Name|Description| # |Package|Data|Link|
 ## Servers
 #### Watch this video: [HTTP](https://vimeo.com/1135853103)
 <p align="center">
-<a href="https://vimeo.com/1135853103" title="Control+Click to watch in new tab"><img src="../../../../boxes/servers/_resources/lessons/thumbnails/HTTP.gif" alt="HTTP" width="480"/></a>
+<a href="https://vimeo.com/1135853103" title="Control+Click to watch in new tab"><img src="../../boxes/servers/_resources/lessons/thumbnails/HTTP.gif" alt="HTTP" width="480"/></a>
 </p>
 
 > The fundamental "application protocol" of the internet is HTTP (Hyper Text Transfer Protocol). Your web browser (the client) uses HTTP to *request* HTML files (and other resources) from a computer that understands HTTP (the server) anywhere on the internet. Here we will build a *very simple* HTTP server in Python.
@@ -25,7 +25,7 @@ Name|Description| # |Package|Data|Link|
 # Projects
 #### Watch this video: [NB3 : Host a Website](https://vimeo.com/1135859914)
 <p align="center">
-<a href="https://vimeo.com/1135859914" title="Control+Click to watch in new tab"><img src="../../../../boxes/servers/_resources/lessons/thumbnails/NB3_Host-a-Website.gif" alt="NB3 : Host a Website" width="480"/></a>
+<a href="https://vimeo.com/1135859914" title="Control+Click to watch in new tab"><img src="../../boxes/servers/_resources/lessons/thumbnails/NB3_Host-a-Website.gif" alt="NB3 : Host a Website" width="480"/></a>
 </p>
 
 > Let's host a website on your robot using the NB3 Server library and Python. We will first explain how the NB3 (HTTP) Server class works, what it is capable of, and then host a site with a range of different file types: HTML, CSS, images, icons, and Javascript.
@@ -40,7 +40,7 @@ Name|Description| # |Package|Data|Link|
 
 #### Watch this video: [NB3 : Remote Control NB3 (GUI)](https://vimeo.com/1135870296)
 <p align="center">
-<a href="https://vimeo.com/1135870296" title="Control+Click to watch in new tab"><img src="../../../../boxes/servers/_resources/lessons/thumbnails/NB3_Remote-Control-NB3-GUI.gif" alt="NB3 : Remote Control NB3 (GUI)" width="480"/></a>
+<a href="https://vimeo.com/1135870296" title="Control+Click to watch in new tab"><img src="../../boxes/servers/_resources/lessons/thumbnails/NB3_Remote-Control-NB3-GUI.gif" alt="NB3 : Remote Control NB3 (GUI)" width="480"/></a>
 </p>
 
 > Let's remotely control your NB3 using a graphical user interface (GUI) that you can access from *any* web browser.

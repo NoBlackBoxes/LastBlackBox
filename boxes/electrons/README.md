@@ -27,7 +27,7 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 ## Electrons
 #### Watch this video: [Electric Fields](https://vimeo.com/1032441712)
 <p align="center">
-<a href="https://vimeo.com/1032441712" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/Electric-Fields.gif" alt="Electric Fields" width="480"/></a>
+<a href="https://vimeo.com/1032441712" title="Control+Click to watch in new tab"><img src="../../boxes/electrons/_resources/lessons/thumbnails/Electric-Fields.gif" alt="Electric Fields" width="480"/></a>
 </p>
 
 > A very useful, and quite simple, depiction of the lines of force surrounding charged particles.
@@ -36,7 +36,7 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 
 #### Watch this video: [Voltage](https://vimeo.com/1000730032)
 <p align="center">
-<a href="https://vimeo.com/1000730032" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/Voltage.gif" alt="Voltage" width="480"/></a>
+<a href="https://vimeo.com/1000730032" title="Control+Click to watch in new tab"><img src="../../boxes/electrons/_resources/lessons/thumbnails/Voltage.gif" alt="Voltage" width="480"/></a>
 </p>
 
 > When there is more negative or positive charge in one location vs. another there is a *potential difference* between these locations. This *potential difference* is called a **voltage** and it creates a pressure that pushes electrons from the location with more negative charge to the location with less.
@@ -44,7 +44,7 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 
 #### Watch this video: [Conductors](https://vimeo.com/1029337222)
 <p align="center">
-<a href="https://vimeo.com/1029337222" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/Conductors.gif" alt="Conductors" width="480"/></a>
+<a href="https://vimeo.com/1029337222" title="Control+Click to watch in new tab"><img src="../../boxes/electrons/_resources/lessons/thumbnails/Conductors.gif" alt="Conductors" width="480"/></a>
 </p>
 
 > Some materials have electrons in their outer orbitals that are happy to jump between neighboring atomic nuclei (of the same element). These electrons are "free" to move around the material. If we place such a material between two locations with a *potential difference* (voltage), then electrons will flow from the **(-)** location to the **(+)** location; the material will **conduct** electricity.
@@ -52,7 +52,7 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 
 #### Watch this video: [Batteries](https://vimeo.com/1029278169)
 <p align="center">
-<a href="https://vimeo.com/1029278169" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/Batteries.gif" alt="Batteries" width="480"/></a>
+<a href="https://vimeo.com/1029278169" title="Control+Click to watch in new tab"><img src="../../boxes/electrons/_resources/lessons/thumbnails/Batteries.gif" alt="Batteries" width="480"/></a>
 </p>
 
 > Generating a stable voltage requires a renewable source of electrons to maintain a *potential difference*. We can accomplish this with a (redox) chemical reaction inside the wonderfully useful device that we call a **battery**.
@@ -68,7 +68,7 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 
 #### Watch this video: [NB3 : Multimeter Basics](https://vimeo.com/1027764019)
 <p align="center">
-<a href="https://vimeo.com/1027764019" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/NB3_Multimeter-Basics.gif" alt="NB3 : Multimeter Basics" width="480"/></a>
+<a href="https://vimeo.com/1027764019" title="Control+Click to watch in new tab"><img src="../../boxes/electrons/_resources/lessons/thumbnails/NB3_Multimeter-Basics.gif" alt="NB3 : Multimeter Basics" width="480"/></a>
 </p>
 
 > An overview of digital multimeters for beginners. What can it measure? What features do you need to complete the course?
@@ -80,7 +80,7 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 
 #### Watch this video: [NB3 : Measuring Voltage](https://vimeo.com/1027762531)
 <p align="center">
-<a href="https://vimeo.com/1027762531" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/NB3_Measuring-Voltage.gif" alt="NB3 : Measuring Voltage" width="480"/></a>
+<a href="https://vimeo.com/1027762531" title="Control+Click to watch in new tab"><img src="../../boxes/electrons/_resources/lessons/thumbnails/NB3_Measuring-Voltage.gif" alt="NB3 : Measuring Voltage" width="480"/></a>
 </p>
 
 > How to measure voltage with a digital multimeter.
@@ -88,7 +88,7 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 
 #### Watch this video: [Current](https://vimeo.com/1029334167)
 <p align="center">
-<a href="https://vimeo.com/1029334167" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/Current.gif" alt="Current" width="480"/></a>
+<a href="https://vimeo.com/1029334167" title="Control+Click to watch in new tab"><img src="../../boxes/electrons/_resources/lessons/thumbnails/Current.gif" alt="Current" width="480"/></a>
 </p>
 
 > The rate at which electrons flow, measured as *#charges / second*, is called **current**. We use the unit *Amps* (A) and the circuit symbol **I**.
@@ -96,7 +96,7 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 
 #### Watch this video: [Resistors](https://vimeo.com/1029696806)
 <p align="center">
-<a href="https://vimeo.com/1029696806" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/Resistors.gif" alt="Resistors" width="480"/></a>
+<a href="https://vimeo.com/1029696806" title="Control+Click to watch in new tab"><img src="../../boxes/electrons/_resources/lessons/thumbnails/Resistors.gif" alt="Resistors" width="480"/></a>
 </p>
 
 > Many materials hold onto their outer electrons and resist their movement. We can create mixtures of these "resisting" materials and better "conducting" materials, often in the form of ceramics, to create **resistors** with a range of different *resistance* values, which we measure in Ohms (&Omega;).
@@ -107,7 +107,7 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 
 #### Watch this video: [NB3 : Measuring Resistance](https://vimeo.com/1027761453)
 <p align="center">
-<a href="https://vimeo.com/1027761453" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/NB3_Measuring-Resistance.gif" alt="NB3 : Measuring Resistance" width="480"/></a>
+<a href="https://vimeo.com/1027761453" title="Control+Click to watch in new tab"><img src="../../boxes/electrons/_resources/lessons/thumbnails/NB3_Measuring-Resistance.gif" alt="NB3 : Measuring Resistance" width="480"/></a>
 </p>
 
 > How to measure resistance with a digital multimeter.
@@ -115,7 +115,7 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 
 #### Watch this video: [NB3 : Measuring Current](https://vimeo.com/1027757287)
 <p align="center">
-<a href="https://vimeo.com/1027757287" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/NB3_Measuring-Current.gif" alt="NB3 : Measuring Current" width="480"/></a>
+<a href="https://vimeo.com/1027757287" title="Control+Click to watch in new tab"><img src="../../boxes/electrons/_resources/lessons/thumbnails/NB3_Measuring-Current.gif" alt="NB3 : Measuring Current" width="480"/></a>
 </p>
 
 > How to measure current with a digital multimeter.
@@ -123,7 +123,7 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 
 #### Watch this video: [NB3 : Body](https://vimeo.com/1030776673)
 <p align="center">
-<a href="https://vimeo.com/1030776673" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/NB3_Body.gif" alt="NB3 : Body" width="480"/></a>
+<a href="https://vimeo.com/1030776673" title="Control+Click to watch in new tab"><img src="../../boxes/electrons/_resources/lessons/thumbnails/NB3_Body.gif" alt="NB3 : Body" width="480"/></a>
 </p>
 
 > We will now start measuring and manipulating electricity, but first we will assemble a "prototyping platform" that also happens to be the **body** of your robot (NB3).
@@ -134,7 +134,7 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 
 #### Watch this video: [NB3 : Building Circuits](https://vimeo.com/1030783826)
 <p align="center">
-<a href="https://vimeo.com/1030783826" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/NB3_Building-Circuits.gif" alt="NB3 : Building Circuits" width="480"/></a>
+<a href="https://vimeo.com/1030783826" title="Control+Click to watch in new tab"><img src="../../boxes/electrons/_resources/lessons/thumbnails/NB3_Building-Circuits.gif" alt="NB3 : Building Circuits" width="480"/></a>
 </p>
 
 > With a voltage source (battery) and resistors, then we can start building "circuits" - complete paths of conduction that allow current to flow from a location with *less* electrons **(+)** to a location with *more* electrons **(-)**.
@@ -147,7 +147,7 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 
 #### Watch this video: [Ohm's Law](https://vimeo.com/1029695302)
 <p align="center">
-<a href="https://vimeo.com/1029695302" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/Ohms-Law.gif" alt="Ohm's Law" width="480"/></a>
+<a href="https://vimeo.com/1029695302" title="Control+Click to watch in new tab"><img src="../../boxes/electrons/_resources/lessons/thumbnails/Ohms-Law.gif" alt="Ohm's Law" width="480"/></a>
 </p>
 
 > Ohm's Law describes the relationship between Voltage, Current, and Resistance. It is not complicated, but it is very useful.
@@ -157,7 +157,7 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 
 #### Watch this video: [Voltage Dividers](https://vimeo.com/1030787469)
 <p align="center">
-<a href="https://vimeo.com/1030787469" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/Voltage-Dividers.gif" alt="Voltage Dividers" width="480"/></a>
+<a href="https://vimeo.com/1030787469" title="Control+Click to watch in new tab"><img src="../../boxes/electrons/_resources/lessons/thumbnails/Voltage-Dividers.gif" alt="Voltage Dividers" width="480"/></a>
 </p>
 
 > Controlling the level of voltage at different places in a circuit is critical to designing electronic devices.
@@ -170,7 +170,7 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 
 #### Watch this video: [NB3 : Building Voltage Dividers](https://vimeo.com/1030790826)
 <p align="center">
-<a href="https://vimeo.com/1030790826" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/NB3_Building-Voltage-Dividers.gif" alt="NB3 : Building Voltage Dividers" width="480"/></a>
+<a href="https://vimeo.com/1030790826" title="Control+Click to watch in new tab"><img src="../../boxes/electrons/_resources/lessons/thumbnails/NB3_Building-Voltage-Dividers.gif" alt="NB3 : Building Voltage Dividers" width="480"/></a>
 </p>
 
 > Step-by-step guide to building and testing voltage dividers with discrete resistors and a potentiometer.
@@ -178,7 +178,7 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 
 #### Watch this video: [Power](https://vimeo.com/1029693122)
 <p align="center">
-<a href="https://vimeo.com/1029693122" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/Power.gif" alt="Power" width="480"/></a>
+<a href="https://vimeo.com/1029693122" title="Control+Click to watch in new tab"><img src="../../boxes/electrons/_resources/lessons/thumbnails/Power.gif" alt="Power" width="480"/></a>
 </p>
 
 > When electrons move through a circuit, they deliver power (some amount of energy in some amount of time). This power can be used to do useful things: make a motor move, light a lamp, or generate heat. If we deliver too little power, then our electronic device may not work as designed. If we deliver too much, then it may never work again. We measure power in Watts.
@@ -186,7 +186,7 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 
 #### Watch this video: [Capacitors](https://vimeo.com/1035298931)
 <p align="center">
-<a href="https://vimeo.com/1035298931" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/Capacitors.gif" alt="Capacitors" width="480"/></a>
+<a href="https://vimeo.com/1035298931" title="Control+Click to watch in new tab"><img src="../../boxes/electrons/_resources/lessons/thumbnails/Capacitors.gif" alt="Capacitors" width="480"/></a>
 </p>
 
 > Two conductors separated by an insulator (but in close proximity) can interact through the electric field. If we put an external voltage across these conductors, then they will gradually accumulate charge until their own voltage matches the external potential. We say that these devices have an intrinsic capacity for storing charge and we call them **capacitors**.
@@ -199,7 +199,7 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 
 #### Watch this video: [NB3 : Building a Battery](https://vimeo.com/1029280971)
 <p align="center">
-<a href="https://vimeo.com/1029280971" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/NB3_Building-a-Battery.gif" alt="NB3 : Building a Battery" width="480"/></a>
+<a href="https://vimeo.com/1029280971" title="Control+Click to watch in new tab"><img src="../../boxes/electrons/_resources/lessons/thumbnails/NB3_Building-a-Battery.gif" alt="NB3 : Building a Battery" width="480"/></a>
 </p>
 
 > Let's build a version of the *first* battery, and use it to power an LED.

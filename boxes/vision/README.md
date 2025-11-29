@@ -20,7 +20,7 @@ M2 nut|regular M2 nut|4|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 ## Vision
 #### Watch this video: [Light, Cameras, Noise](https://vimeo.com/manage/videos/1141367902)
 <p align="center">
-<a href="https://vimeo.com/manage/videos/1141367902" title="Control+Click to watch in new tab"><img src="../../../../boxes/vision/_resources/lessons/thumbnails/Light-Cameras-Noise.gif" alt="Light, Cameras, Noise" width="480"/></a>
+<a href="https://vimeo.com/manage/videos/1141367902" title="Control+Click to watch in new tab"><img src="../../boxes/vision/_resources/lessons/thumbnails/Light-Cameras-Noise.gif" alt="Light, Cameras, Noise" width="480"/></a>
 </p>
 
 > We start with a recap about light, measuring analog signals with computers, and then describe how a modern camera sensor is built. We then introduce the NB3's Eye and conclude with a discussion of the sources of noise that all cameras encounter when trying to *image* the real world.
@@ -38,7 +38,7 @@ pip install opencv-python
 # Projects
 #### Watch this video: [NB3 : Install the Eye](https://vimeo.com/1042945461)
 <p align="center">
-<a href="https://vimeo.com/1042945461" title="Control+Click to watch in new tab"><img src="../../../../boxes/vision/_resources/lessons/thumbnails/NB3_Install-the-Eye.gif" alt="NB3 : Install the Eye" width="480"/></a>
+<a href="https://vimeo.com/1042945461" title="Control+Click to watch in new tab"><img src="../../boxes/vision/_resources/lessons/thumbnails/NB3_Install-the-Eye.gif" alt="NB3 : Install the Eye" width="480"/></a>
 </p>
 
 > Let's install a camera on your NB3.
@@ -53,7 +53,7 @@ rpicam-still -o my_test.png
 
 #### Watch this video: [NB3 : Streaming Images](https://vimeo.com/manage/videos/1141582696)
 <p align="center">
-<a href="https://vimeo.com/manage/videos/1141582696" title="Control+Click to watch in new tab"><img src="../../../../boxes/vision/_resources/lessons/thumbnails/NB3_Streaming-Images.gif" alt="NB3 : Streaming Images" width="480"/></a>
+<a href="https://vimeo.com/manage/videos/1141582696" title="Control+Click to watch in new tab"><img src="../../boxes/vision/_resources/lessons/thumbnails/NB3_Streaming-Images.gif" alt="NB3 : Streaming Images" width="480"/></a>
 </p>
 
 > Let's stream live images from your NB3's camera to any web browser.

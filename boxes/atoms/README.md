@@ -12,7 +12,7 @@ Periodic Table|Periodic Table Card|1|Body (000)|[-D-](/boxes/atoms/card)|[-L-](V
 ## Atoms
 #### Watch this video: [Atomic Structure](https://vimeo.com/1000458082)
 <p align="center">
-<a href="https://vimeo.com/1000458082" title="Control+Click to watch in new tab"><img src="../../../../boxes/atoms/_resources/lessons/thumbnails/Atomic-Structure.gif" alt="Atomic Structure" width="480"/></a>
+<a href="https://vimeo.com/1000458082" title="Control+Click to watch in new tab"><img src="../../boxes/atoms/_resources/lessons/thumbnails/Atomic-Structure.gif" alt="Atomic Structure" width="480"/></a>
 </p>
 
 > A brief introduction to the physics of atoms, their parts (protons, neutrons, and electrons), and their classical vs. quantum structure.
@@ -22,7 +22,7 @@ Periodic Table|Periodic Table Card|1|Body (000)|[-D-](/boxes/atoms/card)|[-L-](V
 
 #### Watch this video: [The Periodic Table](https://vimeo.com/1028399080)
 <p align="center">
-<a href="https://vimeo.com/1028399080" title="Control+Click to watch in new tab"><img src="../../../../boxes/atoms/_resources/lessons/thumbnails/The-Periodic-Table.gif" alt="The Periodic Table" width="480"/></a>
+<a href="https://vimeo.com/1028399080" title="Control+Click to watch in new tab"><img src="../../boxes/atoms/_resources/lessons/thumbnails/The-Periodic-Table.gif" alt="The Periodic Table" width="480"/></a>
 </p>
 
 > Organizing the elements into a table reveals a regular pattern, which is linked to the fundamental chemical properties of each material.
@@ -36,7 +36,7 @@ Periodic Table|Periodic Table Card|1|Body (000)|[-D-](/boxes/atoms/card)|[-L-](V
 
 #### Watch this video: [Heat](https://vimeo.com/1029691491)
 <p align="center">
-<a href="https://vimeo.com/1029691491" title="Control+Click to watch in new tab"><img src="../../../../boxes/atoms/_resources/lessons/thumbnails/Heat.gif" alt="Heat" width="480"/></a>
+<a href="https://vimeo.com/1029691491" title="Control+Click to watch in new tab"><img src="../../boxes/atoms/_resources/lessons/thumbnails/Heat.gif" alt="Heat" width="480"/></a>
 </p>
 
 > Atoms in every material are always moving. This motion of atoms (their average kinetic energy) is heat.

@@ -12,7 +12,7 @@ Cable (MiniUSB-20cm)|Short mini-USB to Type-A cable (20 cm)|1|Cables (001)|[-D-]
 ## Networks
 #### Watch this video: [Physical Layers](https://vimeo.com/1127178041)
 <p align="center">
-<a href="https://vimeo.com/1127178041" title="Control+Click to watch in new tab"><img src="../../../../boxes/networks/_resources/lessons/thumbnails/Physical-Layers.gif" alt="Physical Layers" width="480"/></a>
+<a href="https://vimeo.com/1127178041" title="Control+Click to watch in new tab"><img src="../../boxes/networks/_resources/lessons/thumbnails/Physical-Layers.gif" alt="Physical Layers" width="480"/></a>
 </p>
 
 > Connections must be made between computers in order for them to communicate. These can be wires carrying electrical signals (from just one or two wires for serial connections to many wires for parallel connections) or wireless (most often using light, i.e. radio waves). This is the physical layer of the network...and a message may traverse many different types of physical connections on its path from the sender to the receiver.
@@ -20,7 +20,7 @@ Cable (MiniUSB-20cm)|Short mini-USB to Type-A cable (20 cm)|1|Cables (001)|[-D-]
 
 #### Watch this video: [Architectures](https://vimeo.com/manage/videos/1127222969)
 <p align="center">
-<a href="https://vimeo.com/manage/videos/1127222969" title="Control+Click to watch in new tab"><img src="../../../../boxes/networks/_resources/lessons/thumbnails/Architectures.gif" alt="Architectures" width="480"/></a>
+<a href="https://vimeo.com/manage/videos/1127222969" title="Control+Click to watch in new tab"><img src="../../boxes/networks/_resources/lessons/thumbnails/Architectures.gif" alt="Architectures" width="480"/></a>
 </p>
 
 > The arrangement of connections between computers (nodes) defines the network's *architecture*. These can be simple 1-to-1 connections or much more complex. Here we will introduce the architecture of our most important network, **the internet**.
@@ -28,7 +28,7 @@ Cable (MiniUSB-20cm)|Short mini-USB to Type-A cable (20 cm)|1|Cables (001)|[-D-]
 
 #### Watch this video: [Sockets](https://vimeo.com/1134201413)
 <p align="center">
-<a href="https://vimeo.com/1134201413" title="Control+Click to watch in new tab"><img src="../../../../boxes/networks/_resources/lessons/thumbnails/Sockets.gif" alt="Sockets" width="480"/></a>
+<a href="https://vimeo.com/1134201413" title="Control+Click to watch in new tab"><img src="../../boxes/networks/_resources/lessons/thumbnails/Sockets.gif" alt="Sockets" width="480"/></a>
 </p>
 
 > Sockets abstract the idea of a connection between computers. A socket communicates to another socket using either TCP or UDP packets. It has an address. It can listen for and request connections.
@@ -44,7 +44,7 @@ Cable (MiniUSB-20cm)|Short mini-USB to Type-A cable (20 cm)|1|Cables (001)|[-D-]
 # Projects
 #### Watch this video: [NB3 : Develop a Protocol](https://vimeo.com/1042782602)
 <p align="center">
-<a href="https://vimeo.com/1042782602" title="Control+Click to watch in new tab"><img src="../../../../boxes/networks/_resources/lessons/thumbnails/NB3_Develop-a-Protocol.gif" alt="NB3 : Develop a Protocol" width="480"/></a>
+<a href="https://vimeo.com/1042782602" title="Control+Click to watch in new tab"><img src="../../boxes/networks/_resources/lessons/thumbnails/NB3_Develop-a-Protocol.gif" alt="NB3 : Develop a Protocol" width="480"/></a>
 </p>
 
 > Let's develop a simple network protocol for communication between our NB3's midbrain computer and hindbrain microcontroller.
@@ -55,7 +55,7 @@ Cable (MiniUSB-20cm)|Short mini-USB to Type-A cable (20 cm)|1|Cables (001)|[-D-]
 
 #### Watch this video: [NB3 : Remote Control NB3 (TUI)](https://vimeo.com/1042784651)
 <p align="center">
-<a href="https://vimeo.com/1042784651" title="Control+Click to watch in new tab"><img src="../../../../boxes/networks/_resources/lessons/thumbnails/NB3_Remote-Control-NB3-TUI.gif" alt="NB3 : Remote Control NB3 (TUI)" width="480"/></a>
+<a href="https://vimeo.com/1042784651" title="Control+Click to watch in new tab"><img src="../../boxes/networks/_resources/lessons/thumbnails/NB3_Remote-Control-NB3-TUI.gif" alt="NB3 : Remote Control NB3 (TUI)" width="480"/></a>
 </p>
 
 > Let's remotely control our NB3 using a simple text-based user interface (TUI). We will detect a keypress in the terminal and send the appropriate command to our hindbrain motor controller.

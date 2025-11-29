@@ -25,7 +25,7 @@ M2.5 standoff (12/PS)|12 mm long socket-to-socket M2.5 standoff|2|Mounting Hardw
 # Projects
 #### Watch this video: [NB3 : Install the Forebrain (NPU)](https://vimeo.com/1043159124)
 <p align="center">
-<a href="https://vimeo.com/1043159124" title="Control+Click to watch in new tab"><img src="../../../../boxes/intelligence/_resources/lessons/thumbnails/NB3_Install-the-Forebrain-NPU.gif" alt="NB3 : Install the Forebrain (NPU)" width="480"/></a>
+<a href="https://vimeo.com/1043159124" title="Control+Click to watch in new tab"><img src="../../boxes/intelligence/_resources/lessons/thumbnails/NB3_Install-the-Forebrain-NPU.gif" alt="NB3 : Install the Forebrain (NPU)" width="480"/></a>
 </p>
 
 > Let's install a neural processing unit (NPU) as our NB3's forebrain.

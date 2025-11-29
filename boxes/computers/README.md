@@ -14,7 +14,7 @@ Cable (MiniUSB-1m)|Mini-USB to Type-A cable (1 m)|1|Cables (001)|[-D-](/boxes/co
 ## Computers
 #### Watch this video: [Architecture](https://vimeo.com/1033601146)
 <p align="center">
-<a href="https://vimeo.com/1033601146" title="Control+Click to watch in new tab"><img src="../../../../boxes/computers/_resources/lessons/thumbnails/Architecture.gif" alt="Architecture" width="480"/></a>
+<a href="https://vimeo.com/1033601146" title="Control+Click to watch in new tab"><img src="../../boxes/computers/_resources/lessons/thumbnails/Architecture.gif" alt="Architecture" width="480"/></a>
 </p>
 
 > The basic building blocks of a computer (memory, ALU, clock, bus, and IO) have a standard arrangement (architecture) in modern systems.
@@ -27,7 +27,7 @@ Cable (MiniUSB-1m)|Mini-USB to Type-A cable (1 m)|1|Cables (001)|[-D-](/boxes/co
 # Projects
 #### Watch this video: [NB3 : Hindbrain](https://vimeo.com/1033609727)
 <p align="center">
-<a href="https://vimeo.com/1033609727" title="Control+Click to watch in new tab"><img src="../../../../boxes/computers/_resources/lessons/thumbnails/NB3_Hindbrain.gif" alt="NB3 : Hindbrain" width="480"/></a>
+<a href="https://vimeo.com/1033609727" title="Control+Click to watch in new tab"><img src="../../boxes/computers/_resources/lessons/thumbnails/NB3_Hindbrain.gif" alt="NB3 : Hindbrain" width="480"/></a>
 </p>
 
 > We will now add a *computer* to our robot. We be using a simple microcontroller as our NB3's hindbrain. It will be responsible for controlling the "muscles" (motors) in response to commands from another (larger) computer that we will be adding later to the NB3's midbrain.
@@ -43,14 +43,14 @@ Cable (MiniUSB-1m)|Mini-USB to Type-A cable (1 m)|1|Cables (001)|[-D-](/boxes/co
 
 #### Watch this video: [NB3 : Programming Arduino](https://vimeo.com/1033810807)
 <p align="center">
-<a href="https://vimeo.com/1033810807" title="Control+Click to watch in new tab"><img src="../../../../boxes/computers/_resources/lessons/thumbnails/NB3_Programming-Arduino.gif" alt="NB3 : Programming Arduino" width="480"/></a>
+<a href="https://vimeo.com/1033810807" title="Control+Click to watch in new tab"><img src="../../boxes/computers/_resources/lessons/thumbnails/NB3_Programming-Arduino.gif" alt="NB3 : Programming Arduino" width="480"/></a>
 </p>
 
 > An introduction to programming an Arduino microcontroller.
 
 - You will now write programs that interact with the input and output pins of your Arduino. This "pin diagram" will help you find the correct locations. ***The Arduino on your NB3 is mounted "upside down" relative to this diagram...adjust accordingly!***
 <p align="center">
-<img src="../../../../boxes/computers/_resources/images/pinout_arduino_nano.png" alt="Arduino Nano Pin Diagram" width="500">
+<img src="../../boxes/computers/_resources/images/pinout_arduino_nano.png" alt="Arduino Nano Pin Diagram" width="500">
 </p>
 
 **TASK**: Blink an *internal* LED
@@ -83,14 +83,14 @@ void loop() {
 **TASK**: Blink an *external* LED
   - *Hint*: Connect one of your LEDs to digital pin 13, but don't forget your current limiting resistor!
 <p align="center">
-<img src="../../../../boxes/computers/_resources/images/LED_driver_circuit.png" alt="LED Driver" width="400">
+<img src="../../boxes/computers/_resources/images/LED_driver_circuit.png" alt="LED Driver" width="400">
 </p>
 
 > Your external LED should now be blinking at the same time as the built-in LED (if both are connected to pin 13).
 **TASK**: Generate a *pulsing* signal for your piezo buzzer
   - This is a piezo buzzer:
 <p align="center">
-<img src="../../../../boxes/computers/_resources/images/piezo_buzzer.png" alt="Piezo Buzzer" width="300">
+<img src="../../boxes/computers/_resources/images/piezo_buzzer.png" alt="Piezo Buzzer" width="300">
 </p>
 
   - The piezo buzzer will expand and contract as you switch the voltage applied across it from 0V to 5V. This expansion and contraction forces air into and out of the plastic case. If you switch it ON/OFF fast enough, then you can *hear it*!
@@ -166,7 +166,7 @@ void loop() {
 
 #### Watch this video: [NB3 : Building a Theremin](https://vimeo.com/1033896646)
 <p align="center">
-<a href="https://vimeo.com/1033896646" title="Control+Click to watch in new tab"><img src="../../../../boxes/computers/_resources/lessons/thumbnails/NB3_Building-a-Theremin.gif" alt="NB3 : Building a Theremin" width="480"/></a>
+<a href="https://vimeo.com/1033896646" title="Control+Click to watch in new tab"><img src="../../boxes/computers/_resources/lessons/thumbnails/NB3_Building-a-Theremin.gif" alt="NB3 : Building a Theremin" width="480"/></a>
 </p>
 
 > Building a light-to-sound feedback loop musical instrument (theremin) using an Arduino, an LDR, and a Piezo buzzer.
@@ -176,7 +176,7 @@ void loop() {
 > You should here a sound that varies with your hand motion (in front of a light)
 - **TASK**: ***Have fun!*** (Make something cool)
 <p align="center">
-<img src="../../../../boxes/computers/_resources/images/pinout_arduino_nano.png" alt="Arduino Pinout" width="480">
+<img src="../../boxes/computers/_resources/images/pinout_arduino_nano.png" alt="Arduino Pinout" width="480">
 </p>
 
 > You should have fun!

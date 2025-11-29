@@ -21,7 +21,7 @@ LED (IR)|Low power IR light emitting diode|2|Active Electronics|[-D-](/boxes/tra
 ## Transistors
 #### Watch this video: [Diodes](https://vimeo.com/1032443724)
 <p align="center">
-<a href="https://vimeo.com/1032443724" title="Control+Click to watch in new tab"><img src="../../../../boxes/transistors/_resources/lessons/thumbnails/Diodes.gif" alt="Diodes" width="480"/></a>
+<a href="https://vimeo.com/1032443724" title="Control+Click to watch in new tab"><img src="../../boxes/transistors/_resources/lessons/thumbnails/Diodes.gif" alt="Diodes" width="480"/></a>
 </p>
 
 > The chemical and electrical equilibrium between charge carriers creates a potential across the PN junction. This junction potential only permits current flow in one direction, which gives **diodes** there delightfully non-linear behavior.
@@ -31,7 +31,7 @@ LED (IR)|Low power IR light emitting diode|2|Active Electronics|[-D-](/boxes/tra
 
 #### Watch this video: [Semiconductors](https://vimeo.com/1032460818)
 <p align="center">
-<a href="https://vimeo.com/1032460818" title="Control+Click to watch in new tab"><img src="../../../../boxes/transistors/_resources/lessons/thumbnails/Semiconductors.gif" alt="Semiconductors" width="480"/></a>
+<a href="https://vimeo.com/1032460818" title="Control+Click to watch in new tab"><img src="../../boxes/transistors/_resources/lessons/thumbnails/Semiconductors.gif" alt="Semiconductors" width="480"/></a>
 </p>
 
 > We can modify a pure crystal of certain elements (e.g. silicon) to change how well they conduct electricity.
@@ -43,7 +43,7 @@ LED (IR)|Low power IR light emitting diode|2|Active Electronics|[-D-](/boxes/tra
 
 #### Watch this video: [Transistors (MOSFETs)](https://vimeo.com/1032452466)
 <p align="center">
-<a href="https://vimeo.com/1032452466" title="Control+Click to watch in new tab"><img src="../../../../boxes/transistors/_resources/lessons/thumbnails/Transistors-MOSFETs.gif" alt="Transistors (MOSFETs)" width="480"/></a>
+<a href="https://vimeo.com/1032452466" title="Control+Click to watch in new tab"><img src="../../boxes/transistors/_resources/lessons/thumbnails/Transistors-MOSFETs.gif" alt="Transistors (MOSFETs)" width="480"/></a>
 </p>
 
 > MOSFETs are the thing that humans have built more of than anything else. They must be useful! Let's discuss what they are and how they work.
@@ -55,7 +55,7 @@ LED (IR)|Low power IR light emitting diode|2|Active Electronics|[-D-](/boxes/tra
 # Projects
 #### Watch this video: [NB3 : Testing Diodes](https://vimeo.com/1032458879)
 <p align="center">
-<a href="https://vimeo.com/1032458879" title="Control+Click to watch in new tab"><img src="../../../../boxes/transistors/_resources/lessons/thumbnails/NB3_Testing-Diodes.gif" alt="NB3 : Testing Diodes" width="480"/></a>
+<a href="https://vimeo.com/1032458879" title="Control+Click to watch in new tab"><img src="../../boxes/transistors/_resources/lessons/thumbnails/NB3_Testing-Diodes.gif" alt="NB3 : Testing Diodes" width="480"/></a>
 </p>
 
 > Diodes allow current to flow in only one direction...if you overcome the internal junction potential. Let's measure this...and also use an LED to emit some light.
@@ -63,7 +63,7 @@ LED (IR)|Low power IR light emitting diode|2|Active Electronics|[-D-](/boxes/tra
 
 #### Watch this video: [NB3 : Building a Light-Sensitive Motor](https://vimeo.com/1032454998)
 <p align="center">
-<a href="https://vimeo.com/1032454998" title="Control+Click to watch in new tab"><img src="../../../../boxes/transistors/_resources/lessons/thumbnails/NB3_Building-a-Light-Sensitive-Motor.gif" alt="NB3 : Building a Light-Sensitive Motor" width="480"/></a>
+<a href="https://vimeo.com/1032454998" title="Control+Click to watch in new tab"><img src="../../boxes/transistors/_resources/lessons/thumbnails/NB3_Building-a-Light-Sensitive-Motor.gif" alt="NB3 : Building a Light-Sensitive Motor" width="480"/></a>
 </p>
 
 > Let's make something move in response to light!
