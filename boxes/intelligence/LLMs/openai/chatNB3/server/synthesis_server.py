@@ -8,7 +8,7 @@ username = os.getlogin()
 
 # Specify paths
 repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
-box_path = repo_path + '/boxes/intelligence/llms/chatNB3/server'
+box_path = repo_path + '/boxes/intelligence/LLMs/chatNB3/server'
 output_wav_path = box_path + '/_tmp/output.wav'
 
 # Set host (this computer) and port (1234)

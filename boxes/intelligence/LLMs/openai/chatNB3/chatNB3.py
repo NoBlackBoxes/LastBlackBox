@@ -17,7 +17,7 @@ username = os.getlogin()
 
 # Specify paths
 repo_path = '/home/' + username + '/NoBlackBoxes/LastBlackBox'
-box_path = repo_path + '/boxes/intelligence/llms/chatNB3'
+box_path = repo_path + '/boxes/intelligence/LLMs/chatNB3'
 input_wav_path = box_path + '/_tmp/input.wav'
 output_wav_path = box_path + '/_tmp/output.wav'
 

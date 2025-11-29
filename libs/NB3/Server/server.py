@@ -106,6 +106,7 @@ class Server:
 
     def serve_file(self, client_socket, file_path):
         if not os.path.exists(file_path):
+            print(f"This file was missing: {file_path}")
             self.send_404(client_socket)
             return
 

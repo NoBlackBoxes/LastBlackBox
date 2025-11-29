@@ -15,11 +15,12 @@ import NB3.Sound.utilities as Utilities
 
 # Specify paths
 box_root = f"{Config.boxes_path}/intelligence"
-project_root = f"{box_root}/llms/openai/GPT-in-NB3"
+openai_root = f"{box_root}/LLMs/openai"
+project_root = f"{box_root}/LLMs/openai/GPT-in-NB3"
 site_root = f"{project_root}/site"
 
 # Load OpenAI API Key
-dotenv.load_dotenv(f"{project_root}/.env")
+dotenv.load_dotenv(f"{openai_root}/.env")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # Open serial port
@@ -30,7 +31,7 @@ time.sleep(1.00)
 Utilities.list_devices()
 
 # Get speaker device by name (NB3: "MAX", PC: select based on listed output devices)
-output_device = Utilities.get_output_device_by_name("HD")
+output_device = Utilities.get_output_device_by_name("MAX")
 if output_device == -1:
     exit("Output device not found")
 
@@ -62,19 +63,16 @@ def command_handler(command):
    elif command == 'stop':
       ser.write(b'x')
    elif command == "play_sound":
-      image_handler()
       pass
    elif command == "do_action":
-      # ADD YOUR COMMAND RESPONSES AFTER HERE ------->
-      # - What action should your robot do when the "?" is pressed?
-      # <------- ADD YOUR COMMAND BEFORE RESPONSES HERE        
+      image_handler()
       pass
    else:
       pass
 
 # Define image handler
 def image_handler():
-
+    
     # Specify model
     client = openai.OpenAI(api_key=OPENAI_API_KEY)
     VISION_MODEL = "gpt-4o-mini"
@@ -119,8 +117,6 @@ def image_handler():
     audio_f32 = pcm16.astype(np.float32) / 32768.0
     audio_f32 = np.vstack((audio_f32, audio_f32)).T
     audio_48k = np.repeat(audio_f32, 2, axis=0)
-    print(audio_48k.shape)
-    print(audio_48k)
     speaker.volume = 0.75
 
     # Play sound data

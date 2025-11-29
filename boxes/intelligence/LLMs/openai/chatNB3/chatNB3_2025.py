@@ -13,7 +13,7 @@ import NB3.Sound.utilities as Utilities
 
 # Specify Paths
 box_root = f"{Config.boxes_path}/intelligence"
-project_root = f"{box_root}/llms/chatNB3"
+project_root = f"{box_root}/LLMs/chatNB3"
 
 # Load OpenAI API Key
 dotenv.load_dotenv(f"{project_root}/.env")
