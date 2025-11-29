@@ -13,9 +13,11 @@ repo_path = f"{pathlib.Path.home()}/NoBlackBoxes/LastBlackBox"
 boxes_path = repo_path + "/boxes"
 course_path = repo_path + "/course"
 libs_path = repo_path + "/libs"
+image_prefix = "../../../.."
 
 # Store course version names
 course_names = ["The Last Black Box", "Bootcamp", "Braitenberg", "Build a Brain", "AI-Workshops"]
+
 
 # Store box names (and order)
 box_names = [

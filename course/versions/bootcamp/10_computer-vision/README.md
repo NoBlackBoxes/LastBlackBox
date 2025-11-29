@@ -18,7 +18,11 @@ M2 nut|regular M2 nut|4|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 </p></details><hr>
 
 ## Vision
-### NB3 : Streaming Images
+#### Watch this video: [NB3 : Streaming Images](https://vimeo.com/manage/videos/1141582696)
+<p align="center">
+<a href="https://vimeo.com/manage/videos/1141582696" title="Control+Click to watch in new tab"><img src="../../../../boxes/vision/_resources/lessons/thumbnails/NB3_Streaming-Images.gif" alt="NB3 : Streaming Images" width="480"/></a>
+</p>
+
 > Let's stream live images from your NB3's camera to any web browser.
 
 

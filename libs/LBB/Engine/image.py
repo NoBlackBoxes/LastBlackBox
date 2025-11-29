@@ -6,6 +6,7 @@ LBB : Engine : Image Class
 """
 
 # Imports
+import LBB.config as Config
 
 # Image Class
 class Image:
@@ -43,7 +44,7 @@ class Image:
     # Render image object as Markdown
     def render(self):
         output = []
-        image_prefix = "../../../.."
+        image_prefix = Config.image_prefix
         output.append(f"<p align=\"center\">")
         output.append(f"<img src=\"{image_prefix}{self.path}\" alt=\"{self.name}\" width=\"{self.width}\">")
         output.append(f"</p>\n")

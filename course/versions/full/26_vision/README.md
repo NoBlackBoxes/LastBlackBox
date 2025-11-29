@@ -51,7 +51,11 @@ rpicam-still -o my_test.png
 # The image will appear in the same folder where the command was run
 ```
 
-### NB3 : Streaming Images
+#### Watch this video: [NB3 : Streaming Images](https://vimeo.com/manage/videos/1141582696)
+<p align="center">
+<a href="https://vimeo.com/manage/videos/1141582696" title="Control+Click to watch in new tab"><img src="../../../../boxes/vision/_resources/lessons/thumbnails/NB3_Streaming-Images.gif" alt="NB3 : Streaming Images" width="480"/></a>
+</p>
+
 > Let's stream live images from your NB3's camera to any web browser.
 
 
