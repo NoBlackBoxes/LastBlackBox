@@ -1,4 +1,4 @@
-# Intelligence :  LLMs : OpenAI
+# Intelligence : LLMs : OpenAI
 
 ## Install required Python packages
 ```bash

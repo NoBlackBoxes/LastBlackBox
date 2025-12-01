@@ -1,3 +1,4 @@
+# ChatNB3: Have a conversation with your NB3 (OpenAI version)
 import os, time, base64, openai
 import numpy as np
 import LBB.config as Config
