@@ -8,5 +8,7 @@ else:
 # Acquire Still
 camera = Camera.Camera(width=1920, height=1080)
 camera.start()
-camera.save('my_still_image.jpg')
+camera.save('my_00_still_image.jpg')
 camera.stop()
+
+#FIN

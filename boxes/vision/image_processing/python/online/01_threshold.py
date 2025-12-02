@@ -9,7 +9,7 @@ else:
 import NB3.Server.server as Server
 
 # Specify site root
-site_root = f"{Config.repo_path}/boxes/vision/image_processing/python/sites/split"
+site_root = f"{Config.repo_path}/boxes/vision/image_processing/python/online/sites/split"
 
 # Setup Camera
 camera = Camera.Camera(width=800, height=600, lores_width=640, lores_height=480)

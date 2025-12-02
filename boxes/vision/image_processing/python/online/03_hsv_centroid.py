@@ -1,6 +1,5 @@
 # Color threshold a Huw, Sat, and Value image to isolate a specific color
 # - Find the largest binary "blob" of isolated pixels
-# - Include interactive sliders on the streaming page to adjust HSV threshold levels
 import time, cv2
 import numpy as np
 import LBB.config as Config
@@ -12,36 +11,20 @@ else:
 import NB3.Server.server as Server
 
 # Specify site root
-site_root = f"{Config.repo_path}/boxes/vision/image_processing/python/sites/sliders"
+site_root = f"{Config.repo_path}/boxes/vision/image_processing/python/online/sites/split"
 
 # Setup Camera
 camera = Camera.Camera(width=800, height=600, lores_width=640, lores_height=480)
 camera.overlay.timestamp = True
-camera.overlay.timestamp_position = (20, camera.height - 40)
 camera.start()
-
-# Define HSV range for green color
-hue_level = 60
-sat_level = 90
-val_level = 70
-
-# Define command handler
-def command_handler(command):
-   global hue_level
-   global sat_level
-   global val_level
-   if command.startswith('hue'):
-      hue_level = int(command.split('-')[1])
-   if command.startswith('sat'):
-      sat_level = int(command.split('-')[1])
-   if command.startswith('val'):
-      val_level = int(command.split('-')[1])
-   else:
-      pass
 
 # Start Server (for streaming)
 interface = Server.get_wifi_interface()
-server = Server.Server(root=site_root, interface=interface, command_handler=command_handler, autostart=True)
+server = Server.Server(root=site_root, interface=interface, autostart=True)
+
+# Define HSV range for green color
+lower_green = np.array([35, 90, 70])   # Lower bound (H, S, V)
+upper_green = np.array([85, 255, 255]) # Upper bound (H, S, V)
 
 try:
     while True:
@@ -51,12 +34,8 @@ try:
         # Convert to HSV
         hsv = cv2.cvtColor(rgb, cv2.COLOR_RGB2HSV)
 
-        # Threshold for HSV
-        hue_min = max(0, hue_level-25)
-        hue_max = min(255, hue_level+25)
-        lower = np.array([hue_min, sat_level, val_level])
-        upper = np.array([hue_max, 255, 255])
-        mask = cv2.inRange(hsv, lower, upper)
+        # Threshold for GREEN
+        mask = cv2.inRange(hsv, lower_green, upper_green)
 
         # Find contours in the mask
         contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
@@ -73,7 +52,7 @@ try:
         camera.display(mask, server, "display", overlay=True, jpeg=False, gray=True)
 
         # Delay
-        time.sleep(0.067) # Limit to 15 FPS
+        time.sleep(0.033) # Limit to 30 FPS
 
 except KeyboardInterrupt:
     server.stop()
