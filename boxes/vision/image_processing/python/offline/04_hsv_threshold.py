@@ -18,7 +18,7 @@ hsv = cv2.cvtColor(bgr, cv2.COLOR_BGR2HSV)
 lower_red_1 = np.array([0, 130, 100])   # Lower bound (H, S, V)
 upper_red_1 = np.array([25, 255, 225])  # Upper bound (H, S, V)
 lower_red_2 = np.array([160, 130, 100]) # Lower bound (H, S, V)
-upper_red_2 = np.array([255, 255, 225]) # Upper bound (H, S, V)
+upper_red_2 = np.array([179, 255, 225]) # Upper bound (H, S, V)
 
 # Threshold for RED
 mask_1 = cv2.inRange(hsv, lower_red_1, upper_red_1)
