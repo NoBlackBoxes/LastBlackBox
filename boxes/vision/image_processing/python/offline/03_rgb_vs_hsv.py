@@ -1,4 +1,4 @@
-# Acquire and process ("grayscale threshold") the still image taken from the camera
+# Acquire and process ("HSV color space") the still image taken from the camera
 import time, cv2
 import LBB.config as Config
 import matplotlib.pyplot as plt

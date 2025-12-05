@@ -1,4 +1,4 @@
-# Color threshold a Huw, Sat, and Value image to isolate a specific color
+# Color threshold a Hue, Sat, and Value image to isolate a specific color
 # - Find the largest binary "blob" of isolated pixels
 import time, cv2
 import numpy as np

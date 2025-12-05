@@ -1,4 +1,4 @@
-# Acquire and process ("HSVs threshold") the still image taken from the camera
+# Acquire and process ("Find Largest Blob in HSV threshold") the still image taken from the camera
 import cv2
 import numpy as np
 import LBB.config as Config
@@ -25,7 +25,18 @@ mask_1 = cv2.inRange(hsv, lower_red_1, upper_red_1)
 mask_2 = cv2.inRange(hsv, lower_red_2, upper_red_2)
 mask = cv2.bitwise_or(mask_1, mask_2)
 
+# Find contours in the mask
+contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+if contours:
+    # Find the largest contour based on area
+    largest_contour = max(contours, key=cv2.contourArea)
+    x, y, w, h = cv2.boundingRect(largest_contour)
+    output = np.zeros(bgr.shape, dtype=np.uint8)
+    cv2.drawContours(output, [largest_contour], -1, (255, 255, 255), -1)
+    cv2.drawContours(output, [largest_contour], -1, (0, 255, 0), 10)
+    print(x, y, w, h)
+
 # Save processed image
-cv2.imwrite(f"{project_path}/my_04_hsv_threshold.jpg", mask)
+cv2.imwrite(f"{project_path}/my_05_find_largest_blob.jpg", output)
 
 #FIN
