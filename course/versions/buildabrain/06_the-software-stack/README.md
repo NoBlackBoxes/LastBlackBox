@@ -5,6 +5,12 @@ Modern computing relies on many layers of software to coordinate increasingly po
 
 Name|Description| # |Package|Data|Link|
 :-------|:----------|:-----:|:-:|:--:|:--:|
+NB3 Power Board|Regulated DC-DC power supply (5 Volts - 4 Amps)|1|Circuit Boards|[-D-](/boxes/power/NB3_power)|[-L-](VK)
+Power Cable|Custom 4 pin NB3 power connector cable|1|Circuit Boards|[-D-](/boxes/power/)|[-L-](VK)
+M2.5 standoff (7/PS)|7 mm long plug-to-socket M2.5 standoff|4|Mounting Hardware|[-D-](/boxes/power/)|[-L-](https://uk.farnell.com/wurth-elektronik/971070151/standoff-hex-male-female-7mm-m2/dp/2884371)
+M2.5 bolt (6)|6 mm long M2.5 bolt|4|Mounting Hardware|[-D-](/boxes/robotics/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2)
+M2.5 nut|regular M2.5 nut|4|Mounting Hardware|[-D-](/boxes/power/-)|[-L-](https://www.accu.co.uk/hexagon-nuts/456430-HPN-M2-5-C8-Z)
+12V DC Power Supply|12 V AC-DC transformer (UK/EU/USA plugs)|1|Large (100)|[-D-](/boxes/power/)|[-L-](https://www.amazon.co.uk/gp/product/B09QG4R1R4)
 Computer (RPi4)|Raspberry Pi 4b with 2 GB RAM|1|Medium (011)|[-D-](/boxes/systems/_resources/datasheets/rpi4b.pdf)|[-L-](https://uk.farnell.com/raspberry-pi/rpi4-modbp-2gb/raspberry-pi-4-model-b-2gb/dp/3051886)
 Power Jumper (Red)|Thick gauge (22 AWG) jumper wire (red insulation) 1Px2 to 2S|1|Cables (001)|[-D-](/boxes/systems/)|[-L-](VK)
 Power Jumper (Black)|Thick gauge (22 AWG) jumper wire (black insulation) 1P to 1S|2|Cables (001)|[-D-](/boxes/systems/)|[-L-](VK)
@@ -12,12 +18,6 @@ Heatsinks|Heatsinks for RPi 4b chips|1|Large (100)|[-D-](/boxes/systems/_resourc
 SD Card|16 GB micro SD card|1|Large (100)|[-D-](/boxes/systems/_resources/datasheets/SanDisk-SDSQUAR-016G-GN6MA-datasheet.pdf)|[-L-](https://uk.farnell.com/integral/inmsdh16g-100v10/16gb-microsdhc-v10-uhs-i-u1/dp/3498606)
 M2.5 bolt (6)|6 mm long M2.5 bolt|8|Mounting Hardware|[-D-](/boxes/robotics/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2)
 M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardware|[-D-](/boxes/systems/)|[-L-](https://uk.farnell.com/wurth-elektronik/970200154/standoff-hex-female-female-20mm/dp/2987903)
-NB3 Power Board|Regulated DC-DC power supply (5 Volts - 4 Amps)|1|Circuit Boards|[-D-](/boxes/power/NB3_power)|[-L-](VK)
-Power Cable|Custom 4 pin NB3 power connector cable|1|Circuit Boards|[-D-](/boxes/power/)|[-L-](VK)
-M2.5 standoff (7/PS)|7 mm long plug-to-socket M2.5 standoff|4|Mounting Hardware|[-D-](/boxes/power/)|[-L-](https://uk.farnell.com/wurth-elektronik/971070151/standoff-hex-male-female-7mm-m2/dp/2884371)
-M2.5 bolt (6)|6 mm long M2.5 bolt|4|Mounting Hardware|[-D-](/boxes/robotics/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2)
-M2.5 nut|regular M2.5 nut|4|Mounting Hardware|[-D-](/boxes/power/-)|[-L-](https://www.accu.co.uk/hexagon-nuts/456430-HPN-M2-5-C8-Z)
-12V DC Power Supply|12 V AC-DC transformer (UK/EU/USA plugs)|1|Large (100)|[-D-](/boxes/power/)|[-L-](https://www.amazon.co.uk/gp/product/B09QG4R1R4)
 Battery|NiMH 9.6V 8-cell 2000 mAh battery|1|Auxiliary|[-D-](/boxes/power/)|[-L-](https://www.amazon.co.uk/dp/B091H9ZFSF)
 Battery Cable|Barrel Jack to Tamiya Plug|1|Cables (001)|[-D-](/boxes/power/)|[-L-](VK)
 Battery Charger|NiMH battery charger (UK plug)|1|Auxiliary|[-D-](/boxes/power/)|[-L-](https://www.amazon.co.uk/dp/B089VRXKWY)

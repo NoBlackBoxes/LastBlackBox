@@ -26,7 +26,11 @@ M2 nut|regular M2 nut|4|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 > We start with a recap about light, measuring analog signals with computers, and then describe how a modern camera sensor is built. We then introduce the NB3's Eye and conclude with a discussion of the sources of noise that all cameras encounter when trying to *image* the real world.
 
 
-### Image-Processing
+#### Watch this video: [Image-Processing](https://vimeo.com/manage/videos/1144050570)
+<p align="center">
+<a href="https://vimeo.com/manage/videos/1144050570" title="Control+Click to watch in new tab"><img src="../../../../boxes/vision/_resources/lessons/thumbnails/Image-Processing.gif" alt="Image-Processing" width="480"/></a>
+</p>
+
 > Old-school (classical) techniques for processing two-dimensional data (2D).
 
 - Install python opencv

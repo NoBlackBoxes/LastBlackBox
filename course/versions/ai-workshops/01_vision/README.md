@@ -50,7 +50,11 @@ rpicam-still -o my_test.png
 
 
 # Project
-### Image-Processing
+#### Watch this video: [Image-Processing](https://vimeo.com/manage/videos/1144050570)
+<p align="center">
+<a href="https://vimeo.com/manage/videos/1144050570" title="Control+Click to watch in new tab"><img src="../../../../boxes/vision/_resources/lessons/thumbnails/Image-Processing.gif" alt="Image-Processing" width="480"/></a>
+</p>
+
 > Old-school (classical) techniques for processing two-dimensional data (2D).
 
 - Install python opencv

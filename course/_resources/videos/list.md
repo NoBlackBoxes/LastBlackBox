@@ -155,7 +155,7 @@
 ## Vision
 - [x] [NB3 : Streaming Images](https://vimeo.com/manage/videos/1141582696)
 - [x] [Light, Cameras, Noise](https://vimeo.com/manage/videos/1141367902)
-- [ ] [Image-Processing]()
+- [x] [Image-Processing](https://vimeo.com/manage/videos/1144050570)
 - [x] [NB3 : Install the Eye](https://vimeo.com/1042945461)
 
 ## Learning
