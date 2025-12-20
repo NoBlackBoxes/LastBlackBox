@@ -1,0 +1,12 @@
+[project]
+name = "LBB"
+version = "0.1.0"
+dependencies = []
+
+[build-system]
+requires = ["uv_build"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "LBB"
+module-root = ""

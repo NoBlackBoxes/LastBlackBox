@@ -1,0 +1,19 @@
+[project]
+name = "lastblackbox"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "numpy",
+    "opencv-python",
+    "spidev",
+    "pyglet",
+    "LBB",
+    "NB3"
+]
+
+[tool.uv.sources]
+LBB = { workspace = true }
+NB3 = { workspace = true }
+
+[tool.uv.workspace]
+members = ["libs/LBB", "libs/NB3"]
