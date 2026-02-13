@@ -43,18 +43,20 @@ These scripts process live video streams:
 
 ### Offline Scripts
 
-Run scripts sequentially (they build on each other):
+Run scripts sequentially (they build on each other). Navigate to the directory first:
 ```bash
-python offline/00_still.py    # Capture image
-python offline/01_threshold.py # Process image
+cd ~/NoBlackBoxes/LastBlackBox/boxes/vision/image_processing/python/offline
+python 00_still.py    # Capture image
+python 01_threshold.py # Process image
 # etc.
 ```
 
 ### Online Scripts
 
-Start a script and access the web interface:
+Start a script and access the web interface. Navigate to the directory first:
 ```bash
-python online/01_threshold.py
+cd ~/NoBlackBoxes/LastBlackBox/boxes/vision/image_processing/python/online
+python 01_threshold.py
 # Then open browser to the displayed URL
 ```
 

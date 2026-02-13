@@ -28,7 +28,9 @@ sudo apt install python3-picamera2
 
 ## Usage
 
+Navigate to the directory first, then run the scripts:
 ```bash
+cd ~/NoBlackBoxes/LastBlackBox/boxes/vision/image_processing/picamera
 python 00_still.py
 python 01_still_flip.py
 ```
