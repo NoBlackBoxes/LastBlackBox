@@ -41,6 +41,8 @@ These scripts process live video streams:
 
 ## Usage
 
+**⚠️ Setup Required**: Before running the scripts, make sure you have set up the LBB Python virtual environment. Follow the [Virtual Environment Setup Guide](../../../python/virtual_environments/README.md) first.
+
 ### Offline Scripts
 
 Run scripts sequentially (they build on each other). Navigate to the directory first:

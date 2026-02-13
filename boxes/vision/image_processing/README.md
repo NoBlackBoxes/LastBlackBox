@@ -9,8 +9,16 @@ This directory contains image processing examples and tools for computer vision 
 
 ## Quick Start
 
+**⚠️ Setup Required**: Before running the scripts, make sure you have set up the LBB Python virtual environment. Follow the [Virtual Environment Setup Guide](../../python/virtual_environments/README.md) first.
+
 ### Python Dependencies
 
+**Note**: Make sure you have activated the LBB virtual environment before installing packages:
+```bash
+source ~/NoBlackBoxes/LastBlackBox/_tmp/LBB/bin/activate
+```
+
+Then install the required packages:
 ```bash
 pip install opencv-python
 pip install numpy==1.26       # OpenCV is currently forcing numpy version >2 (which breaks other things)

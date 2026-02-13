@@ -28,6 +28,8 @@ sudo apt install python3-picamera2
 
 ## Usage
 
+**⚠️ Setup Required**: Before running the scripts, make sure you have set up the LBB Python virtual environment. Follow the [Virtual Environment Setup Guide](../../../python/virtual_environments/README.md) first.
+
 Navigate to the directory first, then run the scripts:
 ```bash
 cd ~/NoBlackBoxes/LastBlackBox/boxes/vision/image_processing/picamera
