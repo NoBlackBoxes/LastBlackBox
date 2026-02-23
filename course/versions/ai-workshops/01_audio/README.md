@@ -1,176 +1,72 @@
-# ElevenLabs API Test
+# Audio : AI : ElevenLabs + OpenAI
 
-This script tests the ElevenLabs API and helps understand credit usage for text-to-speech conversions.
+This directory contains audio AI examples for the hackathon: simple scripts that turn speech into text, text into speech, and connect both through an LLM “robot”.
 
-**ElevenLabs** is a text-to-speech (TTS) service that converts written text into natural-sounding speech using AI. This test script demonstrates how to use their API to convert text to speech and track credit consumption.
+## Structure
 
-## 📚 API Documentation
+- **`_resources/python/`** – Python scripts for the workshop
+  - `00_tts_make_question_audio.py` – Text → speech (interactive question → creates question audio)
+  - `01_stt_transcribe_question.py` – Speech → text (transcribes either the MP3 from `00` or a short microphone recording)
+  - `02_robot_reply.py` – LLM reply + text → speech (robot answer)
 
-- **Main API Reference**: https://elevenlabs.io/docs/api-reference/introduction
-- **Text-to-Speech Endpoint**: https://elevenlabs.io/docs/api-reference/text-to-speech/convert
-- **Python SDK**: https://github.com/elevenlabs/elevenlabs-python
-- **Available Models**: https://elevenlabs.io/docs/api-reference/models
+## Quick Start
 
-## Setup
+**⚠️ Setup Required**: Before running the scripts, make sure you have activated your Python environment (or set one up). Follow the [Virtual Environment Setup Guide](../../../../boxes/python/virtual_environments/README.md) if needed.
 
-### 1. Install Required Packages
+From `course/versions/ai-workshops/01_audio`:
 
 ```bash
-pip install elevenlabs python-dotenv
+pip install python-dotenv openai elevenlabs sounddevice soundfile
 ```
 
-### 2. Set Up API Key
+Create a `.env` file in this folder:
 
-You have two options:
-
-**Option A: Create a `.env` file** (recommended)
-Create a `.env` file in the workshop folder (`01_audio/`):
-```
-course/versions/ai-workshops/01_audio/.env
-```
-
-The file should contain:
-```
-ELEVENLABS_API_KEY=your_api_key_here
-```
-
-**Option B: Set Environment Variable**
 ```bash
-export ELEVENLABS_API_KEY='your_api_key_here'
+cd ~/NoBlackBoxes/LastBlackBox/course/versions/ai-workshops/01_audio
+touch .env 
 ```
 
-### 3. Run the Test
+Edit the file to contain your API keys in the following format:
 
-From the `01_audio/` folder:
+```env
+ELEVENLABS_API_KEY=your_elevenlabs_key
+OPENAI_API_KEY=your_openai_key
+```
+
+## Demo Scripts (run in order)
+
+From `course/versions/ai-workshops/01_audio/_resources/python` run:
+
 ```bash
-python _resources/python/elevenlabs_api_test.py
+python 00_tts_make_question_audio.py
+python 01_stt_transcribe_question.py
+python 02_robot_reply.py
 ```
 
-## Basic Usage
+- `00` asks for a question on the command line and writes `my_00_question.mp3`
+- `01` either:
+  - reads `my_00_question.mp3` **or**
+  - records ~5 seconds from the microphone (you choose at runtime),
+  then writes `my_01_transcript.txt`
+- `02` reads `my_01_transcript.txt`, asks for a **system prompt** to set the robot’s personality (or uses a friendly-teacher default), then writes:
+  - `my_02_robot_reply.txt`
+  - `my_02_robot_reply.mp3`
 
-### Simple Text-to-Speech Example
+## Workshop Ideas
 
-Here's a minimal example of how to use the ElevenLabs API:
+- **Personality challenge**:
+  - When running `02_robot_reply.py`, type a different system prompt instead of using the default.
+  - Examples: pirate robot, football coach robot, Shakespeare robot.
+- **Voice challenge**:
+  - Change `VOICE_ID` in `00_tts_make_question_audio.py` and `02_robot_reply.py`.
+- **Prompt challenge**:
+  - When running `00_tts_make_question_audio.py`, type different questions at the prompt.
+- **Real voice challenge**:
+  - In `01_stt_transcribe_question.py`, choose the microphone option to record a student asking the question, then re-run `02`.
 
-```python
-from elevenlabs import ElevenLabs
-
-# Initialize client with your API key
-client = ElevenLabs(api_key="your_api_key_here")
-
-# Convert text to speech
-audio_stream = client.text_to_speech.convert(
-    voice_id="21m00Tcm4TlvDq8ikWAM",  # Voice ID (Rachel)
-    text="Hello, this is a test.",
-    model_id="eleven_turbo_v2_5"     # Model: turbo (fast) or standard (high quality)
-)
-
-# Collect audio chunks
-audio_data = b""
-for chunk in audio_stream:
-    audio_data += chunk
-
-# Save to file
-with open("output.mp3", "wb") as f:
-    f.write(audio_data)
-```
-
-### Key Concepts
-
-1. **Voice ID**: Each voice has a unique ID. You can:
-   - Use pre-made voices (like "Rachel": `21m00Tcm4TlvDq8ikWAM`)
-   - List available voices: `client.voices.search()`
-   - Create custom voices (requires additional permissions)
-
-2. **Models**: Choose based on speed vs quality:
-   - `eleven_turbo_v2_5` - Fast and cheaper (~$0.06 per 1K chars)
-   - `eleven_multilingual_v2` - Higher quality (~$0.12 per 1K chars)
-   - `eleven_monolingual_v1` - English only, high quality
-
-3. **Voice Settings**: Fine-tune the output:
-   - `stability` (0.0-1.0): How consistent the voice is
-   - `similarity_boost` (0.0-1.0): How similar to the original voice
-   - `style` (0.0-1.0): Style exaggeration
-   - `use_speaker_boost`: Enhance clarity
-
-4. **Credits**: Charged per character in your input text
-   - Counts every character including spaces and punctuation
-   - Different models have different costs
-   - Check your usage: `client.user.get()` (if you have permission)
-
-### Common API Methods
-
-```python
-# Get user info (subscription, credits)
-user_info = client.user.get()
-
-# List available voices
-voices = client.voices.search()
-
-# Convert text to speech
-audio = client.text_to_speech.convert(
-    voice_id="voice_id",
-    text="Your text here",
-    model_id="eleven_turbo_v2_5"
-)
-
-# Get voice by ID
-voice = client.voices.get(voice_id="voice_id")
-```
-
-## What the Script Does
-
-1. **Tests API Connection** - Verifies the API key works
-2. **Gets User Info** - Shows subscription tier and credit limits
-3. **Lists Available Voices** - Shows voices you can use
-4. **Tests Text-to-Speech** - Converts text to speech with different lengths:
-   - Short test (~25 characters)
-   - Medium test (~150 characters)
-   - Long test (~200+ characters)
-5. **Tracks Credit Usage** - Shows how many characters/credits each conversion uses
-6. **Saves Audio Files** - Creates MP3 files you can listen to verify quality
-
-## Understanding Credits
-
-- **Credits are based on character count** - Each character in your text consumes credits
-- **Turbo/Flash models**: ~$0.06 per 1,000 characters (cheaper, faster)
-- **Standard models**: ~$0.12 per 1,000 characters (higher quality)
-- **1 credit ≈ 1 character** (varies slightly by model)
-
-### Credit Estimation Examples:
-- Short message (50 chars): ~50 credits
-- Medium message (200 chars): ~200 credits  
-- Long message (1000 chars): ~1000 credits
-
-## Output Files
-
-The script creates test audio files in the workshop folder (`01_audio/`):
-- `my_short_test.mp3`
-- `my_medium_test.mp3`
-- `my_long_test.mp3`
 
 ## Notes
 
-- The script uses the `eleven_turbo_v2_5` model (cheaper option)
-- Current limit: 500 credits (can be increased)
-- Unused credits roll over to the next month (up to 2 months worth)
-- Some API keys may have limited permissions (e.g., only TTS conversion, no user/voice read access)
-
-## Troubleshooting
-
-**"Missing permissions" error**: Your API key may only have permission for text-to-speech conversion. This is normal and TTS will still work.
-
-**"Voice not found" error**: Make sure you're using a valid voice_id. Try the default voice ID: `21m00Tcm4TlvDq8ikWAM`
-
-**Audio file is empty**: Make sure you're collecting all chunks from the generator:
-```python
-audio_data = b""
-for chunk in audio_stream:
-    audio_data += chunk
-```
-
-## Additional Resources
-
-- [ElevenLabs Pricing](https://elevenlabs.io/pricing)
-- [Voice Library](https://elevenlabs.io/voice-library)
-- [API Status](https://status.elevenlabs.io/)
+- Keep clips short to save ElevenLabs credits.
+- If STT returns empty text, use clearer audio and less background noise.
+- For reliability in class, stick to the numbered order `00 → 01 → 02`.
