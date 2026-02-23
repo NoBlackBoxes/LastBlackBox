@@ -9,7 +9,7 @@ This directory contains image processing examples and tools for computer vision 
 
 ## Quick Start
 
-**⚠️ Setup Required**: Before running the scripts, make sure you have set up the LBB Python virtual environment. Follow the [Virtual Environment Setup Guide](../../python/virtual_environments/README.md) first.
+**⚠️ Setup Required**: Before running the scripts, make sure you have activated your Python environment (or set one up). Follow the [Virtual Environment Setup Guide](../../python/virtual_environments/README.md) if needed.
 
 ### Python Dependencies
 
