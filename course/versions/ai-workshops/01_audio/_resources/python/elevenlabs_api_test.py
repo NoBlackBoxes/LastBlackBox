@@ -1,16 +1,22 @@
 """
-Test script for ElevenLabs API
-Tests basic functionality and checks credit usage for text-to-speech
+Purpose:
+    Test the ElevenLabs API: check credits, list voices, 
+    and convert text to speech with credit tracking.
 
-ElevenLabs is a text-to-speech API service that converts written text into
-natural-sounding speech. This script demonstrates:
-- How to authenticate with the API
-- How to check your account status and credits
-- How to list available voices
-- How to convert text to speech
-- How to track credit usage
+Execution Flow:
+    (when run as __main__)
+      └── test_elevenlabs_api()
 
-API Documentation: https://elevenlabs.io/docs/api-reference/introduction
+Side Effects:
+    - Writes MP3 files to workshop root (01_audio/)
+    - Calls ElevenLabs API (user.get, voices.search, text_to_speech.convert)
+    - Loads ELEVENLABS_API_KEY from .env or environment
+
+Inputs:
+    - ELEVENLABS_API_KEY (env var or from .env in workshop root)
+
+Outputs:
+    - my_short_test.mp3, my_medium_test.mp3, my_long_test.mp3 (in 01_audio/)
 """
 import os
 import dotenv
