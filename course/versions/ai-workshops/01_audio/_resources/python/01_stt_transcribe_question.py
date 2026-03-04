@@ -35,7 +35,7 @@ import soundfile as sf
 RECORD_SECONDS = 5
 SAMPLE_RATE = 44100
 
-
+# Define the transcribe function
 def transcribe(audio_path: Path, api_key: str) -> str:
     client = ElevenLabs(api_key=api_key)
     with audio_path.open("rb") as f:
@@ -49,7 +49,7 @@ def transcribe(audio_path: Path, api_key: str) -> str:
         text = result.get("text")
     return (text or "").strip()
 
-
+# Define the record_from_mic function
 def record_from_mic(out_path: Path) -> Path:
     print(f"Recording {RECORD_SECONDS} seconds... speak now.")
     recording = sd.rec(
@@ -63,16 +63,21 @@ def record_from_mic(out_path: Path) -> Path:
     print(f"Saved: {out_path}")
     return out_path
 
-
+# Define the main function that calls the transcribe function and record_from_mic function
 def main() -> None:
+    # Where is this file?
     script_dir = Path(__file__).resolve().parent
+    # Where is the workshop root?
     workshop_root = script_dir.parent.parent
+    # Load the environment variables
     dotenv.load_dotenv(workshop_root / ".env")
-
+    
+    # Get the API key
     api_key = os.getenv("ELEVENLABS_API_KEY")
     if not api_key:
         raise SystemExit("Missing ELEVENLABS_API_KEY in .env or environment.")
 
+    # User input
     choice = (
         input(
             "Choose input:\n"
@@ -100,10 +105,13 @@ def main() -> None:
                 "Missing my_00_question.mp3. Run: python 00_tts_make_question_audio.py"
             )
 
+    # Transcribe the audio
     transcript = transcribe(audio_path, api_key)
+    # Save the transcript to a file
     out_file = script_dir / "my_01_transcript.txt"
     out_file.write_text(transcript + "\n", encoding="utf-8")
 
+    # Print the transcript and the output file
     print(f"Transcript: {transcript if transcript else '(empty)'}")
     print(f"Saved: {out_file}")
     print()

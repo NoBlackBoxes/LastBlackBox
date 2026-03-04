@@ -37,7 +37,7 @@ TTS_MODEL_ID = "eleven_turbo_v2_5"
 LLM_MODEL = "gpt-4.1-mini"
 SYSTEM_PROMPT = "You are a friendly robot teacher. Reply in one short sentence."
 
-
+# Define the ask_llm function
 def ask_llm(user_text: str, openai_key: str, system_prompt: str) -> str:
     client = OpenAI(api_key=openai_key)
     response = client.responses.create(
@@ -49,7 +49,7 @@ def ask_llm(user_text: str, openai_key: str, system_prompt: str) -> str:
     )
     return response.output_text.strip()
 
-
+# Define the text_to_speech function
 def text_to_speech(text: str, eleven_key: str, out_file: Path) -> None:
     client = ElevenLabs(api_key=eleven_key)
     audio_stream = client.text_to_speech.convert(
@@ -64,12 +64,16 @@ def text_to_speech(text: str, eleven_key: str, out_file: Path) -> None:
 
     out_file.write_bytes(audio_data)
 
-
+# Define the main function that calls the ask_llm function and text_to_speech function
 def main() -> None:
+    # Where is this file?
     script_dir = Path(__file__).resolve().parent
+    # Where is the workshop root?
     workshop_root = script_dir.parent.parent
+    # Load the environment variables
     dotenv.load_dotenv(workshop_root / ".env")
-
+    
+    # Get the API ElevenLabs API key and the OpenAI API key
     eleven_key = os.getenv("ELEVENLABS_API_KEY")
     openai_key = os.getenv("OPENAI_API_KEY")
     if not eleven_key:
@@ -77,14 +81,17 @@ def main() -> None:
     if not openai_key:
         raise SystemExit("Missing OPENAI_API_KEY in .env or environment.")
 
+    # Load the transcript from the file
     in_file = script_dir / "my_01_transcript.txt"
     if not in_file.exists():
         raise SystemExit("Missing my_01_transcript.txt. Run: python 01_stt_transcribe_question.py")
 
+    # Read the question from the file
     question = in_file.read_text(encoding="utf-8").strip()
     if not question:
         raise SystemExit("Transcript is empty. Re-run steps 00 and 01.")
 
+    # User input
     user_system = input(
         "Type a system prompt to change the robot personality\n"
         "(or press Enter to use the friendly teacher default):\n"
@@ -92,13 +99,19 @@ def main() -> None:
     ).strip()
     system_prompt = user_system or SYSTEM_PROMPT
 
+    # Ask the LLM
     reply = ask_llm(question, openai_key, system_prompt)
+    # Save the reply to a text file
     reply_txt = script_dir / "my_02_robot_reply.txt"
+    # Save the reply to a audio file
     reply_mp3 = script_dir / "my_02_robot_reply.mp3"
 
+    # Save the reply to a text file
     reply_txt.write_text(reply + "\n", encoding="utf-8")
+    # Save the reply to a audio file
     text_to_speech(reply, eleven_key, reply_mp3)
 
+    # Print the question, reply, and the output files
     print(f"Question: {question}")
     print(f"Robot: {reply}")
     print(f"Saved: {reply_txt}")
