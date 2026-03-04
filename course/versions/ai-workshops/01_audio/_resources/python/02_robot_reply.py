@@ -31,7 +31,7 @@ import dotenv
 from elevenlabs import ElevenLabs
 from openai import OpenAI
 
-
+# Constants
 VOICE_ID = "21m00Tcm4TlvDq8ikWAM"
 TTS_MODEL_ID = "eleven_turbo_v2_5"
 LLM_MODEL = "gpt-4.1-mini"

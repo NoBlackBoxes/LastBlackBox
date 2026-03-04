@@ -32,6 +32,7 @@ from elevenlabs import ElevenLabs
 import sounddevice as sd
 import soundfile as sf
 
+# Constants
 RECORD_SECONDS = 5
 SAMPLE_RATE = 44100
 
