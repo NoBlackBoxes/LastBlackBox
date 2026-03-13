@@ -2,7 +2,7 @@
 Purpose:
     Convert a question into text using ElevenLabs speech-to-text.
     Can use either:
-      - the MP3 created in step 00, or
+      - the WAV created in step 00, or
       - a short microphone recording.
 
 Execution Flow:
@@ -17,7 +17,7 @@ Execution Flow:
 
 Side Effects (main only):
     - Prompts user: [a] file, [b] mic, [q] quit
-    - Reads my_00_question.mp3 (option a) or records to my_01_recorded.wav (option b)
+    - Reads my_00_question.wav (option a) or records to my_01_recorded.wav (option b)
     - Writes my_01_transcript.txt
     - Calls ElevenLabs speech-to-text API
 
@@ -132,10 +132,10 @@ def main() -> None:
         record_from_mic(wav_path)
         audio_path = wav_path
     else:
-        audio_path = script_dir / "my_00_question.mp3"
+        audio_path = script_dir / "my_00_question.wav"
         if not audio_path.exists():
             raise SystemExit(
-                "Missing my_00_question.mp3. Run: python 00_tts_make_question_audio.py"
+                "Missing my_00_question.wav. Run: python 00_tts_make_question_audio.py"
             )
 
     # Transcribe the audio

@@ -1,15 +1,15 @@
 """
 Purpose:
-    Create a question MP3 using ElevenLabs text-to-speech for use in step 01.
+    Create a question WAV using ElevenLabs text-to-speech for use in step 01.
     Prompts for the question text (or uses default if Enter is pressed).
 
 Execution Flow:
     main()
-      └── prompt for question → text_to_speech → write MP3
+      └── prompt for question → text_to_speech (MP3) → convert to WAV
 
 Side Effects:
     - Prompts user for question text (stdin)
-    - Writes my_00_question.mp3
+    - Writes my_00_question.wav (MP3 is only an intermediate)
     - Calls ElevenLabs text-to-speech API
     - Uses ELEVENLABS_API_KEY from environment or .env
 
@@ -18,7 +18,7 @@ Inputs:
     - User input: question text (or Enter for default)
 
 Outputs:
-    - my_00_question.mp3
+    - my_00_question.wav
 """
 
 from pathlib import Path
@@ -26,6 +26,7 @@ from pathlib import Path
 from elevenlabs import ElevenLabs
 from env_keys import load_keys
 from nb3_config import VOICE_ID, TTS_MODEL_ID
+from utils.nb3_audio import mp3_to_wav_for_nb3
 
 
 # ------------------------------------------------------------------------------
@@ -67,13 +68,21 @@ def main() -> None:
     for chunk in audio_stream:
         audio_data += chunk
 
-    # Save the audio data to a file
-    out_file = script_dir / "my_00_question.mp3"
-    out_file.write_bytes(audio_data)
+    # Save the audio data to a temporary MP3 file
+    out_mp3 = script_dir / "my_00_question.mp3"
+    out_mp3.write_bytes(audio_data)
+
+    # Convert MP3 → WAV for NB3 / GPIO playback, then remove the MP3
+    out_wav = script_dir / "my_00_question.wav"
+    mp3_to_wav_for_nb3(out_mp3, out_wav)
+    try:
+        out_mp3.unlink()
+    except OSError:
+        pass
 
     # Print the question text and the output file
     print(f"Used question: {question_text!r}")
-    print(f"Saved: {out_file}")
+    print(f"Saved: {out_wav}")
     print()
     print("Next: python 01_stt_transcribe_question.py")
 
