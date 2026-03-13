@@ -28,9 +28,15 @@ import dotenv
 from elevenlabs import ElevenLabs
 
 
+# ------------------------------------------------------------------------------
+# Edit this section to change the voice and model
+# ------------------------------------------------------------------------------
+
 VOICE_ID = "21m00Tcm4TlvDq8ikWAM"  # Rachel
 MODEL_ID = "eleven_turbo_v2_5"
 QUESTION_TEXT = "Hello NB3, what is your favorite neuroscience fact?"
+
+# End of edit section ----------------------------------------------------------
 
 
 def main() -> None:

@@ -31,11 +31,16 @@ import dotenv
 from elevenlabs import ElevenLabs
 from openai import OpenAI
 
-# Constants
+# ------------------------------------------------------------------------------
+# Edit this section to change the voice and model
+# ------------------------------------------------------------------------------
+
 VOICE_ID = "21m00Tcm4TlvDq8ikWAM"
 TTS_MODEL_ID = "eleven_turbo_v2_5"
 LLM_MODEL = "gpt-4.1-mini"
 SYSTEM_PROMPT = "You are a friendly robot teacher. Reply in one short sentence."
+
+# End of edit section ----------------------------------------------------------
 
 # Define the ask_llm function
 def ask_llm(user_text: str, openai_key: str, system_prompt: str) -> str:
