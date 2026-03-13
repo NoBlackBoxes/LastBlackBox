@@ -16,6 +16,7 @@ Notes:
 """
 
 import importlib.util
+import time
 from pathlib import Path
 
 from env_keys import load_keys
@@ -63,6 +64,15 @@ def main() -> None:
         pass
     # Also play through the normal desktop/laptop audio path
     robot_mod.speak(greeting, eleven_key)
+
+    # Short countdown so it's obvious when to speak
+    print("Get ready — I'll listen in 3...")
+    time.sleep(1)
+    print("2...")
+    time.sleep(1)
+    print("1...")
+    time.sleep(1)
+    print()
 
     # 1) Record a question from the microphone and transcribe it (no files).
     question = stt_mod.transcribe_from_mic(eleven_key)

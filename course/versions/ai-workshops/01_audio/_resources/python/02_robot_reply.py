@@ -160,6 +160,9 @@ def main() -> None:
     print(f"Saved: {reply_txt}")
     print(f"Saved: {reply_wav}")
     print()
+    print("To play on Pi (copy-paste):")
+    print(f"  aplay -q -D plughw:3 -c2 -r 48000 -f S32_LE -t wav -V stereo {reply_wav.name}")
+    print()
     print("Done. (End of pipeline: 00 → 01 → 02)")
 
 
