@@ -65,6 +65,8 @@ def mp3_to_wav_for_nb3(mp3_path: Path, wav_path: Path) -> None:
     subprocess.run(
         [
             "ffmpeg",
+            "-loglevel",
+            "quiet",
             "-y",
             "-i",
             str(mp3_path),
@@ -75,6 +77,7 @@ def mp3_to_wav_for_nb3(mp3_path: Path, wav_path: Path) -> None:
             str(wav_path),
         ],
         check=False,
+        capture_output=True,
     )
 
 
@@ -88,6 +91,7 @@ def play_wav_on_nb3(wav_path: Path) -> None:
     subprocess.run(
         [
             "aplay",
+            "-q",
             "-D",
             NB3_DEVICE,
             "-c2",
@@ -102,6 +106,7 @@ def play_wav_on_nb3(wav_path: Path) -> None:
             str(wav_path),
         ],
         check=False,
+        capture_output=True,
     )
 
 

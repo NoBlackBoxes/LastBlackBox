@@ -106,7 +106,7 @@ python 02_robot_reply.py
 
 ```bash
 cd course/versions/ai-workshops/01_audio/_resources/python
-aplay -D plughw:3 -c2 -r 48000 -f S32_LE -t wav -V stereo my_02_robot_reply.wav
+aplay -q -D plughw:3 -c2 -r 48000 -f S32_LE -t wav -V stereo my_02_robot_reply.wav
 ```
 
 Use the same command for `my_00_question.wav` or any WAV in this folder.
