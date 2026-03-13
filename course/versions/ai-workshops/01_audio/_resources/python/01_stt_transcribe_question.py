@@ -50,6 +50,8 @@ def transcribe(audio_path: Path, api_key: str) -> str:
         result = client.speech_to_text.convert(
             file=f,
             model_id="scribe_v1",
+            language_code="en",  # avoid locale-dependent tags (e.g. Hungarian)
+            tag_audio_events=False,  # no (laughter), (pause), etc. in transcript
         )
 
     text = getattr(result, "text", None)
@@ -86,6 +88,8 @@ def transcribe_from_mic(api_key: str) -> str:
     result = client.speech_to_text.convert(
         file=buffer,
         model_id="scribe_v1",
+        language_code="en",  # avoid locale-dependent tags (e.g. Hungarian)
+        tag_audio_events=False,  # no (laughter), (pause), etc. in transcript
     )
 
     text = getattr(result, "text", None)
