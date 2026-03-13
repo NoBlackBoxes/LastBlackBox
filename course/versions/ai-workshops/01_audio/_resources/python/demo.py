@@ -11,14 +11,16 @@ Notes:
     - This script reuses helper functions and settings from:
         * 01_stt_transcribe_question.py (RECORD_SECONDS, SAMPLE_RATE)
         * 02_robot_reply.py (VOICE_ID, TTS_MODEL_ID, SYSTEM_PROMPT)
-    - It does NOT write any transcript, reply, or microphone audio files;
-      everything stays in memory for the demo.
+    - It does NOT keep any transcript, reply, or microphone audio files;
+      any temporary audio created for NB3 playback is deleted afterwards.
 """
 
 import importlib.util
+import time
 from pathlib import Path
 
 from env_keys import load_keys
+from utils.nb3_audio import play_mp3_on_nb3
 
 # define the _load_module function
 def _load_module(name: str, path: Path):
@@ -48,7 +50,29 @@ def main() -> None:
     greeting = "Hey I'm NB3, ask me anything."
     print(f"NB3: {greeting}")
     print()
+    # Use the same TTS helper as 02_robot_reply.py to create an MP3,
+    # then play it on NB3 GPIO audio (if available), and also via
+    # the standard speak() helper for laptops/desktops.
+    greeting_mp3 = script_dir / "demo_greeting.mp3"
+    robot_mod.text_to_speech(greeting, eleven_key, greeting_mp3)
+    play_mp3_on_nb3(greeting_mp3)
+    # Remove any temporary WAV created by the NB3 helper
+    greeting_wav = greeting_mp3.with_suffix(".wav")
+    try:
+        greeting_wav.unlink()
+    except OSError:
+        pass
+    # Also play through the normal desktop/laptop audio path
     robot_mod.speak(greeting, eleven_key)
+
+    # Short countdown so it's obvious when to speak
+    print("Get ready — I'll listen in 3...")
+    time.sleep(1)
+    print("2...")
+    time.sleep(1)
+    print("1...")
+    time.sleep(1)
+    print()
 
     # 1) Record a question from the microphone and transcribe it (no files).
     question = stt_mod.transcribe_from_mic(eleven_key)
@@ -64,8 +88,18 @@ def main() -> None:
     system_prompt = getattr(robot_mod, "SYSTEM_PROMPT", "You are a helpful assistant.")
     reply = robot_mod.ask_llm(question, openai_key, system_prompt).strip()
 
-    # 4) Speak (and also print) the reply (no reply text/audio files written).
+    # 4) Speak (and also print) the reply.
     print(f"NB3: {reply}")
+    reply_mp3 = script_dir / "demo_reply.mp3"
+    robot_mod.text_to_speech(reply, eleven_key, reply_mp3)
+    play_mp3_on_nb3(reply_mp3)
+    # Remove any temporary WAV created by the NB3 helper
+    reply_wav = reply_mp3.with_suffix(".wav")
+    try:
+        reply_wav.unlink()
+    except OSError:
+        pass
+    # Also play through the normal desktop/laptop audio path
     robot_mod.speak(reply, eleven_key)
     print()
     print("Done. (demo.py: mic → STT → LLM, no files saved.)")

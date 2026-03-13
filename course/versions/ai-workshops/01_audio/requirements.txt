@@ -1,0 +1,7 @@
+# Audio AI workshop (ElevenLabs + OpenAI)
+# Install: pip install -r requirements.txt
+python-dotenv
+openai
+elevenlabs
+sounddevice
+soundfile

@@ -2,7 +2,7 @@
 Purpose:
     Convert a question into text using ElevenLabs speech-to-text.
     Can use either:
-      - the MP3 created in step 00, or
+      - the WAV created in step 00, or
       - a short microphone recording.
 
 Execution Flow:
@@ -17,7 +17,7 @@ Execution Flow:
 
 Side Effects (main only):
     - Prompts user: [a] file, [b] mic, [q] quit
-    - Reads my_00_question.mp3 (option a) or records to my_01_recorded.wav (option b)
+    - Reads my_00_question.wav (option a) or records to my_01_recorded.wav (option b)
     - Writes my_01_transcript.txt
     - Calls ElevenLabs speech-to-text API
 
@@ -37,13 +37,14 @@ from elevenlabs import ElevenLabs
 import sounddevice as sd
 import soundfile as sf
 from env_keys import load_keys
+from utils.nb3_audio import record_from_nb3
 
 # Constants
 RECORD_SECONDS = 5
 SAMPLE_RATE = 44100
 
-# Define the transcribe function
 def transcribe(audio_path: Path, api_key: str) -> str:
+    """Send an audio file to ElevenLabs speech-to-text and return the transcript."""
     client = ElevenLabs(api_key=api_key)
     with audio_path.open("rb") as f:
         result = client.speech_to_text.convert(
@@ -60,49 +61,59 @@ def transcribe(audio_path: Path, api_key: str) -> str:
 def transcribe_from_mic(api_key: str) -> str:
     """
     Record from the microphone, send the audio to ElevenLabs speech-to-text,
-    and return the transcribed text. This version keeps the audio in memory
-    (no files written) for use by the demo script.
+    and return the transcribed text. Uses NB3 GPIO input (arecord) when
+    available, otherwise sounddevice default. No files written (for demo).
     """
     print(f"Recording {RECORD_SECONDS} seconds... speak now.")
-    recording = sd.rec(
-        int(RECORD_SECONDS * SAMPLE_RATE),
-        samplerate=SAMPLE_RATE,
-        channels=1,
-        dtype="float32",
-    )
-    sd.wait()
-
-    print("Transcribing your question with ElevenLabs...")
-    with io.BytesIO() as buffer:
+    wav_bytes = record_from_nb3(RECORD_SECONDS)
+    if wav_bytes:
+        buffer = io.BytesIO(wav_bytes)
+    else:
+        recording = sd.rec(
+            int(RECORD_SECONDS * SAMPLE_RATE),
+            samplerate=SAMPLE_RATE,
+            channels=1,
+            dtype="float32",
+        )
+        sd.wait()
+        buffer = io.BytesIO()
         sf.write(buffer, recording, SAMPLE_RATE, format="WAV")
         buffer.seek(0)
 
-        client = ElevenLabs(api_key=api_key)
-        result = client.speech_to_text.convert(
-            file=buffer,
-            model_id="scribe_v1",
-        )
+    print("Transcribing your question with ElevenLabs...")
+    buffer.seek(0)
+    client = ElevenLabs(api_key=api_key)
+    result = client.speech_to_text.convert(
+        file=buffer,
+        model_id="scribe_v1",
+    )
 
     text = getattr(result, "text", None)
     if text is None and isinstance(result, dict):
         text = result.get("text")
     return (text or "").strip()
 
-# Define the record_from_mic function
 def record_from_mic(out_path: Path) -> Path:
+    """
+    Record from the microphone and save to a WAV file.
+    Uses NB3 GPIO (arecord) when available, otherwise sounddevice default.
+    """
     print(f"Recording {RECORD_SECONDS} seconds... speak now.")
-    recording = sd.rec(
-        int(RECORD_SECONDS * SAMPLE_RATE),
-        samplerate=SAMPLE_RATE,
-        channels=1,
-        dtype="float32",
-    )
-    sd.wait()
-    sf.write(out_path, recording, SAMPLE_RATE)
+    wav_bytes = record_from_nb3(RECORD_SECONDS)
+    if wav_bytes:
+        out_path.write_bytes(wav_bytes)
+    else:
+        recording = sd.rec(
+            int(RECORD_SECONDS * SAMPLE_RATE),
+            samplerate=SAMPLE_RATE,
+            channels=1,
+            dtype="float32",
+        )
+        sd.wait()
+        sf.write(out_path, recording, SAMPLE_RATE)
     print(f"Saved: {out_path}")
     return out_path
 
-# Define the main function that calls the transcribe function and record_from_mic function
 def main() -> None:
     # Where is this file?
     script_dir = Path(__file__).resolve().parent
@@ -132,10 +143,10 @@ def main() -> None:
         record_from_mic(wav_path)
         audio_path = wav_path
     else:
-        audio_path = script_dir / "my_00_question.mp3"
+        audio_path = script_dir / "my_00_question.wav"
         if not audio_path.exists():
             raise SystemExit(
-                "Missing my_00_question.mp3. Run: python 00_tts_make_question_audio.py"
+                "Missing my_00_question.wav. Run: python 00_tts_make_question_audio.py"
             )
 
     # Transcribe the audio

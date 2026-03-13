@@ -1,95 +1,168 @@
-# Audio : AI : ElevenLabs + OpenAI
+# Audio : AI (ElevenLabs + OpenAI)
 
-This directory contains audio AI examples for the hackathon: simple scripts that turn speech into text,
-text into speech, and connect both through an LLM.
+Simple workshop: speech → text (STT), text → speech (TTS), and an LLM in between. Run the pipeline step-by-step (00 → 01 → 02) or use the one-shot demo.
 
-## Structure
+---
 
-- **`_resources/python/`** – Python scripts for the workshop
-  - `00_tts_make_question_audio.py` – Text → speech (interactive question → creates question audio)
-  - `01_stt_transcribe_question.py` – Speech → text (transcribes either the MP3 from `00` or a short microphone recording)
-  - `02_robot_reply.py` – LLM reply + text → speech (robot answer)
-  - `demo.py` – Live NB3 demo: speaks an intro, listens on the mic, asks the LLM, and speaks the reply (no intermediate files)
-  - `env_keys.py` – Shared helper that loads `ELEVENLABS_API_KEY` and `OPENAI_API_KEY` from the `.env` file
-  - `nb3_config.py` – Shared NB3 settings: voice, TTS model, LLM model, and default system prompt
+## 1. Setup
 
-## Quick Start
+The workshop environment is already active (`_tmp/LBB` or similar). Do this once:
 
-**⚠️ Setup Required**: Before running the scripts, make sure you have activated your Python environment (or set one up). Follow the [Virtual Environment Setup Guide](../../../../boxes/python/virtual_environments/README.md) if needed.
+1. **Git pull** at the repo root (wherever your clone is, e.g. `NoBlackBoxes` or `LastBlackBox`):
+   ```bash
+   cd /path/to/your/repo/root
+   git pull
+   ```
+2. **Install requirements** and add your **API keys** (below).
 
-From `course/versions/ai-workshops/01_audio`:
+### 1.1 System tools (required for conversion)
+
+Scripts 00 and 02 convert ElevenLabs' MP3 output to WAV using **ffmpeg**. You need it for the pipeline and demo.
+
+| Tool        | Used for                                      | Install (examples)                    |
+|-------------|-----------------------------------------------|---------------------------------------|
+| **ffmpeg**  | MP3 to WAV conversion (00, 02, demo)          | `apt install ffmpeg` (Debian/Pi), `brew install ffmpeg` (macOS) |
+| **ffplay**  | Laptop playback (demo; comes with ffmpeg)     | Same as ffmpeg                        |
+| **aplay**   | Pi GPIO playback (optional)                   | Usually with ALSA on Pi               |
+| **arecord** | Pi GPIO recording (optional)                  | Usually with ALSA on Pi               |
+
+### 1.2 Python packages
+
+From repo root:
 
 ```bash
+cd course/versions/ai-workshops/01_audio
+pip install -r requirements.txt
+```
+
+Or install manually:
+
+```bash
+cd course/versions/ai-workshops/01_audio
 pip install python-dotenv openai elevenlabs sounddevice soundfile
 ```
 
-Create a `.env` file in this folder:
+| Package        | Used for                          |
+|----------------|-----------------------------------|
+| python-dotenv  | Load API keys from `.env`         |
+| openai         | LLM (script 02, demo)             |
+| elevenlabs     | Speech-to-text and text-to-speech |
+| sounddevice    | Microphone recording (script 01)  |
+| soundfile      | WAV handling (script 01)         |
+
+### 1.3 API keys
+
+Create a `.env` file in the workshop folder. From repo root:
 
 ```bash
-cd ~/NoBlackBoxes/LastBlackBox/course/versions/ai-workshops/01_audio
-touch .env 
+cd course/versions/ai-workshops/01_audio
+touch .env
 ```
 
-Edit the file to contain your API keys in the following format:
+Edit `.env` and add (replace with your real keys):
 
 ```env
 ELEVENLABS_API_KEY=your_elevenlabs_key
 OPENAI_API_KEY=your_openai_key
 ```
 
-## Scripts (run in order)
+Get keys from [ElevenLabs](https://elevenlabs.io/) and [OpenAI](https://platform.openai.com/).
 
-From `course/versions/ai-workshops/01_audio/_resources/python` run:
+---
+
+## 2. What’s in this folder
+
+| File / folder | Role |
+|---------------|------|
+| `_resources/python/00_tts_make_question_audio.py` | Type a question → WAV file (TTS) |
+| `_resources/python/01_stt_transcribe_question.py` | WAV or mic → transcript (STT) |
+| `_resources/python/02_robot_reply.py` | Transcript → LLM reply → WAV (no playback) |
+| `_resources/python/demo.py` | Full demo: intro → listen → reply (no saved files) |
+| `_resources/python/env_keys.py` | Loads API keys from `.env` |
+| `_resources/python/nb3_config.py` | Voice, TTS model, LLM model, system prompt |
+| `_resources/python/utils/nb3_audio.py` | Pi GPIO: record, MP3→WAV, play |
+
+---
+
+## 3. Run the pipeline (00 → 01 → 02)
+
+From repo root:
 
 ```bash
+cd course/versions/ai-workshops/01_audio/_resources/python
 python 00_tts_make_question_audio.py
 python 01_stt_transcribe_question.py
 python 02_robot_reply.py
 ```
 
-- `00` asks for a question on the command line and writes `my_00_question.mp3`
-- `01` either:
-  - reads `my_00_question.mp3` **or**
-  - records ~5 seconds from the microphone (you choose at runtime),
-  then writes `my_01_transcript.txt`
-- `02` reads `my_01_transcript.txt`, asks for a **system prompt** to set the robot’s personality (or uses a friendly-teacher default), then writes:
-  - `my_02_robot_reply.txt`
-  - `my_02_robot_reply.mp3`
+- **00** – Asks for a question, creates `my_00_question.wav`.
+- **01** – Choose: (a) use `my_00_question.wav`, or (b) record from the mic. Writes `my_01_transcript.txt`.
+- **02** – Reads the transcript, asks for a system prompt (or Enter for default), writes `my_02_robot_reply.txt` and `my_02_robot_reply.wav`. It does **not** play the reply; you play the WAV yourself.
 
-## Live NB3 demo (all-in-one)
+### Playing the WAV
 
-There is also a single script that runs the whole experience without saving
-intermediate transcript or reply files:
-
-From `_resources/python` run:
+- **Laptop:** Open `my_02_robot_reply.wav` (or `my_00_question.wav`) in your player.
+- **Raspberry Pi (GPIO / I2S):** Use the same device as for playback. From repo root:
 
 ```bash
+cd course/versions/ai-workshops/01_audio/_resources/python
+aplay -q -D plughw:3 -c2 -r 48000 -f S32_LE -t wav -V stereo my_02_robot_reply.wav
+```
+
+Use the same command for `my_00_question.wav` or any WAV in this folder.
+
+**Recording on the Pi:** If `arecord` is available, script 01 and the demo record from the same GPIO device (`plughw:3`), so mic and speaker match.
+
+---
+
+## 4. Live demo (all-in-one)
+
+From repo root:
+
+```bash
+cd course/versions/ai-workshops/01_audio/_resources/python
 python demo.py
 ```
 
-What happens:
+- Says: “Hey I’m NB3, ask me anything.”
+- Records your question from the mic (Pi: GPIO if `arecord` is available).
+- Transcribes with ElevenLabs, sends to the LLM, then speaks the reply.
+- Does **not** save transcript or reply files; any temp audio is removed after use.
 
-- NB3 speaks: “Hey I’m NB3, ask me anything.”
-- The script records a short question from your **microphone**.
-- It uses the same speech-to-text settings as `01_stt_transcribe_question.py`.
-- It uses the same LLM, voice, and system prompt settings as `02_robot_reply.py`.
-- NB3 then speaks the robot’s reply.
+On a laptop you need **ffplay** (ffmpeg) to hear the robot. On the Pi, playback uses the GPIO device if **ffmpeg** and **aplay** are available.
 
-## Workshop Ideas
+---
 
-- **Personality challenge**:
-  - When running `02_robot_reply.py`, type a different system prompt instead of using the default.
-  - Examples: pirate robot, football coach robot, Shakespeare robot.
-- **Voice challenge**:
-  - Change `VOICE_ID` (and optionally `TTS_MODEL_ID`) in `nb3_config.py` to give NB3 a different voice.
-- **Prompt challenge**:
-  - When running `00_tts_make_question_audio.py`, type different questions at the prompt.
-- **Real voice challenge**:
-  - In `01_stt_transcribe_question.py`, choose the microphone option to record a student asking the question, then re-run `02`.
+## 5. Workshop ideas (get creative)
 
+This is where you change the robot’s personality, voice, and questions. Here’s what to tweak and where.
 
-## Notes
+### Personality (how the robot “thinks” and replies)
 
-- Keep clips short to save ElevenLabs credits.
-- If STT returns empty text, use clearer audio and less background noise.
-- For reliability in class, stick to the numbered order `00 → 01 → 02`.
+- **What to change:** The **system prompt** that tells the LLM how to behave.
+- **Where:** When you run **02_robot_reply.py**, you’re asked for a system prompt; you can type one there. The default is in **`nb3_config.py`** → `SYSTEM_PROMPT`.
+- **Ideas:** Try “You are a pirate. Reply in one short sentence.” / “You are a strict football coach.” / “You are Shakespeare. Reply in one short line of verse.” / “You are a snob who loves literature.”
+
+### Voice (how the robot sounds)
+
+- **What to change:** Which ElevenLabs **voice** and **model** are used for speech.
+- **Where:** **`_resources/python/nb3_config.py`** — edit `VOICE_ID` and optionally `TTS_MODEL_ID`.
+- **Finding voices:** Open the [ElevenLabs Voice Library](https://elevenlabs.io/voice-library). Pick a voice you like; its **Voice ID** is in the URL or in the voice settings. Paste that ID into `VOICE_ID` in `nb3_config.py`. The same file is used by script 00, 02, and the demo, so the voice changes everywhere.
+
+### Question (what gets spoken or transcribed)
+
+- **What to change:** The question text (for the pipeline: what 00 speaks, or what 01 transcribes from a file).
+- **Where:** When you run **00_tts_make_question_audio.py**, you can type a new question at the prompt. To change the **default** question, edit **`00_tts_make_question_audio.py`** and look for `QUESTION_TEXT` near the top; change that string.
+
+### Real voice (you ask the question)
+
+- **What to do:** Use your own voice instead of the pre-recorded question.
+- **Where:** Run **01_stt_transcribe_question.py**, choose option **[b]** to record from the microphone. Ask your question when it says “speak now”. Then run **02_robot_reply.py** as usual and play the reply WAV (e.g. copy the `aplay` command that 02 prints).
+
+---
+
+## 6. Notes
+
+- Keep clips short to save ElevenLabs usage.
+- If transcription is empty, use clearer audio and less background noise.
+- Run the pipeline in order: 00 → 01 → 02.
