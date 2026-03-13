@@ -21,19 +21,18 @@ Outputs:
     - my_00_question.mp3
 """
 
-import os
 from pathlib import Path
 
-import dotenv
 from elevenlabs import ElevenLabs
+from env_keys import load_keys
+from nb3_config import VOICE_ID, TTS_MODEL_ID
 
 
 # ------------------------------------------------------------------------------
-# Edit this section to change the voice and model
+# Edit this section to change the default question text
+# (voice and model now come from nb3_config.py)
 # ------------------------------------------------------------------------------
 
-VOICE_ID = "21m00Tcm4TlvDq8ikWAM"  # Rachel
-MODEL_ID = "eleven_turbo_v2_5"
 QUESTION_TEXT = "Hello NB3, what is your favorite neuroscience fact?"
 
 # End of edit section ----------------------------------------------------------
@@ -42,15 +41,9 @@ QUESTION_TEXT = "Hello NB3, what is your favorite neuroscience fact?"
 def main() -> None:
     # Where is this file?
     script_dir = Path(__file__).resolve().parent
-    # Where is the workshop root?
-    workshop_root = script_dir.parent.parent
-    # Load the environment variables
-    dotenv.load_dotenv(workshop_root / ".env")
-
-    # Get the API key
-    api_key = os.getenv("ELEVENLABS_API_KEY")
-    if not api_key:
-        raise SystemExit("Missing ELEVENLABS_API_KEY in .env or environment.")
+    
+    # Load the API keys (this script only uses the ElevenLabs key)
+    eleven_key, _ = load_keys()
 
     # User input
     user_text = input(
@@ -60,13 +53,13 @@ def main() -> None:
 
 
     # Create the ElevenLabs client using the API key
-    client = ElevenLabs(api_key=api_key)
+    client = ElevenLabs(api_key=eleven_key)
     
     # Convert the text to speech using the ElevenLabs client
     audio_stream = client.text_to_speech.convert(
         voice_id=VOICE_ID,
         text=question_text,
-        model_id=MODEL_ID,
+        model_id=TTS_MODEL_ID,
     )
 
     # Convert the audio stream to bytes

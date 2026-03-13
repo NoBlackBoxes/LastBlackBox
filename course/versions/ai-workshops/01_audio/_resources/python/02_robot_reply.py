@@ -1,46 +1,49 @@
 """
 Purpose:
     Turn the transcript from step 01 into a short LLM reply using OpenAI,
-    then speak it with ElevenLabs text-to-speech. Final step of the pipeline.
+    then speak it with ElevenLabs text-to-speech. Final step of the
+    file-based 00 → 01 → 02 pipeline, and also the voice brain for demo.py.
 
-Execution Flow:
+Execution Flow (main):
     main()
       ├── read my_01_transcript.txt
       ├── ask_llm() → reply text
-      └── text_to_speech() → my_02_robot_reply.mp3
+      ├── text_to_speech() → my_02_robot_reply.mp3
+      └── print and save the reply
 
-Side Effects:
+Helpers:
+    ask_llm()
+      - Sends the question + system prompt to the OpenAI LLM.
+
+    text_to_speech()
+      - Turns reply text into an MP3 file using ElevenLabs.
+
+    speak()
+      - Turns reply text into live audio using ElevenLabs + ffplay.
+      - Used by demo.py so the intro and robot reply share these settings.
+
+Side Effects (main only):
     - Reads my_01_transcript.txt
     - Writes my_02_robot_reply.txt and my_02_robot_reply.mp3
     - Calls OpenAI LLM API and ElevenLabs text-to-speech API
-    - Uses ELEVENLABS_API_KEY and OPENAI_API_KEY from environment or .env
 
 Inputs:
-    - ELEVENLABS_API_KEY (environment variable or .env)
-    - OPENAI_API_KEY (environment variable or .env)
+    - ELEVENLABS_API_KEY (from .env via env_keys.load_keys)
+    - OPENAI_API_KEY (from .env via env_keys.load_keys)
 
-Outputs:
+Outputs (main only):
     - my_02_robot_reply.txt
     - my_02_robot_reply.mp3
 """
 
-import os
 from pathlib import Path
+import shutil
+import subprocess
 
-import dotenv
 from elevenlabs import ElevenLabs
 from openai import OpenAI
-
-# ------------------------------------------------------------------------------
-# Edit this section to change the voice and model
-# ------------------------------------------------------------------------------
-
-VOICE_ID = "21m00Tcm4TlvDq8ikWAM"
-TTS_MODEL_ID = "eleven_turbo_v2_5"
-LLM_MODEL = "gpt-4.1-mini"
-SYSTEM_PROMPT = "You are a friendly robot teacher. Reply in one short sentence."
-
-# End of edit section ----------------------------------------------------------
+from env_keys import load_keys
+from nb3_config import VOICE_ID, TTS_MODEL_ID, LLM_MODEL, SYSTEM_PROMPT
 
 # Define the ask_llm function
 def ask_llm(user_text: str, openai_key: str, system_prompt: str) -> str:
@@ -69,22 +72,54 @@ def text_to_speech(text: str, eleven_key: str, out_file: Path) -> None:
 
     out_file.write_bytes(audio_data)
 
+
+def speak(text: str, eleven_key: str) -> None:
+    """
+    Generate speech with ElevenLabs and play it via ffplay if available.
+
+    Used by the demo script so that both the introduction and the robot
+    reply use the same voice settings as this file.
+    """
+    if not text:
+        return
+
+    client = ElevenLabs(api_key=eleven_key)
+    audio_stream = client.text_to_speech.convert(
+        voice_id=VOICE_ID,
+        text=text,
+        model_id=TTS_MODEL_ID,
+    )
+
+    audio_data = b""
+    for chunk in audio_stream:
+        audio_data += chunk
+
+    ffplay = shutil.which("ffplay")
+    if not ffplay:
+        print("(Audio generated, but ffplay (ffmpeg) is not installed;")
+        print(" please install ffmpeg to hear the robot speak.)")
+        return
+
+    subprocess.run(
+        [
+            ffplay,
+            "-nodisp",
+            "-autoexit",
+            "-loglevel",
+            "quiet",
+            "-",
+        ],
+        input=audio_data,
+        check=False,
+    )
+
 # Define the main function that calls the ask_llm function and text_to_speech function
 def main() -> None:
     # Where is this file?
     script_dir = Path(__file__).resolve().parent
-    # Where is the workshop root?
-    workshop_root = script_dir.parent.parent
-    # Load the environment variables
-    dotenv.load_dotenv(workshop_root / ".env")
-    
-    # Get the API ElevenLabs API key and the OpenAI API key
-    eleven_key = os.getenv("ELEVENLABS_API_KEY")
-    openai_key = os.getenv("OPENAI_API_KEY")
-    if not eleven_key:
-        raise SystemExit("Missing ELEVENLABS_API_KEY in .env or environment.")
-    if not openai_key:
-        raise SystemExit("Missing OPENAI_API_KEY in .env or environment.")
+
+    # Load the environment variables and API keys
+    eleven_key, openai_key = load_keys()
 
     # Load the transcript from the file
     in_file = script_dir / "my_01_transcript.txt"
