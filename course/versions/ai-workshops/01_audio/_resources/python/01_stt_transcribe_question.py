@@ -37,6 +37,7 @@ from elevenlabs import ElevenLabs
 import sounddevice as sd
 import soundfile as sf
 from env_keys import load_keys
+from utils.nb3_audio import record_from_nb3
 
 # Constants
 RECORD_SECONDS = 5
@@ -60,28 +61,32 @@ def transcribe(audio_path: Path, api_key: str) -> str:
 def transcribe_from_mic(api_key: str) -> str:
     """
     Record from the microphone, send the audio to ElevenLabs speech-to-text,
-    and return the transcribed text. This version keeps the audio in memory
-    (no files written) for use by the demo script.
+    and return the transcribed text. Uses NB3 GPIO input (arecord) when
+    available, otherwise sounddevice default. No files written (for demo).
     """
     print(f"Recording {RECORD_SECONDS} seconds... speak now.")
-    recording = sd.rec(
-        int(RECORD_SECONDS * SAMPLE_RATE),
-        samplerate=SAMPLE_RATE,
-        channels=1,
-        dtype="float32",
-    )
-    sd.wait()
-
-    print("Transcribing your question with ElevenLabs...")
-    with io.BytesIO() as buffer:
+    wav_bytes = record_from_nb3(RECORD_SECONDS)
+    if wav_bytes:
+        buffer = io.BytesIO(wav_bytes)
+    else:
+        recording = sd.rec(
+            int(RECORD_SECONDS * SAMPLE_RATE),
+            samplerate=SAMPLE_RATE,
+            channels=1,
+            dtype="float32",
+        )
+        sd.wait()
+        buffer = io.BytesIO()
         sf.write(buffer, recording, SAMPLE_RATE, format="WAV")
         buffer.seek(0)
 
-        client = ElevenLabs(api_key=api_key)
-        result = client.speech_to_text.convert(
-            file=buffer,
-            model_id="scribe_v1",
-        )
+    print("Transcribing your question with ElevenLabs...")
+    buffer.seek(0)
+    client = ElevenLabs(api_key=api_key)
+    result = client.speech_to_text.convert(
+        file=buffer,
+        model_id="scribe_v1",
+    )
 
     text = getattr(result, "text", None)
     if text is None and isinstance(result, dict):
@@ -91,14 +96,18 @@ def transcribe_from_mic(api_key: str) -> str:
 # Define the record_from_mic function
 def record_from_mic(out_path: Path) -> Path:
     print(f"Recording {RECORD_SECONDS} seconds... speak now.")
-    recording = sd.rec(
-        int(RECORD_SECONDS * SAMPLE_RATE),
-        samplerate=SAMPLE_RATE,
-        channels=1,
-        dtype="float32",
-    )
-    sd.wait()
-    sf.write(out_path, recording, SAMPLE_RATE)
+    wav_bytes = record_from_nb3(RECORD_SECONDS)
+    if wav_bytes:
+        out_path.write_bytes(wav_bytes)
+    else:
+        recording = sd.rec(
+            int(RECORD_SECONDS * SAMPLE_RATE),
+            samplerate=SAMPLE_RATE,
+            channels=1,
+            dtype="float32",
+        )
+        sd.wait()
+        sf.write(out_path, recording, SAMPLE_RATE)
     print(f"Saved: {out_path}")
     return out_path
 

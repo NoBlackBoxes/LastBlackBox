@@ -22,6 +22,41 @@ def _have_tools() -> bool:
     return shutil.which("ffmpeg") is not None and shutil.which("aplay") is not None
 
 
+def record_from_nb3(seconds: float) -> bytes | None:
+    """
+    Record from the NB3 GPIO / I2S input device using arecord.
+    Returns WAV bytes, or None if arecord is not available.
+    Uses the same device and format as the Pi playback (plughw:3, 48 kHz, 2 ch).
+    """
+    arecord = shutil.which("arecord")
+    if not arecord:
+        return None
+    result = subprocess.run(
+        [
+            arecord,
+            "-D",
+            NB3_DEVICE,
+            "-c2",
+            "-r",
+            str(NB3_RATE),
+            "-f",
+            "S32_LE",
+            "-t",
+            "wav",
+            "-V",
+            "stereo",
+            "-d",
+            str(int(seconds)),
+            "-",
+        ],
+        capture_output=True,
+        timeout=int(seconds) + 10,
+    )
+    if result.returncode != 0 or not result.stdout:
+        return None
+    return result.stdout
+
+
 def mp3_to_wav_for_nb3(mp3_path: Path, wav_path: Path) -> None:
     """
     Convert an MP3 file to a WAV file suitable for playback on NB3.
