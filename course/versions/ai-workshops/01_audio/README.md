@@ -133,12 +133,31 @@ On a laptop you need **ffplay** (ffmpeg) to hear the robot. On the Pi, playback 
 
 ---
 
-## 5. Workshop ideas
+## 5. Workshop ideas (get creative)
 
-- **Personality:** In 02, type a different system prompt (e.g. pirate, coach, Shakespeare).
-- **Voice:** Edit `VOICE_ID` and `TTS_MODEL_ID` in `nb3_config.py`.
-- **Question:** In 00, type different questions.
-- **Real voice:** In 01, choose mic, ask the question yourself, then run 02 and play the WAV.
+This is where you change the robot’s personality, voice, and questions. Here’s what to tweak and where.
+
+### Personality (how the robot “thinks” and replies)
+
+- **What to change:** The **system prompt** that tells the LLM how to behave.
+- **Where:** When you run **02_robot_reply.py**, you’re asked for a system prompt; you can type one there. The default is in **`nb3_config.py`** → `SYSTEM_PROMPT`.
+- **Ideas:** Try “You are a pirate. Reply in one short sentence.” / “You are a strict football coach.” / “You are Shakespeare. Reply in one short line of verse.” / “You are a snob who loves literature.”
+
+### Voice (how the robot sounds)
+
+- **What to change:** Which ElevenLabs **voice** and **model** are used for speech.
+- **Where:** **`_resources/python/nb3_config.py`** — edit `VOICE_ID` and optionally `TTS_MODEL_ID`.
+- **Finding voices:** Open the [ElevenLabs Voice Library](https://elevenlabs.io/voice-library). Pick a voice you like; its **Voice ID** is in the URL or in the voice settings. Paste that ID into `VOICE_ID` in `nb3_config.py`. The same file is used by script 00, 02, and the demo, so the voice changes everywhere.
+
+### Question (what gets spoken or transcribed)
+
+- **What to change:** The question text (for the pipeline: what 00 speaks, or what 01 transcribes from a file).
+- **Where:** When you run **00_tts_make_question_audio.py**, you can type a new question at the prompt. To change the **default** question, edit **`00_tts_make_question_audio.py`** and look for `QUESTION_TEXT` near the top; change that string.
+
+### Real voice (you ask the question)
+
+- **What to do:** Use your own voice instead of the pre-recorded question.
+- **Where:** Run **01_stt_transcribe_question.py**, choose option **[b]** to record from the microphone. Ask your question when it says “speak now”. Then run **02_robot_reply.py** as usual and play the reply WAV (e.g. copy the `aplay` command that 02 prints).
 
 ---
 
