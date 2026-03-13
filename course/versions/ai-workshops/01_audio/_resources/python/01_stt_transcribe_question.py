@@ -43,8 +43,8 @@ from utils.nb3_audio import record_from_nb3
 RECORD_SECONDS = 5
 SAMPLE_RATE = 44100
 
-# Define the transcribe function
 def transcribe(audio_path: Path, api_key: str) -> str:
+    """Send an audio file to ElevenLabs speech-to-text and return the transcript."""
     client = ElevenLabs(api_key=api_key)
     with audio_path.open("rb") as f:
         result = client.speech_to_text.convert(
@@ -93,8 +93,11 @@ def transcribe_from_mic(api_key: str) -> str:
         text = result.get("text")
     return (text or "").strip()
 
-# Define the record_from_mic function
 def record_from_mic(out_path: Path) -> Path:
+    """
+    Record from the microphone and save to a WAV file.
+    Uses NB3 GPIO (arecord) when available, otherwise sounddevice default.
+    """
     print(f"Recording {RECORD_SECONDS} seconds... speak now.")
     wav_bytes = record_from_nb3(RECORD_SECONDS)
     if wav_bytes:
@@ -111,7 +114,6 @@ def record_from_mic(out_path: Path) -> Path:
     print(f"Saved: {out_path}")
     return out_path
 
-# Define the main function that calls the transcribe function and record_from_mic function
 def main() -> None:
     # Where is this file?
     script_dir = Path(__file__).resolve().parent

@@ -1,11 +1,9 @@
 """
 NB3 GPIO / I2S audio helpers.
 
-These utilities are used by the demo script to play MP3 audio
-through the NB3 amplifier + speaker connected on the GPIO pins.
-
-They keep all the ffmpeg / aplay details out of the main workshop
-scripts (00, 01, 02, demo).
+Used by scripts 00, 02, and demo for playback, and by script 01 and demo
+for recording. Keeps ffmpeg / arecord / aplay details out of the main
+workshop scripts.
 """
 
 import shutil
@@ -101,7 +99,6 @@ def play_wav_on_nb3(wav_path: Path) -> None:
             "wav",
             "-V",
             "stereo",
-            "-v",
             str(wav_path),
         ],
         check=False,
