@@ -6,3 +6,4 @@ torchvision
 ultralytics
 jupyter
 ipykernel
+facial-landmarks@git+https://github.com/ncguilbeault/facial-landmarks.git
