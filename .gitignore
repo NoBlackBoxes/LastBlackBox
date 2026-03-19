@@ -56,3 +56,5 @@ db.sqlite3
 node_modules/
 out/
 
+# Virtual environments (DO NOT COMMIT)
+vision_env/
