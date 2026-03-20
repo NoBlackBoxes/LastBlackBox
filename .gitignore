@@ -57,4 +57,4 @@ node_modules/
 out/
 
 # Virtual environments (DO NOT COMMIT)
-vision_env/
+vision_env/*.pt
