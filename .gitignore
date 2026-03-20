@@ -56,6 +56,8 @@ db.sqlite3
 node_modules/
 out/
 
-# Virtual environments (DO NOT COMMIT)
+# Virtual environments
 vision_env/
-*.pt
+
+# YOLO model weights (large files)
+*yolo*.pt
