@@ -1,110 +1,113 @@
+# Vision Workshop Setup (Chromebook / Linux)
+
 ## 1. Go to the workshop folder
 
-```bash
-cd /NoBlackBoxes/LastBlackBox/course/versions/ai-workshops/02_vision/_resources/chromebook
+``` bash
+cd ~/NoBlackBoxes/LastBlackBox/course/versions/ai-workshops/02_vision/_resources/chromebook
 ```
 
----
+------------------------------------------------------------------------
 
-## 2. Create and activate the virtual environment
+## 2. Check Python and install venv support
 
-```bash
-python3.10 -m venv vision_env
+``` bash
+python3 --version
+sudo apt update
+sudo apt install python3.11-venv
+```
+
+------------------------------------------------------------------------
+
+## 3. Create and activate the virtual environment
+
+``` bash
+python3 -m venv vision_env
 source vision_env/bin/activate
 ```
 
 Check it:
 
-```bash
+``` bash
 which python
 which pip
 python --version
 ```
 
-You want:
+Expected: - Python path inside `vision_env` - Pip path inside
+`vision_env` - Python 3.11.x
 
-* `python` inside `.../vision_env/bin/python`
-* `pip` inside `.../vision_env/bin/pip`
-* Python `3.10.x`
+------------------------------------------------------------------------
 
----
+## 4. Upgrade packaging tools
 
-## 3. Upgrade packaging tools
-
-```bash
+``` bash
 python -m pip install --upgrade pip setuptools wheel
 ```
 
----
+------------------------------------------------------------------------
 
-## 4. Install NumPy first, but pin it to the compatible version
+## 5. Install NumPy
 
-```bash
+``` bash
 python -m pip install "numpy==1.26.4"
 ```
----
 
-## 5. Install OpenCV from a binary wheel only
+------------------------------------------------------------------------
 
-```bash
+## 6. Install OpenCV
+
+``` bash
 python -m pip install --only-binary=:all: "opencv-python==4.10.0.84"
 ```
 
----
+------------------------------------------------------------------------
 
-## 6. Install Jupyter and ipykernel
+## 7. Install Jupyter
 
-```bash
+``` bash
 python -m pip install jupyter ipykernel
 ```
 
----
+------------------------------------------------------------------------
 
-## 7. Install PyTorch
+## 8. Install PyTorch (CPU ONLY)
 
-```bash
-python -m pip install torch torchvision torchaudio
+⚠️ Important: prevents huge CUDA downloads
+
+``` bash
+python -m pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
 ```
 
----
+------------------------------------------------------------------------
 
-## 8. Install Ultralytics
+## 9. Install Ultralytics
 
-```bash
+``` bash
 python -m pip install ultralytics
 ```
 
----
+------------------------------------------------------------------------
 
-## 9. Install MediaPipe the safe way
+## 10. Install MediaPipe
 
-First install its non-OpenCV dependencies manually:
-
-```bash
+``` bash
 python -m pip install "protobuf<5,>=4.25.3" flatbuffers sounddevice sentencepiece absl-py "jax==0.4.38" "jaxlib==0.4.38" "ml-dtypes==0.5.4"
-```
-
-Then install MediaPipe **without dependencies**:
-
-```bash
 python -m pip install --no-deps "mediapipe==0.10.21"
 ```
 
----
+------------------------------------------------------------------------
 
-## 10. Register the Jupyter kernel
+## 11. Register Jupyter kernel
 
-```bash
+``` bash
 python -m ipykernel install --user --name vision_env --display-name "Python (vision_env)"
 ```
 
----
+------------------------------------------------------------------------
 
-## 11. Verify everything
+## 12. Verify installation
 
-Run these one by one:
-
-```bash
+``` bash
 python -c "import numpy as np; print('numpy ok', np.__version__)"
 python -c "import cv2; print('cv2 ok', cv2.__version__)"
 python -c "import torch; print('torch ok', torch.__version__)"
@@ -113,46 +116,42 @@ python -c "import mediapipe as mp; print('mediapipe ok', mp.__version__)"
 python -c "import jupyter; import ipykernel; print('jupyter ok')"
 ```
 
----
+------------------------------------------------------------------------
 
-## 12. Final notebook test
+## 13. VS Code Notes
 
-```bash
-python
+-   Open the `chromebook` folder only
+-   Select interpreter:
+
+``` text
+.../chromebook/vision_env/bin/python
 ```
 
-Then:
+-   Select kernel:
 
-```python
-import numpy as np
-import cv2
-import torch
-import mediapipe as mp
-from ultralytics import YOLO
-
-print("Setup successful")
-print("numpy", np.__version__)
-print("cv2", cv2.__version__)
-print("torch", torch.__version__)
-print("mediapipe", mp.__version__)
+``` text
+Python (vision_env)
 ```
 
----
+------------------------------------------------------------------------
 
-## Full command block
+## Full Setup (copy-paste)
 
+``` bash
+cd ~/NoBlackBoxes/LastBlackBox/course/versions/ai-workshops/02_vision/_resources/chromebook
 
-```bash
-cd /NoBlackBoxes/LastBlackBox/course/versions/ai-workshops/02_vision/_resources/chromebook
+python3 --version
+sudo apt update
+sudo apt install python3.11-venv
 
-python3.10 -m venv vision_env
+python3 -m venv vision_env
 source vision_env/bin/activate
 
 python -m pip install --upgrade pip setuptools wheel
 python -m pip install "numpy==1.26.4"
 python -m pip install --only-binary=:all: "opencv-python==4.10.0.84"
 python -m pip install jupyter ipykernel
-python -m pip install torch torchvision torchaudio
+python -m pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
 python -m pip install ultralytics
 python -m pip install "protobuf<5,>=4.25.3" flatbuffers sounddevice sentencepiece absl-py "jax==0.4.38" "jaxlib==0.4.38" "ml-dtypes==0.5.4"
 python -m pip install --no-deps "mediapipe==0.10.21"
