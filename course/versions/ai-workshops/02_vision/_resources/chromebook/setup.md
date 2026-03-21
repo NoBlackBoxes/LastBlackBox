@@ -14,7 +14,7 @@ cd NoBlackBoxes
 ## Clone the repository (nb3-vision-demo branch, depth 1)
 
 ``` bash
-git clone --depth 1 https://github.com/NoBlackBoxes/LastBlackBox.git
+git clone --branch master --depth 1 https://github.com/NoBlackBoxes/LastBlackBox.git
 ```
 
 
