@@ -14,7 +14,7 @@ cd NoBlackBoxes
 ## Clone the repository (nb3-vision-demo branch, depth 1)
 
 ``` bash
-git clone --branch nb3-vision-demo --depth 1 https://github.com/NoBlackBoxes/LastBlackBox.git
+git clone --depth 1 https://github.com/NoBlackBoxes/LastBlackBox.git
 ```
 
 
@@ -104,6 +104,12 @@ python -m pip install "protobuf<5,>=4.25.3" flatbuffers sounddevice sentencepiec
 python -m pip install --no-deps "mediapipe==0.10.21"
 ```
 
+## Install Facial Landmarks
+
+``` bash
+python -m pip install "git+https://github.com/ncguilbeault/facial-landmarks"
+```
+
 
 ## Register Jupyter kernel
 
@@ -160,5 +166,6 @@ python -m pip install torch torchvision torchaudio --index-url https://download.
 python -m pip install ultralytics
 python -m pip install "protobuf<5,>=4.25.3" flatbuffers sounddevice sentencepiece absl-py "jax==0.4.38" "jaxlib==0.4.38" "ml-dtypes==0.5.4"
 python -m pip install --no-deps "mediapipe==0.10.21"
+python -m pip install "git+https://github.com/ncguilbeault/facial-landmarks"
 python -m ipykernel install --user --name vision_env --display-name "Python (vision_env)"
 ```
