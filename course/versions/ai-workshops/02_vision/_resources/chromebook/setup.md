@@ -11,7 +11,7 @@ mkdir NoBlackBoxes
 cd NoBlackBoxes
 ```
 
-## Clone the repository (nb3-vision-demo branch, depth 1)
+## Clone the repository (master branch, depth 1)
 
 ``` bash
 git clone --branch master --depth 1 https://github.com/NoBlackBoxes/LastBlackBox.git
@@ -130,42 +130,26 @@ python -c "import jupyter; import ipykernel; print('jupyter ok')"
 ```
 
 
-## VS Code Notes
 
--   Open the `chromebook` folder only
--   Select interpreter:
+## Open the project
+- Open the `NoBlackBoxes` folder in VS Code.
 
-``` text
-.../chromebook/vision_env/bin/python
-```
+###  Open the notebook
+- Navigate to:
 
--   Select kernel:
-
-``` text
-Python (vision_env)
-```
+~/NoBlackBoxes/LastBlackBox/course/versions/ai-workshops/02_vision/_resources/chromebook/notebooks/01_images_and_cameras_V2_recorded.ipynb
 
 
-## Full Setup after cloning
+## Run initial setup
+- Run the first code cell.
+- Follow the prompts to install required packages (Jupyter, Python).
 
-``` bash
-cd ~/NoBlackBoxes/LastBlackBox/course/versions/ai-workshops/02_vision/_resources/chromebook
+## Select Python interpreter
+- Open Command Palette:
+  - `View → Command Palette`
+- Search and select:
+  - `Python: Select Interpreter`
+- Choose **Enter interpreter path**, then select:
 
-python3 --version
-sudo apt update
-sudo apt install python3.11-venv
+~/NoBlackBoxes/LastBlackBox/course/versions/ai-workshops/02_vision/_resources/chromebook/vision_env/bin/python
 
-python3 -m venv vision_env
-source vision_env/bin/activate
-
-python -m pip install --upgrade pip setuptools wheel
-python -m pip install "numpy==1.26.4"
-python -m pip install --only-binary=:all: "opencv-python==4.10.0.84"
-python -m pip install jupyter ipykernel
-python -m pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
-python -m pip install ultralytics
-python -m pip install "protobuf<5,>=4.25.3" flatbuffers sounddevice sentencepiece absl-py "jax==0.4.38" "jaxlib==0.4.38" "ml-dtypes==0.5.4"
-python -m pip install --no-deps "mediapipe==0.10.21"
-python -m pip install "git+https://github.com/ncguilbeault/facial-landmarks"
-python -m ipykernel install --user --name vision_env --display-name "Python (vision_env)"
-```
