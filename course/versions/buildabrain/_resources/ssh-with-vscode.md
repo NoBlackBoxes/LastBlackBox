@@ -88,4 +88,8 @@ There is a lot going on when a remote (secure) connection is formed between comp
    - Close and re-Open VS Code..try again.
    - Power Off your NB3, turn it back On, and give it time to connect to the Network...try again.
 2. Have you changed your NB3's operating system (often done by replacing/re-burning the SD card)?
-   - This will alter the "fingerprint" of your NB3 and SSH/VS Code won't allow you to connect for "security reasons". You will have to "un-remember" your previous NB3 in order to allow a new, updated fingerprint to be stored. This can be done by deleting the contents of a file called "known_hosts" in the same folder as your SSH config file. Simply find the file, open it, and delete any entries that refer to your NB3's IP address. Ask a TA for some help.
+   - This will alter the "fingerprint" of your NB3 and SSH/VS Code won't allow you to connect for "security reasons". You will have to "un-remember" your previous NB3 in order to allow a new, updated fingerprint to be stored. This can be done by deleting the contents of a file called "known_hosts" in the same folder as your SSH config file. Simply find the file, open it, and delete any entries that refer to your NB3's IP address. Ask a TA for some help. You can run the following in teh terminal to open the file Known_host:
+
+   ```
+   nano ~/.ssh/known_hosts
+   ```
