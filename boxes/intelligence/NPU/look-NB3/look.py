@@ -106,8 +106,7 @@ try:
             screen.addstr(1, 0, f"-NO-Face Detected              ")
             screen.addstr(2, 0, f"                               ")
             screen.addstr(3, 0, f"                               ")
-            overlay.rectangle1 = None
-            overlay.rectangle2 = None
+            overlay.clear()
         elif num_faces == 1:        # If ONE face detected
             # Process ONE face
             rectangle, x, y = process_face(output_rects[0])
@@ -120,8 +119,8 @@ try:
             screen.addstr(1, 0, f" -  Face Detected: X: {x:.3f}, Y: {y:.3f} - Score: {output_scores[0]:.2f}")
             screen.addstr(2, 0, f"                               ")
             screen.addstr(3, 0, f"                               ")
-            overlay.rectangle1 = rectangle
-            overlay.rectangle2 = None
+            overlay.clear()
+            overlay.add_rectangle(*rectangle)
         elif num_faces >= 2:         # If TWO (or more) faces detected
             # Process TWO faces
             rectangle1, x1, y1 = process_face(output_rects[0])
@@ -135,8 +134,9 @@ try:
             screen.addstr(1, 0, f" -  Face Detected: X: {x1:.3f}, Y: {y1:.3f} - Score: {output_scores[0]:.2f}")
             screen.addstr(2, 0, f" -  Face Detected: X: {x2:.3f}, Y: {y2:.3f} - Score: {output_scores[1]:.2f}")
             screen.addstr(3, 0, f"                               ")
-            overlay.rectangle1 = rectangle1
-            overlay.rectangle2 = rectangle2
+            overlay.clear()
+            overlay.add_rectangle(*rectangle1)
+            overlay.add_rectangle(*rectangle2)
  
         # Add server instructions
         screen.addstr(4, 0, f"🌐 NB3 Server running at http://{server.ip_address}:{server.port}")
@@ -145,7 +145,7 @@ try:
 
         # Update stream
         frame = camera.capture(mjpeg=True)
-        server.update_stream("camera", frame)
+        camera.display(frame, server, "camera", overlay=True, jpeg=True)
 
 finally:
     # Shutdown camera

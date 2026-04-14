@@ -86,6 +86,8 @@ class Camera:
                 frame = cv2.imdecode(np.frombuffer(frame, dtype=np.uint8), cv2.IMREAD_COLOR)
                 self.overlay.draw(frame)
                 _, frame = cv2.imencode('.jpg', frame, [cv2.IMWRITE_JPEG_QUALITY, 70])
+                frame = frame.tobytes()
+
         server.update_stream(stream, frame)
         return
 
