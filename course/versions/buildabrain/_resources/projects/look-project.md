@@ -10,6 +10,10 @@ This project will use Python to control how your NB3 responds to detected faces.
     Sync
     ```
   - Close and re-open the VS Code terminal for the changes to take effect
+4. Activate the LBB virtual environment
+   ```bash
+    Activate
+    ```
 
 ## Create *your* copy of the example project code
 - Navigate to the example project folder

@@ -10,7 +10,10 @@ This project will use HTML and Python to build a new FPV interface for your NB3.
     Sync
     ```
   - Close and re-open the VS Code terminal for the changes to take effect
-
+4. Activate the LBB virtual environment
+   ```bash
+    Activate
+    ```
 ## Create *your* copy of the example project code
 - Navigate to the example project folder
 ```bash
