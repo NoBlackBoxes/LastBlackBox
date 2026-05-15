@@ -15,13 +15,16 @@
 Make measurements and build a light-sensitive circuit.
 - Understand atoms, the periodic table, and why some elements conduct
 - Explain voltage, current, and resistance, and use Ohm's Law
-- Measure battery voltage and resistor values with a multimeter
+- Measure battery voltage and build simple circuits on the prototyping board
+- Build and measure a voltage divider
 - Build a circuit whose output voltage changes with light (LDR)
 
 ## Tools
-- Balloons (static electricity / voltage) - *optional*
+- Balloons (static electricity / voltage)
 - Periodic Table (conductors)
 - Multimeter
+- NB3 body and prototyping boards (pre-assembled)
+- Jumper wires, battery pack, resistors (including 220 Ω and 470 Ω for voltage divider)
 
 ## Steps
 > lecture - **practical** - *optional*
@@ -47,8 +50,7 @@ Make measurements and build a light-sensitive circuit.
 
 - Basics of electronics — most materials are electrically neutral
 - Can we create an imbalance of electrons or protons?
-+ *Balloon experiment*
-- Static electricity — imbalance of charge (balloons: negative vs relative positive)
++ **Static electricity** — imbalance of charge (balloons: negative vs relative positive)
 - Voltage — difference in charge concentration between areas
 - Voltage — imbalance drives equalisation; movement of charge; can do useful work
 - How can we generate stable voltages?
@@ -61,12 +63,15 @@ Make measurements and build a light-sensitive circuit.
 - Resistors — do all materials conduct electricity?
 - Insulators (e.g. silicon, oxygen)
 - Resistors — mixture of metals and ceramics; regulate how many electrons pass through the circuit
-- Resistor key points: resistance in Ω, series/parallel, colour codes, heat, maximum voltage limit
-+ **Measure resistance**
+- Resistor key points: resistance in Ω, series/parallel, colour codes, heat, voltage limit (damage if too much current)
++ **Build a circuit, make measurements** (NB3 body and prototyping boards, multimeter, jumper wires, battery pack, resistor)
++ **Prototyping board** — how the breadboard works
 - Ohm's Law
 - Ohm's Law example (e.g. V = 10, R = 0.001) — does it always apply?
-- Voltage dividers — what are they used for? Current and voltage at points A and B
-- Transducers — convert one form of energy into another
+- Voltage dividers — what do they do? Split input voltage using two or more resistors
+- Voltage divider — current and voltage at points A and B
++ **Build a voltage divider** (NB3 body and prototyping boards, multimeter, jumper wires, battery pack, 220 Ω and 470 Ω resistors)
+- Transducers — what do they do? Convert one form of energy into another
 - Transducer examples: piezo (pressure → voltage), photodiode (light → current), thermistor (heat → resistance), LDR (light → resistance)
 - Light-dependent resistor (LDR)
 + **Build a light-sensitive circuit**
