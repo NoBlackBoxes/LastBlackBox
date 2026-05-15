@@ -78,7 +78,7 @@ Photoresistor (LDR)|Light-dependent resistor (GL5516 and GL5528)|2|Passive Elect
   - *Hint*: You can use your battery holder.
 > Batteries connected in series will sum their voltages. You should measure four times the voltage of a single AA battery, ~6.4 Volts, from the batteries in your 4xAA holder.
 
-#### Watch this video: [Current](https://vimeo.com/1029334167)
+#### Watch this video: [Current](https://vimeo.com/1029334167/2492ff3542)
 <p align="center">
 <a href="https://vimeo.com/1029334167" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/Current.gif" alt="Current" width="480"/></a>
 </p>
