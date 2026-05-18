@@ -86,9 +86,9 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 > How to measure voltage with a digital multimeter.
 
 
-#### Watch this video: [Current](https://vimeo.com/1029334167)
+#### Watch this video: [Current](https://vimeo.com/1029334167/2492ff3542)
 <p align="center">
-<a href="https://vimeo.com/1029334167" title="Control+Click to watch in new tab"><img src="../../boxes/electrons/_resources/lessons/thumbnails/Current.gif" alt="Current" width="480"/></a>
+<a href="https://vimeo.com/1029334167/2492ff3542" title="Control+Click to watch in new tab"><img src="../../boxes/electrons/_resources/lessons/thumbnails/Current.gif" alt="Current" width="480"/></a>
 </p>
 
 > The rate at which electrons flow, measured as *#charges / second*, is called **current**. We use the unit *Amps* (A) and the circuit symbol **I**.

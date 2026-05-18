@@ -18,7 +18,7 @@
 - [x] [Capacitors](https://vimeo.com/1035298931)
 - [x] [Resistors](https://vimeo.com/1029696806)
 - [x] [NB3 : Measuring Current](https://vimeo.com/1027757287)
-- [x] [Current](https://vimeo.com/1029334167)
+- [x] [Current](https://vimeo.com/1029334167/2492ff3542)
 - [x] [Ohm's Law](https://vimeo.com/1029695302)
 - [ ] [NB3 : How Do Multimeters Work]()
 - [x] [Power](https://vimeo.com/1029693122)
