@@ -28,12 +28,21 @@ This is the single command CI/CD should invoke on push to master.
 """
 from __future__ import annotations
 
+import os
 import pathlib
 import subprocess
 import sys
 
 _HERE = pathlib.Path(__file__).resolve().parent
 REPO_ROOT = _HERE.parents[1]
+
+# The LBB engine is a namespace package under libs/. Inject it into PYTHONPATH
+# for any subprocess we spawn so `import LBB.config` works without having to set
+# up the environment.
+_ENV = {
+    **os.environ,
+    "PYTHONPATH": str(REPO_ROOT / "libs") + os.pathsep + os.environ.get("PYTHONPATH", ""),
+}
 
 # Course slugs that have a docfx site to build. Add to this list as more
 # courses get `index.md` + `toc.yml` + `docfx.json` authored.
@@ -46,7 +55,7 @@ SITE_BASE_URL = "https://noblackboxes.github.io/LastBlackBox"
 
 def _run(cmd: list[str]) -> None:
     print(f">>> {' '.join(cmd)}")
-    result = subprocess.run(cmd, check=False)
+    result = subprocess.run(cmd, check=False, env=_ENV)
     if result.returncode != 0:
         raise SystemExit(f"command failed (exit {result.returncode}): {' '.join(cmd)}")
 
