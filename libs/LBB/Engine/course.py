@@ -64,6 +64,8 @@ def get_slug_from_name(name):
         slug = "buildabrain"
     elif name == "AI-Workshops":
         slug = "ai-workshops"
+    elif name == "Crick":
+        slug = "crick"
     else:
         print("Unavailable course name selected!")
         exit(-1)

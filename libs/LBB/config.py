@@ -16,7 +16,7 @@ libs_path = repo_path + "/libs"
 image_prefix = "../../../.."
 
 # Store course version names
-course_names = ["The Last Black Box", "Bootcamp", "Braitenberg", "Build a Brain"]
+course_names = ["The Last Black Box", "Bootcamp", "Braitenberg", "Build a Brain", "Crick"]
 
 
 # Store box names (and order)
