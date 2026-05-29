@@ -9,7 +9,7 @@ LBB : Config
 import pathlib
 
 # Load LBB configuration variables
-repo_path = f"{pathlib.Path.home()}/NoBlackBoxes/LastBlackBox"
+repo_path = str(pathlib.Path(__file__).resolve().parents[2])
 boxes_path = repo_path + "/boxes"
 course_path = repo_path + "/course"
 libs_path = repo_path + "/libs"

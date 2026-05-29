@@ -1,0 +1,65 @@
+# Build the docfx course sites and deploy to GitHub Pages.
+#
+# Prereq (one-time, manual): in repo Settings -> Pages, set Source to
+# "GitHub Actions". Without this the deploy job will fail.
+#
+# Triggers on master (production) and course-sites (so the live render can
+# be verified before merging). Remove the course-sites trigger once the
+# branch merges. workflow_dispatch is provided for manual reruns.
+#
+# Pages only serves one deployment at a time, so pushing to course-sites
+# overwrites whatever was last deployed from master and vice versa.
+
+name: Deploy docs
+
+on:
+  push:
+    branches:
+      - master
+      - course-sites
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install docfx
+        run: |
+          dotnet tool install -g docfx
+          echo "$HOME/.dotnet/tools" >> "$GITHUB_PATH"
+
+      - name: Build all sites
+        run: python course/tools/build_all.py
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
