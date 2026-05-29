@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://noblackboxes.github.io/LastBlackBox/sitemap.xml

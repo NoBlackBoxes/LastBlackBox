@@ -12,6 +12,8 @@ Stages:
        to produce a self-contained docfx site at `docs/<slug>/`.
     3. Write a master sitemap at `docs/sitemap.xml` referencing every
        per-course sitemap.
+    4. Copy the static root assets (landing page, logos, robots.txt) from
+       `course/tools/docfx/root/` into `docs/`.
 
 `SITES` is the explicit list of course slugs whose docfx sites should be
 built. Add slugs here as new courses are ready to ship. The engine always
@@ -30,6 +32,7 @@ from __future__ import annotations
 
 import os
 import pathlib
+import shutil
 import subprocess
 import sys
 
@@ -113,6 +116,20 @@ def main() -> None:
     print("Stage 3: master sitemap")
     print("=" * 70)
     _write_master_sitemap(REPO_ROOT / "docs", SITES, SITE_BASE_URL)
+
+    # Stage 4: copy static root assets (landing page, logos, robots.txt) into
+    # docs/. These are hand-authored under course/tools/docfx/root/ and are
+    # served at the site root alongside the per-course subtrees.
+    print()
+    print("=" * 70)
+    print("Stage 4: root assets")
+    print("=" * 70)
+    root_src = REPO_ROOT / "course" / "tools" / "docfx" / "root"
+    docs_root = REPO_ROOT / "docs"
+    copied = shutil.copytree(root_src, docs_root, dirs_exist_ok=True)
+    for entry in sorted(p.name for p in root_src.iterdir()):
+        print(f"  copied {entry}")
+    print(f"  -> {copied}")
 
     print()
     print("All sites built. Output under:", REPO_ROOT / "docs")

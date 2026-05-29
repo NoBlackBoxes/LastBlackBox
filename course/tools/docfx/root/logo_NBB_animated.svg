@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg id="logo_NBB_animated_hover" width="100mm" height="100mm" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg">
+<a href="https://github.com/NoBlackBoxes/LastBlackBox" xlink:href="https://github.com/NoBlackBoxes/LastBlackBox" target="_blank" rel="noopener" onclick="if(window.top){window.top.open(this.getAttribute('href'),'_blank','noopener');return false;}" aria-label="NoBlackBoxes on GitHub">
+<g id="Atoms" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Atoms" x="31.511" y="50.084" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+</g>
+<g id="Electrons" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Electrons" x="44.456" y="52.834" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+</g>
+<g id="Magnets" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Magnets" x="45.787" y="43.810" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+</g>
+<g id="Light" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Light" x="57.432" y="49.147" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+</g>
+<g id="Sensors" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Sensors" x="52.633" y="41.232" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+</g>
+<g id="Motors" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Motors" x="61.730" y="44.465" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+</g>
+<g id="Transistors" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Transistors" x="69.113" y="52.489" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+</g>
+<g id="Amplifiers" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Amplifiers" x="72.266" y="41.664" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+</g>
+<g id="Circuits" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Circuits" x="68.657" y="34.046" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+</g>
+<g id="Data" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Data" x="63.446" y="29.572" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+</g>
+<g id="Logic" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Logic" x="58.531" y="25.627" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+</g>
+<g id="Memory" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Memory" x="49.949" y="23.757" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+</g>
+<g id="FPGAs" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_FPGAs" x="55.655" y="36.185" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+</g>
+<g id="Computers" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Computers" x="45.271" y="32.576" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+</g>
+<g id="Control" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Control" x="40.460" y="22.821" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+</g>
+<g id="Robotics" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Robotics" x="30.438" y="24.826" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+</g>
+<g id="Power" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Power" x="35.347" y="34.227" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+</g>
+<g id="Systems" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Systems" x="29.536" y="38.456" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+</g>
+<g id="Linux" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Linux" x="22.519" y="27.498" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+</g>
+<g id="Python" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Python" x="16.807" y="32.443" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+</g>
+<g id="Networks" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Networks" x="13.733" y="37.922" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+</g>
+<g id="Websites" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Websites" x="16.807" y="44.470" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+</g>
+<g id="Servers" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Servers" x="49.552" y="59.843" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+</g>
+<g id="Security" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Security" x="65.787" y="57.432" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+</g>
+<g id="Audio" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Audio" x="56.365" y="62.345" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+</g>
+<g id="Vision" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Vision" x="61.080" y="68.178" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+</g>
+<g id="Learning" transform="scale(1,1) translate(0, 0)" style="fill:#FFFFFF;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Learning" x="23.050" y="47.314" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+</g>
+<g id="Intelligence" transform="scale(1,1) translate(0, 0)" style="fill:#000000;stroke:#000000;font-size:0.0px;">
+	<rect class="box" id="box_Intelligence" x="32.787" y="43.810" width="13.0" height="13.0" style="fill-opacity:1;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"/>
+</g>
+<style>
+	#logo_NBB_animated_hover:hover #Atoms {animation: animate_Atoms 0.60s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#logo_NBB_animated_hover:hover #Electrons {animation: animate_Electrons 1.20s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#logo_NBB_animated_hover:hover #Magnets {animation: animate_Magnets 1.30s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#logo_NBB_animated_hover:hover #Light {animation: animate_Light 0.60s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#logo_NBB_animated_hover:hover #Sensors {animation: animate_Sensors 0.90s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#logo_NBB_animated_hover:hover #Motors {animation: animate_Motors 3.10s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#logo_NBB_animated_hover:hover #Transistors {animation: animate_Transistors 0.30s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#logo_NBB_animated_hover:hover #Amplifiers {animation: animate_Amplifiers 1.00s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#logo_NBB_animated_hover:hover #Circuits {animation: animate_Circuits 1.20s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#logo_NBB_animated_hover:hover #Data {animation: animate_Data 0.70s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#logo_NBB_animated_hover:hover #Logic {animation: animate_Logic 1.20s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#logo_NBB_animated_hover:hover #Memory {animation: animate_Memory 0.70s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#logo_NBB_animated_hover:hover #FPGAs {animation: animate_FPGAs 0.70s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#logo_NBB_animated_hover:hover #Computers {animation: animate_Computers 1.00s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#logo_NBB_animated_hover:hover #Control {animation: animate_Control 0.40s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#logo_NBB_animated_hover:hover #Robotics {animation: animate_Robotics 0.70s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#logo_NBB_animated_hover:hover #Power {animation: animate_Power 0.60s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#logo_NBB_animated_hover:hover #Systems {animation: animate_Systems 1.50s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#logo_NBB_animated_hover:hover #Linux {animation: animate_Linux 1.00s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#logo_NBB_animated_hover:hover #Python {animation: animate_Python 2.90s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#logo_NBB_animated_hover:hover #Networks {animation: animate_Networks 0.60s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#logo_NBB_animated_hover:hover #Websites {animation: animate_Websites 1.40s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#logo_NBB_animated_hover:hover #Servers {animation: animate_Servers 0.40s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#logo_NBB_animated_hover:hover #Security {animation: animate_Security 0.90s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#logo_NBB_animated_hover:hover #Audio {animation: animate_Audio 2.40s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#logo_NBB_animated_hover:hover #Vision {animation: animate_Vision 0.60s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#logo_NBB_animated_hover:hover #Learning {animation: animate_Learning 0.30s linear; animation-fill-mode: forwards; animation-delay: 0s}
+	#logo_NBB_animated_hover:hover #Intelligence {animation: animate_Intelligence 3.90s linear; animation-fill-mode: forwards; animation-delay: 0s}
+
+	@keyframes animate_Atoms {
+		0%     {fill:#000000;stroke:#FFFFFF;}
+		95%    {fill:#FFFFFF;stroke:#000000;}
+		100%   {fill:#FFFFFF;stroke:#000000;}
+	}
+
+	@keyframes animate_Electrons {
+		0%     {fill:#000000;stroke:#FFFFFF;}
+		95%    {fill:#FFFFFF;stroke:#000000;}
+		100%   {fill:#FFFFFF;stroke:#000000;}
+	}
+
+	@keyframes animate_Magnets {
+		0%     {fill:#000000;stroke:#FFFFFF;}
+		95%    {fill:#FFFFFF;stroke:#000000;}
+		100%   {fill:#FFFFFF;stroke:#000000;}
+	}
+
+	@keyframes animate_Light {
+		0%     {fill:#000000;stroke:#FFFFFF;}
+		95%    {fill:#FFFFFF;stroke:#000000;}
+		100%   {fill:#FFFFFF;stroke:#000000;}
+	}
+
+	@keyframes animate_Sensors {
+		0%     {fill:#000000;stroke:#FFFFFF;}
+		95%    {fill:#FFFFFF;stroke:#000000;}
+		100%   {fill:#FFFFFF;stroke:#000000;}
+	}
+
+	@keyframes animate_Motors {
+		0%     {fill:#000000;stroke:#FFFFFF;}
+		95%    {fill:#000000;stroke:#FFFFFF;}
+		100%   {fill:#FFFFFF;stroke:#000000;}
+	}
+
+	@keyframes animate_Transistors {
+		0%     {fill:#000000;stroke:#FFFFFF;}
+		95%    {fill:#FFFFFF;stroke:#000000;}
+		100%   {fill:#FFFFFF;stroke:#000000;}
+	}
+
+	@keyframes animate_Amplifiers {
+		0%     {fill:#000000;stroke:#FFFFFF;}
+		95%    {fill:#FFFFFF;stroke:#000000;}
+		100%   {fill:#FFFFFF;stroke:#000000;}
+	}
+
+	@keyframes animate_Circuits {
+		0%     {fill:#000000;stroke:#FFFFFF;}
+		95%    {fill:#FFFFFF;stroke:#000000;}
+		100%   {fill:#FFFFFF;stroke:#000000;}
+	}
+
+	@keyframes animate_Data {
+		0%     {fill:#000000;stroke:#FFFFFF;}
+		95%    {fill:#FFFFFF;stroke:#000000;}
+		100%   {fill:#FFFFFF;stroke:#000000;}
+	}
+
+	@keyframes animate_Logic {
+		0%     {fill:#000000;stroke:#FFFFFF;}
+		95%    {fill:#FFFFFF;stroke:#000000;}
+		100%   {fill:#FFFFFF;stroke:#000000;}
+	}
+
+	@keyframes animate_Memory {
+		0%     {fill:#000000;stroke:#FFFFFF;}
+		95%    {fill:#FFFFFF;stroke:#000000;}
+		100%   {fill:#FFFFFF;stroke:#000000;}
+	}
+
+	@keyframes animate_FPGAs {
+		0%     {fill:#000000;stroke:#FFFFFF;}
+		95%    {fill:#FFFFFF;stroke:#000000;}
+		100%   {fill:#FFFFFF;stroke:#000000;}
+	}
+
+	@keyframes animate_Computers {
+		0%     {fill:#000000;stroke:#FFFFFF;}
+		95%    {fill:#000000;stroke:#FFFFFF;}
+		100%   {fill:#FFFFFF;stroke:#000000;}
+	}
+
+	@keyframes animate_Control {
+		0%     {fill:#000000;stroke:#FFFFFF;}
+		95%    {fill:#FFFFFF;stroke:#000000;}
+		100%   {fill:#FFFFFF;stroke:#000000;}
+	}
+
+	@keyframes animate_Robotics {
+		0%     {fill:#000000;stroke:#FFFFFF;}
+		95%    {fill:#FFFFFF;stroke:#000000;}
+		100%   {fill:#FFFFFF;stroke:#000000;}
+	}
+
+	@keyframes animate_Power {
+		0%     {fill:#000000;stroke:#FFFFFF;}
+		95%    {fill:#FFFFFF;stroke:#000000;}
+		100%   {fill:#FFFFFF;stroke:#000000;}
+	}
+
+	@keyframes animate_Systems {
+		0%     {fill:#000000;stroke:#FFFFFF;}
+		95%    {fill:#FFFFFF;stroke:#000000;}
+		100%   {fill:#FFFFFF;stroke:#000000;}
+	}
+
+	@keyframes animate_Linux {
+		0%     {fill:#000000;stroke:#FFFFFF;}
+		95%    {fill:#FFFFFF;stroke:#000000;}
+		100%   {fill:#FFFFFF;stroke:#000000;}
+	}
+
+	@keyframes animate_Python {
+		0%     {fill:#000000;stroke:#FFFFFF;}
+		95%    {fill:#000000;stroke:#FFFFFF;}
+		100%   {fill:#FFFFFF;stroke:#000000;}
+	}
+
+	@keyframes animate_Networks {
+		0%     {fill:#000000;stroke:#FFFFFF;}
+		95%    {fill:#FFFFFF;stroke:#000000;}
+		100%   {fill:#FFFFFF;stroke:#000000;}
+	}
+
+	@keyframes animate_Websites {
+		0%     {fill:#000000;stroke:#FFFFFF;}
+		95%    {fill:#FFFFFF;stroke:#000000;}
+		100%   {fill:#FFFFFF;stroke:#000000;}
+	}
+
+	@keyframes animate_Servers {
+		0%     {fill:#000000;stroke:#FFFFFF;}
+		95%    {fill:#FFFFFF;stroke:#000000;}
+		100%   {fill:#FFFFFF;stroke:#000000;}
+	}
+
+	@keyframes animate_Security {
+		0%     {fill:#000000;stroke:#FFFFFF;}
+		95%    {fill:#FFFFFF;stroke:#000000;}
+		100%   {fill:#FFFFFF;stroke:#000000;}
+	}
+
+	@keyframes animate_Audio {
+		0%     {fill:#000000;stroke:#FFFFFF;}
+		95%    {fill:#000000;stroke:#FFFFFF;}
+		100%   {fill:#FFFFFF;stroke:#000000;}
+	}
+
+	@keyframes animate_Vision {
+		0%     {fill:#000000;stroke:#FFFFFF;}
+		95%    {fill:#FFFFFF;stroke:#000000;}
+		100%   {fill:#FFFFFF;stroke:#000000;}
+	}
+
+	@keyframes animate_Learning {
+		0%     {fill:#000000;stroke:#FFFFFF;}
+		95%    {fill:#FFFFFF;stroke:#000000;}
+		100%   {fill:#FFFFFF;stroke:#000000;}
+	}
+
+	@keyframes animate_Intelligence {
+		0%     {fill:#000000;stroke:#FFFFFF;}
+		95%    {fill:#000000;stroke:#FFFFFF;}
+		100%   {fill:#FFFFFF;stroke:#000000;}
+	}
+</style>
+</a>
+</svg>
