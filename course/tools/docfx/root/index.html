@@ -19,6 +19,7 @@
   p.lead { font-size: 1.1rem; color: #333; margin: 1rem 0 2rem; }
   ul.sites { list-style: none; padding: 0; margin: 0 0 3rem; display: grid; gap: 1rem; grid-template-columns: 1fr; }
   ul.sites li { background: #fff; border: 1px solid #e6e6e6; border-radius: 6px; padding: 1.1rem 1.25rem; transition: border-color 120ms ease; display: grid; grid-template-columns: 96px 1fr; gap: 1rem; align-items: center; }
+  ul.sites li.no-icon { grid-template-columns: 1fr; }
   ul.sites li:hover { border-color: #111; }
   ul.sites li img.site-icon { width: 96px; height: 96px; }
   ul.sites a { font-size: 1.2rem; font-weight: 600; text-decoration: none; color: #111; }
@@ -44,8 +45,7 @@
 <p class="lead">Pick a course site to start. Each site is a self-contained walkthrough: videos, hands-on tasks, and the full kit list, organised by session.</p>
 
 <ul class="sites">
-  <li>
-    <img class="site-icon" src="logo_crick.png" alt="The Francis Crick Institute">
+  <li class="no-icon">
     <div class="body">
       <a href="crick/">Crick Bootcamp</a>
       <div class="blurb">Five-day PhD-level intensive at the Crick Institute. Build NB3 from electrons up to a web-connected vision-and-audio robot.</div>
