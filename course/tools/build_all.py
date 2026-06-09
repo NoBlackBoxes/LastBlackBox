@@ -49,7 +49,7 @@ _ENV = {
 
 # Course slugs that have a docfx site to build. Add to this list as more
 # courses get `index.md` + `toc.yml` + `docfx.json` authored.
-SITES = ["crick"]
+SITES = ["crick", "bootcamp"]
 
 # Public base URL the deployed sites will be served from. Used to build the
 # top-level master sitemap. Update if Pages config changes.
