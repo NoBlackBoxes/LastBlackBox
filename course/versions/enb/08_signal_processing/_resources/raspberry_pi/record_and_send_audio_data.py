@@ -4,14 +4,14 @@ import numpy as np
 
 
 # Host PC IP address and port number
-SERVER_IP = '192.168.137.1'
+SERVER_IP = '10.202.131.146'
 SERVER_PORT = 5005
 
 
 CHUNK_SIZE = 4096           # Buffer size
 FORMAT = pyaudio.paInt16    # Data type
 CHANNELS = 2                # Number of channels
-RATE = 22050                # Sample rate (Hz)
+RATE = 48000                # Sample rate (Hz)
 
 def send_audio():
     # Initialize PyAudio
@@ -31,8 +31,8 @@ def send_audio():
     try:
         while True:
             # Read audio data from the stream
-            data = stream.read(CHUNK_SIZE)
-
+            # data = stream.read(CHUNK_SIZE)
+            data = stream.read(CHUNK_SIZE, exception_on_overflow=False)
             # Send the audio data over the network
             client_socket.sendall(data)
     except KeyboardInterrupt:

@@ -56,6 +56,7 @@ def ask_llm(user_text: str, openai_key: str, system_prompt: str) -> str:
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_text},
         ],
+        max_output_tokens=60,
     )
     return response.output_text.strip()
 

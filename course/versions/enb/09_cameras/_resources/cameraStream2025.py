@@ -38,6 +38,7 @@ def capture_loop():
         # And here it gets converted and so on...
         frame = frame.astype(np.float32)
         frame = (frame - frame.min()) / (frame.max() - frame.min()) * 255
+        frame = frame.astype(np.uint8)
 
         if len(frame.shape) == 2:
             frame = np.repeat(frame[..., None], 3, 2).astype(np.uint8)

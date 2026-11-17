@@ -19,7 +19,7 @@ def receive_sensor_data():
 
 
 # Host PC (e.g. laptop) IP address and port number
-SERVER_IP = '192.168.137.1'
+SERVER_IP = '10.202.131.146'
 SERVER_PORT = 5005
 
 # Create a socket and connect to the server
