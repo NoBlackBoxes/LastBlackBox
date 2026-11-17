@@ -1,0 +1,22 @@
+[1:12:36.588079727] [27296]  INFO Camera camera_manager.cpp:340 libcamera v0.7.2+rpt20260817
+[1:12:36.609166960] [27303]  INFO RPI pipeline_base.cpp:1133 Using configuration file '/usr/share/libcamera/pipeline/rpi/vc4/rpi_apps.yaml'
+[1:12:36.634032124] [27303]  INFO IPAProxy ipa_proxy.cpp:184 Using tuning file /usr/share/libcamera/ipa/rpi/vc4/imx708.json
+[1:12:36.640215045] [27303]  INFO Camera camera_manager.cpp:223 Adding camera '/base/soc/i2c0mux/i2c@1/imx708@1a' for pipeline handler rpi/vc4
+[1:12:36.640268582] [27303]  INFO RPI vc4.cpp:445 Registered camera /base/soc/i2c0mux/i2c@1/imx708@1a to Unicam device /dev/media1 and ISP device /dev/media2
+2026-11-06 15:05:00,591 INFO Initialization successful.
+2026-11-06 15:05:00,591 INFO Camera now open.
+2026-11-06 15:05:00,597 INFO Camera configuration has been adjusted!
+[1:12:36.648470291] [27296]  INFO Camera camera.cpp:1216 configuring streams: (0) 800x600-RGB888/SMPTE170M/Rec709/None/Full (1) 800x600-YUV420/SMPTE170M (2) 1536x864-SBGGR10_CSI2P/RAW
+[1:12:36.648879400] [27303]  INFO RPI vc4.cpp:620 Sensor: /base/soc/i2c0mux/i2c@1/imx708@1a - Selected sensor format: 1536x864-SBGGR10_1X10/RAW - Selected unicam format: 1536x864-pBAA/RAW
+2026-11-06 15:05:00,600 INFO Configuration successful!
+2026-11-06 15:05:00,643 INFO Camera started
+Live video: http://quentin-NB3.local:8765
+Silent camera-only stream
+2026-11-06 15:05:10,777 INFO encoder/video 17.3 fps; produced=173 delivered=172 clients=1 inference=0.0ms
+2026-11-06 15:05:20,807 INFO encoder/video 17.7 fps; produced=351 delivered=350 clients=1 inference=0.0ms
+2026-11-06 15:05:22,365 INFO Camera stopped
+2026-11-06 15:05:22,775 INFO Camera closed successfully.
+NB3 Server: Client disconnected.
+NB3 Server: Client disconnected.
+
+Stopped.

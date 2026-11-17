@@ -1,0 +1,3 @@
+# Speech dependencies only. Keep the existing system camera/Coral installation.
+python-dotenv
+elevenlabs

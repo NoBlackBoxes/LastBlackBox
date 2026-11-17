@@ -1,0 +1,10 @@
+Demo failed
+Traceback (most recent call last):
+  File "/home/quentin/NoBlackBoxes/LastBlackBox/course/versions/ai-workshops/03_see_and_speak/_resources/python/main.py", line 94, in main
+    run_stream(args, personality)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/home/quentin/NoBlackBoxes/LastBlackBox/course/versions/ai-workshops/03_see_and_speak/_resources/python/main.py", line 147, in run_stream
+    from NB3.Vision.camera import Camera
+  File "/home/quentin/NoBlackBoxes/LastBlackBox/libs/NB3/Vision/camera.py", line 10, in <module>
+    import cv2
+ModuleNotFoundError: No module named 'cv2'

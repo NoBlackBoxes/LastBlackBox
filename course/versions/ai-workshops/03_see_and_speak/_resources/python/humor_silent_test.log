@@ -1,0 +1,45 @@
+[0:20:44.922837901] [6599]  INFO Camera camera_manager.cpp:340 libcamera v0.7.2+rpt20260817
+[0:20:44.944050777] [6606]  INFO RPI pipeline_base.cpp:1133 Using configuration file '/usr/share/libcamera/pipeline/rpi/vc4/rpi_apps.yaml'
+[0:20:44.967259628] [6606]  INFO IPAProxy ipa_proxy.cpp:184 Using tuning file /usr/share/libcamera/ipa/rpi/vc4/imx708.json
+[0:20:44.972971782] [6606]  INFO Camera camera_manager.cpp:223 Adding camera '/base/soc/i2c0mux/i2c@1/imx708@1a' for pipeline handler rpi/vc4
+[0:20:44.973025913] [6606]  INFO RPI vc4.cpp:445 Registered camera /base/soc/i2c0mux/i2c@1/imx708@1a to Unicam device /dev/media1 and ISP device /dev/media2
+2026-11-16 17:11:12,514 INFO Initialization successful.
+2026-11-16 17:11:12,514 INFO Camera now open.
+2026-11-16 17:11:12,521 INFO Camera configuration has been adjusted!
+[0:20:44.981770835] [6599]  INFO Camera camera.cpp:1216 configuring streams: (0) 800x600-RGB888/SMPTE170M/Rec709/None/Full (1) 800x600-YUV420/SMPTE170M (2) 1536x864-SBGGR10_CSI2P/RAW
+[0:20:44.982197590] [6606]  INFO RPI vc4.cpp:620 Sensor: /base/soc/i2c0mux/i2c@1/imx708@1a - Selected sensor format: 1536x864-SBGGR10_1X10/RAW - Selected unicam format: 1536x864-pBAA/RAW
+2026-11-16 17:11:12,523 INFO Configuration successful!
+2026-11-16 17:11:12,702 INFO Camera started
+Live video: http://quentin-NB3.local:8765
+Streaming with asynchronous Coral detection
+bottle: 91%
+NB3 (silent): A bottle! Is that water, or have you finally invented robot tea?
+bottle: 87%
+bottle: 93%
+bottle: 93%
+bottle: 91%
+bottle: 93%
+bottle: 87%
+bottle: 91%
+NB3 (silent): A bottle! Humans carry spare water. I carry spare excuses.
+bottle: 91%
+2026-11-16 17:11:23,244 INFO encoder/video 18.1 fps; produced=182 delivered=181 clients=0 inference=23.3ms
+bottle: 84%, tv: 62%
+bottle: 84%, tv: 56%
+bottle: 84%, tv: 62%
+bottle: 84%, tv: 62%
+bottle: 84%, tv: 56%
+bottle: 84%, tv: 56%
+bottle: 80%, tv: 56%
+NB3 (silent): A bottle! Is that water, or have you finally invented robot tea?
+bottle: 84%, tv: 56%
+bottle: 80%, tv: 56%
+bottle: 84%, tv: 56%
+2026-11-16 17:11:33,305 INFO encoder/video 18.3 fps; produced=366 delivered=365 clients=0 inference=27.0ms
+bottle: 84%, tv: 56%
+bottle: 80%, tv: 56%
+bottle: 80%, tv: 62%
+2026-11-16 17:11:37,333 INFO Camera stopped
+2026-11-16 17:11:37,743 INFO Camera closed successfully.
+
+Stopped.

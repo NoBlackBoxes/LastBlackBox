@@ -1,0 +1,50 @@
+[1:19:32.312651864] [28880]  INFO Camera camera_manager.cpp:340 libcamera v0.7.2+rpt20260817
+[1:19:32.335120106] [28887]  INFO RPI pipeline_base.cpp:1133 Using configuration file '/usr/share/libcamera/pipeline/rpi/vc4/rpi_apps.yaml'
+[1:19:32.371660494] [28887]  INFO IPAProxy ipa_proxy.cpp:184 Using tuning file /usr/share/libcamera/ipa/rpi/vc4/imx708.json
+[1:19:32.377311415] [28887]  INFO Camera camera_manager.cpp:223 Adding camera '/base/soc/i2c0mux/i2c@1/imx708@1a' for pipeline handler rpi/vc4
+[1:19:32.377366340] [28887]  INFO RPI vc4.cpp:445 Registered camera /base/soc/i2c0mux/i2c@1/imx708@1a to Unicam device /dev/media1 and ISP device /dev/media2
+2026-11-06 15:11:56,328 INFO Initialization successful.
+2026-11-06 15:11:56,328 INFO Camera now open.
+2026-11-06 15:11:56,334 INFO Camera configuration has been adjusted!
+[1:19:32.385596178] [28880]  INFO Camera camera.cpp:1216 configuring streams: (0) 1280x960-RGB888/Rec709/Rec709/None/Full (1) 1280x960-YUV420/Rec709 (2) 1536x864-SBGGR10_CSI2P/RAW
+[1:19:32.385995526] [28887]  INFO RPI vc4.cpp:620 Sensor: /base/soc/i2c0mux/i2c@1/imx708@1a - Selected sensor format: 1536x864-SBGGR10_1X10/RAW - Selected unicam format: 1536x864-pBAA/RAW
+2026-11-06 15:11:56,337 INFO Configuration successful!
+2026-11-06 15:11:56,400 INFO Camera started
+Live video: http://quentin-NB3.local:8765
+Streaming with asynchronous Coral detection
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+2026-11-06 15:12:06,576 INFO encoder/video 17.5 fps; produced=176 delivered=175 clients=1 inference=38.1ms
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+2026-11-06 15:12:16,605 INFO encoder/video 18.5 fps; produced=362 delivered=361 clients=1 inference=35.7ms
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+2026-11-06 15:12:26,635 INFO encoder/video 18.3 fps; produced=546 delivered=545 clients=1 inference=39.1ms
+No confident objects
+2026-11-06 15:12:28,159 INFO Camera stopped
+2026-11-06 15:12:28,565 INFO Camera closed successfully.
+
+Stopped.

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NB3 · Live vision</title>
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; overflow: hidden; background: #080b10; color: #eef3fa; font-family: system-ui, sans-serif; }
+#viewer { position: fixed; inset: 0; background: #080b10; }
+#video, #boxes { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+#boxes { pointer-events: none; }
+#hud { position: absolute; inset: 16px 16px auto; display: flex; justify-content: space-between; gap: 12px; }
+#status, button { background: #10151ee6; color: inherit; border: 1px solid #ffffff40; border-radius: 8px; padding: 8px 12px; font-size: 14px; }
+button { cursor: pointer; }
+#message { position: absolute; inset: 0; display: grid; place-items: center; background: #080b1080; font-size: clamp(20px,4vw,36px); pointer-events: none; }
+#message[hidden] { display: none; }
+</style>
+</head>
+<body>
+<main id="viewer">
+  <img id="video" src="/stream/camera.mjpg" alt="NB3 live camera">
+  <svg id="boxes" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet" aria-label="Object detections"></svg>
+  <div id="message" role="status">Connecting...</div>
+  <div id="hud"><span id="status" role="status">Connecting</span><button id="fullscreen">Fullscreen</button></div>
+</main>
+<script>
+'use strict';
+const video = document.getElementById('video');
+const boxes = document.getElementById('boxes');
+const statusLabel = document.getElementById('status');
+const message = document.getElementById('message');
+let retry = null, previousSequence = -1, lastProgress = performance.now();
+function state(text) {
+  statusLabel.textContent = text;
+  message.hidden = text === 'Connected';
+  message.textContent = text === 'Disconnected' ? 'Disconnected — retrying...' : 'Reconnecting...';
+}
+function reconnect(connectionState = 'Reconnecting') {
+  state(connectionState);
+  if (retry !== null) return;
+  retry = setTimeout(() => {
+    video.src = '/stream/camera.mjpg?t=' + Date.now();
+    retry = null; lastProgress = performance.now();
+  }, 1000);
+}
+video.onerror = () => reconnect();
+video.onload = () => state('Connected');
+const ns = 'http://www.w3.org/2000/svg';
+function element(name, attributes, text) {
+  const node = document.createElementNS(ns, name);
+  for (const [key, value] of Object.entries(attributes)) node.setAttribute(key, value);
+  if (text) node.textContent = text;
+  boxes.appendChild(node);
+}
+async function poll() {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 2500);
+  try {
+    const response = await fetch('/detections.json', {cache: 'no-store', signal: controller.signal});
+    if (!response.ok) throw Error('Status unavailable');
+    const result = await response.json();
+    if (result.video_sequence !== previousSequence) {
+      previousSequence = result.video_sequence; lastProgress = performance.now();
+      if (video.naturalWidth > 0) state('Connected');
+    }
+    boxes.replaceChildren();
+    boxes.setAttribute('viewBox', `0 0 ${result.width} ${result.height}`);
+    for (const item of result.detections) {
+      const [xmin, ymin, xmax, ymax] = item.bbox.map(value => Math.max(0, Math.min(1, value)));
+      const x = xmin * result.width, y = ymin * result.height;
+      element('rect', {x, y, width: Math.max(0, (xmax-xmin)*result.width), height: Math.max(0, (ymax-ymin)*result.height), fill:'none', stroke:'#54ff99', 'stroke-width':3});
+      element('text', {x:Math.max(0,Math.min(x,result.width-220)), y:Math.max(26,y-8), fill:'#54ff99', stroke:'#000', 'stroke-width':3, 'paint-order':'stroke', 'font-size':24, 'font-family':'system-ui,sans-serif'}, `${item.label} ${Math.round(item.score*100)}%`);
+    }
+    if (performance.now() - lastProgress > 5000) reconnect();
+  } catch (_) {
+    boxes.replaceChildren();
+    // A missed metadata request must not tear down an otherwise healthy video.
+    if (performance.now() - lastProgress > 5000) reconnect('Disconnected');
+  } finally { clearTimeout(timeout); }
+  setTimeout(poll, 200);
+}
+poll();
+const button = document.getElementById('fullscreen');
+button.onclick = async () => {
+  try {
+    const viewer = document.getElementById('viewer');
+    if (document.fullscreenElement) await document.exitFullscreen();
+    else if (document.webkitFullscreenElement) document.webkitExitFullscreen();
+    else if (viewer.requestFullscreen) await viewer.requestFullscreen();
+    else if (viewer.webkitRequestFullscreen) viewer.webkitRequestFullscreen();
+    else button.textContent = 'Use browser fullscreen';
+  } catch (_) { button.textContent = 'Use browser fullscreen'; }
+};
+document.addEventListener('fullscreenchange', () => {button.textContent = document.fullscreenElement ? 'Exit fullscreen' : 'Fullscreen';});
+</script>
+</body>
+</html>

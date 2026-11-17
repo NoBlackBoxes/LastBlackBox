@@ -1,0 +1,10 @@
+[1:12:13.095643319] [27196]  INFO Camera camera_manager.cpp:340 libcamera v0.7.2+rpt20260817
+[1:12:13.151462988] [27218]  INFO RPI pipeline_base.cpp:1133 Using configuration file '/usr/share/libcamera/pipeline/rpi/vc4/rpi_apps.yaml'
+[1:12:13.284798587] [27218]  INFO IPAProxy ipa_proxy.cpp:184 Using tuning file /usr/share/libcamera/ipa/rpi/vc4/imx708.json
+[1:12:13.292594358] [27218]  INFO Camera camera_manager.cpp:223 Adding camera '/base/soc/i2c0mux/i2c@1/imx708@1a' for pipeline handler rpi/vc4
+[1:12:13.292649302] [27218]  INFO RPI vc4.cpp:445 Registered camera /base/soc/i2c0mux/i2c@1/imx708@1a to Unicam device /dev/media1 and ISP device /dev/media2
+[1:12:13.300215537] [27196]  INFO Camera camera.cpp:1216 configuring streams: (0) 800x600-RGB888/SMPTE170M/Rec709/None/Full (1) 800x600-YUV420/SMPTE170M (2) 1536x864-SBGGR10_CSI2P/RAW
+[1:12:13.300635609] [27218]  INFO RPI vc4.cpp:620 Sensor: /base/soc/i2c0mux/i2c@1/imx708@1a - Selected sensor format: 1536x864-SBGGR10_1X10/RAW - Selected unicam format: 1536x864-pBAA/RAW
+
+🌐 NB3 Server running at http://10.100.62.50:1234
+- "Control + C" to Quit -

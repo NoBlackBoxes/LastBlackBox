@@ -1,0 +1,412 @@
+[0:46:53.352341546] [19955]  INFO Camera camera_manager.cpp:340 libcamera v0.7.2+rpt20260817
+[0:46:53.372558541] [19976]  INFO RPI pipeline_base.cpp:1133 Using configuration file '/usr/share/libcamera/pipeline/rpi/vc4/rpi_apps.yaml'
+[0:46:53.395841447] [19976]  INFO IPAProxy ipa_proxy.cpp:184 Using tuning file /usr/share/libcamera/ipa/rpi/vc4/imx708.json
+[0:46:53.402765706] [19976]  INFO Camera camera_manager.cpp:223 Adding camera '/base/soc/i2c0mux/i2c@1/imx708@1a' for pipeline handler rpi/vc4
+[0:46:53.402818388] [19976]  INFO RPI vc4.cpp:445 Registered camera /base/soc/i2c0mux/i2c@1/imx708@1a to Unicam device /dev/media1 and ISP device /dev/media2
+2026-11-06 14:39:17,353 INFO Initialization successful.
+2026-11-06 14:39:17,354 INFO Camera now open.
+2026-11-06 14:39:17,362 INFO Camera configuration has been adjusted!
+[0:46:53.413046953] [19955]  INFO Camera camera.cpp:1216 configuring streams: (0) 640x480-RGB888/SMPTE170M/Rec709/None/Full (1) 640x480-YUV420/SMPTE170M (2) 1536x864-SBGGR10_CSI2P/RAW
+[0:46:53.413465298] [19976]  INFO RPI vc4.cpp:620 Sensor: /base/soc/i2c0mux/i2c@1/imx708@1a - Selected sensor format: 1536x864-SBGGR10_1X10/RAW - Selected unicam format: 1536x864-pBAA/RAW
+2026-11-06 14:39:17,364 INFO Configuration successful!
+2026-11-06 14:39:17,403 INFO Camera started
+Model input: [1, 300, 300, 3] uint8
+Live video: http://quentin-NB3.local:8765
+Show NB3 an object. Press Ctrl+C to stop.
+Silent mode: terminal responses only.
+No confident objects
+2026-11-06 14:39:18,579 INFO client connected 127.0.0.1; HTTP clients=1 frames=1 connections=1 disconnects=0
+2026-11-06 14:39:18,580 INFO client connected 127.0.0.1; HTTP clients=2 frames=1 connections=2 disconnects=0
+2026-11-06 14:39:19,584 INFO client connected 127.0.0.1; HTTP clients=3 frames=13 connections=3 disconnects=0
+No confident objects
+2026-11-06 14:39:19,671 INFO client disconnected 127.0.0.1; HTTP clients=2 frames=15 connections=3 disconnects=1
+No confident objects
+2026-11-06 14:39:20,598 INFO client connected 127.0.0.1; HTTP clients=3 frames=26 connections=4 disconnects=1
+2026-11-06 14:39:20,761 INFO client disconnected 127.0.0.1; HTTP clients=2 frames=28 connections=4 disconnects=2
+No confident objects
+2026-11-06 14:39:21,615 INFO client connected 127.0.0.1; HTTP clients=3 frames=38 connections=5 disconnects=2
+2026-11-06 14:39:21,764 INFO client disconnected 127.0.0.1; HTTP clients=2 frames=40 connections=5 disconnects=3
+2026-11-06 14:39:22,629 INFO client connected 127.0.0.1; HTTP clients=3 frames=50 connections=6 disconnects=3
+No confident objects
+2026-11-06 14:39:22,757 INFO client disconnected 127.0.0.1; HTTP clients=2 frames=52 connections=6 disconnects=4
+2026-11-06 14:39:23,640 INFO client connected 127.0.0.1; HTTP clients=3 frames=62 connections=7 disconnects=4
+No confident objects
+2026-11-06 14:39:23,758 INFO client disconnected 127.0.0.1; HTTP clients=2 frames=64 connections=7 disconnects=5
+2026-11-06 14:39:24,650 INFO client connected 127.0.0.1; HTTP clients=3 frames=74 connections=8 disconnects=5
+No confident objects
+2026-11-06 14:39:24,759 INFO client disconnected 127.0.0.1; HTTP clients=2 frames=76 connections=8 disconnects=6
+2026-11-06 14:39:25,662 INFO client connected 127.0.0.1; HTTP clients=3 frames=86 connections=9 disconnects=6
+No confident objects
+2026-11-06 14:39:25,760 INFO client disconnected 127.0.0.1; HTTP clients=2 frames=88 connections=9 disconnects=7
+2026-11-06 14:39:26,676 INFO client connected 127.0.0.1; HTTP clients=3 frames=98 connections=10 disconnects=7
+No confident objects
+2026-11-06 14:39:26,761 INFO client disconnected 127.0.0.1; HTTP clients=2 frames=100 connections=10 disconnects=8
+2026-11-06 14:39:27,690 INFO client connected 127.0.0.1; HTTP clients=3 frames=111 connections=11 disconnects=8
+No confident objects
+2026-11-06 14:39:27,852 INFO client disconnected 127.0.0.1; HTTP clients=2 frames=113 connections=11 disconnects=9
+2026-11-06 14:39:28,522 INFO pipeline 12.0 fps; camera=2.3ms coral=19.6ms jpeg=5.6ms; HTTP clients=2 frames=121 connections=11 disconnects=9
+2026-11-06 14:39:28,706 INFO client connected 127.0.0.1; HTTP clients=3 frames=123 connections=12 disconnects=9
+No confident objects
+2026-11-06 14:39:28,848 INFO client disconnected 127.0.0.1; HTTP clients=2 frames=125 connections=12 disconnects=10
+2026-11-06 14:39:29,718 INFO client connected 127.0.0.1; HTTP clients=3 frames=135 connections=13 disconnects=10
+No confident objects
+2026-11-06 14:39:29,848 INFO client disconnected 127.0.0.1; HTTP clients=2 frames=137 connections=13 disconnects=11
+2026-11-06 14:39:30,729 INFO client connected 127.0.0.1; HTTP clients=3 frames=147 connections=14 disconnects=11
+No confident objects
+2026-11-06 14:39:30,849 INFO client disconnected 127.0.0.1; HTTP clients=2 frames=149 connections=14 disconnects=12
+2026-11-06 14:39:31,741 INFO client connected 127.0.0.1; HTTP clients=3 frames=159 connections=15 disconnects=12
+No confident objects
+2026-11-06 14:39:31,852 INFO client disconnected 127.0.0.1; HTTP clients=2 frames=161 connections=15 disconnects=13
+2026-11-06 14:39:32,755 INFO client connected 127.0.0.1; HTTP clients=3 frames=171 connections=16 disconnects=13
+2026-11-06 14:39:32,851 INFO client disconnected 127.0.0.1; HTTP clients=2 frames=173 connections=16 disconnects=14
+No confident objects
+2026-11-06 14:39:33,767 INFO client connected 127.0.0.1; HTTP clients=3 frames=183 connections=17 disconnects=14
+2026-11-06 14:39:33,866 INFO client disconnected 127.0.0.1; HTTP clients=2 frames=185 connections=17 disconnects=15
+No confident objects
+2026-11-06 14:39:34,784 INFO client connected 127.0.0.1; HTTP clients=3 frames=196 connections=18 disconnects=15
+No confident objects
+2026-11-06 14:39:34,946 INFO client disconnected 127.0.0.1; HTTP clients=2 frames=198 connections=18 disconnects=16
+2026-11-06 14:39:35,799 INFO client connected 127.0.0.1; HTTP clients=3 frames=208 connections=19 disconnects=16
+2026-11-06 14:39:35,940 INFO client disconnected 127.0.0.1; HTTP clients=2 frames=210 connections=19 disconnects=17
+No confident objects
+2026-11-06 14:39:36,809 INFO client connected 127.0.0.1; HTTP clients=3 frames=220 connections=20 disconnects=17
+2026-11-06 14:39:36,943 INFO client disconnected 127.0.0.1; HTTP clients=2 frames=222 connections=20 disconnects=18
+No confident objects
+2026-11-06 14:39:37,820 INFO client connected 127.0.0.1; HTTP clients=3 frames=232 connections=21 disconnects=18
+2026-11-06 14:39:37,940 INFO client disconnected 127.0.0.1; HTTP clients=2 frames=234 connections=21 disconnects=19
+No confident objects
+2026-11-06 14:39:38,524 INFO pipeline 12.0 fps; camera=2.2ms coral=19.1ms jpeg=5.1ms; HTTP clients=2 frames=241 connections=21 disconnects=19
+2026-11-06 14:39:38,829 INFO client connected 127.0.0.1; HTTP clients=3 frames=244 connections=22 disconnects=19
+2026-11-06 14:39:38,942 INFO client disconnected 127.0.0.1; HTTP clients=2 frames=246 connections=22 disconnects=20
+No confident objects
+2026-11-06 14:39:39,842 INFO client connected 127.0.0.1; HTTP clients=3 frames=256 connections=23 disconnects=20
+2026-11-06 14:39:39,943 INFO client disconnected 127.0.0.1; HTTP clients=2 frames=258 connections=23 disconnects=21
+No confident objects
+2026-11-06 14:39:40,854 INFO client connected 127.0.0.1; HTTP clients=3 frames=268 connections=24 disconnects=21
+2026-11-06 14:39:40,949 INFO client disconnected 127.0.0.1; HTTP clients=2 frames=270 connections=24 disconnects=22
+No confident objects
+2026-11-06 14:39:41,871 INFO client connected 127.0.0.1; HTTP clients=3 frames=281 connections=25 disconnects=22
+2026-11-06 14:39:42,028 INFO client disconnected 127.0.0.1; HTTP clients=2 frames=283 connections=25 disconnects=23
+No confident objects
+2026-11-06 14:39:42,885 INFO client connected 127.0.0.1; HTTP clients=3 frames=293 connections=26 disconnects=23
+2026-11-06 14:39:43,029 INFO client disconnected 127.0.0.1; HTTP clients=2 frames=295 connections=26 disconnects=24
+No confident objects
+2026-11-06 14:39:43,895 INFO client connected 127.0.0.1; HTTP clients=3 frames=305 connections=27 disconnects=24
+2026-11-06 14:39:43,902 INFO client connected 127.0.0.1; HTTP clients=4 frames=305 connections=28 disconnects=24
+2026-11-06 14:39:44,030 INFO client disconnected 127.0.0.1; HTTP clients=3 frames=307 connections=28 disconnects=25
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+2026-11-06 14:39:48,543 INFO pipeline 12.0 fps; camera=2.1ms coral=19.1ms jpeg=5.5ms; HTTP clients=3 frames=361 connections=28 disconnects=25
+No confident objects
+2026-11-06 14:39:49,281 INFO client disconnected 127.0.0.1; HTTP clients=2 frames=369 connections=28 disconnects=26
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+2026-11-06 14:39:58,544 INFO pipeline 12.0 fps; camera=2.4ms coral=20.1ms jpeg=6.4ms; HTTP clients=2 frames=481 connections=28 disconnects=26
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+2026-11-06 14:40:08,551 INFO pipeline 11.5 fps; camera=6.7ms coral=24.8ms jpeg=9.2ms; HTTP clients=2 frames=596 connections=28 disconnects=26
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+2026-11-06 14:40:18,616 INFO pipeline 12.0 fps; camera=2.4ms coral=19.2ms jpeg=5.1ms; HTTP clients=2 frames=717 connections=28 disconnects=26
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+2026-11-06 14:40:28,621 INFO pipeline 12.0 fps; camera=2.4ms coral=19.8ms jpeg=5.7ms; HTTP clients=2 frames=837 connections=28 disconnects=26
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+tv: 67%
+NB3 (silent): I see a tv!
+laptop: 67%
+laptop: 56%
+No confident objects
+No confident objects
+2026-11-06 14:40:38,631 INFO pipeline 12.0 fps; camera=2.4ms coral=19.8ms jpeg=5.9ms; HTTP clients=2 frames=957 connections=28 disconnects=26
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+2026-11-06 14:40:48,651 INFO pipeline 12.0 fps; camera=2.2ms coral=19.0ms jpeg=4.9ms; HTTP clients=2 frames=1077 connections=28 disconnects=26
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+2026-11-06 14:40:58,652 INFO pipeline 12.0 fps; camera=2.1ms coral=18.6ms jpeg=4.6ms; HTTP clients=2 frames=1197 connections=28 disconnects=26
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+2026-11-06 14:41:08,682 INFO pipeline 11.8 fps; camera=6.0ms coral=25.1ms jpeg=7.7ms; HTTP clients=2 frames=1315 connections=28 disconnects=26
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+2026-11-06 14:41:18,693 INFO pipeline 12.0 fps; camera=2.3ms coral=19.6ms jpeg=4.7ms; HTTP clients=2 frames=1435 connections=28 disconnects=26
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+2026-11-06 14:41:28,711 INFO pipeline 12.0 fps; camera=2.6ms coral=20.6ms jpeg=5.9ms; HTTP clients=2 frames=1555 connections=28 disconnects=26
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+2026-11-06 14:41:38,723 INFO pipeline 12.0 fps; camera=2.5ms coral=20.2ms jpeg=5.8ms; HTTP clients=2 frames=1675 connections=28 disconnects=26
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+2026-11-06 14:41:48,734 INFO pipeline 12.0 fps; camera=2.4ms coral=20.1ms jpeg=5.8ms; HTTP clients=2 frames=1795 connections=28 disconnects=26
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+2026-11-06 14:41:58,739 INFO pipeline 12.0 fps; camera=2.6ms coral=20.9ms jpeg=6.8ms; HTTP clients=2 frames=1915 connections=28 disconnects=26
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+2026-11-06 14:42:08,750 INFO pipeline 12.0 fps; camera=2.4ms coral=20.0ms jpeg=5.9ms; HTTP clients=2 frames=2035 connections=28 disconnects=26
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+2026-11-06 14:42:18,769 INFO pipeline 12.0 fps; camera=2.5ms coral=20.4ms jpeg=6.4ms; HTTP clients=2 frames=2155 connections=28 disconnects=26
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+2026-11-06 14:42:28,780 INFO pipeline 12.0 fps; camera=2.3ms coral=19.7ms jpeg=5.9ms; HTTP clients=2 frames=2275 connections=28 disconnects=26
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+2026-11-06 14:42:38,787 INFO pipeline 12.0 fps; camera=2.3ms coral=19.8ms jpeg=5.8ms; HTTP clients=2 frames=2395 connections=28 disconnects=26
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+2026-11-06 14:42:48,810 INFO pipeline 11.7 fps; camera=5.8ms coral=24.6ms jpeg=9.1ms; HTTP clients=2 frames=2512 connections=28 disconnects=26
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+2026-11-06 14:42:58,817 INFO pipeline 12.0 fps; camera=2.8ms coral=19.9ms jpeg=4.8ms; HTTP clients=2 frames=2632 connections=28 disconnects=26
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+2026-11-06 14:43:08,828 INFO pipeline 12.0 fps; camera=2.3ms coral=19.7ms jpeg=5.1ms; HTTP clients=2 frames=2752 connections=28 disconnects=26
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+2026-11-06 14:43:18,840 INFO pipeline 12.0 fps; camera=2.4ms coral=19.9ms jpeg=5.4ms; HTTP clients=2 frames=2872 connections=28 disconnects=26
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+2026-11-06 14:43:28,852 INFO pipeline 12.0 fps; camera=2.5ms coral=20.1ms jpeg=5.7ms; HTTP clients=2 frames=2992 connections=28 disconnects=26
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+2026-11-06 14:43:38,871 INFO pipeline 12.0 fps; camera=2.3ms coral=19.2ms jpeg=5.0ms; HTTP clients=2 frames=3112 connections=28 disconnects=26
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+2026-11-06 14:43:48,881 INFO pipeline 12.0 fps; camera=2.5ms coral=19.9ms jpeg=6.0ms; HTTP clients=2 frames=3232 connections=28 disconnects=26
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+2026-11-06 14:43:58,897 INFO pipeline 12.0 fps; camera=2.4ms coral=20.0ms jpeg=6.2ms; HTTP clients=2 frames=3352 connections=28 disconnects=26
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+2026-11-06 14:44:08,898 INFO pipeline 12.0 fps; camera=2.6ms coral=20.7ms jpeg=7.0ms; HTTP clients=2 frames=3472 connections=28 disconnects=26
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+2026-11-06 14:44:18,917 INFO pipeline 12.0 fps; camera=2.4ms coral=20.5ms jpeg=6.8ms; HTTP clients=2 frames=3592 connections=28 disconnects=26
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+No confident objects
+2026-11-06 14:44:28,925 INFO pipeline 12.0 fps; camera=2.3ms coral=19.6ms jpeg=6.1ms; HTTP clients=2 frames=3712 connections=28 disconnects=26
+2026-11-06 14:44:29,040 INFO client disconnected 127.0.0.1; HTTP clients=1 frames=3713 connections=28 disconnects=27
+2026-11-06 14:44:29,040 INFO client disconnected 127.0.0.1; HTTP clients=0 frames=3713 connections=28 disconnects=28
+2026-11-06 14:44:29,548 INFO Camera stopped
+2026-11-06 14:44:29,958 INFO Camera closed successfully.
+
+Stopped.

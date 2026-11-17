@@ -1,0 +1,169 @@
+
+"""NB3-11: Person-triggered welcome and one-question conversation."""
+
+import importlib.util
+import os
+import sys
+import time
+
+import cv2
+import numpy as np
+from dotenv import load_dotenv
+
+from config import (
+    AUDIO_PYTHON,
+    CAMERA_HEIGHT,
+    CAMERA_WIDTH,
+    CONFIDENCE,
+    FRAME_INTERVAL,
+    STABLE_FRAMES,
+)
+from speech import Speech
+from vision import Vision
+
+
+GREETING = (
+    "Welcome to the No Black Boxes workshop "
+    "at the Global Innovation Forum! "
+    "I'm NB3. Ask me a question!"
+)
+
+SYSTEM_PROMPT = (
+    "You are NB3, a friendly robot at the No Black Boxes "
+    "workshop at the Global Innovation Forum. "
+    "Answer in one or two short, conversational sentences. "
+    "Explain technical topics simply and be occasionally humorous. "
+    "Do not invent facts about the workshop or event."
+)
+
+# Number of consecutive frames without a person
+# required before welcoming another visitor.
+ABSENT_FRAMES = 10
+
+
+def load_module(name, path):
+    """Load an existing workshop Python script."""
+    spec = importlib.util.spec_from_file_location(name, path)
+    if spec is None or spec.loader is None:
+        raise ImportError(f"Cannot load {path}")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def main():
+    # Load existing workshop credentials and modules.
+    sys.path.insert(0, str(AUDIO_PYTHON))
+    load_dotenv(AUDIO_PYTHON.parents[1] / ".env")
+
+    eleven_key = os.environ.get("ELEVENLABS_API_KEY")
+    openai_key = os.environ.get("OPENAI_API_KEY")
+
+    if not eleven_key or not openai_key:
+        raise RuntimeError("Missing ElevenLabs or OpenAI API key")
+
+    stt = load_module(
+        "nb3_stt",
+        AUDIO_PYTHON / "01_stt_transcribe_question.py",
+    )
+    robot = load_module(
+        "nb3_robot",
+        AUDIO_PYTHON / "02_robot_reply.py",
+    )
+
+    speech = Speech()
+    vision = Vision(CONFIDENCE)
+
+    try:
+        vision.start_camera(CAMERA_WIDTH, CAMERA_HEIGHT)
+
+        ready = True
+        stable = 0
+        absent = 0
+
+        print("NB3-11 ready. Waiting for a visitor.", flush=True)
+
+        while True:
+            jpeg = vision.camera.capture(mjpeg=True)
+            frame = cv2.imdecode(
+                np.frombuffer(jpeg, np.uint8),
+                cv2.IMREAD_COLOR,
+            )
+
+            if frame is None:
+                raise RuntimeError("Camera returned an invalid image")
+
+            detections = vision.detect(frame)
+
+            person_visible = any(
+                item.label == "person" for item in detections
+            )
+
+            if ready:
+                stable = stable + 1 if person_visible else 0
+
+                if stable >= STABLE_FRAMES:
+                    ready = False
+                    stable = 0
+                    absent = 0
+
+                    try:
+                        # 1. Welcome visitor.
+                        print(f"NB3: {GREETING}", flush=True)
+                        speech.say(GREETING)
+
+                        # 2. Listen and transcribe.
+                        print("Listening...", flush=True)
+                        question = stt.transcribe_from_mic(eleven_key)
+
+                        if not question:
+                            print("No question detected.", flush=True)
+                            speech.say(
+                                "Sorry, I didn't catch that. "
+                                "Please try again later."
+                            )
+                        else:
+                            print(f"Visitor: {question}", flush=True)
+
+                            # 3. Generate answer.
+                            answer = robot.ask_llm(
+                                question,
+                                openai_key,
+                                SYSTEM_PROMPT,
+                            )
+
+                            # 4. Speak answer.
+                            if answer:
+                                print(f"NB3: {answer}", flush=True)
+                                speech.say(answer)
+
+                    except Exception as error:
+                        print(f"Conversation failed: {error}", flush=True)
+
+                    print(
+                        "Conversation finished. "
+                        "Waiting for camera to clear.",
+                        flush=True,
+                    )
+
+            else:
+                # Do not greet repeatedly while somebody
+                # remains in front of the camera.
+                absent = 0 if person_visible else absent + 1
+
+                if absent >= ABSENT_FRAMES:
+                    ready = True
+                    absent = 0
+                    print("Ready for next visitor.", flush=True)
+
+            time.sleep(FRAME_INTERVAL)
+
+    except KeyboardInterrupt:
+        print("\nStopped.", flush=True)
+
+    finally:
+        vision.close()
+
+
+if __name__ == "__main__":
+    main()

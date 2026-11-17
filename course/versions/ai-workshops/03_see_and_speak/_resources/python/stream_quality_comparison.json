@@ -1,0 +1,26 @@
+[
+  {
+    "phase": "camera_only_hd",
+    "seconds": 20.03,
+    "frames": 357,
+    "fps": 17.83,
+    "max_gap": 0.102,
+    "mbps": 12.91,
+    "cpu_one_core_percent": 26.2,
+    "rss": "VmRSS:\t   77068 kB",
+    "inference_ms": 0,
+    "inference_sequence": 0
+  },
+  {
+    "phase": "coral_hd",
+    "seconds": 30.03,
+    "frames": 549,
+    "fps": 18.28,
+    "max_gap": 0.098,
+    "mbps": 13.92,
+    "cpu_one_core_percent": 39.9,
+    "rss": "VmRSS:\t   91816 kB",
+    "inference_ms": 39.49,
+    "inference_sequence": 561
+  }
+]

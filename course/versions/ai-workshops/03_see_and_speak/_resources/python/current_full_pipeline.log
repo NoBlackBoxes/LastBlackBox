@@ -1,0 +1,25 @@
+[0:35:28.174921168] [10901]  INFO Camera camera_manager.cpp:340 libcamera v0.7.2+rpt20260817
+[0:35:28.237173898] [10908]  INFO RPI pipeline_base.cpp:1133 Using configuration file '/usr/share/libcamera/pipeline/rpi/vc4/rpi_apps.yaml'
+[0:35:28.398334107] [10908]  INFO IPAProxy ipa_proxy.cpp:184 Using tuning file /usr/share/libcamera/ipa/rpi/vc4/imx708.json
+[0:35:28.406241721] [10908]  INFO Camera camera_manager.cpp:223 Adding camera '/base/soc/i2c0mux/i2c@1/imx708@1a' for pipeline handler rpi/vc4
+[0:35:28.406297500] [10908]  INFO RPI vc4.cpp:445 Registered camera /base/soc/i2c0mux/i2c@1/imx708@1a to Unicam device /dev/media0 and ISP device /dev/media2
+2026-11-16 10:52:33,934 INFO Initialization successful.
+2026-11-16 10:52:33,934 INFO Camera now open.
+2026-11-16 10:52:33,942 INFO Camera configuration has been adjusted!
+[0:35:28.416275458] [10901]  INFO Camera camera.cpp:1216 configuring streams: (0) 800x600-RGB888/SMPTE170M/Rec709/None/Full (1) 800x600-YUV420/SMPTE170M (2) 1536x864-SBGGR10_CSI2P/RAW
+[0:35:28.416702705] [10908]  INFO RPI vc4.cpp:620 Sensor: /base/soc/i2c0mux/i2c@1/imx708@1a - Selected sensor format: 1536x864-SBGGR10_1X10/RAW - Selected unicam format: 1536x864-pBAA/RAW
+2026-11-16 10:52:33,944 INFO Configuration successful!
+2026-11-16 10:52:34,084 INFO Camera started
+Live video: http://quentin-NB3.local:8765
+2026-11-16 10:52:37,900 INFO Speaker: plughw:CARD=MAX98357A,DEV=0; ElevenLabs configured
+Streaming with asynchronous Coral detection
+bottle: 87%
+NB3: I see a bottle!
+2026-11-16 10:52:39,111 INFO HTTP Request: POST https://api.elevenlabs.io/v1/text-to-speech/21m00Tcm4TlvDq8ikWAM?output_format=mp3_44100_128 "HTTP/1.1 200 OK"
+2026-11-16 10:52:39,272 INFO ElevenLabs synthesis completed (20523 bytes)
+2026-11-16 10:52:42,708 INFO ALSA playback completed on plughw:CARD=MAX98357A,DEV=0
+bottle: 84%
+2026-11-16 10:52:42,808 INFO Camera stopped
+2026-11-16 10:52:43,213 INFO Camera closed successfully.
+
+Stopped.
