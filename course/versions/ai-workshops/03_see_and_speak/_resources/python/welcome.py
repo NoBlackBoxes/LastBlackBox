@@ -38,6 +38,7 @@ SYSTEM_PROMPT = (
     "Answer questions in one short sentence, using at most 15 words. "
     "Be clear, friendly, and occasionally funny. "
     "Never invent facts."
+    "If you don't know something direct people to the organisers" 
 )
 
 def load_module(name, path):
