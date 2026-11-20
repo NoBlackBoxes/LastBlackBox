@@ -54,19 +54,9 @@ class Course:
 
 # Get course slug from name
 def get_slug_from_name(name):
-    if name == "The Last Black Box":
-        slug = "full"
-    elif name == "Bootcamp":
-        slug = "bootcamp"
-    elif name == "Braitenberg":
-        slug = "braitenberg"
-    elif name == "Build a Brain":
-        slug = "buildabrain"
-    elif name == "AI-Workshops":
-        slug = "ai-workshops"
-    else:
-        print("Unavailable course name selected!")
-        exit(-1)
-    return slug
+    try:
+        return Config.course_slugs[name]
+    except KeyError as error:
+        raise ValueError(f"Unavailable course name: {name}") from error
 
 #FIN

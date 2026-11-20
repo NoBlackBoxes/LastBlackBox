@@ -6,6 +6,12 @@ Generate LBB Courses (session READMEs) from templates
 """
 
 # Imports
+import pathlib
+import sys
+
+REPO_ROOT = pathlib.Path(__file__).resolve().parents[3]
+sys.path.insert(0, str(REPO_ROOT / "libs"))
+
 import LBB.config as Config
 import LBB.utilities as Utilities
 import LBB.Engine.course as Course

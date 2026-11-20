@@ -54,7 +54,7 @@ class Session:
 
         # Load lessons
         self.lessons = []
-        lesson_boxes = set()
+        lesson_boxes = []
         lesson_materials = []
         for lesson_tag in lesson_tags:
             tag_content = lesson_tag[1:-1].split(":")
@@ -67,7 +67,8 @@ class Session:
             lesson_text = Utilities.read_clean_text(lesson_path)
             lesson = Lesson.Lesson(self, lesson_box, lesson_text)
             self.lessons.append(lesson)
-            lesson_boxes.add(lesson_box)
+            if lesson_box not in lesson_boxes:
+                lesson_boxes.append(lesson_box)
 
             # Does lesson require additional materials?
             lesson_materials_path = f"{lesson_path[:-3]}.csv"

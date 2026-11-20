@@ -1,0 +1,31 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": ["**/*.md", "**/toc.yml"],
+        "exclude": [".docfx-staging/**", "obj/**", "bin/**"]
+      }
+    ],
+    "resource": [
+      {
+        "files": ["_assets/**/*", "logo.svg", "favicon.png"],
+        "exclude": [".docfx-staging/**", "obj/**", "bin/**"]
+      }
+    ],
+    "globalMetadata": {
+      "_appName": "LBB: Crick Bootcamp",
+      "_appTitle": "LBB: Crick Bootcamp",
+      "_appFooter": "<span>&copy; NoBlackBoxes &middot; <a href='https://github.com/NoBlackBoxes/LastBlackBox'>GitHub</a></span>",
+      "_appLogoPath": "logo.svg",
+      "_appFaviconPath": "favicon.png",
+      "_enableSearch": true,
+      "_disableContribution": true
+    },
+    "sitemap": {
+      "baseUrl": "https://noblackboxes.github.io/LastBlackBox/crick",
+      "priority": 0.5,
+      "changefreq": "weekly"
+    },
+    "template": ["default", "modern", "template"]
+  }
+}

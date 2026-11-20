@@ -1,0 +1,20 @@
+# Sidebar navigation for the Sessions tab. Each entry is a Day.
+# Staged into sessions/toc.yml by build_site.py alongside the session folders.
+
+- name: Overview
+  href: index.md
+
+- name: Day 1 - Electronics and Sensors
+  href: 01_electronics-and-sensors/README.md
+
+- name: Day 2 - Arduino and Braitenberg
+  href: 02_arduino-and-braitenberg/README.md
+
+- name: Day 3 - Linux and Python
+  href: 03_linux-and-python/README.md
+
+- name: Day 4 - Web Stack and Senses
+  href: 04_web-stack-and-senses/README.md
+
+- name: Day 5 - Projects
+  href: 05_open-projects/README.md
