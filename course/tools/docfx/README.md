@@ -15,13 +15,37 @@ A push to `master` triggers [.github/workflows/deploy-docs.yml](../../../.github
 
 ### One-time setup
 
-Install the docfx CLI (requires the .NET 8 SDK):
+The build requires Python 3, the .NET 8 SDK, and docfx. It uses only Python's standard library, so no `pip install` step is needed.
 
-```powershell
-dotnet tool install docfx
+On Ubuntu 26.04, install the .NET 8 SDK from Canonical's backports repository:
+
+```bash
+sudo add-apt-repository ppa:dotnet/backports
+sudo apt update
+sudo apt install dotnet-sdk-8.0
 ```
 
-`build_all.py` uses Python's stdlib only; no `pip install` step.
+For other systems, follow the official [.NET installation guide](https://learn.microsoft.com/dotnet/core/install/).
+
+Install docfx as a global .NET tool:
+
+```bash
+dotnet tool install -g docfx
+```
+
+If your shell cannot find `docfx`, add the .NET tools directory to the current session:
+
+```bash
+export PATH="$PATH:$HOME/.dotnet/tools"
+```
+
+Verify the installation:
+
+```bash
+python3 --version
+dotnet --version
+docfx --version
+```
 
 ### Build everything
 
