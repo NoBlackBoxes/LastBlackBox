@@ -7,7 +7,147 @@ The sites live at `https://noblackboxes.github.io/LastBlackBox/<slug>/` (e.g. [`
 1. The **LBB engine** ([libs/LBB/Engine/](../../../libs/LBB/Engine/)) reads `_resources/template.md` for every session, expands `{Box:Lesson}` tags into the relevant lesson content pulled from [boxes/](../../../boxes/), and writes the rendered `README.md` for each session.
 2. **docfx** wraps those READMEs in a static site using a shared template under [template/](template/).
 
-A push to `master` triggers [.github/workflows/deploy-docs.yml](../../../.github/workflows/deploy-docs.yml), which runs `build_all.py` and deploys the output to GitHub Pages.
+## Architecture
+
+```mermaid
+---
+config:
+  layout: elk
+  markdownAutoWrap: false
+---
+flowchart TD
+    subgraph sources["✎ Hand-written source content"]
+        manifest["`course/courses.json
+**Course registry and publishing settings**`"]
+
+        versions["`course/versions/&lt;slug&gt;/
+**Course structure, session templates and landing pages**`"]
+
+        boxes["`boxes/&lt;box&gt;/_resources/lessons/
+**Reusable lesson Markdown and assets**`"]
+
+        theme["`course/tools/docfx/template/ and course/tools/docfx/root/
+**Shared layout, styling and root assets**`"]
+    end
+
+    subgraph generation["⚙︎ Build tools"]
+        config["`libs/LBB/config.py
+**Loads and validates the manifest**`"]
+
+        orchestrator["`course/tools/build_all.py
+**Build orchestrator**`"]
+
+        engine["`libs/LBB/Engine/
+**LBB course engine**`"]
+
+        site_builder["`course/tools/docfx/build_site.py
+**Per-course site assembler**`"]
+
+        docfx["`Docfx
+**Markdown → static website**`"]
+    end
+
+    subgraph intermediate["◇ Generated intermediate content"]
+        readmes["`course/versions/&lt;slug&gt;/&lt;session&gt;/README.md
+**Expanded session Markdown**`"]
+
+        staging["`course/versions/&lt;slug&gt;/.docfx-staging/
+**Temporary assembled Docfx input**`"]
+    end
+
+    subgraph output["🌐︎ Generated website"]
+        course_sites["`docs/&lt;slug&gt;/
+**One static site per published course**`"]
+
+        landing["`docs/index.html and docs/sitemap.xml
+**Root landing page and sitemap**`"]
+
+        pages["`GitHub Pages
+**Public website**`"]
+    end
+
+    manifest --> config
+    config --> orchestrator
+    config --> engine
+
+    versions --> engine
+    boxes --> engine
+    engine --> readmes
+
+    orchestrator --> site_builder
+    readmes --> site_builder
+    versions --> site_builder
+    theme --> site_builder
+
+    site_builder --> staging
+    staging --> docfx
+    docfx --> course_sites
+
+    manifest -->|"Names, descriptions, logos and published status"| orchestrator
+    theme --> orchestrator
+    orchestrator --> landing
+
+    course_sites --> pages
+    landing --> pages
+```
+
+### Build sequence
+
+```mermaid
+sequenceDiagram
+    actor Runner as Developer or GitHub Actions
+    participant Build as build_all.py
+    participant Layouts as generate_interactive_layouts.py
+    participant Courses as generate_courses.py
+    participant Config as config.py
+    participant Engine as LBB Engine
+    participant Site as build_site.py
+    participant Docfx
+    participant Output as 🌐︎ docs/
+
+    Note over Build,Docfx: ⚙︎ Build tools
+
+    Runner->>Build: Run the complete website build
+
+    Build->>Config: Load course/courses.json
+    Config-->>Build: Validated course configuration
+
+    Build->>Layouts: Generate interactive layout SVGs
+    Layouts-->>Build: Updated shared SVG assets
+
+    Build->>Courses: Generate course content
+    Courses->>Config: Load courses with generate = true
+    Config-->>Courses: Courses to generate
+
+    loop Each course with generate = true
+        Courses->>Engine: Build and render the course
+        Note right of Engine: Reads session templates from<br/>course/versions/#60;slug#62;/
+        Note right of Engine: Expands reusable lessons from<br/>boxes/#60;box#62;/_resources/lessons/
+        Engine-->>Courses: Rendered session Markdown
+        Courses->>Courses: Write generated session README.md files
+    end
+
+    Courses->>Courses: Generate boxes/#60;box#62;/README.md files
+    Courses-->>Build: Course generation complete
+
+    loop Each course with published = true
+        Build->>Site: Build the course slug
+        Note right of Site: Reads generated session READMEs,<br/>index.md and sessions.index.md
+        Site->>Site: Assemble .docfx-staging/
+        Site->>Site: Bundle assets and rewrite links
+        Site->>Docfx: Build staged course
+        Docfx->>Output: Write docs/#60;slug#62;/
+        Site-->>Build: Course site complete
+    end
+
+    Build->>Output: Write docs/sitemap.xml
+    Build->>Output: Render docs/index.html
+    Build->>Output: Copy root website assets
+
+    Output-->>Runner: Complete static website
+```
+
+The [deployment workflow](../../../.github/workflows/deploy-docs.yml) runs `build_all.py` for pull requests and configured deployment branches. Pull requests only validate the build; pushes to `master` and, temporarily, `course-sites` deploy it to GitHub Pages.
 
 ---
 
@@ -30,7 +170,7 @@ For other systems, follow the official [.NET installation guide](https://learn.m
 Install docfx as a global .NET tool:
 
 ```bash
-dotnet tool install -g docfx
+dotnet tool install -g docfx --version 2.81.0
 ```
 
 If your shell cannot find `docfx`, add the .NET tools directory to the current session:
@@ -137,22 +277,24 @@ End-to-end procedure for a course slug that doesn't yet exist.
 
 Create `course/versions/<slug>/[0-9][0-9]_<session-slug>/_resources/template.md` for each session. Sessions are sorted by their `NN_` numeric prefix.
 
-### 2. Register the course with the engine
+### 2. Register the course
 
-In [libs/LBB/config.py](../../../libs/LBB/config.py), add the course name to `course_names`:
+Add one entry to the single course manifest, [course/courses.json](../../courses.json):
 
-```python
-course_names = ["The Last Black Box", "Bootcamp", "Braitenberg", "Build a Brain", "Crick", "Your Course"]
+```json
+{
+  "name": "Your Course",
+  "engine_name": "Your Course",
+  "slug": "your-course",
+  "description": "One sentence shown on the root landing page.",
+  "logo": null,
+  "generate": true,
+  "materials": false,
+  "published": true
+}
 ```
 
-In [libs/LBB/Engine/course.py](../../../libs/LBB/Engine/course.py), add the name→slug mapping in `get_slug_from_name`:
-
-```python
-elif name == "Your Course":
-    slug = "your-course"
-```
-
-The slug is the directory name under `course/versions/`. Lowercase, hyphenated.
+The slug must match the directory under `course/versions/`. Set `generate` to false for incomplete content that the engine cannot yet render, `materials` to true when the BOM and packing scripts should process the course, and `published` to false until the course should appear on the website. If a logo is provided, place it under `course/tools/docfx/root/` and use its filename in `logo`.
 
 ### 3. Author the docfx landing pages
 
@@ -165,32 +307,9 @@ Both are plain Markdown. Use repo-relative paths for images (`/course/_resources
 
 The defaults under [template/](template/) provide `docfx.json`, `sessions.toc.yml`, `toc.yml`, and the shared CSS/JS. Override any of those by placing a same-named file in `course/versions/<slug>/`.
 
-### 4. Enable the docfx build
+The manifest automatically controls engine registration, the published build list, and the course tile on the root landing page.
 
-Add the slug to `SITES` in [../build_all.py](../build_all.py):
-
-```python
-SITES = ["crick", "your-course"]
-```
-
-### 5. Add a tile to the root landing page
-
-Edit [root/index.html](root/index.html) — add a `<li>` inside `<ul class="sites">`:
-
-```html
-<li>
-  <img class="site-icon" src="logo_yourcourse.png" alt="Your Course logo">
-  <div class="body">
-    <a href="your-course/">Your Course</a>
-    <div class="blurb">One sentence describing what makes this course distinctive.</div>
-    <a class="hint" href="your-course/">Open the course site &rarr;</a>
-  </div>
-</li>
-```
-
-Drop the icon image into `root/` alongside the existing logos. If you don't have a course icon, omit the `<img>` and adjust the `grid-template-columns` rule inline if needed.
-
-### 6. Build, verify, ship
+### 4. Build, verify, ship
 
 ```powershell
 uv run --no-project python course/tools/build_all.py
@@ -203,13 +322,13 @@ Open [http://localhost:8000/your-course/](http://localhost:8000/your-course/) an
 - Each session opens and its lesson tags expanded correctly.
 - The root [http://localhost:8000/](http://localhost:8000/) shows your new tile and links into the course.
 
-Then commit and push to `master`. CI deploys to Pages.
+Then open a pull request. CI builds the complete site without deploying it. Pushes to `master` and, temporarily, `course-sites` deploy to Pages.
 
 ---
 
 ## CI deployment
 
-[.github/workflows/deploy-docs.yml](../../../.github/workflows/deploy-docs.yml) runs `build_all.py` and publishes `docs/` to Pages on every push to `master`. The repo also needs:
+[.github/workflows/deploy-docs.yml](../../../.github/workflows/deploy-docs.yml) runs `build_all.py` for every pull request. Pull requests validate and upload the generated site artifact but do not deploy. Pushes to `master` and the temporary `course-sites` preview branch publish `docs/` to Pages. The repo also needs:
 
 - **Settings → Pages → Source = "GitHub Actions"** (one-time)
 - **Settings → Environments → github-pages → Deployment branches** allows `master` (default). Add any other branch you want to deploy from while developing.
@@ -251,9 +370,7 @@ Everything in `docs/` is generated. The directory is gitignored.
 | `course/versions/<slug>/sessions.index.md` | Yes | Sessions overview. |
 | `course/versions/<slug>/docfx.json` | Optional | Override the template default. |
 | `course/versions/<slug>/sessions.toc.yml` | Optional | Override the template default. |
-| `libs/LBB/config.py` (`course_names`) | Yes | Register the course name. |
-| `libs/LBB/Engine/course.py` (`get_slug_from_name`) | Yes | Map name to slug. |
-| `course/tools/build_all.py` (`SITES`) | Yes | Enable the docfx build for the slug. |
-| `course/tools/docfx/root/index.html` | Yes | Root landing page; add a tile per course. |
+| `course/courses.json` | Yes | Register courses and control generation, publishing, landing-page text, and logos. |
+| `course/tools/docfx/root/index.html` | Rarely | Root landing-page template; course tiles come from the manifest. |
 | `course/tools/docfx/root/*.svg`, `*.png` | Yes | Root assets, including per-course logos. |
 | `course/tools/docfx/template/` | Rarely | Shared defaults: `docfx.json`, `toc.yml`, CSS/JS. |

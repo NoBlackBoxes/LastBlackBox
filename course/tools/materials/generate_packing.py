@@ -16,9 +16,8 @@ import LBB.Engine.course as Course
 # Specify Number of Kits
 num_kits = 40
 
-# List courses
-course_names = ["The Last Black Box", "Bootcamp", "Build a Brain"]
-for course_name in course_names:
+# Build packing lists for courses enabled in the central manifest.
+for course_name in Config.material_course_names:
     course = Course.Course(course_name)
     BOM_path = f"{Config.course_path}/_resources/materials/BOM/{course.slug}_BOM.csv"
     bom = pd.read_csv(BOM_path)

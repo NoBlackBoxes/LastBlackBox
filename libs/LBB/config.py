@@ -6,6 +6,7 @@ LBB : Config
 """
 
 # Imports
+import json
 import pathlib
 
 # Load LBB configuration variables
@@ -15,8 +16,53 @@ course_path = repo_path + "/course"
 libs_path = repo_path + "/libs"
 image_prefix = "../../../.."
 
-# Store course version names
-course_names = ["The Last Black Box", "Bootcamp", "Braitenberg", "Build a Brain", "Crick"]
+# Load the single course manifest used by the engine and documentation sites.
+course_manifest_path = pathlib.Path(course_path) / "courses.json"
+with course_manifest_path.open(encoding="utf8") as manifest_file:
+    course_manifest = json.load(manifest_file)["courses"]
+
+required_course_fields = {
+    "name", "engine_name", "slug", "description", "logo", "generate", "materials",
+    "published"
+}
+for course in course_manifest:
+    missing_fields = required_course_fields - course.keys()
+    if missing_fields:
+        raise ValueError(
+            f"Course {course.get('slug', '<unknown>')} is missing manifest fields: "
+            f"{', '.join(sorted(missing_fields))}"
+        )
+    for flag in ("generate", "materials", "published"):
+        if not isinstance(course[flag], bool):
+            raise ValueError(f"Course {course['slug']} field {flag} must be true or false")
+    if course["published"] and not course["generate"]:
+        raise ValueError(f"Published course {course['slug']} must also enable generation")
+    if course["materials"] and not course["generate"]:
+        raise ValueError(f"Materials course {course['slug']} must also enable generation")
+
+course_names = [course["engine_name"] for course in course_manifest if course["generate"]]
+material_course_names = [
+    course["engine_name"] for course in course_manifest if course["materials"]
+]
+course_slugs = {course["engine_name"]: course["slug"] for course in course_manifest}
+published_courses = [course for course in course_manifest if course["published"]]
+
+if len(course_slugs) != len(course_manifest):
+    raise ValueError("Course engine names must be unique in course/courses.json")
+if len({course["slug"] for course in course_manifest}) != len(course_manifest):
+    raise ValueError("Course slugs must be unique in course/courses.json")
+
+manifest_slugs = {course["slug"] for course in course_manifest}
+version_slugs = {
+    path.name for path in (pathlib.Path(course_path) / "versions").iterdir()
+    if path.is_dir()
+}
+if manifest_slugs != version_slugs:
+    raise ValueError(
+        "Course manifest and course/versions directories differ: "
+        f"manifest-only={sorted(manifest_slugs - version_slugs)}, "
+        f"directory-only={sorted(version_slugs - manifest_slugs)}"
+    )
 
 
 # Store box names (and order)

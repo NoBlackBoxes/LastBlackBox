@@ -14,9 +14,8 @@ import LBB.utilities as Utilities
 import LBB.Engine.course as Course
 import LBB.Engine.box as Box
 
-# Build courses
-course_names = ["The Last Black Box", "Bootcamp", "Build a Brain"]
-for course_name in course_names:
+# Build BOMs for courses enabled in the central manifest.
+for course_name in Config.material_course_names:
     course = Course.Course(course_name)
 
     # Gather all materials

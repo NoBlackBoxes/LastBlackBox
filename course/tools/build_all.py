@@ -8,28 +8,24 @@ Usage:
 Stages:
     0. Regenerate interactive layout SVGs from the static layout_*.svg.
     1. Run the LBB engine, regenerating all `course/versions/<slug>/<NN>_*/README.md`.
-    2. For each slug in `SITES`, run `course/tools/docfx/build_site.py <slug>`
+    2. For each published course in `course/courses.json`, run
+       `course/tools/docfx/build_site.py <slug>`
        to produce a self-contained docfx site at `docs/<slug>/`.
     3. Write a master sitemap at `docs/sitemap.xml` referencing every
        per-course sitemap.
     4. Copy the static root assets (landing page, logos, robots.txt) from
        `course/tools/docfx/root/` into `docs/`.
 
-`SITES` is the explicit list of course slugs whose docfx sites should be
-built. Add slugs here as new courses are ready to ship. The engine always
-builds READMEs for every entry in `LBB.config.course_names`; only courses
-in `SITES` get a docfx site.
+The course manifest is the single source of truth for engine generation,
+published sites, and the root landing-page tiles. The build picks up sensible
+docfx defaults from `course/tools/docfx/template/`; a course can override them
+under `course/versions/<slug>/`.
 
-Adding a new course slug is zero-config: drop a session tree under
-`course/versions/<slug>/` and add the slug to `SITES`. The build picks up
-sensible defaults (docfx.json, toc.yml, sessions.toc.yml, sessions.index.md,
-template/) from `course/tools/docfx/template/`. Override any of those by
-placing a same-named file in `course/versions/<slug>/`.
-
-This is the single command CI/CD should invoke on push to master.
+This is the single command CI/CD should invoke to build the website.
 """
 from __future__ import annotations
 
+import html
 import os
 import pathlib
 import shutil
@@ -38,6 +34,9 @@ import sys
 
 _HERE = pathlib.Path(__file__).resolve().parent
 REPO_ROOT = _HERE.parents[1]
+sys.path.insert(0, str(REPO_ROOT / "libs"))
+
+import LBB.config as Config  # noqa: E402
 
 # The LBB engine is a namespace package under libs/. Inject it into PYTHONPATH
 # for any subprocess we spawn so `import LBB.config` works without having to set
@@ -46,10 +45,6 @@ _ENV = {
     **os.environ,
     "PYTHONPATH": str(REPO_ROOT / "libs") + os.pathsep + os.environ.get("PYTHONPATH", ""),
 }
-
-# Course slugs that have a docfx site to build. Add to this list as more
-# courses get `index.md` + `toc.yml` + `docfx.json` authored.
-SITES = ["crick", "bootcamp", "buildabrain", "braitenberg", "full"]
 
 # Public base URL the deployed sites will be served from. Used to build the
 # top-level master sitemap. Update if Pages config changes.
@@ -85,8 +80,54 @@ def _write_master_sitemap(docs_root: pathlib.Path, sites: list[str], base_url: s
     print(f"  wrote {out.relative_to(docs_root.parent)} ({len(entries)} sub-sitemap(s))")
 
 
+def _write_root_landing(
+    template_path: pathlib.Path,
+    output_path: pathlib.Path,
+    courses: list[dict],
+) -> None:
+    """Render the published course tiles into the root landing-page template."""
+    marker = "<!-- COURSE_TILES -->"
+    template = template_path.read_text(encoding="utf8")
+    if template.count(marker) != 1:
+        raise SystemExit(f"expected one {marker!r} marker in {template_path}")
+
+    tiles = []
+    for course in courses:
+        name = html.escape(course["name"])
+        slug = html.escape(course["slug"], quote=True)
+        description = html.escape(course["description"])
+        logo = course.get("logo")
+
+        icon = ""
+        item_class = ' class="no-icon"'
+        if logo:
+            logo_path = template_path.parent / logo
+            if not logo_path.is_file():
+                raise SystemExit(f"course logo not found: {logo_path}")
+            logo_url = html.escape(logo, quote=True)
+            icon = f'    <img class="site-icon" src="{logo_url}" alt="{name} logo">\n'
+            item_class = ""
+
+        tiles.append(
+            f"  <li{item_class}>\n"
+            f"{icon}"
+            "    <div class=\"body\">\n"
+            f"      <a href=\"{slug}/\">{name}</a>\n"
+            f"      <div class=\"blurb\">{description}</div>\n"
+            f"      <a class=\"hint\" href=\"{slug}/\">Open the course site &rarr;</a>\n"
+            "    </div>\n"
+            "  </li>"
+        )
+
+    output_path.write_text(template.replace(marker, "\n".join(tiles)), encoding="utf8")
+    print(f"  rendered {output_path} ({len(courses)} course tile(s))")
+
+
 def main() -> None:
     python = sys.executable
+    docs_root = REPO_ROOT / "docs"
+    published_courses = Config.published_courses
+    sites = [course["slug"] for course in published_courses]
 
     # Stage 0: regenerate interactive layout SVGs from the static ones.
     print("=" * 70)
@@ -102,12 +143,15 @@ def main() -> None:
     _run([python, str(REPO_ROOT / "course" / "tools" / "engine" / "generate_courses.py")])
 
     # Stage 2: build a docfx site for each enabled course slug.
+    # Start clean so removed courses and assets cannot survive into a deployment.
+    if docs_root.exists():
+        shutil.rmtree(docs_root)
     print()
     print("=" * 70)
-    print(f"Stage 2: docfx sites for {SITES}")
+    print(f"Stage 2: docfx sites for {sites}")
     print("=" * 70)
     build_site = REPO_ROOT / "course" / "tools" / "docfx" / "build_site.py"
-    for slug in SITES:
+    for slug in sites:
         _run([python, str(build_site), slug])
 
     # Stage 3: write the master sitemap referencing each per-course sitemap.
@@ -115,7 +159,7 @@ def main() -> None:
     print("=" * 70)
     print("Stage 3: master sitemap")
     print("=" * 70)
-    _write_master_sitemap(REPO_ROOT / "docs", SITES, SITE_BASE_URL)
+    _write_master_sitemap(docs_root, sites, SITE_BASE_URL)
 
     # Stage 4: copy static root assets (landing page, logos, robots.txt) into
     # docs/. These are hand-authored under course/tools/docfx/root/ and are
@@ -125,11 +169,17 @@ def main() -> None:
     print("Stage 4: root assets")
     print("=" * 70)
     root_src = REPO_ROOT / "course" / "tools" / "docfx" / "root"
-    docs_root = REPO_ROOT / "docs"
-    copied = shutil.copytree(root_src, docs_root, dirs_exist_ok=True)
-    for entry in sorted(p.name for p in root_src.iterdir()):
-        print(f"  copied {entry}")
-    print(f"  -> {copied}")
+    docs_root.mkdir(parents=True, exist_ok=True)
+    for source in sorted(root_src.iterdir()):
+        if source.name == "index.html":
+            continue
+        destination = docs_root / source.name
+        if source.is_dir():
+            shutil.copytree(source, destination, dirs_exist_ok=True)
+        else:
+            shutil.copy2(source, destination)
+        print(f"  copied {source.name}")
+    _write_root_landing(root_src / "index.html", docs_root / "index.html", published_courses)
 
     print()
     print("All sites built. Output under:", REPO_ROOT / "docs")
