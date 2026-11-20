@@ -20,10 +20,10 @@ flowchart TD
         manifest["`course/courses.json
 **Course registry and publishing settings**`"]
 
-        versions["`course/versions/&lt;slug&gt;/
+        versions["`course/versions/{slug}/
 **Course structure, session templates and landing pages**`"]
 
-        boxes["`boxes/&lt;box&gt;/_resources/lessons/
+        boxes["`boxes/{box}/_resources/lessons/
 **Reusable lesson Markdown and assets**`"]
 
         theme["`course/tools/docfx/template/ and course/tools/docfx/root/
@@ -48,15 +48,15 @@ flowchart TD
     end
 
     subgraph intermediate["◇ Generated intermediate content"]
-        readmes["`course/versions/&lt;slug&gt;/&lt;session&gt;/README.md
+        readmes["`course/versions/{slug}/{session}/README.md
 **Expanded session Markdown**`"]
 
-        staging["`course/versions/&lt;slug&gt;/.docfx-staging/
+        staging["`course/versions/{slug}/.docfx-staging/
 **Temporary assembled Docfx input**`"]
     end
 
     subgraph output["🌐︎ Generated website"]
-        course_sites["`docs/&lt;slug&gt;/
+        course_sites["`docs/{slug}/
 **One static site per published course**`"]
 
         landing["`docs/index.html and docs/sitemap.xml
@@ -121,13 +121,13 @@ sequenceDiagram
 
     loop Each course with generate = true
         Courses->>Engine: Build and render the course
-        Note right of Engine: Reads session templates from<br/>course/versions/&lt;slug&gt;/
-        Note right of Engine: Expands reusable lessons from<br/>boxes/&lt;box&gt;/_resources/lessons/
+        Note right of Engine: Reads session templates from<br/>course/versions/{slug}/
+        Note right of Engine: Expands reusable lessons from<br/>boxes/{box}/_resources/lessons/
         Engine-->>Courses: Rendered session Markdown
         Courses->>Courses: Write generated session README.md files
     end
 
-    Courses->>Courses: Generate boxes/&lt;box&gt;/README.md files
+    Courses->>Courses: Generate boxes/{box}/README.md files
     Courses-->>Build: Course generation complete
 
     loop Each course with published = true
@@ -136,7 +136,7 @@ sequenceDiagram
         Site->>Site: Assemble .docfx-staging/
         Site->>Site: Bundle assets and rewrite links
         Site->>Docfx: Build staged course
-        Docfx->>Output: Write docs/&lt;slug&gt;/
+        Docfx->>Output: Write docs/{slug}/
         Site-->>Build: Course site complete
     end
 
