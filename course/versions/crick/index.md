@@ -1,8 +1,6 @@
 # LBB: Crick Bootcamp
 
-<p align="center">
-<img src="/course/_resources/designs/posters/crick.svg" alt="Crick course poster: the curriculum and the NB3 boards in their build order" width="560"/>
-</p>
+<!-- LBB_CURRICULUM_MAP -->
 
 Welcome. Over five days you will build **NB3**, a robot designed from individual electrons up to a web-connected machine running computer vision and audio models. By the end of the week you will have the hardware, the code, and the mental model to extend any layer for your own experiments.
 
@@ -32,16 +30,6 @@ Welcome. Over five days you will build **NB3**, a robot designed from individual
 - Pick a track and ship it
   - Sensor streaming, audio DSP, computer vision, voice, full-stack
   - **Project**: *Your own NB3 extension, built and demoed*
-
-## The curriculum
-
-Over five days Crick traces these eight boxes from raw electronics up to intelligence, building cumulatively from one to the next. Each day touches several. Hover any box to highlight it; click to open its folder on GitHub for the deeper material.
-
-<p align="center">
-<object data="/course/_resources/designs/layout/svg/layout_buildabrain_interactive.svg" type="image/svg+xml" width="580" aria-label="Crick course layout: eight boxes from sensors to intelligence (hover any box to highlight, click to open its folder on GitHub)">
-  <img src="/course/_resources/designs/layout/png/layout_buildabrain.png" alt="Crick course layout: eight boxes from sensors to intelligence" width="580"/>
-</object>
-</p>
 
 ## Before you arrive
 

@@ -1,5 +1,10 @@
 /* NoBlackBoxes / LastBlackBox docfx theme overrides */
 
+/* ===========================================================================
+   Theme tokens
+   Override Docfx/Bootstrap variables here so light and dark themes share the
+   same component rules below.
+   ========================================================================== */
 :root, [data-bs-theme="light"] {
   --bs-link-color:        #111;
   --bs-link-hover-color:  #000;
@@ -14,6 +19,12 @@
   --lbb-rule:             #e6e6e6;
   --lbb-soft:             #f0f0f0;
   --lbb-accent:           #111111;
+  --lbb-box-bg:           #11151a;
+  --lbb-box-border:       #11151a;
+  --lbb-box-text:         #ffffff;
+  --lbb-course-accent:    #ffda00;
+  --lbb-course-accent-border: #c9aa00;
+  --lbb-box-shadow:       rgb(17 20 24 / 24%);
 }
 
 [data-bs-theme="dark"] {
@@ -29,9 +40,17 @@
   --lbb-rule:             #2c3038;
   --lbb-soft:             #1f242b;
   --lbb-accent:           #ffffff;
+  --lbb-box-bg:           #171b20;
+  --lbb-box-border:       #343a43;
+  --lbb-box-text:         #f5f5f5;
+  --lbb-course-accent:    #ffda00;
+  --lbb-course-accent-border: #ffda00;
+  --lbb-box-shadow:       rgb(0 0 0 / 55%);
 }
 
-/* Body */
+/* ===========================================================================
+   Base typography
+   ========================================================================== */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
                "Helvetica Neue", Arial, sans-serif;
@@ -47,27 +66,116 @@ h3 { font-size: 1.15rem; margin-top: 2rem; }
 h4 { font-size: 1rem;    margin-top: 1.5rem; color: var(--lbb-muted); font-weight: 500; }
 code, pre, kbd { font-family: "SF Mono", Menlo, Consolas, "Liberation Mono", monospace; font-size: 0.92em; }
 
-/* Header / navbar */
+/* ===========================================================================
+   Header and course identity
+   main.js keeps the global brand in the navbar and places an optional host
+   logo below the curriculum grid on the course landing page.
+   ========================================================================== */
 header { background: var(--lbb-surface) !important; border-bottom-color: var(--lbb-rule) !important; }
-header .navbar { padding-top: 1.1rem; padding-bottom: 1.1rem; min-height: 104px; }
-.navbar-brand { gap: 0.75rem; font-weight: 600; letter-spacing: 0.01em; font-size: 1.15rem; }
-#logo, .navbar-brand img { height: 64px; width: 64px; }
+header .navbar { padding-top: 0.55rem; padding-bottom: 0.55rem; min-height: 68px; }
+.navbar-brand { gap: 0.6rem; font-weight: 600; letter-spacing: 0.01em; font-size: 1rem; }
+#logo, .navbar-brand img { height: 42px; width: 42px; }
+
+/* Optional host identity, shown beneath the course title on its landing page. */
+.lbb-partner {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: -0.25rem 0 1.5rem;
+  color: var(--lbb-muted);
+}
+.lbb-partner-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.lbb-secondary-logo-link { display: inline-flex; align-items: center; }
 .lbb-secondary-logo {
-  height: 64px; width: auto;
-  padding-left: 0.9rem; margin-left: 0.6rem; margin-right: 0.5rem;
-  border-left: 1px solid var(--lbb-rule);
+  display: block;
+  height: 56px;
+  width: auto;
 }
 
-/* Mobile-only TOC toggle button (sits before the brand) */
+/* Navbar controls injected by main.js. */
+/* Mobile-only TOC toggle button (sits before the brand). */
 .lbb-toc-toggle { font-size: 1.5rem; padding: 0.25rem 0.6rem; margin-right: 0.5rem; color: var(--bs-body-color) !important; }
 
-/* Theme toggle */
+/* Light / Dark / Auto theme toggle. */
 .lbb-theme-toggle { color: var(--bs-body-color) !important; padding: 0.3rem 0.6rem; font-size: 1.2rem; }
 .lbb-theme-toggle:hover { color: var(--lbb-accent) !important; }
 
 #navbar { display: flex; align-items: center; margin-left: auto; gap: 0.25rem; }
 
-/* Nested left sidebar (built by main.js into <nav class="toc" id="toc">) */
+/* ===========================================================================
+   Generated curriculum grid
+   build_site.py emits all 28 cards. Active cards are links; inactive cards
+   are non-interactive and carry the lock icon.
+   ========================================================================== */
+.lbb-curriculum { margin: 1.25rem 0 2.5rem; }
+.lbb-box-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 72rem;
+  padding: 0;
+  margin: 0 auto;
+  list-style: none;
+}
+.lbb-box-item { min-width: 0; }
+.lbb-box {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  min-height: 5.25rem;
+  padding: 0.65rem 0.4rem;
+  border: 1px solid var(--lbb-box-border);
+  border-radius: 5px;
+  background: var(--lbb-box-bg);
+  color: var(--lbb-box-text);
+  text-align: center;
+  font-size: clamp(0.72rem, 1.15vw, 0.95rem);
+  font-weight: 600;
+  line-height: 1.15;
+}
+.lbb-box-lock {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.55rem;
+  color: currentColor;
+  font-size: 0.8rem;
+  line-height: 1;
+  opacity: 0.72;
+}
+/* Keep unavailable boxes readable but visually secondary. */
+.lbb-box-item:not(.is-active) .lbb-box { opacity: 0.78; }
+
+/* Only active boxes react to pointer and keyboard focus. */
+.lbb-box-item.is-active .lbb-box {
+  border-color: var(--lbb-course-accent-border);
+  background: var(--lbb-course-accent);
+  color: #111111;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 140ms ease, box-shadow 140ms ease;
+}
+.lbb-box-item.is-active .lbb-box:hover,
+.lbb-box-item.is-active .lbb-box:focus-visible {
+  color: #111111;
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 10px 22px var(--lbb-box-shadow);
+}
+.lbb-box-item.is-active .lbb-box:focus-visible {
+  outline: 3px solid var(--bs-body-color);
+  outline-offset: 3px;
+}
+
+/* ===========================================================================
+   Navigation
+   main.js builds the nested left sidebar and the right-hand page outline.
+   ========================================================================== */
+/* Nested left sidebar. */
 nav.toc { font-size: 0.94rem; padding: 0.5rem 0.25rem; }
 ul.lbb-toc-root, ul.lbb-toc-sub { list-style: none; padding-left: 0; margin: 0; }
 .lbb-toc-leaf { margin: 0.1rem 0; }
@@ -111,7 +219,7 @@ ul.lbb-toc-sub .lbb-toc-leaf a.is-active {
   background: var(--lbb-soft);
 }
 
-/* Right affix */
+/* Right-hand "On this page" outline. */
 @media (min-width: 980px) {
   body[data-layout=""] > main > .affix,
   body[data-layout="conceptual"] > main > .affix { display: block !important; }
@@ -133,12 +241,15 @@ ul.lbb-toc-sub .lbb-toc-leaf a.is-active {
 .affix a:hover  { color: var(--lbb-accent); border-left-color: #ccc; }
 .affix a.active { color: var(--lbb-accent); font-weight: 600; border-left-color: var(--lbb-accent); }
 
-/* Materials table */
+/* ===========================================================================
+   Course content
+   ========================================================================== */
+/* Materials tables emitted by the course engine. */
 table { border-collapse: collapse; }
 table th, table td { border: 1px solid var(--lbb-rule); padding: 0.35rem 0.55rem; }
 table thead th { background: var(--lbb-soft); }
 
-/* Lesson video thumbnail (freeze-frame wrapper) */
+/* Lesson GIF wrapper: main.js freezes the first frame until hover. */
 .lbb-thumb {
   display: inline-block;
   position: relative;
@@ -150,7 +261,7 @@ table thead th { background: var(--lbb-soft); }
 }
 .lbb-thumb img { display: block; max-width: 100%; transition: opacity 80ms ease; }
 
-/* Blockquote */
+/* Explanatory callouts in generated lessons. */
 blockquote {
   border-left: 3px solid var(--lbb-rule);
   padding: 0.25rem 0 0.25rem 1rem;
@@ -158,20 +269,40 @@ blockquote {
   margin: 0.5rem 0 1rem;
 }
 
-/* h4 "Watch this video:" line */
+/* Video lesson heading links. */
 h4 a { color: inherit; text-decoration: underline; text-decoration-color: #bbb; text-underline-offset: 3px; }
 h4 a:hover { text-decoration-color: var(--lbb-accent); }
 
-/* Mobile responsiveness */
+/* ===========================================================================
+   Responsive layout and accessibility
+   ========================================================================== */
+/* Prevent authored media and wide generated tables escaping the article. */
 img, object, svg { max-width: 100%; height: auto; }
 p[align="center"] object, p[align="center"] img { max-width: 100%; }
 .content article table { display: block; overflow-x: auto; max-width: 100%; }
 
 @media (max-width: 768px) {
-  header .navbar { min-height: 64px; padding-top: 0.5rem; padding-bottom: 0.5rem; }
-  #logo, .navbar-brand img { height: 40px; width: 40px; }
-  .lbb-secondary-logo { height: 40px; padding-left: 0.5rem; margin-left: 0.3rem; margin-right: 0.5rem; }
-  .navbar-brand { font-size: 1rem; }
+  header .navbar { min-height: 56px; padding-top: 0.4rem; padding-bottom: 0.4rem; }
+  #logo, .navbar-brand img { height: 34px; width: 34px; }
+  .navbar-brand { font-size: 0.95rem; }
+  .lbb-partner { margin-bottom: 1rem; }
+  .lbb-secondary-logo { height: 48px; }
   h1 { font-size: 1.55rem; }
   h2 { font-size: 1.2rem; }
+}
+
+@media (max-width: 1100px) {
+  /* Seven desktop columns become four on tablets. */
+  .lbb-box-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+@media (max-width: 560px) {
+  /* Two columns keep all card labels legible on narrow phones. */
+  .lbb-box-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lbb-box { min-height: 4.75rem; font-size: 0.86rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* Preserve the state change without animating it. */
+  .lbb-box-item.is-active .lbb-box { transition: none; }
 }

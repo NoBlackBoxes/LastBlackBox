@@ -6,14 +6,13 @@ Usage:
     python course/tools/build_all.py
 
 Stages:
-    0. Regenerate interactive layout SVGs from the static layout_*.svg.
-    1. Run the LBB engine, regenerating all `course/versions/<slug>/<NN>_*/README.md`.
-    2. For each published course in `course/courses.json`, run
+    0. Run the LBB engine, regenerating all `course/versions/<slug>/<NN>_*/README.md`.
+    1. For each published course in `course/courses.json`, run
        `course/tools/docfx/build_site.py <slug>`
        to produce a self-contained docfx site at `docs/<slug>/`.
-    3. Write a master sitemap at `docs/sitemap.xml` referencing every
+    2. Write a master sitemap at `docs/sitemap.xml` referencing every
        per-course sitemap.
-    4. Copy the static root assets (landing page, logos, robots.txt) from
+    3. Copy the static root assets (landing page, logos, robots.txt) from
        `course/tools/docfx/root/` into `docs/`.
 
 The course manifest is the single source of truth for engine generation,
@@ -129,44 +128,37 @@ def main() -> None:
     published_courses = Config.published_courses
     sites = [course["slug"] for course in published_courses]
 
-    # Stage 0: regenerate interactive layout SVGs from the static ones.
+    # Stage 0: regenerate all course READMEs via the engine.
     print("=" * 70)
-    print("Stage 0: interactive layout SVGs")
-    print("=" * 70)
-    _run([python, str(REPO_ROOT / "course" / "tools" / "designs" / "generate_interactive_layouts.py")])
-
-    # Stage 1: regenerate all course READMEs via the engine.
-    print()
-    print("=" * 70)
-    print("Stage 1: LBB engine (regenerating course READMEs)")
+    print("Stage 0: LBB engine (regenerating course READMEs)")
     print("=" * 70)
     _run([python, str(REPO_ROOT / "course" / "tools" / "engine" / "generate_courses.py")])
 
-    # Stage 2: build a docfx site for each enabled course slug.
+    # Stage 1: build a docfx site for each enabled course slug.
     # Start clean so removed courses and assets cannot survive into a deployment.
     if docs_root.exists():
         shutil.rmtree(docs_root)
     print()
     print("=" * 70)
-    print(f"Stage 2: docfx sites for {sites}")
+    print(f"Stage 1: docfx sites for {sites}")
     print("=" * 70)
     build_site = REPO_ROOT / "course" / "tools" / "docfx" / "build_site.py"
     for slug in sites:
         _run([python, str(build_site), slug])
 
-    # Stage 3: write the master sitemap referencing each per-course sitemap.
+    # Stage 2: write the master sitemap referencing each per-course sitemap.
     print()
     print("=" * 70)
-    print("Stage 3: master sitemap")
+    print("Stage 2: master sitemap")
     print("=" * 70)
     _write_master_sitemap(docs_root, sites, SITE_BASE_URL)
 
-    # Stage 4: copy static root assets (landing page, logos, robots.txt) into
+    # Stage 3: copy static root assets (landing page, logos, robots.txt) into
     # docs/. These are hand-authored under course/tools/docfx/root/ and are
     # served at the site root alongside the per-course subtrees.
     print()
     print("=" * 70)
-    print("Stage 4: root assets")
+    print("Stage 3: root assets")
     print("=" * 70)
     root_src = REPO_ROOT / "course" / "tools" / "docfx" / "root"
     docs_root.mkdir(parents=True, exist_ok=True)

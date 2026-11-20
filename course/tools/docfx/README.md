@@ -2,7 +2,7 @@
 
 This is the practical guide for working on the LBB course documentation sites: building them locally, adding new sessions, and shipping a new course.
 
-The sites live at `https://noblackboxes.github.io/LastBlackBox/<slug>/` (e.g. [`/crick/`](https://noblackboxes.github.io/LastBlackBox/crick/)). The complete build has five stages, described below. Its core content pipeline has two steps:
+The sites live at `https://noblackboxes.github.io/LastBlackBox/<slug>/` (e.g. [`/crick/`](https://noblackboxes.github.io/LastBlackBox/crick/)). The complete build has four stages, described below. Its core content pipeline has two steps:
 
 1. The **LBB engine** ([libs/LBB/Engine/](../../../libs/LBB/Engine/)) reads `_resources/template.md` for every session, expands `{Box:Lesson}` tags into the relevant lesson content pulled from [boxes/](../../../boxes/), and writes the rendered `README.md` for each session.
 2. **docfx** wraps those READMEs in a static site using a shared template under [template/](template/).
@@ -23,8 +23,8 @@ flowchart TD
         versions["`course/versions/{slug}/
 **Course structure, session templates and landing pages**`"]
 
-        boxes["`boxes/{box}/_resources/lessons/
-**Reusable lesson Markdown and assets**`"]
+        boxes["`boxes/{box}/_resources/
+**Reusable lessons, assets and materials**`"]
 
         theme["`course/tools/docfx/template/ and course/tools/docfx/root/
 **Shared layout, styling and root assets**`"]
@@ -49,7 +49,8 @@ flowchart TD
 
     subgraph intermediate["◇ Generated intermediate content"]
         readmes["`course/versions/{slug}/{session}/README.md
-**Expanded session Markdown**`"]
+boxes/{box}/README.md
+**Generated session and box Markdown**`"]
 
         staging["`course/versions/{slug}/.docfx-staging/
 **Temporary assembled Docfx input**`"]
@@ -97,7 +98,6 @@ flowchart TD
 sequenceDiagram
     actor Runner as Developer or GitHub Actions
     participant Build as build_all.py
-    participant Layouts as generate_interactive_layouts.py
     participant Courses as generate_courses.py
     participant Config as config.py
     participant Engine as LBB Engine
@@ -111,9 +111,6 @@ sequenceDiagram
 
     Build->>Config: Load course/courses.json
     Config-->>Build: Validated course configuration
-
-    Build->>Layouts: Generate interactive layout SVGs
-    Layouts-->>Build: Updated shared SVG assets
 
     Build->>Courses: Generate course content
     Courses->>Config: Load courses with generate = true
@@ -133,6 +130,8 @@ sequenceDiagram
     loop Each course with published = true
         Build->>Site: Build the course slug
         Note right of Site: Reads generated session READMEs,<br/>index.md and sessions.index.md
+        Site->>Site: Derive curriculum boxes from lesson tags
+        Site->>Site: Generate the shared curriculum grid
         Site->>Site: Assemble .docfx-staging/
         Site->>Site: Bundle assets and rewrite links
         Site->>Docfx: Build staged course
@@ -192,7 +191,7 @@ docfx --version
 uv run --no-project python course/tools/build_all.py
 ```
 
-Output lands at `docs/<slug>/` (e.g. `docs/crick/`), with `docs/index.html` (landing page) and `docs/sitemap.xml` at the root. The script has five stages: interactive SVGs, engine READMEs, per-slug docfx sites, master sitemap, root assets. PYTHONPATH for the LBB import is set automatically.
+Output lands at `docs/<slug>/` (e.g. `docs/crick/`), with `docs/index.html` (landing page) and `docs/sitemap.xml` at the root. The script has four stages: engine READMEs, per-slug Docfx sites, master sitemap, and root assets. PYTHONPATH for the LBB import is set automatically.
 
 `uv run --no-project` bypasses the Microsoft Store Python shim on Windows. On Linux / Mac, plain `python course/tools/build_all.py` is fine.
 
@@ -202,7 +201,7 @@ Output lands at `docs/<slug>/` (e.g. `docs/crick/`), with `docs/index.html` (lan
 uv run --no-project python course/tools/docfx/build_site.py crick
 ```
 
-Skips Stage 0 (SVGs) and Stage 1 (engine READMEs); assumes those are already up to date. Use when only touching docfx config or template files for one course.
+Skips Stage 0 (engine READMEs); assumes those are already up to date. Use when only touching Docfx configuration, landing-page content, or shared styling.
 
 ### Serve locally
 
@@ -263,7 +262,7 @@ After editing any `template.md`:
 uv run --no-project python course/tools/engine/generate_courses.py
 ```
 
-Or just run `build_all.py`, which does this as Stage 1.
+Or just run `build_all.py`, which does this as Stage 0.
 
 
 
@@ -307,10 +306,10 @@ Every directory under `course/versions/` must have exactly one manifest entry. A
 
 For a customised course site, add these files under `course/versions/<slug>/`:
 
-- **`index.md`** — the per-course landing page. Linked from the root site landing page. See [../../versions/crick/index.md](../../versions/crick/index.md) as a model.
+- **`index.md`** — the per-course landing page. Put one `<!-- LBB_CURRICULUM_MAP -->` marker immediately after the H1 so the generated 28-box grid precedes the course content. See [../../versions/crick/index.md](../../versions/crick/index.md) as a model.
 - **`sessions.index.md`** — the sessions overview, linked from the top-nav. See [../../versions/crick/sessions.index.md](../../versions/crick/sessions.index.md).
 
-Both are plain Markdown. Use repo-relative paths for images (`/course/_resources/...`) and session-relative paths for session links (`sessions/01_my-session/README.md`). If either file is absent, `build_site.py` generates a basic version from the course slug and discovered sessions.
+Both are plain Markdown. Use repo-relative paths for images (`/course/_resources/...`) and session-relative paths for session links (`sessions/01_my-session/README.md`). If either file is absent, `build_site.py` generates a basic version from the course slug and discovered sessions. The curriculum grid is derived from the `{Box:Lesson}` tags in those sessions; no separate course box list is maintained.
 
 The shared [template/](template/) provides `docfx.json.tmpl`, `toc.yml`, and the shared CSS/JS. `build_site.py` generates `sessions.toc.yml` from the discovered sessions. Override these defaults by adding `docfx.json`, `toc.yml`, `sessions.toc.yml`, or files under `template/` to `course/versions/<slug>/`.
 
@@ -372,7 +371,7 @@ Everything in `docs/` is generated. The directory is gitignored.
 |---|---|---|
 | `course/versions/<slug>/<NN>_*/_resources/template.md` | Yes | Session template with `{Box:Lesson}` tags. |
 | `course/versions/<slug>/<NN>_*/README.md` | No | Generated by the engine. |
-| `course/versions/<slug>/index.md` | Optional | Custom per-course landing page; generated when absent. |
+| `course/versions/<slug>/index.md` | Optional | Custom landing page with one curriculum marker; generated when absent. |
 | `course/versions/<slug>/sessions.index.md` | Optional | Custom sessions overview; generated when absent. |
 | `course/versions/<slug>/docfx.json` | Optional | Override the template default. |
 | `course/versions/<slug>/sessions.toc.yml` | Optional | Override the template default. |

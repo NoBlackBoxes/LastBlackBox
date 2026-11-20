@@ -1,8 +1,6 @@
 # LBB: Bootcamp
 
-<p align="center">
-<img src="/course/_resources/designs/layout/png/layout_bootcamp.png" alt="Bootcamp course layout: the boxes you will open during a one-week bootcamp" width="700"/>
-</p>
+<!-- LBB_CURRICULUM_MAP -->
 
 **LBB-102** is a one-week bootcamp version of *The Last Black Box*. Over five days, mornings and afternoons, you will build **NB3** — a robot brain assembled from individual electrons up to a vision-and-audio system, with no black boxes along the way.
 
@@ -27,16 +25,6 @@
 ### Day 5 - Images
 - Morning - [Cameras](sessions/09_cameras/README.md): image acquisition hardware.
 - Afternoon - [Computer Vision](sessions/10_computer-vision/README.md): processing 2-D data.
-
-## The curriculum
-
-Bootcamp traces twenty boxes from raw electronics through software systems to audio and vision processing. Hover any box to highlight it; click to open its folder on GitHub for the deeper material.
-
-<p align="center">
-<object data="/course/_resources/designs/layout/svg/layout_bootcamp_interactive.svg" type="image/svg+xml" width="700" aria-label="Bootcamp course layout (hover any box to highlight, click to open its folder on GitHub)">
-  <img src="/course/_resources/designs/layout/png/layout_bootcamp.png" alt="Bootcamp course layout" width="700"/>
-</object>
-</p>
 
 ## How to use these pages
 

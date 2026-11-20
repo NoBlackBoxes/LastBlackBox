@@ -38,9 +38,13 @@ The script is course-agnostic: any course slug whose folder has at least
 one NN_*/README.md can be built. Customise per-course by dropping
 docfx.json / toc.yml / index.md / sessions.* / template/ files into
 `course/versions/<slug>/`.
+
+The landing-page curriculum grid is derived from the session templates'
+`{Box:Lesson}` tags, so it has no separate configuration list.
 """
 from __future__ import annotations
 
+import html
 import pathlib
 import re
 import shutil
@@ -53,7 +57,12 @@ sys.path.insert(0, str(_HERE))
 from rewrite_links import IMG_EXT, rewrite_non_images, _PARENT_TRAVERSAL  # noqa: E402
 
 REPO_ROOT = _HERE.parents[2]
+sys.path.insert(0, str(REPO_ROOT / "libs"))
+
+import LBB.config as Config  # noqa: E402
+
 STAGING_NAME = ".docfx-staging"
+CURRICULUM_MARKER = "<!-- LBB_CURRICULUM_MAP -->"
 
 # Shared brand assets used by every course site. Copied into staging root so
 # docfx's _appLogoPath / _appFaviconPath can find them.
@@ -70,7 +79,7 @@ SITE_BASE_URL = "https://noblackboxes.github.io/LastBlackBox"
 
 # Match relative parent-traversal AND absolute repo-root image references.
 # Captures the path text we need to resolve to an absolute repo path.
-# `data=` is included so <object data="..."> embeds (interactive SVGs) bundle too.
+# `data=` is included so image assets embedded with <object> are bundled too.
 _ROOTS = r"(?:boxes|libs|course)"
 _HTML_IMG_RE = re.compile(
     rf'((?:href|src|data)\s*=\s*")((?:/|(?:\.\./)+){_ROOTS}/[^"]*?\.(?:'
@@ -86,6 +95,7 @@ _MD_IMG_RE = re.compile(
 # First H1 in a session template.md is `# CourseName : SessionName`. Capture
 # everything after the colon as the human-readable session label.
 _H1_SESSION_RE = re.compile(r"^#\s+[^:]+?\s+:\s+(.+?)\s*$", re.MULTILINE)
+_LESSON_TAG_RE = re.compile(r"\{([^:{}]+):[^{}]+\}")
 
 
 def _normalise_to_repo_relative(path: str) -> str:
@@ -205,6 +215,8 @@ def _generate_index(slug: str, app_name: str, sessions: list[tuple[pathlib.Path,
     lines = [
         f"# {app_name}",
         "",
+        CURRICULUM_MARKER,
+        "",
         f"A LastBlackBox course version (`{slug}`). Pick a session to begin.",
         "",
         "## Sessions",
@@ -214,6 +226,92 @@ def _generate_index(slug: str, app_name: str, sessions: list[tuple[pathlib.Path,
         lines.append(f"- [{label}](sessions/{session_dir.name}/README.md)")
     lines.append("")
     return "\n".join(lines)
+
+
+def _curriculum_sessions(
+    course_dir: pathlib.Path,
+    sessions: list[tuple[pathlib.Path, str]],
+) -> dict[str, tuple[str, str]]:
+    """Map each referenced box to the first session that introduces it.
+
+    Session templates are the source of truth: a `{Box:Lesson}` tag makes that
+    box part of the course. Box names are validated against Config.box_names.
+    """
+    canonical_boxes = {name.casefold(): name for name in Config.box_names}
+    curriculum: dict[str, tuple[str, str]] = {}
+
+    for session_dir, session_label in sessions:
+        template = session_dir / "_resources" / "template.md"
+        if not template.is_file():
+            continue
+        for raw_name in _LESSON_TAG_RE.findall(template.read_text(encoding="utf8")):
+            key = raw_name.strip().casefold()
+            if key not in canonical_boxes:
+                raise SystemExit(
+                    f"unknown box {raw_name!r} in {template.relative_to(REPO_ROOT)}"
+                )
+            box_name = canonical_boxes[key]
+            curriculum.setdefault(box_name, (session_dir.name, session_label))
+
+    return curriculum
+
+
+def _render_curriculum_map(
+    course_dir: pathlib.Path,
+    sessions: list[tuple[pathlib.Path, str]],
+) -> str:
+    """Render the shared 28-box curriculum map as accessible HTML."""
+    curriculum = _curriculum_sessions(course_dir, sessions)
+    lines = [
+        '<div class="lbb-curriculum">',
+        '  <ol class="lbb-box-grid" aria-label="Last Black Box curriculum">',
+    ]
+
+    for box_name in Config.box_names:
+        escaped_name = html.escape(box_name)
+        if box_name in curriculum:
+            session_dir, session_label = curriculum[box_name]
+            href = f"sessions/{session_dir}/README.md"
+            aria = html.escape(f"{box_name}: open {session_label}", quote=True)
+            lines.extend([
+                '    <li class="lbb-box-item is-active">',
+                f'      <a class="lbb-box" href="{href}" aria-label="{aria}">',
+                f"        <span>{escaped_name}</span>",
+                "      </a>",
+                "    </li>",
+            ])
+        else:
+            aria = html.escape(f"{box_name}: not included in this course", quote=True)
+            lines.extend([
+                '    <li class="lbb-box-item">',
+                f'      <span class="lbb-box" aria-label="{aria}">',
+                '        <i class="bi bi-lock lbb-box-lock" aria-hidden="true"></i>',
+                f"        <span>{escaped_name}</span>",
+                "      </span>",
+                "    </li>",
+            ])
+
+    lines.extend(["  </ol>", "</div>"])
+    return "\n".join(lines)
+
+
+def _insert_curriculum_map(
+    index_path: pathlib.Path,
+    course_dir: pathlib.Path,
+    sessions: list[tuple[pathlib.Path, str]],
+) -> None:
+    """Replace the single curriculum marker in a staged landing page."""
+    text = index_path.read_text(encoding="utf8")
+    marker_count = text.count(CURRICULUM_MARKER)
+    if marker_count != 1:
+        raise SystemExit(
+            f"expected one {CURRICULUM_MARKER!r} marker in "
+            f"{index_path.relative_to(REPO_ROOT)}, found {marker_count}"
+        )
+    index_path.write_text(
+        text.replace(CURRICULUM_MARKER, _render_curriculum_map(course_dir, sessions)),
+        encoding="utf8",
+    )
 
 
 def _render_docfx_json(slug: str, app_name: str) -> str:
@@ -292,6 +390,7 @@ def _stage(course_dir: pathlib.Path, staging: pathlib.Path, slug: str) -> list[p
         (staging / "index.md").write_text(
             _generate_index(slug, app_name, sessions), encoding="utf8"
         )
+    _insert_curriculum_map(staging / "index.md", course_dir, sessions)
 
     md_files: list[pathlib.Path] = [staging / "index.md"]
 

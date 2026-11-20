@@ -15,6 +15,9 @@
 
 window.LBB = window.LBB || {};
 
+/* ===========================================================================
+   Shared helpers
+   ========================================================================== */
 function lbbOnReady(fn) {
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", fn);
@@ -29,7 +32,11 @@ function lbbRel() {
 }
 
 
-/* Freeze-frame lesson GIFs */
+/* ===========================================================================
+   Lesson GIF previews
+   Capture the first frame as a still image, then restore the original GIF
+   while the pointer is over its link or wrapper.
+   ========================================================================== */
 lbbOnReady(function () {
   if (window.LBB.freeze) return; window.LBB.freeze = true;
 
@@ -75,34 +82,54 @@ lbbOnReady(function () {
 });
 
 
-/* Brand link rewrite: the LBB icon should take students up to the top-level
-   courses landing rather than back to the current course's intro. */
+/* ===========================================================================
+   Global brand
+   Keep the navbar identity stable across course sites and link it to the
+   top-level courses landing. The course name remains the page H1.
+   ========================================================================== */
 lbbOnReady(function () {
   if (window.LBB.brandHref) return; window.LBB.brandHref = true;
   var brand = document.querySelector(".navbar-brand");
   if (!brand) return;
+  Array.from(brand.childNodes).forEach(function (node) {
+    if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
+      node.textContent = " Last Black Box";
+    }
+  });
+  var logo = brand.querySelector("img");
+  if (logo) logo.alt = "Last Black Box";
   var rel = lbbRel();
   // From a course-root page (rel = "") the landing is "../"; from any deeper
   // page (rel = "../../...") it is rel + "../".
   brand.href = (rel + "../").replace(/\/+/g, "/");
 });
 
-/* Secondary logo (host institution); convention:
+/* ===========================================================================
+   Optional host identity
+   Shown only on the course landing page, after the generated curriculum grid.
+   Asset convention:
      template/public/secondary_logo.{png,svg}   (the image)
      template/public/site.json                  (optional metadata)
    site.json may include `secondary_logo_url` and `secondary_logo_label`. If
-   present, the logo is wrapped in an <a> pointing at that URL (new tab).
-*/
+   present, the logo is linked to that URL. Deeper lesson pages omit this block.
+   ========================================================================== */
 lbbOnReady(function () {
   if (window.LBB.secondaryLogo) return; window.LBB.secondaryLogo = true;
-  var brand = document.querySelector(".navbar-brand");
-  if (!brand) return;
-  if (brand.parentNode.querySelector(".lbb-secondary-logo")) return;
   var rel = lbbRel();
+  if (rel) return;
+  var heading = document.querySelector("article h1");
+  if (!heading || document.querySelector(".lbb-partner")) return;
   var exts = ["png", "svg"];
 
   function placeLogo(imgUrl, metaUrl, label) {
-    if (brand.parentNode.querySelector(".lbb-secondary-logo")) return;
+    if (document.querySelector(".lbb-partner")) return;
+    var partner = document.createElement("div");
+    partner.className = "lbb-partner";
+    var caption = document.createElement("span");
+    caption.className = "lbb-partner-label";
+    caption.textContent = "In partnership with";
+    partner.appendChild(caption);
+
     var img = document.createElement("img");
     img.src = imgUrl;
     img.alt = label || "Host institution";
@@ -118,7 +145,9 @@ lbbOnReady(function () {
       a.appendChild(img);
       node = a;
     }
-    brand.parentNode.insertBefore(node, brand.nextSibling);
+    partner.appendChild(node);
+    var curriculum = document.querySelector(".lbb-curriculum");
+    (curriculum || heading).insertAdjacentElement("afterend", partner);
   }
 
   function trySiteMeta(imgUrl) {
@@ -140,9 +169,12 @@ lbbOnReady(function () {
 });
 
 
-/* Nested left sidebar. Fetch root toc.json; for any entry whose href ends
+/* ===========================================================================
+   Nested left sidebar
+   Fetch root toc.json; for any entry whose href ends
    in "/" (i.e., is a section), also fetch that section's toc.json and nest
-   the items under it. Render as a tree into <nav id="toc">. */
+   the items under it. Render as a tree into <nav id="toc">.
+   ========================================================================== */
 lbbOnReady(function () {
   if (window.LBB.sideNav) return; window.LBB.sideNav = true;
   var toc = document.getElementById("toc");
@@ -266,8 +298,11 @@ lbbOnReady(function () {
 });
 
 
-/* Mobile-only TOC toggle. Adds a button to the navbar that opens the
-   sidebar offcanvas. Only visible below the md breakpoint via CSS. */
+/* ===========================================================================
+   Mobile navigation
+   Add a navbar button that opens Docfx's sidebar offcanvas. CSS hides the
+   button at and above the Bootstrap md breakpoint.
+   ========================================================================== */
 lbbOnReady(function () {
   if (window.LBB.mobileTocToggle) return; window.LBB.mobileTocToggle = true;
   var brand = document.querySelector(".navbar-brand");
@@ -289,15 +324,19 @@ lbbOnReady(function () {
 });
 
 
-/* Theme toggle: cycles Light / Dark / Auto via Bootstrap data-bs-theme. */
+/* ===========================================================================
+   Theme control
+   Default to Light, then cycle Light / Dark / Auto. Reuse Docfx's `theme`
+   storage key so its early page script can apply saved choices.
+   ========================================================================== */
 lbbOnReady(function () {
   if (window.LBB.themeToggle) return; window.LBB.themeToggle = true;
   var navbar = document.getElementById("navbar");
   if (!navbar) return;
   if (navbar.querySelector(".lbb-theme-toggle")) return;
 
-  var STORAGE_KEY = "lbb-theme";
-  function current() { return localStorage.getItem(STORAGE_KEY) || "auto"; }
+  var STORAGE_KEY = "theme";
+  function current() { return localStorage.getItem(STORAGE_KEY) || "light"; }
   function apply(t) {
     var resolved = t === "auto"
       ? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
@@ -306,7 +345,7 @@ lbbOnReady(function () {
     btn.setAttribute("aria-label", "Theme: " + t);
     icon.className = "bi " + (t === "dark" ? "bi-moon" : t === "light" ? "bi-sun" : "bi-circle-half");
   }
-  function next(t) { return t === "auto" ? "light" : t === "light" ? "dark" : "auto"; }
+  function next(t) { return t === "light" ? "dark" : t === "dark" ? "auto" : "light"; }
 
   var btn = document.createElement("button");
   btn.type = "button";
@@ -329,7 +368,11 @@ lbbOnReady(function () {
 });
 
 
-/* Right "On this page" affix from article h2/h3 */
+/* ===========================================================================
+   Page outline
+   Build the right-hand "On this page" list from article h2/h3 elements and
+   mark the section nearest the top of the viewport while scrolling.
+   ========================================================================== */
 lbbOnReady(function () {
   if (window.LBB.affix) return; window.LBB.affix = true;
   var nav = document.getElementById("affix");

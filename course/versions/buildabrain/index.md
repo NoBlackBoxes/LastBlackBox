@@ -1,8 +1,6 @@
 # LBB: Build a Brain
 
-<p align="center">
-<img src="/course/_resources/designs/layout/png/layout_buildabrain.png" alt="Build a Brain course layout: the boxes you will open during the course" width="500"/>
-</p>
+<!-- LBB_CURRICULUM_MAP -->
 
 **LBB-101** walks you through building a brain — and the body around it — from raw electronics up to a robot that sees, hears, and learns. Over eight sessions you will assemble **NB3** from atoms onward, with no black boxes.
 
@@ -31,13 +29,3 @@
 
 ### Session 8 - [Artificial Intelligence](sessions/08_artificial-intelligence/README.md)
 - Audio, vision, learning, and intelligence. **Projects**: *voice-activated, vision-enabled NB3.*
-
-## The curriculum
-
-Build a Brain traces these boxes from raw sensors up to intelligence, building cumulatively from one to the next. Hover any box to highlight it; click to open its folder on GitHub for the deeper material.
-
-<p align="center">
-<object data="/course/_resources/designs/layout/svg/layout_buildabrain_interactive.svg" type="image/svg+xml" width="500" aria-label="Build a Brain course layout (hover any box to highlight, click to open its folder on GitHub)">
-  <img src="/course/_resources/designs/layout/png/layout_buildabrain.png" alt="Build a Brain course layout" width="500"/>
-</object>
-</p>
