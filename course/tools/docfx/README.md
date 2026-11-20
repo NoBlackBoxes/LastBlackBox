@@ -2,7 +2,7 @@
 
 This is the practical guide for working on the LBB course documentation sites: building them locally, adding new sessions, and shipping a new course.
 
-The sites live at `https://noblackboxes.github.io/LastBlackBox/<slug>/` (e.g. [`/crick/`](https://noblackboxes.github.io/LastBlackBox/crick/)). They are produced by a two-stage pipeline:
+The sites live at `https://noblackboxes.github.io/LastBlackBox/<slug>/` (e.g. [`/crick/`](https://noblackboxes.github.io/LastBlackBox/crick/)). The complete build has five stages, described below. Its core content pipeline has two steps:
 
 1. The **LBB engine** ([libs/LBB/Engine/](../../../libs/LBB/Engine/)) reads `_resources/template.md` for every session, expands `{Box:Lesson}` tags into the relevant lesson content pulled from [boxes/](../../../boxes/), and writes the rendered `README.md` for each session.
 2. **docfx** wraps those READMEs in a static site using a shared template under [template/](template/).
@@ -121,13 +121,13 @@ sequenceDiagram
 
     loop Each course with generate = true
         Courses->>Engine: Build and render the course
-        Note right of Engine: Reads session templates from<br/>course/versions/#60;slug#62;/
-        Note right of Engine: Expands reusable lessons from<br/>boxes/#60;box#62;/_resources/lessons/
+        Note right of Engine: Reads session templates from<br/>course/versions/&lt;slug&gt;/
+        Note right of Engine: Expands reusable lessons from<br/>boxes/&lt;box&gt;/_resources/lessons/
         Engine-->>Courses: Rendered session Markdown
         Courses->>Courses: Write generated session README.md files
     end
 
-    Courses->>Courses: Generate boxes/#60;box#62;/README.md files
+    Courses->>Courses: Generate boxes/&lt;box&gt;/README.md files
     Courses-->>Build: Course generation complete
 
     loop Each course with published = true
@@ -136,20 +136,19 @@ sequenceDiagram
         Site->>Site: Assemble .docfx-staging/
         Site->>Site: Bundle assets and rewrite links
         Site->>Docfx: Build staged course
-        Docfx->>Output: Write docs/#60;slug#62;/
+        Docfx->>Output: Write docs/&lt;slug&gt;/
         Site-->>Build: Course site complete
     end
 
     Build->>Output: Write docs/sitemap.xml
-    Build->>Output: Render docs/index.html
     Build->>Output: Copy root website assets
+    Build->>Output: Render docs/index.html
 
     Output-->>Runner: Complete static website
 ```
 
 The [deployment workflow](../../../.github/workflows/deploy-docs.yml) runs `build_all.py` for pull requests and configured deployment branches. Pull requests only validate the build; pushes to `master` and, temporarily, `course-sites` deploy it to GitHub Pages.
 
----
 
 ## Local development
 
@@ -213,7 +212,6 @@ uv run --no-project python -m http.server -d docs 8000
 
 Then [http://localhost:8000/](http://localhost:8000/). Stop with `Ctrl+C`.
 
----
 
 ## Authoring course content
 
@@ -267,7 +265,7 @@ uv run --no-project python course/tools/engine/generate_courses.py
 
 Or just run `build_all.py`, which does this as Stage 1.
 
----
+
 
 ## Adding a new course
 
@@ -294,18 +292,27 @@ Add one entry to the single course manifest, [course/courses.json](../../courses
 }
 ```
 
-The slug must match the directory under `course/versions/`. Set `generate` to false for incomplete content that the engine cannot yet render, `materials` to true when the BOM and packing scripts should process the course, and `published` to false until the course should appear on the website. If a logo is provided, place it under `course/tools/docfx/root/` and use its filename in `logo`.
+The fields have distinct responsibilities:
 
-### 3. Author the docfx landing pages
+- `name`, `description`, and `logo` define the course tile on the root landing page. Put a logo under `course/tools/docfx/root/` and store its filename in `logo`, or use `null` for no logo.
+- `engine_name` is the name passed to the LBB engine and materials scripts.
+- `slug` must match exactly one directory under `course/versions/` and becomes the website path under `docs/`.
+- `generate` includes the course when generating session READMEs.
+- `materials` includes it in the BOM and packing scripts.
+- `published` includes it in the Docfx build, sitemap, and root landing page.
 
-A minimum docfx course needs two files at `course/versions/<slug>/`:
+Every directory under `course/versions/` must have exactly one manifest entry. A published or materials-enabled course must also have `generate` set to `true`; the manifest loader validates these rules.
+
+### 3. Customise the Docfx landing pages
+
+For a customised course site, add these files under `course/versions/<slug>/`:
 
 - **`index.md`** — the per-course landing page. Linked from the root site landing page. See [../../versions/crick/index.md](../../versions/crick/index.md) as a model.
 - **`sessions.index.md`** — the sessions overview, linked from the top-nav. See [../../versions/crick/sessions.index.md](../../versions/crick/sessions.index.md).
 
-Both are plain Markdown. Use repo-relative paths for images (`/course/_resources/...`) and session-relative paths for session links (`sessions/01_my-session/README.md`).
+Both are plain Markdown. Use repo-relative paths for images (`/course/_resources/...`) and session-relative paths for session links (`sessions/01_my-session/README.md`). If either file is absent, `build_site.py` generates a basic version from the course slug and discovered sessions.
 
-The defaults under [template/](template/) provide `docfx.json`, `sessions.toc.yml`, `toc.yml`, and the shared CSS/JS. Override any of those by placing a same-named file in `course/versions/<slug>/`.
+The shared [template/](template/) provides `docfx.json.tmpl`, `toc.yml`, and the shared CSS/JS. `build_site.py` generates `sessions.toc.yml` from the discovered sessions. Override these defaults by adding `docfx.json`, `toc.yml`, `sessions.toc.yml`, or files under `template/` to `course/versions/<slug>/`.
 
 The manifest automatically controls engine registration, the published build list, and the course tile on the root landing page.
 
@@ -324,7 +331,7 @@ Open [http://localhost:8000/your-course/](http://localhost:8000/your-course/) an
 
 Then open a pull request. CI builds the complete site without deploying it. Pushes to `master` and, temporarily, `course-sites` deploy to Pages.
 
----
+
 
 ## CI deployment
 
@@ -333,7 +340,6 @@ Then open a pull request. CI builds the complete site without deploying it. Push
 - **Settings → Pages → Source = "GitHub Actions"** (one-time)
 - **Settings → Environments → github-pages → Deployment branches** allows `master` (default). Add any other branch you want to deploy from while developing.
 
----
 
 ## Output anatomy
 
@@ -342,7 +348,7 @@ After a full build:
 ```
 docs/
   index.html                # root landing page (course tiles)
-  logo_*.svg, *.png         # root assets (from course/tools/docfx/root/)
+  *.svg, *.png              # root images, when present
   robots.txt                # root assets
   sitemap.xml               # master sitemap-index
   <slug>/                   # one subtree per course
@@ -358,7 +364,7 @@ docs/
 
 Everything in `docs/` is generated. The directory is gitignored.
 
----
+
 
 ## File reference
 
@@ -366,8 +372,8 @@ Everything in `docs/` is generated. The directory is gitignored.
 |---|---|---|
 | `course/versions/<slug>/<NN>_*/_resources/template.md` | Yes | Session template with `{Box:Lesson}` tags. |
 | `course/versions/<slug>/<NN>_*/README.md` | No | Generated by the engine. |
-| `course/versions/<slug>/index.md` | Yes | Per-course landing page. |
-| `course/versions/<slug>/sessions.index.md` | Yes | Sessions overview. |
+| `course/versions/<slug>/index.md` | Optional | Custom per-course landing page; generated when absent. |
+| `course/versions/<slug>/sessions.index.md` | Optional | Custom sessions overview; generated when absent. |
 | `course/versions/<slug>/docfx.json` | Optional | Override the template default. |
 | `course/versions/<slug>/sessions.toc.yml` | Optional | Override the template default. |
 | `course/courses.json` | Yes | Register courses and control generation, publishing, landing-page text, and logos. |
