@@ -1,9 +1,5 @@
-# Top navigation tabs. Each entry becomes a tab in the site header.
-# Sub-section tocs (e.g. sessions/toc.yml) provide that tab's left sidebar.
-
-- name: Introduction
-  href: index.md
-
-- name: Sessions
+# The course landing page is the parent of the session hierarchy. The href
+# loads the nested session TOC; homepage is the breadcrumb destination.
+- name: Course
   href: sessions/
-  homepage: sessions/index.md
+  homepage: index.md

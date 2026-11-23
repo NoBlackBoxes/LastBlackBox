@@ -26,8 +26,10 @@ flowchart TD
         boxes["`boxes/{box}/_resources/
 **Reusable lessons, assets and materials**`"]
 
-        theme["`course/tools/docfx/template/ and course/tools/docfx/root/
-**Shared layout, styling and root assets**`"]
+        theme["`course/tools/docfx/template/
+course/tools/docfx/root/
+course/_resources/designs/logo/icons/
+**Shared layout, styling and brand assets**`"]
     end
 
     subgraph generation["⚙︎ Build tools"]
@@ -132,7 +134,7 @@ sequenceDiagram
         Build->>Site: Build the course slug
         Site->>Config: Load course metadata and public URL
         Config-->>Site: Validated course settings
-        Note right of Site: Reads generated session READMEs,<br/>index.md and sessions.index.md
+        Note right of Site: Reads generated session READMEs,<br/>index.md and optional sessions.toc.yml
         Site->>Site: Derive curriculum boxes from lesson tags
         Site->>Site: Generate the landing title, facts and curriculum grid
         Site->>Site: Assemble .docfx-staging/
@@ -159,12 +161,12 @@ The [deployment workflow](../../../.github/workflows/deploy-docs.yml) runs `buil
 | `course/versions/<slug>/<NN>_*/_resources/template.md` | Authored | Course author | Session structure containing `{Box:Lesson}` tags. |
 | `course/versions/<slug>/<NN>_*/README.md` | Generated | LBB engine | Expanded session Markdown. Do not edit directly. |
 | `course/versions/<slug>/index.md` | Optional authored override | Course author; assembled by `build_site.py` | Landing-page body. `build_site.py` adds the title and generated curriculum information in staging. |
-| `course/versions/<slug>/sessions.index.md` | Optional authored override | Course author, or fallback from `build_site.py` | Sessions overview. The generated fallback exists only in staging. |
 | `course/versions/<slug>/sessions.toc.yml` | Optional authored override | Course author, or fallback from `build_site.py` | Course-specific navigation labels or grouping. The generated fallback exists only in staging. |
 | `course/versions/<slug>/template/public/` | Optional authored assets | Course author | Course-specific public assets; cannot replace shared template files. |
 | `course/courses.json` | Authored configuration | Maintainer | Course registry, build and publishing settings, descriptions and logos. |
 | `course/tools/docfx/root/index.html` | Shared authored template | Maintainer; populated by `build_all.py` | Root landing-page template. Course tiles come from the manifest. |
 | `course/tools/docfx/root/*.svg`, `*.png` | Authored assets | Maintainer | Shared root assets and course logos. |
+| `course/_resources/designs/logo/icons/` | Authored assets | Maintainer; copied by `build_site.py` | Shared course-site logo and favicon. |
 | `course/tools/docfx/template/` | Shared authored template | Maintainer; copied by `build_site.py` | Docfx configuration, navigation, CSS and JavaScript shared by every course. |
 
 ## Local development
@@ -205,26 +207,26 @@ docfx --version
 
 ### Build everything
 
-```powershell
-uv run --no-project python course/tools/build_all.py
+```bash
+python3 course/tools/build_all.py
 ```
 
 Output lands at `docs/<slug>/` (e.g. `docs/crick/`), with `docs/index.html` (landing page) and `docs/sitemap.xml` at the root. The script has four stages: engine READMEs, per-slug Docfx sites, master sitemap, and root assets. PYTHONPATH for the LBB import is set automatically.
 
-`uv run --no-project` bypasses the Microsoft Store Python shim on Windows. On Linux / Mac, plain `python course/tools/build_all.py` is fine.
+The examples use `python3`, the usual command on Linux and macOS. On Windows, use `py` instead. If you already use `uv`, `uv run --no-project python ...` is also supported and avoids the Microsoft Store Python shim.
 
 ### Build just one course (faster iteration)
 
-```powershell
-uv run --no-project python course/tools/docfx/build_site.py crick
+```bash
+python3 course/tools/docfx/build_site.py crick
 ```
 
 Skips Stage 0 (engine READMEs); assumes those are already up to date. Use when only touching Docfx configuration, landing-page content, or shared styling.
 
 ### Serve locally
 
-```powershell
-uv run --no-project python -m http.server -d docs 8000
+```bash
+python3 -m http.server -d docs 8000
 ```
 
 Then [http://localhost:8000/](http://localhost:8000/). Stop with `Ctrl+C`.
@@ -276,8 +278,8 @@ You never modify the generated README directly; rebuild from the template.
 
 After editing any `template.md`:
 
-```powershell
-uv run --no-project python course/tools/engine/generate_courses.py
+```bash
+python3 course/tools/engine/generate_courses.py
 ```
 
 Or just run `build_all.py`, which does this as Stage 0.
@@ -322,14 +324,13 @@ Every directory under `course/versions/` must have exactly one manifest entry. A
 
 ### 3. Author the course landing pages
 
-For course-specific content, add these files under `course/versions/<slug>/`:
+For course-specific content, add this file under `course/versions/<slug>/`:
 
 - **`index.md`** — the course landing-page body. The manifest supplies the H1, so start with an `About this course` H2 and its introductory paragraph. Put one `<!-- LBB_CURRICULUM_MAP -->` marker where the generated course facts and 28-box grid should appear. See [../../versions/crick/index.md](../../versions/crick/index.md) as a model.
-- **`sessions.index.md`** — the sessions overview, linked from the top-nav. See [../../versions/crick/sessions.index.md](../../versions/crick/sessions.index.md).
 
-Both are plain Markdown. Use repo-relative paths for images (`/course/_resources/...`) and session-relative paths for session links (`sessions/01_my-session/README.md`). If either file is absent, `build_site.py` generates a basic version from the manifest and discovered sessions. It also generates the landing-page H1, session count, opened-box count and curriculum grid. The curriculum is derived from the `{Box:Lesson}` tags in those sessions; no separate course box list is maintained.
+It is plain Markdown. Use repo-relative paths for images (`/course/_resources/...`) and session-relative paths for session links (`sessions/01_my-session/README.md`). If it is absent, `build_site.py` generates a basic version from the manifest and discovered sessions. It also generates the landing-page H1, session count, opened-box count and curriculum grid. The curriculum is derived from the `{Box:Lesson}` tags in those sessions; no separate course box list is maintained.
 
-The shared [template/](template/) is the single source of truth for Docfx configuration, root navigation, CSS and JavaScript. `build_site.py` generates `sessions.toc.yml` from the discovered sessions; add a course-level `sessions.toc.yml` only when its navigation labels or grouping genuinely differ.
+The shared [template/](template/) is the single source of truth for Docfx configuration, site hierarchy, CSS and JavaScript. The left TOC is disabled; Docfx uses the TOC hierarchy for breadcrumbs, while the right-hand outline links to headings on the current page. The course landing page is the parent of every session, so the `Course` breadcrumb returns to it. `build_site.py` generates `sessions.toc.yml` from the discovered sessions; add a course-level `sessions.toc.yml` only when its navigation labels or grouping genuinely differ.
 
 A course may add supplementary public assets under `template/public/`. The Crick course, for example, provides a partner logo and `site.json` metadata there. Per-course assets cannot replace shared template files; the build stops if their paths collide.
 
@@ -337,9 +338,9 @@ The manifest automatically controls engine registration, the published build lis
 
 ### 4. Build, verify, ship
 
-```powershell
-uv run --no-project python course/tools/build_all.py
-uv run --no-project python -m http.server -d docs 8000
+```bash
+python3 course/tools/build_all.py
+python3 -m http.server -d docs 8000
 ```
 
 Open [http://localhost:8000/your-course/](http://localhost:8000/your-course/) and confirm:

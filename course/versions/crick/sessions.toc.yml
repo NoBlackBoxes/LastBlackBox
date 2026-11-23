@@ -1,8 +1,5 @@
-# Sidebar navigation for the Sessions tab. Each entry is a Day.
-# Staged into sessions/toc.yml by build_site.py alongside the session folders.
-
-- name: Overview
-  href: index.md
+# Course-specific labels for the session hierarchy. Staged into
+# sessions/toc.yml by build_site.py alongside the session folders.
 
 - name: Day 1 - Electronics and Sensors
   href: 01_electronics-and-sensors/README.md
