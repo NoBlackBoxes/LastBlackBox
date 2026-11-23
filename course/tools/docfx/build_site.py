@@ -47,6 +47,7 @@ The landing-page curriculum grid is derived from the session templates'
 from __future__ import annotations
 
 import html
+import json
 import pathlib
 import re
 import shutil
@@ -65,6 +66,11 @@ import LBB.config as Config  # noqa: E402
 
 STAGING_NAME = ".docfx-staging"
 CURRICULUM_MARKER = "<!-- LBB_CURRICULUM_MAP -->"
+PARTNER_TEMPLATE_FILES = {
+    pathlib.Path("public/secondary_logo.png"),
+    pathlib.Path("public/secondary_logo.svg"),
+    pathlib.Path("public/site.json"),
+}
 
 # Shared brand assets used by every course site. Copied into staging root so
 # docfx's _appLogoPath / _appFaviconPath can find them.
@@ -366,10 +372,75 @@ def _insert_curriculum_map(
     )
 
 
+def _render_partner(course_dir: pathlib.Path, staging: pathlib.Path) -> str:
+    """Render optional course-partner markup from per-course public assets.
+
+    A course opts in by providing `secondary_logo.png` or `.svg`. Optional
+    link and accessible-label metadata come from `site.json` in the same
+    directory. Rendering this at build time avoids runtime asset probing.
+    """
+    public_dir = course_dir / "template" / "public"
+    logo = next(
+        (public_dir / f"secondary_logo.{ext}" for ext in ("png", "svg")
+         if (public_dir / f"secondary_logo.{ext}").is_file()),
+        None,
+    )
+    if logo is None:
+        return ""
+
+    staged_logo = staging / "public" / logo.name
+    staged_logo.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(logo, staged_logo)
+
+    metadata: dict = {}
+    metadata_path = public_dir / "site.json"
+    if metadata_path.is_file():
+        try:
+            metadata = json.loads(metadata_path.read_text(encoding="utf8"))
+        except (json.JSONDecodeError, OSError) as exc:
+            raise SystemExit(
+                f"invalid partner metadata in "
+                f"{metadata_path.relative_to(REPO_ROOT)}: {exc}"
+            ) from exc
+        if not isinstance(metadata, dict):
+            raise SystemExit(
+                f"partner metadata must be a JSON object: "
+                f"{metadata_path.relative_to(REPO_ROOT)}"
+            )
+
+    label = metadata.get("secondary_logo_label") or "Host institution"
+    url = metadata.get("secondary_logo_url")
+    if not isinstance(label, str) or (url is not None and not isinstance(url, str)):
+        raise SystemExit(
+            f"partner metadata values must be strings: "
+            f"{metadata_path.relative_to(REPO_ROOT)}"
+        )
+
+    escaped_label = html.escape(label, quote=True)
+    image = (
+        f'<img src="public/{html.escape(logo.name, quote=True)}" '
+        f'alt="{escaped_label}" class="lbb-secondary-logo">'
+    )
+    if url:
+        image = (
+            f'<a href="{html.escape(url, quote=True)}" target="_blank" '
+            f'rel="noopener" class="lbb-secondary-logo-link" '
+            f'aria-label="{escaped_label}">{image}</a>'
+        )
+
+    return "\n".join([
+        '<div class="lbb-partner">',
+        '  <span class="lbb-partner-label">In partnership with</span>',
+        f"  {image}",
+        "</div>",
+    ])
+
+
 def _write_landing_page(
     index_path: pathlib.Path,
     course: dict,
     body: str,
+    partner: str,
 ) -> None:
     """Write a staged landing page with its manifest-owned H1.
 
@@ -382,10 +453,11 @@ def _write_landing_page(
             f"course landing-page body must not contain an H1: "
             f"{index_path.relative_to(REPO_ROOT)}"
         )
-    index_path.write_text(
-        f"# {course['name']}\n\n{body.lstrip()}",
-        encoding="utf8",
-    )
+    sections = [f"# {course['name']}"]
+    if partner:
+        sections.append(partner)
+    sections.append(body.lstrip())
+    index_path.write_text("\n\n".join(sections), encoding="utf8")
 
 
 def _render_docfx_json(slug: str) -> str:
@@ -396,14 +468,23 @@ def _render_docfx_json(slug: str) -> str:
     return tmpl.format(slug=slug, site_base_url=Config.site_base_url)
 
 
-def _copy_tree(src: pathlib.Path, dst: pathlib.Path, *, allow_overwrite: bool) -> None:
+def _copy_tree(
+    src: pathlib.Path,
+    dst: pathlib.Path,
+    *,
+    allow_overwrite: bool,
+    exclude: set[pathlib.Path] | None = None,
+) -> None:
     """Copy *src* into *dst* and optionally reject name collisions."""
     if not src.is_dir():
         return
+    excluded = exclude or set()
     for path in src.rglob("*"):
         if path.is_dir():
             continue
         rel = path.relative_to(src)
+        if rel in excluded:
+            continue
         target = dst / rel
         if target.exists() and not allow_overwrite:
             raise SystemExit(
@@ -435,7 +516,10 @@ def _stage(course_dir: pathlib.Path, staging: pathlib.Path, course: dict) -> lis
     # Courses may add public assets such as a partner logo, but cannot replace
     # shared CSS, JavaScript, or any other template file.
     _copy_tree(
-        course_dir / "template", staging / "template", allow_overwrite=False
+        course_dir / "template",
+        staging / "template",
+        allow_overwrite=False,
+        exclude=PARTNER_TEMPLATE_FILES,
     )
 
     # Required shared brand assets. copy2 fails immediately if either source
@@ -449,7 +533,12 @@ def _stage(course_dir: pathlib.Path, staging: pathlib.Path, course: dict) -> lis
         index_body = course_index.read_text(encoding="utf8")
     else:
         index_body = _generate_index(course, sessions)
-    _write_landing_page(staging / "index.md", course, index_body)
+    _write_landing_page(
+        staging / "index.md",
+        course,
+        index_body,
+        _render_partner(course_dir, staging),
+    )
     _insert_curriculum_map(staging / "index.md", course_dir, sessions)
 
     md_files: list[pathlib.Path] = [staging / "index.md"]

@@ -163,7 +163,7 @@ The [deployment workflow](../../../.github/workflows/deploy-docs.yml) runs `buil
 | `course/versions/<slug>/<NN>_*/README.md` | Generated | LBB engine | Expanded session Markdown. Do not edit directly. |
 | `course/versions/<slug>/index.md` | Optional authored override | Course author; assembled by `build_site.py` | Landing-page body. `build_site.py` adds the title and generated curriculum information in staging. |
 | `course/versions/<slug>/sessions.toc.yml` | Optional authored override | Course author, or fallback from `build_site.py` | Course-specific navigation labels or grouping. The generated fallback exists only in staging. |
-| `course/versions/<slug>/template/public/` | Optional authored assets | Course author | Course-specific public assets; cannot replace shared template files. |
+| `course/versions/<slug>/template/public/` | Optional authored assets | Course author; partner assets staged by `build_site.py` | Course-specific public assets; cannot replace shared template files. |
 | `course/courses.json` | Authored configuration | Maintainer | Course registry, build and publishing settings, descriptions and logos. |
 | `course/tools/docfx/root/index.html` | Shared authored template | Maintainer; populated by `build_all.py` | Root landing-page template. Course tiles come from the manifest. |
 | `course/tools/docfx/root/*.svg`, `*.png` | Authored assets | Maintainer | Shared root assets and course logos. |
@@ -337,7 +337,7 @@ It is plain Markdown. Use repo-relative paths for images (`/course/_resources/..
 
 The shared [template/](template/) is the single source of truth for Docfx configuration, site hierarchy, CSS and JavaScript. The left TOC is disabled; Docfx uses the TOC hierarchy for breadcrumbs, while the right-hand outline links to headings on the current page. The course landing page is the parent of every session, so the `Course` breadcrumb returns to it. `build_site.py` generates `sessions.toc.yml` from the discovered sessions; add a course-level `sessions.toc.yml` only when its navigation labels or grouping genuinely differ.
 
-A course may add supplementary public assets under `template/public/`. The Crick course, for example, provides a partner logo and `site.json` metadata there. Per-course assets cannot replace shared template files; the build stops if their paths collide.
+A course may add supplementary public assets under `template/public/`. To show a partner beneath the course title, add `secondary_logo.png` or `secondary_logo.svg`; an optional `site.json` may provide `secondary_logo_url` and `secondary_logo_label`. `build_site.py` reads these files, stages the logo as a site resource and writes the partner markup into the landing page. The metadata file is used only at build time, so no browser-side discovery is required. Per-course assets cannot replace shared template files; the build stops if their paths collide.
 
 The manifest automatically controls engine registration, the published build list, site metadata, fallback landing content, and the course tile on the root landing page.
 
