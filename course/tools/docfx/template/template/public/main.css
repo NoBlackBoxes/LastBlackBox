@@ -273,7 +273,7 @@ article:has(> .lbb-curriculum) > #about-this-course + p {
   aspect-ratio: 1;
   min-height: 5rem;
   padding: 0.65rem 0.4rem;
-  border: 0;
+  border: 1px solid var(--lbb-rule);
   border-radius: 4px;
   background: var(--lbb-closed);
   color: var(--lbb-closed-text);

@@ -29,8 +29,8 @@ The build is a three-step pipeline:
      docfx-native video embeds. The repository READMEs remain unchanged.
    - Image references (../../../../boxes/<box>/.../*.gif, /boxes/.../*.png,
      etc.) get the referenced file copied into staging/_assets/<box>/...
-     and the markdown reference rewritten to a local relative path. The
-     site works offline.
+     and the markdown reference rewritten to a local relative path. 
+     Image assets are served locally instead of relying on repository-relative paths.
    - Other repo-relative refs (datasheets, code folders, sub-projects)
      are rewritten to absolute GitHub URLs so they still resolve.
 

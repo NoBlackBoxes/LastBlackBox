@@ -28,4 +28,4 @@
 
 ## How to use these pages
 
-Sessions are worked through **in order**. Each session is one continuous walkthrough: start at the top, watch the videos, do the tasks, move on. Hover any lesson thumbnail to play its preview. Repository links like [boxes/electrons](https://github.com/NoBlackBoxes/LastBlackBox/tree/master/boxes/electrons) point into the wider LBB repo for deeper reference; you do not need to read them on the day.
+Sessions are worked through **in order**. Each session is one continuous walkthrough: start at the top, watch the videos, do the tasks, move on. Videos are embedded in each lesson; use the video title to open it on Vimeo if the player is unavailable. Repository links like [boxes/electrons](https://github.com/NoBlackBoxes/LastBlackBox/tree/master/boxes/electrons) point into the wider LBB repo for deeper reference; you do not need to read them on the day.
