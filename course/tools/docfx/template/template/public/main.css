@@ -10,8 +10,6 @@
 [data-bs-theme="light"] {
   /* Bootstrap owns the palette and light/dark adaptation. These aliases only
      describe the small set of roles unique to the LBB layout. */
-  --lbb-surface: var(--bs-body-bg);
-  --lbb-header: var(--bs-body-bg);
   --lbb-text: var(--bs-emphasis-color);
   --lbb-muted: var(--bs-secondary-color);
   --lbb-rule: var(--bs-border-color);
@@ -38,8 +36,6 @@
    Page frame and typography
    ========================================================================== */
 body {
-  background: var(--bs-body-bg);
-  color: var(--bs-body-color);
   font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
                sans-serif;
   font-size: 16px;
@@ -66,7 +62,7 @@ h2,
 h3,
 h4 {
   color: var(--lbb-text);
-  font-weight: 650;
+  font-weight: 600;
   letter-spacing: -0.015em;
 }
 
@@ -116,11 +112,6 @@ kbd {
 /* ===========================================================================
    Global header
    ========================================================================== */
-header {
-  background: var(--lbb-header) !important;
-  border-bottom: 1px solid var(--lbb-rule) !important;
-}
-
 header .navbar {
   min-height: 64px;
   padding: 0;
@@ -130,7 +121,7 @@ header .navbar {
   gap: 0.7rem;
   color: var(--lbb-text) !important;
   font-size: 0.95rem;
-  font-weight: 650;
+  font-weight: 600;
 }
 
 #logo,
@@ -152,7 +143,7 @@ header .navbar {
   height: 36px;
   border-color: var(--lbb-rule);
   border-radius: 4px;
-  background: var(--lbb-surface);
+  background: var(--bs-body-bg);
   color: var(--lbb-text);
   font-size: 0.85rem;
 }
@@ -184,13 +175,13 @@ header .navbar {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  margin: -0.7rem 0 1.5rem;
+  margin: 0 0 1.5rem;
   color: var(--lbb-muted);
 }
 
 .lbb-partner-label {
   font-size: 0.7rem;
-  font-weight: 650;
+  font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -210,7 +201,7 @@ header .navbar {
    Course landing pages
    ========================================================================== */
 article:has(> .lbb-curriculum) > h1 {
-  margin-bottom: 2.35rem;
+  margin-bottom: 1.5rem;
 }
 
 article:has(> .lbb-curriculum) > #about-this-course {
@@ -252,14 +243,14 @@ article:has(> .lbb-curriculum) > #about-this-course + p {
 .lbb-course-facts dd {
   color: var(--lbb-text);
   font-size: 1.35rem;
-  font-weight: 650;
+  font-weight: 600;
   line-height: 1;
 }
 
 .lbb-course-facts dt {
   color: var(--lbb-muted);
   font-size: 0.7rem;
-  font-weight: 650;
+  font-weight: 600;
   letter-spacing: 0.07em;
   text-transform: uppercase;
 }
@@ -304,7 +295,7 @@ article:has(> .lbb-curriculum) > #about-this-course + p {
   background: var(--lbb-closed);
   color: var(--lbb-closed-text);
   font-size: clamp(0.72rem, 1.1vw, 0.88rem);
-  font-weight: 650;
+  font-weight: 600;
   line-height: 1.15;
   text-align: center;
 }
@@ -393,7 +384,7 @@ ul.lbb-toc-sub {
   padding: 0.3rem 0.55rem;
   color: var(--lbb-muted);
   font-size: 0.72rem;
-  font-weight: 650;
+  font-weight: 600;
   letter-spacing: 0.09em;
   text-transform: uppercase;
 }
@@ -416,7 +407,7 @@ ul.lbb-toc-sub .lbb-toc-leaf a {
   border-left: 2px solid transparent;
   border-radius: 0 3px 3px 0;
   color: var(--lbb-text);
-  font-weight: 450;
+  font-weight: 400;
   line-height: 1.35;
   text-decoration: none;
 }
@@ -436,13 +427,12 @@ ul.lbb-toc-sub .lbb-toc-leaf a.is-active {
 ul.lbb-toc-root > .lbb-toc-leaf > a.is-active,
 ul.lbb-toc-sub .lbb-toc-leaf a.is-active {
   border-left-color: var(--lbb-accent);
-  font-weight: 650;
+  font-weight: 600;
 }
 
 @media (min-width: 1141px) {
   body[data-layout=""] > main > .affix,
   body[data-layout="conceptual"] > main > .affix {
-    display: block !important;
     width: 190px;
   }
 }
@@ -495,26 +485,12 @@ ul.lbb-toc-sub .lbb-toc-leaf a.is-active {
 }
 
 .affix a.active {
-  font-weight: 650;
+  font-weight: 600;
 }
 
 /* ===========================================================================
    Lesson content
    ========================================================================== */
-table {
-  border-collapse: collapse;
-}
-
-table th,
-table td {
-  padding: 0.4rem 0.6rem;
-  border: 1px solid var(--lbb-rule);
-}
-
-table thead th {
-  background: var(--lbb-soft);
-}
-
 .lbb-thumb {
   position: relative;
   display: inline-block;
@@ -548,18 +524,12 @@ h4 a:hover {
   text-decoration-color: var(--lbb-accent);
 }
 
-/* Keep authored media and generated tables inside the article. */
+/* Keep authored media inside the article. Docfx wraps tables responsively. */
 img,
 object,
 svg {
   max-width: 100%;
   height: auto;
-}
-
-.content article table {
-  display: block;
-  max-width: 100%;
-  overflow-x: auto;
 }
 
 /* ===========================================================================
