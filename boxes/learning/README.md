@@ -3,7 +3,7 @@ In this box, you will learn about vision...
 
 <details><summary><i>Materials</i></summary><p>
 
-Name|Description| # |Package|Data|Link|
+Name|Description| # |Package|Data|Supplier|
 :-------|:----------|:-----:|:-:|:--:|:--:|
 Clicker|Loud sound maker (and whistle)|1|Auxiliary|[-D-](/boxes/learning/)|[-L-](https://www.amazon.co.uk/Clicker-Multi-Color-Diyife-Training-Wrist/dp/B076LZ4XGK)
 

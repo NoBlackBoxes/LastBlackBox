@@ -3,7 +3,7 @@ It's time to learn how transistors can perform logic, store information, and wor
 
 <details><summary><i>Materials</i></summary><p>
 
-Name|Description| # |Package|Data|Link|
+Name|Description| # |Package|Data|Supplier|
 :-------|:----------|:-----:|:-:|:--:|:--:|
 Microcontroller|Arduino Nano (rev.3)|1|Medium (011)|[-D-](/boxes/computers/_resources/datasheets/arduino_nano_rev3.pdf)|[-L-](https://uk.farnell.com/arduino/a000005/arduino-nano-evaluation-board/dp/1848691)
 Piezo Buzzer|Piezoelectric speaker/transducer|1|Passive Electronics|[-D-](/boxes/computers/_resources/datasheets/piezo_buzzer.pdf)|[-L-](https://uk.farnell.com/tdk/ps1240p02bt/piezoelectric-buzzer-4khz-70dba/dp/3267212)

@@ -3,7 +3,7 @@ In this box, you will learn about sensors...
 
 <details><summary><i>Materials</i></summary><p>
 
-Name|Description| # |Package|Data|Link|
+Name|Description| # |Package|Data|Supplier|
 :-------|:----------|:-----:|:-:|:--:|:--:|
 Photoresistor (LDR)|Light-dependent resistor (GL5516 and GL5528)|2|Passive Electronics|[-D-](/boxes/sensors/)|[-L-](https://uk.farnell.com/advanced-photonix/nsl-19m51/light-dependent-resistor-550nm/dp/3168335)
 Thermistor|Temperature sensitive resistor|1|Passive Electronics|[-D-](/boxes/sensors/_resources/datasheets/thermistor.pdf)|[-L-](https://uk.farnell.com/epcos/b57891m0103k000/thermistor-ntc-radial-leaded/dp/2285471)

@@ -3,7 +3,7 @@ In this box, you will learn about motors...
 
 <details><summary><i>Materials</i></summary><p>
 
-Name|Description| # |Package|Data|Link|
+Name|Description| # |Package|Data|Supplier|
 :-------|:----------|:-----:|:-:|:--:|:--:|
 DC Brushed Motor|6V Brushed DC motor|1|Large (100)|[-D-](/boxes/motors/)|[-L-](https://www.amazon.co.uk/Gikfun-1V-6V-Hobby-Arduino-EK1894/dp/B07BHHP2BT)
 

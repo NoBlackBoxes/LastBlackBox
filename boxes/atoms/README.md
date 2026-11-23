@@ -3,9 +3,9 @@ In this box, you will learn about atoms...
 
 <details><summary><i>Materials</i></summary><p>
 
-Name|Description| # |Package|Data|Link|
+Name|Description| # |Package|Data|Supplier|
 :-------|:----------|:-----:|:-:|:--:|:--:|
-Periodic Table|Periodic Table Card|1|Body (000)|[-D-](/boxes/atoms/card)|[-L-](VK)
+Periodic Table|Periodic Table Card|1|Body (000)|[-D-](/boxes/atoms/card)|VK
 
 </p></details><hr>
 

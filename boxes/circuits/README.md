@@ -3,7 +3,7 @@ In this box, you will learn about circuits...
 
 <details><summary><i>Materials</i></summary><p>
 
-Name|Description| # |Package|Data|Link|
+Name|Description| # |Package|Data|Supplier|
 :-------|:----------|:-----:|:-:|:--:|:--:|
 
 </p></details><hr>

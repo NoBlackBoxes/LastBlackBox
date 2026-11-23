@@ -3,7 +3,7 @@ In this box, you will learn about amplifiers...
 
 <details><summary><i>Materials</i></summary><p>
 
-Name|Description| # |Package|Data|Link|
+Name|Description| # |Package|Data|Supplier|
 :-------|:----------|:-----:|:-:|:--:|:--:|
 LM741|OpAmp|1|Active Electronics|[-D-](/boxes/amplifiers/_resources/datasheets/LM741.pdf)|[-L-](https://uk.farnell.com/texas-instruments/lm741cn-nopb/op-amp-single-pdip-8-0-to-70deg/dp/3117118)
 LM386|Audio-Amp|2|Active Electronics|[-D-](/boxes/amplifiers/_resources/datasheets/LM386.pdf)|[-L-](https://uk.farnell.com/texas-instruments/lm386n-4-nopb/audio-power-amplifier-class-ab/dp/3116866)

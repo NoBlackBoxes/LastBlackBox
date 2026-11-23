@@ -3,7 +3,7 @@ In this box, you will learn about memory...
 
 <details><summary><i>Materials</i></summary><p>
 
-Name|Description| # |Package|Data|Link|
+Name|Description| # |Package|Data|Supplier|
 :-------|:----------|:-----:|:-:|:--:|:--:|
 Gate (NAND)|4xNAND gate|2|Active Electronics|[-D-](/boxes/memory/_resources/datasheets/NAND_gates.pdf)|[-L-](https://uk.farnell.com/texas-instruments/cd4011be/ic-4000-cmos-4011-dip14-18v/dp/3120113)
 

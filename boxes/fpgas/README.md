@@ -3,9 +3,9 @@ In this box, you will learn about fpgas...
 
 <details><summary><i>Materials</i></summary><p>
 
-Name|Description| # |Package|Data|Link|
+Name|Description| # |Package|Data|Supplier|
 :-------|:----------|:-----:|:-:|:--:|:--:|
-NB3 Hindbrain|ICE40UP5K dev board with ADC/DAC|1|Circuit Boards|[-D-](/boxes/fpgas/NB3_hindbrain)|[-L-](VK)
+NB3 Hindbrain|ICE40UP5K dev board with ADC/DAC|1|Circuit Boards|[-D-](/boxes/fpgas/NB3_hindbrain)|VK
 Cable (MicroUSB-1m)|Micro-USB to Type-A cable (1 m)|1|Cables (001)|[-D-](/boxes/fpgas/)|[-L-](https://www.amazon.co.uk/gp/product/B07GBCKX49)
 Cable (MicroUSB-20cm)|Short micro-USB to Type-A cable (20 cm)|1|Cables (001)|[-D-](/boxes/networks/)|[-L-](https://www.amazon.co.uk/gp/product/B07GBS2QZ1)
 

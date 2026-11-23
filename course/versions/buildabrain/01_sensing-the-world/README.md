@@ -3,10 +3,10 @@ We will start by learning how electricity is used to create "sensors", which wil
 
 <details><summary><i>Materials</i></summary><p>
 
-Name|Description| # |Package|Data|Link|
+Name|Description| # |Package|Data|Supplier|
 :-------|:----------|:-----:|:-:|:--:|:--:|
-Periodic Table|Periodic Table Card|1|Body (000)|[-D-](/boxes/atoms/card)|[-L-](VK)
-NB3 Body|NB3 robot base PCB|1|Body (000)|[-D-](/boxes/electrons/NB3_body)|[-L-](VK)
+Periodic Table|Periodic Table Card|1|Body (000)|[-D-](/boxes/atoms/card)|VK
+NB3 Body|NB3 robot base PCB|1|Body (000)|[-D-](/boxes/electrons/NB3_body)|VK
 Resistor (470)|470 &Omega;/0.25 W|2|Passive Electronics|[-D-](/boxes/electrons/_resources/datasheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-470r/res-470r-1-250mw-axial-metal-film/dp/9341943)
 Resistor (1k)|1 k&Omega;/0.25 W|2|Passive Electronics|[-D-](/boxes/electrons/_resources/datasheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-1k/res-1k-1-250mw-axial-metal-film/dp/9341102)
 Resistor (10k)|10 k&Omega;/0.25 W|2|Passive Electronics|[-D-](/boxes/electrons/_resources/datasheets/resistor.pdf)|[-L-](https://uk.farnell.com/multicomp/mf25-10k/res-10k-1-250mw-axial-metal-film/dp/9341110)

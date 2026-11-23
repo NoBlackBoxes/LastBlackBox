@@ -3,7 +3,7 @@ In this box, you will learn about light...
 
 <details><summary><i>Materials</i></summary><p>
 
-Name|Description| # |Package|Data|Link|
+Name|Description| # |Package|Data|Supplier|
 :-------|:----------|:-----:|:-:|:--:|:--:|
 Lightbulb|Mini incandescent bulb (6 V)|1|Active Electronics|[-D-](/boxes/light/_resources/datasheets/lamp_G501.pdf)|[-L-](https://uk.farnell.com/cml-innovative-technologies/g501/lamp-mes-g3-1-2-6-5v-1-95w/dp/1139207)
 

@@ -3,7 +3,7 @@ In this box, you will learn about control...
 
 <details><summary><i>Materials</i></summary><p>
 
-Name|Description| # |Package|Data|Link|
+Name|Description| # |Package|Data|Supplier|
 :-------|:----------|:-----:|:-:|:--:|:--:|
 H-bridge|H-bridge motor driver (SN754410NE)|2|Active Electronics|[-D-](/boxes/control/_resources/datasheets/sn754410.pdf)|[-L-](https://www.mouser.co.uk/ProductDetail/Texas-Instruments/SN754410NE)
 

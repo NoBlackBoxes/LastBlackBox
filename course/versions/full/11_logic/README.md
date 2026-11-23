@@ -3,7 +3,7 @@ In this box, you will learn about logic...
 
 <details><summary><i>Materials</i></summary><p>
 
-Name|Description| # |Package|Data|Link|
+Name|Description| # |Package|Data|Supplier|
 :-------|:----------|:-----:|:-:|:--:|:--:|
 Gate (AND)|4xAND gate|1|Active Electronics|[-D-](/boxes/logic/_resources/datasheets/AND_gates.pdf)|[-L-](https://uk.farnell.com/texas-instruments/cd4081be/ic-4000-cmos-4081-dip14-18v/dp/3120147)
 Gate (OR)|4xOR gate|1|Active Electronics|[-D-](/boxes/logic/_resources/datasheets/OR_gates.pdf)|[-L-](https://uk.farnell.com/texas-instruments/cd4072be/ic-gate/dp/3120138)

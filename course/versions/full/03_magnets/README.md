@@ -3,7 +3,7 @@ In this box, you will learn about magnets...
 
 <details><summary><i>Materials</i></summary><p>
 
-Name|Description| # |Package|Data|Link|
+Name|Description| # |Package|Data|Supplier|
 :-------|:----------|:-----:|:-:|:--:|:--:|
 Inductor|1 mH toroidal inductor|1|Passive Electronics|[-D-](/boxes/magnets/_resources/datasheets/inductor_toroidal.pdf)|[-L-](https://uk.farnell.com/bourns/2124-v-rc/inductor-1000uh-15-1-3a-toroid/dp/1929753)
 Magnet Wire|Narrow gauge epoxy insulated (1 m)|1|Passive Electronics|[-D-](/boxes/magnets/)|[-L-](https://www.amazon.co.uk/sourcing-map-Enameled-Transformers-Inductors/dp/B0CYP8L4L1)

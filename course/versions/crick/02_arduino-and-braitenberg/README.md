@@ -3,18 +3,18 @@ Day two: yesterday's analog brain becomes a programmable one. By the end of the 
 
 <details><summary><i>Materials</i></summary><p>
 
-Name|Description| # |Package|Data|Link|
+Name|Description| # |Package|Data|Supplier|
 :-------|:----------|:-----:|:-:|:--:|:--:|
 Microcontroller|Arduino Nano (rev.3)|1|Medium (011)|[-D-](/boxes/computers/_resources/datasheets/arduino_nano_rev3.pdf)|[-L-](https://uk.farnell.com/arduino/a000005/arduino-nano-evaluation-board/dp/1848691)
 Piezo Buzzer|Piezoelectric speaker/transducer|1|Passive Electronics|[-D-](/boxes/computers/_resources/datasheets/piezo_buzzer.pdf)|[-L-](https://uk.farnell.com/tdk/ps1240p02bt/piezoelectric-buzzer-4khz-70dba/dp/3267212)
 Cable (MiniUSB-1m)|Mini-USB to Type-A cable (1 m)|1|Cables (001)|[-D-](/boxes/computers/)|[-L-](https://www.amazon.co.uk/gp/product/B07FWF2KBF)
 Servo Motor|FT90R Digital Micro Continuous Rotation Servo|2|Large (100)|[-D-](/boxes/control/)|[-L-](https://www.pololu.com/product/2817)
 Servo Wheel|Wheels (70x8mm) for servos|2|Large (100)|[-D-](/boxes/control/)|[-L-](https://www.pololu.com/product/4925)
-Servo Mount|Mount for servo motor|2|Acrylic Mounts|[-D-](/boxes/robotics/)|[-L-](VK)
+Servo Mount|Mount for servo motor|2|Acrylic Mounts|[-D-](/boxes/robotics/)|VK
 M2.5 bolt (6)|6 mm long M2.5 bolt|8|Mounting Hardware|[-D-](/boxes/robotics/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2)
 M2.5 standoff (12/SS)|12 mm long socket-to-socket M2.5 standoff|4|Mounting Hardware|[-D-](/boxes/robotics/)|[-L-](https://uk.farnell.com/wurth-elektronik/970120151/standoff-hex-female-female-12mm/dp/2884528)
 Caster|0.75 inch metal ball caster|1|Large (100)|[-D-](/boxes/robotics/https://www.pololu.com/product/955)|[-L-](https://www.pololu.com/product/955)
-Spacer|NB3 spacer 3 mm spacer for mounting ball caster|5|Acrylic Mounts|[-D-](/boxes/robotics/NB3_spacer)|[-L-](VK)
+Spacer|NB3 spacer 3 mm spacer for mounting ball caster|5|Acrylic Mounts|[-D-](/boxes/robotics/NB3_spacer)|VK
 
 </p></details><hr>
 

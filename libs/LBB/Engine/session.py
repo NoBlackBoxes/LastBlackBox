@@ -104,10 +104,20 @@ class Session:
 
         # Render Materials List
         output.append(f"<details><summary><i>Materials</i></summary><p>\n\n")
-        output.append("Name|Description| # |Package|Data|Link|\n")
+
+        output.append("Name|Description| # |Package|Data|Supplier|\n")
         output.append(":-------|:----------|:-----:|:-:|:--:|:--:|\n")
         for m in self.materials:
-            output.append(f"{m.name}|{m.description}|{m.quantity}|{m.package}|[-D-]({m.datasheet})|[-L-]({m.supplier})\n")
+            if m.supplier.startswith(("https://", "http://")):
+                supplier = f"[-L-]({m.supplier})"
+            else:
+                supplier = m.supplier or "—"
+
+            output.append(
+                f"{m.name}|{m.description}|{m.quantity}|{m.package}|"
+                f"[-D-]({m.datasheet})|{supplier}\n"
+            )
+            
         output.append(f"\n</p></details><hr>\n\n")
 
         # Render Template (with lesson text insertion)
