@@ -269,6 +269,8 @@ More body text. Another tag:
 
 The engine replaces each `{BoxName:LessonName}` tag with the full content of `boxes/<box>/_resources/lessons/<LessonName>.md`, plus any paired `.csv` materials file. The rendered `README.md` is written alongside `_resources/`.
 
+During the website build, `build_site.py` converts the engine-rendered Vimeo thumbnail blocks into native Docfx video embeds in `.docfx-staging/`. This affects only the website: authored lessons and generated repository READMEs keep their linked thumbnails.
+
 ### The `{Box:Lesson}` tag grammar
 
 - **BoxName** — matches a folder under [boxes/](../../../boxes/), case-insensitive (`Electrons`, `Sensors`, `Audio`, etc.).

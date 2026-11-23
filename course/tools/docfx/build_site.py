@@ -25,6 +25,8 @@ The build is a three-step pipeline:
          when absent).
 
 2. Bundle assets and rewrite links. Walk every markdown file in staging:
+   - Vimeo thumbnail links emitted by the LBB engine are replaced with
+     docfx-native video embeds. The repository READMEs remain unchanged.
    - Image references (../../../../boxes/<box>/.../*.gif, /boxes/.../*.png,
      etc.) get the referenced file copied into staging/_assets/<box>/...
      and the markdown reference rewritten to a local relative path. The
@@ -87,6 +89,19 @@ _MD_IMG_RE = re.compile(
     re.IGNORECASE,
 )
 
+# The engine renders each lesson video as a linked heading followed by a GIF
+# thumbnail. Replace that exact engine-owned block only in the staged website;
+# authored lessons and generated repository READMEs stay GitHub-friendly.
+_VIMEO_VIDEO_BLOCK_RE = re.compile(
+    r'^#### Watch this video: \[(?P<title>[^\]\n]+)\]\('
+    r'https://vimeo\.com/(?:manage/videos/)?(?P<id>[0-9]+)[^\s)]*\)\n'
+    r'<p align="center">\n'
+    r'<a href="[^"]+" title="Control\+Click to watch in new tab">'
+    r'<img [^>\n]+/></a>\n'
+    r'</p>',
+    re.MULTILINE,
+)
+
 # First H1 in a session template.md is `# CourseName : SessionName`. Capture
 # everything after the colon as the human-readable session label.
 _H1_SESSION_RE = re.compile(r"^#\s+[^:]+?\s+:\s+(.+?)\s*$", re.MULTILINE)
@@ -98,13 +113,32 @@ def _normalise_to_repo_relative(path: str) -> str:
     return _PARENT_TRAVERSAL.sub("", path).lstrip("/")
 
 
+def _embed_vimeo_videos(text: str) -> str:
+    """Replace engine-rendered Vimeo thumbnails with native Docfx embeds.
+
+    Keep a normal public Vimeo link in the heading as a playback fallback.
+    URLs copied from Vimeo's management interface are normalised by video ID.
+    """
+    def replace(match: re.Match) -> str:
+        title = match.group("title")
+        video_id = match.group("id")
+        public_url = f"https://vimeo.com/{video_id}"
+        player_url = f"https://player.vimeo.com/video/{video_id}"
+        return (
+            f"#### Watch this video: [{title}]({public_url})\n\n"
+            f"> [!Video {player_url}]"
+        )
+
+    return _VIMEO_VIDEO_BLOCK_RE.sub(replace, text)
+
+
 def _bundle_assets_in_markdown(
     md_path: pathlib.Path, staging_root: pathlib.Path, repo_root: pathlib.Path
 ) -> tuple[str, list[str]]:
     """Read *md_path*, bundle every image ref into staging/_assets/, return
     (rewritten_text, list_of_bundled_repo_paths).
     """
-    text = md_path.read_text(encoding="utf8")
+    text = _embed_vimeo_videos(md_path.read_text(encoding="utf8"))
     bundled: list[str] = []
 
     # Relative prefix from this markdown file to staging_root/_assets/.
