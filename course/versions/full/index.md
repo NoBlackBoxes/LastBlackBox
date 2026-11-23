@@ -1,8 +1,8 @@
-# The Last Black Box
-
-<!-- LBB_CURRICULUM_MAP -->
+## About this course
 
 **LBB** is the full, comprehensive course: twenty-eight sessions covering everything from the atoms inside matter up to artificial intelligence. Each session opens one *black box* and shows you how it works from first principles. By the end you have **NB3** — a robot brain you built with no black boxes anywhere in the stack.
+
+<!-- LBB_CURRICULUM_MAP -->
 
 ## Sessions
 

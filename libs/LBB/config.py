@@ -45,12 +45,16 @@ material_course_names = [
     course["engine_name"] for course in course_manifest if course["materials"]
 ]
 course_slugs = {course["engine_name"]: course["slug"] for course in course_manifest}
+courses_by_slug = {course["slug"]: course for course in course_manifest}
 published_courses = [course for course in course_manifest if course["published"]]
 
 if len(course_slugs) != len(course_manifest):
     raise ValueError("Course engine names must be unique in course/courses.json")
 if len({course["slug"] for course in course_manifest}) != len(course_manifest):
     raise ValueError("Course slugs must be unique in course/courses.json")
+
+# Canonical public location used by the site builder and sitemap generator.
+site_base_url = "https://noblackboxes.github.io/LastBlackBox"
 
 manifest_slugs = {course["slug"] for course in course_manifest}
 version_slugs = {

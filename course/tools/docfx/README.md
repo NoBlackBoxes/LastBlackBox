@@ -70,6 +70,7 @@ boxes/{box}/README.md
     manifest --> config
     config --> orchestrator
     config --> engine
+    config --> site_builder
 
     versions --> engine
     boxes --> engine
@@ -129,6 +130,8 @@ sequenceDiagram
 
     loop Each course with published = true
         Build->>Site: Build the course slug
+        Site->>Config: Load course metadata and public URL
+        Config-->>Site: Validated course settings
         Note right of Site: Reads generated session READMEs,<br/>index.md and sessions.index.md
         Site->>Site: Derive curriculum boxes from lesson tags
         Site->>Site: Generate the shared curriculum grid
@@ -142,6 +145,7 @@ sequenceDiagram
     Build->>Output: Write docs/sitemap.xml
     Build->>Output: Copy root website assets
     Build->>Output: Render docs/index.html
+    Build->>Output: Write docs/robots.txt
 
     Output-->>Runner: Complete static website
 ```
@@ -293,7 +297,7 @@ Add one entry to the single course manifest, [course/courses.json](../../courses
 
 The fields have distinct responsibilities:
 
-- `name`, `description`, and `logo` define the course tile on the root landing page. Put a logo under `course/tools/docfx/root/` and store its filename in `logo`, or use `null` for no logo.
+- `name`, `description`, and `logo` define the course tile on the root landing page. `name` also supplies the course-site H1; `description` supplies fallback landing-page prose when `index.md` is absent. Put a logo under `course/tools/docfx/root/` and store its filename in `logo`, or use `null` for no logo.
 - `engine_name` is the name passed to the LBB engine and materials scripts.
 - `slug` must match exactly one directory under `course/versions/` and becomes the website path under `docs/`.
 - `generate` includes the course when generating session READMEs.
@@ -302,18 +306,20 @@ The fields have distinct responsibilities:
 
 Every directory under `course/versions/` must have exactly one manifest entry. A published or materials-enabled course must also have `generate` set to `true`; the manifest loader validates these rules.
 
-### 3. Customise the Docfx landing pages
+### 3. Author the course landing pages
 
-For a customised course site, add these files under `course/versions/<slug>/`:
+For course-specific content, add these files under `course/versions/<slug>/`:
 
-- **`index.md`** — the per-course landing page. Put one `<!-- LBB_CURRICULUM_MAP -->` marker immediately after the H1 so the generated 28-box grid precedes the course content. See [../../versions/crick/index.md](../../versions/crick/index.md) as a model.
+- **`index.md`** — the course landing-page body. The manifest supplies the H1, so start with an `About this course` H2 and its introductory paragraph. Put one `<!-- LBB_CURRICULUM_MAP -->` marker where the generated course facts and 28-box grid should appear. See [../../versions/crick/index.md](../../versions/crick/index.md) as a model.
 - **`sessions.index.md`** — the sessions overview, linked from the top-nav. See [../../versions/crick/sessions.index.md](../../versions/crick/sessions.index.md).
 
-Both are plain Markdown. Use repo-relative paths for images (`/course/_resources/...`) and session-relative paths for session links (`sessions/01_my-session/README.md`). If either file is absent, `build_site.py` generates a basic version from the course slug and discovered sessions. The curriculum grid is derived from the `{Box:Lesson}` tags in those sessions; no separate course box list is maintained.
+Both are plain Markdown. Use repo-relative paths for images (`/course/_resources/...`) and session-relative paths for session links (`sessions/01_my-session/README.md`). If either file is absent, `build_site.py` generates a basic version from the manifest and discovered sessions. The curriculum grid is derived from the `{Box:Lesson}` tags in those sessions; no separate course box list is maintained.
 
-The shared [template/](template/) provides `docfx.json.tmpl`, `toc.yml`, and the shared CSS/JS. `build_site.py` generates `sessions.toc.yml` from the discovered sessions. Override these defaults by adding `docfx.json`, `toc.yml`, `sessions.toc.yml`, or files under `template/` to `course/versions/<slug>/`.
+The shared [template/](template/) is the single source of truth for Docfx configuration, root navigation, CSS and JavaScript. `build_site.py` generates `sessions.toc.yml` from the discovered sessions; add a course-level `sessions.toc.yml` only when its navigation labels or grouping genuinely differ.
 
-The manifest automatically controls engine registration, the published build list, and the course tile on the root landing page.
+A course may add supplementary public assets under `template/public/`. The Crick course, for example, provides a partner logo and `site.json` metadata there. Per-course assets cannot replace shared template files; the build stops if their paths collide.
+
+The manifest automatically controls engine registration, the published build list, site metadata, fallback landing content, and the course tile on the root landing page.
 
 ### 4. Build, verify, ship
 
@@ -348,7 +354,7 @@ After a full build:
 docs/
   index.html                # root landing page (course tiles)
   *.svg, *.png              # root images, when present
-  robots.txt                # root assets
+  robots.txt                # generated crawler configuration
   sitemap.xml               # master sitemap-index
   <slug>/                   # one subtree per course
     index.html              # course landing page (rendered from index.md)
@@ -373,9 +379,9 @@ Everything in `docs/` is generated. The directory is gitignored.
 | `course/versions/<slug>/<NN>_*/README.md` | No | Generated by the engine. |
 | `course/versions/<slug>/index.md` | Optional | Custom landing page with one curriculum marker; generated when absent. |
 | `course/versions/<slug>/sessions.index.md` | Optional | Custom sessions overview; generated when absent. |
-| `course/versions/<slug>/docfx.json` | Optional | Override the template default. |
-| `course/versions/<slug>/sessions.toc.yml` | Optional | Override the template default. |
+| `course/versions/<slug>/sessions.toc.yml` | Optional | Course-specific session navigation labels or grouping; generated when absent. |
+| `course/versions/<slug>/template/public/` | Optional | Supplementary public assets; cannot replace shared template files. |
 | `course/courses.json` | Yes | Register courses and control generation, publishing, landing-page text, and logos. |
 | `course/tools/docfx/root/index.html` | Rarely | Root landing-page template; course tiles come from the manifest. |
 | `course/tools/docfx/root/*.svg`, `*.png` | Yes | Root assets, including per-course logos. |
-| `course/tools/docfx/template/` | Rarely | Shared defaults: `docfx.json`, `toc.yml`, CSS/JS. |
+| `course/tools/docfx/template/` | Rarely | Shared Docfx configuration, navigation and presentation for every course. |

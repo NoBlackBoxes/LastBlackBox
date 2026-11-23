@@ -12,13 +12,14 @@ Stages:
        to produce a self-contained docfx site at `docs/<slug>/`.
     2. Write a master sitemap at `docs/sitemap.xml` referencing every
        per-course sitemap.
-    3. Copy the static root assets (landing page, logos, robots.txt) from
-       `course/tools/docfx/root/` into `docs/`.
+    3. Copy the static root assets from `course/tools/docfx/root/`, render the
+       landing page, and write robots.txt.
 
 The course manifest is the single source of truth for engine generation,
-published sites, and the root landing-page tiles. The build picks up sensible
-docfx defaults from `course/tools/docfx/template/`; a course can override them
-under `course/versions/<slug>/`.
+published sites, site metadata, and the root landing-page tiles. Every course
+uses the shared Docfx configuration and presentation under
+`course/tools/docfx/template/`; course directories provide content and optional
+supplementary assets only.
 
 This is the single command CI/CD should invoke to build the website.
 """
@@ -44,11 +45,6 @@ _ENV = {
     **os.environ,
     "PYTHONPATH": str(REPO_ROOT / "libs") + os.pathsep + os.environ.get("PYTHONPATH", ""),
 }
-
-# Public base URL the deployed sites will be served from. Used to build the
-# top-level master sitemap. Update if Pages config changes.
-SITE_BASE_URL = "https://noblackboxes.github.io/LastBlackBox"
-
 
 def _run(cmd: list[str]) -> None:
     print(f">>> {' '.join(cmd)}")
@@ -151,11 +147,9 @@ def main() -> None:
     print("=" * 70)
     print("Stage 2: master sitemap")
     print("=" * 70)
-    _write_master_sitemap(docs_root, sites, SITE_BASE_URL)
+    _write_master_sitemap(docs_root, sites, Config.site_base_url)
 
-    # Stage 3: copy static root assets (landing page, logos, robots.txt) into
-    # docs/. These are hand-authored under course/tools/docfx/root/ and are
-    # served at the site root alongside the per-course subtrees.
+    # Stage 3: copy hand-authored root assets and render generated root files.
     print()
     print("=" * 70)
     print("Stage 3: root assets")
@@ -172,6 +166,12 @@ def main() -> None:
             shutil.copy2(source, destination)
         print(f"  copied {source.name}")
     _write_root_landing(root_src / "index.html", docs_root / "index.html", published_courses)
+    (docs_root / "robots.txt").write_text(
+        "User-agent: *\nAllow: /\n\n"
+        f"Sitemap: {Config.site_base_url}/sitemap.xml\n",
+        encoding="utf8",
+    )
+    print("  wrote docs/robots.txt")
 
     print()
     print("All sites built. Output under:", REPO_ROOT / "docs")

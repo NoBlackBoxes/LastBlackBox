@@ -91,13 +91,8 @@ lbbOnReady(function () {
   if (window.LBB.brandHref) return; window.LBB.brandHref = true;
   var brand = document.querySelector(".navbar-brand");
   if (!brand) return;
-  Array.from(brand.childNodes).forEach(function (node) {
-    if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
-      node.textContent = " Last Black Box";
-    }
-  });
   var logo = brand.querySelector("img");
-  if (logo) logo.alt = "Last Black Box";
+  if (logo) logo.alt = brand.textContent.trim();
   var rel = lbbRel();
   // From a course-root page (rel = "") the landing is "../"; from any deeper
   // page (rel = "../../...") it is rel + "../".
@@ -106,7 +101,7 @@ lbbOnReady(function () {
 
 /* ===========================================================================
    Optional host identity
-   Shown only on the course landing page, after the generated curriculum grid.
+   Shown only on the course landing page, below the course title.
    Asset convention:
      template/public/secondary_logo.{png,svg}   (the image)
      template/public/site.json                  (optional metadata)
@@ -146,8 +141,7 @@ lbbOnReady(function () {
       node = a;
     }
     partner.appendChild(node);
-    var curriculum = document.querySelector(".lbb-curriculum");
-    (curriculum || heading).insertAdjacentElement("afterend", partner);
+    heading.insertAdjacentElement("afterend", partner);
   }
 
   function trySiteMeta(imgUrl) {

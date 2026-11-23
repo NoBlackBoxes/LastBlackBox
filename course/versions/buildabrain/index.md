@@ -1,8 +1,8 @@
-# LBB: Build a Brain
-
-<!-- LBB_CURRICULUM_MAP -->
+## About this course
 
 **LBB-101** walks you through building a brain — and the body around it — from raw electronics up to a robot that sees, hears, and learns. Over eight sessions you will assemble **NB3** from atoms onward, with no black boxes.
+
+<!-- LBB_CURRICULUM_MAP -->
 
 ## Sessions
 

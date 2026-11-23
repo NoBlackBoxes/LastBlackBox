@@ -1,8 +1,8 @@
-# LBB: Bootcamp
-
-<!-- LBB_CURRICULUM_MAP -->
+## About this course
 
 **LBB-102** is a one-week bootcamp version of *The Last Black Box*. Over five days, mornings and afternoons, you will build **NB3** — a robot brain assembled from individual electrons up to a vision-and-audio system, with no black boxes along the way.
+
+<!-- LBB_CURRICULUM_MAP -->
 
 ## Schedule
 

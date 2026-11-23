@@ -1,8 +1,8 @@
-# LBB: Crick Bootcamp
-
-<!-- LBB_CURRICULUM_MAP -->
+## About this course
 
 Welcome. Over five days you will build **NB3**, a robot designed from individual electrons up to a web-connected machine running computer vision and audio models. By the end of the week you will have the hardware, the code, and the mental model to extend any layer for your own experiments.
+
+<!-- LBB_CURRICULUM_MAP -->
 
 ## The five days
 

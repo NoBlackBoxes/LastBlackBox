@@ -1,8 +1,8 @@
-# LBB: Braitenberg Vehicle
-
-<!-- LBB_CURRICULUM_MAP -->
+## About this course
 
 **LBB-100** is the shortest LBB course: a four-session path to building a [Braitenberg Vehicle](https://en.wikipedia.org/wiki/Braitenberg_vehicle), a simple robot brain that senses its environment and responds with action. You will assemble **NB3** with no black boxes, from analog electronics up through a microcontroller-driven robot.
+
+<!-- LBB_CURRICULUM_MAP -->
 
 ## Sessions
 
