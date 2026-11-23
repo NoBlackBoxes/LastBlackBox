@@ -8,51 +8,30 @@
    ========================================================================== */
 :root,
 [data-bs-theme="light"] {
-  --bs-body-bg: #f2f1ec;
-  --bs-body-color: #1f2422;
-  --bs-border-color: #d8d9d3;
-  --bs-link-color: #2f6553;
-  --bs-link-hover-color: #204a3d;
-  --bs-link-color-rgb: 47, 101, 83;
-  --bs-primary: #2f6553;
-  --bs-primary-rgb: 47, 101, 83;
-  --lbb-surface: #fbfaf6;
-  --lbb-header: #f8f7f2;
-  --lbb-text: #1f2422;
-  --lbb-muted: #66706c;
-  --lbb-rule: #d8d9d3;
-  --lbb-soft: #e8e8e2;
-  --lbb-accent: #2f6553;
-  --lbb-open: #c9d9d1;
-  --lbb-open-hover: #b9cec4;
-  --lbb-open-text: #18352c;
-  --lbb-closed: #303634;
-  --lbb-closed-text: #c2c9c6;
-  --lbb-shadow: rgb(21 35 29 / 16%);
+  /* Bootstrap owns the palette and light/dark adaptation. These aliases only
+     describe the small set of roles unique to the LBB layout. */
+  --lbb-surface: var(--bs-body-bg);
+  --lbb-header: var(--bs-body-bg);
+  --lbb-text: var(--bs-emphasis-color);
+  --lbb-muted: var(--bs-secondary-color);
+  --lbb-rule: var(--bs-border-color);
+  --lbb-soft: var(--bs-tertiary-bg);
+  --lbb-accent: var(--bs-link-color);
+  --lbb-open: var(--bs-secondary-bg);
+  --lbb-open-hover: var(--bs-gray-300);
+  --lbb-open-text: var(--bs-emphasis-color);
+  --lbb-closed: var(--bs-gray-800);
+  --lbb-closed-text: var(--bs-gray-300);
+  --lbb-shadow: rgb(0 0 0 / 15%);
 }
 
 [data-bs-theme="dark"] {
-  --bs-body-bg: #151918;
-  --bs-body-color: #edf0ed;
-  --bs-border-color: #343a37;
-  --bs-link-color: #b3d1c2;
-  --bs-link-hover-color: #d0e1d9;
-  --bs-link-color-rgb: 179, 209, 194;
-  --bs-primary: #b3d1c2;
-  --bs-primary-rgb: 179, 209, 194;
-  --lbb-surface: #1b201e;
-  --lbb-header: #181d1b;
-  --lbb-text: #edf0ed;
-  --lbb-muted: #a2aaa6;
-  --lbb-rule: #343a37;
-  --lbb-soft: #232825;
-  --lbb-accent: #b3d1c2;
-  --lbb-open: #aebfb7;
-  --lbb-open-hover: #bfcec7;
-  --lbb-open-text: #17231f;
-  --lbb-closed: #292e2c;
-  --lbb-closed-text: #aab2ae;
-  --lbb-shadow: rgb(0 0 0 / 36%);
+  --lbb-open: var(--bs-gray-600);
+  --lbb-open-hover: var(--bs-gray-500);
+  --lbb-open-text: var(--bs-white);
+  --lbb-closed: var(--bs-gray-900);
+  --lbb-closed-text: var(--bs-gray-400);
+  --lbb-shadow: rgb(0 0 0 / 35%);
 }
 
 /* ===========================================================================
@@ -358,15 +337,6 @@ article:has(> .lbb-curriculum) > #about-this-course + p {
   text-decoration: none;
   transition: transform 140ms ease, background 140ms ease,
               box-shadow 140ms ease;
-}
-
-.lbb-box-item.is-active .lbb-box::after {
-  content: "↗";
-  position: absolute;
-  right: 0.55rem;
-  bottom: 0.4rem;
-  font-size: 0.72rem;
-  opacity: 0.5;
 }
 
 .lbb-box-item.is-active .lbb-box:hover,

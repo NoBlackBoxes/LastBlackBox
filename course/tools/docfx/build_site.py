@@ -303,6 +303,7 @@ def _render_curriculum_map(
             lines.extend([
                 '    <li class="lbb-box-item is-active">',
                 f'      <a class="lbb-box" href="{href}" aria-label="{aria}">',
+                '        <i class="bi bi-unlock lbb-box-lock" aria-hidden="true"></i>',
                 f"        <span>{escaped_name}</span>",
                 "      </a>",
                 "    </li>",
