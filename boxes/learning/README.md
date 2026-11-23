@@ -11,11 +11,13 @@ Clicker|Loud sound maker (and whistle)|1|Auxiliary|[-D-](/boxes/learning/)|[-L-]
 
 ## Learning
 ### Gradient Descent
+> [!NOTE]
 > If it gets better, then keep going!
 
 
 # Projects
 ### NB3 : Clicker Training
+> [!NOTE]
 > If a *click* is reinforcing, then training complex behaviour becomes far simpler.
 
 

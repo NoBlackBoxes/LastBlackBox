@@ -18,6 +18,7 @@ Gate (XOR)|4xXOR gate|1|Active Electronics|[-D-](/boxes/logic/_resources/datashe
 <a href="https://vimeo.com/1033231995" title="Control+Click to watch in new tab"><img src="../../../../boxes/logic/_resources/lessons/thumbnails/Logic-Gates.gif" alt="Logic Gates" width="480"/></a>
 </p>
 
+> [!NOTE]
 > The essential elements of computation (NOT, AND, OR, XOR, etc.) can be built from straight forward combinations of MOSFETs.
 
 - Design an XOR gate
@@ -26,6 +27,7 @@ Gate (XOR)|4xXOR gate|1|Active Electronics|[-D-](/boxes/logic/_resources/datashe
 
 # Projects
 ### NB3 : Build an ADC (output)
+> [!NOTE]
 > Use a comparator to convert analog values into discrete levels.
 
 

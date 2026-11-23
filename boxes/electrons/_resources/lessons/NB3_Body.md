@@ -30,4 +30,5 @@ We will now start measuring and manipulating electricity, but first we will asse
 
 - **TASK**: Assemble the robot body (prototyping base board).
   - *Challenge*: If you are curious how the *NB3 Body* printed circuit board (PCB) was designed, then you can find the KiCAD files here: [NB3 Body PCB](/boxes/electrons/NB3_body).
+> [!TIP]
 > Your NB3 should now look like [this](/boxes/electrons/NB3_body/NB3_body_front.png). Your breadboards will be different colors...and you should have some rubber feet on the back.

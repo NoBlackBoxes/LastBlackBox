@@ -11,6 +11,7 @@ Secret Message|A SHA256 encrypted message (in HEX)|1|Auxiliary|[-D-](/boxes/secu
 
 ## Security
 ### One Way Functions
+> [!NOTE]
 > Easy to compute, hard to inverse.
 
 

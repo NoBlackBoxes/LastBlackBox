@@ -30,6 +30,7 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 <a href="https://vimeo.com/1032441712" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/Electric-Fields.gif" alt="Electric Fields" width="480"/></a>
 </p>
 
+> [!NOTE]
 > A very useful, and quite simple, depiction of the lines of force surrounding charged particles.
 
 - Draw the electric field around a negative charge and positive charge separated by a small distance. Use the following image as a starting point.
@@ -39,6 +40,7 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 <a href="https://vimeo.com/1000730032" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/Voltage.gif" alt="Voltage" width="480"/></a>
 </p>
 
+> [!NOTE]
 > When there is more negative or positive charge in one location vs. another there is a *potential difference* between these locations. This *potential difference* is called a **voltage** and it creates a pressure that pushes electrons from the location with more negative charge to the location with less.
 
 
@@ -47,6 +49,7 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 <a href="https://vimeo.com/1029337222" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/Conductors.gif" alt="Conductors" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Some materials have electrons in their outer orbitals that are happy to jump between neighboring atomic nuclei (of the same element). These electrons are "free" to move around the material. If we place such a material between two locations with a *potential difference* (voltage), then electrons will flow from the **(-)** location to the **(+)** location; the material will **conduct** electricity.
 
 
@@ -55,15 +58,18 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 <a href="https://vimeo.com/1029278169" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/Batteries.gif" alt="Batteries" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Generating a stable voltage requires a renewable source of electrons to maintain a *potential difference*. We can accomplish this with a (redox) chemical reaction inside the wonderfully useful device that we call a **battery**.
 
 - **TASK**: Measure the voltage of a AA battery using your multimeter.
   - *Hint*: Select the voltage ("V") setting and touch your probes to either end of the battery. Depending on your multimeter, you may also need to select an appropriate "range". For a single AA battery, you should expect to measure between 1 and 2 Volts.
   - *Help*: If you are new to using a multimeter, then I recommend that you watch this video: [NB3-Multimeter Basics](https://vimeo.com/1027764019)
   - *Help*: If you are new to measuring voltage with a multimeter, then I recommend that you watch this video: [NB3-Measuring Voltage](https://vimeo.com/1027762531)
+> [!TIP]
 > A single AA battery, fully charged, should have a voltage of ~1.6 Volts. If it is less than 1.5 Volts, then the battery is nearly *dead*.
 - **TASK**: Measure the voltage of 4xAA batteries in series (end to end).
   - *Hint*: You can use your battery holder.
+> [!TIP]
 > Batteries connected in series will sum their voltages. You should measure four times the voltage of a single AA battery, ~6.4 Volts, from the batteries in your 4xAA holder.
 
 #### Watch this video: [NB3 : Multimeter Basics](https://vimeo.com/1027764019)
@@ -71,10 +77,12 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 <a href="https://vimeo.com/1027764019" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/NB3_Multimeter-Basics.gif" alt="NB3 : Multimeter Basics" width="480"/></a>
 </p>
 
+> [!NOTE]
 > An overview of digital multimeters for beginners. What can it measure? What features do you need to complete the course?
 
 
 ### NB3 : How Do Multimeters Work
+> [!NOTE]
 > Learn how multimeters actually work
 
 
@@ -83,6 +91,7 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 <a href="https://vimeo.com/1027762531" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/NB3_Measuring-Voltage.gif" alt="NB3 : Measuring Voltage" width="480"/></a>
 </p>
 
+> [!NOTE]
 > How to measure voltage with a digital multimeter.
 
 
@@ -91,6 +100,7 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 <a href="https://vimeo.com/1029334167/2492ff3542" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/Current.gif" alt="Current" width="480"/></a>
 </p>
 
+> [!NOTE]
 > The rate at which electrons flow, measured as *#charges / second*, is called **current**. We use the unit *Amps* (A) and the circuit symbol **I**.
 
 
@@ -99,10 +109,12 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 <a href="https://vimeo.com/1029696806" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/Resistors.gif" alt="Resistors" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Many materials hold onto their outer electrons and resist their movement. We can create mixtures of these "resisting" materials and better "conducting" materials, often in the form of ceramics, to create **resistors** with a range of different *resistance* values, which we measure in Ohms (&Omega;).
 
 - **TASK**: Measure the resistance of your resistors.
   - *Help*: If you are new to measuring resistance with a multimeter, then I recommend that you watch this video: [NB3-Measuring Resistance](https://vimeo.com/1027761453)
+> [!TIP]
 > Your kit contains 470 &Omega;, 1 k&Omega;, and 10 k&Omega; resistors. You should measure these values.
 
 #### Watch this video: [NB3 : Measuring Resistance](https://vimeo.com/1027761453)
@@ -110,6 +122,7 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 <a href="https://vimeo.com/1027761453" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/NB3_Measuring-Resistance.gif" alt="NB3 : Measuring Resistance" width="480"/></a>
 </p>
 
+> [!NOTE]
 > How to measure resistance with a digital multimeter.
 
 
@@ -118,6 +131,7 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 <a href="https://vimeo.com/1027757287" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/NB3_Measuring-Current.gif" alt="NB3 : Measuring Current" width="480"/></a>
 </p>
 
+> [!NOTE]
 > How to measure current with a digital multimeter.
 
 
@@ -126,10 +140,12 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 <a href="https://vimeo.com/1030776673" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/NB3_Body.gif" alt="NB3 : Body" width="480"/></a>
 </p>
 
+> [!NOTE]
 > We will now start measuring and manipulating electricity, but first we will assemble a "prototyping platform" that also happens to be the **body** of your robot (NB3).
 
 - **TASK**: Assemble the robot body (prototyping base board).
   - *Challenge*: If you are curious how the *NB3 Body* printed circuit board (PCB) was designed, then you can find the KiCAD files here: [NB3 Body PCB](/boxes/electrons/NB3_body).
+> [!TIP]
 > Your NB3 should now look like [this](/boxes/electrons/NB3_body/NB3_body_front.png). Your breadboards will be different colors...and you should have some rubber feet on the back.
 
 #### Watch this video: [NB3 : Building Circuits](https://vimeo.com/1030783826)
@@ -137,12 +153,14 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 <a href="https://vimeo.com/1030783826" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/NB3_Building-Circuits.gif" alt="NB3 : Building Circuits" width="480"/></a>
 </p>
 
+> [!NOTE]
 > With a voltage source (battery) and resistors, then we can start building "circuits" - complete paths of conduction that allow current to flow from a location with *less* electrons **(+)** to a location with *more* electrons **(-)**.
 
 - *Note*: This is *weird*. Electrons are the things moving. Shouldn't we say that current "flows" from the **(-)** area to the **(+)** area? Unfortunately, current was described before anyone knew about electrons and we are stuck with the following awkward convention: **Current is defined to flow from (+) to (-)**...even though we now know that electrons are moving the opposite direction.
 - **TASK**: Build the simple circuit below and measure the current flowing when you connect the battery pack.
   - *Warning*: Measuring current with a multimeter is ***tricky***. You can only get an accurate measurement if ***ALL*** of the current in the circuit is forced to flow through your multimeter. This means that when measuring current, your multimeter must be in *series* with the rest of the circuit. (As opposed to measuring voltage, when your multimeter is placed "parallel" to the circuit.)
   - *Help*: If you are new to measuring current with a multimeter, then I recommend you watch this video: [NB3-Measuring Current](https://vimeo.com/1027757287).
+> [!WARNING]
 > Not too much current...and do not break your multimeter.
 
 #### Watch this video: [Ohm's Law](https://vimeo.com/1029695302)
@@ -150,9 +168,11 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 <a href="https://vimeo.com/1029695302" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/Ohms-Law.gif" alt="Ohm's Law" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Ohm's Law describes the relationship between Voltage, Current, and Resistance. It is not complicated, but it is very useful.
 
 - **TASK**: Does Ohm's Law hold? You know the voltage of the batteries (V) and the resistance of the resistor (R). Measure the current flowing (I) for different resistors and confirm that V = I*R.
+> [!TIP]
 > For the resistors in your kit, then Ohm's Law should determine the current that you measure.
 
 #### Watch this video: [Voltage Dividers](https://vimeo.com/1030787469)
@@ -160,12 +180,15 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 <a href="https://vimeo.com/1030787469" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/Voltage-Dividers.gif" alt="Voltage Dividers" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Controlling the level of voltage at different places in a circuit is critical to designing electronic devices.
 
 - **TASK**: Build a voltage divider using two resistors of the same value. Measure the intermediate voltage (between the resistors).
+> [!TIP]
 > With equal size resistors, the intermediate voltage you measure should be half of the supply voltage.
 - **TASK**: Build a voltage divider using a variable resistor (potentiometer). Measure the intermediate voltage. What happens when you change the position of the internal contact of the variable resistor (by turning the screw)?
   - *Help*: A video guide to completing these tasks can be found here: [NB3-Building Voltage Dividers](https://vimeo.com/1030790826)
+> [!TIP]
 > The intermediate voltage should vary continuously as you adjust the potentiometer.
 
 #### Watch this video: [NB3 : Building Voltage Dividers](https://vimeo.com/1030790826)
@@ -173,6 +196,7 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 <a href="https://vimeo.com/1030790826" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/NB3_Building-Voltage-Dividers.gif" alt="NB3 : Building Voltage Dividers" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Step-by-step guide to building and testing voltage dividers with discrete resistors and a potentiometer.
 
 
@@ -181,6 +205,7 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 <a href="https://vimeo.com/1029693122" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/Power.gif" alt="Power" width="480"/></a>
 </p>
 
+> [!NOTE]
 > When electrons move through a circuit, they deliver power (some amount of energy in some amount of time). This power can be used to do useful things: make a motor move, light a lamp, or generate heat. If we deliver too little power, then our electronic device may not work as designed. If we deliver too much, then it may never work again. We measure power in Watts.
 
 
@@ -189,11 +214,13 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 <a href="https://vimeo.com/1035298931" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/Capacitors.gif" alt="Capacitors" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Two conductors separated by an insulator (but in close proximity) can interact through the electric field. If we put an external voltage across these conductors, then they will gradually accumulate charge until their own voltage matches the external potential. We say that these devices have an intrinsic capacity for storing charge and we call them **capacitors**.
 
 
 # Projects
 ### NB3 : Designing PCBs With KiCAD
+> [!NOTE]
 > What is KiCAD and how can we use it to design (and manufacture) PCBs?
 
 
@@ -202,9 +229,11 @@ Capacitor (large)|100 uF aluminum electrolytic capacitor|1|Passive Electronics|[
 <a href="https://vimeo.com/1029280971" title="Control+Click to watch in new tab"><img src="../../../../boxes/electrons/_resources/lessons/thumbnails/NB3_Building-a-Battery.gif" alt="NB3 : Building a Battery" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Let's build a version of the *first* battery, and use it to power an LED.
 
 - **TASK**: Build a simple battery
   - Combine two different metals, one that oxidizes well and one that does not, and connect them together with a layer of electrolyte between (salt water soaked paper works fine, so does a piece of fruit).
+> [!TIP]
 > You should see a voltage if you choose your two metals wisely. Zinc and Copper should produce ~0.76 Volts. If you stack multiple cells in series, then the resulting voltage should sum.
 

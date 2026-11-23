@@ -15,6 +15,7 @@ Cable (MiniUSB-20cm)|Short mini-USB to Type-A cable (20 cm)|1|Cables (001)|[-D-]
 <a href="https://vimeo.com/1127178041" title="Control+Click to watch in new tab"><img src="../../../../boxes/networks/_resources/lessons/thumbnails/Physical-Layers.gif" alt="Physical Layers" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Connections must be made between computers in order for them to communicate. These can be wires carrying electrical signals (from just one or two wires for serial connections to many wires for parallel connections) or wireless (most often using light, i.e. radio waves). This is the physical layer of the network...and a message may traverse many different types of physical connections on its path from the sender to the receiver.
 
 
@@ -23,6 +24,7 @@ Cable (MiniUSB-20cm)|Short mini-USB to Type-A cable (20 cm)|1|Cables (001)|[-D-]
 <a href="https://vimeo.com/1042782602" title="Control+Click to watch in new tab"><img src="../../../../boxes/networks/_resources/lessons/thumbnails/NB3_Develop-a-Protocol.gif" alt="NB3 : Develop a Protocol" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Let's develop a simple network protocol for communication between our NB3's midbrain computer and hindbrain microcontroller.
 
 - Decide on your command format (x,o)
@@ -34,6 +36,7 @@ Cable (MiniUSB-20cm)|Short mini-USB to Type-A cable (20 cm)|1|Cables (001)|[-D-]
 <a href="https://vimeo.com/1042784651" title="Control+Click to watch in new tab"><img src="../../../../boxes/networks/_resources/lessons/thumbnails/NB3_Remote-Control-NB3-TUI.gif" alt="NB3 : Remote Control NB3 (TUI)" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Let's remotely control our NB3 using a simple text-based user interface (TUI). We will detect a keypress in the terminal and send the appropriate command to our hindbrain motor controller.
 
 - **GOAL**: Press a key on your PC and have your NB3 respond. If you detect different keys, then you can have your NB3 respond with different behaviors/directions.
@@ -53,6 +56,7 @@ Cable (MiniUSB-20cm)|Short mini-USB to Type-A cable (20 cm)|1|Cables (001)|[-D-]
 <a href="https://vimeo.com/manage/videos/1127222969" title="Control+Click to watch in new tab"><img src="../../../../boxes/networks/_resources/lessons/thumbnails/Architectures.gif" alt="Architectures" width="480"/></a>
 </p>
 
+> [!NOTE]
 > The arrangement of connections between computers (nodes) defines the network's *architecture*. These can be simple 1-to-1 connections or much more complex. Here we will introduce the architecture of our most important network, **the internet**.
 
 
@@ -61,6 +65,7 @@ Cable (MiniUSB-20cm)|Short mini-USB to Type-A cable (20 cm)|1|Cables (001)|[-D-]
 <a href="https://vimeo.com/1134201413" title="Control+Click to watch in new tab"><img src="../../../../boxes/networks/_resources/lessons/thumbnails/Sockets.gif" alt="Sockets" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Sockets abstract the idea of a connection between computers. A socket communicates to another socket using either TCP or UDP packets. It has an address. It can listen for and request connections.
 
 - Load some new code onto your Arduino that streams the analog voltage values measured at pin A0 (scaled 0 to 255) over the serial connection to your RPi. Feel free to connect something interesting, like a light sensor, to the AO input. Here is some example Arduino code: [Analog Stream](/boxes/networks/sockets/arduino/analog_stream/analog_stream.ino)
@@ -77,6 +82,7 @@ Cable (MiniUSB-20cm)|Short mini-USB to Type-A cable (20 cm)|1|Cables (001)|[-D-]
 <a href="https://vimeo.com/1134724080" title="Control+Click to watch in new tab"><img src="../../../../boxes/websites/_resources/lessons/thumbnails/HTML.gif" alt="HTML" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Hyper-text markup language (HTML) is the data format of the world-wide-web. When you "visit a website" you are simply asking for an HTML file. What is an HTML file? It is just a text file with some special "<tags>" that control how the contents of the file should be displayed. The program you use to request these and display these files is called a *web browser*.
 
 - Create an HTML file. You can start from the simple template here: [HTML (simple)](/boxes/websites/html/simple.html)
@@ -90,6 +96,7 @@ Cable (MiniUSB-20cm)|Short mini-USB to Type-A cable (20 cm)|1|Cables (001)|[-D-]
 <a href="https://vimeo.com/1134720724" title="Control+Click to watch in new tab"><img src="../../../../boxes/websites/_resources/lessons/thumbnails/CSS.gif" alt="CSS" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Webpages often have a consistent "style" across an entire website. It is possible to create and maintain this style by directly including the same style tags (colors, fonts, margins, etc.) in every HTML page, but this is difficult to maintain and tedious to update. Cascading Style Sheets (CSS) allow you to put all of your "styling" into a single file that can be included on the pages that need it, giving you one place to make tweaks to the styling of your entire website.
 
 - Create a "styles.css" for your website. Add a link to this "stylesheet" in your HTML code. You can start with the examples (HTML and CSS) here: [CSS Examples](/boxes/websites/css/)
@@ -100,6 +107,7 @@ Cable (MiniUSB-20cm)|Short mini-USB to Type-A cable (20 cm)|1|Cables (001)|[-D-]
 <a href="https://vimeo.com/1134729863" title="Control+Click to watch in new tab"><img src="../../../../boxes/websites/_resources/lessons/thumbnails/Javascript.gif" alt="Javascript" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Javascript is the web browser's programming (scripting) language. It has very little to do with Java, but it is the main way to add "interaction" to websites. Everyone should know a little bit of Javascript. Also, given that everyone has access to a web browser, it is one of the easiest programming environments to setup and start playing around.
 
 - Add some (Javascript) code to your website to make it more interactive.
@@ -113,6 +121,7 @@ Cable (MiniUSB-20cm)|Short mini-USB to Type-A cable (20 cm)|1|Cables (001)|[-D-]
 <a href="https://vimeo.com/1135853103" title="Control+Click to watch in new tab"><img src="../../../../boxes/servers/_resources/lessons/thumbnails/HTTP.gif" alt="HTTP" width="480"/></a>
 </p>
 
+> [!NOTE]
 > The fundamental "application protocol" of the internet is HTTP (Hyper Text Transfer Protocol). Your web browser (the client) uses HTTP to *request* HTML files (and other resources) from a computer that understands HTTP (the server) anywhere on the internet. Here we will build a *very simple* HTTP server in Python.
 
 - The code for the "simplest" HTTP socket server is [here](/boxes/servers/python/simple_http_server/simplest_http_server.py)
@@ -126,6 +135,7 @@ Cable (MiniUSB-20cm)|Short mini-USB to Type-A cable (20 cm)|1|Cables (001)|[-D-]
 <a href="https://vimeo.com/1135859914" title="Control+Click to watch in new tab"><img src="../../../../boxes/servers/_resources/lessons/thumbnails/NB3_Host-a-Website.gif" alt="NB3 : Host a Website" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Let's host a website on your robot using the NB3 Server library and Python. We will first explain how the NB3 (HTTP) Server class works, what it is capable of, and then host a site with a range of different file types: HTML, CSS, images, icons, and Javascript.
 
 - Explore the Python code for the [NB3 Server class](/libs/NB3/Server/server.py).
@@ -134,6 +144,7 @@ Cable (MiniUSB-20cm)|Short mini-USB to Type-A cable (20 cm)|1|Cables (001)|[-D-]
 - **TASK**: Challenge the NB3 Server's multi-threading.
   - While the server is running on your NB3, try connecting to it with multiple different web browsers (your PC, phone, tablet, etc.). This will test the "multi-threaded" handling of multiple simultaneous connections.
   - **BONUS**: Look up DDOS (Distributed Denial-of-Service) attacks. Can you use this approach to find the limits of the NB3 Server?
+> [!TIP]
 > The server should respond appropriately and each device should receive the same website. If it doesn't...please let us know!
 
 # Project
@@ -142,6 +153,7 @@ Cable (MiniUSB-20cm)|Short mini-USB to Type-A cable (20 cm)|1|Cables (001)|[-D-]
 <a href="https://vimeo.com/1135870296" title="Control+Click to watch in new tab"><img src="../../../../boxes/servers/_resources/lessons/thumbnails/NB3_Remote-Control-NB3-GUI.gif" alt="NB3 : Remote Control NB3 (GUI)" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Let's remotely control your NB3 using a graphical user interface (GUI) that you can access from *any* web browser.
 
 - **GOAL**: Host a website on your NB3 that has interactive buttons that you click (or touch on a touchscreen). Each button will generate different motions of your robot (forward, backward, left, right, etc.).
@@ -152,5 +164,6 @@ Cable (MiniUSB-20cm)|Short mini-USB to Type-A cable (20 cm)|1|Cables (001)|[-D-]
   - The website's HTML, CSS, and Javascript is [here](/boxes/servers/python/remote-NB3_GUI/site/).
 - **TASK**: Add a behaviour for the "Do Action" button.
   - This can be a simple sequence of movements (using commands already understood by your hindbrain), or you can create an entirely new behaviour for either your hindbrain or midbrain to execute.
+> [!TIP]
 > Your "Action" button" (?) should now do something cool!
 

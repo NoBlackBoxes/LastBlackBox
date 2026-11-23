@@ -12,10 +12,12 @@ LM386|Audio-Amp|2|Active Electronics|[-D-](/boxes/amplifiers/_resources/datashee
 
 ## Amplifiers
 ### Differential Amplifier
+> [!NOTE]
 > Signals often have noise. However, this noise is often the same in many places around our circuit. What if we could reject (subtract out) this common noise? A differential amplifier allows us to selectively amplify the difference between a signal (with noise) and background (just noise). They are *very* useful.
 
 
 ### Op Amps
+> [!NOTE]
 > Combine *high gain differential amplification* with *negative feedback* to build a much, much better amplifier. We call these devices **operational amplifiers** or **Op Amps**.
 
 - Use an OpAmp to make your DIY speaker louder!

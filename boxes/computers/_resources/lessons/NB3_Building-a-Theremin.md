@@ -14,8 +14,10 @@ Building a light-to-sound feedback loop musical instrument (theremin) using an A
 
 - **TASK**: Build a Theremin
 - *Hint*: What if you used the analog voltage signal measured from your light sensor to change the frequency of the "tone" playing on your buzzer? Hmm...
+> [!TIP]
 > You should here a sound that varies with your hand motion (in front of a light)
 
 - **TASK**: ***Have fun!*** (Make something cool)
 - This diagram of the Arduino "pins" will definitely be useful: ![Arduino Pinout](/boxes/computers/_resources/images/pinout_arduino_nano.png)
+> [!TIP]
 > You should have fun!

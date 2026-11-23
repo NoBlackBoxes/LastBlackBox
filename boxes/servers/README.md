@@ -14,6 +14,7 @@ Name|Description| # |Package|Data|Supplier|
 <a href="https://vimeo.com/1135853103" title="Control+Click to watch in new tab"><img src="../../boxes/servers/_resources/lessons/thumbnails/HTTP.gif" alt="HTTP" width="480"/></a>
 </p>
 
+> [!NOTE]
 > The fundamental "application protocol" of the internet is HTTP (Hyper Text Transfer Protocol). Your web browser (the client) uses HTTP to *request* HTML files (and other resources) from a computer that understands HTTP (the server) anywhere on the internet. Here we will build a *very simple* HTTP server in Python.
 
 - The code for the "simplest" HTTP socket server is [here](/boxes/servers/python/simple_http_server/simplest_http_server.py)
@@ -28,6 +29,7 @@ Name|Description| # |Package|Data|Supplier|
 <a href="https://vimeo.com/1135859914" title="Control+Click to watch in new tab"><img src="../../boxes/servers/_resources/lessons/thumbnails/NB3_Host-a-Website.gif" alt="NB3 : Host a Website" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Let's host a website on your robot using the NB3 Server library and Python. We will first explain how the NB3 (HTTP) Server class works, what it is capable of, and then host a site with a range of different file types: HTML, CSS, images, icons, and Javascript.
 
 - Explore the Python code for the [NB3 Server class](/libs/NB3/Server/server.py).
@@ -36,6 +38,7 @@ Name|Description| # |Package|Data|Supplier|
 - **TASK**: Challenge the NB3 Server's multi-threading.
   - While the server is running on your NB3, try connecting to it with multiple different web browsers (your PC, phone, tablet, etc.). This will test the "multi-threaded" handling of multiple simultaneous connections.
   - **BONUS**: Look up DDOS (Distributed Denial-of-Service) attacks. Can you use this approach to find the limits of the NB3 Server?
+> [!TIP]
 > The server should respond appropriately and each device should receive the same website. If it doesn't...please let us know!
 
 #### Watch this video: [NB3 : Remote Control NB3 (GUI)](https://vimeo.com/1135870296)
@@ -43,6 +46,7 @@ Name|Description| # |Package|Data|Supplier|
 <a href="https://vimeo.com/1135870296" title="Control+Click to watch in new tab"><img src="../../boxes/servers/_resources/lessons/thumbnails/NB3_Remote-Control-NB3-GUI.gif" alt="NB3 : Remote Control NB3 (GUI)" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Let's remotely control your NB3 using a graphical user interface (GUI) that you can access from *any* web browser.
 
 - **GOAL**: Host a website on your NB3 that has interactive buttons that you click (or touch on a touchscreen). Each button will generate different motions of your robot (forward, backward, left, right, etc.).
@@ -53,5 +57,6 @@ Name|Description| # |Package|Data|Supplier|
   - The website's HTML, CSS, and Javascript is [here](/boxes/servers/python/remote-NB3_GUI/site/).
 - **TASK**: Add a behaviour for the "Do Action" button.
   - This can be a simple sequence of movements (using commands already understood by your hindbrain), or you can create an entirely new behaviour for either your hindbrain or midbrain to execute.
+> [!TIP]
 > Your "Action" button" (?) should now do something cool!
 

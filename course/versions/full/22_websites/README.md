@@ -14,6 +14,7 @@ Name|Description| # |Package|Data|Supplier|
 <a href="https://vimeo.com/1134724080" title="Control+Click to watch in new tab"><img src="../../../../boxes/websites/_resources/lessons/thumbnails/HTML.gif" alt="HTML" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Hyper-text markup language (HTML) is the data format of the world-wide-web. When you "visit a website" you are simply asking for an HTML file. What is an HTML file? It is just a text file with some special "<tags>" that control how the contents of the file should be displayed. The program you use to request these and display these files is called a *web browser*.
 
 - Create an HTML file. You can start from the simple template here: [HTML (simple)](/boxes/websites/html/simple.html)
@@ -27,6 +28,7 @@ Name|Description| # |Package|Data|Supplier|
 <a href="https://vimeo.com/1134720724" title="Control+Click to watch in new tab"><img src="../../../../boxes/websites/_resources/lessons/thumbnails/CSS.gif" alt="CSS" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Webpages often have a consistent "style" across an entire website. It is possible to create and maintain this style by directly including the same style tags (colors, fonts, margins, etc.) in every HTML page, but this is difficult to maintain and tedious to update. Cascading Style Sheets (CSS) allow you to put all of your "styling" into a single file that can be included on the pages that need it, giving you one place to make tweaks to the styling of your entire website.
 
 - Create a "styles.css" for your website. Add a link to this "stylesheet" in your HTML code. You can start with the examples (HTML and CSS) here: [CSS Examples](/boxes/websites/css/)
@@ -37,6 +39,7 @@ Name|Description| # |Package|Data|Supplier|
 <a href="https://vimeo.com/1134729863" title="Control+Click to watch in new tab"><img src="../../../../boxes/websites/_resources/lessons/thumbnails/Javascript.gif" alt="Javascript" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Javascript is the web browser's programming (scripting) language. It has very little to do with Java, but it is the main way to add "interaction" to websites. Everyone should know a little bit of Javascript. Also, given that everyone has access to a web browser, it is one of the easiest programming environments to setup and start playing around.
 
 - Add some (Javascript) code to your website to make it more interactive.

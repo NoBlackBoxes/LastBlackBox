@@ -20,4 +20,5 @@ Let's build a version of the *first* battery, and use it to power an LED.
 
 - **TASK**: Build a simple battery
   - Combine two different metals, one that oxidizes well and one that does not, and connect them together with a layer of electrolyte between (salt water soaked paper works fine, so does a piece of fruit).
+> [!TIP]
 > You should see a voltage if you choose your two metals wisely. Zinc and Copper should produce ~0.76 Volts. If you stack multiple cells in series, then the resulting voltage should sum.

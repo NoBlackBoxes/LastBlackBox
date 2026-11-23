@@ -21,6 +21,7 @@ Spacer|NB3 spacer 3 mm spacer for mounting ball caster|5|Acrylic Mounts|[-D-](/b
 <a href="https://vimeo.com/1033963709" title="Control+Click to watch in new tab"><img src="../../../../boxes/control/_resources/lessons/thumbnails/Servo-Loops.gif" alt="Servo Loops" width="480"/></a>
 </p>
 
+> [!NOTE]
 > A servo loop connects feedback from a sensor to the control signals sent to a motor.
 
 
@@ -30,9 +31,11 @@ Spacer|NB3 spacer 3 mm spacer for mounting ball caster|5|Acrylic Mounts|[-D-](/b
 <a href="https://vimeo.com/1034800702" title="Control+Click to watch in new tab"><img src="../../../../boxes/robotics/_resources/lessons/thumbnails/NB3_Muscles-Servos.gif" alt="NB3 : Muscles (Servos)" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Let's build your robot's movement system (using servo motors).
 
 - **TASK**: Mount the servo motors and wheels to your NB3.
+> [!TIP]
 > The mounted servo motors should look like this.
 - In order to control your servo motors, you must send a square wave signal from your NB3's hindbrain with very specific timing. The details of this control signal's timing are described in the comments of the example code here: [Servo Test (Arduino)](/boxes/robotics/programming/arduino/muscles_test_servo/muscles_test_servo.ino).
 - This servo test code uses a library, called "servo", to make it easier to control your NB3's muscles.
@@ -71,6 +74,7 @@ void loop() {
 }
 ```
 - **TASK**: Test your servo motors by sending control commands from your NB3's hindbrain.
+> [!TIP]
 > One servo motor should spin forwards and backwards, then the other...and then repeat.
 
 #### Watch this video: [NB3 : Ball Caster](https://vimeo.com/1034797327)
@@ -78,9 +82,11 @@ void loop() {
 <a href="https://vimeo.com/1034797327" title="Control+Click to watch in new tab"><img src="../../../../boxes/robotics/_resources/lessons/thumbnails/NB3_Ball-Caster.gif" alt="NB3 : Ball Caster" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Let's add a front wheel (ball caster) to keep your NB3 from dragging its face on the ground.
 
 - **TASK**: Mount caster (ball bearing) to the front of your NB3.
+> [!TIP]
 > The ball caster mount should look like this.
 
 # Project
@@ -89,6 +95,7 @@ void loop() {
 <a href="https://vimeo.com/1034798460" title="Control+Click to watch in new tab"><img src="../../../../boxes/robotics/_resources/lessons/thumbnails/NB3_Build-a-Braitenberg-Vehicle.gif" alt="NB3 : Build a Braitenberg Vehicle" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Here we create the first Braitenberg Vehicle, a simple sensory-motor feedback loop connecting two light sensors to the motion of two wheels.
 
 - A Braitenberg Vehicle can show complex behaviour, appearing to seek out light and avoid shadows, but the underlying control circuit is extremely simple.
@@ -99,5 +106,6 @@ void loop() {
 - A small change to the control circuit can completely change how your NB£ "vehicle" responds to light.
 - **TASK**: Measure two light sensors and *decide* how to activate the direction of your two wheels in response.
 - Some example code to get you started can be found here: [Braitenberg Vehicle (Arduino)](/boxes/robotics/programming/arduino/braitenberg_vehicle/braitenberg_vehicle.ino)
+> [!TIP]
 > You should have created a robot that either likes (turns toward) or avoids (turns away from) light.
 

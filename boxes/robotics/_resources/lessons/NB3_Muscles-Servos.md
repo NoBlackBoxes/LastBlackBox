@@ -10,6 +10,7 @@ Let's build your robot's movement system (using servo motors).
 ## Lesson
 
 - **TASK**: Mount the servo motors and wheels to your NB3.
+> [!TIP]
 > The mounted servo motors should look like this.
 
 - In order to control your servo motors, you must send a square wave signal from your NB3's hindbrain with very specific timing. The details of this control signal's timing are described in the comments of the example code here: [Servo Test (Arduino)](/boxes/robotics/programming/arduino/muscles_test_servo/muscles_test_servo.ino).
@@ -50,4 +51,5 @@ void loop() {
 ```
 
 - **TASK**: Test your servo motors by sending control commands from your NB3's hindbrain.
+> [!TIP]
 > One servo motor should spin forwards and backwards, then the other...and then repeat.

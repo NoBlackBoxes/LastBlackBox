@@ -18,4 +18,5 @@ The original user interfaces were entirely based on text. You typed commands as 
 ## Lesson
 
 - **TASK**: Explore Linux. Spend any extra time you have fiddling, playing with the UNIX approach to controlling a computer. Create some folders. Edit some files.
+> [!TIP]
 > You should see this in the command line.

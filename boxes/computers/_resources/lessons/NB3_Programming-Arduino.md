@@ -38,11 +38,13 @@ void loop() {
   delay(1000);              // Wait for a second
 }
 ```
+> [!TIP]
 > Your internal LED should now be blinking faster or slower than 1 Hz (once per second).
 
 **TASK**: Blink an *external* LED 
   - *Hint*: Connect one of your LEDs to digital pin 13, but don't forget your current limiting resistor!
   - ![LED Driver:400](/boxes/computers/_resources/images/LED_driver_circuit.png)
+> [!TIP]
 > Your external LED should now be blinking at the same time as the built-in LED (if both are connected to pin 13).
 
 **TASK**: Generate a *pulsing* signal for your piezo buzzer
@@ -89,6 +91,7 @@ void loop() {
 }
 ```
   - **Challenge**: Try to add some more notes and play a recognizable melody!
+> [!TIP]
 > You should here a (somewhat unpleasant) sound from the piezo buzzer
 
 **TASK**: Measure an **analog** signal from your LDR light sensor circuit and send the measured values to your host computer via the USB (serial) connection.
@@ -120,4 +123,5 @@ void loop() {
 }
 ```
   - *Challenge*: Write a program that will turn on your LED when the light signal is above (or below) some threshold value.
+> [!TIP]
 > You should see values on your host laptop and they should change along with changing light levels.

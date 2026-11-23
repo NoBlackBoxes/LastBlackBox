@@ -24,6 +24,7 @@ Spacer|NB3 spacer 3 mm spacer for mounting ball caster|5|Acrylic Mounts|[-D-](/b
 <a href="https://vimeo.com/1033231995" title="Control+Click to watch in new tab"><img src="../../../../boxes/logic/_resources/lessons/thumbnails/Logic-Gates.gif" alt="Logic Gates" width="480"/></a>
 </p>
 
+> [!NOTE]
 > The essential elements of computation (NOT, AND, OR, XOR, etc.) can be built from straight forward combinations of MOSFETs.
 
 - Design an XOR gate
@@ -35,6 +36,7 @@ Spacer|NB3 spacer 3 mm spacer for mounting ball caster|5|Acrylic Mounts|[-D-](/b
 <a href="https://vimeo.com/1033230293" title="Control+Click to watch in new tab"><img src="../../../../boxes/memory/_resources/lessons/thumbnails/Flash-Memory.gif" alt="Flash Memory" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Storing much of your data requires *quantum mechanics*.
 
 
@@ -43,6 +45,7 @@ Spacer|NB3 spacer 3 mm spacer for mounting ball caster|5|Acrylic Mounts|[-D-](/b
 <a href="https://vimeo.com/1033601146" title="Control+Click to watch in new tab"><img src="../../../../boxes/computers/_resources/lessons/thumbnails/Architecture.gif" alt="Architecture" width="480"/></a>
 </p>
 
+> [!NOTE]
 > The basic building blocks of a computer (memory, ALU, clock, bus, and IO) have a standard arrangement (architecture) in modern systems.
 
 
@@ -51,15 +54,18 @@ Spacer|NB3 spacer 3 mm spacer for mounting ball caster|5|Acrylic Mounts|[-D-](/b
 <a href="https://vimeo.com/1033609727" title="Control+Click to watch in new tab"><img src="../../../../boxes/computers/_resources/lessons/thumbnails/NB3_Hindbrain.gif" alt="NB3 : Hindbrain" width="480"/></a>
 </p>
 
+> [!NOTE]
 > We will now add a *computer* to our robot. We be using a simple microcontroller as our NB3's hindbrain. It will be responsible for controlling the "muscles" (motors) in response to commands from another (larger) computer that we will be adding later to the NB3's midbrain.
 
 **TASK**: Mount and power your Arduino-based hindbrain (connect the mini-USB cable)
+> [!TIP]
 > The built-in LED on the board should be blinking at 1 Hz.
 **TASK**: Download and install the Arduino IDE (integrated development environment).
   - Follow the instructions for your "host" computer's operating system here: [Arduino IDE](https://www.arduino.cc/en/software)
   - Open the "Blink" Example: File -> Examples -> Basic -> Blink
   - Upload this example to your board
   - ***IMPORTANT***: If you have trouble connecting to the Arduino from your Laptop, then it may be necessary to install the "latest" driver from FTDI for the chip that communicates over the USB cable. This is not always necessary, so please try the normal installation first. However, if you are stuck, then please checkout these [FTDI driver installation instructions](https://support.arduino.cc/hc/en-us/articles/4411305694610-Install-or-update-FTDI-drivers).
+> [!TIP]
 > You should be able to successfully compile and upload the "Blink" example (with no errors).
 
 ## Programming the Arduino
@@ -68,6 +74,7 @@ Spacer|NB3 spacer 3 mm spacer for mounting ball caster|5|Acrylic Mounts|[-D-](/b
 <a href="https://vimeo.com/1033810807" title="Control+Click to watch in new tab"><img src="../../../../boxes/computers/_resources/lessons/thumbnails/NB3_Programming-Arduino.gif" alt="NB3 : Programming Arduino" width="480"/></a>
 </p>
 
+> [!NOTE]
 > An introduction to programming an Arduino microcontroller.
 
 - You will now write programs that interact with the input and output pins of your Arduino. This "pin diagram" will help you find the correct locations. ***The Arduino on your NB3 is mounted "upside down" relative to this diagram...adjust accordingly!***
@@ -101,6 +108,7 @@ void loop() {
   delay(1000);              // Wait for a second
 }
 ```
+> [!TIP]
 > Your internal LED should now be blinking faster or slower than 1 Hz (once per second).
 **TASK**: Blink an *external* LED
   - *Hint*: Connect one of your LEDs to digital pin 13, but don't forget your current limiting resistor!
@@ -108,6 +116,7 @@ void loop() {
 <img src="../../../../boxes/computers/_resources/images/LED_driver_circuit.png" alt="LED Driver" width="400">
 </p>
 
+> [!TIP]
 > Your external LED should now be blinking at the same time as the built-in LED (if both are connected to pin 13).
 **TASK**: Generate a *pulsing* signal for your piezo buzzer
   - This is a piezo buzzer:
@@ -155,6 +164,7 @@ void loop() {
 }
 ```
   - **Challenge**: Try to add some more notes and play a recognizable melody!
+> [!TIP]
 > You should here a (somewhat unpleasant) sound from the piezo buzzer
 **TASK**: Measure an **analog** signal from your LDR light sensor circuit and send the measured values to your host computer via the USB (serial) connection.
   - *Hint*: Connect the output voltage of your light sensor (the "middle" of the divider) to an analog input pin (the example below uses pin A0).
@@ -184,6 +194,7 @@ void loop() {
 }
 ```
   - *Challenge*: Write a program that will turn on your LED when the light signal is above (or below) some threshold value.
+> [!TIP]
 > You should see values on your host laptop and they should change along with changing light levels.
 
 #### Watch this video: [Binary Numbers](https://vimeo.com/1033226788)
@@ -191,6 +202,7 @@ void loop() {
 <a href="https://vimeo.com/1033226788" title="Control+Click to watch in new tab"><img src="../../../../boxes/data/_resources/lessons/thumbnails/Binary-Numbers.gif" alt="Binary Numbers" width="480"/></a>
 </p>
 
+> [!NOTE]
 > All you need is 0 and 1. Here we will learn how to represent *anything* in binary.
 
 - Write your name in binary (using the ASCII table) in either Hex or Decimal notation.
@@ -200,6 +212,7 @@ void loop() {
 <a href="https://vimeo.com/1033223967" title="Control+Click to watch in new tab"><img src="../../../../boxes/data/_resources/lessons/thumbnails/Analog-to-Digital-Converters.gif" alt="Analog to Digital Converters" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Moving signals from the analog world to the digital world requires converting a continuous voltage into discrete binary values. We can accomplish this with an analog to digital converter, or **ADC**, and here we learn how they work.
 
 - Build the input stage for a 2-bit ADC using the LM339/LM2901 comparator and a resistor ladder.
@@ -209,16 +222,19 @@ void loop() {
 <a href="https://vimeo.com/1033896646" title="Control+Click to watch in new tab"><img src="../../../../boxes/computers/_resources/lessons/thumbnails/NB3_Building-a-Theremin.gif" alt="NB3 : Building a Theremin" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Building a light-to-sound feedback loop musical instrument (theremin) using an Arduino, an LDR, and a Piezo buzzer.
 
 - **TASK**: Build a Theremin
 - *Hint*: What if you used the analog voltage signal measured from your light sensor to change the frequency of the "tone" playing on your buzzer? Hmm...
+> [!TIP]
 > You should here a sound that varies with your hand motion (in front of a light)
 - **TASK**: ***Have fun!*** (Make something cool)
 <p align="center">
 <img src="../../../../boxes/computers/_resources/images/pinout_arduino_nano.png" alt="Arduino Pinout" width="480">
 </p>
 
+> [!TIP]
 > You should have fun!
 
 ## Motor control
@@ -227,6 +243,7 @@ void loop() {
 <a href="https://vimeo.com/1033905955" title="Control+Click to watch in new tab"><img src="../../../../boxes/control/_resources/lessons/thumbnails/PWM.gif" alt="PWM" width="480"/></a>
 </p>
 
+> [!NOTE]
 > We can control a "continuous" range of outputs with a binary digital signal (only 0s and 1s) by switching the output **ON** and **OFF** very quickly. Our "continuous" output is then the average of the percentage of time spent **ON** vs **OFF**. We cal this percentage the "duty cycle", and we call this output control method *pulse width modulation* or **PWM**.
 
 
@@ -235,6 +252,7 @@ void loop() {
 <a href="https://vimeo.com/1033963709" title="Control+Click to watch in new tab"><img src="../../../../boxes/control/_resources/lessons/thumbnails/Servo-Loops.gif" alt="Servo Loops" width="480"/></a>
 </p>
 
+> [!NOTE]
 > A servo loop connects feedback from a sensor to the control signals sent to a motor.
 
 
@@ -243,9 +261,11 @@ void loop() {
 <a href="https://vimeo.com/1034800702" title="Control+Click to watch in new tab"><img src="../../../../boxes/robotics/_resources/lessons/thumbnails/NB3_Muscles-Servos.gif" alt="NB3 : Muscles (Servos)" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Let's build your robot's movement system (using servo motors).
 
 - **TASK**: Mount the servo motors and wheels to your NB3.
+> [!TIP]
 > The mounted servo motors should look like this.
 - In order to control your servo motors, you must send a square wave signal from your NB3's hindbrain with very specific timing. The details of this control signal's timing are described in the comments of the example code here: [Servo Test (Arduino)](/boxes/robotics/programming/arduino/muscles_test_servo/muscles_test_servo.ino).
 - This servo test code uses a library, called "servo", to make it easier to control your NB3's muscles.
@@ -284,6 +304,7 @@ void loop() {
 }
 ```
 - **TASK**: Test your servo motors by sending control commands from your NB3's hindbrain.
+> [!TIP]
 > One servo motor should spin forwards and backwards, then the other...and then repeat.
 
 #### Watch this video: [NB3 : Ball Caster](https://vimeo.com/1034797327)
@@ -291,9 +312,11 @@ void loop() {
 <a href="https://vimeo.com/1034797327" title="Control+Click to watch in new tab"><img src="../../../../boxes/robotics/_resources/lessons/thumbnails/NB3_Ball-Caster.gif" alt="NB3 : Ball Caster" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Let's add a front wheel (ball caster) to keep your NB3 from dragging its face on the ground.
 
 - **TASK**: Mount caster (ball bearing) to the front of your NB3.
+> [!TIP]
 > The ball caster mount should look like this.
 
 # Project
@@ -302,6 +325,7 @@ void loop() {
 <a href="https://vimeo.com/1034798460" title="Control+Click to watch in new tab"><img src="../../../../boxes/robotics/_resources/lessons/thumbnails/NB3_Build-a-Braitenberg-Vehicle.gif" alt="NB3 : Build a Braitenberg Vehicle" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Here we create the first Braitenberg Vehicle, a simple sensory-motor feedback loop connecting two light sensors to the motion of two wheels.
 
 - A Braitenberg Vehicle can show complex behaviour, appearing to seek out light and avoid shadows, but the underlying control circuit is extremely simple.
@@ -312,5 +336,6 @@ void loop() {
 - A small change to the control circuit can completely change how your NB£ "vehicle" responds to light.
 - **TASK**: Measure two light sensors and *decide* how to activate the direction of your two wheels in response.
 - Some example code to get you started can be found here: [Braitenberg Vehicle (Arduino)](/boxes/robotics/programming/arduino/braitenberg_vehicle/braitenberg_vehicle.ino)
+> [!TIP]
 > You should have created a robot that either likes (turns toward) or avoids (turns away from) light.
 

@@ -78,6 +78,8 @@ class Lesson:
             output.append(f"{self.video.render()}\n")
         else:
             output.append(f"### {self.name}\n")
+        # The lesson summary is a portable Docfx/GitHub note callout.
+        output.append("> [!NOTE]\n")
         output.append(f"> {self.description}\n\n")
         for line in self.text:
             output.append(line + '\n')

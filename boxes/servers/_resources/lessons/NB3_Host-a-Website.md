@@ -13,5 +13,6 @@ Let's host a website on your robot using the NB3 Server library and Python. We w
 - **TASK**: Challenge the NB3 Server's multi-threading.
   - While the server is running on your NB3, try connecting to it with multiple different web browsers (your PC, phone, tablet, etc.). This will test the "multi-threaded" handling of multiple simultaneous connections.
   - **BONUS**: Look up DDOS (Distributed Denial-of-Service) attacks. Can you use this approach to find the limits of the NB3 Server?
+> [!TIP]
 > The server should respond appropriately and each device should receive the same website. If it doesn't...please let us know!
 

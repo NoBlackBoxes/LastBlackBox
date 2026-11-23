@@ -26,6 +26,7 @@ M2 nut|regular M2 nut|2|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 <a href="https://vimeo.com/1136576333" title="Control+Click to watch in new tab"><img src="../../boxes/audio/_resources/lessons/thumbnails/Microphones-Speakers-and-I2S.gif" alt="Microphones, Speakers, and I2S" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Here we introduce the NB3's audio system: MEMs-based stereo microphones (Ears), a Class D digital amplifier connected to a "Hi-Fi" speaker (Mouth), and a sound communication standard called I2S (Inter-integrated Circuit Sound) that the Raspberry Pi will use to talk to these audio devices.
 
 
@@ -34,6 +35,7 @@ M2 nut|regular M2 nut|2|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 <a href="https://vimeo.com/1042781850" title="Control+Click to watch in new tab"><img src="../../boxes/audio/_resources/lessons/thumbnails/NB3_Build-and-Install-the-Linux-I2S-Driver.gif" alt="NB3 : Build and Install the Linux I2S Driver" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Let's build (compile) and install the Linux device driver for our NB3's sound card. This software module is required to access the NB3's ears (microphone) and mouth (speaker).
 
 
@@ -42,6 +44,7 @@ M2 nut|regular M2 nut|2|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 <a href="https://vimeo.com/1042943195" title="Control+Click to watch in new tab"><img src="../../boxes/audio/_resources/lessons/thumbnails/NB3_Install-the-Ears.gif" alt="NB3 : Install the Ears" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Let's add some ears to your NB3.
 
 
@@ -50,6 +53,7 @@ M2 nut|regular M2 nut|2|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 <a href="https://vimeo.com/1042947561" title="Control+Click to watch in new tab"><img src="../../boxes/audio/_resources/lessons/thumbnails/NB3_Install-the-Mouth.gif" alt="NB3 : Install the Mouth" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Let's add a mouth to your NB3.
 
 
@@ -59,6 +63,7 @@ M2 nut|regular M2 nut|2|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 <a href="https://vimeo.com/manage/videos/1139975157" title="Control+Click to watch in new tab"><img src="../../boxes/audio/_resources/lessons/thumbnails/Signal-Processing.gif" alt="Signal Processing" width="480"/></a>
 </p>
 
+> [!NOTE]
 > One-dimensional (1D) signals are common in the world. They often arise as time series (a sequence of measurements made at a regular "sample rate"). Here we will explore techniques to process a common 1D signal...**sound**. We will both measure and generate different sounds. We will develop tools in Python to compare their amplitude (volume), frequency content, and visualize the "spectrogram" of different spoken words (e.g. "Go" vs "Stop").
 
 - Explore, test, and expand upon these Python examples for processing signals measured from the NB3's microphones (ears): [Measurement](/boxes/audio/signal-processing/python/measurement/)

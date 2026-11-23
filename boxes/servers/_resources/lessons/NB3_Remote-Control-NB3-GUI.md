@@ -18,4 +18,5 @@ Let's remotely control your NB3 using a graphical user interface (GUI) that you 
 
 - **TASK**: Add a behaviour for the "Do Action" button.
   - This can be a simple sequence of movements (using commands already understood by your hindbrain), or you can create an entirely new behaviour for either your hindbrain or midbrain to execute.
+> [!TIP]
 > Your "Action" button" (?) should now do something cool!

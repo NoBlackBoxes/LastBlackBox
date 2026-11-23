@@ -27,6 +27,7 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 <a href="https://vimeo.com/1035304311" title="Control+Click to watch in new tab"><img src="../../../../boxes/power/_resources/lessons/thumbnails/DC-DC-Converters.gif" alt="DC-DC Converters" width="480"/></a>
 </p>
 
+> [!NOTE]
 > How does efficient DC to DC conversion work? Buck and Boost.
 
 
@@ -35,10 +36,12 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 <a href="https://vimeo.com/1035306761" title="Control+Click to watch in new tab"><img src="../../../../boxes/power/_resources/lessons/thumbnails/NB3_Power-Supply.gif" alt="NB3 : Power Supply" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Let's install a DC-DC power supply on our NB3.
 
 - **TASK**: Add a (regulated) 5 volt power supply to your robot, which you can use while debugging to save your AA batteries and to provide enough power for the Raspberry Pi computer.
     - *NOTE*: Your NB3_power board cable *might* have inverted colors (black to +5V, red to 0V) relative to that shown in the assembly video. This doesn't matter, as the plugs will only work in one orientation and the correct voltage is conveyed to the correct position on the body.
+> [!TIP]
 > Your NB3 should now look like this: [NB3 power wiring](/boxes/power/_resources/images/NB3_power_wiring.png)
 
 ## Systems
@@ -47,9 +50,11 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 <a href="https://vimeo.com/1036086160" title="Control+Click to watch in new tab"><img src="../../../../boxes/systems/_resources/lessons/thumbnails/Multi-Tasking.gif" alt="Multi-Tasking" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Back when computers were very expensive mainframes, some clever software engineers developed strategies to share the computer's resources between multiple users, running multiple different tasks, at the same time. These "scheduling" programs still form the basis of our modern **multi-tasking** operating systems.
 
 - **TASK**: Develop a multi-tasking "scheduling" program for your microcontroller.
+> [!TIP]
 > Changing the timescale of one task should not affect the other.
 
 #### Watch this video: [Operating Systems](https://vimeo.com/1036096746)
@@ -57,10 +62,12 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 <a href="https://vimeo.com/1036096746" title="Control+Click to watch in new tab"><img src="../../../../boxes/systems/_resources/lessons/thumbnails/Operating-Systems.gif" alt="Operating Systems" width="480"/></a>
 </p>
 
+> [!NOTE]
 > As computer hardware became much more capable, software was developed to manage this complexity and power. This software took responsibility for managing access to the computer's resources: processing, memory, and devices. These days, when we *operate* a computer, we rarely interact directly with the hardware. Instead, we talk to this control software, which we call an **operating system**.
 
 - **TASK**: Install the Linux-based Raspberry Pi OS on your NB3
     - Follow these [RPiOS installation instructions](/boxes/systems/rpios/README.md)
+> [!TIP]
 > Booted!
 
 #### Watch this video: [NB3 : Midbrain](https://vimeo.com/1036089510)
@@ -68,10 +75,12 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 <a href="https://vimeo.com/1036089510" title="Control+Click to watch in new tab"><img src="../../../../boxes/systems/_resources/lessons/thumbnails/NB3_Midbrain.gif" alt="NB3 : Midbrain" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Now we will add a more powerful computer (Raspberry Pi) to your NB3's midbrain.
 
 - **TASK**: Mount a Raspberry Pi on your robot (and connect its power inputs using your *shortest* jumper cables, 2x5V and 2x0V from the NB3, to the correct GPIO pins on the RPi...please *double-check* the pin numbers)
     - This pinout of the Raspberry Pi GPIO might be useful: [Raspberry Pi GPIO](/boxes/systems/_resources/images/rpi_GPIO_pinout.png)
+> [!TIP]
 > A powered and blinking RPi midbrain.
 
 #### Watch this video: [NB3 : RPiOS](https://vimeo.com/1036095710)
@@ -79,10 +88,12 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 <a href="https://vimeo.com/1036095710" title="Control+Click to watch in new tab"><img src="../../../../boxes/systems/_resources/lessons/thumbnails/NB3_RPiOS.gif" alt="NB3 : RPiOS" width="480"/></a>
 </p>
 
+> [!NOTE]
 > After mounting and wiring your NB3's midbrain computer, you must now give it some core software to run...an operating system.
 
 - **TASK**: Install the Linux-based Raspberry Pi OS on your NB3
     - Follow these [RPiOS installation instructions](/boxes/systems/rpios/README.md)
+> [!TIP]
 > Booted!
 
 #### Watch this video: [NB3 : Connecting to RPi](https://vimeo.com/1036391512)
@@ -90,11 +101,13 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 <a href="https://vimeo.com/1036391512" title="Control+Click to watch in new tab"><img src="../../../../boxes/systems/_resources/lessons/thumbnails/NB3_Connecting-to-RPi.gif" alt="NB3 : Connecting to RPi" width="480"/></a>
 </p>
 
+> [!NOTE]
 > When you have installed your NB3's operating system, then you can power it on and try to connect to it from your Host computer over WiFi or UART.
 
 - **TASK**: Connect to your NB3 via WiFi
     - Follow these instruction [Connecting to RPi](/boxes/systems/connecting/README.md)
     - We currently recommend setting up a UART connection to your RPi for debugging when things go wrong. It is a few extra steps, but it can save you days! [Connecting to RPi via UART](/boxes/systems/connecting/uart/README.md)
+> [!TIP]
 > Connected!
 
 #### Watch this video: [Visual Studio Code](https://vimeo.com/1036716612)
@@ -102,6 +115,7 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 <a href="https://vimeo.com/1036716612" title="Control+Click to watch in new tab"><img src="../../../../boxes/systems/_resources/lessons/thumbnails/Visual-Studio-Code.gif" alt="Visual Studio Code" width="480"/></a>
 </p>
 
+> [!NOTE]
 > We will be using Visual Studio Code (VS Code) as our tool for writing programs. VS Code is just a simple, *but really powerful*, text editor. It has extensions for all sorts of useful tools (Python, Git, etc.), and for connecting to a "remote" computer (our NB3's midbrain).
 
 
@@ -111,9 +125,11 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 <a href="https://vimeo.com/1036829527" title="Control+Click to watch in new tab"><img src="../../../../boxes/linux/_resources/lessons/thumbnails/Navigating-the-Command-Line.gif" alt="Navigating the Command Line" width="480"/></a>
 </p>
 
+> [!NOTE]
 > The original user interfaces were entirely based on text. You typed commands as a line of text into your terminal console and received the result as a string of characters on the screen. Navigating this **command line** remains a useful skill, and a necessary one when working with remote machines.
 
 - **TASK**: Explore Linux. Spend any extra time you have fiddling, playing with the UNIX approach to controlling a computer. Create some folders. Edit some files.
+> [!TIP]
 > You should see this in the command line.
 
 #### Watch this video: [Git](https://vimeo.com/1036825331)
@@ -121,9 +137,11 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 <a href="https://vimeo.com/1036825331" title="Control+Click to watch in new tab"><img src="../../../../boxes/linux/_resources/lessons/thumbnails/Git.gif" alt="Git" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Git is a program that keeps track of changes to your files. It is very useful when developing code. This entire course is stored as a git "repository" on GitHub.
 
 - **TASK**: "Clone" (copy) all of the contents in the LastBlackBox GitHub repository directly to your NB3's midbrain. **It is very important that you clone the LBB repo to a specific folder ("NoBlackBoxes") in your NB3's home directory**.
+> [!NOTE]
 > *Why?* Most of the code examples assume that the repo is stored in this location. If you prefer to put it somewhere else, then you must be comfortable modifying the "repo root" path used in the examples.
  - *code*
 ```bash
@@ -134,6 +152,7 @@ cd NoBlackBoxes     # Change to NoBlackBoxes directory
 # Clone LBB repo (only the most recent version)
 git clone --depth 1 https://github.com/NoBlackBoxes/LastBlackBox
 ```
+> [!TIP]
 > You should now have a complete copy of the LBB repo on your NB3.
 
 #### Watch this video: [Package Managers](https://vimeo.com/1036834036)
@@ -141,6 +160,7 @@ git clone --depth 1 https://github.com/NoBlackBoxes/LastBlackBox
 <a href="https://vimeo.com/1036834036" title="Control+Click to watch in new tab"><img src="../../../../boxes/linux/_resources/lessons/thumbnails/Package-Managers.gif" alt="Package Managers" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Installing and "managing" software can get complicated. Programs that help coordinate this process are called **package managers**.
 
 
@@ -150,12 +170,14 @@ git clone --depth 1 https://github.com/NoBlackBoxes/LastBlackBox
 <a href="https://vimeo.com/1042618092" title="Control+Click to watch in new tab"><img src="../../../../boxes/python/_resources/lessons/thumbnails/Introducing-the-Interpreter.gif" alt="Introducing the Interpreter" width="480"/></a>
 </p>
 
+> [!NOTE]
 > What is Python? Where is it? How does it work? How can it work for you?
 
 - **TASK**: Say "hello world" in Python
     - Print the words "Hello World" on your terminal screen
     - Print the words "Hello World" on your terminal screen many, many times
     - Print the words "Hello World for the {Nth} time" on your terminal screen, where "Nth" reports the iteration count, i.e. "1", "2", "3"...or (*bonus task*) "1st", "2nd", "3rd", etc.
+> [!TIP]
 > You should see something like "Hello World for the 1st time", "Hello World for the 2nd time", etc. printed line by line in your terminal screen.
 
 #### Watch this video: [Virtual Environments](https://vimeo.com/1042637566)
@@ -163,10 +185,12 @@ git clone --depth 1 https://github.com/NoBlackBoxes/LastBlackBox
 <a href="https://vimeo.com/1042637566" title="Control+Click to watch in new tab"><img src="../../../../boxes/python/_resources/lessons/thumbnails/Virtual-Environments.gif" alt="Virtual Environments" width="480"/></a>
 </p>
 
+> [!NOTE]
 > We will next create a Python **virtual environment** on our NB3 that will isolate the specific Python packages we require for the course from the Python packages used by the Raspberry Pi's operating system.
 
 - **TASK**: Create a "virtual environment" called LBB
     - Follow the instructions here: [virtual environments](/boxes/python/virtual_environments/README.md)
+> [!TIP]
 > You should now have a virtual environment activated (and installed in the folder "_tmp/LBB").
 - **TASK**: Add an "Alias" to make it easy to activate your "virtual environment" from the terminal.
 - *code*
@@ -176,17 +200,21 @@ cp .bashrc ${HOME}/.
 source ${HOME}/.bashrc
 ```
 - Follow the complete explanation here: [Linux Shell](/boxes/linux/shell/README.md)
+> [!TIP]
 > You should now be able to activate the LBB environment by typing "Activate" from anywhere in the terminal.
 - **TASK**: Install some useful packages using PIP
     - Install numpy
     - Install matplotlib
     - Make a cool plot and save it to an image file
+> [!TIP]
 > You should now hav an image of your plot saved, which you can open and view inside VS code.
 
 # Project
 ### NB3 : Playing With Python
+> [!NOTE]
 > Let's see what Python can do...and get used to what it "feels like" to do stuff with Python.
 
 - **TASK**: Let's make some fun things using Python
+> [!TIP]
 > You should have made something fun.
 
