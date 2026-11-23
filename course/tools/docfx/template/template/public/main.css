@@ -232,8 +232,6 @@ article:has(> .lbb-curriculum) > #about-this-course + p {
 
 .lbb-curriculum {
   margin-top: 2rem;
-  padding-bottom: 3rem;
-  border-bottom: 1px solid var(--lbb-rule);
 }
 
 .lbb-course-facts {
@@ -355,14 +353,10 @@ article:has(> .lbb-curriculum) > #about-this-course + p {
 /* Subsequent landing sections use one quiet, scannable rhythm. */
 article:has(> .lbb-curriculum) > .lbb-curriculum ~ h2 {
   margin-top: 3rem;
-  padding-top: 2.25rem;
-  border-top: 1px solid var(--lbb-rule);
 }
 
 article:has(> .lbb-curriculum) > h3 {
-  margin: 0;
-  padding-top: 1.1rem;
-  border-top: 1px solid var(--lbb-rule);
+  margin: 1.5rem 0 0;
 }
 
 article:has(> .lbb-curriculum) > h3 + ul {
