@@ -67,7 +67,7 @@ CURRICULUM_MARKER = "<!-- LBB_CURRICULUM_MAP -->"
 # Shared brand assets used by every course site. Copied into staging root so
 # docfx's _appLogoPath / _appFaviconPath can find them.
 BRAND_LOGO    = REPO_ROOT / "course" / "_resources" / "designs" / "logo" / "icons" / "icon_NBB.svg"
-BRAND_FAVICON = REPO_ROOT / "course" / "_resources" / "designs" / "logo" / "icons" / "icon_LBB_256.png"
+BRAND_FAVICON = REPO_ROOT / "course" / "_resources" / "designs" / "logo" / "icons" / "icon_NBB_256.png"
 
 # Shared docfx defaults (template + CSS/JS shared across all courses).
 SHARED_TEMPLATE_DIR = _HERE / "template"
@@ -416,11 +416,10 @@ def _stage(course_dir: pathlib.Path, staging: pathlib.Path, course: dict) -> lis
         course_dir / "template", staging / "template", allow_overwrite=False
     )
 
-    # ---- Brand assets (logo + favicon) at staging root ----------------------
-    if BRAND_LOGO.is_file():
-        shutil.copy2(BRAND_LOGO, staging / "logo.svg")
-    if BRAND_FAVICON.is_file():
-        shutil.copy2(BRAND_FAVICON, staging / "favicon.png")
+    # Required shared brand assets. copy2 fails immediately if either source
+    # is missing, rather than allowing Docfx to emit broken references.
+    shutil.copy2(BRAND_LOGO, staging / "logo.svg")
+    shutil.copy2(BRAND_FAVICON, staging / "favicon.png")
 
     # ---- index.md: manifest title + per-course body or generated fallback ----
     course_index = course_dir / "index.md"

@@ -8,12 +8,10 @@
  *   - theme toggle (Light / Dark / Auto)
  *   - right "On this page" affix from article h2/h3
  *
- * Each injector guards against double execution with a global flag.
- * docfx Modern's native renderers are not used (they did not trigger on
- * conceptual pages in our setup), so all nav surfaces are populated here.
+ * The build injects this file once into each rendered page. Docfx Modern's
+ * native renderers are not used (they did not trigger on conceptual pages in
+ * our setup), so the navigation surfaces are populated here.
  */
-
-window.LBB = window.LBB || {};
 
 /* ===========================================================================
    Shared helpers
@@ -38,16 +36,12 @@ function lbbRel() {
    while the pointer is over its link or wrapper.
    ========================================================================== */
 lbbOnReady(function () {
-  if (window.LBB.freeze) return; window.LBB.freeze = true;
-
   function freezeOne(img) {
     if (img.dataset.lbbFrozen) return;
     img.dataset.lbbFrozen = "1";
     var originalSrc = img.src;
     var wrapper = img.closest("a") || img.parentNode;
     if (wrapper && wrapper.classList) wrapper.classList.add("lbb-thumb");
-
-    var preload = new Image(); preload.src = originalSrc;
 
     function captureAndSwap() {
       try {
@@ -68,12 +62,10 @@ lbbOnReady(function () {
     if (wrapper) {
       wrapper.addEventListener("mouseenter", function () {
         if (!img.dataset.lbbGif) return;
-        wrapper.classList.add("is-playing");
         img.src = img.dataset.lbbGif;
       });
       wrapper.addEventListener("mouseleave", function () {
         if (!img.dataset.lbbStill) return;
-        wrapper.classList.remove("is-playing");
         img.src = img.dataset.lbbStill;
       });
     }
@@ -88,7 +80,6 @@ lbbOnReady(function () {
    top-level courses landing. The course name remains the page H1.
    ========================================================================== */
 lbbOnReady(function () {
-  if (window.LBB.brandHref) return; window.LBB.brandHref = true;
   var brand = document.querySelector(".navbar-brand");
   if (!brand) return;
   var logo = brand.querySelector("img");
@@ -109,7 +100,6 @@ lbbOnReady(function () {
    present, the logo is linked to that URL. Deeper lesson pages omit this block.
    ========================================================================== */
 lbbOnReady(function () {
-  if (window.LBB.secondaryLogo) return; window.LBB.secondaryLogo = true;
   var rel = lbbRel();
   if (rel) return;
   var heading = document.querySelector("article h1");
@@ -170,7 +160,6 @@ lbbOnReady(function () {
    the items under it. Render as a tree into <nav id="toc">.
    ========================================================================== */
 lbbOnReady(function () {
-  if (window.LBB.sideNav) return; window.LBB.sideNav = true;
   var toc = document.getElementById("toc");
   if (!toc) return;
   if (toc.children.length > 0) return;
@@ -245,10 +234,6 @@ lbbOnReady(function () {
       items.forEach(function (sub) {
         if (!sub.href) return;
         var subLi = makeLeaf(sub, base);
-        if (subLi.querySelector("a.is-active")) {
-          li.classList.add("is-open");
-          label.classList.add("is-in-active-section");
-        }
         ul.appendChild(subLi);
       });
       li.appendChild(ul);
@@ -298,7 +283,6 @@ lbbOnReady(function () {
    button at and above the Bootstrap md breakpoint.
    ========================================================================== */
 lbbOnReady(function () {
-  if (window.LBB.mobileTocToggle) return; window.LBB.mobileTocToggle = true;
   var brand = document.querySelector(".navbar-brand");
   if (!brand) return;
   var offcanvasTarget = document.getElementById("tocOffcanvas");
@@ -324,7 +308,6 @@ lbbOnReady(function () {
    storage key so its early page script can apply saved choices.
    ========================================================================== */
 lbbOnReady(function () {
-  if (window.LBB.themeToggle) return; window.LBB.themeToggle = true;
   var navbar = document.getElementById("navbar");
   if (!navbar) return;
   if (navbar.querySelector(".lbb-theme-toggle")) return;
@@ -368,7 +351,6 @@ lbbOnReady(function () {
    mark the section nearest the top of the viewport while scrolling.
    ========================================================================== */
 lbbOnReady(function () {
-  if (window.LBB.affix) return; window.LBB.affix = true;
   var nav = document.getElementById("affix");
   if (!nav) return;
   if (nav.children.length > 0) return;

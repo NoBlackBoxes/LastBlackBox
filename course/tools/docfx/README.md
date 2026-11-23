@@ -134,7 +134,7 @@ sequenceDiagram
         Config-->>Site: Validated course settings
         Note right of Site: Reads generated session READMEs,<br/>index.md and sessions.index.md
         Site->>Site: Derive curriculum boxes from lesson tags
-        Site->>Site: Generate the shared curriculum grid
+        Site->>Site: Generate the landing title, facts and curriculum grid
         Site->>Site: Assemble .docfx-staging/
         Site->>Site: Bundle assets and rewrite links
         Site->>Docfx: Build staged course
@@ -313,7 +313,7 @@ For course-specific content, add these files under `course/versions/<slug>/`:
 - **`index.md`** — the course landing-page body. The manifest supplies the H1, so start with an `About this course` H2 and its introductory paragraph. Put one `<!-- LBB_CURRICULUM_MAP -->` marker where the generated course facts and 28-box grid should appear. See [../../versions/crick/index.md](../../versions/crick/index.md) as a model.
 - **`sessions.index.md`** — the sessions overview, linked from the top-nav. See [../../versions/crick/sessions.index.md](../../versions/crick/sessions.index.md).
 
-Both are plain Markdown. Use repo-relative paths for images (`/course/_resources/...`) and session-relative paths for session links (`sessions/01_my-session/README.md`). If either file is absent, `build_site.py` generates a basic version from the manifest and discovered sessions. The curriculum grid is derived from the `{Box:Lesson}` tags in those sessions; no separate course box list is maintained.
+Both are plain Markdown. Use repo-relative paths for images (`/course/_resources/...`) and session-relative paths for session links (`sessions/01_my-session/README.md`). If either file is absent, `build_site.py` generates a basic version from the manifest and discovered sessions. It also generates the landing-page H1, session count, opened-box count and curriculum grid. The curriculum is derived from the `{Box:Lesson}` tags in those sessions; no separate course box list is maintained.
 
 The shared [template/](template/) is the single source of truth for Docfx configuration, root navigation, CSS and JavaScript. `build_site.py` generates `sessions.toc.yml` from the discovered sessions; add a course-level `sessions.toc.yml` only when its navigation labels or grouping genuinely differ.
 
