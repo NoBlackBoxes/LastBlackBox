@@ -158,6 +158,7 @@ The [deployment workflow](../../../.github/workflows/deploy-docs.yml) runs `buil
 
 | Path | Ownership | Created or assembled by | Purpose |
 |---|---|---|---|
+| `course/versions/<slug>/README.md` | Authored | Course author | Original repository-facing course overview and descriptive schedule. It is not used to generate session content or the course website. |
 | `course/versions/<slug>/<NN>_*/_resources/template.md` | Authored | Course author | Session structure containing `{Box:Lesson}` tags. |
 | `course/versions/<slug>/<NN>_*/README.md` | Generated | LBB engine | Expanded session Markdown. Do not edit directly. |
 | `course/versions/<slug>/index.md` | Optional authored override | Course author; assembled by `build_site.py` | Landing-page body. `build_site.py` adds the title and generated curriculum information in staging. |
@@ -168,6 +169,8 @@ The [deployment workflow](../../../.github/workflows/deploy-docs.yml) runs `buil
 | `course/tools/docfx/root/*.svg`, `*.png` | Authored assets | Maintainer | Shared root assets and course logos. |
 | `course/_resources/designs/logo/icons/` | Authored assets | Maintainer; copied by `build_site.py` | Shared course-site logo and favicon. |
 | `course/tools/docfx/template/` | Shared authored template | Maintainer; copied by `build_site.py` | Docfx configuration, navigation, CSS and JavaScript shared by every course. |
+
+Do not confuse the authored course-level `README.md` with the generated session-level `README.md` files: session templates generate the latter and determine the website's open-box curriculum.
 
 ## Local development
 

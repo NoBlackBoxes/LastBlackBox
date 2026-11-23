@@ -256,7 +256,8 @@ def _render_curriculum_map(
         intro = (
             "Boxes without a padlock are included in this course. Select one to "
             "open the session where it is first introduced. "
-            'Explore the <a href="../full/">full course</a> or browse the remaining '
+            f'Explore the <a href="{Config.site_base_url}/full/">full course</a> '
+            'or browse the remaining '
             'material on '
             f'<a href="{GH_BASE}">GitHub</a>.'
         )

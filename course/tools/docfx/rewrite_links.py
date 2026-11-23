@@ -21,7 +21,6 @@ GH_OWNER  = "NoBlackBoxes"
 GH_REPO   = "LastBlackBox"
 GH_BRANCH = "master"
 GH_BASE   = f"https://github.com/{GH_OWNER}/{GH_REPO}"
-RAW_BASE  = f"https://raw.githubusercontent.com/{GH_OWNER}/{GH_REPO}/{GH_BRANCH}"
 
 IMG_EXT = {"png", "jpg", "jpeg", "gif", "svg", "webp", "ico"}
 
