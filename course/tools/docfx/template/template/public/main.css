@@ -223,7 +223,6 @@ article:has(> .lbb-curriculum) > #about-this-course {
 }
 
 article:has(> .lbb-curriculum) > #about-this-course + p {
-  max-width: 44rem;
   margin-bottom: 0;
   color: var(--lbb-muted);
   font-size: 1.08rem;
@@ -266,10 +265,6 @@ article:has(> .lbb-curriculum) > #about-this-course + p {
 }
 
 .lbb-curriculum-heading {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 2rem;
   margin-bottom: 1.15rem;
 }
 
@@ -278,15 +273,10 @@ article:has(> .lbb-curriculum) > #about-this-course + p {
   margin: 0;
 }
 
-.lbb-curriculum-heading h2 {
-  flex: 0 0 auto;
-}
-
 .lbb-curriculum-heading p {
-  max-width: 38rem;
+  margin-top: 0.45rem;
   color: var(--lbb-muted);
   font-size: 0.82rem;
-  text-align: right;
 }
 
 .lbb-box-grid {
@@ -611,15 +601,6 @@ svg {
 
   .lbb-secondary-logo {
     height: 42px;
-  }
-
-  .lbb-curriculum-heading {
-    display: block;
-  }
-
-  .lbb-curriculum-heading p {
-    margin-top: 0.45rem;
-    text-align: left;
   }
 }
 
