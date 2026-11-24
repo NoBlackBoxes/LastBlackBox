@@ -2,7 +2,8 @@
 
 The course website is a static [Zensical](https://zensical.org/) site generated
 from the repository's existing course content. Published courses live at
-`https://noblackboxes.github.io/LastBlackBox/<slug>/`.
+`https://noblackboxes.github.io/LastBlackBox/<course-slug>/`, where a course
+slug is the short folder and URL name, such as `braitenberg`.
 
 One Zensical project contains the selector and every published course. Zensical
 provides the page frame, navigation, breadcrumbs, site-wide search, page outline,
@@ -20,9 +21,9 @@ local deployment artifact is `docs/`.
 ```mermaid
 flowchart TD
     subgraph sources["✎ Authored sources"]
-        manifest["course/courses.json<br/>Course registry and publishing settings"]
-        versions["course/versions/{slug}/<br/>Course landing pages and session templates"]
-        boxes["boxes/{box}/_resources/lessons/<br/>Reusable lessons and assets"]
+        course_list["course/courses.json<br/>Central course list and build settings"]
+        versions["course/versions/&lt;course-slug&gt;/<br/>Course landing pages and session templates"]
+        boxes["boxes/&lt;box&gt;/_resources/lessons/<br/>Reusable lessons and assets"]
         theme["course/tools/zensical/assets/<br/>Small layout and component overrides"]
     end
 
@@ -34,7 +35,8 @@ flowchart TD
     end
 
     subgraph generated["◇ Generated content"]
-        readmes["course/versions/{slug}/{session}/README.md<br/>Expanded session Markdown"]
+        session_readmes["course/versions/&lt;course-slug&gt;/&lt;NN&gt;_&lt;session-slug&gt;/README.md<br/>Generated session README"]
+        box_readmes["boxes/&lt;box&gt;/README.md<br/>Generated box README"]
         staging["course/tools/zensical/.site-staging/content/<br/>Temporary unified Zensical input"]
         rendered["course/tools/zensical/.site-staging/site/<br/>Initial rendered site"]
     end
@@ -46,12 +48,13 @@ flowchart TD
 
     build --> engine
     build --> site
-    manifest --> engine
-    manifest --> site
+    course_list --> engine
+    course_list --> site
     versions --> engine
     boxes --> engine
-    engine --> readmes
-    readmes --> site
+    engine --> session_readmes
+    engine --> box_readmes
+    session_readmes --> site
     versions --> site
     theme --> site
     site --> staging
@@ -59,6 +62,54 @@ flowchart TD
     zensical --> rendered
     rendered -->|"Copied by build_site.py"| website
     website --> pages
+```
+
+### Build sequence
+
+The architecture diagram shows ownership and data flow. The sequence below
+shows the order in which the complete build runs:
+
+```mermaid
+sequenceDiagram
+    actor Runner as Developer or GitHub Actions
+    participant Build as build_all.py
+    participant Courses as generate_courses.py
+    participant Config as LBB.config
+    participant CourseList as course/courses.json
+    participant Engine as LBB Engine
+    participant Site as zensical/build_site.py
+    participant Zensical
+    participant Output as docs/
+
+    Runner->>Build: Run the complete build
+    Build->>Courses: Regenerate course content
+    Courses->>Config: Import course configuration
+    Config->>CourseList: Load and validate the central course list
+    CourseList-->>Config: Enabled courses and course slugs
+
+    loop Each course with generate = true
+        Courses->>Engine: Load and render the course
+        Note right of Engine: Read session templates and expand reusable lessons
+        Engine-->>Courses: Rendered session Markdown
+        Courses->>Courses: Write session README.md files
+    end
+
+    Courses->>Engine: Render the full reference course
+    Engine-->>Courses: Rendered box Markdown
+    Courses->>Courses: Write boxes/&lt;box&gt;/README.md files
+    Courses-->>Build: Content generation complete
+
+    Build->>Site: Build the unified website
+    Site->>Config: Import course configuration
+    Config->>CourseList: Load and validate the central course list
+    CourseList-->>Config: Published courses and metadata
+    Site->>Site: Stage selector, landing pages, sessions and assets
+    Site->>Site: Rewrite links, materials blocks and Vimeo videos
+    Site->>Zensical: Build the staged project in strict mode
+    Zensical-->>Site: Render .site-staging/site/
+    Site->>Output: Replace docs/ with the rendered site
+    Site-->>Build: Website build complete
+    Build-->>Runner: Complete deployable website
 ```
 
 The authored course-level `README.md` is a repository-facing overview. It is
@@ -69,11 +120,12 @@ authority for generated session READMEs and for the website's open-box map.
 
 | Path | Ownership | Written or assembled by | Purpose |
 |---|---|---|---|
-| `course/versions/<slug>/README.md` | Authored | Course author | Repository-facing overview and descriptive schedule. |
-| `course/versions/<slug>/<NN>_*/_resources/template.md` | Authored | Course author | Session structure containing `{Box:Lesson}` tags. |
-| `course/versions/<slug>/<NN>_*/README.md` | Generated | LBB engine | Expanded session Markdown; do not edit directly. |
-| `course/versions/<slug>/index.md` | Optional authored override | Course author; assembled by `build_site.py` | Course landing-page body. |
-| `course/versions/<slug>/site/` | Optional authored assets | Course author; staged by `build_site.py` | Partner logo and metadata. |
+| `course/versions/<course-slug>/README.md` | Authored | Course author | Repository-facing overview and descriptive schedule. |
+| `course/versions/<course-slug>/<NN>_<session-slug>/_resources/template.md` | Authored | Course author | Session structure containing `{Box:Lesson}` lesson tags. |
+| `course/versions/<course-slug>/<NN>_<session-slug>/README.md` | Generated | LBB engine | Generated session Markdown; do not edit directly. |
+| `boxes/<box>/README.md` | Generated | LBB engine | Full-reference Markdown for one black box; do not edit directly. |
+| `course/versions/<course-slug>/index.md` | Optional authored override | Course author; assembled by `build_site.py` | Course landing-page body. |
+| `course/versions/<course-slug>/site/` | Optional authored assets | Course author; staged by `build_site.py` | Partner logo and metadata. |
 | `course/courses.json` | Authored configuration | Maintainer | Course registration, generation and publishing. |
 | `course/tools/zensical/assets/` | Shared authored assets | Maintainer; copied by `build_site.py` | Small CSS additions for readable layout, videos and LBB-specific components. |
 | `course/tools/zensical/catalogue/` | Optional authored assets | Maintainer; staged by `build_site.py` | Per-course logos used by the root catalogue. |
@@ -136,10 +188,13 @@ other browser features do not work reliably when HTML is opened as local files.
 ### Sessions and reusable lessons
 
 Each session lives under
-`course/versions/<slug>/<NN>_<session>/_resources/template.md`. The engine
-replaces every `{BoxName:LessonName}` tag with content from
-`boxes/<box>/_resources/lessons/<LessonName>.md` and writes the session
-`README.md` beside `_resources/`.
+`course/versions/<course-slug>/<NN>_<session-slug>/_resources/template.md`.
+The engine replaces each standalone `{BoxName:LessonName}` lesson tag with
+content from `boxes/<box>/_resources/lessons/<LessonName>.md`, then writes the
+generated session `README.md` beside `_resources/`.
+
+The complete content hierarchy, file formats, granularity rules and new-course
+checklist are documented in the [course engine guide](../engine/README.md).
 
 Edit the template or reusable lesson, never the generated session README. After
 editing, regenerate content with:
@@ -161,10 +216,12 @@ exact blocks into a native collapsible table and Vimeo embeds, retaining the
 public Vimeo link as a fallback. The generated repository READMEs are not
 changed.
 
-### Course manifest
+### Central course list
 
-Register every directory under `course/versions/` in the single manifest,
-[`course/courses.json`](../../courses.json):
+[`course/courses.json`](../../courses.json) is the single list of courses known
+to the build. Each entry connects a course's human-readable name to its folder
+under `course/versions/` and controls whether the engine, materials tools and
+website include it:
 
 ```json
 {
@@ -184,16 +241,25 @@ Register every directory under `course/versions/` in the single manifest,
 - `slug` matches the directory name and becomes the public URL path.
 - `description` supplies catalogue text and fallback landing-page prose.
 - `logo` optionally names a root-catalogue asset under `course/tools/zensical/catalogue/`.
-- `generate`, `materials` and `published` control their respective build stages.
+- `generate` controls whether the engine writes the course's generated session
+  READMEs.
+- `materials` controls whether the separate BOM and packing-list tools process
+  the course; those tools are not run by `build_all.py`.
+- `published` controls whether the unified website includes the course.
 
 Published or materials-enabled courses must also enable generation. The
-manifest loader validates these rules and requires exactly one entry for every
-course directory.
+configuration loader validates these rules and requires exactly one entry for
+every course directory.
+
+One engine operation is independent of the `generate` setting:
+`generate_courses.py` always loads the course whose `engine_name` is
+`The Last Black Box` to regenerate the top-level `boxes/<box>/README.md` files.
 
 ### Course landing page
 
-An optional `course/versions/<slug>/index.md` supplies course-specific landing
-content. Do not add an H1: the manifest supplies it. Include exactly one
+An optional `course/versions/<course-slug>/index.md` supplies course-specific
+landing content. Do not add an H1: the course's entry in
+`course/courses.json` supplies it. Include exactly one
 curriculum marker where the generated facts and 28-box grid should appear:
 
 ```markdown
@@ -204,14 +270,14 @@ Course introduction.
 <!-- LBB_CURRICULUM_MAP -->
 ```
 
-Session links use `sessions/<NN>_<session>/`. If `index.md` is absent,
-`build_site.py` generates a basic landing page from the manifest and discovered
-sessions.
+Session links use `sessions/<NN>_<session-slug>/`. If `index.md` is absent,
+`build_site.py` generates a basic landing page from the central course list and
+discovered sessions.
 
 To display a partner beneath the title, add:
 
 ```text
-course/versions/<slug>/site/
+course/versions/<course-slug>/site/
   partner-logo.png          # or partner-logo.svg
   partner.json              # optional
 ```
@@ -224,12 +290,13 @@ metadata and writes the markup at build time.
 `build_site.py` generates one Zensical project containing the root selector and
 every published course. This gives the complete site one navigation hierarchy,
 breadcrumb tree, search index and sitemap while preserving the existing
-`/<slug>/` and `/<slug>/sessions/<session>/` URLs. It:
+`/<course-slug>/` and
+`/<course-slug>/sessions/<NN>_<session-slug>/` URLs. It:
 
 1. discovers numerically prefixed session directories;
 2. generates the complete Zensical navigation from their template titles;
 3. stages every landing page and session README as a folder index page;
-4. derives the curriculum from `{Box:Lesson}` tags;
+4. derives the curriculum from `{Box:Lesson}` lesson tags;
 5. bundles repository images and rewrites non-image repository links to GitHub;
 6. converts Vimeo thumbnail blocks to native video embeds;
 7. writes the selector and crawler configuration;
