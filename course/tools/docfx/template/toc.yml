@@ -1,5 +1,0 @@
-# The course landing page is the parent of the session hierarchy. The href
-# loads the nested session TOC; homepage is the breadcrumb destination.
-- name: Course
-  href: sessions/
-  homepage: index.md

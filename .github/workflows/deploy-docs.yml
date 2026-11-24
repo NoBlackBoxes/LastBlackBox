@@ -1,13 +1,14 @@
-# Build the docfx course sites and deploy to GitHub Pages.
+# Build the unified Zensical course website and deploy it to GitHub Pages.
 #
 # Prereq (one-time, manual): in repo Settings -> Pages, set Source to
 # "GitHub Actions". Without this the deploy job will fail.
 #
 # Pull requests build the complete site without deploying it. Pushes to master
-# and course-sites build and deploy; course-sites remains a temporary live
-# preview until the feature branch is merged. workflow_dispatch allows reruns.
+# and course-site-zensical build and deploy; course-site-zensical remains a
+# temporary live preview until the feature branch is merged. workflow_dispatch
+# allows reruns.
 #
-# Pages only serves one deployment at a time, so pushing to course-sites
+# Pages only serves one deployment at a time, so pushing to the preview branch
 # overwrites whatever was last deployed from master and vice versa.
 
 name: Deploy docs
@@ -17,7 +18,7 @@ on:
   push:
     branches:
       - master
-      - course-sites
+      - course-site-zensical
   workflow_dispatch:
 
 jobs:
@@ -28,18 +29,14 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - uses: actions/setup-dotnet@v5
-        with:
-          dotnet-version: 8.0.x
-
       - uses: actions/setup-python@v6
         with:
           python-version: "3.x"
+          cache: pip
+          cache-dependency-path: course/tools/zensical/requirements.txt
 
-      - name: Install docfx
-        run: |
-          dotnet tool install -g docfx --version 2.81.0
-          echo "$HOME/.dotnet/tools" >> "$GITHUB_PATH"
+      - name: Install Zensical
+        run: python -m pip install -r course/tools/zensical/requirements.txt
 
       - name: Build all sites
         run: python course/tools/build_all.py

@@ -7,24 +7,24 @@
 ## Schedule
 
 ### Day 1 - Sensors and Motors
-- Morning - [Analog Electronics](sessions/01_analog-electronics/README.md): atoms, electrons, sensors.
-- Afternoon - [Magnets and Semiconductors](sessions/02_magnets-and-semiconductors/README.md): magnets, motors, transistors.
+- Morning - [Analog Electronics](sessions/01_analog-electronics/): atoms, electrons, sensors.
+- Afternoon - [Magnets and Semiconductors](sessions/02_magnets-and-semiconductors/): magnets, motors, transistors.
 
 ### Day 2 - Computers and Robotics
-- Morning - [Digital Computers](sessions/03_digital-computers/README.md): data, logic, memory, computers.
-- Afternoon - [Robot Control](sessions/04_robot-control/README.md): control and robotics.
+- Morning - [Digital Computers](sessions/03_digital-computers/): data, logic, memory, computers.
+- Afternoon - [Robot Control](sessions/04_robot-control/): control and robotics.
 
 ### Day 3 - Systems and Networks
-- Morning - [Software Systems](sessions/05_software-systems/README.md): power, systems, Linux, Python.
-- Afternoon - [The Internet](sessions/06_the-internet/README.md): networks, websites, servers.
+- Morning - [Software Systems](sessions/05_software-systems/): power, systems, Linux, Python.
+- Afternoon - [The Internet](sessions/06_the-internet/): networks, websites, servers.
 
 ### Day 4 - Audio
-- Morning - [Microphones and Speakers](sessions/07_microphones-and-speakers/README.md): audio input and output hardware.
-- Afternoon - [Signal Processing](sessions/08_signal-processing/README.md): processing 1-D data.
+- Morning - [Microphones and Speakers](sessions/07_microphones-and-speakers/): audio input and output hardware.
+- Afternoon - [Signal Processing](sessions/08_signal-processing/): processing 1-D data.
 
 ### Day 5 - Images
-- Morning - [Cameras](sessions/09_cameras/README.md): image acquisition hardware.
-- Afternoon - [Computer Vision](sessions/10_computer-vision/README.md): processing 2-D data.
+- Morning - [Cameras](sessions/09_cameras/): image acquisition hardware.
+- Afternoon - [Computer Vision](sessions/10_computer-vision/): processing 2-D data.
 
 ## How to use these pages
 

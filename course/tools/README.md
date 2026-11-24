@@ -7,19 +7,21 @@ Scripts for generating LBB course content, websites, designs, materials and medi
 [`build_all.py`](build_all.py) is the CI/CD entry point:
 
 ```bash
-python3 course/tools/build_all.py
+.venv/bin/python course/tools/build_all.py
 ```
 
-It regenerates enabled course content, builds every published Docfx course site, and creates the root course catalogue, sitemap and `robots.txt`. Course selection and publishing are controlled by the central [course manifest](../courses.json).
+It regenerates enabled course content and builds one Zensical website containing the root selector and every published course. Course selection and publishing are controlled by the central [course manifest](../courses.json).
 
-See the [Docfx authoring and build guide](docfx/README.md) for installation, local preview, architecture and deployment details.
+See the [Zensical authoring and build guide](zensical/README.md) before running
+the command. It covers installation, source and output locations, local
+preview, architecture and deployment.
 
 ## Tool index
 
 | Path | Purpose |
 |---|---|
 | [`engine/`](engine/) | Assemble session and box READMEs from course templates and reusable lessons. |
-| [`docfx/`](docfx/) | Stage and build the static course websites, bundle assets and rewrite repository links. |
+| [`zensical/`](zensical/) | Stage and build the unified static website, bundle assets and rewrite repository links. |
 | [`materials/`](materials/) | Generate course bills of materials and packing lists, and update material records. |
 | [`designs/`](designs/) | Generate shared course layouts, logos and icons. |
 | [`packaging/`](packaging/) | Generate course-kit packaging dimensions, CAD models and print designs. |

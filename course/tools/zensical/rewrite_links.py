@@ -4,7 +4,7 @@ Rewrite repo-relative links to absolute GitHub URLs.
 
 Course content lives in `course/`, `boxes/`, and `libs/` and links between
 these directories using either absolute repo paths (`/boxes/...`) or relative
-parent-traversal paths (`../../../../boxes/...`). When rendered into a docfx
+parent-traversal paths (`../../../../boxes/...`). When rendered into a Zensical
 site at a different depth, those paths break.
 
 This module rewrites non-image links to absolute URLs:

@@ -6,27 +6,27 @@ Welcome. Over five days you will build **NB3**, a robot designed from individual
 
 ## The five days
 
-### Day 1 - [Electronics and Sensors](sessions/01_electronics-and-sensors/README.md)
+### Day 1 - [Electronics and Sensors](sessions/01_electronics-and-sensors/)
 - Build the analog stack with no software in sight
   - Atoms, electrons, magnets, motors, transistors
   - **Project**: *Light sensor + hand-wound speaker + light-sensitive motor*
 
-### Day 2 - [Arduino and Braitenberg](sessions/02_arduino-and-braitenberg/README.md)
+### Day 2 - [Arduino and Braitenberg](sessions/02_arduino-and-braitenberg/)
 - Add a programmable brain
   - Logic, memory, microcontrollers, PWM, servos
   - **Project**: *Light-controlled theremin and a full Braitenberg vehicle*
 
-### Day 3 - [Linux and Python](sessions/03_linux-and-python/README.md)
+### Day 3 - [Linux and Python](sessions/03_linux-and-python/)
 - The robot grows a real computer
   - Power, operating systems, the command line, Python, serial protocols
   - **Project**: *Drive the robot from your laptop over SSH*
 
-### Day 4 - [Web Stack and Senses](sessions/04_web-stack-and-senses/README.md)
+### Day 4 - [Web Stack and Senses](sessions/04_web-stack-and-senses/)
 - A robot you can see and talk through
   - Sockets, HTTP, HTML, CSS, JavaScript, microphones, speakers, cameras
   - **Project**: *Phone-controlled robot streaming its camera feed*
 
-### Day 5 - [Open Projects](sessions/05_open-projects/README.md)
+### Day 5 - [Open Projects](sessions/05_open-projects/)
 - Pick a track and ship it
   - Sensor streaming, audio DSP, computer vision, voice, full-stack
   - **Project**: *Your own NB3 extension, built and demoed*

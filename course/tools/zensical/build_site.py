@@ -1,48 +1,25 @@
 # -*- coding: utf-8 -*-
-"""
-Build a docfx site for a single course slug.
+"""Build the unified Last Black Box Zensical site.
 
 Usage:
-    python course/tools/docfx/build_site.py <slug>
+    .venv/bin/python course/tools/zensical/build_site.py
 
-For example, `python course/tools/docfx/build_site.py crick` produces a
-self-contained static site at `docs/<slug>/` from the engine-rendered
-READMEs at `course/versions/<slug>/`.
+The build has three stages:
 
-The build is a three-step pipeline:
+1. Assemble `course/tools/zensical/.site-staging/` from the course manifest,
+   authored landing pages, engine-generated session READMEs, shared branding
+   and optional course partner assets.
+2. Adapt engine-owned website blocks, bundle repository images and rewrite
+   repository links. Materials become native collapsible tables and linked
+   Vimeo thumbnails become native video embeds.
+3. Run Zensical in strict mode under `.site-staging/site/`, then replace
+   `docs/` with that rendered site.
 
-1. Stage. Wipe `course/versions/<slug>/.docfx-staging/` and assemble the
-   docfx layout from a layered set of sources:
-
-     - Shared configuration and presentation from `course/tools/docfx/template/`:
-         docfx.json (rendered from docfx.json.tmpl), toc.yml,
-         template/public/{main.css, main.js}.
-     - Per-course content from `course/versions/<slug>/`:
-         index.md, sessions.toc.yml, and supplementary public assets under
-         template/.
-     - Auto-generated when missing:
-         sessions.toc.yml and index.md (derived from session template H1s
-         when absent).
-
-2. Bundle assets and rewrite links. Walk every markdown file in staging:
-   - Vimeo thumbnail links emitted by the LBB engine are replaced with
-     docfx-native video embeds. The repository READMEs remain unchanged.
-   - Image references (../../../../boxes/<box>/.../*.gif, /boxes/.../*.png,
-     etc.) get the referenced file copied into staging/_assets/<box>/...
-     and the markdown reference rewritten to a local relative path. 
-     Image assets are served locally instead of relying on repository-relative paths.
-   - Other repo-relative refs (datasheets, code folders, sub-projects)
-     are rewritten to absolute GitHub URLs so they still resolve.
-
-3. Run docfx build, writing the static site to `docs/<slug>/`.
-
-The script is course-agnostic: any registered course slug whose folder has at
-least one NN_*/README.md can be built. All sites use the shared Docfx
-configuration, navigation and presentation. Courses may customise content via
-index.md / sessions.* and add non-conflicting public assets under template/.
-
-The landing-page curriculum grid is derived from the session templates'
-`{Box:Lesson}` tags, so it has no separate configuration list.
+Zensical owns navigation, breadcrumbs, search, page outlines, palettes and the
+responsive page frame. The small shared stylesheet adds readable article and
+video sizing, catalogue cards, the LBB curriculum grid and optional partner
+identity. The grid is derived from `{Box:Lesson}` tags in the session templates,
+so it has no separately maintained course list.
 """
 from __future__ import annotations
 
@@ -64,21 +41,17 @@ sys.path.insert(0, str(REPO_ROOT / "libs"))
 
 import LBB.config as Config  # noqa: E402
 
-STAGING_NAME = ".docfx-staging"
+SITE_STAGING = _HERE / ".site-staging"
+CATALOGUE_ASSETS = _HERE / "catalogue"
 CURRICULUM_MARKER = "<!-- LBB_CURRICULUM_MAP -->"
-PARTNER_TEMPLATE_FILES = {
-    pathlib.Path("public/secondary_logo.png"),
-    pathlib.Path("public/secondary_logo.svg"),
-    pathlib.Path("public/site.json"),
-}
+PARTNER_DIR_NAME = "site"
 
-# Shared brand assets used by every course site. Copied into staging root so
-# docfx's _appLogoPath / _appFaviconPath can find them.
+# Shared brand assets used by every course site.
 BRAND_LOGO    = REPO_ROOT / "course" / "_resources" / "designs" / "logo" / "icons" / "icon_NBB.svg"
 BRAND_FAVICON = REPO_ROOT / "course" / "_resources" / "designs" / "logo" / "icons" / "icon_NBB_256.png"
 
-# Shared docfx defaults (template + CSS/JS shared across all courses).
-SHARED_TEMPLATE_DIR = _HERE / "template"
+# Small shared presentation layer on top of Zensical's native theme.
+SHARED_STYLESHEET = _HERE / "assets" / "stylesheets" / "extra.css"
 
 # Match relative parent-traversal AND absolute repo-root image references.
 # Captures the path text we need to resolve to an absolute repo path.
@@ -108,10 +81,29 @@ _VIMEO_VIDEO_BLOCK_RE = re.compile(
     re.MULTILINE,
 )
 
+# The engine wraps its Markdown materials table in raw HTML for GitHub. A
+# Markdown parser cannot render a table inside that HTML block, so replace only
+# this exact engine-owned wrapper in the staged website. Generated repository
+# READMEs remain unchanged.
+_MATERIALS_BLOCK_RE = re.compile(
+    r"<details><summary><i>Materials</i></summary><p>\s*\n"
+    r"(?P<table>Name\|Description\|.*?\n.*?)\n"
+    r"</p></details><hr>",
+    re.DOTALL,
+)
+
 # First H1 in a session template.md is `# CourseName : SessionName`. Capture
 # everything after the colon as the human-readable session label.
 _H1_SESSION_RE = re.compile(r"^#\s+[^:]+?\s+:\s+(.+?)\s*$", re.MULTILINE)
 _LESSON_TAG_RE = re.compile(r"\{([^:{}]+):[^{}]+\}")
+
+def _page_front_matter(description: str | None = None) -> str:
+    """Use the native page outline and path without a duplicate nav sidebar."""
+    lines = ["---", "hide:", "  - navigation"]
+    if description:
+        lines.append(f"description: {json.dumps(description, ensure_ascii=False)}")
+    lines.extend(["---", ""])
+    return "\n".join(lines) + "\n"
 
 
 def _normalise_to_repo_relative(path: str) -> str:
@@ -120,7 +112,7 @@ def _normalise_to_repo_relative(path: str) -> str:
 
 
 def _embed_vimeo_videos(text: str) -> str:
-    """Replace engine-rendered Vimeo thumbnails with native Docfx embeds.
+    """Replace engine-rendered Vimeo thumbnails with native Zensical embeds.
 
     Keep a normal public Vimeo link in the heading as a playback fallback.
     URLs copied from Vimeo's management interface are normalised by video ID.
@@ -132,10 +124,20 @@ def _embed_vimeo_videos(text: str) -> str:
         player_url = f"https://player.vimeo.com/video/{video_id}"
         return (
             f"#### Watch this video: [{title}]({public_url})\n\n"
-            f"> [!Video {player_url}]"
+            f"![type:video]({player_url})"
         )
 
     return _VIMEO_VIDEO_BLOCK_RE.sub(replace, text)
+
+
+def _render_materials_tables(text: str) -> str:
+    """Render engine-owned materials blocks as native collapsible content."""
+    def replace(match: re.Match) -> str:
+        table = match.group("table").strip()
+        indented_table = "\n".join(f"    {line}" for line in table.splitlines())
+        return f'??? abstract "Materials"\n\n{indented_table}'
+
+    return _MATERIALS_BLOCK_RE.sub(replace, text)
 
 
 def _bundle_assets_in_markdown(
@@ -144,7 +146,9 @@ def _bundle_assets_in_markdown(
     """Read *md_path*, bundle every image ref into staging/_assets/, return
     (rewritten_text, list_of_bundled_repo_paths).
     """
-    text = _embed_vimeo_videos(md_path.read_text(encoding="utf8"))
+    text = md_path.read_text(encoding="utf8")
+    text = _render_materials_tables(text)
+    text = _embed_vimeo_videos(text)
     bundled: list[str] = []
 
     # Relative prefix from this markdown file to staging_root/_assets/.
@@ -217,20 +221,6 @@ def _discover_sessions(course_dir: pathlib.Path) -> list[tuple[pathlib.Path, str
     return out
 
 
-def _generate_sessions_toc(sessions: list[tuple[pathlib.Path, str]]) -> str:
-    """Default sessions/toc.yml content from a list of (dir, label) pairs."""
-    lines = [
-        "# Auto-generated by build_site.py from session template.md H1s.",
-        "# Override by placing a hand-authored sessions.toc.yml in the course directory.",
-        "",
-    ]
-    for session_dir, label in sessions:
-        lines.append(f"- name: {label}")
-        lines.append(f"  href: {session_dir.name}/README.md")
-        lines.append("")
-    return "\n".join(lines)
-
-
 def _generate_index(course: dict, sessions: list[tuple[pathlib.Path, str]]) -> str:
     """Default landing-page body when a course has no hand-written index.md.
 
@@ -248,7 +238,7 @@ def _generate_index(course: dict, sessions: list[tuple[pathlib.Path, str]]) -> s
         "",
     ]
     for session_dir, label in sessions:
-        lines.append(f"- [{label}](sessions/{session_dir.name}/README.md)")
+        lines.append(f"- [{label}](sessions/{session_dir.name}/)")
     lines.append("")
     return "\n".join(lines)
 
@@ -294,8 +284,8 @@ def _render_curriculum_map(
         intro = "Select any box to open the session where it is first introduced."
     else:
         intro = (
-            "Boxes without a padlock are included in this course. Select one to "
-            "open the session where it is first introduced. "
+            "Boxes with an open padlock are included in this course. Select one "
+            "to open the session where it is first introduced. "
             f'Explore the <a href="{Config.site_base_url}/full/">full course</a> '
             'or browse the remaining '
             'material on '
@@ -303,51 +293,46 @@ def _render_curriculum_map(
         )
 
     lines = [
-        '<div class="lbb-curriculum">',
-        '  <dl class="lbb-course-facts" aria-label="Course overview">',
-        '    <div>',
-        f'      <dd>{len(sessions)}</dd>',
-        '      <dt>sessions</dt>',
-        '    </div>',
-        '    <div>',
-        f'      <dd>{open_count} / {total_count}</dd>',
-        '      <dt>boxes opened</dt>',
-        '    </div>',
-        '  </dl>',
-        '  <div class="lbb-curriculum-heading">',
-        '    <h2 id="the-28-black-boxes">The 28 black boxes</h2>',
-        f'    <p>{intro}</p>',
+        '<dl class="lbb-course-facts" aria-label="Course overview">',
+        '  <div>',
+        f'    <dd>{len(sessions)}</dd>',
+        '    <dt>sessions</dt>',
         '  </div>',
-        '  <ol class="lbb-box-grid" aria-label="Last Black Box curriculum">',
+        '  <div>',
+        f'    <dd>{open_count} / {total_count}</dd>',
+        '    <dt>boxes opened</dt>',
+        '  </div>',
+        '</dl>',
+        '',
+        '<div class="lbb-curriculum-heading">',
+        '  <h2 id="the-28-black-boxes">The 28 black boxes</h2>',
+        f'  <p>{intro}</p>',
+        '</div>',
+        '',
+        '<div class="lbb-box-grid" '
+        'aria-label="Last Black Box curriculum" markdown>',
+        '',
     ]
 
     for box_name in Config.box_names:
         escaped_name = html.escape(box_name)
         if box_name in curriculum:
             session_dir, session_label = curriculum[box_name]
-            href = f"sessions/{session_dir}/README.md"
+            href = f"sessions/{session_dir}/"
             aria = html.escape(f"{box_name}: open {session_label}", quote=True)
-            lines.extend([
-                '    <li class="lbb-box-item is-active">',
-                f'      <a class="lbb-box" href="{href}" aria-label="{aria}">',
-                '        <i class="bi bi-unlock lbb-box-lock" aria-hidden="true"></i>',
-                f"        <span>{escaped_name}</span>",
-                "      </a>",
-                "    </li>",
-            ])
+            lines.append(
+                f'- [:lucide-lock-open:{{ .lbb-box-lock }} {escaped_name}]({href})'
+                f'{{ .lbb-box aria-label="{aria}" }}'
+            )
         else:
             aria = html.escape(f"{box_name}: not included in this course", quote=True)
-            lines.extend([
-                '    <li class="lbb-box-item">',
-                f'      <span class="lbb-box" aria-label="{aria}">',
-                '        <i class="bi bi-lock lbb-box-lock" aria-hidden="true"></i>',
-                f"        <span>{escaped_name}</span>",
-                "      </span>",
-                "    </li>",
-            ])
+            lines.append(
+                f'- <span class="lbb-box" aria-label="{aria}">'
+                f':lucide-lock:{{ .lbb-box-lock }} {escaped_name}</span>'
+            )
 
     lines.extend([
-        "  </ol>",
+        "",
         "</div>",
     ])
     return "\n".join(lines)
@@ -372,28 +357,27 @@ def _insert_curriculum_map(
     )
 
 
-def _render_partner(course_dir: pathlib.Path, staging: pathlib.Path) -> str:
-    """Render optional course-partner markup from per-course public assets.
+def _render_partner(course_dir: pathlib.Path, course_content: pathlib.Path) -> str:
+    """Render optional markup from a course's partner assets.
 
-    A course opts in by providing `secondary_logo.png` or `.svg`. Optional
-    link and accessible-label metadata come from `site.json` in the same
-    directory. Rendering this at build time avoids runtime asset probing.
+    A course opts in with `site/partner-logo.png` or `.svg`. Optional link and
+    accessible-label metadata come from `site/partner.json`.
     """
-    public_dir = course_dir / "template" / "public"
+    site_dir = course_dir / PARTNER_DIR_NAME
     logo = next(
-        (public_dir / f"secondary_logo.{ext}" for ext in ("png", "svg")
-         if (public_dir / f"secondary_logo.{ext}").is_file()),
+        (site_dir / f"partner-logo.{ext}" for ext in ("png", "svg")
+         if (site_dir / f"partner-logo.{ext}").is_file()),
         None,
     )
     if logo is None:
         return ""
 
-    staged_logo = staging / "public" / logo.name
+    staged_logo = course_content / "assets" / "images" / logo.name
     staged_logo.parent.mkdir(parents=True, exist_ok=True)
     shutil.copy2(logo, staged_logo)
 
     metadata: dict = {}
-    metadata_path = public_dir / "site.json"
+    metadata_path = site_dir / "partner.json"
     if metadata_path.is_file():
         try:
             metadata = json.loads(metadata_path.read_text(encoding="utf8"))
@@ -408,8 +392,8 @@ def _render_partner(course_dir: pathlib.Path, staging: pathlib.Path) -> str:
                 f"{metadata_path.relative_to(REPO_ROOT)}"
             )
 
-    label = metadata.get("secondary_logo_label") or "Host institution"
-    url = metadata.get("secondary_logo_url")
+    label = metadata.get("label") or "Host institution"
+    url = metadata.get("url")
     if not isinstance(label, str) or (url is not None and not isinstance(url, str)):
         raise SystemExit(
             f"partner metadata values must be strings: "
@@ -418,7 +402,7 @@ def _render_partner(course_dir: pathlib.Path, staging: pathlib.Path) -> str:
 
     escaped_label = html.escape(label, quote=True)
     image = (
-        f'<img src="public/{html.escape(logo.name, quote=True)}" '
+        f'<img src="assets/images/{html.escape(logo.name, quote=True)}" '
         f'alt="{escaped_label}" class="lbb-secondary-logo">'
     )
     if url:
@@ -453,113 +437,145 @@ def _write_landing_page(
             f"course landing-page body must not contain an H1: "
             f"{index_path.relative_to(REPO_ROOT)}"
         )
-    sections = [f"# {course['name']}"]
+    sections = [
+        _page_front_matter(course["description"]) + f"# {course['name']}"
+    ]
     if partner:
         sections.append(partner)
     sections.append(body.lstrip())
     index_path.write_text("\n\n".join(sections), encoding="utf8")
 
 
-def _render_docfx_json(slug: str) -> str:
-    """Render docfx.json from the shared template using simple format-string
-    substitution. JSON braces in the template are doubled to escape them.
-    """
-    tmpl = (SHARED_TEMPLATE_DIR / "docfx.json.tmpl").read_text(encoding="utf8")
-    return tmpl.format(slug=slug, site_base_url=Config.site_base_url)
+def _toml_string(value: str) -> str:
+    """Return a TOML-compatible quoted string."""
+    return json.dumps(value, ensure_ascii=False)
 
 
-def _copy_tree(
-    src: pathlib.Path,
-    dst: pathlib.Path,
-    *,
-    allow_overwrite: bool,
-    exclude: set[pathlib.Path] | None = None,
-) -> None:
-    """Copy *src* into *dst* and optionally reject name collisions."""
-    if not src.is_dir():
-        return
-    excluded = exclude or set()
-    for path in src.rglob("*"):
-        if path.is_dir():
-            continue
-        rel = path.relative_to(src)
-        if rel in excluded:
-            continue
-        target = dst / rel
-        if target.exists() and not allow_overwrite:
-            raise SystemExit(
-                f"course asset conflicts with shared template file: {rel}"
-            )
-        target.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(path, target)
+def _render_native_theme() -> str:
+    """Return shared native theme, palette and Markdown configuration."""
+    return """[project.theme]
+language = "en"
+logo = "assets/images/logo.svg"
+favicon = "assets/images/favicon.png"
+features = [
+  "content.code.copy",
+  "navigation.path",
+  "navigation.top",
+  "search.highlight",
+  "toc.follow",
+]
+
+[[project.theme.palette]]
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to light mode"
+
+[project.markdown_extensions]
+admonition = {}
+attr_list = {}
+def_list = {}
+footnotes = {}
+md_in_html = {}
+tables = {}
+toc.permalink = true
+pymdownx.details = {}
+pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
+pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"
+pymdownx.highlight.anchor_linenums = true
+pymdownx.inlinehilite = {}
+pymdownx.magiclink = {}
+pymdownx.quotes.callouts = true
+pymdownx.superfences = {}
+pymdownx.tasklist.custom_checkbox = true
+
+[project.plugins.mkdocs-video]
+"""
 
 
-def _stage(course_dir: pathlib.Path, staging: pathlib.Path, course: dict) -> list[pathlib.Path]:
-    """Create staging from shared presentation and per-course content.
+def _render_site_config(
+    courses: list[dict],
+    sessions_by_slug: dict[str, list[tuple[pathlib.Path, str]]],
+) -> str:
+    """Render one navigation tree for the catalogue and every course."""
+    course_entries = []
+    for course in courses:
+        slug = course["slug"]
+        nav_sessions = ", ".join(
+            f"{{ {_toml_string(label)} = "
+            f"{_toml_string(f'{slug}/sessions/{session_dir.name}/index.md')} }}"
+            for session_dir, label in sessions_by_slug[slug]
+        )
+        course_nav = (
+            f"[{{ \"Overview\" = {_toml_string(f'{slug}/index.md')} }}, "
+            f"{{ \"Sessions\" = [{nav_sessions}] }}]"
+        )
+        course_entries.append(
+            f"{{ {_toml_string(course['name'])} = {course_nav} }}"
+        )
 
-    Returns the Markdown files that need asset bundling and link rewriting.
-    """
-    if staging.exists():
-        shutil.rmtree(staging)
-    staging.mkdir(parents=True)
+    nav = "[" + ", ".join(
+        ['{ "Courses" = "index.md" }', *course_entries]
+    ) + "]"
+    project = f"""# Generated by course/tools/zensical/build_site.py. Do not edit.
+[project]
+site_name = "Last Black Box"
+site_url = {_toml_string(Config.site_base_url + "/")}
+site_description = "Hands-on robotics courses from atoms to AI."
+copyright = "© NoBlackBoxes"
+repo_url = "https://github.com/NoBlackBoxes/LastBlackBox"
+repo_name = "NoBlackBoxes/LastBlackBox"
+docs_dir = "content"
+site_dir = "site"
+nav = {nav}
+extra_css = ["assets/stylesheets/extra.css"]
 
-    slug = course["slug"]
-    sessions = _discover_sessions(course_dir)
+"""
+    return project + _render_native_theme()
 
-    # Shared configuration and presentation are identical for every course.
-    (staging / "docfx.json").write_text(_render_docfx_json(slug), encoding="utf8")
-    shutil.copy2(SHARED_TEMPLATE_DIR / "toc.yml", staging / "toc.yml")
-    _copy_tree(
-        SHARED_TEMPLATE_DIR / "template", staging / "template", allow_overwrite=True
-    )
 
-    # Courses may add public assets such as a partner logo, but cannot replace
-    # shared CSS, JavaScript, or any other template file.
-    _copy_tree(
-        course_dir / "template",
-        staging / "template",
-        allow_overwrite=False,
-        exclude=PARTNER_TEMPLATE_FILES,
-    )
+def _stage_course(
+    content: pathlib.Path,
+    course_dir: pathlib.Path,
+    course: dict,
+    sessions: list[tuple[pathlib.Path, str]],
+) -> list[pathlib.Path]:
+    """Stage one course inside the unified project content tree."""
+    course_content = content / course["slug"]
+    course_content.mkdir(parents=True)
 
-    # Required shared brand assets. copy2 fails immediately if either source
-    # is missing, rather than allowing Docfx to emit broken references.
-    shutil.copy2(BRAND_LOGO, staging / "logo.svg")
-    shutil.copy2(BRAND_FAVICON, staging / "favicon.png")
-
-    # ---- index.md: manifest title + per-course body or generated fallback ----
     course_index = course_dir / "index.md"
     if course_index.is_file():
         index_body = course_index.read_text(encoding="utf8")
     else:
         index_body = _generate_index(course, sessions)
     _write_landing_page(
-        staging / "index.md",
+        course_content / "index.md",
         course,
         index_body,
-        _render_partner(course_dir, staging),
+        _render_partner(course_dir, course_content),
     )
-    _insert_curriculum_map(staging / "index.md", course_dir, sessions)
+    _insert_curriculum_map(course_content / "index.md", course_dir, sessions)
 
-    md_files: list[pathlib.Path] = [staging / "index.md"]
+    md_files: list[pathlib.Path] = [course_content / "index.md"]
 
-    # ---- sessions/ subtree: docfx wants sessions/toc.yml + sessions/<NN>/README.md
-    sessions_root = staging / "sessions"
+    # Zensical uses folder index pages for clean URLs and native breadcrumbs.
+    sessions_root = course_content / "sessions"
     sessions_root.mkdir(parents=True, exist_ok=True)
-
-    course_sessions_toc = course_dir / "sessions.toc.yml"
-    if course_sessions_toc.is_file():
-        shutil.copy2(course_sessions_toc, sessions_root / "toc.yml")
-    else:
-        (sessions_root / "toc.yml").write_text(
-            _generate_sessions_toc(sessions), encoding="utf8"
-        )
 
     for session_dir, _label in sessions:
         dst_dir = sessions_root / session_dir.name
         dst_dir.mkdir(parents=True, exist_ok=True)
-        dst = dst_dir / "README.md"
-        shutil.copy2(session_dir / "README.md", dst)
+        dst = dst_dir / "index.md"
+        source_text = (session_dir / "README.md").read_text(encoding="utf8")
+        dst.write_text(
+            _page_front_matter(course["description"]) + source_text,
+            encoding="utf8",
+        )
         md_files.append(dst)
 
     return md_files
@@ -578,47 +594,129 @@ def _bundle_and_rewrite(md_files: list[pathlib.Path], staging: pathlib.Path) -> 
     return len(all_bundled)
 
 
-def _run_docfx(staging: pathlib.Path, output: pathlib.Path) -> None:
-    output.mkdir(parents=True, exist_ok=True)
-    cmd = ["docfx", "build", str(staging / "docfx.json"), "--output", str(output)]
+def _run_zensical(staging: pathlib.Path, output: pathlib.Path) -> None:
+    """Build inside *staging*, then copy the rendered site to *output*."""
+    local_executable = REPO_ROOT / ".venv" / "bin" / "zensical"
+    executable = (
+        str(local_executable)
+        if local_executable.is_file()
+        else shutil.which("zensical")
+    )
+    if executable is None:
+        raise SystemExit(
+            "Zensical is not installed. Run: "
+            "python3 -m venv .venv && "
+            ".venv/bin/python -m pip install -r "
+            "course/tools/zensical/requirements.txt"
+        )
+    cmd = [
+        executable,
+        "build",
+        "--config-file",
+        str(staging / "zensical.toml"),
+        "--clean",
+        "--strict",
+    ]
     print(f"  running: {' '.join(cmd)}")
     result = subprocess.run(cmd, check=False)
     if result.returncode != 0:
-        raise SystemExit(f"docfx build failed (exit {result.returncode})")
+        raise SystemExit(f"Zensical build failed (exit {result.returncode})")
+    shutil.copytree(staging / "site", output)
 
 
-def build(slug: str) -> None:
-    course = Config.courses_by_slug.get(slug)
-    if course is None:
-        raise SystemExit(f"course slug is not registered in course/courses.json: {slug}")
+def _render_catalogue_page(courses: list[dict]) -> str:
+    """Render the manifest-owned course list with Zensical's native cards."""
+    lines = [
+        _page_front_matter() + "# NoBlackBoxes courses",
+        "",
+        "Hands-on robotics courses that open the stack from atoms to artificial intelligence.",
+        "",
+        '<div class="grid cards course-cards" markdown>',
+        "",
+    ]
+    for course in courses:
+        name = html.escape(course["name"])
+        slug = html.escape(course["slug"], quote=True)
+        description = html.escape(course["description"])
+        logo = course.get("logo")
+        lines.append(f"-   **[{name}]({slug}/)**")
+        if logo:
+            logo_name = html.escape(pathlib.Path(logo).name, quote=True)
+            lines.extend(["", f"    ![{name} logo](assets/images/{logo_name})"])
+        lines.extend(["", f"    {description}", ""])
+    lines.extend(["</div>", ""])
+    return "\n".join(lines)
 
-    course_dir = REPO_ROOT / "course" / "versions" / slug
-    staging    = course_dir / STAGING_NAME
-    output     = REPO_ROOT / "docs" / slug
 
-    if not course_dir.is_dir():
-        raise SystemExit(f"course folder not found: {course_dir}")
+def build() -> None:
+    """Stage and build the catalogue and all published courses as one site."""
+    courses = Config.published_courses
+    staging = SITE_STAGING
+    output = REPO_ROOT / "docs"
+    if staging.exists():
+        shutil.rmtree(staging)
+    content = staging / "content"
+    stylesheets = content / "assets" / "stylesheets"
+    images = content / "assets" / "images"
+    stylesheets.mkdir(parents=True)
+    images.mkdir(parents=True)
 
-    print(f"[{slug}] staging at {staging.relative_to(REPO_ROOT)}")
-    md_files = _stage(course_dir, staging, course)
-    print(f"[{slug}] copied {len(md_files)} markdown file(s)")
+    sessions_by_slug: dict[str, list[tuple[pathlib.Path, str]]] = {}
+    for course in courses:
+        course_dir = REPO_ROOT / "course" / "versions" / course["slug"]
+        if not course_dir.is_dir():
+            raise SystemExit(f"course folder not found: {course_dir}")
+        sessions_by_slug[course["slug"]] = _discover_sessions(course_dir)
 
-    print(f"[{slug}] bundling assets and rewriting links")
-    n_assets = _bundle_and_rewrite(md_files, staging)
-    print(f"[{slug}] bundled {n_assets} unique asset(s) into _assets/")
+    (staging / "zensical.toml").write_text(
+        _render_site_config(courses, sessions_by_slug), encoding="utf8"
+    )
+    (content / "index.md").write_text(
+        _render_catalogue_page(courses), encoding="utf8"
+    )
+    (content / "robots.txt").write_text(
+        "User-agent: *\nAllow: /\n\n"
+        f"Sitemap: {Config.site_base_url}/sitemap.xml\n",
+        encoding="utf8",
+    )
+    shutil.copy2(SHARED_STYLESHEET, stylesheets / "extra.css")
+    shutil.copy2(BRAND_LOGO, images / "logo.svg")
+    shutil.copy2(BRAND_FAVICON, images / "favicon.png")
 
-    print(f"[{slug}] building docfx site -> {output.relative_to(REPO_ROOT)}")
-    # Wipe the previous output so renamed/removed pages don't linger.
+    for course in courses:
+        logo = course.get("logo")
+        if not logo:
+            continue
+        source = CATALOGUE_ASSETS / logo
+        if not source.is_file():
+            raise SystemExit(f"course catalogue logo not found: {source}")
+        shutil.copy2(source, images / source.name)
+
+    md_files = [content / "index.md"]
+    for course in courses:
+        slug = course["slug"]
+        course_dir = REPO_ROOT / "course" / "versions" / slug
+        staged = _stage_course(
+            content, course_dir, course, sessions_by_slug[slug]
+        )
+        md_files.extend(staged)
+        print(f"[{slug}] staged {len(staged)} markdown file(s)")
+
+    print("[site] bundling assets and rewriting links")
+    n_assets = _bundle_and_rewrite(md_files, staging / "content")
+    print(f"[site] bundled {n_assets} unique asset(s) into _assets/")
+
+    print("[site] building unified Zensical site -> docs/")
     if output.exists():
         shutil.rmtree(output)
-    _run_docfx(staging, output)
-    print(f"[{slug}] done.")
+    _run_zensical(staging, output)
+    print("[site] done.")
 
 
 def main() -> None:
-    if len(sys.argv) != 2:
-        raise SystemExit("usage: build_site.py <course-slug>")
-    build(sys.argv[1])
+    if len(sys.argv) != 1:
+        raise SystemExit("usage: build_site.py")
+    build()
 
 
 if __name__ == "__main__":

@@ -32,7 +32,10 @@ This world is much closer than you realize, and we have developed this training 
 
 ## Course websites
 
-The course websites are generated from this repository's Markdown content and deployed to GitHub Pages. See the [course-site guide](course/tools/docfx/README.md) for local setup, previewing, authoring, and deployment.
+The generated course selector and published courses are available at
+[noblackboxes.github.io/LastBlackBox](https://noblackboxes.github.io/LastBlackBox/).
+See the [course-site guide](course/tools/zensical/README.md) for the source and
+output locations, local setup, building, previewing, authoring and deployment.
 
 ## License
 
