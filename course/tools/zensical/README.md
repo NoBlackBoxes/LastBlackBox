@@ -20,27 +20,27 @@ local deployment artifact is `docs/`.
 ```mermaid
 flowchart TD
     subgraph sources["✎ Authored sources"]
-        manifest["`course/courses.json`<br/>Course registry and publishing settings"]
-        versions["`course/versions/{slug}/`<br/>Course landing pages and session templates"]
-        boxes["`boxes/{box}/_resources/lessons/`<br/>Reusable lessons and assets"]
-        theme["`course/tools/zensical/assets/`<br/>Small layout and component overrides"]
+        manifest["course/courses.json<br/>Course registry and publishing settings"]
+        versions["course/versions/{slug}/<br/>Course landing pages and session templates"]
+        boxes["boxes/{box}/_resources/lessons/<br/>Reusable lessons and assets"]
+        theme["course/tools/zensical/assets/<br/>Small layout and component overrides"]
     end
 
     subgraph tools["⚙︎ Build tools"]
-        engine["`libs/LBB/Engine/`<br/>Reusable-content engine"]
-        build["`course/tools/build_all.py`<br/>Complete build orchestrator"]
-        site["`course/tools/zensical/build_site.py`<br/>Unified website staging and build"]
+        engine["libs/LBB/Engine/<br/>Reusable-content engine"]
+        build["course/tools/build_all.py<br/>Complete build orchestrator"]
+        site["course/tools/zensical/build_site.py<br/>Unified website staging and build"]
         zensical["Zensical<br/>Markdown to static website"]
     end
 
     subgraph generated["◇ Generated content"]
-        readmes["`course/versions/{slug}/{session}/README.md`<br/>Expanded session Markdown"]
-        staging["`course/tools/zensical/.site-staging/content/`<br/>Temporary unified Zensical input"]
-        rendered["`course/tools/zensical/.site-staging/site/`<br/>Initial rendered site"]
+        readmes["course/versions/{slug}/{session}/README.md<br/>Expanded session Markdown"]
+        staging["course/tools/zensical/.site-staging/content/<br/>Temporary unified Zensical input"]
+        rendered["course/tools/zensical/.site-staging/site/<br/>Initial rendered site"]
     end
 
     subgraph output["🌐︎ Website"]
-        website["`docs/`<br/>Selector, course pages, search and sitemap"]
+        website["docs/<br/>Selector, course pages, search and sitemap"]
         pages["GitHub Pages"]
     end
 
