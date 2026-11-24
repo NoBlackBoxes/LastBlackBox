@@ -33,6 +33,7 @@
 .md-content__inner,
 .md-path {
   max-width: 40rem;
+  width: calc(100% - 2rem);
   margin-inline: auto;
 }
 
