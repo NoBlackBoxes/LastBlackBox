@@ -29,15 +29,17 @@
  * Page layout and embedded media
  * ----------------------------------------------------------------------- */
 
-/* Keep lesson lines readable; Zensical controls the overall page frame. */
-.md-content__inner {
-  max-width: 70ch;
+/* Use one readable content width across catalogue, course and session pages. */
+.md-content__inner,
+.md-path {
+  max-width: 40rem;
   margin-inline: auto;
 }
 
-/* The 28-box grid needs the complete article column. */
-.md-content__inner:has(.lbb-box-grid) {
-  max-width: none;
+@media screen and (min-width: 76.25em) {
+  .md-content > .md-path {
+    margin-inline: auto 1.2rem;
+  }
 }
 
 .md-typeset .video-container {
