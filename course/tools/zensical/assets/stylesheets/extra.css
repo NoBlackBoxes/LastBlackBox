@@ -266,13 +266,14 @@
 @media (max-width: 38rem) {
   .md-typeset .lbb-box {
     min-height: 0;
+    font-size: 0.55rem;
+    padding-inline: 0.15rem;
   }
 
   .md-typeset .lbb-course-facts {
     gap: 1.5rem;
   }
 }
-
 
 @media (prefers-reduced-motion: reduce) {
   .md-typeset .lbb-box-grid a.lbb-box,
