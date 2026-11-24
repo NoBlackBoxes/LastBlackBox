@@ -264,14 +264,15 @@
 }
 
 @media (max-width: 38rem) {
-  .md-typeset .lbb-box-grid > ul:not([hidden]) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .md-typeset .lbb-box {
+    min-height: 0;
   }
 
   .md-typeset .lbb-course-facts {
     gap: 1.5rem;
   }
 }
+
 
 @media (prefers-reduced-motion: reduce) {
   .md-typeset .lbb-box-grid a.lbb-box,
