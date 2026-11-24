@@ -6,14 +6,30 @@ Usage:
     .venv/bin/python course/tools/build_all.py
 
 Stages:
-    0. Run the LBB engine, regenerating all `course/versions/<slug>/<NN>_*/README.md`.
+    0. Run the LBB engine, regenerating all
+       `course/versions/<course-slug>/<NN>_<session-slug>/README.md` files.
     1. Build the root catalogue and all published courses as one Zensical site
        under `docs/`.
 
-The course manifest is the single source of truth for engine generation,
-published courses, site metadata, and the root selector cards. Every course
-uses Zensical's native theme; course directories provide content and optional
-partner assets only.
+Call tree:
+    main()
+    ├── _run([python, engine/generate_courses.py])
+    │   └── subprocess.run(...)
+    └── _run([python, zensical/build_site.py])
+        └── subprocess.run(...)
+
+Inputs consumed by the child scripts:
+    - `course/courses.json`
+    - Authored course templates, lessons, landing pages and assets
+
+Outputs produced by the child scripts:
+    - Generated session and black-box READMEs
+    - The unified website under `docs/`
+
+The central course list, `course/courses.json`, controls engine generation,
+published courses, site metadata, and the root selector cards. Every course uses
+Zensical's native theme; course directories provide content and optional partner
+assets only.
 
 This is the single command CI/CD should invoke to build the website.
 """

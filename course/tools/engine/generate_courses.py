@@ -1,6 +1,36 @@
 # -*- coding: utf-8 -*-
 """
-Generate LBB Courses (session READMEs) from templates
+Generate course session and black-box READMEs from authored content.
+
+Usage:
+    .venv/bin/python course/tools/engine/generate_courses.py
+
+Call tree:
+    module execution
+    ├── import LBB.config
+    │   └── load and validate `course/courses.json`
+    ├── for each configured course
+    │   ├── Course.Course(course_name)
+    │   │   └── Session.Session(...) for each numbered session template
+    │   │       ├── Lesson.Lesson(...) for each `{Box:Lesson}` lesson tag
+    │   │       └── Material.Material(...) for applicable material rows
+    │   ├── Session.render() for each session
+    │   └── write the session `README.md`
+    └── Course.Course("The Last Black Box")
+        ├── Session.render() for each full-reference session
+        └── write the corresponding `boxes/<box>/README.md`
+
+Inputs:
+    - `course/courses.json`
+    - `course/versions/<course-slug>/<NN>_<session-slug>/_resources/template.md`
+    - Reusable lessons and material records under `boxes/`
+
+Outputs:
+    - `course/versions/<course-slug>/<NN>_<session-slug>/README.md`
+    - `boxes/<box>/README.md`
+
+This module currently executes that flow at module level; it has no separate
+main() function.
 
 @author: kampff
 """

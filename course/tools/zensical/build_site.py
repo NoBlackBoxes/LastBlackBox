@@ -4,11 +4,44 @@
 Usage:
     .venv/bin/python course/tools/zensical/build_site.py
 
+Call tree:
+    module execution
+    ├── import LBB.config
+    │   └── load and validate `course/courses.json`
+    └── main()
+        └── build()
+            ├── _discover_sessions() for each published course
+            ├── _render_site_config()
+            │   └── _render_native_theme()
+            ├── _render_catalogue_page()
+            ├── _stage_course() for each published course
+            │   ├── _generate_index() when no authored `index.md` exists
+            │   ├── _render_partner()
+            │   ├── _write_landing_page()
+            │   └── _insert_curriculum_map()
+            │       └── _render_curriculum_map()
+            │           └── _curriculum_sessions()
+            ├── _bundle_and_rewrite()
+            │   ├── _bundle_assets_in_markdown() for each staged page
+            │   └── rewrite_non_images() for each staged page
+            └── _run_zensical()
+                ├── subprocess.run([zensical, build, ...])
+                └── copy the rendered site to `docs/`
+
+Inputs:
+    - Published-course metadata from `course/courses.json`
+    - Course landing pages, generated session READMEs and site assets
+    - Shared Zensical styling and catalogue assets
+
+Intermediate and final outputs:
+    - Temporary unified Zensical project under `.site-staging/`
+    - Rendered website under `docs/`
+
 The build has three stages:
 
-1. Assemble `course/tools/zensical/.site-staging/` from the course manifest,
-   authored landing pages, engine-generated session READMEs, shared branding
-   and optional course partner assets.
+1. Assemble `course/tools/zensical/.site-staging/` from the central course list,
+   authored landing pages, engine-generated session READMEs, shared branding and
+   optional course partner assets.
 2. Adapt engine-owned website blocks, bundle repository images and rewrite
    repository links. Materials become native collapsible tables and linked
    Vimeo thumbnails become native video embeds.
