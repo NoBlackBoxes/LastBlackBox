@@ -79,6 +79,7 @@ flowchart TD
 | `boxes/electrons/_resources/materials.csv` | Authored | Core materials added when the session references any Electrons lesson. |
 | `boxes/electrons/_resources/lessons/Capacitors.csv` | Authored | Extra materials added when the session includes the Capacitors lesson. A lesson CSV is optional. |
 | `course/versions/full/02_electrons/README.md` | Generated | Combined session Markdown used by GitHub and the website builder; do not edit. |
+| `boxes/<box>/README.md` | Generated | Full-reference box Markdown generated from the corresponding session in The Last Black Box course; do not edit. |
 | `course/tools/zensical/.site-staging/` | Generated temporary | Unified Zensical input and initial rendered site; do not edit. |
 | `docs/` | Generated | Deployable website output; do not edit. |
 
