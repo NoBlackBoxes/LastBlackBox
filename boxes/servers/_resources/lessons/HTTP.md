@@ -12,7 +12,7 @@ The fundamental "application protocol" of the internet is HTTP (Hyper Text Trans
 
 ## Lesson
 - The code for the "simplest" HTTP socket server is [here](/boxes/servers/python/simple_http_server/simplest_http_server.py)
-  - Run this code and confirm that it is only able to serve a single file [index.html](/boxes/servers/python/simple_http_server/index.html)
+    - Run this code and confirm that it is only able to serve a single file [index.html](/boxes/servers/python/simple_http_server/index.html)
 - The code for a "simple" HTTP socket server (capable of serving other HTML files) is [here](/boxes/servers/python/simple_http_server/simple_http_server.py)
-  - Run this code and confirm that the "link" to another HTML file works correctly.
+    - Run this code and confirm that the "link" to another HTML file works correctly.
 - **BONUS**: Try connecting to the simple HTTP server running on your NB3 from the web browser on your phone (you must be on the same local network, e.g. same WiFi)

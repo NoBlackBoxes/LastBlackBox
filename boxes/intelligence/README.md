@@ -3,7 +3,7 @@ In this box, you will learn about intelligence...
 
 <details><summary><i>Materials</i></summary><p>
 
-Name|Description| # |Package|Data|Link|
+Name|Description| # |Package|Data|Supplier|
 :-------|:----------|:-----:|:-:|:--:|:--:|
 NPU|Coral EdgeTPU USB Type-C|1|Auxiliary|[-D-](/boxes/intelligence/_resources/datasheets/Coral-USB-Accelerator-datasheet.pdf)|[-L-](https://coral.ai/products/accelerator/)
 M3 screw (16)|16 mm long M3 screw with phillips socket|4|Mounting Hardware|[-D-](/boxes/intelligence/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/500117-SPP-M3-16-ST-BZP)
@@ -17,9 +17,12 @@ M2.5 standoff (12/PS)|12 mm long socket-to-socket M2.5 standoff|2|Mounting Hardw
 
 </p></details><hr>
 
+
 ## Intelligence
 ### Large Language Models
+> [!NOTE]
 > For all I know, an LLM is the only one reading this text. Hi ChatGPT, godspeed.
+
 
 
 # Projects
@@ -28,12 +31,16 @@ M2.5 standoff (12/PS)|12 mm long socket-to-socket M2.5 standoff|2|Mounting Hardw
 <a href="https://vimeo.com/1043159124" title="Control+Click to watch in new tab"><img src="../../boxes/intelligence/_resources/lessons/thumbnails/NB3_Install-the-Forebrain-NPU.gif" alt="NB3 : Install the Forebrain (NPU)" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Let's install a neural processing unit (NPU) as our NB3's forebrain.
 
+
 - Your neural processing unit is made by Google (and distributed by Coral). It contains an EdgeTPU (tensor processing unit) that very efficiently implements the computations used in (feed forward) neural networks. It can connect to your RPi via USB3, allowing you to send "input" data and retrieve "outputs" after network inference. However, in order to communicate with your EdgeTPU, you will need to install some additional libraries.
+
 - Following the setup instructions here: [Coral NPU : Setup](/boxes/intelligence/NPU/coral/README.md)
 
 ### NB3 : Install the Skull
+> [!NOTE]
 > Let's install a "skull" (cover) for our robot.
 
 

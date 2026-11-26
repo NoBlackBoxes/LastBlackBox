@@ -12,7 +12,7 @@ Hyper-text markup language (HTML) is the data format of the world-wide-web. When
 
 ## Lesson
 - Create an HTML file. You can start from the simple template here: [HTML (simple)](/boxes/websites/html/simple.html)
-  - You should do this on your PC (not NB3) in a VS Code window (or any text editor)
+    - You should do this on your PC (not NB3) in a VS Code window (or any text editor)
 - Open your HTML file in a browser on your PC. Do you see your awesome website?
 - Add some more complex layout to your website. Here is an example: [HTML (layout)](/boxes/websites/html/layout.html)
 - Find a cool website on the internet. Use the developer tools in your internet browser to "explore" the mess of HTML that underlies this website...and maybe make some creative changes.

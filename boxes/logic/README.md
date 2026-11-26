@@ -3,7 +3,7 @@ In this box, you will learn about logic...
 
 <details><summary><i>Materials</i></summary><p>
 
-Name|Description| # |Package|Data|Link|
+Name|Description| # |Package|Data|Supplier|
 :-------|:----------|:-----:|:-:|:--:|:--:|
 Gate (AND)|4xAND gate|1|Active Electronics|[-D-](/boxes/logic/_resources/datasheets/AND_gates.pdf)|[-L-](https://uk.farnell.com/texas-instruments/cd4081be/ic-4000-cmos-4081-dip14-18v/dp/3120147)
 Gate (OR)|4xOR gate|1|Active Electronics|[-D-](/boxes/logic/_resources/datasheets/OR_gates.pdf)|[-L-](https://uk.farnell.com/texas-instruments/cd4072be/ic-gate/dp/3120138)
@@ -12,20 +12,24 @@ Gate (XOR)|4xXOR gate|1|Active Electronics|[-D-](/boxes/logic/_resources/datashe
 
 </p></details><hr>
 
+
 ## Logic
 #### Watch this video: [Logic Gates](https://vimeo.com/1033231995)
 <p align="center">
 <a href="https://vimeo.com/1033231995" title="Control+Click to watch in new tab"><img src="../../boxes/logic/_resources/lessons/thumbnails/Logic-Gates.gif" alt="Logic Gates" width="480"/></a>
 </p>
 
+> [!NOTE]
 > The essential elements of computation (NOT, AND, OR, XOR, etc.) can be built from straight forward combinations of MOSFETs.
 
 - Design an XOR gate
 - Build an addition circuit (2-bit adder)
 - Build a priority encoder for your 2-bit ADC
 
+
 # Projects
 ### NB3 : Build an ADC (output)
+> [!NOTE]
 > Use a comparator to convert analog values into discrete levels.
 
 

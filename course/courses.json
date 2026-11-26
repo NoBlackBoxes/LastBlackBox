@@ -1,0 +1,91 @@
+{
+  "courses": [
+    {
+      "name": "Braitenberg Vehicle",
+      "engine_name": "Braitenberg",
+      "slug": "braitenberg",
+      "description": "The shortest LBB course: four sessions that take you from atoms to a sense-and-respond robot.",
+      "logo": null,
+      "generate": true,
+      "materials": false,
+      "published": true
+    },
+
+    {
+      "name": "Build a Brain",
+      "engine_name": "Build a Brain",
+      "slug": "buildabrain",
+      "description": "Eight project-driven sessions from a light sensor to a voice-activated, vision-enabled robot. The popular middle path.",
+      "logo": null,
+      "generate": true,
+      "materials": true,
+      "published": true
+    },
+
+    {
+      "name": "Bootcamp",
+      "engine_name": "Bootcamp",
+      "slug": "bootcamp",
+      "description": "A one-week bootcamp covering twenty boxes across ten morning-and-afternoon sessions, from analog electronics to computer vision.",
+      "logo": null,
+      "generate": true,
+      "materials": true,
+      "published": true
+    },
+
+    {
+      "name": "Experimental Neuroscience Bootcamp",
+      "engine_name": "Experimental Neuroscience Bootcamp",
+      "slug": "enb",
+      "description": "Experimental neuroscience course materials organised as a ten-session bootcamp.",
+      "logo": null,
+      "generate": false,
+      "materials": false,
+      "published": false
+    },
+
+    {
+      "name": "Crick Bootcamp",
+      "engine_name": "Crick",
+      "slug": "crick",
+      "description": "Five-day PhD-level intensive at the Crick Institute. Build NB3 from electrons up to a web-connected vision-and-audio robot.",
+      "logo": null,
+      "generate": true,
+      "materials": false,
+      "published": true
+    },
+
+    {
+      "name": "The Last Black Box",
+      "engine_name": "The Last Black Box",
+      "slug": "full",
+      "description": "The full reference: twenty-eight sessions covering everything from atoms to artificial intelligence. The deepest path through every box.",
+      "logo": null,
+      "generate": true,
+      "materials": true,
+      "published": true
+    },
+    
+    {
+      "name": "AI Workshops",
+      "engine_name": "AI-Workshops",
+      "slug": "ai-workshops",
+      "description": "Draft workshops covering practical audio and vision applications of AI.",
+      "logo": null,
+      "generate": false,
+      "materials": false,
+      "published": false
+    },
+
+    {
+      "name": "Build Your Own Phone",
+      "engine_name": "Build Your Own Phone",
+      "slug": "ownphone",
+      "description": "Early course material for building a phone from fundamental components.",
+      "logo": null,
+      "generate": false,
+      "materials": false,
+      "published": false
+    }
+  ]
+}

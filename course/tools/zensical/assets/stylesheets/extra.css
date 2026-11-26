@@ -1,0 +1,329 @@
+/* Last Black Box additions to Zensical's native theme.
+ *
+ * Zensical owns the page frame, typography, navigation, search,
+ * breadcrumbs, page outline and light/dark palettes.
+ *
+ * This stylesheet handles layout adjustments, video embeds,
+ * course catalogue cards, curriculum grids and course partner
+ * branding.
+ */
+
+/* --------------------------------------------------------------------------
+ * Design tokens
+ * ----------------------------------------------------------------------- */
+:root {
+  --lbb-open: #fafafa;
+  --lbb-open-hover: #f0f0f0;
+  --lbb-open-text: #111827;
+  --lbb-closed: #30343b;
+  --lbb-closed-text: #d1d5db;
+  --lbb-border: #dddddd;
+  --lbb-shadow: #0f172a2e;
+}
+
+[data-md-color-scheme="slate"] {
+  --lbb-shadow: #00000066;
+}
+
+/* --------------------------------------------------------------------------
+ * Page layout and embedded media
+ * ----------------------------------------------------------------------- */
+
+/* Use one readable content width across catalogue, course and session pages. */
+.md-content__inner,
+.md-path {
+  max-width: 40rem;
+  width: calc(100% - 2rem);
+  margin-inline: auto;
+}
+
+@media screen and (min-width: 76.25em) {
+  .md-content > .md-path {
+    margin-inline: auto 1.2rem;
+  }
+}
+
+.md-typeset .video-container {
+  width: 100%;
+  max-width: none;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+.md-typeset .video-container iframe {
+  display: block;
+  /* Override the viewport-based dimensions emitted by mkdocs-video. */
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+
+/* Keep previous/next links within the current course. */
+.md-typeset .lbb-session-nav {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 3rem 0 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-typeset .lbb-session-nav__link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  text-decoration: none;
+}
+
+.md-typeset .lbb-session-nav__link--next {
+  grid-column: 2;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.md-typeset .lbb-session-nav__direction {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* --------------------------------------------------------------------------
+ * Course catalogue
+ * ----------------------------------------------------------------------- */
+
+.md-typeset .lbb-catalogue-logo {
+  display: block;
+  width: 10rem;
+  height: 10rem;
+  max-width: 100%;
+  margin: 0 auto 1rem;
+}
+
+/* Use Zensical's native cards, with one fully clickable course per row. */
+.md-typeset .grid.cards,
+.md-typeset .grid.cards > ul {
+  grid-template-columns: 1fr;
+}
+
+.md-typeset .grid.cards.course-cards > ul > li {
+  position: relative;
+  cursor: pointer;
+  background-color: #8080800a;
+  transition: transform 140ms ease,
+              background-color 140ms ease,
+              box-shadow 140ms ease;
+}
+
+.md-typeset .grid.cards.course-cards > ul > li:hover,
+.md-typeset .grid.cards.course-cards > ul > li:focus-within {
+  transform: translateY(-3px);
+  background-color: #8080801f;
+  box-shadow: 0 8px 16px var(--lbb-shadow);
+}
+
+/* The generated title link acts as a card-sized click target. */
+.md-typeset .course-cards li a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.md-typeset .grid.cards.course-cards > ul > li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.md-typeset .course-cards li:focus-within {
+  outline: 2px solid var(--md-accent-fg-color);
+}
+
+/* --------------------------------------------------------------------------
+ * Optional course partner identity
+ * ----------------------------------------------------------------------- */
+
+/* Emitted only when a course provides site/partner.json and its logo. */
+.md-typeset .lbb-partner {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0 0 1.5rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.lbb-partner-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.lbb-secondary-logo-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.md-typeset .lbb-secondary-logo {
+  display: block;
+  width: auto;
+  height: 3rem;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+ * Course facts and curriculum grid
+ * ----------------------------------------------------------------------- */
+
+/* Facts and the box map are generated from the manifest and session tags. */
+.md-typeset .lbb-course-facts {
+  display: flex;
+  gap: 2.25rem;
+  margin: 0 0 2.5rem;
+}
+
+.lbb-course-facts > div {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.md-typeset .lbb-course-facts dd,
+.md-typeset .lbb-course-facts dt {
+  margin: 0;
+}
+
+.md-typeset .lbb-course-facts dd {
+  color: var(--md-default-fg-color);
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.md-typeset .lbb-course-facts dt {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.md-typeset .lbb-curriculum-heading {
+  margin-bottom: 1rem;
+}
+
+.md-typeset .lbb-curriculum-heading h2,
+.md-typeset .lbb-curriculum-heading p {
+  margin: 0;
+}
+
+.md-typeset .lbb-curriculum-heading p {
+  margin-top: 0.4rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-typeset .lbb-box-grid > ul:not([hidden]) {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.md-typeset div.lbb-box-grid > ul > li {
+  min-width: 0;
+  margin: 0;
+}
+
+.md-typeset .lbb-box {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  min-height: 4.75rem;
+  padding: 0.65rem 0.35rem;
+  border: 0;
+  border-radius: 0.2rem;
+  background: var(--lbb-closed);
+  color: var(--lbb-closed-text);
+  font-size: 0.65rem;
+  font-weight: 700;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.md-typeset .lbb-box-lock {
+  position: absolute;
+  top: 0.45rem;
+  left: 0.5rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  display: inline-flex;
+  opacity: 0.72;
+}
+
+.md-typeset .lbb-box-lock svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Only included boxes are links and receive interactive styling. */
+.md-typeset .lbb-box-grid a.lbb-box {
+  background: var(--lbb-open);
+  color: var(--lbb-open-text);
+  border: 1px solid var(--lbb-border);
+  text-decoration: none;
+  transition: transform 140ms ease,
+              background-color 140ms ease,
+              box-shadow 140ms ease;
+}
+
+.md-typeset .lbb-box-grid a.lbb-box:hover,
+.md-typeset .lbb-box-grid a.lbb-box:focus-visible {
+  transform: translateY(-3px);
+  background: var(--lbb-open-hover);
+  color: var(--lbb-open-text);
+  box-shadow: 0 8px 16px var(--lbb-shadow);
+}
+
+.md-typeset .lbb-box-grid a.lbb-box:focus-visible {
+  outline: 0.15rem solid var(--md-accent-fg-color);
+  outline-offset: 0.15rem;
+}
+
+/* --------------------------------------------------------------------------
+ * Responsive and accessibility adjustments
+ * ----------------------------------------------------------------------- */
+
+@media (max-width: 76rem) {
+  .md-typeset .lbb-box-grid > ul:not([hidden]) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 38rem) {
+  .md-typeset .lbb-box {
+    min-height: 0;
+    font-size: 0.55rem;
+    padding-inline: 0.15rem;
+  }
+
+  .md-typeset .lbb-course-facts {
+    gap: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .md-typeset .lbb-box-grid a.lbb-box,
+  .md-typeset .grid.cards.course-cards > ul > li {
+    transition: none;
+  }
+
+  .md-typeset .lbb-box-grid a.lbb-box:hover,
+  .md-typeset .lbb-box-grid a.lbb-box:focus-visible,
+  .md-typeset .grid.cards.course-cards > ul > li:hover,
+  .md-typeset .grid.cards.course-cards > ul > li:focus-within {
+    transform: none;
+  }
+}

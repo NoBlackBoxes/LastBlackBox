@@ -54,7 +54,7 @@ class Session:
 
         # Load lessons
         self.lessons = []
-        lesson_boxes = set()
+        lesson_boxes = []
         lesson_materials = []
         for lesson_tag in lesson_tags:
             tag_content = lesson_tag[1:-1].split(":")
@@ -64,10 +64,11 @@ class Session:
             lesson_box = tag_content[0].lower()
             lesson_name = tag_content[1]
             lesson_path = f"{Config.boxes_path}/{lesson_box}/_resources/lessons/{lesson_name}.md"
-            lesson_text = Utilities.read_clean_text(lesson_path)
+            lesson_text = Utilities.read_markdown(lesson_path)
             lesson = Lesson.Lesson(self, lesson_box, lesson_text)
             self.lessons.append(lesson)
-            lesson_boxes.add(lesson_box)
+            if lesson_box not in lesson_boxes:
+                lesson_boxes.append(lesson_box)
 
             # Does lesson require additional materials?
             lesson_materials_path = f"{lesson_path[:-3]}.csv"
@@ -103,10 +104,20 @@ class Session:
 
         # Render Materials List
         output.append(f"<details><summary><i>Materials</i></summary><p>\n\n")
-        output.append("Name|Description| # |Package|Data|Link|\n")
+
+        output.append("Name|Description| # |Package|Data|Supplier|\n")
         output.append(":-------|:----------|:-----:|:-:|:--:|:--:|\n")
         for m in self.materials:
-            output.append(f"{m.name}|{m.description}|{m.quantity}|{m.package}|[-D-]({m.datasheet})|[-L-]({m.supplier})\n")
+            if m.supplier.startswith(("https://", "http://")):
+                supplier = f"[-L-]({m.supplier})"
+            else:
+                supplier = m.supplier or "—"
+
+            output.append(
+                f"{m.name}|{m.description}|{m.quantity}|{m.package}|"
+                f"[-D-]({m.datasheet})|{supplier}\n"
+            )
+            
         output.append(f"\n</p></details><hr>\n\n")
 
         # Render Template (with lesson text insertion)

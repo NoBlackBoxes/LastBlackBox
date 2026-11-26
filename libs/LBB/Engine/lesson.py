@@ -43,11 +43,11 @@ class Lesson:
         self.description = text[line_count]
         line_count += 1
 
-        # Extract video
-        video_url = text[line_count].split('(')[1][:-1]
+        # Extract video from its heading; blank lines may precede it.
+        video_line = Utilities.find_line(text, "## [Video]")
+        video_url = text[video_line].split('(')[1][:-1]
         if video_url != '':
             self.video = Video.Video(self, f"[{self.name}]({video_url})")
-        line_count += 1
 
         # Find lesson section
         line_count = Utilities.find_line(text, "## Lesson")
@@ -78,6 +78,8 @@ class Lesson:
             output.append(f"{self.video.render()}\n")
         else:
             output.append(f"### {self.name}\n")
+        # The lesson summary is a portable GitHub/Zensical note callout.
+        output.append("> [!NOTE]\n")
         output.append(f"> {self.description}\n\n")
         for line in self.text:
             output.append(line + '\n')

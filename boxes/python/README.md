@@ -3,10 +3,11 @@ In this box, you will learn about python...
 
 <details><summary><i>Materials</i></summary><p>
 
-Name|Description| # |Package|Data|Link|
+Name|Description| # |Package|Data|Supplier|
 :-------|:----------|:-----:|:-:|:--:|:--:|
 
 </p></details><hr>
+
 
 ## Python
 #### Watch this video: [Introducing the Interpreter](https://vimeo.com/1042618092)
@@ -14,12 +15,16 @@ Name|Description| # |Package|Data|Link|
 <a href="https://vimeo.com/1042618092" title="Control+Click to watch in new tab"><img src="../../boxes/python/_resources/lessons/thumbnails/Introducing-the-Interpreter.gif" alt="Introducing the Interpreter" width="480"/></a>
 </p>
 
+> [!NOTE]
 > What is Python? Where is it? How does it work? How can it work for you?
+
 
 - **TASK**: Say "hello world" in Python
     - Print the words "Hello World" on your terminal screen
     - Print the words "Hello World" on your terminal screen many, many times
     - Print the words "Hello World for the {Nth} time" on your terminal screen, where "Nth" reports the iteration count, i.e. "1", "2", "3"...or (*bonus task*) "1st", "2nd", "3rd", etc.
+
+> [!TIP]
 > You should see something like "Hello World for the 1st time", "Hello World for the 2nd time", etc. printed line by line in your terminal screen.
 
 #### Watch this video: [Virtual Environments](https://vimeo.com/1042637566)
@@ -27,11 +32,16 @@ Name|Description| # |Package|Data|Link|
 <a href="https://vimeo.com/1042637566" title="Control+Click to watch in new tab"><img src="../../boxes/python/_resources/lessons/thumbnails/Virtual-Environments.gif" alt="Virtual Environments" width="480"/></a>
 </p>
 
+> [!NOTE]
 > We will next create a Python **virtual environment** on our NB3 that will isolate the specific Python packages we require for the course from the Python packages used by the Raspberry Pi's operating system.
+
 
 - **TASK**: Create a "virtual environment" called LBB
     - Follow the instructions here: [virtual environments](/boxes/python/virtual_environments/README.md)
+
+> [!TIP]
 > You should now have a virtual environment activated (and installed in the folder "_tmp/LBB").
+
 - **TASK**: Add an "Alias" to make it easy to activate your "virtual environment" from the terminal.
 - *code*
 ```bash
@@ -39,18 +49,29 @@ cd ${HOME}/NoBlackBoxes/LastBlackBox/boxes/linux/shell
 cp .bashrc ${HOME}/.
 source ${HOME}/.bashrc
 ```
+
 - Follow the complete explanation here: [Linux Shell](/boxes/linux/shell/README.md)
+
+> [!TIP]
 > You should now be able to activate the LBB environment by typing "Activate" from anywhere in the terminal.
+
 - **TASK**: Install some useful packages using PIP
     - Install numpy
     - Install matplotlib
     - Make a cool plot and save it to an image file
+
+> [!TIP]
 > You should now hav an image of your plot saved, which you can open and view inside VS code.
+
 
 # Projects
 ### NB3 : Playing With Python
+> [!NOTE]
 > Let's see what Python can do...and get used to what it "feels like" to do stuff with Python.
 
+
 - **TASK**: Let's make some fun things using Python
+
+> [!TIP]
 > You should have made something fun.
 

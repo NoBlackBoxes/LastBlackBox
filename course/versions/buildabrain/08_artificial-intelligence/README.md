@@ -3,13 +3,13 @@ What is intelligence? Can we create it in a machine? Can you create it in your *
 
 <details><summary><i>Materials</i></summary><p>
 
-Name|Description| # |Package|Data|Link|
+Name|Description| # |Package|Data|Supplier|
 :-------|:----------|:-----:|:-:|:--:|:--:|
-NB3 Ear|I2S mems microphone breakout board|2|Circuit Boards|[-D-](/boxes/audio/NB3_ear)|[-L-](VK)
-NB3 Mouth|I2S DAC-AMP breakout board|1|Circuit Boards|[-D-](/boxes/audio/NB3_mouth)|[-L-](VK)
+NB3 Ear|I2S mems microphone breakout board|2|Circuit Boards|[-D-](/boxes/audio/NB3_ear)|VK
+NB3 Mouth|I2S DAC-AMP breakout board|1|Circuit Boards|[-D-](/boxes/audio/NB3_mouth)|VK
 Speaker (Hi-Fi)|3 Watt 4 Ohm with Dupont 2.54 mm socket (High Fidelity: 2831/3128)|1|Large (100)|[-D-](/boxes/audio/_resources/datasheets/3128_3W_4Ohm.jpg)|[-L-](https://www.amazon.co.uk/gp/product/B0D9QXW5FF)
-Speaker Mount|Custom laser cut mount for speaker|1|Acrylic Mounts|[-D-](/boxes/audio/-)|[-L-](VK)
-Speaker Frame|Custom laser cut frame for speaker|1|Acrylic Mounts|[-D-](/boxes/audio/-)|[-L-](VK)
+Speaker Mount|Custom laser cut mount for speaker|1|Acrylic Mounts|[-D-](/boxes/audio/-)|VK
+Speaker Frame|Custom laser cut frame for speaker|1|Acrylic Mounts|[-D-](/boxes/audio/-)|VK
 M3 standoff (15/PS)|15 mm long plug-to-socket M3 standoff|2|Mounting Hardware|[-D-](/boxes/audio/-)|[-L-](https://uk.farnell.com/ettinger/05-13-151/spacer-m3x15-vzk/dp/1466726)
 M3 nut (square)|square M3 nut 1.8 mm thick|2|Mounting Hardware|[-D-](/boxes/audio/-)|[-L-](https://www.accu.co.uk/flat-square-nuts/21326-HFSN-M3-A2)
 M3 bolt (6)|6 mm long M3 bolt|2|Mounting Hardware|[-D-](/boxes/audio/-)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/500113-SPP-M3-6-ST-BZP)
@@ -18,8 +18,8 @@ M2.5 nut|regular M2.5 nut|2|Mounting Hardware|[-D-](/boxes/power/-)|[-L-](https:
 M2 bolt (8)|8 mm long M2 bolt|2|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/500101-SPP-M2-8-ST-BZP)
 M2 nut|regular M2 nut|2|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www.accu.co.uk/hexagon-nuts/456429-HPN-M2-C8-Z)
 Camera (RPi v3)|RPi color camera with auto-focus (version 3)|1|Medium (011)|[-D-](/boxes/vision/_resources/datasheets/rpi_camera_v3.pdf)|[-L-](https://uk.farnell.com/raspberry-pi/sc0872/rpi-camera-mod-3-standard-lens/dp/4132318)
-NB3 Camera Mount|Custom laser cut mount for RPi camera|1|Acrylic Mounts|[-D-](/boxes/vision/NB3_camera_mount)|[-L-](VK)
-NB3 Cortex Mount|Custom laser cut holder for NPU|1|Acrylic Mounts|[-D-](/boxes/vision/NB3_cortex_mount)|[-L-](VK)
+NB3 Camera Mount|Custom laser cut mount for RPi camera|1|Acrylic Mounts|[-D-](/boxes/vision/NB3_camera_mount)|VK
+NB3 Cortex Mount|Custom laser cut holder for NPU|1|Acrylic Mounts|[-D-](/boxes/vision/NB3_cortex_mount)|VK
 M2.5 bolt (6)|6 mm long M2.5 bolt|4|Mounting Hardware|[-D-](/boxes/robotics/)|[-L-](https://www.accu.co.uk/pozi-pan-head-screws/9255-SPP-M2-5-6-A2)
 M2.5 standoff (20/PS)|20 mm long plug-to-socket M2.5 standoff|4|Mounting Hardware|[-D-](/boxes/vision/)|[-L-](https://uk.farnell.com/wurth-elektronik/971200151/standoff-hex-male-female-20mm/dp/2884418)
 M3 nut (square)|square M3 nut 1.8 mm thick|1|Mounting Hardware|[-D-](/boxes/audio/-)|[-L-](https://www.accu.co.uk/flat-square-nuts/21326-HFSN-M3-A2)
@@ -33,12 +33,14 @@ M3 nut (square)|square M3 nut 1.8 mm thick|4|Mounting Hardware|[-D-](/boxes/audi
 
 </p></details><hr>
 
+
 ## Audio
 #### Watch this video: [Microphones, Speakers, and I2S](https://vimeo.com/1136576333)
 <p align="center">
 <a href="https://vimeo.com/1136576333" title="Control+Click to watch in new tab"><img src="../../../../boxes/audio/_resources/lessons/thumbnails/Microphones-Speakers-and-I2S.gif" alt="Microphones, Speakers, and I2S" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Here we introduce the NB3's audio system: MEMs-based stereo microphones (Ears), a Class D digital amplifier connected to a "Hi-Fi" speaker (Mouth), and a sound communication standard called I2S (Inter-integrated Circuit Sound) that the Raspberry Pi will use to talk to these audio devices.
 
 
@@ -47,6 +49,7 @@ M3 nut (square)|square M3 nut 1.8 mm thick|4|Mounting Hardware|[-D-](/boxes/audi
 <a href="https://vimeo.com/1042781850" title="Control+Click to watch in new tab"><img src="../../../../boxes/audio/_resources/lessons/thumbnails/NB3_Build-and-Install-the-Linux-I2S-Driver.gif" alt="NB3 : Build and Install the Linux I2S Driver" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Let's build (compile) and install the Linux device driver for our NB3's sound card. This software module is required to access the NB3's ears (microphone) and mouth (speaker).
 
 
@@ -55,6 +58,7 @@ M3 nut (square)|square M3 nut 1.8 mm thick|4|Mounting Hardware|[-D-](/boxes/audi
 <a href="https://vimeo.com/1042943195" title="Control+Click to watch in new tab"><img src="../../../../boxes/audio/_resources/lessons/thumbnails/NB3_Install-the-Ears.gif" alt="NB3 : Install the Ears" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Let's add some ears to your NB3.
 
 
@@ -63,6 +67,7 @@ M3 nut (square)|square M3 nut 1.8 mm thick|4|Mounting Hardware|[-D-](/boxes/audi
 <a href="https://vimeo.com/1042947561" title="Control+Click to watch in new tab"><img src="../../../../boxes/audio/_resources/lessons/thumbnails/NB3_Install-the-Mouth.gif" alt="NB3 : Install the Mouth" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Let's add a mouth to your NB3.
 
 
@@ -71,6 +76,7 @@ M3 nut (square)|square M3 nut 1.8 mm thick|4|Mounting Hardware|[-D-](/boxes/audi
 <a href="https://vimeo.com/manage/videos/1139975157" title="Control+Click to watch in new tab"><img src="../../../../boxes/audio/_resources/lessons/thumbnails/Signal-Processing.gif" alt="Signal Processing" width="480"/></a>
 </p>
 
+> [!NOTE]
 > One-dimensional (1D) signals are common in the world. They often arise as time series (a sequence of measurements made at a regular "sample rate"). Here we will explore techniques to process a common 1D signal...**sound**. We will both measure and generate different sounds. We will develop tools in Python to compare their amplitude (volume), frequency content, and visualize the "spectrogram" of different spoken words (e.g. "Go" vs "Stop").
 
 - Explore, test, and expand upon these Python examples for processing signals measured from the NB3's microphones (ears): [Measurement](/boxes/audio/signal-processing/python/measurement/)
@@ -84,12 +90,14 @@ M3 nut (square)|square M3 nut 1.8 mm thick|4|Mounting Hardware|[-D-](/boxes/audi
 sudo apt install espeak-ng
 ```
 
+
 ## Vision
 #### Watch this video: [Light, Cameras, Noise](https://vimeo.com/manage/videos/1141367902)
 <p align="center">
 <a href="https://vimeo.com/manage/videos/1141367902" title="Control+Click to watch in new tab"><img src="../../../../boxes/vision/_resources/lessons/thumbnails/Light-Cameras-Noise.gif" alt="Light, Cameras, Noise" width="480"/></a>
 </p>
 
+> [!NOTE]
 > We start with a recap about light, measuring analog signals with computers, and then describe how a modern camera sensor is built. We then introduce the NB3's Eye and conclude with a discussion of the sources of noise that all cameras encounter when trying to *image* the real world.
 
 
@@ -98,6 +106,7 @@ sudo apt install espeak-ng
 <a href="https://vimeo.com/1042945461" title="Control+Click to watch in new tab"><img src="../../../../boxes/vision/_resources/lessons/thumbnails/NB3_Install-the-Eye.gif" alt="NB3 : Install the Eye" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Let's install a camera on your NB3.
 
 - Test your camera with the following command
@@ -113,6 +122,7 @@ rpicam-still -o my_test.png
 <a href="https://vimeo.com/manage/videos/1141582696" title="Control+Click to watch in new tab"><img src="../../../../boxes/vision/_resources/lessons/thumbnails/NB3_Streaming-Images.gif" alt="NB3 : Streaming Images" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Let's stream live images from your NB3's camera to any web browser.
 
 
@@ -121,7 +131,9 @@ rpicam-still -o my_test.png
 <a href="https://vimeo.com/manage/videos/1144050570" title="Control+Click to watch in new tab"><img src="../../../../boxes/vision/_resources/lessons/thumbnails/Image-Processing.gif" alt="Image-Processing" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Old-school (classical) techniques for processing two-dimensional data (2D).
+
 
 - Install python opencv
 - *code*
@@ -129,14 +141,19 @@ rpicam-still -o my_test.png
 pip install opencv-python
 ```
 
+
 ## Learning
 ### NB3 : Clicker Training
+> [!NOTE]
 > If a *click* is reinforcing, then training complex behaviour becomes far simpler.
+
 
 
 ## Intelligence
 ### Large Language Models
+> [!NOTE]
 > For all I know, an LLM is the only one reading this text. Hi ChatGPT, godspeed.
+
 
 
 # Project
@@ -145,8 +162,11 @@ pip install opencv-python
 <a href="https://vimeo.com/1043159124" title="Control+Click to watch in new tab"><img src="../../../../boxes/intelligence/_resources/lessons/thumbnails/NB3_Install-the-Forebrain-NPU.gif" alt="NB3 : Install the Forebrain (NPU)" width="480"/></a>
 </p>
 
+> [!NOTE]
 > Let's install a neural processing unit (NPU) as our NB3's forebrain.
 
+
 - Your neural processing unit is made by Google (and distributed by Coral). It contains an EdgeTPU (tensor processing unit) that very efficiently implements the computations used in (feed forward) neural networks. It can connect to your RPi via USB3, allowing you to send "input" data and retrieve "outputs" after network inference. However, in order to communicate with your EdgeTPU, you will need to install some additional libraries.
+
 - Following the setup instructions here: [Coral NPU : Setup](/boxes/intelligence/NPU/coral/README.md)
 
