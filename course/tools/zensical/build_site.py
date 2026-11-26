@@ -167,8 +167,12 @@ def _render_materials_tables(text: str) -> str:
     """Render engine-owned materials blocks as native collapsible content."""
     def replace(match: re.Match) -> str:
         table = match.group("table").strip()
-        indented_table = "\n".join(f"    {line}" for line in table.splitlines())
-        return f'??? abstract "Materials"\n\n{indented_table}'
+        return (
+            '<details markdown="1">\n'
+            '<summary>Materials</summary>\n\n'
+            f'{table}\n\n'
+            '</details>'
+        )
 
     return _MATERIALS_BLOCK_RE.sub(replace, text)
 
