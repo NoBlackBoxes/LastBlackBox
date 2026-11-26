@@ -183,8 +183,8 @@ filename without `.md`.
 6. Optionally add `index.md` and `site/` metadata for the website landing page,
    as described in the [Zensical guide](../zensical/README.md).
 7. Set `generate` to `true` for the course in `course/courses.json`, then run
-   `.venv/bin/python course/tools/engine/generate_courses.py` from the repository
-   root. Run `.venv/bin/python course/tools/build_all.py` to validate the full
+   `uv run --locked python course/tools/engine/generate_courses.py` from the
+   repository root. Run `uv run --locked python course/tools/build_all.py` to validate the full
    website as well.
 8. Review `git diff`. Generated session and box READMEs are expected outputs;
    confirm that no authored content was lost or duplicated.

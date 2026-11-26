@@ -7,7 +7,7 @@ Scripts for generating LBB course content, websites, designs, materials and medi
 [`build_all.py`](build_all.py) is the CI/CD entry point:
 
 ```bash
-.venv/bin/python course/tools/build_all.py
+uv run --locked python course/tools/build_all.py
 ```
 
 It regenerates enabled course content and builds one Zensical website containing the root selector and every published course. Course selection and publishing are controlled by the central [course manifest](../courses.json).

@@ -3,7 +3,7 @@
 Rebuild every course README and the unified Zensical website.
 
 Usage:
-    .venv/bin/python course/tools/build_all.py
+    uv run --locked python course/tools/build_all.py
 
 Stages:
     0. Run the LBB engine, regenerating all

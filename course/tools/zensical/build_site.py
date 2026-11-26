@@ -2,7 +2,7 @@
 """Build the unified Last Black Box Zensical site.
 
 Usage:
-    .venv/bin/python course/tools/zensical/build_site.py
+    uv run --locked python course/tools/zensical/build_site.py
 
 Call tree:
     module execution
@@ -644,9 +644,8 @@ def _run_zensical(staging: pathlib.Path, output: pathlib.Path) -> None:
     )
     if executable is None:
         raise SystemExit(
-            "Zensical is not installed. Create .venv with Python 3.11 or "
-            "later and install course/tools/zensical/requirements.txt; see "
-            "course/tools/zensical/README.md under 'Local setup'."
+            "Zensical is not installed in the project environment. Run "
+            "'uv sync --locked' from the repository root."
         )
     cmd = [
         executable,

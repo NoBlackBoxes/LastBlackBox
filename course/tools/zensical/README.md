@@ -127,6 +127,9 @@ authority for generated session READMEs and for the website's open-box map.
 | `course/versions/<course-slug>/index.md` | Optional authored override | Course author; assembled by `build_site.py` | Course landing-page body. |
 | `course/versions/<course-slug>/site/` | Optional authored assets | Course author; staged by `build_site.py` | Partner logo and metadata. |
 | `course/courses.json` | Authored configuration | Maintainer | Course registration, generation and publishing. |
+| `pyproject.toml` | Authored configuration | Maintainer | Direct website-build dependencies and supported Python versions. |
+| `.python-version` | Authored configuration | Maintainer | Python version used by uv locally and in CI. |
+| `uv.lock` | Generated and committed | uv | Exact cross-platform dependency versions for reproducible builds. |
 | `course/tools/zensical/assets/` | Shared authored assets | Maintainer; copied by `build_site.py` | Small CSS additions for readable layout, videos and LBB-specific components. |
 | `course/tools/zensical/catalogue/` | Optional authored assets | Maintainer; staged by `build_site.py` | Per-course logos used by the root catalogue. |
 | `course/tools/zensical/.site-staging/` | Generated temporary content | `build_site.py` and Zensical | Complete Zensical input plus the initial output under `.site-staging/site/`. |
@@ -134,45 +137,28 @@ authority for generated session READMEs and for the website's open-box map.
 
 ## Local setup
 
-Run commands from the repository root with Python 3.11 or later. Zensical is
-pinned in [`requirements.txt`](requirements.txt).
-
-On Linux or macOS:
+Run commands from the repository root. Install
+[uv](https://docs.astral.sh/uv/getting-started/installation/), then create the
+locked Python 3.11 environment:
 
 ```bash
-python3 -m venv .venv
-.venv/bin/python -m pip install -r course/tools/zensical/requirements.txt
+uv sync --locked
 ```
 
-On Windows PowerShell:
-
-```powershell
-py -3.11 -m venv .venv
-.venv\Scripts\python -m pip install -r course\tools\zensical\requirements.txt
-```
+The same command works on Linux, macOS and Windows. `pyproject.toml` declares
+the direct dependency and supported Python range; `.python-version` selects
+Python 3.11; and `uv.lock` fixes the complete rendering environment.
 
 Build all generated course content and every published website:
 
 ```bash
-.venv/bin/python course/tools/build_all.py
-```
-
-On Windows, run the equivalent command with the virtual environment's Python:
-
-```powershell
-.venv\Scripts\python course\tools\build_all.py
+uv run --locked python course/tools/build_all.py
 ```
 
 Rebuild the website without regenerating the engine-owned READMEs:
 
 ```bash
-.venv/bin/python course/tools/zensical/build_site.py
-```
-
-On Windows:
-
-```powershell
-.venv\Scripts\python course\tools\zensical\build_site.py
+uv run --locked python course/tools/zensical/build_site.py
 ```
 
 Plain `zensical build` from the repository root fails because there is
@@ -185,16 +171,8 @@ For debugging an already staged project, this lower-level command works after
 `build_site.py` has created the staging directory:
 
 ```bash
-.venv/bin/zensical build \
+uv run --locked zensical build \
   --config-file course/tools/zensical/.site-staging/zensical.toml \
-  --clean --strict
-```
-
-On Windows PowerShell:
-
-```powershell
-.venv\Scripts\zensical.exe build `
-  --config-file course\tools\zensical\.site-staging\zensical.toml `
   --clean --strict
 ```
 
@@ -206,13 +184,7 @@ commands above perform those steps and produce the deployable artifact.
 Preview the complete generated site:
 
 ```bash
-.venv/bin/python -m http.server -d docs 8000
-```
-
-On Windows:
-
-```powershell
-.venv\Scripts\python -m http.server -d docs 8000
+uv run --locked python -m http.server -d docs 8000
 ```
 
 Then open `http://localhost:8000/`. The server is needed because search and
@@ -235,7 +207,7 @@ Edit the template or reusable lesson, never the generated session README. After
 editing, regenerate content with:
 
 ```bash
-.venv/bin/python course/tools/engine/generate_courses.py
+uv run --locked python course/tools/engine/generate_courses.py
 ```
 
 GitHub-style callouts are supported unchanged by GitHub and Zensical:
@@ -335,9 +307,9 @@ breadcrumb tree, search index and sitemap while preserving the existing
 5. bundles repository images and rewrites non-image repository links to GitHub;
 6. converts Vimeo thumbnail blocks to native video embeds;
 7. writes the selector and crawler configuration;
-8. uses the pinned Zensical version in strict mode to generate the site, search
-   index and sitemap under `.site-staging/site/`, then replaces `docs/` with
-   that output.
+8. uses the locked Zensical environment in strict mode to generate the site,
+   search index and sitemap under `.site-staging/site/`, then replaces `docs/`
+   with that output.
 
 The generated `zensical.toml` deliberately uses Zensical's native modern theme,
 navigation, breadcrumbs, search, page outline and palette. There are no custom
@@ -346,7 +318,7 @@ JavaScript files or template overrides.
 ## CI and deployment
 
 [`deploy-docs.yml`](../../../.github/workflows/deploy-docs.yml) installs the
-pinned requirements and runs `build_all.py`. Pull requests build and validate
+locked uv environment and runs `build_all.py`. Pull requests build and validate
 the complete site without deploying. Pushes to `master` and, temporarily, the
 `course-site-zensical` preview branch publish `docs/` to GitHub Pages.
 The workflow uploads `docs/` as the Pages artifact; `.site-staging/` is never

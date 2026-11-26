@@ -3,7 +3,7 @@
 Generate course session and black-box READMEs from authored content.
 
 Usage:
-    .venv/bin/python course/tools/engine/generate_courses.py
+    uv run --locked python course/tools/engine/generate_courses.py
 
 Call tree:
     module execution
