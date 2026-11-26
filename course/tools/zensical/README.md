@@ -296,9 +296,10 @@ metadata and writes the markup at build time.
 
 `build_site.py` generates one Zensical project containing the root selector and
 every published course. This gives the complete site one navigation hierarchy,
-breadcrumb tree, search index and sitemap while preserving the existing
-`/<course-slug>/` and
-`/<course-slug>/sessions/<NN>_<session-slug>/` URLs. It:
+breadcrumb tree, search index and sitemap. The root and existing
+`/<course-slug>/` course URLs are unchanged. Session pages now use
+`/<course-slug>/sessions/<NN>_<session-slug>/`; the former Docfx URLs ending in
+`/README.html` are not preserved or redirected. The build:
 
 1. discovers numerically prefixed session directories;
 2. generates the complete Zensical navigation from their template titles;
@@ -312,8 +313,10 @@ breadcrumb tree, search index and sitemap while preserving the existing
    with that output.
 
 The generated `zensical.toml` deliberately uses Zensical's native modern theme,
-navigation, breadcrumbs, search, page outline and palette. There are no custom
-JavaScript files or template overrides.
+navigation, breadcrumbs, search, page outline, palette and sitemap generation.
+The shared `assets/stylesheets/extra.css` provides the remaining LBB-specific
+content width, video sizing, catalogue cards, partner branding and curriculum
+grid. There are no custom JavaScript files or page-template overrides.
 
 ## CI and deployment
 
