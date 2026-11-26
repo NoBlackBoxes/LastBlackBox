@@ -48,6 +48,7 @@ Resistor (470)|470 &Omega;/0.25 W|4|Passive Electronics|[-D-](/boxes/electrons/_
 
 - **TASK**: Play with your brushed DC motor. Spin it forwards *and* backwards...
     - *Challenge*: What are some ways you could change the *speed* with which your motor spins?
+
 > [!TIP]
 > Switching the direction that current flows through your motor will change the direction it spins.
 
@@ -72,6 +73,7 @@ Resistor (470)|470 &Omega;/0.25 W|4|Passive Electronics|[-D-](/boxes/electrons/_
 
 
 - **TASK**: Illuminate a light-emitting diode (LED). *Remember the current limiting resistor!*
+
 > [!TIP]
 > The LED should only illuminate when installed in one orientation. If you flip it around, then the "diode" of the LED will prevent current flowing through the circuit.
 
@@ -86,6 +88,7 @@ Resistor (470)|470 &Omega;/0.25 W|4|Passive Electronics|[-D-](/boxes/electrons/_
 
 - **TASK**: Measure the threshold voltage that opens your MOSFET gate. Compare it to the "expected" range listed in the
     - The datasheet for your MOSFET here [IRL510](/boxes/transistors/_resources/datasheets/IRL510.pdf)
+
 > [!TIP]
 > The threshold for when current starts to flow through your MOSFET ("Gate-Source Threshold Voltage") should be between 1 to 3 vols for the IRL510. However, the amount of current it allows will rise rapidly up to (and beyond) 5 Volts for the IRL510. Check the datasheet (Figure 3).
 
@@ -102,6 +105,7 @@ Resistor (470)|470 &Omega;/0.25 W|4|Passive Electronics|[-D-](/boxes/electrons/_
 
 - **TASK**: Use a MOSFET transistor to control how much current is flowing through your motor and gate the MOSFET with the output voltage from your light sensor...creating a motor that spins when the light is **ON** and stops when the light is **OFF**, or the other way around.
 - *Hint*: Use the following circuit as a guide: [MOSFET driver:400](/boxes/transistors/_resources/images/MOSFET_motor_driver.png)
+
 > [!TIP]
 > Your motor should change how fast it spins when you change how much light hits the LDR.
 

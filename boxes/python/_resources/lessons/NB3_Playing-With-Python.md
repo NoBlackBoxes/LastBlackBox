@@ -8,5 +8,6 @@ Let's see what Python can do...and get used to what it "feels like" to do stuff 
 ## Lesson
 
 - **TASK**: Let's make some fun things using Python
+
 > [!TIP]
 > You should have made something fun.

@@ -11,5 +11,6 @@ Let's install a rechargeable NiMH battery pack on our NB3.
 ## Lesson
 
 - **TASK**: Add a NiMH rechargeable 9.6 volt battery pack to your NB3.
+
 > [!TIP]
 > You should now be able to power and control your NB3 autonomously (without any cables).

@@ -22,6 +22,7 @@ DC Brushed Motor|6V Brushed DC motor|1|Large (100)|[-D-](/boxes/motors/)|[-L-](h
 
 - **TASK**: Play with your brushed DC motor. Spin it forwards *and* backwards...
     - *Challenge*: What are some ways you could change the *speed* with which your motor spins?
+
 > [!TIP]
 > Switching the direction that current flows through your motor will change the direction it spins.
 

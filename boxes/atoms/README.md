@@ -21,6 +21,7 @@ Periodic Table|Periodic Table Card|1|Body (000)|[-D-](/boxes/atoms/card)|VK
 
 
 - **TASK**: Draw your favorite atom in the "classical" style
+
 > [!TIP]
 > You should have the appropriate number of electrons in each orbital.
 

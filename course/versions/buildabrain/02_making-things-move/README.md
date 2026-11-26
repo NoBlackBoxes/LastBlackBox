@@ -46,6 +46,7 @@ Stereo Plug Terminal|3.5 mm plug to screw terminal|2|Auxiliary|[-D-](/boxes/magn
 
 - **TASK**: Play with your brushed DC motor. Spin it forwards *and* backwards...
     - *Challenge*: What are some ways you could change the *speed* with which your motor spins?
+
 > [!TIP]
 > Switching the direction that current flows through your motor will change the direction it spins.
 

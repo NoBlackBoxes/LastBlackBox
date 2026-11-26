@@ -27,6 +27,7 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 
 
 - **TASK**: Develop a multi-tasking "scheduling" program for your microcontroller.
+
 > [!TIP]
 > Changing the timescale of one task should not affect the other.
 
@@ -41,6 +42,7 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 
 - **TASK**: Install the Linux-based Raspberry Pi OS on your NB3
     - Follow these [RPiOS installation instructions](/boxes/systems/rpios/README.md)
+
 > [!TIP]
 > Booted!
 
@@ -55,6 +57,7 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 
 - **TASK**: Mount a Raspberry Pi on your robot (and connect its power inputs using your *shortest* jumper cables, 2x5V and 2x0V from the NB3, to the correct GPIO pins on the RPi...please *double-check* the pin numbers)
     - This pinout of the Raspberry Pi GPIO might be useful: [Raspberry Pi GPIO](/boxes/systems/_resources/images/rpi_GPIO_pinout.png)
+
 > [!TIP]
 > A powered and blinking RPi midbrain.
 
@@ -69,6 +72,7 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 
 - **TASK**: Install the Linux-based Raspberry Pi OS on your NB3
     - Follow these [RPiOS installation instructions](/boxes/systems/rpios/README.md)
+
 > [!TIP]
 > Booted!
 
@@ -84,6 +88,7 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 - **TASK**: Connect to your NB3 via WiFi
     - Follow these instruction [Connecting to RPi](/boxes/systems/connecting/README.md)
     - We currently recommend setting up a UART connection to your RPi for debugging when things go wrong. It is a few extra steps, but it can save you days! [Connecting to RPi via UART](/boxes/systems/connecting/uart/README.md)
+
 > [!TIP]
 > Connected!
 

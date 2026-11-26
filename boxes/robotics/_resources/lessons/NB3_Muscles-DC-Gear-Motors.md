@@ -10,5 +10,6 @@ Let's build your robot's movement system (using brushed DC gear motors).
 ## Lesson
 
 - **TASK**: Mount the DC gear motors and wheels to your NB3.
+
 > [!TIP]
 > The mounted DC gear motors should look like this.

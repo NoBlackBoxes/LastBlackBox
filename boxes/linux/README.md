@@ -20,6 +20,7 @@ Name|Description| # |Package|Data|Supplier|
 
 
 - **TASK**: Explore Linux. Spend any extra time you have fiddling, playing with the UNIX approach to controlling a computer. Create some folders. Edit some files.
+
 > [!TIP]
 > You should see this in the command line.
 
@@ -42,9 +43,12 @@ Name|Description| # |Package|Data|Supplier|
 
 
 - **TASK**: "Clone" (copy) all of the contents in the LastBlackBox GitHub repository directly to your NB3's midbrain. **It is very important that you clone the LBB repo to a specific folder ("NoBlackBoxes") in your NB3's home directory**.
+
 > [!NOTE]
 > *Why?* Most of the code examples assume that the repo is stored in this location. If you prefer to put it somewhere else, then you must be comfortable modifying the "repo root" path used in the examples.
- - *code*
+
+- *code*
+
 ```bash
 cd $HOME            # Navigate to your "Home" directory
 mkdir NoBlackBoxes  # Create NoBlackBoxes directory

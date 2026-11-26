@@ -23,6 +23,7 @@ Name|Description| # |Package|Data|Supplier|
     - Print the words "Hello World" on your terminal screen
     - Print the words "Hello World" on your terminal screen many, many times
     - Print the words "Hello World for the {Nth} time" on your terminal screen, where "Nth" reports the iteration count, i.e. "1", "2", "3"...or (*bonus task*) "1st", "2nd", "3rd", etc.
+
 > [!TIP]
 > You should see something like "Hello World for the 1st time", "Hello World for the 2nd time", etc. printed line by line in your terminal screen.
 
@@ -37,6 +38,7 @@ Name|Description| # |Package|Data|Supplier|
 
 - **TASK**: Create a "virtual environment" called LBB
     - Follow the instructions here: [virtual environments](/boxes/python/virtual_environments/README.md)
+
 > [!TIP]
 > You should now have a virtual environment activated (and installed in the folder "_tmp/LBB").
 
@@ -47,7 +49,9 @@ cd ${HOME}/NoBlackBoxes/LastBlackBox/boxes/linux/shell
 cp .bashrc ${HOME}/.
 source ${HOME}/.bashrc
 ```
+
 - Follow the complete explanation here: [Linux Shell](/boxes/linux/shell/README.md)
+
 > [!TIP]
 > You should now be able to activate the LBB environment by typing "Activate" from anywhere in the terminal.
 
@@ -55,6 +59,7 @@ source ${HOME}/.bashrc
     - Install numpy
     - Install matplotlib
     - Make a cool plot and save it to an image file
+
 > [!TIP]
 > You should now hav an image of your plot saved, which you can open and view inside VS code.
 
@@ -66,6 +71,7 @@ source ${HOME}/.bashrc
 
 
 - **TASK**: Let's make some fun things using Python
+
 > [!TIP]
 > You should have made something fun.
 

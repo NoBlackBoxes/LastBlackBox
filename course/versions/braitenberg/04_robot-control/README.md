@@ -38,6 +38,7 @@ Spacer|NB3 spacer 3 mm spacer for mounting ball caster|5|Acrylic Mounts|[-D-](/b
 
 
 - **TASK**: Mount the servo motors and wheels to your NB3.
+
 > [!TIP]
 > The mounted servo motors should look like this.
 
@@ -79,6 +80,7 @@ void loop() {
 ```
 
 - **TASK**: Test your servo motors by sending control commands from your NB3's hindbrain.
+
 > [!TIP]
 > One servo motor should spin forwards and backwards, then the other...and then repeat.
 
@@ -92,6 +94,7 @@ void loop() {
 
 
 - **TASK**: Mount caster (ball bearing) to the front of your NB3.
+
 > [!TIP]
 > The ball caster mount should look like this.
 
@@ -115,6 +118,7 @@ void loop() {
 
 - **TASK**: Measure two light sensors and *decide* how to activate the direction of your two wheels in response.
 - Some example code to get you started can be found here: [Braitenberg Vehicle (Arduino)](/boxes/robotics/programming/arduino/braitenberg_vehicle/braitenberg_vehicle.ino)
+
 > [!TIP]
 > You should have created a robot that either likes (turns toward) or avoids (turns away from) light.
 

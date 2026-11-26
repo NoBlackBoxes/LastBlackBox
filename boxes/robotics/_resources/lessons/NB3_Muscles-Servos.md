@@ -10,6 +10,7 @@ Let's build your robot's movement system (using servo motors).
 ## Lesson
 
 - **TASK**: Mount the servo motors and wheels to your NB3.
+
 > [!TIP]
 > The mounted servo motors should look like this.
 
@@ -51,5 +52,6 @@ void loop() {
 ```
 
 - **TASK**: Test your servo motors by sending control commands from your NB3's hindbrain.
+
 > [!TIP]
 > One servo motor should spin forwards and backwards, then the other...and then repeat.

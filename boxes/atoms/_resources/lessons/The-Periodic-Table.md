@@ -4,7 +4,7 @@ Organizing the elements into a table reveals a regular pattern, which is linked 
 ## [Video](https://vimeo.com/1028399080)
 
 ## Concepts
--Review orbitals of atoms
+- Review orbitals of atoms
 - Orbitals have different capacities
     - Row/Period 1: 1s (2): Hydrogen and Helium
     - Row/Period 2: 8 (2s + 2p, 2 + 6 = 8)

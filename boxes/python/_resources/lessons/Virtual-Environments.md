@@ -17,6 +17,7 @@ We will next create a Python **virtual environment** on our NB3 that will isolat
 
 - **TASK**: Create a "virtual environment" called LBB
     - Follow the instructions here: [virtual environments](/boxes/python/virtual_environments/README.md)
+
 > [!TIP]
 > You should now have a virtual environment activated (and installed in the folder "_tmp/LBB").
 
@@ -27,7 +28,9 @@ cd ${HOME}/NoBlackBoxes/LastBlackBox/boxes/linux/shell
 cp .bashrc ${HOME}/.
 source ${HOME}/.bashrc
 ```
+
 - Follow the complete explanation here: [Linux Shell](/boxes/linux/shell/README.md)
+
 > [!TIP]
 > You should now be able to activate the LBB environment by typing "Activate" from anywhere in the terminal.
 
@@ -35,5 +38,6 @@ source ${HOME}/.bashrc
     - Install numpy
     - Install matplotlib
     - Make a cool plot and save it to an image file
+
 > [!TIP]
 > You should now hav an image of your plot saved, which you can open and view inside VS code.
