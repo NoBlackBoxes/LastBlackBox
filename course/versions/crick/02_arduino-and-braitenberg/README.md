@@ -18,6 +18,7 @@ Spacer|NB3 spacer 3 mm spacer for mounting ball caster|5|Acrylic Mounts|[-D-](/b
 
 </p></details><hr>
 
+
 ## Computers
 #### Watch this video: [Logic Gates](https://vimeo.com/1033231995)
 <p align="center">
@@ -57,9 +58,11 @@ Spacer|NB3 spacer 3 mm spacer for mounting ball caster|5|Acrylic Mounts|[-D-](/b
 > [!NOTE]
 > We will now add a *computer* to our robot. We be using a simple microcontroller as our NB3's hindbrain. It will be responsible for controlling the "muscles" (motors) in response to commands from another (larger) computer that we will be adding later to the NB3's midbrain.
 
+
 **TASK**: Mount and power your Arduino-based hindbrain (connect the mini-USB cable)
 > [!TIP]
 > The built-in LED on the board should be blinking at 1 Hz.
+
 **TASK**: Download and install the Arduino IDE (integrated development environment).
   - Follow the instructions for your "host" computer's operating system here: [Arduino IDE](https://www.arduino.cc/en/software)
   - Open the "Blink" Example: File -> Examples -> Basic -> Blink
@@ -67,6 +70,7 @@ Spacer|NB3 spacer 3 mm spacer for mounting ball caster|5|Acrylic Mounts|[-D-](/b
   - ***IMPORTANT***: If you have trouble connecting to the Arduino from your Laptop, then it may be necessary to install the "latest" driver from FTDI for the chip that communicates over the USB cable. This is not always necessary, so please try the normal installation first. However, if you are stuck, then please checkout these [FTDI driver installation instructions](https://support.arduino.cc/hc/en-us/articles/4411305694610-Install-or-update-FTDI-drivers).
 > [!TIP]
 > You should be able to successfully compile and upload the "Blink" example (with no errors).
+
 
 ## Programming the Arduino
 #### Watch this video: [NB3 : Programming Arduino](https://vimeo.com/1033810807)
@@ -77,13 +81,16 @@ Spacer|NB3 spacer 3 mm spacer for mounting ball caster|5|Acrylic Mounts|[-D-](/b
 > [!NOTE]
 > An introduction to programming an Arduino microcontroller.
 
+
 - You will now write programs that interact with the input and output pins of your Arduino. This "pin diagram" will help you find the correct locations. ***The Arduino on your NB3 is mounted "upside down" relative to this diagram...adjust accordingly!***
 <p align="center">
 <img src="../../../../boxes/computers/_resources/images/pinout_arduino_nano.png" alt="Arduino Nano Pin Diagram" width="500">
 </p>
 
+
 **TASK**: Blink an *internal* LED
   - Change the following example code (the classic "[Blinky](/boxes/computers/arduino/ide/blink/blink.ino)" example) to make the internal LED blink at a different frequency.
+
 ```c
 /*
   Blink
@@ -110,6 +117,7 @@ void loop() {
 ```
 > [!TIP]
 > Your internal LED should now be blinking faster or slower than 1 Hz (once per second).
+
 **TASK**: Blink an *external* LED
   - *Hint*: Connect one of your LEDs to digital pin 13, but don't forget your current limiting resistor!
 <p align="center">
@@ -118,6 +126,7 @@ void loop() {
 
 > [!TIP]
 > Your external LED should now be blinking at the same time as the built-in LED (if both are connected to pin 13).
+
 **TASK**: Generate a *pulsing* signal for your piezo buzzer
   - This is a piezo buzzer:
 <p align="center">
@@ -128,6 +137,7 @@ void loop() {
   - Connect one leg of the piezo to pin 11 and the other to Ground.
   - *Note:*: You could use the "Blink" example to toggle pin 11 with a much shorter delay between the ON/OFF "blinks". However, it is much easier to use a function called "tone()" that will allow you to generate pulses at very specific frequencies.
   - Upload this [code](/boxes/computers/arduino/ide/tone/tone.ino) to your Arduino (just the paste the following into a new sketch on your IDE and "upload").
+
 ```c
 /*
   Tone
@@ -166,10 +176,12 @@ void loop() {
   - **Challenge**: Try to add some more notes and play a recognizable melody!
 > [!TIP]
 > You should here a (somewhat unpleasant) sound from the piezo buzzer
+
 **TASK**: Measure an **analog** signal from your LDR light sensor circuit and send the measured values to your host computer via the USB (serial) connection.
   - *Hint*: Connect the output voltage of your light sensor (the "middle" of the divider) to an analog input pin (the example below uses pin A0).
   - *Note*: In order to see what values are measured, the following program sends the analog values as text characters over the USB serial connection to your laptop. Your can watch these values arrive by opening the Arduino IDE's "Serial Monitor" (an icon in the upper-right corner of the main window).
   - Upload this [code](/boxes/computers/arduino/ide/tone/tone.ino) to your Arduino.
+
 ```c
 /*
   Analog
@@ -205,6 +217,7 @@ void loop() {
 > [!NOTE]
 > All you need is 0 and 1. Here we will learn how to represent *anything* in binary.
 
+
 - Write your name in binary (using the ASCII table) in either Hex or Decimal notation.
 
 #### Watch this video: [Analog to Digital Converters](https://vimeo.com/1033223967)
@@ -214,6 +227,7 @@ void loop() {
 
 > [!NOTE]
 > Moving signals from the analog world to the digital world requires converting a continuous voltage into discrete binary values. We can accomplish this with an analog to digital converter, or **ADC**, and here we learn how they work.
+
 
 - Build the input stage for a 2-bit ADC using the LM339/LM2901 comparator and a resistor ladder.
 
@@ -225,10 +239,12 @@ void loop() {
 > [!NOTE]
 > Building a light-to-sound feedback loop musical instrument (theremin) using an Arduino, an LDR, and a Piezo buzzer.
 
+
 - **TASK**: Build a Theremin
 - *Hint*: What if you used the analog voltage signal measured from your light sensor to change the frequency of the "tone" playing on your buzzer? Hmm...
 > [!TIP]
 > You should here a sound that varies with your hand motion (in front of a light)
+
 - **TASK**: ***Have fun!*** (Make something cool)
 <p align="center">
 <img src="../../../../boxes/computers/_resources/images/pinout_arduino_nano.png" alt="Arduino Pinout" width="480">
@@ -236,6 +252,7 @@ void loop() {
 
 > [!TIP]
 > You should have fun!
+
 
 ## Motor control
 #### Watch this video: [PWM](https://vimeo.com/1033905955)
@@ -264,9 +281,11 @@ void loop() {
 > [!NOTE]
 > Let's build your robot's movement system (using servo motors).
 
+
 - **TASK**: Mount the servo motors and wheels to your NB3.
 > [!TIP]
 > The mounted servo motors should look like this.
+
 - In order to control your servo motors, you must send a square wave signal from your NB3's hindbrain with very specific timing. The details of this control signal's timing are described in the comments of the example code here: [Servo Test (Arduino)](/boxes/robotics/programming/arduino/muscles_test_servo/muscles_test_servo.ino).
 - This servo test code uses a library, called "servo", to make it easier to control your NB3's muscles.
 - *code*
@@ -303,6 +322,7 @@ void loop() {
   right.write(90); // stop right servo
 }
 ```
+
 - **TASK**: Test your servo motors by sending control commands from your NB3's hindbrain.
 > [!TIP]
 > One servo motor should spin forwards and backwards, then the other...and then repeat.
@@ -315,9 +335,11 @@ void loop() {
 > [!NOTE]
 > Let's add a front wheel (ball caster) to keep your NB3 from dragging its face on the ground.
 
+
 - **TASK**: Mount caster (ball bearing) to the front of your NB3.
 > [!TIP]
 > The ball caster mount should look like this.
+
 
 # Project
 #### Watch this video: [NB3 : Build a Braitenberg Vehicle](https://vimeo.com/1034798460)
@@ -328,12 +350,14 @@ void loop() {
 > [!NOTE]
 > Here we create the first Braitenberg Vehicle, a simple sensory-motor feedback loop connecting two light sensors to the motion of two wheels.
 
+
 - A Braitenberg Vehicle can show complex behaviour, appearing to seek out light and avoid shadows, but the underlying control circuit is extremely simple.
 <p align="center">
 <img src="../../../../boxes/robotics/_resources/images/braitenberg_vehicle.png" alt="Braitenberg Vehicle" width="600">
 </p>
 
 - A small change to the control circuit can completely change how your NB£ "vehicle" responds to light.
+
 - **TASK**: Measure two light sensors and *decide* how to activate the direction of your two wheels in response.
 - Some example code to get you started can be found here: [Braitenberg Vehicle (Arduino)](/boxes/robotics/programming/arduino/braitenberg_vehicle/braitenberg_vehicle.ino)
 > [!TIP]

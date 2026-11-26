@@ -12,6 +12,7 @@ Gate (XOR)|4xXOR gate|1|Active Electronics|[-D-](/boxes/logic/_resources/datashe
 
 </p></details><hr>
 
+
 ## Logic
 #### Watch this video: [Logic Gates](https://vimeo.com/1033231995)
 <p align="center">
@@ -24,6 +25,7 @@ Gate (XOR)|4xXOR gate|1|Active Electronics|[-D-](/boxes/logic/_resources/datashe
 - Design an XOR gate
 - Build an addition circuit (2-bit adder)
 - Build a priority encoder for your 2-bit ADC
+
 
 # Projects
 ### NB3 : Build an ADC (output)

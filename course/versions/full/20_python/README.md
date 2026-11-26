@@ -8,6 +8,7 @@ Name|Description| # |Package|Data|Supplier|
 
 </p></details><hr>
 
+
 ## Python
 #### Watch this video: [Introducing the Interpreter](https://vimeo.com/1042618092)
 <p align="center">
@@ -16,6 +17,7 @@ Name|Description| # |Package|Data|Supplier|
 
 > [!NOTE]
 > What is Python? Where is it? How does it work? How can it work for you?
+
 
 - **TASK**: Say "hello world" in Python
     - Print the words "Hello World" on your terminal screen
@@ -32,10 +34,12 @@ Name|Description| # |Package|Data|Supplier|
 > [!NOTE]
 > We will next create a Python **virtual environment** on our NB3 that will isolate the specific Python packages we require for the course from the Python packages used by the Raspberry Pi's operating system.
 
+
 - **TASK**: Create a "virtual environment" called LBB
     - Follow the instructions here: [virtual environments](/boxes/python/virtual_environments/README.md)
 > [!TIP]
 > You should now have a virtual environment activated (and installed in the folder "_tmp/LBB").
+
 - **TASK**: Add an "Alias" to make it easy to activate your "virtual environment" from the terminal.
 - *code*
 ```bash
@@ -46,6 +50,7 @@ source ${HOME}/.bashrc
 - Follow the complete explanation here: [Linux Shell](/boxes/linux/shell/README.md)
 > [!TIP]
 > You should now be able to activate the LBB environment by typing "Activate" from anywhere in the terminal.
+
 - **TASK**: Install some useful packages using PIP
     - Install numpy
     - Install matplotlib
@@ -53,10 +58,12 @@ source ${HOME}/.bashrc
 > [!TIP]
 > You should now hav an image of your plot saved, which you can open and view inside VS code.
 
+
 # Projects
 ### NB3 : Playing With Python
 > [!NOTE]
 > Let's see what Python can do...and get used to what it "feels like" to do stuff with Python.
+
 
 - **TASK**: Let's make some fun things using Python
 > [!TIP]

@@ -13,6 +13,7 @@ Stereo Plug Terminal|3.5 mm plug to screw terminal|2|Auxiliary|[-D-](/boxes/magn
 
 </p></details><hr>
 
+
 ## Magnets
 #### Watch this video: [Ferromagnetism](https://vimeo.com/1031272573)
 <p align="center">
@@ -39,6 +40,7 @@ Stereo Plug Terminal|3.5 mm plug to screw terminal|2|Auxiliary|[-D-](/boxes/magn
 
 > [!NOTE]
 > A *changing* magnetic field **induces** an electromotive force on charged particles (and current in a complete conducting circuit). This electromagnetic induction is key to building time-dependent electronic circuits (such as filters) and generating the electricity we use in our homes.
+
 
 
 # Projects

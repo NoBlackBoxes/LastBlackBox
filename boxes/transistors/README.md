@@ -18,6 +18,7 @@ LED (IR)|Low power IR light emitting diode|2|Active Electronics|[-D-](/boxes/tra
 
 </p></details><hr>
 
+
 ## Transistors
 #### Watch this video: [Diodes](https://vimeo.com/1032443724)
 <p align="center">
@@ -26,6 +27,7 @@ LED (IR)|Low power IR light emitting diode|2|Active Electronics|[-D-](/boxes/tra
 
 > [!NOTE]
 > The chemical and electrical equilibrium between charge carriers creates a potential across the PN junction. This junction potential only permits current flow in one direction, which gives **diodes** there delightfully non-linear behavior.
+
 
 - **TASK**: Illuminate a light-emitting diode (LED). *Remember the current limiting resistor!*
 > [!TIP]
@@ -53,10 +55,12 @@ LED (IR)|Low power IR light emitting diode|2|Active Electronics|[-D-](/boxes/tra
 > [!NOTE]
 > MOSFETs are the thing that humans have built more of than anything else. They must be useful! Let's discuss what they are and how they work.
 
+
 - **TASK**: Measure the threshold voltage that opens your MOSFET gate. Compare it to the "expected" range listed in the
     - The datasheet for your MOSFET here [IRL510](/boxes/transistors/_resources/datasheets/IRL510.pdf)
 > [!TIP]
 > The threshold for when current starts to flow through your MOSFET ("Gate-Source Threshold Voltage") should be between 1 to 3 vols for the IRL510. However, the amount of current it allows will rise rapidly up to (and beyond) 5 Volts for the IRL510. Check the datasheet (Figure 3).
+
 
 # Projects
 #### Watch this video: [NB3 : Testing Diodes](https://vimeo.com/1032458879)
@@ -75,6 +79,7 @@ LED (IR)|Low power IR light emitting diode|2|Active Electronics|[-D-](/boxes/tra
 
 > [!NOTE]
 > Let's make something move in response to light!
+
 
 - **TASK**: Use a MOSFET transistor to control how much current is flowing through your motor and gate the MOSFET with the output voltage from your light sensor...creating a motor that spins when the light is **ON** and stops when the light is **OFF**, or the other way around.
 - *Hint*: Use the following circuit as a guide: [MOSFET driver:400](/boxes/transistors/_resources/images/MOSFET_motor_driver.png)

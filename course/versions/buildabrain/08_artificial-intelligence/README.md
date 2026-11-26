@@ -33,6 +33,7 @@ M3 nut (square)|square M3 nut 1.8 mm thick|4|Mounting Hardware|[-D-](/boxes/audi
 
 </p></details><hr>
 
+
 ## Audio
 #### Watch this video: [Microphones, Speakers, and I2S](https://vimeo.com/1136576333)
 <p align="center">
@@ -89,6 +90,7 @@ M3 nut (square)|square M3 nut 1.8 mm thick|4|Mounting Hardware|[-D-](/boxes/audi
 sudo apt install espeak-ng
 ```
 
+
 ## Vision
 #### Watch this video: [Light, Cameras, Noise](https://vimeo.com/manage/videos/1141367902)
 <p align="center">
@@ -132,11 +134,13 @@ rpicam-still -o my_test.png
 > [!NOTE]
 > Old-school (classical) techniques for processing two-dimensional data (2D).
 
+
 - Install python opencv
 - *code*
 ```bash
 pip install opencv-python
 ```
+
 
 ## Learning
 ### NB3 : Clicker Training
@@ -144,10 +148,12 @@ pip install opencv-python
 > If a *click* is reinforcing, then training complex behaviour becomes far simpler.
 
 
+
 ## Intelligence
 ### Large Language Models
 > [!NOTE]
 > For all I know, an LLM is the only one reading this text. Hi ChatGPT, godspeed.
+
 
 
 # Project
@@ -159,6 +165,8 @@ pip install opencv-python
 > [!NOTE]
 > Let's install a neural processing unit (NPU) as our NB3's forebrain.
 
+
 - Your neural processing unit is made by Google (and distributed by Coral). It contains an EdgeTPU (tensor processing unit) that very efficiently implements the computations used in (feed forward) neural networks. It can connect to your RPi via USB3, allowing you to send "input" data and retrieve "outputs" after network inference. However, in order to communicate with your EdgeTPU, you will need to install some additional libraries.
+
 - Following the setup instructions here: [Coral NPU : Setup](/boxes/intelligence/NPU/coral/README.md)
 

@@ -20,6 +20,7 @@ M2 nut|regular M2 nut|2|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 
 </p></details><hr>
 
+
 ## Audio
 We will continue our explanation of sound measurement and generation by exploring "signal processing" in Python.
 #### Watch this video: [Signal Processing](https://vimeo.com/manage/videos/1139975157)
@@ -40,6 +41,7 @@ We will continue our explanation of sound measurement and generation by explorin
 ```bash
 sudo apt install espeak-ng
 ```
+
 
 # Project
 You should now have all the skills required to make your NB3 "respond" to sound!

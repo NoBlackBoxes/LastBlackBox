@@ -9,6 +9,7 @@ Periodic Table|Periodic Table Card|1|Body (000)|[-D-](/boxes/atoms/card)|VK
 
 </p></details><hr>
 
+
 ## Atoms
 #### Watch this video: [Atomic Structure](https://vimeo.com/1000458082)
 <p align="center">
@@ -17,6 +18,7 @@ Periodic Table|Periodic Table Card|1|Body (000)|[-D-](/boxes/atoms/card)|VK
 
 > [!NOTE]
 > A brief introduction to the physics of atoms, their parts (protons, neutrons, and electrons), and their classical vs. quantum structure.
+
 
 - **TASK**: Draw your favorite atom in the "classical" style
 > [!TIP]
@@ -29,6 +31,7 @@ Periodic Table|Periodic Table Card|1|Body (000)|[-D-](/boxes/atoms/card)|VK
 
 > [!NOTE]
 > Organizing the elements into a table reveals a regular pattern, which is linked to the fundamental chemical properties of each material.
+
 
 - When you need it *(and you will)*, then you can find a copy of the periodic table [here](/boxes/atoms/_resources/images/periodic_table.png).
 - The electron configuration (assignments to specific orbitals) of each atomic element can be viewed [here](https://en.wikipedia.org/wiki/Electron_configurations_of_the_elements_(data_page)).
@@ -55,6 +58,7 @@ Periodic Table|Periodic Table Card|1|Body (000)|[-D-](/boxes/atoms/card)|VK
 ### Fission and Fusion
 > [!NOTE]
 > Not all Nuclei are stable, sometimes they can fall apart (fission). What if two atoms get *sooooo* close to one another that their Nuclei connect (fuse)? Lots of energy is released...and a new element forms.
+
 
 
 # Projects

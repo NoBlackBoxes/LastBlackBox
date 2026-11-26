@@ -64,7 +64,7 @@ class Session:
             lesson_box = tag_content[0].lower()
             lesson_name = tag_content[1]
             lesson_path = f"{Config.boxes_path}/{lesson_box}/_resources/lessons/{lesson_name}.md"
-            lesson_text = Utilities.read_clean_text(lesson_path)
+            lesson_text = Utilities.read_markdown(lesson_path)
             lesson = Lesson.Lesson(self, lesson_box, lesson_text)
             self.lessons.append(lesson)
             if lesson_box not in lesson_boxes:

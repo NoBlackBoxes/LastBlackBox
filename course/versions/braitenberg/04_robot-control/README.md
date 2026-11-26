@@ -15,6 +15,7 @@ Spacer|NB3 spacer 3 mm spacer for mounting ball caster|5|Acrylic Mounts|[-D-](/b
 
 </p></details><hr>
 
+
 ## Control
 #### Watch this video: [Servo Loops](https://vimeo.com/1033963709)
 <p align="center">
@@ -23,6 +24,7 @@ Spacer|NB3 spacer 3 mm spacer for mounting ball caster|5|Acrylic Mounts|[-D-](/b
 
 > [!NOTE]
 > A servo loop connects feedback from a sensor to the control signals sent to a motor.
+
 
 
 ## Robotics
@@ -34,9 +36,11 @@ Spacer|NB3 spacer 3 mm spacer for mounting ball caster|5|Acrylic Mounts|[-D-](/b
 > [!NOTE]
 > Let's build your robot's movement system (using servo motors).
 
+
 - **TASK**: Mount the servo motors and wheels to your NB3.
 > [!TIP]
 > The mounted servo motors should look like this.
+
 - In order to control your servo motors, you must send a square wave signal from your NB3's hindbrain with very specific timing. The details of this control signal's timing are described in the comments of the example code here: [Servo Test (Arduino)](/boxes/robotics/programming/arduino/muscles_test_servo/muscles_test_servo.ino).
 - This servo test code uses a library, called "servo", to make it easier to control your NB3's muscles.
 - *code*
@@ -73,6 +77,7 @@ void loop() {
   right.write(90); // stop right servo
 }
 ```
+
 - **TASK**: Test your servo motors by sending control commands from your NB3's hindbrain.
 > [!TIP]
 > One servo motor should spin forwards and backwards, then the other...and then repeat.
@@ -85,9 +90,11 @@ void loop() {
 > [!NOTE]
 > Let's add a front wheel (ball caster) to keep your NB3 from dragging its face on the ground.
 
+
 - **TASK**: Mount caster (ball bearing) to the front of your NB3.
 > [!TIP]
 > The ball caster mount should look like this.
+
 
 # Project
 #### Watch this video: [NB3 : Build a Braitenberg Vehicle](https://vimeo.com/1034798460)
@@ -98,12 +105,14 @@ void loop() {
 > [!NOTE]
 > Here we create the first Braitenberg Vehicle, a simple sensory-motor feedback loop connecting two light sensors to the motion of two wheels.
 
+
 - A Braitenberg Vehicle can show complex behaviour, appearing to seek out light and avoid shadows, but the underlying control circuit is extremely simple.
 <p align="center">
 <img src="../../../../boxes/robotics/_resources/images/braitenberg_vehicle.png" alt="Braitenberg Vehicle" width="600">
 </p>
 
 - A small change to the control circuit can completely change how your NB£ "vehicle" responds to light.
+
 - **TASK**: Measure two light sensors and *decide* how to activate the direction of your two wheels in response.
 - Some example code to get you started can be found here: [Braitenberg Vehicle (Arduino)](/boxes/robotics/programming/arduino/braitenberg_vehicle/braitenberg_vehicle.ino)
 > [!TIP]

@@ -9,6 +9,7 @@ Gate (NAND)|4xNAND gate|2|Active Electronics|[-D-](/boxes/memory/_resources/data
 
 </p></details><hr>
 
+
 ## Memory
 #### Watch this video: [Flash Memory](https://vimeo.com/1033230293)
 <p align="center">
@@ -27,13 +28,16 @@ Gate (NAND)|4xNAND gate|2|Active Electronics|[-D-](/boxes/memory/_resources/data
 > [!NOTE]
 > Logic gates with feedback can hold onto their values...they can remember.
 
+
 - Understand the role of feedback in an SR latch
 
 ### Flip Flop
 > [!NOTE]
 > If we add a clock to our memory, then we can synchronize the operation of our logic circuit.
 
+
 - Build an D Flip Flop
+
 
 # Projects
 #### Watch this video: [NB3 : Building an SR Latch](https://vimeo.com/1033234541)

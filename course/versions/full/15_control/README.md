@@ -9,6 +9,7 @@ H-bridge|H-bridge motor driver (SN754410NE)|2|Active Electronics|[-D-](/boxes/co
 
 </p></details><hr>
 
+
 ## Control
 #### Watch this video: [PWM](https://vimeo.com/1033905955)
 <p align="center">
@@ -35,6 +36,7 @@ H-bridge|H-bridge motor driver (SN754410NE)|2|Active Electronics|[-D-](/boxes/co
 
 > [!NOTE]
 > An H-Bridge allows sending current through a motor in both directions, and thus drive forwards *and* backwards.
+
 
 
 # Projects

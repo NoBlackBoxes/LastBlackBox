@@ -20,6 +20,7 @@ M2 nut|regular M2 nut|2|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 
 </p></details><hr>
 
+
 ## Audio
 #### Watch this video: [Microphones, Speakers, and I2S](https://vimeo.com/1136576333)
 <p align="center">
@@ -55,6 +56,7 @@ M2 nut|regular M2 nut|2|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 
 > [!NOTE]
 > Let's add a mouth to your NB3.
+
 
 
 # Projects

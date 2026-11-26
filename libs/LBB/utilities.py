@@ -47,6 +47,16 @@ def read_clean_text(path):
                 text.append(line.rstrip())  # Remove trailing whitespace (including /n)
     return text
 
+def read_markdown(path):
+    """Read Markdown while preserving internal blank lines and indentation."""
+    with open(path, encoding="utf8") as file:
+        lines = [line.rstrip() for line in file]
+
+    while lines and not lines[-1]:
+        lines.pop()
+
+    return lines
+
 # Find line
 def find_line(text, pattern):
     count = 0

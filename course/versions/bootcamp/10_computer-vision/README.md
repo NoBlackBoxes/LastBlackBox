@@ -17,6 +17,7 @@ M2 nut|regular M2 nut|4|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 
 </p></details><hr>
 
+
 ## Vision
 #### Watch this video: [NB3 : Streaming Images](https://vimeo.com/manage/videos/1141582696)
 <p align="center">
@@ -27,6 +28,7 @@ M2 nut|regular M2 nut|4|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 > Let's stream live images from your NB3's camera to any web browser.
 
 
+
 # Project
 #### Watch this video: [Image-Processing](https://vimeo.com/manage/videos/1144050570)
 <p align="center">
@@ -35,6 +37,7 @@ M2 nut|regular M2 nut|4|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 
 > [!NOTE]
 > Old-school (classical) techniques for processing two-dimensional data (2D).
+
 
 - Install python opencv
 - *code*

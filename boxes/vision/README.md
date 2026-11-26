@@ -17,6 +17,7 @@ M2 nut|regular M2 nut|4|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 
 </p></details><hr>
 
+
 ## Vision
 #### Watch this video: [Light, Cameras, Noise](https://vimeo.com/manage/videos/1141367902)
 <p align="center">
@@ -35,11 +36,13 @@ M2 nut|regular M2 nut|4|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 > [!NOTE]
 > Old-school (classical) techniques for processing two-dimensional data (2D).
 
+
 - Install python opencv
 - *code*
 ```bash
 pip install opencv-python
 ```
+
 
 # Projects
 #### Watch this video: [NB3 : Install the Eye](https://vimeo.com/1042945461)

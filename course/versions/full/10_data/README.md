@@ -9,6 +9,7 @@ Comparator|LM339 (DIP-14)|2|Active Electronics|[-D-](/boxes/data/_resources/data
 
 </p></details><hr>
 
+
 ## Data
 #### Watch this video: [Binary Numbers](https://vimeo.com/1033226788)
 <p align="center">
@@ -17,6 +18,7 @@ Comparator|LM339 (DIP-14)|2|Active Electronics|[-D-](/boxes/data/_resources/data
 
 > [!NOTE]
 > All you need is 0 and 1. Here we will learn how to represent *anything* in binary.
+
 
 - Write your name in binary (using the ASCII table) in either Hex or Decimal notation.
 
@@ -28,7 +30,9 @@ Comparator|LM339 (DIP-14)|2|Active Electronics|[-D-](/boxes/data/_resources/data
 > [!NOTE]
 > Moving signals from the analog world to the digital world requires converting a continuous voltage into discrete binary values. We can accomplish this with an analog to digital converter, or **ADC**, and here we learn how they work.
 
+
 - Build the input stage for a 2-bit ADC using the LM339/LM2901 comparator and a resistor ladder.
+
 
 # Projects
 #### Watch this video: [NB3 : Build an ADC (input)](https://vimeo.com/1034767170)

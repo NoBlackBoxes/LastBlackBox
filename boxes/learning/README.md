@@ -9,10 +9,12 @@ Clicker|Loud sound maker (and whistle)|1|Auxiliary|[-D-](/boxes/learning/)|[-L-]
 
 </p></details><hr>
 
+
 ## Learning
 ### Gradient Descent
 > [!NOTE]
 > If it gets better, then keep going!
+
 
 
 # Projects

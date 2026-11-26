@@ -10,6 +10,7 @@ LM386|Audio-Amp|2|Active Electronics|[-D-](/boxes/amplifiers/_resources/datashee
 
 </p></details><hr>
 
+
 ## Amplifiers
 ### Differential Amplifier
 > [!NOTE]
@@ -20,6 +21,8 @@ LM386|Audio-Amp|2|Active Electronics|[-D-](/boxes/amplifiers/_resources/datashee
 > [!NOTE]
 > Combine *high gain differential amplification* with *negative feedback* to build a much, much better amplifier. We call these devices **operational amplifiers** or **Op Amps**.
 
+
 - Use an OpAmp to make your DIY speaker louder!
+
 
 # Projects

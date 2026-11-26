@@ -8,6 +8,7 @@ Name|Description| # |Package|Data|Supplier|
 
 </p></details><hr>
 
+
 ## Linux
 #### Watch this video: [Navigating the Command Line](https://vimeo.com/1036829527)
 <p align="center">
@@ -16,6 +17,7 @@ Name|Description| # |Package|Data|Supplier|
 
 > [!NOTE]
 > The original user interfaces were entirely based on text. You typed commands as a line of text into your terminal console and received the result as a string of characters on the screen. Navigating this **command line** remains a useful skill, and a necessary one when working with remote machines.
+
 
 - **TASK**: Explore Linux. Spend any extra time you have fiddling, playing with the UNIX approach to controlling a computer. Create some folders. Edit some files.
 > [!TIP]
@@ -38,6 +40,7 @@ Name|Description| # |Package|Data|Supplier|
 > [!NOTE]
 > Git is a program that keeps track of changes to your files. It is very useful when developing code. This entire course is stored as a git "repository" on GitHub.
 
+
 - **TASK**: "Clone" (copy) all of the contents in the LastBlackBox GitHub repository directly to your NB3's midbrain. **It is very important that you clone the LBB repo to a specific folder ("NoBlackBoxes") in your NB3's home directory**.
 > [!NOTE]
 > *Why?* Most of the code examples assume that the repo is stored in this location. If you prefer to put it somewhere else, then you must be comfortable modifying the "repo root" path used in the examples.
@@ -50,7 +53,9 @@ cd NoBlackBoxes     # Change to NoBlackBoxes directory
 # Clone LBB repo (only the most recent version)
 git clone --depth 1 https://github.com/NoBlackBoxes/LastBlackBox
 ```
+
 > [!TIP]
 > You should now have a complete copy of the LBB repo on your NB3.
+
 
 # Projects

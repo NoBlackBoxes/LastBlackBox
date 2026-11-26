@@ -11,10 +11,12 @@ Cable (MicroUSB-20cm)|Short micro-USB to Type-A cable (20 cm)|1|Cables (001)|[-D
 
 </p></details><hr>
 
+
 ## FPGAs
 ### Hardware Description Languages
 > [!NOTE]
 > Describing hardware layouts is very different than describing software algorithms. Hardware description languages allow you to describe precisely what pieces of transistor logic you want. They come in many flavours, but the most popular are **Verilog** and **VHDL**.
+
 
 
 # Projects

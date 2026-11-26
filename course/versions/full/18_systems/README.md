@@ -15,6 +15,7 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 
 </p></details><hr>
 
+
 ## Systems
 #### Watch this video: [Multi-Tasking](https://vimeo.com/1036086160)
 <p align="center">
@@ -23,6 +24,7 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 
 > [!NOTE]
 > Back when computers were very expensive mainframes, some clever software engineers developed strategies to share the computer's resources between multiple users, running multiple different tasks, at the same time. These "scheduling" programs still form the basis of our modern **multi-tasking** operating systems.
+
 
 - **TASK**: Develop a multi-tasking "scheduling" program for your microcontroller.
 > [!TIP]
@@ -35,6 +37,7 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 
 > [!NOTE]
 > As computer hardware became much more capable, software was developed to manage this complexity and power. This software took responsibility for managing access to the computer's resources: processing, memory, and devices. These days, when we *operate* a computer, we rarely interact directly with the hardware. Instead, we talk to this control software, which we call an **operating system**.
+
 
 - **TASK**: Install the Linux-based Raspberry Pi OS on your NB3
     - Follow these [RPiOS installation instructions](/boxes/systems/rpios/README.md)
@@ -49,6 +52,7 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 > [!NOTE]
 > Now we will add a more powerful computer (Raspberry Pi) to your NB3's midbrain.
 
+
 - **TASK**: Mount a Raspberry Pi on your robot (and connect its power inputs using your *shortest* jumper cables, 2x5V and 2x0V from the NB3, to the correct GPIO pins on the RPi...please *double-check* the pin numbers)
     - This pinout of the Raspberry Pi GPIO might be useful: [Raspberry Pi GPIO](/boxes/systems/_resources/images/rpi_GPIO_pinout.png)
 > [!TIP]
@@ -61,6 +65,7 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 
 > [!NOTE]
 > After mounting and wiring your NB3's midbrain computer, you must now give it some core software to run...an operating system.
+
 
 - **TASK**: Install the Linux-based Raspberry Pi OS on your NB3
     - Follow these [RPiOS installation instructions](/boxes/systems/rpios/README.md)
@@ -75,6 +80,7 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 > [!NOTE]
 > When you have installed your NB3's operating system, then you can power it on and try to connect to it from your Host computer over WiFi or UART.
 
+
 - **TASK**: Connect to your NB3 via WiFi
     - Follow these instruction [Connecting to RPi](/boxes/systems/connecting/README.md)
     - We currently recommend setting up a UART connection to your RPi for debugging when things go wrong. It is a few extra steps, but it can save you days! [Connecting to RPi via UART](/boxes/systems/connecting/uart/README.md)
@@ -88,6 +94,7 @@ M2.5 standoff (20/SS)|20 mm long socket-to-socket M2.5 standoff|4|Mounting Hardw
 
 > [!NOTE]
 > We will be using Visual Studio Code (VS Code) as our tool for writing programs. VS Code is just a simple, *but really powerful*, text editor. It has extensions for all sorts of useful tools (Python, Git, etc.), and for connecting to a "remote" computer (our NB3's midbrain).
+
 
 
 # Projects

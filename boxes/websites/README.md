@@ -8,6 +8,7 @@ Name|Description| # |Package|Data|Supplier|
 
 </p></details><hr>
 
+
 ## Websites
 #### Watch this video: [HTML](https://vimeo.com/1134724080)
 <p align="center">
@@ -46,5 +47,6 @@ Name|Description| # |Package|Data|Supplier|
 - Here is an example to respond to a "button press" by hiding/revealing the navigation bar in a simple website: [Button Response](/boxes/websites/javascript/alternates/toggle.js)
 - Here is another example to gets the current time and updates a live clock page: [Live Clock](/boxes/websites/javascript/alternates/clock.js)
 - There is way more you can do with Javascript. Have fun exploring and learning!
+
 
 # Projects

@@ -17,6 +17,7 @@ M2 nut|regular M2 nut|4|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 
 </p></details><hr>
 
+
 ## Vision
 #### Watch this video: [Light, Cameras, Noise](https://vimeo.com/manage/videos/1141367902)
 <p align="center">
@@ -25,6 +26,7 @@ M2 nut|regular M2 nut|4|Mounting Hardware|[-D-](/boxes/audio/)|[-L-](https://www
 
 > [!NOTE]
 > We start with a recap about light, measuring analog signals with computers, and then describe how a modern camera sensor is built. We then introduce the NB3's Eye and conclude with a discussion of the sources of noise that all cameras encounter when trying to *image* the real world.
+
 
 
 # Project

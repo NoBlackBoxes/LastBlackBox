@@ -11,6 +11,7 @@ Piezo|Piezo element|1|Passive Electronics|[-D-](/boxes/sensors/_resources/datash
 
 </p></details><hr>
 
+
 ## Sensors
 #### Watch this video: [Transducers](https://vimeo.com/1031477896)
 <p align="center">
@@ -21,6 +22,7 @@ Piezo|Piezo element|1|Passive Electronics|[-D-](/boxes/sensors/_resources/datash
 > A sensor converts (transduces) a physical quantity (light, heat, pressure, etc.) into an electrical signal (voltage, current, or resistance).
 
 
+
 # Projects
 #### Watch this video: [NB3 : Building a Light Sensor](https://vimeo.com/1031479533)
 <p align="center">
@@ -29,6 +31,7 @@ Piezo|Piezo element|1|Passive Electronics|[-D-](/boxes/sensors/_resources/datash
 
 > [!NOTE]
 > Your NB3 will use LDRs to convert light into voltage. Here you will build and test this light sensing circuit.
+
 
 - **TASK**: Build a light sensor
     - *Hint*: Build a voltage divider with one of the fixed resistors replaced with an LDR (light-dependent resistor). Does the "output" voltage vary with light level?

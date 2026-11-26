@@ -42,7 +42,7 @@ class Course:
         self.sessions = []
         for session_index, session_folder in enumerate(session_folders):
             session_path = f"{session_folder}/_resources/template.md"
-            session_text = Utilities.read_clean_text(session_path)
+            session_text = Utilities.read_markdown(session_path)
             session = Session.Session(self, text=session_text)
             session.index = session_index
             self.sessions.append(session)

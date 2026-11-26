@@ -9,6 +9,7 @@ Lightbulb|Mini incandescent bulb (6 V)|1|Active Electronics|[-D-](/boxes/light/_
 
 </p></details><hr>
 
+
 ## Light
 ### The EM Spectrum
 > [!NOTE]
@@ -32,6 +33,7 @@ Lightbulb|Mini incandescent bulb (6 V)|1|Active Electronics|[-D-](/boxes/light/_
 
 > [!NOTE]
 > When an electric charge is accelerated something surprising happens. This acceleration creates a ripple in the electric field (which induces a magnetic field). This ripple propagates away from the accelerated charge at the speed of light. It is light.
+
 
 
 # Projects

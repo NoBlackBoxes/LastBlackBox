@@ -18,6 +18,7 @@ Velcro Patch|Velcro adhesive|1|Medium (011)|[-D-](/boxes/power/)|[-L-](https://w
 
 </p></details><hr>
 
+
 ## Power
 #### Watch this video: [DC-DC Converters](https://vimeo.com/1035304311)
 <p align="center">
@@ -28,6 +29,7 @@ Velcro Patch|Velcro adhesive|1|Medium (011)|[-D-](/boxes/power/)|[-L-](https://w
 > How does efficient DC to DC conversion work? Buck and Boost.
 
 
+
 # Projects
 #### Watch this video: [NB3 : Power Supply](https://vimeo.com/1035306761)
 <p align="center">
@@ -36,6 +38,7 @@ Velcro Patch|Velcro adhesive|1|Medium (011)|[-D-](/boxes/power/)|[-L-](https://w
 
 > [!NOTE]
 > Let's install a DC-DC power supply on our NB3.
+
 
 - **TASK**: Add a (regulated) 5 volt power supply to your robot, which you can use while debugging to save your AA batteries and to provide enough power for the Raspberry Pi computer.
     - *NOTE*: Your NB3_power board cable *might* have inverted colors (black to +5V, red to 0V) relative to that shown in the assembly video. This doesn't matter, as the plugs will only work in one orientation and the correct voltage is conveyed to the correct position on the body.
@@ -49,6 +52,7 @@ Velcro Patch|Velcro adhesive|1|Medium (011)|[-D-](/boxes/power/)|[-L-](https://w
 
 > [!NOTE]
 > Let's install a rechargeable NiMH battery pack on our NB3.
+
 
 - **TASK**: Add a NiMH rechargeable 9.6 volt battery pack to your NB3.
 > [!TIP]

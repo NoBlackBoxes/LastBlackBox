@@ -9,6 +9,7 @@ DC Brushed Motor|6V Brushed DC motor|1|Large (100)|[-D-](/boxes/motors/)|[-L-](h
 
 </p></details><hr>
 
+
 ## Motors
 #### Watch this video: [DC Motors](https://vimeo.com/1031627739)
 <p align="center">
@@ -18,9 +19,11 @@ DC Brushed Motor|6V Brushed DC motor|1|Large (100)|[-D-](/boxes/motors/)|[-L-](h
 > [!NOTE]
 > An electric motor converts current into rotation using electromagnets that are turned on and off in a coordinated pattern. Different types of motors (stepper, brushed, or brushless) use different strategies (circuits) for this coordination.
 
+
 - **TASK**: Play with your brushed DC motor. Spin it forwards *and* backwards...
     - *Challenge*: What are some ways you could change the *speed* with which your motor spins?
 > [!TIP]
 > Switching the direction that current flows through your motor will change the direction it spins.
+
 
 # Projects

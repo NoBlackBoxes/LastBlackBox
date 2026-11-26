@@ -24,6 +24,7 @@ Photoresistor (LDR)|Light-dependent resistor (GL5516 and GL5528)|2|Passive Elect
 
 </p></details><hr>
 
+
 ## Atoms
 #### Watch this video: [Atomic Structure](https://vimeo.com/1000458082)
 <p align="center">
@@ -32,6 +33,7 @@ Photoresistor (LDR)|Light-dependent resistor (GL5516 and GL5528)|2|Passive Elect
 
 > [!NOTE]
 > A brief introduction to the physics of atoms, their parts (protons, neutrons, and electrons), and their classical vs. quantum structure.
+
 
 - **TASK**: Draw your favorite atom in the "classical" style
 > [!TIP]
@@ -45,8 +47,10 @@ Photoresistor (LDR)|Light-dependent resistor (GL5516 and GL5528)|2|Passive Elect
 > [!NOTE]
 > Organizing the elements into a table reveals a regular pattern, which is linked to the fundamental chemical properties of each material.
 
+
 - When you need it *(and you will)*, then you can find a copy of the periodic table [here](/boxes/atoms/_resources/images/periodic_table.png).
 - The electron configuration (assignments to specific orbitals) of each atomic element can be viewed [here](https://en.wikipedia.org/wiki/Electron_configurations_of_the_elements_(data_page)).
+
 
 ## Electrons
 #### Watch this video: [Voltage](https://vimeo.com/1000730032)
@@ -75,12 +79,14 @@ Photoresistor (LDR)|Light-dependent resistor (GL5516 and GL5528)|2|Passive Elect
 > [!NOTE]
 > Generating a stable voltage requires a renewable source of electrons to maintain a *potential difference*. We can accomplish this with a (redox) chemical reaction inside the wonderfully useful device that we call a **battery**.
 
+
 - **TASK**: Measure the voltage of a AA battery using your multimeter.
   - *Hint*: Select the voltage ("V") setting and touch your probes to either end of the battery. Depending on your multimeter, you may also need to select an appropriate "range". For a single AA battery, you should expect to measure between 1 and 2 Volts.
   - *Help*: If you are new to using a multimeter, then I recommend that you watch this video: [NB3-Multimeter Basics](https://vimeo.com/1027764019)
   - *Help*: If you are new to measuring voltage with a multimeter, then I recommend that you watch this video: [NB3-Measuring Voltage](https://vimeo.com/1027762531)
 > [!TIP]
 > A single AA battery, fully charged, should have a voltage of ~1.6 Volts. If it is less than 1.5 Volts, then the battery is nearly *dead*.
+
 - **TASK**: Measure the voltage of 4xAA batteries in series (end to end).
   - *Hint*: You can use your battery holder.
 > [!TIP]
@@ -103,6 +109,7 @@ Photoresistor (LDR)|Light-dependent resistor (GL5516 and GL5528)|2|Passive Elect
 > [!NOTE]
 > Many materials hold onto their outer electrons and resist their movement. We can create mixtures of these "resisting" materials and better "conducting" materials, often in the form of ceramics, to create **resistors** with a range of different *resistance* values, which we measure in Ohms (&Omega;).
 
+
 - **TASK**: Measure the resistance of your resistors.
   - *Help*: If you are new to measuring resistance with a multimeter, then I recommend that you watch this video: [NB3-Measuring Resistance](https://vimeo.com/1027761453)
 > [!TIP]
@@ -115,6 +122,7 @@ Photoresistor (LDR)|Light-dependent resistor (GL5516 and GL5528)|2|Passive Elect
 
 > [!NOTE]
 > We will now start measuring and manipulating electricity, but first we will assemble a "prototyping platform" that also happens to be the **body** of your robot (NB3).
+
 
 - **TASK**: Assemble the robot body (prototyping base board).
   - *Challenge*: If you are curious how the *NB3 Body* printed circuit board (PCB) was designed, then you can find the KiCAD files here: [NB3 Body PCB](/boxes/electrons/NB3_body).
@@ -129,7 +137,9 @@ Photoresistor (LDR)|Light-dependent resistor (GL5516 and GL5528)|2|Passive Elect
 > [!NOTE]
 > With a voltage source (battery) and resistors, then we can start building "circuits" - complete paths of conduction that allow current to flow from a location with *less* electrons **(+)** to a location with *more* electrons **(-)**.
 
+
 - *Note*: This is *weird*. Electrons are the things moving. Shouldn't we say that current "flows" from the **(-)** area to the **(+)** area? Unfortunately, current was described before anyone knew about electrons and we are stuck with the following awkward convention: **Current is defined to flow from (+) to (-)**...even though we now know that electrons are moving the opposite direction.
+
 - **TASK**: Build the simple circuit below and measure the current flowing when you connect the battery pack.
   - *Warning*: Measuring current with a multimeter is ***tricky***. You can only get an accurate measurement if ***ALL*** of the current in the circuit is forced to flow through your multimeter. This means that when measuring current, your multimeter must be in *series* with the rest of the circuit. (As opposed to measuring voltage, when your multimeter is placed "parallel" to the circuit.)
   - *Help*: If you are new to measuring current with a multimeter, then I recommend you watch this video: [NB3-Measuring Current](https://vimeo.com/1027757287).
@@ -144,6 +154,7 @@ Photoresistor (LDR)|Light-dependent resistor (GL5516 and GL5528)|2|Passive Elect
 > [!NOTE]
 > Ohm's Law describes the relationship between Voltage, Current, and Resistance. It is not complicated, but it is very useful.
 
+
 - **TASK**: Does Ohm's Law hold? You know the voltage of the batteries (V) and the resistance of the resistor (R). Measure the current flowing (I) for different resistors and confirm that V = I*R.
 > [!TIP]
 > For the resistors in your kit, then Ohm's Law should determine the current that you measure.
@@ -156,13 +167,16 @@ Photoresistor (LDR)|Light-dependent resistor (GL5516 and GL5528)|2|Passive Elect
 > [!NOTE]
 > Controlling the level of voltage at different places in a circuit is critical to designing electronic devices.
 
+
 - **TASK**: Build a voltage divider using two resistors of the same value. Measure the intermediate voltage (between the resistors).
 > [!TIP]
 > With equal size resistors, the intermediate voltage you measure should be half of the supply voltage.
+
 - **TASK**: Build a voltage divider using a variable resistor (potentiometer). Measure the intermediate voltage. What happens when you change the position of the internal contact of the variable resistor (by turning the screw)?
   - *Help*: A video guide to completing these tasks can be found here: [NB3-Building Voltage Dividers](https://vimeo.com/1030790826)
 > [!TIP]
 > The intermediate voltage should vary continuously as you adjust the potentiometer.
+
 
 ## Sensors
 #### Watch this video: [Transducers](https://vimeo.com/1031477896)
@@ -174,6 +188,7 @@ Photoresistor (LDR)|Light-dependent resistor (GL5516 and GL5528)|2|Passive Elect
 > A sensor converts (transduces) a physical quantity (light, heat, pressure, etc.) into an electrical signal (voltage, current, or resistance).
 
 
+
 # Project
 #### Watch this video: [NB3 : Building a Light Sensor](https://vimeo.com/1031479533)
 <p align="center">
@@ -182,6 +197,7 @@ Photoresistor (LDR)|Light-dependent resistor (GL5516 and GL5528)|2|Passive Elect
 
 > [!NOTE]
 > Your NB3 will use LDRs to convert light into voltage. Here you will build and test this light sensing circuit.
+
 
 - **TASK**: Build a light sensor
     - *Hint*: Build a voltage divider with one of the fixed resistors replaced with an LDR (light-dependent resistor). Does the "output" voltage vary with light level?

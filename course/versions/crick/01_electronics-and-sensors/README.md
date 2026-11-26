@@ -35,6 +35,7 @@ Stereo Plug Terminal|3.5 mm plug to screw terminal|2|Auxiliary|[-D-](/boxes/magn
 
 </p></details><hr>
 
+
 ## Atoms
 #### Watch this video: [Atomic Structure](https://vimeo.com/1000458082)
 <p align="center">
@@ -43,6 +44,7 @@ Stereo Plug Terminal|3.5 mm plug to screw terminal|2|Auxiliary|[-D-](/boxes/magn
 
 > [!NOTE]
 > A brief introduction to the physics of atoms, their parts (protons, neutrons, and electrons), and their classical vs. quantum structure.
+
 
 - **TASK**: Draw your favorite atom in the "classical" style
 > [!TIP]
@@ -56,8 +58,10 @@ Stereo Plug Terminal|3.5 mm plug to screw terminal|2|Auxiliary|[-D-](/boxes/magn
 > [!NOTE]
 > Organizing the elements into a table reveals a regular pattern, which is linked to the fundamental chemical properties of each material.
 
+
 - When you need it *(and you will)*, then you can find a copy of the periodic table [here](/boxes/atoms/_resources/images/periodic_table.png).
 - The electron configuration (assignments to specific orbitals) of each atomic element can be viewed [here](https://en.wikipedia.org/wiki/Electron_configurations_of_the_elements_(data_page)).
+
 
 ## Voltage, current, resistance
 #### Watch this video: [Voltage](https://vimeo.com/1000730032)
@@ -86,12 +90,14 @@ Stereo Plug Terminal|3.5 mm plug to screw terminal|2|Auxiliary|[-D-](/boxes/magn
 > [!NOTE]
 > Generating a stable voltage requires a renewable source of electrons to maintain a *potential difference*. We can accomplish this with a (redox) chemical reaction inside the wonderfully useful device that we call a **battery**.
 
+
 - **TASK**: Measure the voltage of a AA battery using your multimeter.
   - *Hint*: Select the voltage ("V") setting and touch your probes to either end of the battery. Depending on your multimeter, you may also need to select an appropriate "range". For a single AA battery, you should expect to measure between 1 and 2 Volts.
   - *Help*: If you are new to using a multimeter, then I recommend that you watch this video: [NB3-Multimeter Basics](https://vimeo.com/1027764019)
   - *Help*: If you are new to measuring voltage with a multimeter, then I recommend that you watch this video: [NB3-Measuring Voltage](https://vimeo.com/1027762531)
 > [!TIP]
 > A single AA battery, fully charged, should have a voltage of ~1.6 Volts. If it is less than 1.5 Volts, then the battery is nearly *dead*.
+
 - **TASK**: Measure the voltage of 4xAA batteries in series (end to end).
   - *Hint*: You can use your battery holder.
 > [!TIP]
@@ -114,6 +120,7 @@ Stereo Plug Terminal|3.5 mm plug to screw terminal|2|Auxiliary|[-D-](/boxes/magn
 > [!NOTE]
 > Many materials hold onto their outer electrons and resist their movement. We can create mixtures of these "resisting" materials and better "conducting" materials, often in the form of ceramics, to create **resistors** with a range of different *resistance* values, which we measure in Ohms (&Omega;).
 
+
 - **TASK**: Measure the resistance of your resistors.
   - *Help*: If you are new to measuring resistance with a multimeter, then I recommend that you watch this video: [NB3-Measuring Resistance](https://vimeo.com/1027761453)
 > [!TIP]
@@ -126,6 +133,7 @@ Stereo Plug Terminal|3.5 mm plug to screw terminal|2|Auxiliary|[-D-](/boxes/magn
 
 > [!NOTE]
 > Ohm's Law describes the relationship between Voltage, Current, and Resistance. It is not complicated, but it is very useful.
+
 
 - **TASK**: Does Ohm's Law hold? You know the voltage of the batteries (V) and the resistance of the resistor (R). Measure the current flowing (I) for different resistors and confirm that V = I*R.
 > [!TIP]
@@ -140,6 +148,7 @@ Stereo Plug Terminal|3.5 mm plug to screw terminal|2|Auxiliary|[-D-](/boxes/magn
 > When electrons move through a circuit, they deliver power (some amount of energy in some amount of time). This power can be used to do useful things: make a motor move, light a lamp, or generate heat. If we deliver too little power, then our electronic device may not work as designed. If we deliver too much, then it may never work again. We measure power in Watts.
 
 
+
 ## Building circuits
 #### Watch this video: [NB3 : Body](https://vimeo.com/1030776673)
 <p align="center">
@@ -148,6 +157,7 @@ Stereo Plug Terminal|3.5 mm plug to screw terminal|2|Auxiliary|[-D-](/boxes/magn
 
 > [!NOTE]
 > We will now start measuring and manipulating electricity, but first we will assemble a "prototyping platform" that also happens to be the **body** of your robot (NB3).
+
 
 - **TASK**: Assemble the robot body (prototyping base board).
   - *Challenge*: If you are curious how the *NB3 Body* printed circuit board (PCB) was designed, then you can find the KiCAD files here: [NB3 Body PCB](/boxes/electrons/NB3_body).
@@ -162,12 +172,15 @@ Stereo Plug Terminal|3.5 mm plug to screw terminal|2|Auxiliary|[-D-](/boxes/magn
 > [!NOTE]
 > With a voltage source (battery) and resistors, then we can start building "circuits" - complete paths of conduction that allow current to flow from a location with *less* electrons **(+)** to a location with *more* electrons **(-)**.
 
+
 - *Note*: This is *weird*. Electrons are the things moving. Shouldn't we say that current "flows" from the **(-)** area to the **(+)** area? Unfortunately, current was described before anyone knew about electrons and we are stuck with the following awkward convention: **Current is defined to flow from (+) to (-)**...even though we now know that electrons are moving the opposite direction.
+
 - **TASK**: Build the simple circuit below and measure the current flowing when you connect the battery pack.
   - *Warning*: Measuring current with a multimeter is ***tricky***. You can only get an accurate measurement if ***ALL*** of the current in the circuit is forced to flow through your multimeter. This means that when measuring current, your multimeter must be in *series* with the rest of the circuit. (As opposed to measuring voltage, when your multimeter is placed "parallel" to the circuit.)
   - *Help*: If you are new to measuring current with a multimeter, then I recommend you watch this video: [NB3-Measuring Current](https://vimeo.com/1027757287).
 > [!WARNING]
 > Not too much current...and do not break your multimeter.
+
 
 ## Voltage dividers and transduction
 #### Watch this video: [Voltage Dividers](https://vimeo.com/1030787469)
@@ -178,9 +191,11 @@ Stereo Plug Terminal|3.5 mm plug to screw terminal|2|Auxiliary|[-D-](/boxes/magn
 > [!NOTE]
 > Controlling the level of voltage at different places in a circuit is critical to designing electronic devices.
 
+
 - **TASK**: Build a voltage divider using two resistors of the same value. Measure the intermediate voltage (between the resistors).
 > [!TIP]
 > With equal size resistors, the intermediate voltage you measure should be half of the supply voltage.
+
 - **TASK**: Build a voltage divider using a variable resistor (potentiometer). Measure the intermediate voltage. What happens when you change the position of the internal contact of the variable resistor (by turning the screw)?
   - *Help*: A video guide to completing these tasks can be found here: [NB3-Building Voltage Dividers](https://vimeo.com/1030790826)
 > [!TIP]
@@ -204,6 +219,7 @@ Stereo Plug Terminal|3.5 mm plug to screw terminal|2|Auxiliary|[-D-](/boxes/magn
 > A sensor converts (transduces) a physical quantity (light, heat, pressure, etc.) into an electrical signal (voltage, current, or resistance).
 
 
+
 ## Magnets
 #### Watch this video: [Ferromagnetism](https://vimeo.com/1031272573)
 <p align="center">
@@ -223,6 +239,7 @@ Stereo Plug Terminal|3.5 mm plug to screw terminal|2|Auxiliary|[-D-](/boxes/magn
 > When electrons move they create a (weak) magnetic field. With clever geometry we can make this field much, much stronger.
 
 
+
 ## Motors
 #### Watch this video: [DC Motors](https://vimeo.com/1031627739)
 <p align="center">
@@ -232,10 +249,12 @@ Stereo Plug Terminal|3.5 mm plug to screw terminal|2|Auxiliary|[-D-](/boxes/magn
 > [!NOTE]
 > An electric motor converts current into rotation using electromagnets that are turned on and off in a coordinated pattern. Different types of motors (stepper, brushed, or brushless) use different strategies (circuits) for this coordination.
 
+
 - **TASK**: Play with your brushed DC motor. Spin it forwards *and* backwards...
     - *Challenge*: What are some ways you could change the *speed* with which your motor spins?
 > [!TIP]
 > Switching the direction that current flows through your motor will change the direction it spins.
+
 
 ## Semiconductors and the MOSFET
 #### Watch this video: [Semiconductors](https://vimeo.com/1032460818)
@@ -255,6 +274,7 @@ Stereo Plug Terminal|3.5 mm plug to screw terminal|2|Auxiliary|[-D-](/boxes/magn
 > [!NOTE]
 > The chemical and electrical equilibrium between charge carriers creates a potential across the PN junction. This junction potential only permits current flow in one direction, which gives **diodes** there delightfully non-linear behavior.
 
+
 - **TASK**: Illuminate a light-emitting diode (LED). *Remember the current limiting resistor!*
 > [!TIP]
 > The LED should only illuminate when installed in one orientation. If you flip it around, then the "diode" of the LED will prevent current flowing through the circuit.
@@ -267,10 +287,12 @@ Stereo Plug Terminal|3.5 mm plug to screw terminal|2|Auxiliary|[-D-](/boxes/magn
 > [!NOTE]
 > MOSFETs are the thing that humans have built more of than anything else. They must be useful! Let's discuss what they are and how they work.
 
+
 - **TASK**: Measure the threshold voltage that opens your MOSFET gate. Compare it to the "expected" range listed in the
     - The datasheet for your MOSFET here [IRL510](/boxes/transistors/_resources/datasheets/IRL510.pdf)
 > [!TIP]
 > The threshold for when current starts to flow through your MOSFET ("Gate-Source Threshold Voltage") should be between 1 to 3 vols for the IRL510. However, the amount of current it allows will rise rapidly up to (and beyond) 5 Volts for the IRL510. Check the datasheet (Figure 3).
+
 
 # Project
 #### Watch this video: [NB3 : Building a Speaker](https://vimeo.com/1031277112)
@@ -290,6 +312,7 @@ Stereo Plug Terminal|3.5 mm plug to screw terminal|2|Auxiliary|[-D-](/boxes/magn
 > [!NOTE]
 > Your NB3 will use LDRs to convert light into voltage. Here you will build and test this light sensing circuit.
 
+
 - **TASK**: Build a light sensor
     - *Hint*: Build a voltage divider with one of the fixed resistors replaced with an LDR (light-dependent resistor). Does the "output" voltage vary with light level?
     - *Challenge*: What should the value of the fixed resistor be to maximize the sensitive range of the output voltage for varying light levels?
@@ -303,6 +326,7 @@ Stereo Plug Terminal|3.5 mm plug to screw terminal|2|Auxiliary|[-D-](/boxes/magn
 
 > [!NOTE]
 > Let's make something move in response to light!
+
 
 - **TASK**: Use a MOSFET transistor to control how much current is flowing through your motor and gate the MOSFET with the output voltage from your light sensor...creating a motor that spins when the light is **ON** and stops when the light is **OFF**, or the other way around.
 - *Hint*: Use the following circuit as a guide: [MOSFET driver:400](/boxes/transistors/_resources/images/MOSFET_motor_driver.png)
