@@ -633,18 +633,20 @@ def _bundle_and_rewrite(md_files: list[pathlib.Path], staging: pathlib.Path) -> 
 
 def _run_zensical(staging: pathlib.Path, output: pathlib.Path) -> None:
     """Build inside *staging*, then copy the rendered site to *output*."""
-    local_executable = REPO_ROOT / ".venv" / "bin" / "zensical"
-    executable = (
-        str(local_executable)
-        if local_executable.is_file()
-        else shutil.which("zensical")
+    venv = REPO_ROOT / ".venv"
+    local_executables = (
+        venv / "bin" / "zensical",          # Linux and macOS
+        venv / "Scripts" / "zensical.exe",  # Windows
+    )
+    executable = next(
+        (str(path) for path in local_executables if path.is_file()),
+        shutil.which("zensical"),
     )
     if executable is None:
         raise SystemExit(
-            "Zensical is not installed. Run: "
-            "python3 -m venv .venv && "
-            ".venv/bin/python -m pip install -r "
-            "course/tools/zensical/requirements.txt"
+            "Zensical is not installed. Create .venv with Python 3.11 or "
+            "later and install course/tools/zensical/requirements.txt; see "
+            "course/tools/zensical/README.md under 'Local setup'."
         )
     cmd = [
         executable,

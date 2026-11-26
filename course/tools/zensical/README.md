@@ -134,12 +134,21 @@ authority for generated session READMEs and for the website's open-box map.
 
 ## Local setup
 
-Run commands from the repository root. Zensical is pinned in
-[`requirements.txt`](requirements.txt).
+Run commands from the repository root with Python 3.11 or later. Zensical is
+pinned in [`requirements.txt`](requirements.txt).
+
+On Linux or macOS:
 
 ```bash
 python3 -m venv .venv
 .venv/bin/python -m pip install -r course/tools/zensical/requirements.txt
+```
+
+On Windows PowerShell:
+
+```powershell
+py -3.11 -m venv .venv
+.venv\Scripts\python -m pip install -r course\tools\zensical\requirements.txt
 ```
 
 Build all generated course content and every published website:
@@ -148,10 +157,22 @@ Build all generated course content and every published website:
 .venv/bin/python course/tools/build_all.py
 ```
 
+On Windows, run the equivalent command with the virtual environment's Python:
+
+```powershell
+.venv\Scripts\python course\tools\build_all.py
+```
+
 Rebuild the website without regenerating the engine-owned READMEs:
 
 ```bash
 .venv/bin/python course/tools/zensical/build_site.py
+```
+
+On Windows:
+
+```powershell
+.venv\Scripts\python course\tools\zensical\build_site.py
 ```
 
 Plain `zensical build` from the repository root fails because there is
@@ -169,6 +190,14 @@ For debugging an already staged project, this lower-level command works after
   --clean --strict
 ```
 
+On Windows PowerShell:
+
+```powershell
+.venv\Scripts\zensical.exe build `
+  --config-file course\tools\zensical\.site-staging\zensical.toml `
+  --clean --strict
+```
+
 This lower-level command rebuilds only the content already in staging. It does
 not restage repository sources or copy its output from
 `course/tools/zensical/.site-staging/site/` into `docs/`. The supported Python
@@ -178,6 +207,12 @@ Preview the complete generated site:
 
 ```bash
 .venv/bin/python -m http.server -d docs 8000
+```
+
+On Windows:
+
+```powershell
+.venv\Scripts\python -m http.server -d docs 8000
 ```
 
 Then open `http://localhost:8000/`. The server is needed because search and
