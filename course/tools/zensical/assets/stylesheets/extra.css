@@ -59,6 +59,37 @@
   border: 0;
 }
 
+/* Keep previous/next links within the current course. */
+.md-typeset .lbb-session-nav {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 3rem 0 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-typeset .lbb-session-nav__link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  text-decoration: none;
+}
+
+.md-typeset .lbb-session-nav__link--next {
+  grid-column: 2;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.md-typeset .lbb-session-nav__direction {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 /* --------------------------------------------------------------------------
  * Course catalogue
  * ----------------------------------------------------------------------- */

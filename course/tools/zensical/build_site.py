@@ -18,6 +18,7 @@ Call tree:
             │   ├── _generate_index() when no authored `index.md` exists
             │   ├── _render_partner()
             │   ├── _write_landing_page()
+            │   ├── _render_session_navigation() for each session page
             │   └── _insert_curriculum_map()
             │       └── _render_curriculum_map()
             │           └── _curriculum_sessions()
@@ -288,6 +289,40 @@ def _generate_index(course: dict, sessions: list[tuple[pathlib.Path, str]]) -> s
     lines.append("")
     return "\n".join(lines)
 
+def _render_session_navigation(
+    sessions: list[tuple[pathlib.Path, str]],
+    session_index: int,
+) -> str:
+    """Render website-only previous/next links within one course."""
+    if len(sessions) < 2:
+        return ""
+
+    links = []
+    if session_index > 0:
+        previous_dir, previous_label = sessions[session_index - 1]
+        links.append(
+            '<a class="lbb-session-nav__link lbb-session-nav__link--previous" '
+            f'rel="prev" href="../{html.escape(previous_dir.name, quote=True)}/">\n'
+            '  <span class="lbb-session-nav__direction">Previous session</span>\n'
+            f'  <span>{html.escape(previous_label)}</span>\n'
+            '</a>'
+        )
+
+    if session_index < len(sessions) - 1:
+        next_dir, next_label = sessions[session_index + 1]
+        links.append(
+            '<a class="lbb-session-nav__link lbb-session-nav__link--next" '
+            f'rel="next" href="../{html.escape(next_dir.name, quote=True)}/">\n'
+            '  <span class="lbb-session-nav__direction">Next session</span>\n'
+            f'  <span>{html.escape(next_label)}</span>\n'
+            '</a>'
+        )
+
+    return (
+        '<nav class="lbb-session-nav" aria-label="Session navigation">\n'
+        + "\n".join(links)
+        + "\n</nav>\n"
+    )
 
 def _curriculum_sessions(
     course_dir: pathlib.Path,
@@ -613,15 +648,18 @@ def _stage_course(
     sessions_root = course_content / "sessions"
     sessions_root.mkdir(parents=True, exist_ok=True)
 
-    for session_dir, _label in sessions:
+    for session_index, (session_dir, _label) in enumerate(sessions):
         dst_dir = sessions_root / session_dir.name
         dst_dir.mkdir(parents=True, exist_ok=True)
         dst = dst_dir / "index.md"
         source_text = (session_dir / "README.md").read_text(encoding="utf8")
-        dst.write_text(
-            _page_front_matter(course["description"]) + source_text,
-            encoding="utf8",
-        )
+        session_navigation = _render_session_navigation(sessions, session_index)
+        staged_text = _page_front_matter(course["description"]) + source_text
+        if session_navigation:
+            staged_text += (
+                "" if staged_text.endswith("\n") else "\n"
+            ) + "\n" + session_navigation
+        dst.write_text(staged_text, encoding="utf8")
         md_files.append(dst)
 
     return md_files

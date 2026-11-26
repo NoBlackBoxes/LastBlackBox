@@ -304,11 +304,12 @@ breadcrumb tree, search index and sitemap. The root and existing
 1. discovers numerically prefixed session directories;
 2. generates the complete Zensical navigation from their template titles;
 3. stages every landing page and session README as a folder index page;
-4. derives the curriculum from `{Box:Lesson}` lesson tags;
-5. bundles repository images and rewrites non-image repository links to GitHub;
-6. converts Vimeo thumbnail blocks to native video embeds;
-7. writes the selector and crawler configuration;
-8. uses the locked Zensical environment in strict mode to generate the site,
+4. adds website-only previous and next links that stop at course boundaries;
+5. derives the curriculum from `{Box:Lesson}` lesson tags;
+6. bundles repository images and rewrites non-image repository links to GitHub;
+7. converts Vimeo thumbnail blocks to native video embeds;
+8. writes the selector and crawler configuration;
+9. uses the locked Zensical environment in strict mode to generate the site,
    search index and sitemap under `.site-staging/site/`, then replaces `docs/`
    with that output.
 
