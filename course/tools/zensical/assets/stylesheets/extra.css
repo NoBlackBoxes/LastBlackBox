@@ -63,6 +63,14 @@
  * Course catalogue
  * ----------------------------------------------------------------------- */
 
+.md-typeset .lbb-catalogue-logo {
+  display: block;
+  width: 10rem;
+  height: 10rem;
+  max-width: 100%;
+  margin: 0 auto 1rem;
+}
+
 /* Use Zensical's native cards, with one fully clickable course per row. */
 .md-typeset .grid.cards,
 .md-typeset .grid.cards > ul {

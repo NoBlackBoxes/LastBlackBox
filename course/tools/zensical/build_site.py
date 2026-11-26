@@ -82,6 +82,15 @@ PARTNER_DIR_NAME = "site"
 # Shared brand assets used by every course site.
 BRAND_LOGO    = REPO_ROOT / "course" / "_resources" / "designs" / "logo" / "icons" / "icon_NBB.svg"
 BRAND_FAVICON = REPO_ROOT / "course" / "_resources" / "designs" / "logo" / "icons" / "icon_NBB_256.png"
+ANIMATED_BRAND_LOGO = (
+    REPO_ROOT
+    / "course"
+    / "_resources"
+    / "designs"
+    / "logo"
+    / "animated"
+    / "logo_NBB_animated_hover.svg"
+)
 
 # Small shared presentation layer on top of Zensical's native theme.
 SHARED_STYLESHEET = _HERE / "assets" / "stylesheets" / "extra.css"
@@ -665,7 +674,12 @@ def _run_zensical(staging: pathlib.Path, output: pathlib.Path) -> None:
 def _render_catalogue_page(courses: list[dict]) -> str:
     """Render the manifest-owned course list with Zensical's native cards."""
     lines = [
-        _page_front_matter() + "# NoBlackBoxes courses",
+        _page_front_matter(),
+        '<object class="lbb-catalogue-logo" '
+        'data="assets/images/logo-animated.svg" type="image/svg+xml" '
+        'aria-label="Animated NoBlackBoxes logo"></object>',
+        "",
+        "# NoBlackBoxes courses",
         "",
         "Hands-on robotics courses that open the stack from atoms to artificial intelligence.",
         "",
@@ -720,6 +734,7 @@ def build() -> None:
     shutil.copy2(SHARED_STYLESHEET, stylesheets / "extra.css")
     shutil.copy2(BRAND_LOGO, images / "logo.svg")
     shutil.copy2(BRAND_FAVICON, images / "favicon.png")
+    shutil.copy2(ANIMATED_BRAND_LOGO, images / "logo-animated.svg")
 
     for course in courses:
         logo = course.get("logo")
